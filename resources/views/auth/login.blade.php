@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'iSAC Speaking | Teacher');
+@section('title', 'iSAC | Teacher');
 
 
 @section('content')

@@ -26,7 +26,7 @@
             <a href="{{ url('writing/dashboard')}}">
                 <div class="widget-bg-color-icon card-box">
                     <div class="avatar-lg rounded-circle bg-icon-primary float-left">
-                        <i class="mdi mdi-amazon font-24 avatar-title text-white"></i>
+                        <i class="mdi mdi-grease-pencil font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
                         <h3 class="text-dark mt-1"><span class="counter">iSAC</span></h3>
@@ -41,7 +41,7 @@
             <a href="{{url('speaking/dashboard')}}">
                 <div class="widget-bg-color-icon card-box">
                     <div class="avatar-lg rounded-circle bg-icon-primary float-left">
-                        <i class="mdi mdi-amazon font-24 avatar-title text-white"></i>
+                        <i class="mdi mdi-voice font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
                         <h3 class="text-dark mt-1"><span class="counter">iSAC</span></h3>
