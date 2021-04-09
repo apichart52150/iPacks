@@ -160,16 +160,6 @@ class HomeController extends Controller
         return view('student.isac.writing.status_writing',  compact('writing'));
         
     }
-
-    public function status_topic($status)    {   
-
-        $status = Writing::status_topic($status);
-
-        // dd($status);
-        return view('student.isac.writing.status_writing_topic',compact('topic_writing'));
-
-    }
-
 }
     
 

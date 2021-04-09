@@ -49,7 +49,15 @@
 						<tr>
 							<td>{{ $i++ }}</td>
 
-							<td>iSAC Writing {{ $writings->code_test }}</td>
+							@if($writings->status == 'Y')
+							<td>
+								<a href="{{ route('commented',['id' => $writings->id]) }}">iSAC Writing {{ $writings->code_test }}</a>
+							</td>
+							@elseif($writings->status == 'ST_S')
+							<td>
+								<a href="{{ route('saved',['id' => $writings->id]) }}">iSAC Writing {{ $writings->code_test }}</a>
+							</td>
+							@endif
 
 							<td>{{ $writings->test_type }}</td>
 

@@ -284,11 +284,14 @@
                         plugins: [
                             "wordcount",
                             "textcolor"
-                        ]
+                        ],
+                        contenteditable: false
                     });
                 }
             })
         </script>
+
+        
 
         @yield('js')
     </body>

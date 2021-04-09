@@ -62,11 +62,12 @@
 
 			Route::get('status_writing', 'HomeController@status_writing')->name('status_writing');
 			Route::get('status_writing/{id?}', 'HomeController@status_topic')->name('status_writing');
-			
-			Route::get('view/{sacid}', 'ViewSaveController@view_success');
-			Route::get('/viewsave/{sacid}', 'ViewSaveController@view_save');
-			Route::post('store_sac_save', 'ViewSaveController@store_sac_save')->name('store.sac-save');
-		
+
+			Route::prefix('view')->group(function () {
+			Route::get('commented/{sacid}', 'ViewController@view_commented')->name('commented');
+			Route::get('saved/{sacid}', 'ViewController@view_saved')->name('saved');
+			});
+			Route::post('store_sac_save', 'ViewController@store_sac_save')->name('store.sac-save');
 		});
 	});
 
