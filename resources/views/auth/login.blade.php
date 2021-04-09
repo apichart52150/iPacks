@@ -11,7 +11,7 @@
                 <div class="card-body p-4">
                  
                     <div class="text-center mb-3">
-                        <h3 class="font-weight-bold text-primary"><i class="mdi mdi-radar"></i> iSAC SPEAKING | <span class="text-dark">Teacher</span> </h3>
+                        <h3 class="font-weight-bold text-primary"><i class="mdi mdi-radar"></i> iSAC | <span class="text-dark">Teacher</span> </h3>
                     </div>
 
                     <form class="form-horizontal m-t-20" method="post" action="{{route('login')}}">
