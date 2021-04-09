@@ -99,7 +99,7 @@
 
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown">
                                 <!-- item-->
-                                <a href="{{ url('profile') }}" class="dropdown-item notify-item">
+                                <a href="{{ url('user_profile') }}" class="dropdown-item notify-item">
                                     <i class="mdi mdi-account-circle"></i>
                                     <span>My Profile</span>
                                 </a>
