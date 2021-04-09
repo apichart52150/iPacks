@@ -169,10 +169,10 @@ class ReportController extends Controller
                 $row['th_name'] = $writing->name;
 
 				$std_sent_date = date('d-m-Y H:i:s', strtotime($writing->sent_date));
-				$row['std_sent_date'] = "<span class='badge badge-dark'>{$std_sent_date}</span>";
+				$row['std_sent_date'] = "<span class='badge badge-dark p-1'>{$std_sent_date}</span>";
 				
                 $th_sent_date = date('d-m-Y H:i:s', strtotime($writing->th_sent_date));
-				$row['th_sent_date'] = "<span class='badge badge-success'>{$th_sent_date}</span>";
+				$row['th_sent_date'] = "<span class='badge badge-success p-1' >{$th_sent_date}</span>";
 				$row['action'] = "
 					<button class='btn btn-warning btn-sm restatus' onclick='reStatus({$dataJson});'>
 						<i class='fas fa-history'></i>

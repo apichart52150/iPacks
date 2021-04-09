@@ -55,15 +55,15 @@
 									{{ $speaking->topic }}
 								@endif
 							</td>
-							<td><span class="badge badge-dark">{{ date('d-m-Y H:i:s', strtotime($speaking->created_at)) }}</span></td>
+							<td><span class="badge badge-dark p-1">{{ date('d-m-Y H:i:s', strtotime($speaking->created_at)) }}</span></td>
 							<td class="text-capitalize">{{ $speaking->th_name }}</td>
 							@php 
 								if($speaking->status == 'sent') {
-									$status_speaking = "<span class='badge badge-warning'>Sent</span>";
+									$status_speaking = "<span class='badge badge-warning p-1'>Sent</span>";
 								}elseif($speaking->status == 'pending') {
-									$status_speaking = "<span class='badge badge-purple'>Pending</span>";
+									$status_speaking = "<span class='badge badge-purple p-1'>Pending</span>";
 								}elseif($speaking->status == 'success') {
-									$status_speaking = "<span class='badge badge-success'>Success</span>";
+									$status_speaking = "<span class='badge badge-success p-1'>Success</span>";
 								}
 							@endphp
 							<td>{!! $status_speaking !!}</td>

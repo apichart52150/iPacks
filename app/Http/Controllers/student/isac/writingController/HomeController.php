@@ -95,7 +95,7 @@ class HomeController extends Controller
     
                 } else if(in_array($j, [34, 36])) {
     
-                    $task1['task1'][$j] = ['number' => $number, 'type' => 'Picture', 'icon' => '<i class=" mdi mdi-burst-mode"></i>'];
+                    $task1['task1'][$j] = ['number' => $number, 'type' => 'Picture', 'icon' => '<i class="mdi mdi-image"></i>'];
     
                 } else {
                     $task1['task1'][$j] = '';
@@ -147,7 +147,7 @@ class HomeController extends Controller
             }
 
         }
-
+        
         return view('student.isac.writing.home', compact('task1', 'task2'));
 
     }

@@ -114,9 +114,9 @@ class CompleteController extends Controller
                 $nestedData['header_test'] = $complete->header_test;
                 $nestedData['test_type'] = $complete->test_type;
                 $sent_date = date('d-m-Y H:i:s', strtotime($complete->sent_date));
-                $nestedData['sent_date'] = "<span class='badge badge-success'>{$sent_date}</span>";
+                $nestedData['sent_date'] = "<span class='badge badge-success p-1'>{$sent_date}</span>";
                 ($complete->th_sent_date != null ? $th_date = date('d-m-Y H:i:s', strtotime($complete->th_sent_date)) : $th_date = '');
-                $nestedData['th_sent_date'] = "<span class='badge badge-dark'>{$th_date}</span>";
+                $nestedData['th_sent_date'] = "<span class='badge badge-dark p-1'>{$th_date}</span>";
                 $nestedData['action'] = "<a href='{$show}' class='btn btn-primary btn-sm'>View</a>";
                 
                 $data[] = $nestedData;

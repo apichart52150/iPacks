@@ -32,7 +32,7 @@
 									<td>{{ $speaking->std_name }}</td>
 									<td>{{ $speaking->topic }}</td>
 
-									<td><span class="badge badge-success">{{ date('d-m-Y H:i:s', strtotime($speaking->created_at))}}</td>
+									<td><span class="badge badge-success p-1">{{ date('d-m-Y H:i:s', strtotime($speaking->created_at))}}</td>
 									<td>
 										<?php 
 											$year = date('Y'); $month = date('m'); $day = date('d');
@@ -41,11 +41,11 @@
 										?>
 										@if(!empty($speaking->due_date))
 											@if(strtotime($speaking->due_date) >= strtotime($date) && $currentDate->diffInDays($dueDate) > 2)
-												<span class="badge badge-warning">
+												<span class="badge badge-warning p-1">
 													{{ \Carbon\Carbon::createFromTimeStamp(strtotime($speaking->due_date))->diffForHumans() }}
 												</span>
 											@else
-												<span class="badge badge-danger">
+												<span class="badge badge-danger p-1">
 													{{ \Carbon\Carbon::createFromTimeStamp(strtotime($speaking->due_date))->diffForHumans() }}
 												</span>
 											@endif

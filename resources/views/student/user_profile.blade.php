@@ -23,8 +23,11 @@
                     <div class="col-md-6">
                         <p class="text-muted font-15"><strong>Course :</strong> <span class="m-l-15">{{ $profile->coursename }}</span></p>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <p class="text-muted font-15"><strong>Email :</strong><span class="m-l-15">{{ $profile->std_email }}</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="text-muted font-16"><strong>Expire Date :</strong> <span class="badge badge-danger p-1">{{ date('d-m-Y', strtotime($profile->lastdate)) }}</span></p>
                     </div>
                 </div>
 
@@ -33,15 +36,11 @@
                 <div class="text-left m-t-20 row">
             
                     <div class="col-md-6">
-                        <p class="text-muted font-16"><strong>Writing Point :</strong> <span class="badge badge-warning p-1">{{ \App\Model\PointsWriting::checkPoint() }} Point</span></p>
-
-                        <p class="text-muted font-16"><strong>Expire Date :</strong> <span class="badge badge-danger p-1">{{ date('d-m-Y', strtotime($profile->lastdate)) }}</span></p>
+                        <p class="text-muted font-16"><strong>Writing Point :</strong> <span class="badge badge-primary p-1">{{ \App\Model\PointsWriting::checkPoint() }} Point</span></p>
                     </div>
 
                     <div class="col-md-6">
                         <p class="text-muted font-16"><strong>Speaking Point :</strong> <span class="badge badge-success p-1">{{ \App\Model\Points::checkPoint() }} Point</span></p>
-
-                        <p class="text-muted font-16"><strong>Expire Date :</strong> <span class="badge badge-danger p-1">{{ date('d-m-Y', strtotime($profile->lastdate)) }}</span></p>
                     </div>
                 </div>
             </div>

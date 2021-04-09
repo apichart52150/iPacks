@@ -6,7 +6,7 @@
 
 <style>
 	.page-item.active .page-link {
-    background-color: #009688 !important;
+    background-color: #3F51B5 !important;
 }
 </style>
 
@@ -29,7 +29,7 @@
 
 <div class="row">
 	<div class="col-md-12">
-		<div class="card card-body">
+		<div class="card card-body border-top border-primary border border-1">
 			<h3 class="mb-3">Status</h3>
 			<table id="basic-datatable" class="table table-borderless table-hover dt-responsive nowrap w-100">
 				<thead class="thead-light">
@@ -66,13 +66,13 @@
 								-->
 
 								@if ($writings->status == 'N')
-									<span class='badge badge-warning'>Sent</span>
+									<span class='badge badge-warning p-1'>Sent</span>
 								@elseif ($writings->status == 'W')
-									<span class='badge badge-purple'>Pending</span>
+									<span class='badge badge-purple p-1'>Pending</span>
 								@elseif($writings->status == 'Y')
-									<span class='badge badge-success'>Success</span>
-								@elseif($writings->status == 'ST_S') {
-									<span class='badge badge-secondary'>Work in progress</span>
+									<span class='badge badge-success p-1'>Success</span>
+								@elseif($writings->status == 'ST_S') 
+									<span class='badge badge-secondary p-1'>Saved</span>
 								@endif
 										
 							</td>

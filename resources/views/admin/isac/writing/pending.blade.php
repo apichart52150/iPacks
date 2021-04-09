@@ -31,15 +31,15 @@
                                         <td>{{ $pending->std_name }}</td>
                                         <td>{{ $pending->header_test }}</td>
                                         <td>{{ $pending->test_type }}</td>
-                                        <td><span class="badge badge-success">{{ date('d-m-Y H:i:s', strtotime($pending->sent_date)) }}</span></td>
+                                        <td><span class="badge badge-success p-1">{{ date('d-m-Y H:i:s', strtotime($pending->sent_date)) }}</span></td>
                                         <td>
                                             @if(!empty($pending->due_date))
                                                 @if(strtotime($pending->due_date) >= strtotime($date))
-                                                    <span class="badge badge-warning">
+                                                    <span class="badge badge-warning p-1">
                                                         {{ \Carbon\Carbon::createFromTimeStamp(strtotime($pending->due_date))->diffForHumans() }}
                                                     </span>
                                                 @else
-                                                    <span class="badge badge-danger">
+                                                    <span class="badge badge-danger p-1">
                                                         {{ \Carbon\Carbon::createFromTimeStamp(strtotime($pending->due_date))->diffForHumans() }}
                                                     </span>
                                                 @endif

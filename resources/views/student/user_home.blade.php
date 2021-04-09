@@ -90,7 +90,7 @@
 
             <div class="col-xl-3 col-md-6">
                 <a href="{{url('/isac_writing_home')}}">
-                    <div class="card-box widget-icon ribbon-box bg-warning">
+                    <div class="card-box widget-icon ribbon-box bg-primary">
                         <div class="ribbon-two ribbon-two-silver"><span>Silver</span></div>
                         <div class="avatar-lg float-left">
                             <i class="mdi mdi-lead-pencil  avatar-title display-6 m-0 " style="font-size: 5em;"></i>

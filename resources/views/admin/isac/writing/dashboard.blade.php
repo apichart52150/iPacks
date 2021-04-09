@@ -34,7 +34,7 @@
 								<td>{{ $writing->header_test }}</td>
                                 <td>{{ $writing->test_type }}</td>
 
-                                <td><span class="badge badge-success">{{ date('d-m-Y H:i:s', strtotime($writing->due_date))}}</td>
+                                <td><span class="badge badge-success p-1">{{ date('d-m-Y H:i:s', strtotime($writing->due_date))}}</td>
                                 <td>
 									<?php 
 										$year = date('Y'); $month = date('m'); $day = date('d');
@@ -43,11 +43,11 @@
 									?>
 									@if(!empty($writing->due_date))
 										@if(strtotime($writing->due_date) >= strtotime($date) && $currentDate->diffInDays($dueDate) > 2)
-		                                  	<span class="badge badge-warning">
+		                                  	<span class="badge badge-warning p-1">
 		                                  		 {{ \Carbon\Carbon::createFromTimeStamp(strtotime($writing->due_date))->diffForHumans() }}
 		                                    </span>
 	                                    @else
-		                                    <span class="badge badge-danger">
+		                                    <span class="badge badge-danger p-1">
 		                                         {{ \Carbon\Carbon::createFromTimeStamp(strtotime($writing->due_date))->diffForHumans() }}
 		                                    </span>
 	                                    @endif
