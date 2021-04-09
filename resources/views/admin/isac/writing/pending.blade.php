@@ -1,0 +1,58 @@
+<?php 
+	use Carbon\Carbon; 
+	$date = Carbon::now(); 
+?>
+@extends('layouts.layout_admin_w')
+
+@section('content')
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-box">
+                <h1>Pending</h1>
+                <div class="table-responsive mt-3">
+                    <table class="table table-striped dt-responsive w-100" id="basic-datatable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>STUDENT NAME</th>
+                                <th>SAC TEST</th>
+                                <th>SAC TYPE</th>
+                                <th>SUBMITTED</th>
+                                <th>DUE DATE</th>
+                                <th>CHECK</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @php $i = 1; @endphp
+                            @if(!empty($pendings))
+                                @foreach($pendings as $pending)
+                                    <tr>
+                                        <td>{{ $i++ }}</td>
+                                        <td>{{ $pending->std_name }}</td>
+                                        <td>{{ $pending->header_test }}</td>
+                                        <td>{{ $pending->test_type }}</td>
+                                        <td><span class="badge badge-success">{{ date('d-m-Y H:i:s', strtotime($pending->sent_date)) }}</span></td>
+                                        <td>
+                                            @if(!empty($pending->due_date))
+                                                @if(strtotime($pending->due_date) >= strtotime($date))
+                                                    <span class="badge badge-warning">
+                                                        {{ \Carbon\Carbon::createFromTimeStamp(strtotime($pending->due_date))->diffForHumans() }}
+                                                    </span>
+                                                @else
+                                                    <span class="badge badge-danger">
+                                                        {{ \Carbon\Carbon::createFromTimeStamp(strtotime($pending->due_date))->diffForHumans() }}
+                                                    </span>
+                                                @endif
+                                            @endif
+                                        </td>
+                                        <td><a href="{{ route('check_writing',['id' => $pending->id]) }}" class="btn btn-primary btn-sm">CHECK</a></td>
+                                    </tr>
+                                @endforeach
+                            @endif
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>  
+@endsection
