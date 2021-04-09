@@ -25,7 +25,7 @@
         <div class="col-xl-6 col-md-6">
             <a href="{{ url('writing/dashboard')}}">
                 <div class="widget-bg-color-icon card-box">
-                    <div class="avatar-lg rounded-circle bg-icon-primary float-left">
+                    <div class="avatar-lg rounded-circle bg-icon-warning float-left">
                         <i class="mdi mdi-grease-pencil font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
@@ -40,7 +40,7 @@
         <div class="col-xl-6 col-md-6">
             <a href="{{url('speaking/dashboard')}}">
                 <div class="widget-bg-color-icon card-box">
-                    <div class="avatar-lg rounded-circle bg-icon-primary float-left">
+                    <div class="avatar-lg rounded-circle bg-icon-success float-left">
                         <i class="mdi mdi-voice font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
