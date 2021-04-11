@@ -29,6 +29,7 @@
 			return view('student.user_profile', compact('profile'));
 		});
 		
+		// sac speaking
 		Route::prefix('')->namespace('student\isac\speakingController')->group(function () {
 
 			Route::get('/isac_speaking_home', 'HomeController@index')->name('isac_speaking_home');
@@ -49,7 +50,7 @@
 		});
 		
 
-
+		// sac writing
 		Route::prefix('')->namespace('student\isac\writingController')->group(function () {
 
 			Route::get('isac_writing_home', 'HomeController@index')->name('isac_writing_home');
@@ -66,6 +67,25 @@
 			});
 			Route::post('store_sac_save', 'ViewController@store_sac_save')->name('store.sac-save');
 		});
+
+		// mocktest
+		Route::prefix('gateway')->namespace('student\mocktest')->group(function () {
+			Route::get('home','HomeController@index');
+		});
+
+		Route::prefix('gateway')->namespace('student\mocktest\gateway')->group(function () {
+
+			Route::get('listening', 'ListeningController@index');
+			Route::get('ans_listening', 'ListeningController@exam');
+		
+			Route::get('reading', 'ReadingController@index');
+			Route::get('ans_reading', 'ReadingController@exam');
+		
+			Route::get('writing', 'WritingController@index');
+			Route::get('ans_writing', 'WritingController@exam');
+			
+		});
+	
 	});
 
 // ==================== End Rou tes User ====================== //

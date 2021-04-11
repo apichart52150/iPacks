@@ -179,15 +179,17 @@
         </div><!-- end col -->
 
         <div class="col-xl-6 col-md-6">
-            <div class="card-box widget-icon ribbon-box bg-primary">
-                <div class="ribbon-two ribbon-two-diamond avatar-title display-6 m-0 "><span>Diamond</span></div>
-                <div class="avatar-lg float-left">
-                    <i class=" mdi mdi-alphabetical avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+            <a href="{{ url('gateway/home') }}">
+                <div class="card-box widget-icon ribbon-box bg-primary">
+                    <div class="ribbon-two ribbon-two-diamond avatar-title display-6 m-0 "><span>Diamond</span></div>
+                    <div class="avatar-lg float-left">
+                        <i class=" mdi mdi-alphabetical avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                    </div>
+                    <div class="text-center">
+                        <h2 class="mb-3 text-light"> Mocktest </h2>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <h2 class="mb-3 text-light"> Mocktest </h2>
-                </div>
-            </div>
+            </a>
         </div><!-- end col -->
 
     </div>
