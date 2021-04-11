@@ -61,7 +61,7 @@
 
 							<td>{{ $writings->test_type }}</td>
 
-							<td>{{ $writings->comment }}</td>
+							<td><span class="badge badge-dark p-1">{{ date('d-m-Y H:i:s', strtotime($writings->sent_date)) }}</span></td>
 							
 							<td class="text-capitalize"> {{ $writings->th_name }} </td>
 
@@ -75,7 +75,7 @@
 
 								@if ($writings->status == 'N')
 									<span class='badge badge-warning p-1'>Sent</span>
-								@elseif ($writings->status == 'W')
+								@elseif ($writings->status == 'W' || $writings->status == 'TH_S')
 									<span class='badge badge-purple p-1'>Pending</span>
 								@elseif($writings->status == 'Y')
 									<span class='badge badge-success p-1'>Success</span>

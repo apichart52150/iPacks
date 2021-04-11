@@ -16,6 +16,8 @@ class Writing extends Model {
         ->orderBy('sent_date', 'desc')
         ->get();
 
+
+		// dd($writing);
         return ($writing);
 
     } 

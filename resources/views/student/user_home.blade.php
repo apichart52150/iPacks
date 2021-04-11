@@ -1,5 +1,23 @@
 @extends('layouts.main')
 
+@section('page_titile')
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Minton</a></li>
+                    <li class="breadcrumb-item active">Center Menu</li>
+                </ol>
+            </div>
+            <h4 class="page-title">Center Menu</h4>
+        </div>
+    </div>
+    </div>     
+<!-- end page title --> 
+
+@endsection
 @section('content')
 
 <style>
@@ -40,151 +58,133 @@
 	}
 </style>
 
-<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        
+        <div class="col-xl-3 col-md-6">
+            <a href="#">
+                <div class="card-box widget-icon ribbon-box bg-danger">
+                    <!-- <div class="ribbon-two ribbon-two-success avatar-title display-6 m-0 "><span>Free</span></div> -->
+                    <div class="avatar-lg float-left">
+                        <i class="mdi mdi-volume-high avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                    </div>
+                    <div class="wid-icon-info text-right">
+                        <h2 class="mb-1 text-light"> iSac  </h2>
+                        <h4 class="text-light mb-1">Listening</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
 
-    <!-- start page title -->
+        <div class="col-xl-3 col-md-6">
+            <a href="#">
+                <div class="card-box widget-icon ribbon-box bg-info">
+                    <!-- <div class="ribbon-two ribbon-two-success avatar-title display-6 m-0 "><span>Free</span></div> -->
+                    <div class="avatar-lg float-left">
+                    <i class="mdi mdi-eye avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                    </div>
+                    <div class="text-right">
+                        <h2 class="mb-1 text-light"> iSac  </h2>
+                        <h4 class="text-light mb-1">Reading</h4>
+                    </div>
+                </div>
+            </a>
+        </div><!-- end col -->
+
+        <div class="col-xl-3 col-md-6">
+            <a href="{{url('/isac_writing_home')}}">
+                <div class="card-box widget-icon ribbon-box bg-primary">
+                    <div class="ribbon-two ribbon-two-silver"><span>Silver</span></div>
+                    <div class="avatar-lg float-left">
+                        <i class="mdi mdi-lead-pencil  avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                    </div>
+                    <div class="text-right">
+                        <h2 class="mb-1 text-light"> iSac  </h2>
+                        <p class="text-light mb-1">Writing</p>
+                    </div>
+                </div>
+            </a>
+        </div><!-- end col -->
+
+        <div class="col-xl-3 col-md-6">
+            <a href="{{url('/browser-settings')}}">
+                <div class="card-box widget-icon ribbon-box bg-success">
+                    <div class="ribbon-two ribbon-two-platinum avatar-title display-6 m-0 "><span>Platinum</span></div>
+                    <div class="avatar-lg float-left">
+                        <i class="mdi mdi-voice avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                    </div>
+                    <div class="text-right">
+                        <h2 class="mb-1 text-light"> iSac </h2>
+                        <p class="text-light mb-1">Speaking</p>
+                    </div>
+                </div>
+            </a>
+        </div><!-- end col -->
+
+    </div>
+    <!-- end row -->
+        
+
+    <!-- end isac -->
+
+
     <div class="row">
-        <div class="col-xl-12">
-            <div class="page-title-box">
-                <div class="page-title-right">
-                    <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item active">Home</li>
-                    </ol>
+        
+        <div class="col-xl-6 col-md-6">
+            <div class="card-box widget-icon ribbon-box bg-primary">
+                <!-- <div class="ribbon-two ribbon-two-success avatar-title display-6 m-0 "><span>Free</span></div> -->
+                <div class="avatar-lg float-left">
+                    <i class="mdi mdi-view-compact avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                </div>
+                <div class="text-center">
+                    <h2 class="mb-3 text-light "> Strategies Packs</h2>
                 </div>
             </div>
-        </div>
-    </div>     
-    <!-- end page title -->
+        </div><!-- end col -->
 
-        <div class="row">
-           
-            <div class="col-xl-3 col-md-6">
-                <a href="#">
-                    <div class="card-box widget-icon ribbon-box bg-danger">
-                        <!-- <div class="ribbon-two ribbon-two-success avatar-title display-6 m-0 "><span>Free</span></div> -->
-                        <div class="avatar-lg float-left">
-                            <i class="mdi mdi-volume-high avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                        </div>
-                        <div class="wid-icon-info text-right">
-                            <h2 class="mb-1 text-light"> iSac  </h2>
-                            <h4 class="text-light mb-1">Listening</h4>
-                        </div>
-                    </div>
-                </a>
+        <div class="col-xl-6 col-md-6">
+            <div class="card-box widget-icon ribbon-box bg-primary">
+                <div class="ribbon-two ribbon-two-diamond avatar-title display-6 m-0 "><span>Diamond</span></div>
+                <div class="avatar-lg float-left">
+                    <i class=" mdi mdi-alphabetical avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                </div>
+                <div class="text-center">
+                    <h2 class="mb-3 text-light"> Mocktest </h2>
+                </div>
             </div>
+        </div><!-- end col -->
 
-            <div class="col-xl-3 col-md-6">
-                <a href="#">
-                    <div class="card-box widget-icon ribbon-box bg-info">
-                        <!-- <div class="ribbon-two ribbon-two-success avatar-title display-6 m-0 "><span>Free</span></div> -->
-                        <div class="avatar-lg float-left">
-                        <i class="mdi mdi-eye avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                        </div>
-                        <div class="text-right">
-                            <h2 class="mb-1 text-light"> iSac  </h2>
-                            <h4 class="text-light mb-1">Reading</h4>
-                        </div>
-                    </div>
-                </a>
-            </div><!-- end col -->
+    </div>
+    <!-- end row -->
 
-            <div class="col-xl-3 col-md-6">
-                <a href="{{url('/isac_writing_home')}}">
-                    <div class="card-box widget-icon ribbon-box bg-primary">
-                        <div class="ribbon-two ribbon-two-silver"><span>Silver</span></div>
-                        <div class="avatar-lg float-left">
-                            <i class="mdi mdi-lead-pencil  avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                        </div>
-                        <div class="text-right">
-                            <h2 class="mb-1 text-light"> iSac  </h2>
-                            <p class="text-light mb-1">Writing</p>
-                        </div>
-                    </div>
-                </a>
-            </div><!-- end col -->
+    <div class="row">
 
-            <div class="col-xl-3 col-md-6">
-                <a href="{{url('/browser-settings')}}">
-                    <div class="card-box widget-icon ribbon-box bg-success">
-                        <div class="ribbon-two ribbon-two-platinum avatar-title display-6 m-0 "><span>Platinum</span></div>
-                        <div class="avatar-lg float-left">
-                            <i class="mdi mdi-voice avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                        </div>
-                        <div class="text-right">
-                            <h2 class="mb-1 text-light"> iSac </h2>
-                            <p class="text-light mb-1">Speaking</p>
-                        </div>
-                    </div>
-                </a>
-            </div><!-- end col -->
-
-        </div>
-        <!-- end row -->
-            
-    
-        <!-- end isac -->
-
-
-        <div class="row">
-           
-            <div class="col-xl-6 col-md-6">
-                <div class="card-box widget-icon ribbon-box bg-primary">
-                    <!-- <div class="ribbon-two ribbon-two-success avatar-title display-6 m-0 "><span>Free</span></div> -->
-                    <div class="avatar-lg float-left">
-                        <i class="mdi mdi-view-compact avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                    </div>
-                    <div class="text-center">
-                        <h2 class="mb-3 text-light "> Strategies Packs</h2>
-                    </div>
+        <div class="col-xl-6 col-md-6">
+            <div class="card-box widget-icon ribbon-box bg-primary">
+                <!-- <div class="ribbon-two ribbon-two-success avatar-title display-6 m-0 "><span>Free</span></div> -->
+                <div class="avatar-lg float-left">
+                    <i class="mdi mdi-animation avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
-            </div><!-- end col -->
-
-            <div class="col-xl-6 col-md-6">
-               <div class="card-box widget-icon ribbon-box bg-primary">
-                   <div class="ribbon-two ribbon-two-diamond avatar-title display-6 m-0 "><span>Diamond</span></div>
-                   <div class="avatar-lg float-left">
-                       <i class=" mdi mdi-alphabetical avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                   </div>
-                   <div class="text-center">
-                       <h2 class="mb-3 text-light"> Mocktest </h2>
-                   </div>
-               </div>
-           </div><!-- end col -->
-
-        </div>
-        <!-- end row -->
-
-        <div class="row">
-
-            <div class="col-xl-6 col-md-6">
-                <div class="card-box widget-icon ribbon-box bg-primary">
-                    <!-- <div class="ribbon-two ribbon-two-success avatar-title display-6 m-0 "><span>Free</span></div> -->
-                    <div class="avatar-lg float-left">
-                        <i class="mdi mdi-animation avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                    </div>
-                    <div class="text-center">
-                        <h2 class="mb-3 text-light"> Topic Packs</h2>
-                    </div>
+                <div class="text-center">
+                    <h2 class="mb-3 text-light"> Topic Packs</h2>
                 </div>
-            </div><!-- end col -->
-           
-           
+            </div>
+        </div><!-- end col -->
+        
+        
 
-           <div class="col-xl-6 col-md-6">
-               <div class="card-box widget-icon ribbon-box bg-primary">
-                   <div class="ribbon-two ribbon-two-secondary avatar-title display-6 m-0 "><span>Premium</span></div>
-                   <div class="avatar-lg float-left">
-                       <i class="mdi mdi-account-group avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                   </div>
-                   <div class="text-center">
-                       <h2 class="mb-3 text-light"> Club </h2>
-                   </div>
-               </div>
-           </div><!-- end col -->
+        <div class="col-xl-6 col-md-6">
+            <div class="card-box widget-icon ribbon-box bg-primary">
+                <div class="ribbon-two ribbon-two-secondary avatar-title display-6 m-0 "><span>Premium</span></div>
+                <div class="avatar-lg float-left">
+                    <i class="mdi mdi-account-group avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                </div>
+                <div class="text-center">
+                    <h2 class="mb-3 text-light"> Club </h2>
+                </div>
+            </div>
+        </div><!-- end col -->
 
-        </div>
-        <!-- end row -->
-    
-    </div> <!-- end container -->
+    </div>
+    <!-- end row -->
 @endsection
 
