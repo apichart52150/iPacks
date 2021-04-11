@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Auth;
+use Session;
 
 /**
  * 
@@ -121,17 +122,16 @@ class AdminWriting extends Model
 			DB::beginTransaction();
 
             try {
-
-                $check_submit = DB::table('text_result')
-                    ->where('id','=', $request->input('id'))
+				$check_submit = DB::table('text_result')
+					->where('id','=', $request->input('id'))
                     ->update([
                         'status' => 'TH_S',
-                        'th_sent_date' =>  date('Y-m-d H:i:s'),
+						'th_sent_date' =>  date('Y-m-d H:i:s'),
                         'th_text' => $request->input('th_text'),
                         'score' => $request->input('score'),
                         'comment' => $request->input('comment')
                     ]);
-				DB::commit();
+                DB::commit();
 
                 return  ($check_submit);
 

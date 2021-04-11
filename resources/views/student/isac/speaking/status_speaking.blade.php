@@ -50,7 +50,7 @@
 							<td>{{ $i++ }}</td>
 							<td>
 								@if($speaking->status == 'success')
-									<a href="{{ url('status_speaking',['id' => $speaking->id]) }}" class="btn btn-outline-primary btn-sm waves-effect waves-light">{{ $speaking->topic }}</a>
+									<a href="{{ url('status_speaking',['id' => $speaking->id]) }}" class="btn btn-outline-success btn-sm waves-effect waves-light">{{ $speaking->topic }}</a>
 								@else
 									{{ $speaking->topic }}
 								@endif

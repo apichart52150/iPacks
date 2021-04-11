@@ -39,13 +39,13 @@
 
             <img class="card-img-top img-fluid mb-3" src="{{asset('public/assets/images/sac-colorV4.jpg')}}" alt="SAC Color">
 
+
             <form action="{{ route('check_writing_submit') }}" method="POST">
                 {{ csrf_field() }}
-
                 <input type="hidden" name="id" value="{{ $check['id'] }}">
 
                 <textarea id="elm1" name="th_text">
-                    @if($check['th_text'])
+                    @if($check['status'] == 'TH_S')
                         {!! $check['th_text'] !!}
                     @else 
                         {!! $check['text'] !!}

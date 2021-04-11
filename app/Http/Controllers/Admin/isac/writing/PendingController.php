@@ -31,6 +31,8 @@ class PendingController extends Controller
 
         $check = AdminWriting::check($id);
 
+        // dd($check);
+
         return view('admin.isac.writing.check',compact('check'));
     }
     

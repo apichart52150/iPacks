@@ -1,5 +1,70 @@
 @extends('layouts.main')
 
+@section('topbar')
+
+<div class="topbar-menu">
+    <div class="container-fluid">
+        <div id="navigation">
+            <!-- Navigation Menu-->
+            <ul class="navigation-menu">
+
+                <li class="has-submenu">
+                    <a href="#">
+                        <i class="mdi mdi-view-dashboard"></i>iSAC<div class="arrow-down"></div>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                        <a href="{{ route('isac_writing_home') }}"><i class="mdi mdi-trophy-variant mr-1"></i>  Writing</a> 
+                        <li>
+                            <a href="{{ route('browser-settings') }}"><i class="mdi mdi-trophy-variant mr-1"></i>  Speaking</a>
+                        </li>
+                        <li>
+                                <a href="#"><i class="mdi mdi-trophy-variant mr-1"></i>  Reading</a>
+                        </li>
+                        <li>
+                                <a href="#"><i class="mdi mdi-trophy-variant mr-1"></i>  Listening</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="has-submenu">
+                    <a href="#">
+                        <i class="mdi mdi-layers"></i>Mocktest<div class="arrow-down"></div>
+                    </a>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="#">
+                        <i class="mdi mdi-layers"></i>Strategies Packs<div class="arrow-down"></div>
+                    </a>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="#">
+                        <i class="mdi mdi-layers"></i>Topic Packs<div class="arrow-down"></div>
+                    </a>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="#">
+                        <i class="mdi mdi-layers"></i>Bonus&Club<div class="arrow-down"></div>
+                    </a>
+                </li>
+
+            </ul>
+            <!-- End navigation menu -->
+
+            <div class="clearfix"></div>
+        </div>
+        <!-- end #navigation -->
+    </div>
+    <!-- end container -->
+</div>
+<!-- end navbar-custom -->
+
+@endsection
+
 @section('page_titile')
 <!-- start page title -->
 <div class="row">
@@ -7,16 +72,15 @@
         <div class="page-title-box">
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="javascript: void(0);">Minton</a></li>
-                    <li class="breadcrumb-item active">Center Menu</li>
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">iPacks</a></li>
+                    <li class="breadcrumb-item active">Home</li>
                 </ol>
             </div>
-            <h4 class="page-title">Center Menu</h4>
+            <h4 class="page-title">Home</h4>
         </div>
     </div>
     </div>     
 <!-- end page title --> 
-
 @endsection
 @section('content')
 
@@ -36,34 +100,13 @@
         background: #70d1f4  !important;
     }
 
-    @media(max-width: 450px) {
-		.row img {
-			width: 100%;
-		}
-	}
-
-	@media(max-width: 768px) {
-		.row img {
-			width: 80%;
-		}
-	}
-
-	.col-md-6 p {
-		margin: 30px 0;
-		font-size: 19px;
-	}
-
-	.row:nth-child(even) p {
-		margin-top: 0;
-	}
 </style>
 
     <div class="row d-flex justify-content-center">
         
         <div class="col-xl-3 col-md-6">
-            <a href="#">
+            <a href="#" class="wave-light">
                 <div class="card-box widget-icon ribbon-box bg-danger">
-                    <!-- <div class="ribbon-two ribbon-two-success avatar-title display-6 m-0 "><span>Free</span></div> -->
                     <div class="avatar-lg float-left">
                         <i class="mdi mdi-volume-high avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                     </div>
@@ -78,7 +121,6 @@
         <div class="col-xl-3 col-md-6">
             <a href="#">
                 <div class="card-box widget-icon ribbon-box bg-info">
-                    <!-- <div class="ribbon-two ribbon-two-success avatar-title display-6 m-0 "><span>Free</span></div> -->
                     <div class="avatar-lg float-left">
                     <i class="mdi mdi-eye avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                     </div>
@@ -121,17 +163,12 @@
         </div><!-- end col -->
 
     </div>
-    <!-- end row -->
-        
-
-    <!-- end isac -->
 
 
     <div class="row">
         
         <div class="col-xl-6 col-md-6">
             <div class="card-box widget-icon ribbon-box bg-primary">
-                <!-- <div class="ribbon-two ribbon-two-success avatar-title display-6 m-0 "><span>Free</span></div> -->
                 <div class="avatar-lg float-left">
                     <i class="mdi mdi-view-compact avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
@@ -154,13 +191,12 @@
         </div><!-- end col -->
 
     </div>
-    <!-- end row -->
+   
 
     <div class="row">
 
         <div class="col-xl-6 col-md-6">
             <div class="card-box widget-icon ribbon-box bg-primary">
-                <!-- <div class="ribbon-two ribbon-two-success avatar-title display-6 m-0 "><span>Free</span></div> -->
                 <div class="avatar-lg float-left">
                     <i class="mdi mdi-animation avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
@@ -185,6 +221,5 @@
         </div><!-- end col -->
 
     </div>
-    <!-- end row -->
 @endsection
 

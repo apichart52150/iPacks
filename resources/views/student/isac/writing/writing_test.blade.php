@@ -97,10 +97,12 @@
 
                                 @if($data['mode'] == 'practice')
                                     <button id="save" class="btn btn-primary">SAVE</button>
-                                @endif
+                                    <a href="{{ url('/isac_writing_home') }}" class="btn btn-danger">CANCEL</a>
 
+                                @else
                                 <button id="submit" class="btn btn-success">SUBMIT</button>
                                 <a href="{{ url('/isac_writing_home') }}" class="btn btn-danger">CANCEL</a>
+                                @endif
                             </div>
                         </div>
                     </div>

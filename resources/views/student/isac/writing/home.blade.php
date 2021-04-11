@@ -1,13 +1,13 @@
 @extends('layouts.sac_w')
 
+
+
 @section('content')
     <style>
         .nav-bordered a.active {
             border-bottom: 2px solid #3F51B5 !important;
         }
     </style>
-
-    
 
     @section('page-title')
     <div class="row">
@@ -73,19 +73,19 @@
                                                 <img src="{{ asset('public/assets/images/ks-ix/'.$data['imgNo'].'.jpg') }}" class="w-100 mt-1">
                                             </div>
                                             <div class="modal-footer">
-                                            <form action="{{ route('writing_test') }}" method="POST">
-                                                {{ csrf_field() }}
-                                                
-                                                <input type="hidden" name="task" value="{{$data['task']}}"> 
-                                                <input type="hidden" name="imgPath" value="public/assets/images/ks-ix/{{$data['imgNo']}}.jpg">
-                                                <input type="hidden" name="code_sac" value="{{$data['imgNo']}}"> 
-                                                <input type="hidden" name="test_type" value="{{$data['type']}}"> 
-                                                <input type="hidden" name="header_test" value="{{$data['header']}}"> 
-                                                <input type="hidden" name="level" value="1"> 
+                                                <form action="{{ route('writing_test') }}" method="POST">
+                                                    {{ csrf_field() }}
+                                                    
+                                                    <input type="hidden" name="task" value="{{$data['task']}}"> 
+                                                    <input type="hidden" name="imgPath" value="public/assets/images/ks-ix/{{$data['imgNo']}}.jpg">
+                                                    <input type="hidden" name="code_sac" value="{{$data['imgNo']}}"> 
+                                                    <input type="hidden" name="test_type" value="{{$data['type']}}"> 
+                                                    <input type="hidden" name="header_test" value="{{$data['header']}}"> 
+                                                    <input type="hidden" name="level" value="1"> 
 
-                                                <button type="submit" class="btn btn-info waves-effect" name="mode" value="practice">Practice Mode</button>
-                                                <button type="submit" class="btn btn-primary waves-effect waves-light" name="mode" value="test">Test Mode</button>
-                                            </form>
+                                                    <button type="submit" class="btn btn-info waves-effect" name="mode" value="practice">Practice Mode</button>
+                                                    <button type="submit" class="btn btn-primary waves-effect waves-light" name="mode" value="test">Test Mode</button>
+                                                </form>
                                                 
                                             </div>
                                         </div><!-- /.modal-content -->
@@ -118,7 +118,7 @@
                         <div class="tab-pane fade {{ ($tabKey+1) == 1 ? 'show active' : '' }}" id="task2_{{ ($tabKey+1) }}">
                             @foreach($tabValue as $key => $value)
                                 @php 
-                                    $imgNo = "2-".$key;
+                                    $imgNo = "2_".$key;
                                     $header = "iSAC Writing 2-".$key;
                                     $type = $value['type'];
                                     $task = '2';

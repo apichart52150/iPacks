@@ -59,7 +59,6 @@ class WritingController extends Controller
                             'std_id' => Session::get('std_id'),
                             'test_type' => $request->input('test_type'),
                             'header_test' => $request->input('header_test'),
-                            'header_test' => $request->input('header_test'),
                             'text' => $request->input('text_result'),
                             'mode' => $request->input('mode'),
                             'status' => 'N',
@@ -69,6 +68,8 @@ class WritingController extends Controller
                             'due_date' => $due_date,
                         ]
                     );
+
+                    // dd($result);
 
                 
                 if($result) {
@@ -85,7 +86,7 @@ class WritingController extends Controller
 
                     DB::commit();
                     
-                    return redirect('success');
+                    return redirect('status_writing');
                 }
 
 
@@ -108,7 +109,6 @@ class WritingController extends Controller
                             'std_id' => Session::get('std_id'),
                             'test_type' => $request->input('test_type'),
                             'header_test' => $request->input('header_test'),
-                            'header_test' => $request->input('header_test'),
                             'text' => $request->input('text_result'),
                             'mode' => $request->input('mode'),
                             'status' => 'ST_S',
@@ -128,7 +128,7 @@ class WritingController extends Controller
                 
                     DB::commit();
 
-                    return redirect('success');
+                    return redirect('status_writing');
                 }
 
             } catch(Exception $e) {

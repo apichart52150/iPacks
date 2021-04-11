@@ -194,6 +194,10 @@
 
         <div class="wrapper">
             <div class="container-fluid {{ $route == 'browser-settings' ? 'mt-0' : 'mt-4'}}">
+
+           
+           
+                       
                 <!-- start page title -->
                 @yield('page-title')
                 <!-- end page title --> 

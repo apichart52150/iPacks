@@ -39,49 +39,6 @@
                             <!-- End mobile menu toggle-->
                         </li>
 
-                        <li class="d-none d-sm-block">
-                            <form class="app-search">
-                                <div class="app-search-box">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search...">
-                                        <div class="input-group-append">
-                                            <button class="btn" type="submit">
-                                                <i class="fe-search"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </li>
-
-                        <li class="dropdown d-none d-lg-block">
-                            <a class="nav-link dropdown-toggle mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="{{asset('public/assets/images/flags/us.jpg') }}" alt="user-image" class="mr-1" height="12"> <span class="align-middle">English <i class="mdi mdi-chevron-down"></i> </span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="{{asset('public/assets/images/flags/germany.jpg') }}" alt="user-image" class="mr-1" height="12"> <span class="align-middle">German</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="{{asset('public/assets/images/flags/italy.jpg') }}" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Italian</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="{{asset('public/assets/images/flags/spain.jpg') }}" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Spanish</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="{{asset('public/assets/images/flags/russia.jpg') }}" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Russian</span>
-                                </a>
-
-                            </div>
-                        </li>
-            
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle  waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <i class="fe-bell noti-icon"></i>
@@ -192,28 +149,10 @@
                                     <span>My Account</span>
                                 </a>
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="mdi mdi-settings"></i>
-                                    <span>Settings</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="mdi mdi-wallet"></i>
-                                    <span>My Wallet <span class="badge badge-success float-right">3</span> </span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="mdi mdi-lock"></i>
-                                    <span>Lock Screen</span>
-                                </a>
-
                                 <div class="dropdown-divider"></div>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <a href="{{ route('user_logout') }}" class="dropdown-item notify-item">
                                     <i class="mdi mdi-logout"></i>
                                     <span>Logout</span>
                                 </a>
@@ -231,557 +170,25 @@
 
                     <!-- LOGO -->
                     <div class="logo-box">
-                        <a href="index.html" class="logo text-center">
+                        <a href="#" class="logo text-center">
                             <span class="logo-lg">
-                                <img src="{{asset('public/assets/images/logo-light.png') }}" alt="" height="20">
+                                <img src="{{asset('public/assets/images/logo-nc.png') }}" alt="" height="45">
                                 <!-- <span class="logo-lg-text-light">Xeria</span> -->
                             </span>
                             <span class="logo-sm">
                                 <!-- <span class="logo-sm-text-dark">X</span> -->
-                                <img src="{{asset('public/assets/images/logo-sm.png') }}" alt="" height="24">
+                                <img src="{{asset('public/assets/images/logo-nc.png') }}" alt="" height="24">
                             </span>
                         </a>
                     </div>
-
-                    <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
-            
-                        <li class="dropdown d-none d-lg-block">
-                            <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                Create New
-                                <i class="mdi mdi-chevron-down"></i> 
-                            </a>
-                            <div class="dropdown-menu">
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="fe-briefcase mr-1"></i>
-                                    <span>New Projects</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="fe-user mr-1"></i>
-                                    <span>Create Users</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="fe-bar-chart-line- mr-1"></i>
-                                    <span>Revenue Report</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="fe-settings mr-1"></i>
-                                    <span>Settings</span>
-                                </a>
-
-                                <div class="dropdown-divider"></div>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="fe-headphones mr-1"></i>
-                                    <span>Help & Support</span>
-                                </a>
-
-                            </div>
-                        </li>
-
-                        <li class="dropdown dropdown-mega d-none d-lg-block">
-                            <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                Mega Menu
-                                <i class="mdi mdi-chevron-down"></i> 
-                            </a>
-                            <div class="dropdown-menu dropdown-megamenu">
-                                <div class="row">
-                                    <div class="col-sm-8">
-                            
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <h5 class="text-dark mt-0">UI Components</h5>
-                                                <ul class="list-unstyled megamenu-list">
-                                                    <li>
-                                                        <a href="javascript:void(0);">Widgets</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Nestable List</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Range Sliders</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Masonry Items</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Sweet Alerts</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Treeview Page</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Tour Page</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="col-md-4">
-                                                <h5 class="text-dark mt-0">Applications</h5>
-                                                <ul class="list-unstyled megamenu-list">
-                                                    <li>
-                                                        <a href="javascript:void(0);">eCommerce Pages</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">CRM Pages</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Email</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Calendar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Team Contacts</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Task Board</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Email Templates</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="col-md-4">
-                                                <h5 class="text-dark mt-0">Extra Pages</h5>
-                                                <ul class="list-unstyled megamenu-list">
-                                                    <li>
-                                                        <a href="javascript:void(0);">Left Sidebar with User</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Menu Collapsed</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Small Left Sidebar</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">New Header Style</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Search Result</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Gallery Pages</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Maintenance & Coming Soon</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="text-center mt-3">
-                                            <h3 class="text-dark">Special Discount Sale!</h3>
-                                            <h4>Save up to 70% off.</h4>
-                                            <button class="btn btn-primary mt-3">Download Now <i class="ml-1 mdi mdi-arrow-right"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </li>
-                    </ul>
                     <div class="clearfix"></div>
                 </div>
             </div>
             <!-- end Topbar -->
 
-            <div class="topbar-menu">
-                <div class="container-fluid">
-                    <div id="navigation">
-                        <!-- Navigation Menu-->
-                        <ul class="navigation-menu">
 
-                            <li class="has-submenu">
-                                <a href="#">
-                                    <i class="mdi mdi-view-dashboard"></i>Dashboards <div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index.html">Dashboard 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="dashboard-2.html">Dashboard 2</a>
-                                    </li>
-                                </ul>
-                            </li>
+            @yield('topbar')
 
-                            <li class="has-submenu">
-                                <a href="#">
-                                    <i class="mdi mdi-layers"></i>Apps <div class="arrow-down"></div>
-                                </a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="apps-kanbanboard.html">Kanban Board</a>
-                                    </li>
-                                    <li>
-                                        <a href="apps-companies.html">Companies</a>
-                                    </li>
-                                    <li>
-                                        <a href="apps-calendar.html">Calendar</a>
-                                    </li>
-                                    <li>
-                                        <a href="apps-filemanager.html">File Manager</a>
-                                    </li>
-                                    <li>
-                                        <a href="apps-tickets.html">Tickets</a>
-                                    </li>
-                                    <li>
-                                        <a href="apps-team.html">Team Members</a>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="#">Email <div class="arrow-down"></div></a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="email-inbox.html">Inbox</a>
-                                            </li>
-                                            <li>
-                                                <a href="email-read.html">Read Email</a>
-                                            </li>
-                                            <li>
-                                                <a href="email-compose.html">Compose Email</a>
-                                            </li>
-                                            <li>
-                                                <a href="email-templates.html">Email Templates</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="has-submenu">
-                                <a href="#"> <i class="mdi mdi-page-layout-body"></i>Layouts <div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="layouts-menubar-dark.html">Menubar Dark</a>
-                                    </li>
-                                    <li>
-                                        <a href="layouts-topbar-light.html">Topbar Light</a>
-                                    </li>
-                                    <li>
-                                        <a href="layouts-center-menu.html">Center Menu</a>
-                                    </li>
-                                    <li>
-                                        <a href="layouts-preloader.html">Preloader</a>
-                                    </li>
-                                    <li>
-                                        <a href="layouts-normal-header.html">Unsticky Header</a>
-                                    </li>
-                                    <li>
-                                        <a href="layouts-boxed.html">Boxed</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="has-submenu">
-                                <a href="#"> <i class="mdi mdi-briefcase"></i>UI Elements <div class="arrow-down"></div></a>
-                                <ul class="submenu megamenu">
-                                    <li>
-                                        <ul>
-                                            <li>
-                                                <a href="ui-buttons.html">Buttons</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-cards.html">Cards</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-portlets.html">Portlets</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-tabs-accordions.html">Tabs & Accordions</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-modals.html">Modals</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-progress.html">Progress</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul>
-                                            <li>
-                                                <a href="ui-notifications.html">Notifications</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-ribbons.html">Ribbons</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-spinners.html">Spinners</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-general.html">General UI</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-typography.html">Typography</a>
-                                            </li>
-                                            <li>
-                                                <a href="ui-grid.html">Grid</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                        
-                                </ul>
-                            </li>
-
-                            <li class="has-submenu">
-                                <a href="#">
-                                    <i class="mdi mdi-black-mesa"></i>Components <div class="arrow-down"></div>
-                                </a>
-                                <ul class="submenu">
-                                    <li class="has-submenu">
-                                        <a href="#"><i class="mdi mdi-trophy-variant mr-1"></i> Admin UI <div class="arrow-down"></div></a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="admin-sweet-alert.html">Sweet Alert</a>
-                                            </li>
-                                            <li>
-                                                <a href="admin-nestable.html">Nestable List</a>
-                                            </li>
-                                            <li>
-                                                <a href="admin-treeview.html">Treeview</a>
-                                            </li>
-                                            <li>
-                                                <a href="admin-range-slider.html">Range Slider</a>
-                                            </li>
-                                            <li>
-                                                <a href="admin-carousel.html">Carousel</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="widgets.html"><i class="mdi mdi-mine mr-1"></i> Widgets </a>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="#"><i class="mdi mdi-cards mr-1"></i> Forms <div class="arrow-down"></div></a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="forms-elements.html">General Elements</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-advanced.html">Advanced</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-validation.html">Validation</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-pickers.html">Pickers</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-wizard.html">Wizard</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-summernote.html">Summernote</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-quilljs.html">Quilljs Editor</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-file-uploads.html">File Uploads</a>
-                                            </li>
-                                            <li>
-                                                <a href="forms-x-editable.html">X Editable</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="#"><i class="mdi mdi-table mr-1"></i> Tables <div class="arrow-down"></div></a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="tables-basic.html">Basic Tables</a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-datatables.html">Data Tables</a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-editable.html">Editable Tables</a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-tablesaw.html">Tablesaw Tables</a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-responsive.html">Responsive Tables</a>
-                                            </li>
-                                            <li>
-                                                <a href="tables-footables.html">FooTables</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="#"><i class="mdi mdi-chart-arc mr-1"></i> Charts <div class="arrow-down"></div></a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="charts-flot.html">Flot Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-apex.html">Apex Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-morris.html">Morris Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-chartjs.html">Chartjs Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-c3.html">C3 Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-peity.html">Peity Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-chartist.html">Chartist Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-sparklines.html">Sparklines Charts</a>
-                                            </li>
-                                            <li>
-                                                <a href="charts-knob.html">Jquery Knob Charts</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="#"><i class="mdi mdi-parachute mr-1"></i> Icons <div class="arrow-down"></div></a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="icons-remix.html">Remix Icons</a>
-                                            </li>
-                                            <li>
-                                                <a href="icons-feather.html">Feather Icons</a>
-                                            </li>
-                                            <li>
-                                                <a href="icons-mdi.html">Material Design Icons</a>
-                                            </li>
-                                            <li>
-                                                <a href="icons-font-awesome.html">Font Awesome</a>
-                                            </li>
-                                            <li>
-                                                <a href="icons-themify.html">Themify</a>
-                                            </li>
-                                            <li>
-                                                <a href="icons-weather.html">Weather</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="#"><i class="mdi mdi-map mr-1"></i> Maps <div class="arrow-down"></div></a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="maps-google.html">Google Maps</a>
-                                            </li>
-                                            <li>
-                                                <a href="maps-vector.html">Vector Maps</a>
-                                            </li>
-                                            <li>
-                                                <a href="maps-mapael.html">Mapael Maps</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="has-submenu">
-                                <a href="#"> <i class="mdi mdi-google-pages"></i>Pages <div class="arrow-down"></div></a>
-                                <ul class="submenu megamenu">
-                                    <li>
-                                        <ul>
-                                            <li>
-                                                <a href="pages-starter.html">Starter</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-login.html">Log In</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-register.html">Register</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-recoverpw.html">Recover Password</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-lock-screen.html">Lock Screen</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul>
-                                            <li>
-                                                <a href="pages-logout.html">Logout</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-confirm-mail.html">Confirm Mail</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-404.html">Error 404</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-404-alt.html">Error 404-alt</a>
-                                            </li>
-                                            <li>
-                                                <a href="pages-500.html">Error 500</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="has-submenu">
-                                <a href="#"> <i class="mdi mdi-file-document-box-multiple"></i>Extra Pages <div class="arrow-down"></div></a>
-                                <ul class="submenu megamenu">
-                                    <li>
-                                        <ul>
-                                            <li>
-                                                <a href="extras-profile.html">Profile</a>
-                                            </li>
-                                            <li>
-                                                <a href="extras-timeline.html">Timeline</a>
-                                            </li>
-                                            <li>
-                                                <a href="extras-invoice.html">Invoice</a>
-                                            </li>
-                                            <li>
-                                                <a href="extras-faqs.html">FAQs</a>
-                                            </li>
-                                            <li>
-                                                <a href="extras-tour.html">Tour Page</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul>
-                                            <li>
-                                                <a href="extras-pricing.html">Pricing</a>
-                                            </li>
-                                            <li>
-                                                <a href="extras-maintenance.html">Maintenance</a>
-                                            </li>
-                                            <li>
-                                                <a href="extras-coming-soon.html">Coming Soon</a>
-                                            </li>
-                                            <li>
-                                                <a href="extras-gallery.html">Gallery</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                        <!-- End navigation menu -->
-
-                        <div class="clearfix"></div>
-                    </div>
-                    <!-- end #navigation -->
-                </div>
-                <!-- end container -->
-            </div>
-            <!-- end navbar-custom -->
 
         </header>
         <!-- End Navigation Bar-->
@@ -792,8 +199,11 @@
 
         <div class="wrapper">
             <div class="container-fluid p-0">
+
                 @yield('page_titile')
+
                 @yield('content')
+
             </div> <!-- end container -->
         </div>
         <!-- end wrapper -->
@@ -802,24 +212,17 @@
         <!-- End Page content -->
         <!-- ============================================================== -->
     
-        <!-- Footer Start -->
-        <footer class="footer">
-            <div class="container-fluid">
+          <!-- Footer -->
+          <footer class="footer">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                       2016 - 2019 &copy; Minton theme by <a href="">Coderthemes</a> 
-                    </div>
-                    <div class="col-md-6">
-                        <div class="text-md-right footer-links d-none d-sm-block">
-                            <a href="javascript:void(0);">About Us</a>
-                            <a href="javascript:void(0);">Help</a>
-                            <a href="javascript:void(0);">Contact Us</a>
-                        </div>
+                    <div class="col-12 text-center">
+                        2021 iPACKS © New Cambridge
                     </div>
                 </div>
             </div>
         </footer>
-        <!-- end Footer -->
+        <!-- End Footer -->
 
         <!-- Right Sidebar -->
         <div class="right-bar">
@@ -833,7 +236,7 @@
                 <!-- User box -->
                 <div class="user-box">
                     <div class="user-img">
-                        <img src="{{asset('public/assets/images/users/avatar-1.jpg') }}') }}" alt="user-img" title="Mat Helme" class="rounded-circle img-fluid">
+                        <img src="{{ asset('public/assets/images/users/avatar-1.jpg') }}" alt="user-img" title="Mat Helme" class="rounded-circle img-fluid">
                         <a href="javascript:void(0);" class="user-edit"><i class="mdi mdi-pencil"></i></a>
                     </div>
             

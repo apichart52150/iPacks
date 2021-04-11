@@ -51,11 +51,15 @@
 
 							@if($writings->status == 'Y')
 							<td>
-								<a href="{{ route('commented',['id' => $writings->id]) }}">iSAC Writing {{ $writings->code_test }}</a>
+								<a href="{{ route('commented',['id' => $writings->id]) }}" class="btn btn-outline-primary btn-sm waves-effect waves-light"> {{ $writings->header_test }}</a>
 							</td>
 							@elseif($writings->status == 'ST_S')
 							<td>
-								<a href="{{ route('saved',['id' => $writings->id]) }}">iSAC Writing {{ $writings->code_test }}</a>
+								<a href="{{ route('saved',['id' => $writings->id]) }}" class="btn btn-outline-primary btn-sm waves-effect waves-light"> {{ $writings->header_test }} <i class=" mdi mdi-content-save"></i></a>
+							</td>
+							@else
+							<td>
+								{{ $writings->header_test }}
 							</td>
 							@endif
 
@@ -63,8 +67,11 @@
 
 							<td><span class="badge badge-dark p-1">{{ date('d-m-Y H:i:s', strtotime($writings->sent_date)) }}</span></td>
 							
+							@if(empty($writings->th_name))
+							<td class="text-capitalize"> - </td>
+							@else
 							<td class="text-capitalize"> {{ $writings->th_name }} </td>
-
+							@endif
 							<td>
 								<!-- 
 									// N = Sent
