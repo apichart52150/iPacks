@@ -32,7 +32,7 @@
     <div class="row">
         <div class="col-md-6 card-body">
             <div class="card">
-                <div class="card-header bg-primary text-white text-center">{{ $data->header_test }}</div>
+                <div class="card-header bg-info text-white text-center">{{ $data->header_test }}</div>
                 <div class="card-body">
                     <img src="{{ asset($img_path) }}" alt="{{ $img_path }}" width="100%">
                 </div>
@@ -63,7 +63,7 @@
 					<div class="card mb-1">
 						<div class="card-header" id="headingOne">
 							<h5 class="my-0">
-								<a href="#collapseOne" class="text-primary" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+								<a href="#collapseOne" class="text-info" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
 									Teacher Comment 
 									<i class="fas fa-angle-down float-right"></i>
 								</a>	

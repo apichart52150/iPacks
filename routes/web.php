@@ -56,9 +56,6 @@
 		
 			Route::post('writing_test', 'WritingController@index')->name('writing_test');
 			Route::post('store_sac', 'WritingController@store_sac')->name('store.sac');
-			Route::get('success', function() {
-				return view('student.isac.writing.success');
-			});
 
 			Route::get('status_writing', 'HomeController@status_writing')->name('status_writing');
 			Route::get('status_writing/{id?}', 'HomeController@status_topic')->name('status_writing');

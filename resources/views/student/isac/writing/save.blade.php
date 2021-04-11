@@ -89,7 +89,7 @@
                             <div class="text-center mt-3">
 
                                 @if($data->mode == 'practice')
-                                    <button id="save" class="btn btn-primary">SAVE</button>
+                                    <button id="save" class="btn btn-info">SAVE</button>
                                 @endif
 
                                 <button id="submit" class="btn btn-success">SUBMIT</button>

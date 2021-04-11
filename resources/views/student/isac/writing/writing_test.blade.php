@@ -8,7 +8,7 @@
 
 <style>
 .card-header {
-    background-color: #ffc107 !important;
+    background-color: #00BCD4 !important;
 }
 </style>
 
@@ -96,7 +96,7 @@
                             <div class="text-center mt-3">
 
                                 @if($data['mode'] == 'practice')
-                                    <button id="save" class="btn btn-primary">SAVE</button>
+                                    <button id="save" class="btn btn-info">SAVE</button>
                                     <a href="{{ url('/isac_writing_home') }}" class="btn btn-danger">CANCEL</a>
 
                                 @else

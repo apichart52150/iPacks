@@ -116,7 +116,7 @@
                         </li>
                        
                         <li class="dropdown notification-list mt-3">
-                            <span class="badge badge-primary font-13 p-1">Writing point  {{ \App\Model\PointsWriting::checkPoint() }} points</span>
+                            <span class="badge badge-info font-13 p-1">Writing point  {{ \App\Model\PointsWriting::checkPoint() }} points</span>
                         </li>
                         
                         <li class="dropdown notification-list">
@@ -163,7 +163,7 @@
             <!-- end Topbar -->
             
            
-            <div class="topbar-menu border-bottom border-left border-right border-white border-3 bg-primary">
+            <div class="topbar-menu border-bottom border-left border-right border-white border-3 bg-info">
                 <div class="container-fluid">
                     <div id="navigation d-block">
                         <!-- Navigation Menu-->

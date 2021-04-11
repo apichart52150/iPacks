@@ -29,7 +29,7 @@
 
 <div class="row">
 	<div class="col-md-12">
-		<div class="card card-body border-top border-primary border border-1">
+		<div class="card card-body border-top border-info border border-1">
 			<h3 class="mb-3">Status</h3>
 			<table id="basic-datatable" class="table table-borderless table-hover dt-responsive nowrap w-100">
 				<thead class="thead-light">
@@ -51,11 +51,11 @@
 
 							@if($writings->status == 'Y')
 							<td>
-								<a href="{{ route('commented',['id' => $writings->id]) }}" class="btn btn-outline-primary btn-sm waves-effect waves-light"> {{ $writings->header_test }}</a>
+								<a href="{{ route('commented',['id' => $writings->id]) }}" class="btn btn-outline-info btn-sm waves-effect waves-light"> {{ $writings->header_test }}</a>
 							</td>
 							@elseif($writings->status == 'ST_S')
 							<td>
-								<a href="{{ route('saved',['id' => $writings->id]) }}" class="btn btn-outline-primary btn-sm waves-effect waves-light"> {{ $writings->header_test }} <i class=" mdi mdi-content-save"></i></a>
+								<a href="{{ route('saved',['id' => $writings->id]) }}" class="btn btn-outline-info btn-sm waves-effect waves-light"> {{ $writings->header_test }} <i class=" mdi mdi-content-save"></i></a>
 							</td>
 							@else
 							<td>
