@@ -19,6 +19,8 @@ class HomeController extends Controller
 		//echo $std_id;die;
     	$std_id = Session::get('std_id');
     	$class_id = '299';
+		Session::put('class_id',$class_id);
+		
 
 		// แยกชุดข้อสอบ
     	$type_quiz = DB::table('class')
@@ -26,11 +28,23 @@ class HomeController extends Controller
     	->where('id','=', $class_id)
     	->get();
 
+		$name_type = $type_quiz[0]->set_exam;
+
+		$type = DB::table('course')
+    	->select('coursename')
+    	->where('priority','=', $name_type)
+    	->get();
+
+		// dd($type);
 
 		if($type_quiz[0]->set_exam == 7){
 
 			$data = [
-			'set_exam' => $type_quiz[0]->set_exam ];
+			'set_exam' => $name_type,
+			'name_type' => $type[0]->coursename
+			];
+
+			// dd($data);
 
 			return view('student.mocktest.home',compact('data'));
 

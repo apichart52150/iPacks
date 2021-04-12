@@ -1,61 +1,73 @@
- @extends('layouts.main') 
+@extends('layouts.main') 
 
 @section('content')
-<div class="content">
-    <div class="container-fluid">
-
-        <div class="panel-body">
-        </div>
+<div class="wrapper pt-5">
+    <div class="container-fluid p-0">
+        
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="{{url('user_home')}}">Home</a></li>
+                            <li class="breadcrumb-item active">Mocktest</li>
+                        </ol>
+                    </div>
+                    <h4 class="page-title">Mocktest</h4>
+                </div>
+            </div>
+        </div>     
+        <!-- end page title -->
 
         <div class="row">
-
-            <div class="col-md-4">
-                <div class="card-box widget-user">
-                    <img src="{{ asset('public/assets/images/iconlis.png') }}" class="rounded-circle" alt="user">
-                    <div class="wid-u-info">
-                        <h4 class="card-title text-break">IELTS LISTENING </h4>
-                       
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#listen">Start</button>
-                       
+            <div class="col-xl-4 col-md-6">
+                <div class="widget-bg-color-icon card-box">
+                    <div class="avatar-xl float-left">
+                        <img src="{{ asset('public/assets/images/mocktest/iconlis.png') }}" class="font-24 avatar-title text-white" alt="user">
                     </div>
+                    <div class="text-right p-1">
+                        <h3 class="text-dark mt-1"><span class="counter">IELTS LISTENING</span></h3>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#listening">Start</button>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card-box widget-user">
-                    <div>
-                        <img src="{{ asset('public/assets/images/club3.png') }}" class="rounded-circle" alt="user">
-                        <div class="wid-u-info">
-                            <h4 class="card-title">IELTS READING</h4>
-                           
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#reading">Start</button> 
-                            
-                        </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="widget-bg-color-icon card-box">
+                    <div class="avatar-xl float-left">
+                        <img src="{{ asset('public/assets/images/mocktest/club3.png') }}" class="font-24 avatar-title text-white" alt="user">
                     </div>
+                    <div class="text-right p-1">
+                        <h3 class="text-dark mt-1"><span class="counter">IELTS READING</span></h3>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#reading">Start</button>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card-box widget-user">
-                    <div>
-                        <img src="{{ asset('public/assets/images/club1.png') }}" class="rounded-circle" alt="user">
-                        <div class="wid-u-info">
-                            <h4 class="card-title">IELTS WRITING</h4>
-                            
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#writing">Start</button> 
-                           
-                        </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="widget-bg-color-icon card-box">
+                    <div class="avatar-xl float-left">
+                        <img src="{{ asset('public/assets/images/mocktest/club1.png') }}" class="font-24 avatar-title text-white" alt="user">
                     </div>
-                </div>                     
+                    <div class="text-right p-1">
+                        <h3 class="text-dark mt-1"><span class="counter">IELTS WRITING</span></h3>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#writing">Start</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
             </div>
         </div>
 
-        <div id="listen" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="full-width-modalLabel" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog modal-full">
+        <!-- modal -->
+        <div id="listening" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="full-width-modalLabel">New Cambridge  Key Skills  Mock Test</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>                              
+                        <h4 class="modal-title" id="myModalLabel">{{ $data['name_type'] }}  Mock Test</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
                     <div class="modal-body">
                         <p align="center">Listen to the description of the exam.
@@ -65,13 +77,27 @@
                             </audio>
                         </p>
                         <p align="center">Type all your answers in the spaces. At the end of the real test you will be given 2 minutes to check your answers.</p>
-                        <center><a href="#" class="btn btn-primary">Start exam</a></center>
+                    </div>
+                    <div class="modal-footer">
+                        @if(($data['set_exam']) == 1)
+                            <a href="{{ url('found_ielts/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 2)
+                            <a href="{{ url('found_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 3)
+                            <a href="{{ url('keyskills/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 4)
+                            <a href="{{ url('keyskills_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 5)
+                            <a href="{{ url('speak_write/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 6)
+                            <a href="{{ url('ielts_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 7)
+                            <a href="{{ url('gateway/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @endif
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-
-
 
         <div id="reading" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="full-width-modalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog modal-full">
@@ -120,9 +146,8 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-
+        
     </div>
-    <!-- end container -->
 </div>
-<!-- end content -->
+
 @endsection    

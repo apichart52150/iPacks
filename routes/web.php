@@ -76,7 +76,7 @@
 		Route::prefix('gateway')->namespace('student\mocktest\gateway')->group(function () {
 
 			Route::get('listening', 'ListeningController@index');
-			Route::get('ans_listening', 'ListeningController@exam');
+			Route::get('ans_listening', 'ListeningController@exam')->name('ans_lis');
 		
 			Route::get('reading', 'ReadingController@index');
 			Route::get('ans_reading', 'ReadingController@exam');

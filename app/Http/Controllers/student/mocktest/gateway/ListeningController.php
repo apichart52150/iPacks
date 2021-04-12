@@ -14,7 +14,7 @@ class ListeningController extends Controller
 
 	public function index() {
 
-		return view('gateway.listening');
+		return view('student.mocktest.gateway.listening');
 
 	}
 

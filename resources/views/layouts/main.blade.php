@@ -15,13 +15,16 @@
         <link href="{{asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{asset('public/assets/css/app.min.cs') }}s" rel="stylesheet" type="text/css" />
 
+
     </head>
+
+
+
 
     <body class="center-menu">
 
         <!-- Navigation Bar-->
         <header id="topnav">
-
             <!-- Topbar Start -->
             <div class="navbar-custom">
                 <div class="container-fluid">
@@ -186,9 +189,7 @@
             </div>
             <!-- end Topbar -->
 
-
             @yield('topbar')
-
 
         </header>
         <!-- End Navigation Bar-->
@@ -197,16 +198,9 @@
         <!-- Start Page Content here -->
         <!-- ============================================================== -->
 
-        <div class="wrapper">
-            <div class="container-fluid p-0">
 
-                @yield('page_titile')
+            @yield('content')
 
-                @yield('content')
-
-            </div> <!-- end container -->
-        </div>
-        <!-- end wrapper -->
 
         <!-- ============================================================== -->
         <!-- End Page content -->
@@ -399,6 +393,8 @@
         </div>
         <!-- /Right-bar -->
 
+        @yield('javascript') 
+
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
 
@@ -416,6 +412,14 @@
 
         <!-- App js -->
         <script src="{{asset('public/assets/js/app.min.js') }}"></script>
+
+        <!-- Plugins js-->
+        <script src="assets/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+
+        <!-- Init js-->
+        <script src="assets/js/pages/form-wizard.init.js"></script>
+
+        
         
     </body>
 </html>
