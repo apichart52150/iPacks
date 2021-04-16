@@ -49,7 +49,9 @@ class HomeController extends Controller
 			return view('student.mocktest.home',compact('data'));
 
 		}else{
+
 			return view('welcome');
+			
 		}
 
 

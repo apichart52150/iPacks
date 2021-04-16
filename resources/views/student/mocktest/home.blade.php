@@ -99,15 +99,16 @@
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
-        <div id="reading" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="full-width-modalLabel" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog modal-full">
+        <!-- modal -->
+        <div id="reading" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">{{ $data['name_type'] }}  Mock Test</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title" id="full-width-modalLabel">New Cambridge  Key Skills  Mock Test</h4>
                     </div>
                     <div class="modal-body">
-                        <p align="center">IELTS Reading
+                        <p align="center">Reading
                             <ul>
                                 <li>Answer <strong>all</strong> the questions</li>
                                 <li>You can change your answers at any time during the test</li>
@@ -117,21 +118,38 @@
                                 <li>Click 'previous' to review your answers</li>
                             </ul>  
                         </p>
-                        <center> <a href="#" class="btn btn-primary">Start exam</a></center>
+                    </div>
+                    <div class="modal-footer">
+                        @if(($data['set_exam']) == 1)
+                            <a href="{{ url('found_ielts/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 2)
+                            <a href="{{ url('found_ex/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 3)
+                            <a href="{{ url('keyskills/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 4)
+                            <a href="{{ url('keyskills_ex/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 5)
+                            <a href="{{ url('speak_write/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 6)
+                            <a href="{{ url('ielts_ex/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 7)
+                            <a href="{{ url('gateway/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @endif
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
-        <div id="writing" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="full-width-modalLabel" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog modal-full">
+        <!-- modal -->
+        <div id="writing" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">{{ $data['name_type'] }}  Mock Test</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title" id="full-width-modalLabel">New Cambridge  Key Skills  Mock Test</h4>
                     </div>
                     <div class="modal-body">
-                        <p align="center">IELTS Writing
+                        <p align="center">Writing
                             <ul>
                                 <li>Answer <strong>both</strong> parts</li>
                                 <li>You can change your answers at any time during the test</li>
@@ -141,7 +159,23 @@
                                 <li>Click 'previous' to review Task 1</li>
                             </ul>  
                         </p>
-                        <center> <a href="#" class="btn btn-primary">Start exam</a></center>
+                    </div>
+                    <div class="modal-footer">
+                        @if(($data['set_exam']) == 1)
+                            <a href="{{ url('found_ielts/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 2)
+                            <a href="{{ url('found_ex/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 3)
+                            <a href="{{ url('keyskills/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 4)
+                            <a href="{{ url('keyskills_ex/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 5)
+                            <a href="{{ url('speak_write/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 6)
+                            <a href="{{ url('ielts_ex/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @elseif(($data['set_exam']) == 7)
+                            <a href="{{ url('gateway/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                        @endif
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->

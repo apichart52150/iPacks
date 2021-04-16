@@ -14,8 +14,14 @@
         <link href="{{asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{asset('public/assets/css/app.min.cs') }}s" rel="stylesheet" type="text/css" />
-
-
+        
+        <link href="{{asset('public/assets/css/style.css') }}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="{{asset('public/plugins/jquery.steps/css/jquery.steps.css')}}" />
+        <style>
+            .wizard .content .body{
+                width: 100%;
+            }
+        </style>
     </head>
 
 
@@ -399,27 +405,27 @@
         <div class="rightbar-overlay"></div>
 
         <!-- Vendor js -->
-        <script src="{{asset('public/assets/js/vendor.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
 
-        <script src="{{asset('public/assets/libs/jquery-knob/jquery.knob.min.js') }}"></script>
-        <script src="{{asset('public/assets/libs/peity/jquery.peity.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/jquery-knob/jquery.knob.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/peity/jquery.peity.min.js') }}"></script>
 
         <!-- Sparkline charts -->
-        <script src="{{asset('public/assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
 
         <!-- init js -->
-        <script src="{{asset('public/assets/js/pages/dashboard-1.init.js') }}"></script>
+        <script src="{{ asset('public/assets/js/pages/dashboard-1.init.js') }}"></script>
 
         <!-- App js -->
-        <script src="{{asset('public/assets/js/app.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
 
-        <!-- Plugins js-->
-        <script src="assets/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+        <!-- add wizard -->
+        <!--Form Wizard--> 
+        <script src="{{ asset('public/plugins/jquery.steps/js/jquery.steps.min.js') }}" type="text/javascript"></script> 
 
-        <!-- Init js-->
-        <script src="assets/js/pages/form-wizard.init.js"></script>
+        <!--wizard initialization--> 
+        <script src="{{ asset('public/assets/pages/jquery.wizard-init.js') }}" type="text/javascript"></script>
 
-        
         
     </body>
 </html>
