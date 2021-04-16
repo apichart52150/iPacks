@@ -179,7 +179,7 @@
             </div><!-- end col -->
 
             <div class="col-xl-6 col-md-6">
-                <a href="{{ url('gateway/home') }}">
+                <a href="{{ url('mocktest/home') }}">
                     <div class="card-box widget-icon ribbon-box bg-primary">
                         <div class="ribbon-two ribbon-two-diamond avatar-title display-6 m-0 "><span>Diamond</span></div>
                         <div class="avatar-lg float-left">

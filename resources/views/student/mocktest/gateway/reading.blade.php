@@ -35,15 +35,13 @@
                 <div class="page-title-box">
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="{{url('user_home')}}">Home</a></li>
-                            <li class="breadcrumb-item active">Reading</li>
+                            <li class="breadcrumb-item active">{{Session('name_type')}}</li>
                         </ol>
                     </div>
-                    <h4 class="page-title">Mocktest</h4>
+                    <h4 class="page-title">Reading</h4>
                 </div>
             </div>
-        </div>     
-        <!-- end page title -->
+        </div> 
 
 		<div class="row">
 			<div class="col-md-12">

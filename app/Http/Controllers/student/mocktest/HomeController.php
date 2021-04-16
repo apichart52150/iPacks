@@ -35,32 +35,48 @@ class HomeController extends Controller
 
 		$name_type = $type_quiz[0]->set_exam;
 
-		$type = DB::table('course')
-    	->select('coursename')
+		$type = DB::table('set_exam')
+    	->select('name')
     	->where('priority','=', $name_type)
     	->get();
 
-		// dd($type);
+		$checklis = Student::checklis($std_id,Session::get('class_id'),$type_quiz[0]->set_exam);
+    	$checkread = Student::checkread($std_id,Session::get('class_id'),$type_quiz[0]->set_exam);
+    	$checkwriting = Student::checkwriting($std_id,Session::get('class_id'),$type_quiz[0]->set_exam);
 
-		if($type_quiz[0]->set_exam == 7){
+		// dd($checklis);
 
-			$data = [
-			'set_exam' => $name_type,
-			'name_type' => $type[0]->coursename
+		$check_score = DB::table('score')
+    	->select('id')
+    	->where('std_id','=',$std_id) 
+    	->where('classroom_id','=',Session::get('class_id')) 
+    	->get();
+
+		Session::put('name_type',$type[0]->name);
+
+		if($type_quiz[0]->set_exam > 0){
+
+			if(count($check_score) == 0){
+    			$std_score = DB::table('score')
+    			->insert(['std_id' => $std_id,
+				'classroom_id' =>  Session::get('class_id'),
+				'set_exam' => $type_quiz[0]->set_exam]);
+    		}
+
+    		$data = [
+				'checklis' => $checklis,
+				'checkread' => $checkread,
+				'checkwriting' => $checkwriting,
+				'set_exam' => $name_type,
 			];
-
-			// dd($data);
-
+			
 			return view('student.mocktest.home',compact('data'));
 
 		}else{
 
-			return view('welcome');
+			echo "No exam";die;
 			
 		}
 
-
     }
-
-
 }

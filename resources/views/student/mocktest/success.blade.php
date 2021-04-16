@@ -36,7 +36,7 @@
                                     <h5 class="m-b-0">This section of the Mock Test is now Complete.<br><br>Please click the 'Continue' button to go to the next part of the test.</h5>
 
 
-                                    <a href="{{url('gateway/home')}}" class="btn btn-block btn-primary waves-effect waves-light mt-3">Continue</a>
+                                    <a href="{{url('mocktest/home')}}" class="btn btn-block btn-primary waves-effect waves-light mt-3">Continue</a>
                                 </div>
 
                             </div> <!-- end card-body -->

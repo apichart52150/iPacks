@@ -1,6 +1,7 @@
 <?php 
 
-namespace App\Http\Controllers\student\mocktest\gateway;
+namespace App\Http\Controllers\student\mocktest\found_ex;
+
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -12,14 +13,15 @@ use Illuminate\Support\Facades\DB;
 class WritingController extends Controller
 {
 	
+
 	public function index() {
 
-		return view('student.mocktest.gateway.writing');
+		return view('student.mocktest.found_ex.writing');
 
 	}
 
-	public function exam(Request $request) {
-      
+	public function fn_writing(Request $request) {
+
 		$check_score = DB::table('score')
     	->where('std_id',$request->std_id)
         ->get();
@@ -29,7 +31,7 @@ class WritingController extends Controller
         	->insert(['std_id' => $request->std_id, 'classroom_id' => $request->classroom_id, 'set_exam' => $request->set_exam]);
         }
 
-        $task1 = DB::table('writing_score')  //write task 1 academic
+        $task1 = DB::table('writing_score')
         ->insert(['std_id' => $request->std_id,
             'classroom_id' => $request->classroom_id,
             'title' => '1',
@@ -37,7 +39,7 @@ class WritingController extends Controller
             'text_answer' => $request->text_answer_task1
         ]);
 
-        $task2 = DB::table('writing_score')  //write task 2 
+        $task2 = DB::table('writing_score')
         ->insert(['std_id' => $request->std_id,
             'classroom_id' => $request->classroom_id,
             'title' => '2',
@@ -45,15 +47,7 @@ class WritingController extends Controller
             'text_answer' => $request->text_answer_task2
         ]);
 
-        $task3 = DB::table('writing_score')  //write task 1 genaral
-        ->insert(['std_id' => $request->std_id,
-            'classroom_id' => $request->classroom_id,
-            'title' => '3',
-            'set_exam' => $request->set_exam,
-            'text_answer' => $request->text_answer_task3
-        ]);
 
-
-    	return redirect('success');
+    	return redirect('successwriting');
 	}
 }

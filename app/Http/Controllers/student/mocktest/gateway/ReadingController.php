@@ -183,6 +183,6 @@ class ReadingController extends Controller
             'as40' => $as[40],
             'read_score_total' => $score]);
 
-		return redirect('student.mocktest.success');
+		return redirect('success');
 	}
 }

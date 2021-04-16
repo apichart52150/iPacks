@@ -5,21 +5,19 @@
 <div class="wrapper pt-5">
     <div class="container-fluid p-0" onload="LoadModal();">
 
-        <!-- start page title -->
-        <div class="row pt-4">
+		<!-- start page title -->
+		<div class="row pt-4">
             <div class="col-12">
                 <div class="page-title-box">
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="{{url('user_home')}}">Home</a></li>
-                            <li class="breadcrumb-item active">Mocktest</li>
+                            <li class="breadcrumb-item active">{{Session('name_type')}}</li>
                         </ol>
                     </div>
-                    <h4 class="page-title">Mocktest</h4>
+                    <h4 class="page-title">Listening</h4>
                 </div>
             </div>
-        </div>     
-        <!-- end page title -->
+        </div> 
 
 		<div class="row">
 			<div class="col-md-12">
@@ -28,7 +26,7 @@
 					<h5><span id="dplay"></span></h5>
 
 					<form action="{{ route('ans_lis') }}" id="basic-form" method="POST"  onsubmit="return confirm('Are you sure you want to finish?')">
-						
+						{{ csrf_field() }}
 						<input type="hidden" name="std_id" value="{{ session('std_id') }}">
 						<input type="hidden" name="classroom_id" value="{{ session('class_id') }}">
 						<input type="hidden" name="set_exam" value="7">

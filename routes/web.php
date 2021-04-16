@@ -69,9 +69,89 @@
 		});
 
 		// mocktest
-		Route::prefix('gateway')->namespace('student\mocktest')->group(function () {
+		Route::prefix('/mocktest')->namespace('student\mocktest')->group(function () {
 			Route::get('home','HomeController@index');
 		});
+
+
+		Route::prefix('keyskills1')->namespace('student\mocktest\key_1')->group(function () {
+
+			Route::get('listening', 'ListeningController@index');
+			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
+		
+			Route::get('reading', 'ReadingController@index');
+			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
+		
+			Route::get('writing', 'WritingController@index');
+			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+			
+		});
+
+		Route::prefix('keyskills2')->namespace('student\mocktest\key_2')->group(function () {
+
+			Route::get('listening', 'ListeningController@index');
+			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
+		
+			Route::get('reading', 'ReadingController@index');
+			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
+		
+			Route::get('writing', 'WritingController@index');
+			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+			
+		});
+
+		Route::prefix('found_1')->namespace('student\mocktest\found_1')->group(function () {
+
+			Route::get('listening', 'ListeningController@index');
+			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
+		
+			Route::get('reading', 'ReadingController@index');
+			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
+		
+			Route::get('writing', 'WritingController@index');
+			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+			
+		});
+
+		Route::prefix('found_ex')->namespace('student\mocktest\found_ex')->group(function () {
+
+			Route::get('listening', 'ListeningController@index');
+			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
+		
+			Route::get('reading', 'ReadingController@index');
+			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
+		
+			Route::get('writing', 'WritingController@index');
+			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+			
+		});
+
+		Route::prefix('key_ex')->namespace('student\mocktest\key_ex')->group(function () {
+
+			Route::get('listening', 'ListeningController@index');
+			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
+		
+			Route::get('reading', 'ReadingController@index');
+			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
+		
+			Route::get('writing', 'WritingController@index');
+			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+			
+		});
+
+		Route::prefix('speak_write')->namespace('student\mocktest\speak_write')->group(function () {
+
+			Route::get('listening', 'ListeningController@index');
+			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
+		
+			Route::get('reading', 'ReadingController@index');
+			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
+		
+			Route::get('writing', 'WritingController@index');
+			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+			
+		});
+
 
 		Route::prefix('gateway')->namespace('student\mocktest\gateway')->group(function () {
 
@@ -86,6 +166,7 @@
 			
 		});
 
+	
 		Route::get('success', function () { return view('student.mocktest.success'); });
 		Route::get('successwriting', function () { return view('successwriting'); });
 	
