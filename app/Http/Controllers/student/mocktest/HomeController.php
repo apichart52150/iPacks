@@ -18,14 +18,19 @@ class HomeController extends Controller
 
 		//echo $std_id;die;
     	$std_id = Session::get('std_id');
-    	$class_id = '299';
-		Session::put('class_id',$class_id);
 		
+
+		$check_std_score = DB::table('score')
+		->select('std_id','classroom_id')
+		->where('std_id','=',$std_id)
+		->get();
+
+		Session::put('class_id',$check_std_score[0]->classroom_id);
 
 		// แยกชุดข้อสอบ
     	$type_quiz = DB::table('class')
     	->select('set_exam')
-    	->where('id','=', $class_id)
+    	->where('id','=', Session::get('class_id'))
     	->get();
 
 		$name_type = $type_quiz[0]->set_exam;

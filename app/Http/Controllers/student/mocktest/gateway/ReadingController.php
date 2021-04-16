@@ -15,7 +15,7 @@ class ReadingController extends Controller
 
 	public function index() {
 
-		return view('gateway.reading');
+		return view('student.mocktest.gateway.reading');
 
 	}
 
@@ -183,6 +183,6 @@ class ReadingController extends Controller
             'as40' => $as[40],
             'read_score_total' => $score]);
 
-		return redirect('success');
+		return redirect('student.mocktest.success');
 	}
 }

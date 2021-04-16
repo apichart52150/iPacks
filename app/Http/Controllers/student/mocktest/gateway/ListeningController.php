@@ -70,6 +70,7 @@ class ListeningController extends Controller
         $list_array = 0;
         $chioce = 0;
         $add_answer = $request->input('q21');
+
         // dd($request->input());
 
         switch(count($add_answer)){

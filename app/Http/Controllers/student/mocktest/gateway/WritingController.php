@@ -14,7 +14,7 @@ class WritingController extends Controller
 	
 	public function index() {
 
-		return view('gateway.writing');
+		return view('student.mocktest.gateway.writing');
 
 	}
 
@@ -54,6 +54,6 @@ class WritingController extends Controller
         ]);
 
 
-    	return redirect('successwriting');
+    	return redirect('student.mocktest.success');
 	}
 }

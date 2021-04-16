@@ -1,6 +1,7 @@
-@extends('layouts.headerielts')
+@extends('layouts.mocktest_layout')
 
 @section('content')
+
 <style>
 	.card-box:not(.noheight) {
 		height: 650px;
@@ -24,8 +25,26 @@
 		padding:20px 0;
 	}
 </style>
-<div class="content">
-	<div class="container-fluid">
+
+<div class="wrapper pt-5">
+    <div class="container-fluid p-0" onload="LoadModal();">
+
+        <!-- start page title -->
+        <div class="row pt-4">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="{{url('user_home')}}">Home</a></li>
+                            <li class="breadcrumb-item active">Reading</li>
+                        </ol>
+                    </div>
+                    <h4 class="page-title">Mocktest</h4>
+                </div>
+            </div>
+        </div>     
+        <!-- end page title -->
+
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card-box noheight">
@@ -47,7 +66,7 @@
 					</div>
 					<!-- end row titile and timer -->
 
-					<form action="{{ route('fn_gateway_reading') }}" method="POST" id="basic-form" class="mt-3" onsubmit="return confirm('Are you sure you want to finish?')" autocomplete="off">
+					<form action="{{ route('ans_reading') }}" method="POST" id="basic-form" class="mt-3" onsubmit="return confirm('Are you sure you want to finish?')" autocomplete="off">
 						{{ csrf_field() }}
 
 						<input type="hidden" name="std_id" value="{{session('std_id')}}">
@@ -966,36 +985,37 @@
 <!-- end content -->
 @endsection
 
+
 @section('javascript')
-<script src="{{ asset('public/js/timer_ieltsreading.js') }}"></script>
-<script src="{{ asset('public/assets/js/jquery.min.js') }}"></script>
-<script type="text/javascript" src="{{asset('public/assets/assets/ColorPicker.js')}}"></script>
-<script type="text/javascript" src="{{asset('public/assets/assets/rainbow-custom.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('public/assets/assets/src/TextHighlighter.js')}}"></script>
-<script type="text/javascript" src="{{asset('public/assets/assets/src/TextHighlighter.min.js')}}"></script>
-<script>
-	document.querySelector('body').addEventListener('load', begintimer());
-	$(function () {
-		var removeBtn = document.getElementById('remove');
-        var sandbox = document.getElementById('sandbox');
-        var colors = new ColorPicker(document.querySelector('.color-picker'));
-        var hltr = new TextHighlighter(sandbox);
+	<script src="{{ asset('public/js/mocktest/timer_ieltsreading.js') }}"></script>
+	<script src="{{ asset('public/assets/js/jquery.min.js') }}"></script>
+	<script type="text/javascript" src="{{asset('public/assets/assets/ColorPicker.js')}}"></script>
+	<script type="text/javascript" src="{{asset('public/assets/assets/rainbow-custom.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('public/assets/assets/src/TextHighlighter.js')}}"></script>
+	<script type="text/javascript" src="{{asset('public/assets/assets/src/TextHighlighter.min.js')}}"></script>
+	<script>
+		document.querySelector('body').addEventListener('load', begintimer());
+		$(function () {
+			var removeBtn = document.getElementById('remove');
+			var sandbox = document.getElementById('sandbox');
+			var colors = new ColorPicker(document.querySelector('.color-picker'));
+			var hltr = new TextHighlighter(sandbox);
 
-        var a = $('#sandbox');
+			var a = $('#sandbox');
 
-        colors.onColorChange(function (color) {
-            hltr.setColor(color);
-        });
+			colors.onColorChange(function (color) {
+				hltr.setColor(color);
+			});
 
-        removeBtn.addEventListener('click', function () {
-            hltr.removeHighlights();
-        });
+			removeBtn.addEventListener('click', function () {
+				hltr.removeHighlights();
+			});
 
-		$('input[type="text"]').attr({
-			'autocomplete': 'off',
-			'onChange': 'this.value = this.value.toUpperCase();',
-			'spellcheck': 'false'
-		})
-	});
-</script>
+			$('input[type="text"]').attr({
+				'autocomplete': 'off',
+				'onChange': 'this.value = this.value.toUpperCase();',
+				'spellcheck': 'false'
+			})
+		});
+	</script>
 @stop

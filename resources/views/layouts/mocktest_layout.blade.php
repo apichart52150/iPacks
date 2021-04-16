@@ -17,12 +17,15 @@
     <link rel="stylesheet" type="text/css" href="{{asset('public/plugins/jquery.steps/css/jquery.steps.css')}}" />
     <link href="{{asset('public/assets/css/css_mocktest/style.css') }}" rel="stylesheet" type="text/css">            
     
+    
+    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/assets/ColorPicker.css')}}" />
    
 	<style>
 		/*set input form-control*/
 		input{
 			width:200px;
 		}
+
 		input.form-control {
 		margin: -5px 0px 10px 0px;
 		padding: 0px;
@@ -34,6 +37,7 @@
 			border-radius:5px; 
 			padding:6px 0px;
 		}
+
 		.box-content{
 			padding: 10px 10px;
 			height:500px;
@@ -41,6 +45,7 @@
 			overflow:auto;
 			border-radius:8px;
 		}
+
 		fieldset{
 			border:1px solid  #E0E0E0;
 			padding: 5px 5px;
@@ -57,77 +62,77 @@
 </head>
 
 <body>
-  <!-- Navigation Bar-->
-  <header id="topnav">
-            <!-- Topbar Start -->
-            <div class="navbar-custom" style="margin-left: 0px;">
-                <div class="container-fluid">
-                    <ul class="list-unstyled topnav-menu float-right mb-0">
+    <!-- Navigation Bar-->
+    <header id="topnav">
+        <!-- Topbar Start -->
+        <div class="navbar-custom" style="margin-left: 0px;">
+            <div class="container-fluid">
+                <ul class="list-unstyled topnav-menu float-right mb-0">
 
-                        <li class="dropdown notification-list">
-                            <!-- Mobile menu toggle-->
-                            <a class="navbar-toggle nav-link">
-                                <div class="lines">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </a>
-                            <!-- End mobile menu toggle-->
-                        </li>
-
-                        <li class="dropdown notification-list">
-                            <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="{{asset('public/assets/images/users/avatar-1.jpg') }}" alt="user-image" class="rounded-circle">
-                                <span class="pro-user-name ml-1">
-                                    Nik Patel <i class="mdi mdi-chevron-down"></i> 
-                                </span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                                <!-- item-->
-                                <div class="dropdown-header noti-title">
-                                    <h6 class="text-overflow m-0">Welcome !</h6>
-                                </div>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="mdi mdi-account-circle"></i>
-                                    <span>My Account</span>
-                                </a>
-
-                                <div class="dropdown-divider"></div>
-
-                                <!-- item-->
-                                <a href="{{ route('user_logout') }}" class="dropdown-item notify-item">
-                                    <i class="mdi mdi-logout"></i>
-                                    <span>Logout</span>
-                                </a>
-
+                    <li class="dropdown notification-list">
+                        <!-- Mobile menu toggle-->
+                        <a class="navbar-toggle nav-link">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
-                        </li>            
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </li>
 
-                    </ul>
-
-                    <!-- LOGO -->
-                    <div class="logo-box">
-                        <a href="#" class="logo text-center">
-                            <span class="logo-lg">
-                                <img src="{{asset('public/assets/images/logo-nc.png') }}" alt="" height="45">
-                                <!-- <span class="logo-lg-text-light">Xeria</span> -->
-                            </span>
-                            <span class="logo-sm">
-                                <!-- <span class="logo-sm-text-dark">X</span> -->
-                                <img src="{{asset('public/assets/images/logo-nc.png') }}" alt="" height="24">
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="{{asset('public/assets/images/users/avatar-1.jpg') }}" alt="user-image" class="rounded-circle">
+                            <span class="pro-user-name ml-1">
+                                Nik Patel <i class="mdi mdi-chevron-down"></i> 
                             </span>
                         </a>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <!-- end Topbar -->
+                        <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                            <!-- item-->
+                            <div class="dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">Welcome !</h6>
+                            </div>
 
-        </header>
-        <!-- End Navigation Bar-->
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="mdi mdi-account-circle"></i>
+                                <span>My Account</span>
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <!-- item-->
+                            <a href="{{ route('user_logout') }}" class="dropdown-item notify-item">
+                                <i class="mdi mdi-logout"></i>
+                                <span>Logout</span>
+                            </a>
+
+                        </div>
+                    </li>            
+
+                </ul>
+
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="#" class="logo text-center">
+                        <span class="logo-lg">
+                            <img src="{{asset('public/assets/images/logo-nc.png') }}" alt="" height="45">
+                            <!-- <span class="logo-lg-text-light">Xeria</span> -->
+                        </span>
+                        <span class="logo-sm">
+                            <!-- <span class="logo-sm-text-dark">X</span> -->
+                            <img src="{{asset('public/assets/images/logo-nc.png') }}" alt="" height="24">
+                        </span>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- end Topbar -->
+
+    </header>
+    <!-- End Navigation Bar-->
 
     @yield('content') 
 
@@ -160,6 +165,86 @@
 
     <!--wizard initialization--> 
     <script src="{{ asset('public/assets/pages/jquery.wizard-init.js') }}" type="text/javascript"></script>
+
+
+    <!--form wysiwig-->
+    <script src="{{asset('public/plugins/tinymce/tinymce.min.js') }}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if($("#elm1").length > 0){
+                tinymce.init({
+                    selector: "textarea#elm1",
+                    theme: "modern",
+                    height:300,
+                    plugins: [
+                    "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                    "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                    "save table contextmenu directionality emoticons template paste textcolor"
+                    ],
+                    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+                    style_formats: [
+                    {title: 'Bold text', inline: 'b'},
+                    {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+                    {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+                    {title: 'Example 1', inline: 'span', classes: 'example1'},
+                    {title: 'Example 2', inline: 'span', classes: 'example2'},
+                    {title: 'Table styles'},
+                    {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+                    ]
+                });
+            }
+        });
+
+        $(document).ready(function () {
+            if($("#elm2").length > 0){
+                tinymce.init({
+                    selector: "textarea#elm2",
+                    theme: "modern",
+                    height:300,
+                    plugins: [
+                    "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                    "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                    "save table contextmenu directionality emoticons template paste textcolor"
+                    ],
+                    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+                    style_formats: [
+                    {title: 'Bold text', inline: 'b'},
+                    {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+                    {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+                    {title: 'Example 1', inline: 'span', classes: 'example1'},
+                    {title: 'Example 2', inline: 'span', classes: 'example2'},
+                    {title: 'Table styles'},
+                    {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+                    ]
+                });
+            }
+        });
+        $(document).ready(function () {
+            if($("#elm3").length > 0){
+            tinymce.init({
+                    selector: "textarea#elm3",
+                    theme: "modern",
+                    height:300,
+                    plugins: [
+                    "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                    "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                    "save table contextmenu directionality emoticons template paste textcolor"
+                    ],
+                    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+                    style_formats: [
+                    {title: 'Bold text', inline: 'b'},
+                    {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+                    {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+                    {title: 'Example 1', inline: 'span', classes: 'example1'},
+                    {title: 'Example 2', inline: 'span', classes: 'example2'},
+                    {title: 'Table styles'},
+                    {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+                    ]
+                });
+            }
+        });
+    </script>
 
 </body>
 

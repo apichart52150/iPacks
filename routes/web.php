@@ -76,15 +76,18 @@
 		Route::prefix('gateway')->namespace('student\mocktest\gateway')->group(function () {
 
 			Route::get('listening', 'ListeningController@index');
-			Route::get('ans_listening', 'ListeningController@exam')->name('ans_lis');
+			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
 		
 			Route::get('reading', 'ReadingController@index');
-			Route::get('ans_reading', 'ReadingController@exam');
+			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
 		
 			Route::get('writing', 'WritingController@index');
-			Route::get('ans_writing', 'WritingController@exam');
+			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
 			
 		});
+
+		Route::get('success', function () { return view('student.mocktest.success'); });
+		Route::get('successwriting', function () { return view('successwriting'); });
 	
 	});
 
