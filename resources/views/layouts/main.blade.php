@@ -14,14 +14,23 @@
         <link href="{{asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{asset('public/assets/css/app.min.cs') }}s" rel="stylesheet" type="text/css" />
-
+        
+        <link href="{{asset('public/assets/css/style.css') }}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="{{asset('public/plugins/jquery.steps/css/jquery.steps.css')}}" />
+        <style>
+            .wizard .content .body{
+                width: 100%;
+            }
+        </style>
     </head>
+
+
+
 
     <body class="center-menu">
 
         <!-- Navigation Bar-->
         <header id="topnav">
-
             <!-- Topbar Start -->
             <div class="navbar-custom">
                 <div class="container-fluid">
@@ -134,7 +143,7 @@
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <img src="{{asset('public/assets/images/users/avatar-1.jpg') }}" alt="user-image" class="rounded-circle">
                                 <span class="pro-user-name ml-1">
-                                    Nik Patel <i class="mdi mdi-chevron-down"></i> 
+                                {{ session('std_name') }}<i class="mdi mdi-chevron-down"></i> 
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -186,9 +195,7 @@
             </div>
             <!-- end Topbar -->
 
-
             @yield('topbar')
-
 
         </header>
         <!-- End Navigation Bar-->
@@ -197,16 +204,9 @@
         <!-- Start Page Content here -->
         <!-- ============================================================== -->
 
-        <div class="wrapper">
-            <div class="container-fluid p-0">
 
-                @yield('page_titile')
+            @yield('content')
 
-                @yield('content')
-
-            </div> <!-- end container -->
-        </div>
-        <!-- end wrapper -->
 
         <!-- ============================================================== -->
         <!-- End Page content -->
@@ -399,23 +399,33 @@
         </div>
         <!-- /Right-bar -->
 
+        @yield('javascript') 
+
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
 
         <!-- Vendor js -->
-        <script src="{{asset('public/assets/js/vendor.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
 
-        <script src="{{asset('public/assets/libs/jquery-knob/jquery.knob.min.js') }}"></script>
-        <script src="{{asset('public/assets/libs/peity/jquery.peity.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/jquery-knob/jquery.knob.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/peity/jquery.peity.min.js') }}"></script>
 
         <!-- Sparkline charts -->
-        <script src="{{asset('public/assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
 
         <!-- init js -->
-        <script src="{{asset('public/assets/js/pages/dashboard-1.init.js') }}"></script>
+        <script src="{{ asset('public/assets/js/pages/dashboard-1.init.js') }}"></script>
 
         <!-- App js -->
-        <script src="{{asset('public/assets/js/app.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
+
+        <!-- add wizard -->
+        <!--Form Wizard--> 
+        <script src="{{ asset('public/plugins/jquery.steps/js/jquery.steps.min.js') }}" type="text/javascript"></script> 
+
+        <!--wizard initialization--> 
+        <script src="{{ asset('public/assets/pages/jquery.wizard-init.js') }}" type="text/javascript"></script>
+
         
     </body>
 </html>
