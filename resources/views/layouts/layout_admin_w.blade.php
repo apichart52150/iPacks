@@ -225,6 +225,8 @@
         <script src="{{ asset('public/assets/js/datatables/buttons.html5.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/datatables/buttons.print.min.js') }}"></script>
 
+        
+
         <!-- Key Tables -->
         <script src="{{ asset('public/assets/js/datatables/dataTables.keyTable.min.js') }}"></script>
 
@@ -273,34 +275,34 @@
 
         <script>
             if($("#elm1").length > 0){
-                    tinymce.init({
-                        selector: "textarea#elm1",
-                        theme: "modern",
-                        height: 400,
-                        menubar: false,
-                        plugins: [
-                            "wordcount",
-                            "textcolor"
-                        ],
-                        browser_spellcheck: false,
-                        toolbar: "undo redo | bold strikethrough italic | forecolor backcolor",
-                        textcolor_cols: "6",
-                        textcolor_map: [
-                            "fe0000", "SP",
-                            "008001", "Prep",
-                            "993400", "S/V",
-                            "808080", "P/S",
-                            "ff6600", "T",
-                            "81007f", "WO",
-                            "ff00ff", "WW",
-                            "ffff01", "Rephrase",
-                            "00ff01", "S/PI",
-                            "01ffff", "VP",
-                            "ff99cb", "V",
-                            "3366ff", "A",
-                        ]
-                    });
-                }
+                tinymce.init({
+                    selector: "textarea#elm1",
+                    theme: "modern",
+                    height: 400,
+                    menubar: false,
+                    plugins: [
+                        "wordcount",
+                        "textcolor"
+                    ],
+                    browser_spellcheck: false,
+                    toolbar: "undo redo | bold strikethrough italic | forecolor backcolor",
+                    textcolor_cols: "6",
+                    textcolor_map: [
+                        "fe0000", "SP",
+                        "008001", "Prep",
+                        "993400", "S/V",
+                        "808080", "P/S",
+                        "ff6600", "T",
+                        "81007f", "WO",
+                        "ff00ff", "WW",
+                        "ffff01", "Rephrase",
+                        "00ff01", "S/PI",
+                        "01ffff", "VP",
+                        "ff99cb", "V",
+                        "3366ff", "A",
+                    ]
+                });
+            }
         </script>
 
         @yield('js')

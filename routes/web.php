@@ -253,6 +253,37 @@
 			Route::get('delete_writing/{id}', 'ReportController@delete_topic')->name('delete_writing.pending');
 		});
 
+		Route::prefix('mocktest')->namespace('Admin\mocktest')->group(function () {
+
+			Route::get('dashboard', 'DashboardController@index');
+			
+			Route::get('class_detail/{class_id}', 'ClassController@classdetail_by_id')->name('class_detail');
+			Route::post('update_set_exam','ClassController@update_set_exam')->name('update_set_exam');
+			Route::post('update_class_pass', 'ClassController@update_class_pass')->name('update_class_pass');
+
+			Route::get('all_user', 'UserController@all_user')->name('all_user');
+			Route::get('print_classdetail/{class_id}', 'ClassController@print_classdetail')->name('print_classdetail');
+
+			Route::get('student_profile/{std_id}', 'StudentController@std_profile_by_id')->name('student_profile');
+			Route::post('edit_score', 'StudentController@edit_score')->name('edit_score');
+
+			Route::get('del_ans/{del_ans?}/{std_id?}', 'StudentController@del_ans')->name('del_ans');
+			Route::get('del_ans_wri/{del_ans_wri?}/{std_id?}', 'StudentController@del_ans_wri')->name('del_ans_wri');
+			
+			Route::post('update_writing','StudentController@update_writing')->name('update_writing');
+			
+			Route::get('print_L/{std_id?}', 'StudentController@print_lis_part')->name('print_L');
+			Route::get('print_R/{std_id?}', 'StudentController@print_read_part')->name('print_R');
+			Route::get('print_W1/{std_id?}', 'StudentController@print_wri_part1')->name('print_W1');
+			Route::get('print_W2/{std_id?}', 'StudentController@print_wri_part2')->name('print_W2');
+
+			Route::get('print_G1/{std_id?}', 'StudentController@print_gateway_part1')->name('print_G1');
+			Route::get('print_G2/{std_id?}', 'StudentController@print_gateway_part2')->name('print_G2');
+			Route::get('print_G3/{std_id?}', 'StudentController@print_gateway_part3')->name('print_G3');
+		});
+
+
+
 	});
 	
 // ==================== End Routes Admin ====================== //
