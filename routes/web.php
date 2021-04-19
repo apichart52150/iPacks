@@ -165,10 +165,8 @@
 			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
 			
 		});
-
 	
 		Route::get('success', function () { return view('student.mocktest.success'); });
-		Route::get('successwriting', function () { return view('successwriting'); });
 	
 	});
 
