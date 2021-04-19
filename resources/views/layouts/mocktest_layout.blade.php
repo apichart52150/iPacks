@@ -115,7 +115,7 @@
 
                 <!-- LOGO -->
                 <div class="logo-box">
-                    <a href="#" class="logo text-center">
+                    <a href="{{url('mocktest/home')}}" class="logo text-center">
                         <span class="logo-lg">
                             <img src="{{asset('public/assets/images/logo-nc.png') }}" alt="" height="45">
                             <!-- <span class="logo-lg-text-light">Xeria</span> -->
