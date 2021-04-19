@@ -74,7 +74,7 @@
 		});
 
 
-		Route::prefix('keyskills1')->namespace('student\mocktest\key_1')->group(function () {
+		Route::prefix('keyskills_1')->namespace('student\mocktest\key_1')->group(function () {
 
 			Route::get('listening', 'ListeningController@index');
 			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
@@ -87,7 +87,7 @@
 			
 		});
 
-		Route::prefix('keyskills2')->namespace('student\mocktest\key_2')->group(function () {
+		Route::prefix('keyskills_2')->namespace('student\mocktest\key_2')->group(function () {
 
 			Route::get('listening', 'ListeningController@index');
 			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');

@@ -1,7 +1,6 @@
 <?php 
 
-namespace App\Http\Controllers\student\mocktest\found_ex;
-
+namespace App\Http\Controllers\student\mocktest\speak_write;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -12,10 +11,10 @@ use Illuminate\Support\Facades\DB;
  */
 class ReadingController extends Controller
 {
-	
+
 	public function index() {
 
-		return view('student.mocktest.found_ex.reading');
+		return view('student.mocktest.speak_write.reading');
 
 	}
 

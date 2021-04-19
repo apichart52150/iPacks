@@ -100,7 +100,7 @@
                         @elseif(($data['set_exam']) == 4)
                             <a href="{{ url('found_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                         @elseif(($data['set_exam']) == 5)
-                            <a href="{{ url('keyskills_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                            <a href="{{ url('key_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                         @elseif(($data['set_exam']) == 6)
                             <a href="{{ url('speak_write/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                         @elseif(($data['set_exam']) == 7)
@@ -141,7 +141,7 @@
                         @elseif(($data['set_exam']) == 4)
                             <a href="{{ url('found_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                         @elseif(($data['set_exam']) == 5)
-                            <a href="{{ url('keyskills_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                            <a href="{{ url('key_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                         @elseif(($data['set_exam']) == 6)
                             <a href="{{ url('speak_write/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                         @elseif(($data['set_exam']) == 7)
@@ -182,7 +182,7 @@
                         @elseif(($data['set_exam']) == 4)
                             <a href="{{ url('found_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                         @elseif(($data['set_exam']) == 5)
-                            <a href="{{ url('keyskills_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                            <a href="{{ url('key_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                         @elseif(($data['set_exam']) == 6)
                             <a href="{{ url('speak_write/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                         @elseif(($data['set_exam']) == 7)

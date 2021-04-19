@@ -540,7 +540,7 @@
 												</div>
 
 												<div class="col-md-6 align-self-center">
-													<img src="{{ asset('public/assets/images/ksx-sec3.jpg')}}" alt="25-30" width="100%">
+													<img src="{{ asset('public/assets/images/mocktest/ksx-sec3.jpg')}}" alt="25-30" width="100%">
 												</div>
 											</div>
 										</div>

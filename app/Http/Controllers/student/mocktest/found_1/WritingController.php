@@ -46,6 +46,6 @@ class WritingController extends Controller
         ]);
 
 
-    	return redirect('successwriting');
+    	return redirect('success');
 	}
 }

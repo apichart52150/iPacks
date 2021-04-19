@@ -1,7 +1,6 @@
 <?php 
 
-namespace App\Http\Controllers\student\mocktest\found_ex;
-
+namespace App\Http\Controllers\student\mocktest\speak_write;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -13,15 +12,14 @@ use Illuminate\Support\Facades\DB;
 class WritingController extends Controller
 {
 	
-
 	public function index() {
 
-		return view('student.mocktest.found_ex.writing');
+		return view('student.mocktest.speak_write.writing');
 
 	}
 
 	public function exam(Request $request) {
-
+      
 		$check_score = DB::table('score')
     	->where('std_id',$request->std_id)
         ->get();
@@ -46,8 +44,7 @@ class WritingController extends Controller
             'set_exam' => $request->set_exam,
             'text_answer' => $request->text_answer_task2
         ]);
-
-
+        
     	return redirect('success');
 	}
 }
