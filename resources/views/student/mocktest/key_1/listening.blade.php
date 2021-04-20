@@ -53,7 +53,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card-box">
+                    <div class="card-box border border-primary">
                         <div id="dplay"></div>
                         <h4 class="m-t-0 header-title"><b>LISTENING</b></h4>
           

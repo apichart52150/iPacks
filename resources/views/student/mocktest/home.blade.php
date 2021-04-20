@@ -22,12 +22,12 @@
 
         <div class="row">
             <div class="col-xl-4 col-md-6">
-                <div class="widget-bg-color-icon card-box">
+                <div class="widget-bg-color-icon card-box border border-primary">
                     <div class="avatar-xl float-left">
                         <img src="{{ asset('public/assets/images/mocktest/iconlis.png') }}" class="font-24 avatar-title text-white" alt="user">
                     </div>
                     <div class="text-right p-1">
-                        <h3 class="text-dark mt-1"><span class="counter">LISTENING</span></h3>
+                        <h3 class="text-primary mt-1"><span class="counter">LISTENING</span></h3>
                         @if ($data['checklis'] >= 1)
                             <button type="button" class="btn btn-secondary waves-effect disabled">Start</button>
                         @else
@@ -39,12 +39,12 @@
             </div>
 
             <div class="col-xl-4 col-md-6">
-                <div class="widget-bg-color-icon card-box">
+                <div class="widget-bg-color-icon card-box border border-primary">
                     <div class="avatar-xl float-left">
                         <img src="{{ asset('public/assets/images/mocktest/club3.png') }}" class="font-24 avatar-title text-white" alt="user">
                     </div>
                     <div class="text-right p-1">
-                        <h3 class="text-dark mt-1"><span class="counter">READING</span></h3>
+                        <h3 class="text-primary mt-1"><span class="counter">READING</span></h3>
                         @if($data['checkread'] >= 1 || $data['checklis'] == 0)
                             <button type="button" class="btn btn-secondary waves-effect disabled">Start</button>
                         @else
@@ -56,12 +56,12 @@
             </div>
 
             <div class="col-xl-4 col-md-6">
-                <div class="widget-bg-color-icon card-box">
+                <div class="widget-bg-color-icon card-box border border-primary">
                     <div class="avatar-xl float-left">
                         <img src="{{ asset('public/assets/images/mocktest/club1.png') }}" class="font-24 avatar-title text-white" alt="user">
                     </div>
                     <div class="text-right p-1">
-                        <h3 class="text-dark mt-1"><span class="counter">WRITING</span></h3>
+                        <h3 class="text-primary mt-1"><span class="counter">WRITING</span></h3>
                         @if($data['checklis'] == 0 || $data['checkread'] == 0 || $data['checkwriting'] >= 1)
                             <button type="button" class="btn btn-secondary waves-effect disabled">Start</button>
                         @else

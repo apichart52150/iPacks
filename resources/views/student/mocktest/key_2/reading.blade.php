@@ -42,7 +42,7 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card-box">
+				<div class="card-box border border-primary">
 					<h4 class="m-t-0 header-title"><b>IELTS Practice Reading Test</b></h4>
 					<div class="row">
 

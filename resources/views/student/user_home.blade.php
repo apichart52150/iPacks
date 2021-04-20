@@ -28,7 +28,7 @@
 
 
                     <li class="has-submenu">
-                        <a href="#">
+                        <a href="{{ url('mocktest/home') }}">
                             <i class="mdi mdi-layers"></i>Mocktest<div class="arrow-down"></div>
                         </a>
                     </li>
@@ -46,7 +46,7 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#">
+                        <a href="{{ url('clubs/condition') }}">
                             <i class="mdi mdi-layers"></i>Bonus&Club<div class="arrow-down"></div>
                         </a>
                     </li>
@@ -63,9 +63,6 @@
     <!-- end navbar-custom -->
 @endsection
 
-@section('page_titile')
-
-@endsection
 @section('content')
 <style>
 
@@ -209,15 +206,17 @@
             </div><!-- end col -->
 
             <div class="col-xl-6 col-md-6">
-                <div class="card-box widget-icon ribbon-box bg-primary">
-                    <div class="ribbon-two ribbon-two-secondary avatar-title display-6 m-0 "><span>Premium</span></div>
-                    <div class="avatar-lg float-left">
-                        <i class="mdi mdi-account-group avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                <a href="{{ url('clubs/condition') }}">
+                    <div class="card-box widget-icon ribbon-box bg-purple">
+                        <div class="ribbon-two ribbon-two-secondary avatar-title display-6 m-0 "><span>Premium</span></div>
+                        <div class="avatar-lg float-left">
+                            <i class="mdi mdi-account-group avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                        </div>
+                        <div class="text-center">
+                            <h2 class="mb-3 text-light"> Club </h2>
+                        </div>
                     </div>
-                    <div class="text-center">
-                        <h2 class="mb-3 text-light"> Club </h2>
-                    </div>
-                </div>
+                </a>
             </div><!-- end col -->
         </div>
     </div>

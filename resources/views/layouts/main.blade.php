@@ -2,18 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Minton - Responsive Admin Dashboard Template</title>
+        <title>iPACK - All</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('public/assets/images/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{asset('public/assets/images/newcambridge-logo_bar.png') }}">
 
         <!-- App css -->
         <link href="{{asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{asset('public/assets/css/app.min.cs') }}s" rel="stylesheet" type="text/css" />
+
+        <!-- Custom box css -->
+        <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
         
         <link href="{{asset('public/assets/css/style.css') }}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="{{asset('public/plugins/jquery.steps/css/jquery.steps.css')}}" />
@@ -153,7 +156,7 @@
                                 </div>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <a href="{{route('user_profile')}}" class="dropdown-item notify-item">
                                     <i class="mdi mdi-account-circle"></i>
                                     <span>My Account</span>
                                 </a>
@@ -407,6 +410,9 @@
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
 
+        <!-- Modal-Effect -->
+        <script src="{{ asset('public/assets/libs/custombox/custombox.min.js') }}"></script>
+
         <script src="{{ asset('public/assets/libs/jquery-knob/jquery.knob.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/peity/jquery.peity.min.js') }}"></script>
 
@@ -420,6 +426,7 @@
         <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
 
         <!-- add wizard -->
+
         <!--Form Wizard--> 
         <script src="{{ asset('public/plugins/jquery.steps/js/jquery.steps.min.js') }}" type="text/javascript"></script> 
 
