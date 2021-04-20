@@ -20,6 +20,9 @@
         <!-- Custom box css -->
         <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
 
+        <!-- Footable css -->
+        <link href="{{ asset('public/assets/libs/footable/footable.core.min.css') }}" rel="stylesheet" type="text/css" />
+
         <!-- App css -->
         <link href="{{ asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
@@ -184,6 +187,13 @@
 
         <!-- Modal-Effect -->
         <script src="{{ asset('public/assets/libs/custombox/custombox.min.js') }}"></script>
+
+        <!-- Footable js -->
+        <script src="{{ asset('public/assets/libs/footable/footable.all.min.js') }}"></script>
+
+        <!-- Init js -->
+        <script src="{{ asset('public/assets/js/pages/foo-tables.init.js') }}"></script>
+
 
         @yield('javascript')
 

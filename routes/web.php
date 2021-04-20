@@ -260,9 +260,9 @@
 			Route::get('class_detail/{class_id}', 'ClassController@classdetail_by_id')->name('class_detail');
 			Route::post('update_set_exam','ClassController@update_set_exam')->name('update_set_exam');
 			Route::post('update_class_pass', 'ClassController@update_class_pass')->name('update_class_pass');
+			Route::get('print_classdetail/{class_id}', 'ClassController@print_classdetail')->name('print_classdetail');
 
 			Route::get('all_user', 'UserController@all_user')->name('all_user');
-			Route::get('print_classdetail/{class_id}', 'ClassController@print_classdetail')->name('print_classdetail');
 
 			Route::get('student_profile/{std_id}', 'StudentController@std_profile_by_id')->name('student_profile');
 			Route::post('edit_score', 'StudentController@edit_score')->name('edit_score');

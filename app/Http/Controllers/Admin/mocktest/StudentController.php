@@ -98,7 +98,7 @@ class StudentController extends Controller {
         $del_ans = student::del_ans($id);
         session()->flash('del_ans','<div class="alert alert-success" role="alert">
         <i class="mdi mdi-check-all mr-2"></i><strong>Delete Success</strong></div>'); 
-        return redirect('student_profile/'.$std_id);
+        return redirect('mocktest/student_profile/'.$std_id);
 
     }
 
@@ -108,7 +108,7 @@ class StudentController extends Controller {
         $del_ans_wri = student::del_ans_wri($wri_id);
         session()->flash('del_ans','<div class="alert alert-success" role="alert">
         <i class="mdi mdi-check-all mr-2"></i><strong>Delete Success</strong></div>'); 
-        return redirect('student_profile/'.$std_id);
+        return redirect('mocktest/student_profile/'.$std_id);
 
     }
 
@@ -142,7 +142,7 @@ class StudentController extends Controller {
         session()->flash('edit_score','<div class="alert alert-success" role="alert">
         <i class="mdi mdi-check-all mr-2"></i><strong>Update Score Success</strong></div>'); 
 
-        return redirect('class_detail/'.$request->class_id);
+        return redirect('mocktest/class_detail/'.$request->class_id);
 
     } 
 
@@ -166,7 +166,7 @@ class StudentController extends Controller {
         session()->flash('edit_score', '<div class="alert alert-success" role="alert">
         <i class="mdi mdi-check-all mr-2"></i><strong>Update Score Success</strong></div>');
 
-        return redirect('class_detail/'.$request->class_id);
+        return redirect('mocktest/class_detail/'.$request->class_id);
 
     }
 

@@ -35,170 +35,212 @@
 	height: 10px;
 	}
 </style>
-	
+
 <div class="row">
-	<div class="col-xl-12">
-		<div class="card-box table-responsive">
+	<div class="col-sm-12">
+		<div class="card-box">
+
 			@if(session()->has('edit_score'))
 			{!!session()->get('edit_score')!!}
 			@endif 
 			
 			@if(count($get_class_id) == 0)
-				<div class="form-group row">
-					<label class="col-3 col-form-label"><h2 class="">Classroom Detail</h2> </label>
-				</div>
-				<table border="0">
-					<tr>
-						<td> Class :: </td>
-					</tr>
-					<tr>
-						<td class="header-title">NC Code ::  </td>  
-					</tr>
-					<tr>
-						<td class="header-title">Date Exam ::  </td>  
-					</tr>
-					<tr>
-						<td class="header-title">Teacher ::  </td>  
-					</tr>
-					<tr>
-						<td class="header-title">Pass class :: </td>  
-					</tr>
-				</table>
+				<h4 class="header-title">Class :: {{$get_class_id['class_name']}}</h4>
+				<p class="sub-header">
+					NC Code :: {{$get_class_id['class_nccode']}}<br>
+					Date Exam :: {{date('d/m/Y',strtotime($get_class_id['class_date_exam']))}}<br> 
+					Teacher :: {{$get_class_id['teacher_name']}}<br>
+				</p>
 			@else
 				<div class="form-group row">
-					<label class="col-auto"><h2>Classroom Detail</h2> </label>
 					<div class="col-4">
 						<a href="{{ route('print_classdetail',$get_class_id['class_id'])}}" class="btn btn-primary waves-effect waves-light" target="_blank"><i class="mdi mdi-printer"></i></a>
 					</div>
 				</div>
-				<table border="0">
-					<tr>
-						<td class="header-title pb-1"> Class :: {{$get_class_id['class_name']}} </td>
-					</tr>
-					<tr>
-						<td class="header-title pb-1">NC Code :: {{$get_class_id['class_nccode']}} </td>  
-					</tr>
-					<tr>
-						<td class="header-title pb-1">Date Exam :: {{date('d/m/Y',strtotime($get_class_id['class_date_exam']))}} </td>
-					</tr>
-					<tr>
-						<td class="header-title">Teacher :: {{$get_class_id['teacher_name']}} </td>  
-					</tr>
-				</table>
+				<h4 class="header-title">Class :: {{$get_class_id['class_name']}}</h4>
+				<p class="sub-header">
+					NC Code :: {{$get_class_id['class_nccode']}}<br>
+					Date Exam :: {{date('d/m/Y',strtotime($get_class_id['class_date_exam']))}}<br> 
+					Teacher :: {{$get_class_id['teacher_name']}}<br>
+				</p>
 			@endif
-			<br> 
+			<br>
 
-			<table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%" style="text-align: center;">
+			<table id="demo-foo-row-toggler" class="table table-bordered toggle-circle mb-0">
 				<thead>
 					<tr>
-						<th rowspan="2" class="smallbox">No.</th>
-						<th rowspan="2" class="mediumbox">Student Name</th>
-						<th rowspan="2" class="smallbox">Nickname</th>
-						<th rowspan="2" class="smallbox">Set Exam</th>
-						<th colspan="6" class="smallbox">Exam</th>
-						<th rowspan="2" class="smallbox">Overall band</th>
-						<th rowspan="2" class="bigbox">Course Recommendation / Note</th>
-						<th rowspan="2" class="smallbox">Expected Band</th>
-						<th rowspan="2" class="smallbox">Edit</th>
-						
-					</tr>
-					<tr>
-						<th class="smallbox">Listening</th>
-						<th class="smallbox">Reading</th>
-						<th class="smallbox">Writing 1</th>
-						<th class="smallbox">Writing 2</th> 
-						<th class="smallbox">Overall writing score</th>
-						<th class="smallbox border-right">Speaking</th>
+						<th data-toggle="true">No.</th>
+						<th data-toggle="true">Student Name</th>
+						<th data-toggle="true">Nickname</th>
+						<th data-toggle="true">Set Exam</th>
+						<th data-toggle="true">Edit</th>
 					</tr>
 				</thead>
 				@if(count($get_class_id) == 0)
+					<p>No data show!</p>>
 				@else  
-				<tbody>
-					<?php $i = 0;?>
-					@if(empty($data))
-					@else
-					@foreach ($data as $class)
+					<tbody>
+						<?php $i = 0;?>
+						@if(empty($data))
+							<p>No data show!</p>>
+						@else
+							@foreach ($data as $class)
+								<?php $i++;?>
+								<tr>
+									<td>{{$i}}</td>
+									<td><a href="{{ route('student_profile',$class['std_id'])}}">{{$class['std_name']}}</a></td>
+									<td>{{$class['std_nickname']}}</td>
+									<td>
+										<span class="badge badge-success p-1">{{$class['set_exam']}}</span>
+									</td>
+									<td>
+										<button type="submit" class="btn btn-success waves-effect waves-light btn-sm" data-toggle="modal" data-target="#edit-modal{{$i}}">Edit</button>
+										<button type="submit" class="btn btn-info waves-effect waves-light btn-sm" data-toggle="modal" data-target="#view-modal{{$i}}">View</button>
+									</td>
+								</tr>
 
-					<?php $i++;?>
-					<tr>
-						<td>{{$i}}</td>
-						<td class="aligntext"><a href="{{ route('student_profile',$class['std_id'])}}">{{$class['std_name']}}</a></td>
-						<td>{{$class['std_nickname']}}</td>
-						<td>
-							<span class="badge badge-success p-2">{{$class['set_exam']}}</span>
-						</td>
-						<td>{{$class['lis_score']}}</td>
-						<td>{{$class['read_score']}}</td>
-						<td>
-							@if ($class['score_wri_1'] == 0)
-								{{$class['score_wri_3']}}
-							@else
-								{{$class['score_wri_1']}}
-							@endif
-						</td>
-						<td>{{$class['score_wri_2']}}</td>
-						<td>{{$class['score_wri_overall']}}</td>
-						<td>{{$class['score_speaking']}}</td>
-						<td>{{$class['score_overall']}}</td>
-						<td class="aligntext">{{$class['rec_course']}}</td>
-						<td>{{$class['expectband']}}</td>
-						<td><button type="submit" class="btn btn-success waves-effect waves-light btn-sm" data-toggle="modal" data-target="#edit_score{{$i}}"><i class="mdi mdi-grease-pencil"></i></button>
-						</td>
-					</tr>
-					<div id="edit_score{{$i}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="full-width-modalLabel" aria-hidden="true" style="display: none;">
-						<div class="modal-dialog modal-full">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-									<h4 class="modal-title" id="full-width-modalLabel">Update score</h4>
+								<div id="edit-modal{{$i}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4 class="modal-title">{{$class['std_name']}}</h4>
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+											</div>
+											<form action="{{route('edit_score')}}" method="post" class="form-horizontal" role="form"> 
+												{!! csrf_field() !!}
+												<input type="hidden" value="{{ $class['std_id'] }}" name="std_id">
+												<input type="hidden" value="{{ $class['classroom_id'] }}" name="class_id">
+												<div class="modal-body">
+													<div class="form-group row">
+														<label class="col-4 col-form-label">Writing 1:</label>
+														<div class="col-6">
+															<input type="text" class="form-control" value="{{$class['score_wri_1']}}" name="score_writing1" onkeypress="return chkNumber(this)">
+														</div>
+													</div>
+													<div class="form-group row">
+														<label class="col-4 col-form-label">Writing 2:</label>
+														<div class="col-6">
+															<input type="text" class="form-control" value="{{$class['score_wri_2']}}" name="score_writing2" onkeypress="return chkNumber(this)">
+														</div>
+													</div>
+													<div class="form-group row">
+														<label class="col-4 col-form-label">Speaking:</label>
+														<div class="col-6">
+															<input type="text" class="form-control" value="{{$class['score_speaking']}}" name="score_speaking" onkeypress="return chkNumber(this)">
+														</div>
+													</div>
+													<div class="form-group row">
+														<label class="col-12 col-form-label">Course Recommendation / Note:</label>
+														<div class="col-12">
+															<textarea type="textarea" rows="5" class="form-control"  name="score_rec_course">{{$class['rec_course']}}</textarea> 
+														</div>
+													</div>
+													<div class="row">
+													<div class="col-md-12">
+														<div class="form-group">
+															<label for="field-3" class="control-label">Expected Band:</label>
+															<input type="text" class="form-control" id="field-3" value="{{$class['expectband']}}" name="score_expectband" onkeypress="return chkNumber(this)">
+														</div>
+													</div>
+												</div>
+												</div>
+												<div class="modal-footer">
+													<button type="submit" class="btn btn-success waves-effect waves-light">Update score</button>
+													<button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
+												</div>
+											</form>
+										</div>
+									</div>
 								</div>
-								<form action="{{route('edit_score')}}" method="Post" class="form-horizontal" role="form"> 
-									{!! csrf_field() !!}
-									<input type="hidden" value="{{$class['std_id']}}" name="std_id">
-									<input type="hidden" value="{{$class['classroom_id']}}" name="class_id">
-									<div class="modal-body">
-										<div class="form-group row">
-											<label class="col-4 col-form-label">Writing 1</label>
-											<div class="col-6">
-												<input type="text" class="form-control" value="{{$class['score_wri_1']}}" name="score_writing1" onkeypress="return chkNumber(this)">
+
+								<div id="view-modal{{$i}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4 class="modal-title">{{$class['std_name']}}</h4>
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 											</div>
-										</div>
-										<div class="form-group row">
-											<label class="col-4 col-form-label">Writing 2</label>
-											<div class="col-6">
-												<input type="text" class="form-control" value="{{$class['score_wri_2']}}" name="score_writing2" onkeypress="return chkNumber(this)">
+											<div class="modal-body p-4">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+														@if ($class['score_wri_1'] == 0)
+															<label for="field-1" class="control-label">Writing 1</label>
+															<input type="text" class="form-control" id="field-1" value="{{$class['score_wri_3']}}" readonly="readonly">
+														@else
+															<label for="field-1" class="control-label">Writing 1</label>
+															<input type="text" class="form-control" id="field-1" value="{{$class['score_wri_1']}}" readonly="readonly">
+														@endif
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="form-group">
+															<label for="field-2" class="control-label">Writing 2</label>
+															<input type="text" class="form-control" id="field-2" value="{{$class['score_wri_2']}}" readonly="readonly">
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<div class="form-group">
+															<label for="field-3" class="control-label">Overall writing score:</label>
+															<input type="text" class="form-control" id="field-3" value="{{$class['score_wri_overall']}}" readonly="readonly">
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-4">
+														<div class="form-group">
+															<label for="field-4" class="control-label">Listening:</label>
+															<input type="text" class="form-control" id="field-4" value="{{$class['lis_score']}}" readonly="readonly">
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="form-group">
+															<label for="field-5" class="control-label">Reading:</label>
+															<input type="text" class="form-control" id="field-5" value="{{$class['read_score']}}" readonly="readonly">
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="form-group">
+															<label for="field-6" class="control-label">Speaking</label>
+															<input type="text" class="form-control" id="field-6" value="{{$class['score_speaking']}}" readonly="readonly">
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<div class="form-group no-margin">
+															<label for="field-7" class="control-label">Course Recommendation / Note:</label>
+															<textarea class="form-control" id="field-7" placeholder="Write something about Course Recommendation" readonly="readonly"> {{$class['rec_course']}}</textarea>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label for="field-1" class="control-label">Overall band</label>
+															<input type="text" class="form-control" id="field-1" value="{{$class['score_overall']}}" readonly="readonly">
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="form-group">
+															<label for="field-2" class="control-label">Expected Band</label>
+															<input type="text" class="form-control" id="field-2" value="{{$class['expectband']}}" readonly="readonly">
+														</div>
+													</div>
+												</div>
 											</div>
-										</div>
-										<div class="form-group row">
-											<label class="col-4 col-form-label">Speaking</label>
-											<div class="col-6">
-												<input type="text" class="form-control" value="{{$class['score_speaking']}}" name="score_speaking" onkeypress="return chkNumber(this)">
-											</div>
-										</div>
-										<div class="form-group row">
-											<label class="col-12 col-form-label">Course Recommendation / Note</label>
-											<div class="col-12">
-												<textarea type="textarea" rows="5" class="form-control"  name="score_rec_course">{{$class['rec_course']}}</textarea> 
-											</div>
-										</div>
-										<div class="form-group row">
-											<label class="col-4 col-form-label">Expected Band</label>
-											<div class="col-6">
-												<input type="text" class="form-control" value="{{$class['expectband']}}" name="score_expectband" onkeypress="return chkNumber(this)">
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
 											</div>
 										</div>
 									</div>
-									<div class="modal-footer">
-										<button type="submit" class="btn btn-primary waves-effect waves-light">Update score</button>
-										<button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-					@endforeach
-					@endif
-				</tbody>
+								</div><!-- /.modal -->
+
+							@endforeach
+						@endif
+					</tbody>
 				@endif
 			</table>
 		</div>

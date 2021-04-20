@@ -62,8 +62,8 @@
 				<div class="modal-dialog modal-full">
 					<div class="modal-content">
 						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 							<h4 class="modal-title" id="full-width-modalLabel">Update Score</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 						</div>
 						<form action="{{ route('update_writing') }}" method="POST">
 							{{ csrf_field() }}
@@ -93,8 +93,8 @@
 				<div class="modal-dialog modal-full">
 					<div class="modal-content">
 						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 							<h4 class="modal-title" id="full-width-modalLabel">Delete Writing Task 1 Answer !</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 						</div>
 						<div class="modal-body">
 							<label>Are you sure want to delete !</label>
@@ -137,8 +137,8 @@
 				<div class="modal-dialog modal-full">
 					<div class="modal-content">
 						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 							<h4 class="modal-title" id="full-width-modalLabel">Update Score</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 						</div>
 						<form action="{{ route('update_writing') }}" method="POST">
 							{{ csrf_field() }}
@@ -168,8 +168,8 @@
 				<div class="modal-dialog modal-full">
 					<div class="modal-content">
 						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 							<h4 class="modal-title" id="full-width-modalLabel">Delete Writing Task 2 Answer !</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 						</div>
 						<div class="modal-body">
 							<label>Are you sure want to delete !</label>

@@ -78,7 +78,6 @@
 						</ul>
 
 						<div class="tab-content">
-
 							@include('admin.mocktest.type_exam.answer_listening')
 							@include('admin.mocktest.type_exam.answer_reading') 
 
@@ -87,7 +86,6 @@
 							@else
 								@include('admin.mocktest.type_exam.answer_writing')
 							@endif
-							
 						</div>  
 					</div>
 

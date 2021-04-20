@@ -43,12 +43,12 @@ class ClassController extends Controller {
                 ]);
             session()->flash('message','<div class="alert alert-success" role="alert">
                 <i class="mdi mdi-check-all mr-2"></i><strong>Add Classroom Success</strong></div>'); 
-            return redirect('dashboard');
+            return redirect('mocktest/dashboard');
         }else{
             session()->flash('message','<div class="alert alert-danger" role="alert">
                 <i class="mdi mdi-check-all mr-2"></i><strong>Add Classroom Failed : NC Code already exists</strong></div>'); 
 
-            return redirect('dashboard');
+            return redirect('mocktest/dashboard');
         }
 
     }
@@ -81,7 +81,7 @@ class ClassController extends Controller {
         ]);
             session()->flash('message','<div class="alert alert-success" role="alert">
                 <i class="mdi mdi-check-all mr-2"></i><strong>Edit Classroom Success</strong></div>');
-            return redirect('dashboard');
+            return redirect('mocktest/dashboard');
         }elseif($check_topic_exam[0]->classroom_topic_exam == $request->txttopic_exam && $check_topic_exam[0]->classroom_id == $request->classroom_id){
             $edit_class = DB::table('classroom')
             ->where('classroom_id','=',$request->classroom_id)
@@ -93,11 +93,11 @@ class ClassController extends Controller {
         ]);
             session()->flash('message','<div class="alert alert-success" role="alert">
                 <i class="mdi mdi-check-all mr-2"></i><strong>Edit Classroom Success</strong></div>');
-            return redirect('dashboard');
+            return redirect('mocktest/dashboard');
         }else{
             session()->flash('message','<div class="alert alert-danger" role="alert">
                 <i class="mdi mdi-check-all mr-2"></i><strong>Edit Classroom Failed : '.$request->txttopic_exam.' already exists</strong></div>');
-            return redirect('dashboard');
+            return redirect('mocktest/dashboard');
         }
     }
 
@@ -111,7 +111,7 @@ class ClassController extends Controller {
         $del_std = DB::table('std_score')->where('classroom_id','=',$request->classroom_id)->delete();
 
 
-        return redirect('dashboard');
+        return redirect('mocktest/dashboard');
     }
 
 
@@ -266,7 +266,7 @@ class ClassController extends Controller {
     }
     //dd($data);
 
-    return view('#',compact('data','get_class_id'));
+    return view('admin.mocktest.print_classdetail',compact('data','get_class_id'));
     }
 
 
@@ -279,7 +279,7 @@ class ClassController extends Controller {
         ->update(['class_pass' => $request->class_pass]);
         session()->flash('message','<div class="alert alert-success" role="alert">
         <i class="mdi mdi-check-all mr-2"></i><strong>Update Classroom Password Success</strong></div>'); 
-        return redirect('dashboard');
+        return redirect('mocktest/dashboard');
         
     } 
 
@@ -293,7 +293,7 @@ class ClassController extends Controller {
     session()->flash('message','<div class="alert alert-success" role="alert">
     <i class="mdi mdi-check-all mr-2"></i><strong>Update Set Exam Success</strong></div>');
 
-    return redirect('dashboard');
+    return redirect('mocktest/dashboard');
   }
 
 }

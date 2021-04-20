@@ -60,12 +60,12 @@
         <div class="col-xl-6 col-md-6">
             <a href="{{url('mocktest/dashboard')}}">
                 <div class="widget-bg-color-icon card-box">
-                    <div class="avatar-lg rounded-circle bg-icon-success float-left">
-                        <i class="mdi mdi-voice font-24 avatar-title text-white"></i>
+                    <div class="avatar-lg rounded-circle bg-icon-primary float-left">
+                        <i class="mdi mdi-format-list-bulleted font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
-                        <h3 class="text-dark mt-1"><span class="counter">Mocktest</span></h3>
-                        <h3 class="text-success mb-0"><span class="counter">Admin</span></h3>
+                        <h3 class="text-dark mt-1"><span class="counter">Admin</span></h3>
+                        <h3 class="text-primary mb-0"><span class="counter">Mocktest</span></h3>
                     </div>
                     <div class="clearfix"></div>
                 </div>

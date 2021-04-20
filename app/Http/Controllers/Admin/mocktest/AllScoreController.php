@@ -15,7 +15,7 @@ class AllScoreController extends Controller
 
     public static function index()
     {
-     return view('admin/dashboard');
+     return view('admin.mocktest.dashboard');
     }
 
 
