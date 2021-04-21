@@ -69,7 +69,7 @@
 
 		// ==================== Mocktest ====================== //
 			Route::prefix('mocktest')->namespace('student\mocktest')->group(function () {
-				Route::get('home','HomeController@index');
+				Route::get('/home','HomeController@index');
 			});
 
 			Route::prefix('keyskills_1')->namespace('student\mocktest\key_1')->group(function () {
@@ -164,12 +164,15 @@
 				
 			});
 		
-			Route::get('success', function () { return view('student.mocktest.success'); });
+			Route::get('success', function() {
+				return view('student.mocktest.success');
+			})->name('success');
+
 		// ==================== End Mocktest ====================== //
 
 		Route::prefix('clubs')->namespace('student\clubs')->group(function () {
 
-			Route::get('home', 'HomeController@index')->name('home');
+			Route::get('home', 'HomeController@index');
 
 			Route::get('sac-tour', function() {
 				return view('student.clubs.sac-tour');
@@ -199,6 +202,7 @@
 // ==================== Routes Admin ==================== //
 
 	Auth::routes();
+
 	Route::get('admin', function() {
 		if(Auth::check()) {
 			return redirect('admin_home');
@@ -206,6 +210,7 @@
 			return redirect('login');
 		}
 	});
+
 	Route::get('admin_home', 'Admin\HomeController@index');
 
 	Route::middleware(['auth'])->group(function () {
@@ -229,6 +234,7 @@
 			Route::post('delete', 'ManageController@delete')->name('delete');
 			
 		});
+
 		Route::prefix('speaking/report')->namespace('Admin\isac\speaking')->group(function () {
 
 			Route::any('teachers', 'ReportController@teachers')->name('report_teachers');
@@ -261,6 +267,7 @@
 			Route::get('all/{id}', 'ManageController@view')->name('all_writing');
 			Route::post('delete', 'ManageController@delete')->name('delete_writing');
 		});
+
 		Route::prefix('writing/report')->namespace('Admin\isac\writing')->group(function () {
 
 			Route::any('teachers', 'ReportController@teachers')->name('report_writing_teachers');

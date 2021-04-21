@@ -32,7 +32,6 @@ class Profile extends Model
 
     public static function getProfileClub() {
 
-        $std_id = Session::get('std_id');
         $current_date = date('Y-m-d');
         $course_type = 'online';
 
@@ -43,7 +42,7 @@ class Profile extends Model
             ->join('class_student', 'class_student.std_id', '=', 'student.std_id')
             ->join('class', 'class_student.nccode', '=', 'class.nccode')
             ->join('course', 'class.courseid', '=', 'course.courseid')
-            ->where('student.std_id', $std_id)
+            ->where('student.std_id', Session::get('std_id'))
             ->groupBy('student.std_id')
             ->get()[0];
 
@@ -56,7 +55,7 @@ class Profile extends Model
             ->leftjoin('class', 'class_student.nccode', '=', 'class.nccode')
             ->leftjoin('course', 'class.courseid', '=', 'course.courseid')
             ->leftjoin('borrowbook','borrowbook.std_id','=', 'class_student.std_id')
-            ->where('student.std_id', $std_id)
+            ->where('student.std_id', Session::get('std_id'))
             ->get()[0];
         }
             
