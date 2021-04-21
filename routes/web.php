@@ -311,6 +311,18 @@
 			Route::get('print_G3/{std_id?}', 'StudentController@print_gateway_part3')->name('print_G3');
 		});
 
+		Route::prefix('clubs')->namespace('Admin\clubs')->group(function () {
+
+			Route::get('dashboard', 'DashboardController@index');
+			Route::get('addclub', 'DashboardController@addclub')->name('addclub');
+
+			Route::post('endclass', 'ClubRoomController@endclass');
+			Route::get('excel_club_register/{id?}', 'ClubRegisterController@excel_room');
+
+		});
+
+
+
 
 
 	});

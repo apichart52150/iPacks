@@ -183,6 +183,8 @@
             </div>
             <!-- end navbar-custom -->
 
+            @yield('top_menu')
+
         </header>
         <!-- End Navigation Bar-->
 
