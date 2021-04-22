@@ -1,11 +1,47 @@
 @extends('layouts.main_admin')
 
-@section('content')
+@section('topbar-menu')
+    <div class="topbar-menu">
+        <div class="container-fluid">
+            <div id="navigation" class="bg-dark">
+                <!-- Navigation Menu-->
+                <ul class="navigation-menu  d-lg-flex justify-content-center">
 
+                    <li class="has-submenu">
+                        <a href="{{ url('writing/dashboard') }}" class="text-light">
+                            <i class="mdi mdi-grease-pencil"></i>iSAC Writing
+                        </a>
+                    </li>
 
+                    <li class="has-submenu">
+                        <a href="{{ url('speaking/dashboard') }}" class="text-light">
+                            <i class="mdi mdi-voice"></i>iSAC Speaking
+                        </a>
+                    </li>
 
-<div class="container-fluid">
+                    <li class="has-submenu">
+                        <a href="{{ url('mocktest/dashboard') }}" class="text-light">
+                            <i class="mdi mdi-format-list-bulleted"></i>Mocktest 
+                        </a>
+                    </li>
 
+                    <li class="has-submenu">
+                        <a href="{{ url('clubs/dashboard') }}" class="text-light">
+                            <i class="mdi mdi-format-list-bulleted"></i>Club & Bonus 
+                        </a>
+                    </li>
+                </ul>
+                <!-- End navigation menu -->
+
+                <div class="clearfix"></div>
+            </div>
+            <!-- end #navigation -->
+        </div>
+        <!-- end container -->
+    </div>
+@endsection
+
+@section('page-title')
     <!-- start page title -->
     <div class="row">
         <div class="col-xl-12">
@@ -18,7 +54,10 @@
             </div>
         </div>
     </div>     
+@endsection
 
+
+@section('content')
 
     <div class="row">
         
@@ -90,6 +129,5 @@
     </div>
     <!-- end row -->
     
-    </div> <!-- end container -->
 @endsection
 

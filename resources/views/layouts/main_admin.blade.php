@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -30,7 +29,7 @@
 
     </head>
 
-    <body>
+    <body class="menubar-dark">
 
         <!-- Navigation Bar-->
         <header id="topnav">
@@ -101,65 +100,10 @@
             </div>
             <!-- end Topbar -->
 
-
-            <div class="topbar-menu">
-                <div class="container-fluid">
-                    <div id="navigation">
-                        <!-- Navigation Menu-->
-                        <ul class="navigation-menu">
-
-                            <li class="has-submenu">
-                                <a href="#">
-                                    <i class="mdi mdi-view-dashboard"></i>iSAC<div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index.html">Writing</a>
-                                    </li>
-                                    <li>
-                                        <a href="dashboard-2.html">Speaking</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="has-submenu">
-                                <a href="#">
-                                    <i class="mdi mdi-view-dashboard"></i>Mocktest<div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index.html">Writing</a>
-                                    </li>
-                                    <li>
-                                        <a href="dashboard-2.html">Speaking</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="has-submenu">
-                                <a href="#">
-                                    <i class="mdi mdi-view-dashboard"></i>Bonus<div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index.html">Writing</a>
-                                    </li>
-                                    <li>
-                                        <a href="dashboard-2.html">Speaking</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                        </ul>
-                        <!-- End navigation menu -->
-
-                        <div class="clearfix"></div>
-                    </div>
-                    <!-- end #navigation -->
-                </div>
-                <!-- end container -->
-            </div>
-            <!-- end navbar-custom -->
+            @yield('topbar-menu')
+            
         </header>
-        <!-- End Navigation Bar-->
+        <!-- Navigation Bar-->
 
         <!-- ============================================================== -->
         <!-- Start Page Content here -->
@@ -167,11 +111,11 @@
 
         <div class="wrapper">
         <div class="container-fluid">
-            <!-- start page title -->
+           
             @yield('page-title')
-            <!-- end page title --> 
+           
             @yield('content')
-            </div> <!-- end container -->
+          
         </div>
 
         <!-- end wrapper -->

@@ -1,19 +1,54 @@
 @extends('layouts.main_admin')
+
+@section('topbar-menu')
+    <div class="topbar-menu">
+        <div class="container-fluid">
+            <div id="navigation" class="bg-dark">
+                <!-- Navigation Menu-->
+                <ul class="navigation-menu  d-lg-flex justify-content-center">
+
+                    <li class="has-submenu">
+                        <a href="{{ url('clubs/dashboard') }}" class="text-light">
+                            <i class="mdi mdi-grease-pencil"></i>Club Room
+                        </a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="{{ url('clubs/student') }}" class="text-light">
+                            <i class="mdi mdi-voice"></i>Student
+                        </a>
+                    </li>
+
+                </ul>
+                <!-- End navigation menu -->
+
+                <div class="clearfix"></div>
+            </div>
+            <!-- end #navigation -->
+        </div>
+        <!-- end container -->
+    </div>
+@endsection
+
+@section('page-title')
+	<div class="row">
+		<div class="col-12 m-0">
+			<div class="page-title-box">
+				<div class="page-title-right">
+					<ol class="breadcrumb m-0">
+						<li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('admin') }}">Home</a></li>
+						<!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
+						<li class="breadcrumb-item active">Club Room</li>
+					</ol>
+				</div>
+				<h4 class="page-title">Club Room</h4>
+			</div>
+		</div>
+	</div>     
+@endsection
+
 @section('content')
 
-   <!-- start page title -->
-   <div class="row">
-        <div class="col-xl-12">
-            <div class="page-title-box">
-                <div class="page-title-right">
-                    <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item active">Home Admin</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>     
-	
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="card-box">
@@ -68,7 +103,7 @@
 								<td>
         							<a href="{{ url('admin/club_register/'.$row->id) }}" target="_blank" class="btn btn-xs btn-{{ $class }} p-1">{!! '<b style="color:#000">'.$row->teacher.'<br>'.$row->title_type.'</b><br>'.$row->title !!}</a>
 								</td>
-								<td>System Architect</td>
+								<td>{{App\Clubregister::countSTD($row->id)}}/{{ $row->amount }}</td>
 								<td>{{ $row->start_date }}</td>
 								<td>{{ $row->end_date }}</td>
 								<td>
