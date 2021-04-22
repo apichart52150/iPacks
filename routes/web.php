@@ -314,9 +314,11 @@
 		Route::prefix('clubs')->namespace('Admin\clubs')->group(function () {
 
 			Route::get('dashboard', 'DashboardController@index');
-			Route::get('addclub', 'DashboardController@addclub')->name('addclub');
+			Route::post('addclub', 'DashboardController@addclub')->name('addclub');
+			Route::post('endclub', 'DashboardController@endclub')->name('endclub');
+			Route::post('clubdelete/{id}', 'DashboardController@clubdelete');
+			Route::post('clubupdate/{id}', 'DashboardController@clubupdate');
 
-			Route::post('endclass', 'ClubRoomController@endclass');
 			Route::get('excel_club_register/{id?}', 'ClubRegisterController@excel_room');
 
 		});
