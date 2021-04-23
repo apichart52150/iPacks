@@ -62,7 +62,6 @@ class DashboardController extends Controller {
 
 	public function clubupdate($id, Request $request){
 
-		// dd($request->all());
 		$club_room = Club_Room::findOrFail($id);
 
 		$club_room->update($request->all());

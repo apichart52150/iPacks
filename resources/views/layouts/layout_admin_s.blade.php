@@ -143,25 +143,25 @@
 
                             <li class="has-submenu">
                                 <a href="{{ url('speaking/pending') }}" class="text-light">
-                                    <i class="fas fa-folder-minus"></i>Pending 
+                                    <i class="fas fa-clock"></i>Pending 
                                 </a>
                             </li>
 
                             <li class="has-submenu">
                                 <a href="{{ url('speaking/completed') }}" class="text-light">
-                                    <i class="mdi mdi-layers"></i>Completed 
+                                    <i class="fas fa-list-alt"></i>Completed 
                                 </a>
                             </li>
                             
                             @if(Auth::user()->level == 2)
                             <li class="has-submenu">
                                 <a href="{{ route('report_teachers') }}" class="text-light">
-                                <i class="ti-light-bulb"></i> Report
+                                <i class="fas fa-lightbulb"></i> Report
                             	</a>
                             </li>
                             <li class="has-submenu">
                                 <a href="{{ route('report_students') }}" class="text-light">
-                                	<i class="ti-light-bulb"></i> Report All
+                                	<i class="fas fa-lightbulb"></i> Report All
                                 </a>
                             </li>
                             @endif

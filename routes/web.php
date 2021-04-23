@@ -319,8 +319,17 @@
 			Route::post('clubdelete/{id}', 'DashboardController@clubdelete');
 			Route::post('clubupdate/{id}', 'DashboardController@clubupdate');
 
-			Route::get('excel_club_register/{id?}', 'ClubRegisterController@excel_room');
+			Route::get('student','StudentController@index')->name('student');
+			Route::post('addstudent', 'StudentController@addstudent')->name('addstudent');
 
+			Route::get('edit/{id?}','StudentController@edit');
+			Route::post('edit/studentupdate/{id?}', 'StudentController@studentupdate');
+
+			Route::post('studentdelete/{id?}', 'StudentController@studentdelete');
+
+			Route::post('add_clubstudent', 'StudentAddclubController@add_club');
+
+			Route::get('logs/{id?}','LogsController@index');
 		});
 
 

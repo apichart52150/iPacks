@@ -9,25 +9,25 @@
 
                     <li class="has-submenu">
                         <a href="{{ url('writing/dashboard') }}" class="text-light">
-                            <i class="mdi mdi-grease-pencil"></i>iSAC Writing
+                            <i class="fas fa-highlighter"></i>iSAC Writing
                         </a>
                     </li>
 
                     <li class="has-submenu">
                         <a href="{{ url('speaking/dashboard') }}" class="text-light">
-                            <i class="mdi mdi-voice"></i>iSAC Speaking
+                            <i class="fas fa-comments"></i>iSAC Speaking
                         </a>
                     </li>
 
                     <li class="has-submenu">
                         <a href="{{ url('mocktest/dashboard') }}" class="text-light">
-                            <i class="mdi mdi-format-list-bulleted"></i>Mocktest 
+                            <i class="fas fa-list-alt"></i>Mocktest 
                         </a>
                     </li>
 
                     <li class="has-submenu">
                         <a href="{{ url('clubs/dashboard') }}" class="text-light">
-                            <i class="mdi mdi-format-list-bulleted"></i>Club & Bonus 
+                            <i class="far fa-calendar-alt"></i>Club & Bonus 
                         </a>
                     </li>
                 </ul>
@@ -65,7 +65,7 @@
             <a href="{{ url('writing/dashboard')}}">
                 <div class="widget-bg-color-icon card-box">
                     <div class="avatar-lg rounded-circle bg-icon-warning float-left">
-                        <i class="mdi mdi-grease-pencil font-24 avatar-title text-white"></i>
+                        <i class="fas fa-highlighter font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
                         <h3 class="text-dark mt-1"><span class="counter">iSAC</span></h3>
@@ -80,7 +80,7 @@
             <a href="{{url('speaking/dashboard')}}">
                 <div class="widget-bg-color-icon card-box">
                     <div class="avatar-lg rounded-circle bg-icon-success float-left">
-                        <i class="mdi mdi-voice font-24 avatar-title text-white"></i>
+                        <i class="fas fa-comments font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
                         <h3 class="text-dark mt-1"><span class="counter">iSAC</span></h3>
@@ -100,7 +100,7 @@
             <a href="{{url('mocktest/dashboard')}}">
                 <div class="widget-bg-color-icon card-box">
                     <div class="avatar-lg rounded-circle bg-icon-primary float-left">
-                        <i class="mdi mdi-format-list-bulleted font-24 avatar-title text-white"></i>
+                        <i class="fas fa-list-alt font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
                         <h3 class="text-dark mt-1"><span class="counter">Admin</span></h3>
@@ -115,7 +115,7 @@
             <a href="{{url('clubs/dashboard')}}">
                 <div class="widget-bg-color-icon card-box">
                     <div class="avatar-lg rounded-circle bg-icon-primary float-left">
-                        <i class="mdi mdi-format-list-bulleted font-24 avatar-title text-white"></i>
+                        <i class="far fa-calendar-alt font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
                         <h3 class="text-dark mt-1"><span class="counter">Admin</span></h3>

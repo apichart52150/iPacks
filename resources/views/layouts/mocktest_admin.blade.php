@@ -120,12 +120,6 @@
                                 </a>
                             </li>
 
-                            <li class="has-submenu">
-                                <a href="{{ url('mocktest/all_user') }}" class="text-light">
-                                    <i class="fas fa-folder-minus"></i>All Profile 
-                                </a>
-                            </li>
-
                         </ul>
                         <!-- End navigation menu -->
 

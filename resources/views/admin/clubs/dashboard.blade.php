@@ -7,15 +7,21 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu  d-lg-flex justify-content-center">
 
+					<li class="has-submenu">
+                        <a href="{{ url('/admin') }}" class="text-light">
+                            <i class="fas fa-home"></i>Home
+                        </a>
+                    </li>
+
                     <li class="has-submenu">
                         <a href="{{ url('clubs/dashboard') }}" class="text-light">
-                            <i class="mdi mdi-grease-pencil"></i>Club Room
+                            <i class="fas fa-users"></i>Club Room
                         </a>
                     </li>
 
                     <li class="has-submenu">
                         <a href="{{ url('clubs/student') }}" class="text-light">
-                            <i class="mdi mdi-voice"></i>Student
+                            <i class="fas fa-address-card"></i>Student
                         </a>
                     </li>
 
@@ -115,7 +121,7 @@
 								</td>
 								<td>
 									@if ($row->status == 2)
-									<form method="POST" action="clubdelete/{{ $row->id }}" method="POST" onsubmit="return confirm('Are you sure?');">
+									<form  action="clubdelete/{{ $row->id }}" method="POST" onsubmit="return confirm('Are you sure?');">
 										<input class="btn btn-xs btn-danger p-2" type="submit" value="Delete">
 									</form>
 									@else
