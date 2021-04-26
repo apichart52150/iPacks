@@ -330,6 +330,10 @@
 			Route::post('add_clubstudent', 'StudentAddclubController@add_club');
 
 			Route::get('logs/{id?}','LogsController@index');
+
+			Route::get('club_register/{id?}', 'ClubRegisterController@index');
+			Route::post('club_check', 'ClubRegisterController@check_student');
+			Route::get('excel_club_register/{id?}', 'ClubRegisterController@excel_room');
 		});
 
 

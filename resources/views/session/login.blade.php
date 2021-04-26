@@ -9,7 +9,7 @@
 				<div class="card-body p-4">
 					<div class="text-center">
 						<div class="text-center mb-3">
-	                        <h3 class="font-weight-bold text-primary"><i class="fas fa-microphone mr-1"></i> iPACKS LOGIN <span class="d-none d-sm-inline">|</span> <span class="text-dark">Student</span> </h3>
+	                        <h3 class="font-weight-bold text-primary"><i class="fas fa-info"></i> PACKS LOGIN <span class="d-none d-sm-inline">|</span> <span class="text-dark">Student</span> </h3>
 	                    </div>
 					</div>
 					<div id="overlay">
