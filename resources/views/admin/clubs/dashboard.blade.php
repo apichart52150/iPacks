@@ -107,7 +107,7 @@
 
 							<tr>
 								<td>
-        							<a href="{{ url('clubs/club_register/'.$row->id) }}" target="_blank" class="btn btn-xs btn-{{ $class }} p-1">{!! '<b style="color:#000">'.$row->teacher.'<br>'.$row->title_type.'</b><br>'.$row->title !!}</a>
+        							<a href="{{ url('clubs/club_register/'.$row->id) }}" class="btn btn-xs btn-{{ $class }} p-1">{!! '<b style="color:#000">'.$row->teacher.'<br>'.$row->title_type.'</b><br>'.$row->title !!}</a>
 								</td>
 								<td>{{App\Clubregister::countSTD($row->id)}}/{{ $row->amount }}</td>
 								<td>{{ $row->start_date }}</td>

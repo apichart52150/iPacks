@@ -1,6 +1,3 @@
-
-
-                
 @foreach ($data as $key => $subtitles)
 <div class="card">
         @php 

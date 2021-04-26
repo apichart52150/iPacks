@@ -42,7 +42,7 @@
 			<div class="page-title-box">
 				<div class="page-title-right">
 					<ol class="breadcrumb m-0">
-						<li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('clubs/dashboard') }}">Home</a></li>
+						<li class="breadcrumb-item"><i class="fas fa-arrow-left"></i> <a href="{{ url('clubs/dashboard') }}">Back</a></li>
 						<!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
 						<li class="breadcrumb-item active">Club Register</li>
 					</ol>
@@ -104,7 +104,7 @@
                         
                         @if ($row->clubroom_st != 2)
                         
-                        <td>
+                        <td class="text-center">
                             <form action="{{ url('clubs/club_check') }}" name="action" method="POST">
                                 <input type="hidden" name="start_date" value="{{ $club_register[0]->start_date }}">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -147,7 +147,7 @@
 @else
     <div class="portlet box green">
         <div class="portlet-body">
-            ไม่มีข้อมูล หรือไม่มีนักเรียนในคลับนี้ <a href="{{ url('admin/club_room') }}" class="btn btn-xs btn-success">กรุณาเลือก Club Room</a>
+            ไม่มีข้อมูล หรือไม่มีนักเรียนในคลับนี้  <a href="{{ url('clubs/dashboard') }}" class="btn btn-xs btn-success">กรุณาเลือก Club Room</a>
         </div>
 	</div>
 @endif

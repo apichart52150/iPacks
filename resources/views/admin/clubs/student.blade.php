@@ -126,7 +126,7 @@
                                                 <button onclick="return confirm('ต้องการลบข้อมูลนักเรียน ?!')" type="submit" class="btn btn-danger btn-xs mr-1">Delete</button>
                                         </form>
 
-                                        <button data-toggle="modal" data-target="#add-club{{$row->std_id}}" class="btn btn-info btn-xs mr-1"><i class="mdi mdi-plus-circle mr-2"></i> Add Club</button>
+                                        <button data-toggle="modal" data-target="#add-club{{$row->std_id}}" class="btn btn-success btn-xs mr-1"> Add Club</button>
 
                                         
                                     </div>

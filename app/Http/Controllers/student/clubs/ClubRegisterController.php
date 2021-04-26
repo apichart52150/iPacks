@@ -8,14 +8,14 @@ use Illuminate\Http\Request;
 use DB;
 use Auth;
 use App\UserAlert;
-use App\ClubRegisUser;
+use App\Model\Club\ClubRegister;
 use Session;
 
 class ClubRegisterController extends Controller
 {
     public function register_club(Request $request) {
 
-        $rooms = ClubRegisUser::register($request->room_id, Session::get('std_id'));
+        $rooms = ClubRegister::register($request->room_id, Session::get('std_id'));
 
         session()->flash('responses', $rooms);
 

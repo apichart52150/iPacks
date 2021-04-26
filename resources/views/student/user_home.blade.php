@@ -9,19 +9,19 @@
 
                     <li class="has-submenu">
                         <a href="#">
-                            <i class="mdi mdi-view-dashboard"></i>iSAC<div class="arrow-down"></div>
+                            <i class=" far fa-caret-square-down"></i>iSAC<div class="arrow-down"></div>
                         </a>
                         <ul class="submenu">
                             <li>
-                            <a href="{{ route('isac_writing_home') }}"><i class="mdi mdi-trophy-variant mr-1"></i>  Writing</a> 
+                                <a href="{{ route('isac_writing_home') }}"><i class="far fa-caret-square-down"></i>  Writing</a> 
                             <li>
-                                <a href="{{ route('browser-settings') }}"><i class="mdi mdi-trophy-variant mr-1"></i>  Speaking</a>
+                                <a href="{{ route('browser-settings') }}"><i class="far fa-caret-square-down"></i>  Speaking</a>
                             </li>
                             <li>
-                                    <a href="#"><i class="mdi mdi-trophy-variant mr-1"></i>  Reading</a>
+                                    <a href="#"><i class="far fa-caret-square-down"></i>  Reading</a>
                             </li>
                             <li>
-                                    <a href="#"><i class="mdi mdi-trophy-variant mr-1"></i>  Listening</a>
+                                    <a href="#"><i class="far fa-caret-square-down"></i>  Listening</a>
                             </li>
                         </ul>
                     </li>
@@ -29,25 +29,25 @@
 
                     <li class="has-submenu">
                         <a href="{{ url('mocktest/home') }}">
-                            <i class="mdi mdi-layers"></i>Mocktest<div class="arrow-down"></div>
+                            <i class="far fa-caret-square-down"></i>Mocktest<div class="arrow-down"></div>
                         </a>
                     </li>
 
                     <li class="has-submenu">
                         <a href="#">
-                            <i class="mdi mdi-layers"></i>Strategies Packs<div class="arrow-down"></div>
+                            <i class="far fa-caret-square-down"></i>Strategies Packs<div class="arrow-down"></div>
                         </a>
                     </li>
 
                     <li class="has-submenu">
                         <a href="#">
-                            <i class="mdi mdi-layers"></i>Topic Packs<div class="arrow-down"></div>
+                            <i class="far fa-caret-square-down"></i>Topic Packs<div class="arrow-down"></div>
                         </a>
                     </li>
 
                     <li class="has-submenu">
                         <a href="{{ url('clubs/condition') }}">
-                            <i class="mdi mdi-layers"></i>Bonus&Club<div class="arrow-down"></div>
+                            <i class="far fa-caret-square-down"></i>Bonus&Club<div class="arrow-down"></div>
                         </a>
                     </li>
 
@@ -207,7 +207,7 @@
 
     <div class="col-xl-6 col-md-6">
         <a href="{{ url('clubs/condition') }}">
-            <div class="card-box widget-icon ribbon-box bg-purple">
+            <div class="card-box widget-icon ribbon-box bg-primary">
                 <div class="ribbon-two ribbon-two-secondary avatar-title display-6 m-0 "><span>Premium</span></div>
                 <div class="avatar-lg float-left">
                     <i class="mdi mdi-account-group avatar-title display-6 m-0 " style="font-size: 5em;"></i>

@@ -8,9 +8,8 @@ use DateTime;
 use Carbon\Carbon;
 use App\CarbonImmutable;
 
-class ClubRegister extends Model
+class ClubRegister extends Model {
 
-{
     public static function getClubRoom() {
         
         $clubs = DB::table('club_room')
@@ -71,7 +70,7 @@ class ClubRegister extends Model
         return $my_clubs;
     }
 
-    public static function register($room_id, $std_profile) {
+    public static function register($room_id, $std_id) {
 
         /* 
             Club room status 
@@ -80,44 +79,49 @@ class ClubRegister extends Model
             2 = Cancel Class
             3 = Bonus S2
         */
+        $std_profile = DB::table('student')
+        ->select('student.*')
+        ->where('std_id', $std_id)
+        ->get();
+
         
         // Get Club Room
         $club_room = DB::table('club_room')
-                ->select('club_room.*','club_type.title_type as type','club_subtitle.title as title')
-                ->join('club_subtitle', 'club_subtitle.id', '=', 'club_room.subtitle_id') 
-                ->join('club_type', 'club_type.id', '=', 'club_subtitle.type_id') 
-                ->where('club_room.id', $room_id)
-                ->first();
-        
+        ->select('club_room.*','club_type.title_type as type','club_subtitle.title as title')
+        ->join('club_subtitle', 'club_subtitle.id', '=', 'club_room.subtitle_id') 
+        ->join('club_type', 'club_type.id', '=', 'club_subtitle.type_id') 
+        ->where('club_room.id', $room_id)
+        ->first();
+
         // Get All Student in club
         $students_in_club = DB::table('club_register') 
-                ->where('room_id', $room_id)
-                ->count();
+        ->where('room_id', $room_id)
+        ->count();
 
         // Get student exists in Club
         $exists_club = DB::table('club_register')
-                ->where('room_id', $room_id)
-                ->where('std_id', $std_profile->std_id)
-                ->count();
+        ->where('room_id', $room_id)
+        ->where('std_id', $std_id)
+        ->count();
 
         $dates = DB::table('club_register')
-            ->select('club_room.*')
-            ->join('club_room', 'club_room.id', '=', 'club_register.room_id')
-            ->where('club_room.status', '0')
-            ->where('club_register.std_id', $std_profile->std_id)
-            ->get();
+        ->select('club_room.*')
+        ->join('club_room', 'club_room.id', '=', 'club_register.room_id')
+        ->where('club_room.status', '0')
+        ->where('club_register.std_id', $std_id)
+        ->get();
 
         // Get student exists in Bonus S.1
         $exists_bonus_s1 = DB::table('club_register')
-                ->join('club_room', 'club_room.id', '=', 'club_register.room_id')
-                ->where('club_register.std_id', $std_profile->std_id)
-                ->where('club_room.status', '1')
-                ->count();
+        ->join('club_room', 'club_room.id', '=', 'club_register.room_id')
+        ->where('club_register.std_id', $std_id)
+        ->where('club_room.status', '1')
+        ->count();
            
         // Get student exists in Bonus S.2
         $exists_bonus_s2 = DB::table('club_register')
         ->join('club_room', 'club_room.id', '=', 'club_register.room_id')
-        ->where('club_register.std_id', $std_profile->std_id)
+        ->where('club_register.std_id', $std_id)
         ->where('club_room.status', '3')
         ->count();
 
@@ -133,7 +137,7 @@ class ClubRegister extends Model
                 $sameTime = true;
             } 
         }
-     
+       
         // Check student in clubs less than club amount
         if ($students_in_club < $club_room->amount) {
             
@@ -141,7 +145,8 @@ class ClubRegister extends Model
 
                 if ($sameTime) {
                     $responses = ['status' => 'failed', 'msg' => 'ขออภัยไม่สามารถลง Club ภายในช่วงเวลาเดียวกันได้'];
-                } else if (($std_profile->std_point > 0) && ($exists_club == 0)) {
+
+                }else if (($std_profile[0]->std_point > 0) && ($exists_club == 0)) {
 
                     DB::beginTransaction();
 
@@ -149,7 +154,7 @@ class ClubRegister extends Model
 
                         DB::table('club_register')
                         ->insert([
-                            'std_id' => $std_profile->std_id,
+                            'std_id' => $std_id,
                             'room_id' => $room_id
                         ]);
 
@@ -158,14 +163,14 @@ class ClubRegister extends Model
                         DB::table('log')
                         ->insert([
                             'room_id' => $room_id,
-                            'std_id' => $std_profile->std_id,
+                            'std_id' => $std_id,
                             'content' => $contentLog,
                             'tab' => 'Registered',
                             'score' => '-1 Point'
                         ]);
 
                         DB::table('student')
-                        ->where('std_id', $std_profile->std_id)
+                        ->where('std_id', $std_id)
                         ->decrement('std_point');
 
                         DB::commit();
@@ -183,7 +188,7 @@ class ClubRegister extends Model
      
             } else if($club_room->status == '1') {
 
-                if($std_profile->std_bonus > 0) {
+                if($std_profile[0]->std_bonus > 0) {
                     if ($current_endDate < $nextMonday) {
                         $isRegister = $exists_bonus_s1 < 1 ? true : false;
                     } else {
@@ -200,7 +205,7 @@ class ClubRegister extends Model
                     try {
                         DB::table('club_register')
                         ->insert([
-                            'std_id' => $std_profile->std_id,
+                            'std_id' => $std_id,
                             'room_id' => $room_id
                         ]);
 
@@ -209,19 +214,20 @@ class ClubRegister extends Model
                         DB::table('log')
                         ->insert([
                             'room_id' => $room_id,
-                            'std_id' => $std_profile->std_id,
+                            'std_id' => $std_id,
                             'content' => $contentLog,
                             'tab' => 'Registered',
                             'score' => '-1 Bonus'
                         ]);
 
                         DB::table('student')
-                        ->where('std_id', $std_profile->std_id)
+                        ->where('std_id', $std_id)
                         ->decrement('std_bonus');
 
                         DB::commit();
 
                         $responses = ['status' => 'success', 'msg' => 'Register Success.'];
+
                     } catch (\Exception $e) {
                         DB::rollback();
                     }
@@ -284,7 +290,9 @@ class ClubRegister extends Model
             }
             
         } else {
+
             $responses = ['status' => 'failed', 'msg' => 'This Club is Full.'];
+            
         }
 
         return $responses;

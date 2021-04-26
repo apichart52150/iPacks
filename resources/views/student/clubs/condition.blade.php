@@ -13,16 +13,17 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#">
+                        <a href="{{url('clubs/history')}}">
                             <i class="fas fa-history"></i>History lists
                         </a>
                     </li>
 
-                    <!-- <li class="has-submenu">
-                        <a href="{{route('faqs')}}">
-                            <i class="fas fa-question-circle"></i>FAQs
+                    <li class="has-submenu">
+                        <a href="{{url('clubs/status_clubs')}}">
+                            <i class="fas fa-question-circle"></i>Status Club
                         </a>
-                    </li> -->
+                    </li>
+
 
                 </ul>
                 <!-- End navigation menu -->

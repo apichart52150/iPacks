@@ -182,11 +182,11 @@
 				return view('student.clubs.faqs');
 			})->name('faqs');
 
-			Route::get('/condition', 'ConditionController@index');
-			Route::post('/condition', 'ConditionController@condition_submit')->name('condition.submit');
+			Route::get('condition', 'ConditionController@index');
+			Route::post('condition', 'ConditionController@condition_submit')->name('condition.submit');
 
-			Route::get('/history', 'HistoryController@index');
-			Route::get('/profile', 'ProfileController@index');
+			Route::get('history', 'HistoryController@index');
+			Route::get('status_clubs', 'HistoryController@status');
 
 			Route::post('register_club', 'ClubRegisterController@register_club')->name('register.submit');
 			Route::post('accept_cancel', 'ClubRegisterController@accept_cancel')->name('cancel.submit');

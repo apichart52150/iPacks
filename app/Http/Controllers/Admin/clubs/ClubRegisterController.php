@@ -155,23 +155,23 @@ class ClubRegisterController extends Controller {
 
 		if ($status == 'success_check_point') {
 
-			return redirect('admin/club_register/'.$request->room_id);
+			return redirect('clubs/club_register/'.$request->room_id);
 
 		}else if ($status == 'success_check_bonus') {
 
-			return redirect('admin/club_register/'.$request->room_id);
+			return redirect('clubs/club_register/'.$request->room_id);
 
 		}else if ($status == 'Attendance') {
 
-			return redirect('admin/club_register/'.$request->room_id);
+			return redirect('clubs/club_register/'.$request->room_id);
 
 		}else if ($status == 'success_cancel_point') {
 
-			return redirect('admin/club_register/'.$request->room_id);
+			return redirect('clubs/club_register/'.$request->room_id);
 
 		}else if ($status == 'success_cancel_bonus') {
 
-			return redirect('admin/club_register/'.$request->room_id);
+			return redirect('clubs/club_register/'.$request->room_id);
 
 		}else {
 
