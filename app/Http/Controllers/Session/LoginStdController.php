@@ -34,42 +34,28 @@ class LoginStdController extends Controller
         $validator = Validator::make($data, $rules);
 
         if($validator->passes()) {
-            $check_login = Login::check_login($request->all());
 
-            switch ($check_login['response']) {
-                case 'Login success':
-                    
-                    Session::put('std_id', $check_login['std_id']);
-                    Session::put('std_name', $check_login['std_name']);
-                    Session::put('std_nickname', $check_login['std_nickname']);
-                
-                    return response()->json($check_login['response']);
-                break;
+            $student = Login::where('std_username', $request->username)
+            ->where('std_password', md5($request->password))
+            ->first();
 
-                case 'user_end_date':
+            if($student) {
+                Auth::guard('student')->login($student);
+    
+                Log::create([
+                    'std_id' => Auth::guard('student')->user()->std_id,
+                    'browser' => $browser
+                ]);
 
-                    Session::put('res', $check_login['response']);
-                    Session::put('std_id', $check_login['std_id']);
-                    Session::put('std_name', $check_login['std_name']);
-                    Session::put('std_nickname', $check_login['std_nickname']);
-                    return response()->json($check_login['response']);
-
-                break;
-
-                case 'User not found':
-                    return response()->json("Incorrect Username or Password");
-                break;
-
-                default:
-                    echo "Error: LoginStdController"; die;
-                break;
+                Session::put('std_id', $check_login['std_id']);
+                Session::put('std_name', $check_login['std_name']);
+                Session::put('std_nickname', $check_login['std_nickname']);
+    
+                return redirect('/home');
+            } else {
+                return back()->with('status', 'Username or password do not match');
             }
-
-        } else {
-
-            return $validator->errors()->toArray();
-
-        }  
+        }
     }
 
     public function fn_logout() {
