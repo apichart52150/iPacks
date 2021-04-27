@@ -19,7 +19,7 @@
 <div class="row justify-content-center" id="app">
     <div class="col-md-6">
         <div class="card">
-            <div class="card-header bg-primary text-center">
+            <div class="card-header bg-success text-center">
                 <h3 class="text-white p-0 m-0">{{ $topics['title'] }}</h3>
             </div>
             <div class="card-body">
@@ -36,10 +36,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="d-flex justify-content-between">
-                    <p class="bg-info text-white px-2 py-1 rounded" id="showCount"><span id="minutes">02</span>:<span id="seconds">00</span></p>
+                    <p class="bg-success text-white px-2 py-1 rounded" id="showCount"><span id="minutes">02</span>:<span id="seconds">00</span></p>
                     
                     <div>
-                        <button id="recordBtn" class="btn btn-primary" disabled>Record</button>
+                        <button id="recordBtn" class="btn btn-success" disabled>Record</button>
                         <div id="icon" class="d-none">
                             <button class="btn btn-danger" type="button" disabled="">
                                 <span class="spinner-border spinner-border-sm mr-1" role="status" aria-hidden="true"></span>
@@ -89,7 +89,7 @@
             <div class="modal-body text-center">
                 <span class="text-danger m-auto" id="errPermission">Permission denied. Please allow your microphone</span>
 
-                <button class="btn btn-primary btn-sm mt-3" data-dismiss="modal">OK</button>
+                <button class="btn btn-success btn-sm mt-3" data-dismiss="modal">OK</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

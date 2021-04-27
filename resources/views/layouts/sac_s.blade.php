@@ -75,7 +75,6 @@
         @php 
             use App\Model\Speaking;
             $route = Route::current()->uri;
-            
         @endphp
 
         <!-- Navigation Bar-->
@@ -293,8 +292,6 @@
         <!-- Datatables init -->
         <script src="{{ asset('public/assets/js/pages/datatables.init.js') }}"></script>
 
-        @yield('javascript')
-
         <!-- App js -->
         <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
 
@@ -303,6 +300,8 @@
         
         <!-- init js -->
         <script src="{{ asset('public/assets/js/pages/dashboard-1.init.js') }}"></script>
+
+        @yield('javascript')
 
     </body>
 </html>
