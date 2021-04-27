@@ -17,7 +17,7 @@
 
             @if($club['room_state'] == 'Available') 
 
-                <button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#modalA{{ $club['room_id'] }}">
+                <button type="button" class="btn btn-success waves-effect waves-light mt-2" data-toggle="modal" data-target="#modalA{{ $club['room_id'] }}">
                     {!! $club['topic'] !!}
                 </button>
 
