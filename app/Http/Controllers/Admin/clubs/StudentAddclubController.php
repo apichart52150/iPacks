@@ -103,7 +103,7 @@ class StudentAddclubController extends Controller {
 					//$status ='Point ไม่พอสำหรับลง Club';
 					 session()->flash('message_register','Point ไม่พอสำหรับลง Club หรือมีชื่อใน Club อยู่เเล้ว');
                      session()->flash('status','Fail');
-                     return redirect()->to('clubs/studentaddclub/'.$student[0]->std_id);
+                     return redirect()->to('clubs/club_register/'.$student[0]->std_id);
 					 
 					}
 				}elseif($rooms->status == '1'){
@@ -135,7 +135,7 @@ class StudentAddclubController extends Controller {
 					 
 					 session()->flash('message_register','Bonus ไม่พอสำหรับลง Club หรือมีชื่อใน Club อยู่เเล้ว');
                      session()->flash('status','Fail');
-                     return redirect()->to('clubs/studentaddclub/'.$student[0]->std_id);
+                     return redirect()->to('clubs/club_register/'.$student[0]->std_id);
 					}
 				}elseif($rooms->status == '3'){
 					 
@@ -166,7 +166,7 @@ class StudentAddclubController extends Controller {
 					 
 					 session()->flash('message_register','Bonus ไม่พอสำหรับลง Club หรือมีชื่อใน Club อยู่เเล้ว');
                      session()->flash('status','Fail');
-                     return redirect()->to('clubs/studentaddclub/'.$student[0]->std_id);
+                     return redirect()->to('clubs/club_register/'.$student[0]->std_id);
 					}
 				}
 			}
@@ -175,7 +175,7 @@ class StudentAddclubController extends Controller {
 		 
 					 session()->flash('message_register','Club เต็ม');
                      session()->flash('status','Fail');
-                     return redirect()->to('clubs/studentaddclub/'.$student[0]->std_id);
+                     return redirect()->to('clubs/club_register/'.$student[0]->std_id);
 			}
 		  }
 		}
