@@ -84,17 +84,17 @@
 @section('content')
 <style>
 
-    .ribbon-box .ribbon-two-silver span {
+     .ribbon-two-silver span {
         background: #C0C0C0 !important;
     }
 
 
-    .ribbon-box .ribbon-two-platinum span {
+     .ribbon-two-platinum span {
         background: #81C1BD !important;
     }
 
 
-    .ribbon-box .ribbon-two-diamond span {
+     .ribbon-two-diamond span {
         background: #70d1f4  !important;
     }
 
@@ -103,7 +103,7 @@
     
     <div class="col-xl-3 col-md-6">
         <a href="#" class="wave-light">
-            <div class="card-box widget-icon ribbon-box bg-danger">
+            <div class="card-box widget-icon bg-danger">
                 <div class="avatar-lg float-left">
                     <i class="mdi mdi-volume-high avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
@@ -117,7 +117,7 @@
 
     <div class="col-xl-3 col-md-6">
         <a href="#">
-            <div class="card-box widget-icon ribbon-box bg-pink">
+            <div class="card-box widget-icon bg-pink">
                 <div class="avatar-lg float-left">
                 <i class="mdi mdi-eye avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
@@ -131,8 +131,8 @@
 
     <div class="col-xl-3 col-md-6">
         <a href="{{url('/isac_writing_home')}}">
-            <div class="card-box widget-icon ribbon-box bg-info">
-                <div class="ribbon-two ribbon-two-silver"><span>Silver</span></div>
+            <div class="card-box widget-icon bg-info">
+                <!-- <div class="ribbon-two ribbon-two-silver"><span>Silver</span></div> -->
                 <div class="avatar-lg float-left">
                     <i class="mdi mdi-lead-pencil  avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
@@ -146,8 +146,8 @@
 
     <div class="col-xl-3 col-md-6">
         <a href="{{url('/browser-settings')}}">
-            <div class="card-box widget-icon ribbon-box bg-success">
-                <div class="ribbon-two ribbon-two-platinum avatar-title display-6 m-0 "><span>Platinum</span></div>
+            <div class="card-box widget-icon bg-success">
+                <!-- <div class="ribbon-two ribbon-two-platinum avatar-title display-6 m-0 "><span>Platinum</span></div> -->
                 <div class="avatar-lg float-left">
                     <i class="mdi mdi-voice avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
@@ -165,7 +165,7 @@
 <div class="row">
     
     <div class="col-xl-6 col-md-6">
-        <div class="card-box widget-icon ribbon-box bg-primary">
+        <div class="card-box widget-icon bg-primary">
             <div class="avatar-lg float-left">
                 <i class="mdi mdi-view-compact avatar-title display-6 m-0 " style="font-size: 5em;"></i>
             </div>
@@ -177,8 +177,8 @@
 
     <div class="col-xl-6 col-md-6">
         <a href="{{ url('mocktest/home') }}">
-            <div class="card-box widget-icon ribbon-box bg-primary">
-                <div class="ribbon-two ribbon-two-diamond avatar-title display-6 m-0 "><span>Diamond</span></div>
+            <div class="card-box widget-icon bg-primary">
+                <!-- <div class="ribbon-two ribbon-two-diamond avatar-title display-6 m-0 "><span>Diamond</span></div> -->
                 <div class="avatar-lg float-left">
                     <i class=" mdi mdi-alphabetical avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
@@ -195,7 +195,7 @@
 <div class="row">
 
     <div class="col-xl-6 col-md-6">
-        <div class="card-box widget-icon ribbon-box bg-primary">
+        <div class="card-box widget-icon bg-primary">
             <div class="avatar-lg float-left">
                 <i class="mdi mdi-animation avatar-title display-6 m-0 " style="font-size: 5em;"></i>
             </div>
@@ -207,8 +207,8 @@
 
     <div class="col-xl-6 col-md-6">
         <a href="{{ url('clubs/condition') }}">
-            <div class="card-box widget-icon ribbon-box bg-primary">
-                <div class="ribbon-two ribbon-two-secondary avatar-title display-6 m-0 "><span>Premium</span></div>
+            <div class="card-box widget-icon bg-primary">
+                <!-- <div class="ribbon-two ribbon-two-secondary avatar-title display-6 m-0 "><span>Premium</span></div> -->
                 <div class="avatar-lg float-left">
                     <i class="mdi mdi-account-group avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>

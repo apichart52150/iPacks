@@ -96,6 +96,7 @@
                         <th class="min-width">iSAC_W</th>
                         <th class="min-width">iSAC_S</th>
                         <th class="min-width">Code</th>
+                        
                         <th class="min-width">Course</th>
                         <th class="min-width">Status</th>
                         <th class="min-width">Manage Club : </th>
