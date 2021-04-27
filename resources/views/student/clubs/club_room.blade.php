@@ -44,11 +44,11 @@
                 </div><!-- /.modal -->
 
             @elseif(in_array($club['room_state'], ['Cancel Class', 'Full']))
-                <button class="btn btn-danger waves-effect waves-light">
+                <button class="btn btn-danger waves-effect waves-light mt-2">
                     {!! $club['topic'] !!}
                 </button>
             @elseif($club['room_state'] == 'Open Soon')
-                <button type="button" class="btn btn-secondary waves-effect waves-light" data-toggle="modal" data-target="#modal{{ $club['room_id'] }}">
+                <button type="button" class="btn btn-secondary waves-effect waves-light mt-2" data-toggle="modal" data-target="#modal{{ $club['room_id'] }}">
                     {!! $club['topic'] !!}
                 </button>
 
