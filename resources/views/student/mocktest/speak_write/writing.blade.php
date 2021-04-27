@@ -20,7 +20,7 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card-box">
+				<div class="card-box border border-primary">
 					<div class="row">
 						<div class="col-6"><h4 class="header-title"><b>Speak Write : Writing</b></h4></div>
 						<div class="col-6 text-right">

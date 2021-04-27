@@ -143,25 +143,25 @@
 
                             <li class="has-submenu">
                                 <a href="{{ url('writing/pending') }}" class="text-light">
-                                    <i class="fas fa-folder-minus"></i>Pending 
+                                    <i class="fas fa-clock"></i>Pending 
                                 </a>
                             </li>
 
                             <li class="has-submenu">
                                 <a href="{{ url('writing/completed') }}" class="text-light">
-                                    <i class="mdi mdi-layers"></i>Completed 
+                                    <i class="fas fa-list-alt"></i>Completed 
                                 </a>
                             </li>
                             
                             @if(Auth::user()->level == 2)
                             <li class="has-submenu">
                                 <a href="{{ route('report_writing_teachers') }}" class="text-light">
-                                <i class="ti-light-bulb"></i> Report
+                                <i class="fas fa-lightbulb"></i> Report
                             	</a>
                             </li>
                             <li class="has-submenu">
                                 <a href="{{ route('report_writing_students') }}" class="text-light">
-                                	<i class="ti-light-bulb"></i> Report All
+                                	<i class="fas fa-lightbulb"></i> Report All
                                 </a>
                             </li>
                             @endif
@@ -225,6 +225,8 @@
         <script src="{{ asset('public/assets/js/datatables/buttons.html5.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/datatables/buttons.print.min.js') }}"></script>
 
+        
+
         <!-- Key Tables -->
         <script src="{{ asset('public/assets/js/datatables/dataTables.keyTable.min.js') }}"></script>
 
@@ -273,34 +275,34 @@
 
         <script>
             if($("#elm1").length > 0){
-                    tinymce.init({
-                        selector: "textarea#elm1",
-                        theme: "modern",
-                        height: 400,
-                        menubar: false,
-                        plugins: [
-                            "wordcount",
-                            "textcolor"
-                        ],
-                        browser_spellcheck: false,
-                        toolbar: "undo redo | bold strikethrough italic | forecolor backcolor",
-                        textcolor_cols: "6",
-                        textcolor_map: [
-                            "fe0000", "SP",
-                            "008001", "Prep",
-                            "993400", "S/V",
-                            "808080", "P/S",
-                            "ff6600", "T",
-                            "81007f", "WO",
-                            "ff00ff", "WW",
-                            "ffff01", "Rephrase",
-                            "00ff01", "S/PI",
-                            "01ffff", "VP",
-                            "ff99cb", "V",
-                            "3366ff", "A",
-                        ]
-                    });
-                }
+                tinymce.init({
+                    selector: "textarea#elm1",
+                    theme: "modern",
+                    height: 400,
+                    menubar: false,
+                    plugins: [
+                        "wordcount",
+                        "textcolor"
+                    ],
+                    browser_spellcheck: false,
+                    toolbar: "undo redo | bold strikethrough italic | forecolor backcolor",
+                    textcolor_cols: "6",
+                    textcolor_map: [
+                        "fe0000", "SP",
+                        "008001", "Prep",
+                        "993400", "S/V",
+                        "808080", "P/S",
+                        "ff6600", "T",
+                        "81007f", "WO",
+                        "ff00ff", "WW",
+                        "ffff01", "Rephrase",
+                        "00ff01", "S/PI",
+                        "01ffff", "VP",
+                        "ff99cb", "V",
+                        "3366ff", "A",
+                    ]
+                });
+            }
         </script>
 
         @yield('js')

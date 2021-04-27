@@ -98,11 +98,11 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown">
-                                <!-- item-->
-                                <a href="{{ url('user_profile') }}" class="dropdown-item notify-item">
+                                <a data-toggle="modal" data-target="#myModal" class="dropdown-item notify-item">
                                     <i class="mdi mdi-account-circle"></i>
-                                    <span>My Profile</span>
+                                    <span>My Account</span>
                                 </a>
+
 
                                 <div class="dropdown-divider"></div>
 
@@ -205,6 +205,68 @@
             </div>
         </footer>
         <!-- End Footer -->
+
+        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body p-4 text-center">
+
+                        <img src="{{ asset('public/assets/images/users/user_std.png') }}" class="rounded-circle avatar-xl img-thumbnail" alt="profile-image">
+
+                        <div class="border border-primary border-top-0 border-right-0 border-left-0 mb-1" style="border-width: 3px !important;">
+                            <h5 class="m-b-5 m-t-10 text-uppercase">{{ \App\Model\Profile::getProfile()->std_name }} ( {{\App\Model\Profile::getProfile()->std_nickname }} )</h5>
+                        </div>
+
+                        <div class="text-left mt-2 row">
+                            <div class="col-6">
+                                <p class="text-muted font-15"><strong>Full Name :</strong> <span class="m-l-15">{{\App\Model\Profile::getProfile()->std_name }}</span></p>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-muted font-15"><strong>Mobile :</strong><span class="m-l-15">{{\App\Model\Profile::getProfile()->std_mobile }}</span></p>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-muted font-15"><strong>Teacher :</strong> <span class="m-l-15">{{\App\Model\Profile::getProfile()->th_name }}</span></p>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-muted font-15"><strong>Course :</strong> <span class="m-l-15">{{\App\Model\Profile::getProfile()->coursename }}</span></p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="text-left m-t-20 row">
+                    
+                            <div class="col-6">
+                                <p class="text-muted font-16"><strong>Writing Point :</strong> <span class="badge badge-primary p-1">{{ \App\Model\PointsWriting::checkPoint() }} Point</span></p>
+                            </div>
+
+                            <div class="col-6">
+                                <p class="text-muted font-16"><strong>Speaking Point :</strong> <span class="badge badge-success p-1">{{ \App\Model\Points::checkPoint() }} Point</span></p>
+                            </div>
+                        </div>
+
+                        <div class="text-left m-t-20 row">
+                    
+                            <div class="col-6">
+                                <p class="text-muted font-16"><strong>Bonus & Club :</strong> <span class="badge badge-info p-1">{{ \App\Model\Points::bonusPoint() }} Point</span></p>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-muted font-16"><strong>Expire Date :</strong> <span class="badge badge-danger p-1">{{ date('d-m-Y', strtotime(\App\Model\Profile::getProfile()->lastdate)) }}</span></p>
+                            </div>
+                        </div>
+
+                        <hr>
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="{{url('clubs/status_clubs')}}" class="btn btn-bordered-primary waves-effect width-md waves-light">View Club</a>
+                            </div>
+                        </div>
+                           
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal -->
 
         <!-- ============================================================== -->
         <!-- End Page content -->

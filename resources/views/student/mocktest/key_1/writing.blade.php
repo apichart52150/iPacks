@@ -19,7 +19,7 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card-box">
+				<div class="card-box border border-primary">
 					<h4 class="header-title float-left"><b>WRITING</b></h4>
 					<h5 class="float-right mt-0"><span id="dplay"></span></h5>
 

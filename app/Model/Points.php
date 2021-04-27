@@ -40,6 +40,20 @@ class Points extends Model
 
     }
 
+    public static function bonusPoint() {
+
+        $info = Points::getInfo();
+
+        $current_point =  DB::table('student')
+        ->select('std_bonus')
+        ->where('std_id', Session::get('std_id'))
+        ->get()[0]->std_bonus;
+
+
+        return $current_point;
+
+    }
+
     public static function decreasePoint() {
         
         $info = Points::getInfo();

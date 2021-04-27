@@ -27,7 +27,7 @@
 		Route::get('user_profile', function() {
 			$profile = \App\Model\Profile::getProfile();
 			return view('student.user_profile', compact('profile'));
-		});
+		})->name('user_profile');
 		
 		// sac speaking
 		Route::prefix('')->namespace('student\isac\speakingController')->group(function () {
@@ -49,7 +49,6 @@
 
 		});
 		
-
 		// sac writing
 		Route::prefix('')->namespace('student\isac\writingController')->group(function () {
 
@@ -68,107 +67,131 @@
 			Route::post('store_sac_save', 'ViewController@store_sac_save')->name('store.sac-save');
 		});
 
-		// mocktest
-		Route::prefix('/mocktest')->namespace('student\mocktest')->group(function () {
-			Route::get('home','HomeController@index');
-		});
+		// ==================== Mocktest ====================== //
+			Route::prefix('mocktest')->namespace('student\mocktest')->group(function () {
+				Route::get('/home','HomeController@index');
+			});
 
+			Route::prefix('keyskills_1')->namespace('student\mocktest\key_1')->group(function () {
 
-		Route::prefix('keyskills_1')->namespace('student\mocktest\key_1')->group(function () {
-
-			Route::get('listening', 'ListeningController@index');
-			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
-		
-			Route::get('reading', 'ReadingController@index');
-			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
-		
-			Route::get('writing', 'WritingController@index');
-			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				Route::get('listening', 'ListeningController@index');
+				Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
 			
-		});
-
-		Route::prefix('keyskills_2')->namespace('student\mocktest\key_2')->group(function () {
-
-			Route::get('listening', 'ListeningController@index');
-			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
-		
-			Route::get('reading', 'ReadingController@index');
-			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
-		
-			Route::get('writing', 'WritingController@index');
-			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				Route::get('reading', 'ReadingController@index');
+				Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
 			
-		});
+				Route::get('writing', 'WritingController@index');
+				Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				
+			});
 
-		Route::prefix('found_1')->namespace('student\mocktest\found_1')->group(function () {
+			Route::prefix('keyskills_2')->namespace('student\mocktest\key_2')->group(function () {
 
-			Route::get('listening', 'ListeningController@index');
-			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
-		
-			Route::get('reading', 'ReadingController@index');
-			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
-		
-			Route::get('writing', 'WritingController@index');
-			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				Route::get('listening', 'ListeningController@index');
+				Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
 			
-		});
-
-		Route::prefix('found_ex')->namespace('student\mocktest\found_ex')->group(function () {
-
-			Route::get('listening', 'ListeningController@index');
-			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
-		
-			Route::get('reading', 'ReadingController@index');
-			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
-		
-			Route::get('writing', 'WritingController@index');
-			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				Route::get('reading', 'ReadingController@index');
+				Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
 			
-		});
+				Route::get('writing', 'WritingController@index');
+				Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				
+			});
 
-		Route::prefix('key_ex')->namespace('student\mocktest\key_ex')->group(function () {
+			Route::prefix('found_1')->namespace('student\mocktest\found_1')->group(function () {
 
-			Route::get('listening', 'ListeningController@index');
-			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
-		
-			Route::get('reading', 'ReadingController@index');
-			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
-		
-			Route::get('writing', 'WritingController@index');
-			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				Route::get('listening', 'ListeningController@index');
+				Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
 			
-		});
-
-		Route::prefix('speak_write')->namespace('student\mocktest\speak_write')->group(function () {
-
-			Route::get('listening', 'ListeningController@index');
-			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
-		
-			Route::get('reading', 'ReadingController@index');
-			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
-		
-			Route::get('writing', 'WritingController@index');
-			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				Route::get('reading', 'ReadingController@index');
+				Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
 			
-		});
+				Route::get('writing', 'WritingController@index');
+				Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				
+			});
 
+			Route::prefix('found_ex')->namespace('student\mocktest\found_ex')->group(function () {
 
-		Route::prefix('gateway')->namespace('student\mocktest\gateway')->group(function () {
-
-			Route::get('listening', 'ListeningController@index');
-			Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
-		
-			Route::get('reading', 'ReadingController@index');
-			Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
-		
-			Route::get('writing', 'WritingController@index');
-			Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				Route::get('listening', 'ListeningController@index');
+				Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
 			
-		});
+				Route::get('reading', 'ReadingController@index');
+				Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
+			
+				Route::get('writing', 'WritingController@index');
+				Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				
+			});
 
-	
-		Route::get('success', function () { return view('student.mocktest.success'); });
-		Route::get('successwriting', function () { return view('successwriting'); });
+			Route::prefix('key_ex')->namespace('student\mocktest\key_ex')->group(function () {
+
+				Route::get('listening', 'ListeningController@index');
+				Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
+			
+				Route::get('reading', 'ReadingController@index');
+				Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
+			
+				Route::get('writing', 'WritingController@index');
+				Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				
+			});
+
+			Route::prefix('speak_write')->namespace('student\mocktest\speak_write')->group(function () {
+
+				Route::get('listening', 'ListeningController@index');
+				Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
+			
+				Route::get('reading', 'ReadingController@index');
+				Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
+			
+				Route::get('writing', 'WritingController@index');
+				Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				
+			});
+
+
+			Route::prefix('gateway')->namespace('student\mocktest\gateway')->group(function () {
+
+				Route::get('listening', 'ListeningController@index');
+				Route::post('ans_listening', 'ListeningController@exam')->name('ans_lis');
+			
+				Route::get('reading', 'ReadingController@index');
+				Route::post('ans_reading', 'ReadingController@exam')->name('ans_reading');
+			
+				Route::get('writing', 'WritingController@index');
+				Route::post('ans_writing', 'WritingController@exam')->name('ans_writing');
+				
+			});
+		
+			Route::get('success', function() {
+				return view('student.mocktest.success');
+			})->name('success');
+
+		// ==================== End Mocktest ====================== //
+
+		Route::prefix('clubs')->namespace('student\clubs')->group(function () {
+
+			Route::get('home', 'HomeController@index');
+
+			Route::get('sac-tour', function() {
+				return view('student.clubs.sac-tour');
+			})->name('sac-tour');
+
+			Route::get('faqs', function() {
+				return view('student.clubs.faqs');
+			})->name('faqs');
+
+			Route::get('condition', 'ConditionController@index');
+			Route::post('condition', 'ConditionController@condition_submit')->name('condition.submit');
+
+			Route::get('history', 'HistoryController@index');
+			Route::get('status_clubs', 'HistoryController@status');
+
+			Route::post('register_club', 'ClubRegisterController@register_club')->name('register.submit');
+			Route::post('accept_cancel', 'ClubRegisterController@accept_cancel')->name('cancel.submit');
+
+		});
 	
 	});
 
@@ -179,6 +202,7 @@
 // ==================== Routes Admin ==================== //
 
 	Auth::routes();
+
 	Route::get('admin', function() {
 		if(Auth::check()) {
 			return redirect('admin_home');
@@ -186,6 +210,7 @@
 			return redirect('login');
 		}
 	});
+
 	Route::get('admin_home', 'Admin\HomeController@index');
 
 	Route::middleware(['auth'])->group(function () {
@@ -209,6 +234,7 @@
 			Route::post('delete', 'ManageController@delete')->name('delete');
 			
 		});
+
 		Route::prefix('speaking/report')->namespace('Admin\isac\speaking')->group(function () {
 
 			Route::any('teachers', 'ReportController@teachers')->name('report_teachers');
@@ -241,6 +267,7 @@
 			Route::get('all/{id}', 'ManageController@view')->name('all_writing');
 			Route::post('delete', 'ManageController@delete')->name('delete_writing');
 		});
+
 		Route::prefix('writing/report')->namespace('Admin\isac\writing')->group(function () {
 
 			Route::any('teachers', 'ReportController@teachers')->name('report_writing_teachers');
@@ -254,6 +281,64 @@
 			Route::get('restatus_writing/{id}', 'ReportController@reStatus')->name('restatus_writing');
 			Route::get('delete_writing/{id}', 'ReportController@delete_topic')->name('delete_writing.pending');
 		});
+
+		Route::prefix('mocktest')->namespace('Admin\mocktest')->group(function () {
+
+			Route::get('dashboard', 'DashboardController@index');
+			
+			Route::get('class_detail/{class_id}', 'ClassController@classdetail_by_id')->name('class_detail');
+			Route::post('update_set_exam','ClassController@update_set_exam')->name('update_set_exam');
+			Route::post('update_class_pass', 'ClassController@update_class_pass')->name('update_class_pass');
+			Route::get('print_classdetail/{class_id}', 'ClassController@print_classdetail')->name('print_classdetail');
+
+			Route::get('all_user', 'UserController@all_user')->name('all_user');
+
+			Route::get('student_profile/{std_id}', 'StudentController@std_profile_by_id')->name('student_profile');
+			Route::post('edit_score', 'StudentController@edit_score')->name('edit_score');
+
+			Route::get('del_ans/{del_ans?}/{std_id?}', 'StudentController@del_ans')->name('del_ans');
+			Route::get('del_ans_wri/{del_ans_wri?}/{std_id?}', 'StudentController@del_ans_wri')->name('del_ans_wri');
+			
+			Route::post('update_writing','StudentController@update_writing')->name('update_writing');
+			
+			Route::get('print_L/{std_id?}', 'StudentController@print_lis_part')->name('print_L');
+			Route::get('print_R/{std_id?}', 'StudentController@print_read_part')->name('print_R');
+			Route::get('print_W1/{std_id?}', 'StudentController@print_wri_part1')->name('print_W1');
+			Route::get('print_W2/{std_id?}', 'StudentController@print_wri_part2')->name('print_W2');
+
+			Route::get('print_G1/{std_id?}', 'StudentController@print_gateway_part1')->name('print_G1');
+			Route::get('print_G2/{std_id?}', 'StudentController@print_gateway_part2')->name('print_G2');
+			Route::get('print_G3/{std_id?}', 'StudentController@print_gateway_part3')->name('print_G3');
+		});
+
+		Route::prefix('clubs')->namespace('Admin\clubs')->group(function () {
+
+			Route::get('dashboard', 'DashboardController@index');
+			Route::post('addclub', 'DashboardController@addclub')->name('addclub');
+			Route::post('endclub', 'DashboardController@endclub')->name('endclub');
+			Route::post('clubdelete/{id}', 'DashboardController@clubdelete');
+			Route::post('clubupdate/{id}', 'DashboardController@clubupdate');
+
+			Route::get('student','StudentController@index')->name('student');
+			Route::post('addstudent', 'StudentController@addstudent')->name('addstudent');
+
+			Route::get('edit/{id?}','StudentController@edit');
+			Route::post('edit/studentupdate/{id?}', 'StudentController@studentupdate');
+
+			Route::post('studentdelete/{id?}', 'StudentController@studentdelete');
+
+			Route::post('add_clubstudent', 'StudentAddclubController@add_club');
+
+			Route::get('logs/{id?}','LogsController@index');
+
+			Route::get('club_register/{id?}', 'ClubRegisterController@index');
+			Route::post('club_check', 'ClubRegisterController@check_student');
+			Route::get('excel_club_register/{id?}', 'ClubRegisterController@excel_room');
+		});
+
+
+
+
 
 	});
 	

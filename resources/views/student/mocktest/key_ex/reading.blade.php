@@ -34,7 +34,7 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card-box noheight">
+				<div class="card-box noheight border border-primary">
 					<div class="row">
 						<div class="col-md-6">
 							<h4 class="header-title">Key Skills Extension : Reading</h4>

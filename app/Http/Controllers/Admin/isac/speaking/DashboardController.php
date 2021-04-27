@@ -23,11 +23,11 @@ class DashboardController extends Controller
         $speakings = AdminSpeaking::total_speaking()->toArray();
 
         $pending = DB::table('speaking')
-                ->select('*')
-                ->where('th_id', Auth::user()->id)
-                ->where('status', 'pending')
-                ->latest()
-                ->count();
+        ->select('*')
+        ->where('th_id', Auth::user()->id)
+        ->where('status', 'pending')
+        ->latest()
+        ->count();
     
         return view('admin.isac.speaking.dashboard', compact('speakings', 'pending'));
     }

@@ -28,7 +28,7 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card-box">
+				<div class="card-box border border-primary">
 					<h4 class="header-title">Speak Write : Listening</h4>
 					<h5><span id="dplay"></span></h5>
  

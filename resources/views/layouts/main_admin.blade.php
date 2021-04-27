@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,6 +9,19 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{ asset('public/assets/images/favicon.ico') }}">
 
+        <!-- third party css -->
+        <link href="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/libs/datatables/responsive.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/libs/datatables/buttons.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/libs/datatables/select.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+        <!-- third party css end -->
+
+        <!-- Custom box css -->
+        <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
+
+        <!-- Footable css -->
+        <link href="{{ asset('public/assets/libs/footable/footable.core.min.css') }}" rel="stylesheet" type="text/css" />
+
         <!-- App css -->
         <link href="{{ asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
@@ -17,7 +29,7 @@
 
     </head>
 
-    <body>
+    <body class="menubar-dark">
 
         <!-- Navigation Bar-->
         <header id="topnav">
@@ -56,14 +68,14 @@
 
                                 <div class="dropdown-divider"></div>
 
-                                <!-- item-->
-                                <a href="{{ route('user_logout') }}" class="dropdown-item notify-item" onclick="event.preventDefault();
+                                 <!-- item-->
+                                <a href="{{ route('logout') }}" class="dropdown-item notify-item" onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                                     <i class="mdi mdi-logout"></i>
                                     <span>Logout</span>
                                 </a>
 
-                                <form id="logout-form" action="{{ route('user_logout') }}" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
                                 </form>
 
@@ -88,65 +100,10 @@
             </div>
             <!-- end Topbar -->
 
-
-            <div class="topbar-menu">
-                <div class="container-fluid">
-                    <div id="navigation">
-                        <!-- Navigation Menu-->
-                        <ul class="navigation-menu">
-
-                            <li class="has-submenu">
-                                <a href="#">
-                                    <i class="mdi mdi-view-dashboard"></i>iSAC<div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index.html">Writing</a>
-                                    </li>
-                                    <li>
-                                        <a href="dashboard-2.html">Speaking</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="has-submenu">
-                                <a href="#">
-                                    <i class="mdi mdi-view-dashboard"></i>Mocktest<div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index.html">Writing</a>
-                                    </li>
-                                    <li>
-                                        <a href="dashboard-2.html">Speaking</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="has-submenu">
-                                <a href="#">
-                                    <i class="mdi mdi-view-dashboard"></i>Bonus<div class="arrow-down"></div></a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index.html">Writing</a>
-                                    </li>
-                                    <li>
-                                        <a href="dashboard-2.html">Speaking</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                        </ul>
-                        <!-- End navigation menu -->
-
-                        <div class="clearfix"></div>
-                    </div>
-                    <!-- end #navigation -->
-                </div>
-                <!-- end container -->
-            </div>
-            <!-- end navbar-custom -->
+            @yield('topbar-menu')
+            
         </header>
-        <!-- End Navigation Bar-->
+        <!-- Navigation Bar-->
 
         <!-- ============================================================== -->
         <!-- Start Page Content here -->
@@ -154,11 +111,11 @@
 
         <div class="wrapper">
         <div class="container-fluid">
-            <!-- start page title -->
+           
             @yield('page-title')
-            <!-- end page title --> 
+           
             @yield('content')
-            </div> <!-- end container -->
+          
         </div>
 
         <!-- end wrapper -->
@@ -184,6 +141,32 @@
 
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
+
+        <!-- third party js -->
+        <script src="{{ asset('public/assets/libs/datatables/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.responsive.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/responsive.bootstrap4.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.buttons.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/buttons.bootstrap4.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/buttons.html5.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/buttons.flash.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/buttons.print.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.keyTable.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.select.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/pdfmake/pdfmake.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/pdfmake/vfs_fonts.js') }}"></script>
+        <!-- third party js ends -->
+
+        <!-- Datatables init -->
+        <script src="{{ asset('public/assets/js/pages/datatables.init.js') }}"></script>
+
+        <!-- Footable js -->
+        <script src="{{ asset('public/assets/libs/footable/footable.all.min.js') }}"></script>
+
+        <!-- Init js -->
+        <script src="{{ asset('public/assets/js/pages/foo-tables.init.js') }}"></script>
+
 
     </body>
 </html>
