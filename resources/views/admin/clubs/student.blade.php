@@ -58,6 +58,18 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card-box">
+                @if(session()->has('del_ans'))
+				{!!session()->get('del_ans')!!}
+				@endif 
+
+				@if(session()->has('edit_ans'))
+				{!!session()->get('edit_ans')!!}
+				@endif 
+
+                @if(session()->has('add_ans'))
+				{!!session()->get('add_ans')!!}
+				@endif 
+
                 <h4 class="header-title">Student</h4>
                 <p class="sub-header">
                     Manage Student List
@@ -76,18 +88,18 @@
                 <table id="basic-datatable" class="table dt-responsive nowrap ">
                     <thead>
                     <tr>
-                        <th data-sort-initial="true" class="min-width">Id</th>
+                        <th class="min-width">Id</th>
                         <th data-sort-initial="true" data-toggle="true">Username</th>
-                        <th data-sort-initial="true">Tel</th>
-                        <th data-sort-initial="true" class="min-width">Point</th>
-                        <th data-sort-initial="true" class="min-width">Bonus</th>
-                        <th data-sort-initial="true" class="min-width">iSAC_W</th>
-                        <th data-sort-initial="true" class="min-width">iSAC_P</th>
-                        <th data-sort-initial="true" class="min-width">iSAC_S</th>
-                        <th data-sort-initial="true" class="min-width">Code</th>
-                        <th data-sort-initial="true" class="min-width">Course</th>
-                        <th data-sort-initial="true" class="min-width">Status</th>
-                        <th data-sort-initial="true" class="min-width">Manage Club : </th>
+                        <th class="min-width">Tel</th>
+                        <th class="min-width">Point</th>
+                        <th class="min-width">Bonus</th>
+                        <th class="min-width">iSAC_W</th>
+                        <th class="min-width">iSAC_S</th>
+                        <th class="min-width">Code</th>
+                        
+                        <th class="min-width">Course</th>
+                        <th class="min-width">Status</th>
+                        <th class="min-width">Manage Club : </th>
                     </tr>
                     </thead>
                     <tbody>
@@ -106,7 +118,6 @@
                                 <td>{{ $row->std_point }}</td>
                                 <td>{{ $row->std_bonus }}</td>
                                 <td>{{ $row->std_pointsac }}</td><!-- iSAC_W -->
-                                <td>{{$row->std_sacpaper}}</td><!-- SAC_P -->
                                 <td>{{ $row->std_pointspeaking }}</td><!-- SAC_S -->
                                 <td>{{ $row->nccode }}</td><!-- iSAC_S -->
                                 <td>{{ $row->coursename }}</td><!-- iSAC_W -->
@@ -269,12 +280,6 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">SAC Paper</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="std_sacpaper">
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <label class="col-sm-2 col-form-label">iSAC Writing</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" name="std_pointsac">
@@ -296,6 +301,4 @@
 			</div>
 		</div>
 	</div><!-- /.modal -->
-
-
 @endsection

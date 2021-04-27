@@ -36,8 +36,6 @@ class DashboardController extends Controller {
 			'club_type' => $club_type
 		];
 
-		// dd($data);
-
 		return view('admin.clubs.dashboard', compact('data'));
 	}
 
@@ -57,6 +55,8 @@ class DashboardController extends Controller {
 
 		Club_Room::create($data);
 
+		session()->flash('add_ans','<div class="alert alert-success" role="alert">
+        <i class="mdi mdi-check-all mr-2"></i><strong>Add New Club Success</strong></div>'); 
 		return redirect('clubs/dashboard');
 	}
 
@@ -65,6 +65,9 @@ class DashboardController extends Controller {
 		$club_room = Club_Room::findOrFail($id);
 
 		$club_room->update($request->all());
+
+		session()->flash('edit_ans','<div class="alert alert-success" role="alert">
+        <i class="mdi mdi-check-all mr-2"></i><strong>Delete Success</strong></div>'); 
 
 		return redirect('clubs/dashboard');
 	}
@@ -81,6 +84,8 @@ class DashboardController extends Controller {
 		->where('room_id','=',$id)
 		->delete();
 
+        session()->flash('del_ans','<div class="alert alert-danger" role="alert">
+        <i class="mdi mdi-check-all mr-2"></i><strong>Delete Success</strong></div>'); 
 		return redirect('clubs/dashboard');
 	}
 

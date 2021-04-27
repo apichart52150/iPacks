@@ -95,14 +95,20 @@ class StudentAddclubController extends Controller {
 							array('std_id' =>$student[0]->std_id, 'content' =>
 							 'Register '.$rooms->type.' '.$rooms->teacher.' '.date('j F, Y h:i:s',strtotime($rooms->start_date)).' Complete','tab' => 'Register','tab' => 'Register','score'=> '-1 Point','room_id' => $request->room_id)
 							);
+
+						session()->flash('add_ans','<div class="alert alert-success" role="alert">
+						<i class="mdi mdi-check-all mr-2"></i><strong>Add Student Success</strong></div>');
 						return redirect('clubs/club_register/'.$request->room_id);
 
 					}
 					else
 					{
 					//$status ='Point ไม่พอสำหรับลง Club';
-					 session()->flash('message_register','Point ไม่พอสำหรับลง Club หรือมีชื่อใน Club อยู่เเล้ว');
-                     session()->flash('status','Fail');
+					session()->flash('message_register','Point ไม่พอสำหรับลง Club หรือมีชื่อใน Club อยู่เเล้ว');
+                    session()->flash('status','Fail');
+
+					session()->flash('add_ans','<div class="alert alert-danger" role="alert">
+					<i class="mdi mdi-check-all mr-2"></i><strong>Point ไม่พอสำหรับลง Club หรือมีชื่อใน Club อยู่เเล้ว</strong></div>');
                      return redirect()->to('clubs/club_register/'.$student[0]->std_id);
 					 
 					}
@@ -127,6 +133,8 @@ class StudentAddclubController extends Controller {
 								,'tab' => 'Register'
 								,'room_id' => $request->room_id
 								,'score'=> '-1 Bonus'));
+						session()->flash('add_ans','<div class="alert alert-success" role="alert">
+						<i class="mdi mdi-check-all mr-2"></i><strong>Add Student Success</strong></div>');
 						return redirect('clubs/club_register/'.$request->room_id);
 					}
 					else 
@@ -135,6 +143,9 @@ class StudentAddclubController extends Controller {
 					 
 					 session()->flash('message_register','Bonus ไม่พอสำหรับลง Club หรือมีชื่อใน Club อยู่เเล้ว');
                      session()->flash('status','Fail');
+
+					 session()->flash('add_ans','<div class="alert alert-danger" role="alert">
+					 <i class="mdi mdi-check-all mr-2"></i><strong>Point ไม่พอสำหรับลง Club หรือมีชื่อใน Club อยู่เเล้ว</strong></div>');
                      return redirect()->to('clubs/club_register/'.$student[0]->std_id);
 					}
 				}elseif($rooms->status == '3'){
@@ -158,6 +169,9 @@ class StudentAddclubController extends Controller {
 								,'tab' => 'Register'
 								,'room_id' => $request->room_id
 								,'score'=> '-1 Bonus'));
+
+						session()->flash('add_ans','<div class="alert alert-success" role="alert">
+						<i class="mdi mdi-check-all mr-2"></i><strong>Add Student Success</strong></div>');
 						return redirect('clubs/club_register/'.$request->room_id);
 					}
 					else 
@@ -166,6 +180,8 @@ class StudentAddclubController extends Controller {
 					 
 					 session()->flash('message_register','Bonus ไม่พอสำหรับลง Club หรือมีชื่อใน Club อยู่เเล้ว');
                      session()->flash('status','Fail');
+					 session()->flash('add_ans','<div class="alert alert-danger" role="alert">
+					 <i class="mdi mdi-check-all mr-2"></i><strong>Point ไม่พอสำหรับลง Club หรือมีชื่อใน Club อยู่เเล้ว</strong></div>');
                      return redirect()->to('clubs/club_register/'.$student[0]->std_id);
 					}
 				}
@@ -173,8 +189,11 @@ class StudentAddclubController extends Controller {
 		}else{
 			//$status ='Club เต็ม';
 		 
-					 session()->flash('message_register','Club เต็ม');
-                     session()->flash('status','Fail');
+					session()->flash('message_register','Club เต็ม');
+                    session()->flash('status','Fail');
+
+					session()->flash('add_ans','<div class="alert alert-danger" role="alert">
+					<i class="mdi mdi-check-all mr-2"></i><strong>Club เต็ม</strong></div>');
                      return redirect()->to('clubs/club_register/'.$student[0]->std_id);
 			}
 		  }
