@@ -10,7 +10,6 @@ use App\Model\Login;
 use App\Model\Speaking;
 use DB;
 use Validator;
-use A
 
 class LoginStdController extends Controller
 {
@@ -39,20 +38,12 @@ class LoginStdController extends Controller
             $student = Login::where('std_username', $request->username)
             ->where('std_password', md5($request->password))
             ->first();
-
+            
             if($student) {
-                Auth::guard('student')->login($student);
-    
-                Log::create([
-                    'std_id' => Auth::guard('student')->user()->std_id,
-                    'browser' => $browser
-                ]);
+                $gard = Auth::guard('student')->login($student);
 
-                Session::put('std_id', $check_login['std_id']);
-                Session::put('std_name', $check_login['std_name']);
-                Session::put('std_nickname', $check_login['std_nickname']);
-    
-                return redirect('/home');
+                dd($gard);
+                return redirect('/user_home');
             } else {
                 return back()->with('status', 'Username or password do not match');
             }
