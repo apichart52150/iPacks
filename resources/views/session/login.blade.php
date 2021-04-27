@@ -17,27 +17,28 @@
                     		<div class="spinner-grow avatar-lg text-light m-2" role="status"></div>
                     	</div>
                     </div>
-					<form>
+					<form action="{{ route('fn_login') }}" method="POST" novalidate>
 						{{ csrf_field() }}
-						<div id="errorInput"></div>
-						<div class="form-group">
+						<div class="form-group mb-3">
 							<label for="username">Username</label>
-							<input type="text" class="form-control" name="username" placeholder="Enter your Username" autofocus="">
-							<div class="invalid-feedback"></div>
+							<input class="form-control {{ $errors->has('username') ? 'is-invalid' : '' }}" type="text" id="username" name="username" required="" placeholder="Enter your username" value="{{ old('username') }}">
+							<span class="invalid-feedback">
+								{{ $errors->first('username') }}
+							</span>
 						</div>
 
-						<div class="form-group">
+						<div class="form-group mb-3">
 							<label for="password">Password</label>
-							<input type="password" class="form-control" name="password" placeholder="Enter your password">
-							<div class="invalid-feedback"></div>
+							<input class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}" type="password" name="password" required="" id="password" placeholder="Enter your password">
+							<span class="invalid-feedback">
+								{{ $errors->first('password') }}
+							</span>
 						</div>
 
-						<!-- <p class="text-left mt-3">
-							New Cambridge may use the audio from you Part 2 Speaking Practice for teaching or promotional purposes. In all instances, the identity of the speaker is never revealed. By logging in to this website, you understand and agree to these terms.
-						</p> -->
-						<div class="form-group mt-3 text-center">
-							<button id="login" class="btn btn-bordered-primary btn-block">Log In</button>
+						<div class="form-group mb-0 text-center">
+							<button class="btn btn-primary btn-block" type="submit"> Log In </button>
 						</div>
+
 					</form>
 				</div>
 			</div>
