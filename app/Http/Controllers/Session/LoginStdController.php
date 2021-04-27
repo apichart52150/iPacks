@@ -10,6 +10,7 @@ use App\Model\Login;
 use App\Model\Speaking;
 use DB;
 use Validator;
+use A
 
 class LoginStdController extends Controller
 {
