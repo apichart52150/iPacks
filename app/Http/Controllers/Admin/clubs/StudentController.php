@@ -70,7 +70,7 @@ class StudentController extends Controller {
        if($row_student == 0){
 
         DB::table('student')->insert(
-           ['std_username' => $request->std_username, 'std_password' => md5($request->std_password), 'std_name' => $request->std_name, 'std_nickname' => $request->std_nickname, 'std_point' => $request->std_point, 'std_bonus' => $request->std_bonus, 'std_mobile' => $request->std_mobile , 'std_pointsac' => $request->std_pointsac, 'std_sacpaper' => $request->std_sacpaper, 'std_pointspeaking' => $request->std_pointspeaking]
+           ['std_username' => $request->std_username, 'std_password' => md5($request->std_password), 'std_name' => $request->std_name, 'std_nickname' => $request->std_nickname, 'std_point' => $request->std_point, 'std_bonus' => $request->std_bonus, 'std_mobile' => $request->std_mobile , 'std_pointsac' => $request->std_pointsac,'std_pointspeaking' => $request->std_pointspeaking]
        );
 
         $data = DB::table('student')
@@ -86,6 +86,9 @@ class StudentController extends Controller {
         return redirect('clubs/dashboard');
     }else{
         $status = 'er-01';
+        
+        session()->flash('add_ans','<div class="alert alert-success" role="alert">
+        <i class="mdi mdi-check-all mr-2"></i><strong>Add Student Success</strong></div>'); 
         return redirect('clubs/student',compact('status'));
     }
 
@@ -129,12 +132,14 @@ class StudentController extends Controller {
            'std_bonus' => $request->std_bonus,
            'crm_std_id' => $request->crm_std_id,
            'std_pointsac' => $request->std_pointsac,
-           'std_sacpaper' => $request->std_sacpaper,
            'std_pointspeaking' => $request->std_pointspeaking]);
 
         DB::table('class_student')
         ->where('std_id', $std_id)
         ->update(['nccode' => $request->course ]);
+
+        session()->flash('edit_ans','<div class="alert alert-success" role="alert">
+        <i class="mdi mdi-check-all mr-2"></i><strong>Update Success</strong></div>'); 
 
         return redirect('clubs/student');
     }
@@ -148,39 +153,9 @@ class StudentController extends Controller {
         DB::table('student')->where('std_id', '=',$std_id)->delete();
         });
 
+        session()->flash('del_ans','<div class="alert alert-danger" role="alert">
+        <i class="mdi mdi-check-all mr-2"></i><strong>Delete Success</strong></div>'); 
+
 		return redirect('clubs/student');
 	}
-
-    public function run_crm_std(){
-
-        $std_club = DB::table('student')
-        ->select('crm_std_id','std_mobile','std_id')
-        ->where('crm_std_id','=',null)
-        ->orderBy('std_id','DESC')
-        ->limit('500')
-        ->get();
-        $count_success = 0;
-        $count_fail =0;
-    
-        foreach ($std_club as $value) {
-    
-            $crm_std_id = DB::connection('mysql2')->select('SELECT student_id FROM `student` where mobile_number = "'.$value->std_mobile.'" ');
-    
-            if(@$crm_std_id[0]->student_id != '' || @$crm_std_id[0]->student_id != null){
-                $run_crm_std = DB::table('student')
-                ->where('std_id','=',$value->std_id)
-                ->update(['crm_std_id'=>$crm_std_id[0]->student_id]);
-                $count_success++;
-    
-            }else{
-                $count_fail++;
-    
-            }
-    
-        }
-    
-        Session::flash('message','Success :'.$count_success. ' Fail :'.$count_fail);
-    
-        return redirect('clubs/student');
-    }
 }

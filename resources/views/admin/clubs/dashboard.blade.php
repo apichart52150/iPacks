@@ -58,6 +58,15 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="card-box">
+
+				@if(session()->has('del_ans'))
+				{!!session()->get('del_ans')!!}
+				@endif 
+
+				@if(session()->has('edit_ans'))
+				{!!session()->get('edit_ans')!!}
+				@endif 
+
 				<h4 class="header-title">Club Room</h4>
 				<p class="sub-header">
 					Add or remove Club.
@@ -254,7 +263,7 @@
 															</div>
 															<div class="modal-footer">
 																<button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
-																<button type="submit" class="btn btn-info waves-effect waves-light">Add</button>
+																<button type="submit" class="btn btn-info waves-effect waves-light">Edit</button>
 															</div>
 														</form>
 													</div>

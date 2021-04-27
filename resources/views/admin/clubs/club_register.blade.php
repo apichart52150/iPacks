@@ -66,6 +66,15 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="card-box">
+
+                @if(session()->has('add_ans'))
+				{!!session()->get('add_ans')!!}
+				@endif 
+
+                @if(session()->has('del_ans'))
+				{!!session()->get('del_ans')!!}
+				@endif 
+
 				<h4 class="header-title">{{ $club_register[0]->title_type.' '.$club_register[0]->club_subtitle.' 
             : '.$club_register[0]->start_date.' ( '.$club_register[0]->teacher.' )' }}</h4>
 				<p class="sub-header">
