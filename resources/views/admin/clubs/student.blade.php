@@ -109,41 +109,39 @@
                     @endphp
 
                     @foreach($student as $key => $row)
+                        <tr>
+                            <td>{{$row->std_id}}</td>
+                            <td><a href="{{ url('clubs/logs/'.$row->std_id) }}">{{$row->std_username}}</a></td>
+                            <td>{{ $row->std_mobile }}</td>
+                            <td>{{ $row->std_point }}</td>
+                            <td>{{ $row->std_bonus }}</td>
+                            <td>{{ $row->std_pointsac }}</td><!-- iSAC_W -->
+                            <td>{{ $row->std_pointspeaking }}</td><!-- SAC_S -->
+                            <td>{{ $row->nccode }}</td><!-- iSAC_S -->
+                            <td>{{ $row->coursename }}</td><!-- iSAC_W -->
 
-                        @if (!empty($row->crm_std_id))
-                            <tr>
-                                <td>{{$row->crm_std_id}}</td>
-                                <td><a href="{{ url('clubs/logs/'.$row->std_id) }}">{{$row->std_username}}</a></td>
-                                <td>{{ $row->std_mobile }}</td>
-                                <td>{{ $row->std_point }}</td>
-                                <td>{{ $row->std_bonus }}</td>
-                                <td>{{ $row->std_pointsac }}</td><!-- iSAC_W -->
-                                <td>{{ $row->std_pointspeaking }}</td><!-- SAC_S -->
-                                <td>{{ $row->nccode }}</td><!-- iSAC_S -->
-                                <td>{{ $row->coursename }}</td><!-- iSAC_W -->
+                            <?php $lastdate=$row->lastdate.'23:59:59';?>
+                            @if( strtotime($lastdate) >= strtotime(Carbon\Carbon::now()) )
+                                <td><span class="badge label-table badge-success p-1">ใช้งาน</span></td>
+                            @else
+                                <td><span class="badge label-table badge-danger p-1">หมดอายุ</span></td>
+                            @endif
+                            
+                            <td>
+                                <div class="d-flex flex-row">
+                                    <a href="{{url('clubs/edit/'.$row->std_id)}}" class="btn btn-info btn-xs mr-1">Edit</a>
 
-                                <?php $lastdate=$row->lastdate.'23:59:59';?>
-                                @if( strtotime($lastdate) >= strtotime(Carbon\Carbon::now()) )
-                                    <td><span class="badge label-table badge-success p-1">ใช้งาน</span></td>
-                                @else
-                                    <td><span class="badge label-table badge-danger p-1">หมดอายุ</span></td>
-                                @endif
-                                
-                                <td>
-                                    <div class="d-flex flex-row">
-                                        <a href="{{url('clubs/edit/'.$row->std_id)}}" class="btn btn-info btn-xs mr-1">Edit</a>
+                                    <form method="POST" action="studentdelete/{{ $row->std_id }}" method="POST" >
+                                            <button onclick="return confirm('ต้องการลบข้อมูลนักเรียน ?!')" type="submit" class="btn btn-danger btn-xs mr-1">Delete</button>
+                                    </form>
 
-                                        <form method="POST" action="studentdelete/{{ $row->std_id }}" method="POST" >
-                                                <button onclick="return confirm('ต้องการลบข้อมูลนักเรียน ?!')" type="submit" class="btn btn-danger btn-xs mr-1">Delete</button>
-                                        </form>
+                                    <button data-toggle="modal" data-target="#add-club{{$row->std_id}}" class="btn btn-success btn-xs mr-1"> Add Club</button>
 
-                                        <button data-toggle="modal" data-target="#add-club{{$row->std_id}}" class="btn btn-success btn-xs mr-1"> Add Club</button>
-
-                                        
-                                    </div>
-                                </td>
-                            </tr>
-                        @endif
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                     
                         <div id="add-club{{$row->std_id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                             <div class="modal-dialog">
                                 <div class="modal-content">
