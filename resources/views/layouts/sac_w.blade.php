@@ -290,6 +290,8 @@
         <!-- End Page content -->
         <!-- ============================================================== -->
 
+        
+
         <!-- jQuery  -->
         <script src="{{ asset('public/assets/js/jquery.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/popper.min.js') }}"></script>
@@ -308,7 +310,7 @@
         <script src="{{ asset('public/assets/js/pages/gallery.init.js') }}"></script>
                
 
-        @yield('javascript')
+       
 
         <!-- init js -->
         <script src="{{ asset('public/assets/js/pages/dashboard-1.init.js') }}"></script>
@@ -358,7 +360,7 @@
             })
         </script>
 
-        
+        @yield('javascript')
 
         @yield('js')
     </body>

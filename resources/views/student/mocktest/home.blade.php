@@ -57,7 +57,7 @@
             </div>
             <div class="text-right p-1">
                 <h3 class="text-primary mt-1"><span class="counter">LISTENING</span></h3>
-                @if ($data['checklis'] >= 1)
+                @if($data['checklis'] >= 1)
                     <button type="button" class="btn btn-secondary waves-effect disabled">Start</button>
                 @else
                     <button class="btn btn-primary" data-toggle="modal" data-target="#listening">Start</button>
@@ -162,19 +162,19 @@
             </div>
             <div class="modal-footer">
                 @if(($data['set_exam']) == 1)
-                    <a href="{{ url('keyskills_1/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('keyskills_1/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @elseif(($data['set_exam']) == 2)
-                    <a href="{{ url('keyskills_2/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('keyskills_2/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @elseif(($data['set_exam']) == 3)
-                    <a href="{{ url('found_1/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('found_1/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @elseif(($data['set_exam']) == 4)
-                    <a href="{{ url('found_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('found_ex/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @elseif(($data['set_exam']) == 5)
-                    <a href="{{ url('key_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('key_ex/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @elseif(($data['set_exam']) == 6)
-                    <a href="{{ url('speak_write/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('speak_write/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @elseif(($data['set_exam']) == 7)
-                    <a href="{{ url('gateway/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('gateway/reading') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @endif
             </div>
         </div><!-- /.modal-content -->
@@ -203,19 +203,19 @@
             </div>
             <div class="modal-footer">
                 @if(($data['set_exam']) == 1)
-                    <a href="{{ url('keyskills_1/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('keyskills_1/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @elseif(($data['set_exam']) == 2)
-                    <a href="{{ url('keyskills_2/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('keyskills_2/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @elseif(($data['set_exam']) == 3)
-                    <a href="{{ url('found_1/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('found_1/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @elseif(($data['set_exam']) == 4)
-                    <a href="{{ url('found_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('found_ex/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @elseif(($data['set_exam']) == 5)
-                    <a href="{{ url('key_ex/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('key_ex/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @elseif(($data['set_exam']) == 6)
-                    <a href="{{ url('speak_write/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('speak_write/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @elseif(($data['set_exam']) == 7)
-                    <a href="{{ url('gateway/listening') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
+                    <a href="{{ url('gateway/writing') }}" class="btn btn-primary text-white waves-effect waves-light">Start Exam</a>
                 @endif
             </div>
         </div><!-- /.modal-content -->

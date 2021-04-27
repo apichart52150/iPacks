@@ -29,7 +29,7 @@ function startRecording() {
 		input = audioContext.createMediaStreamSource(stream);
         
 		recorder = new WebAudioRecorder(input, {
-			workerDir: "/isac_speaking/public/js/",
+			workerDir: "/ipack/public/js/",
 			encoding: fileType,
 			numChannels: 2,
 			onEncoderLoading: function(recorder, encoding) {
@@ -105,7 +105,7 @@ function createDownloadLink(blob,encoding) {
     loadBtn.addEventListener('click', () => {
         $.ajax({
             type: "POST",
-            url: "/isac_speaking/saveSound",
+            url: "/ipack/saveSound",
             data: fd,
             processData: false,
             contentType: false,

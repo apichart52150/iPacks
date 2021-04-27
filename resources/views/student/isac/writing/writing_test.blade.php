@@ -19,7 +19,7 @@
 		<div class="page-title-box">
 			<div class="page-title-right">
 				<ol class="breadcrumb m-0">
-					<li class="breadcrumb-item"><i class="mdi mdi-keyboard-return"></i> <a href="{{ url('isac_writinh_home') }}">Back</a></li>
+					<li class="breadcrumb-item"><i class="mdi mdi-keyboard-return"></i> <a href="{{ url('isac_writing_home') }}">Back</a></li>
 					<!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
 					<li class="breadcrumb-item active">{{$data['header_test']}}</li>
 				</ol>
@@ -100,7 +100,7 @@
                                     <a href="{{ url('/isac_writing_home') }}" class="btn btn-danger">CANCEL</a>
 
                                 @else
-                                <button id="submit" class="btn btn-success">SUBMIT</button>
+                                <button id="submit" class="btn btn-info">SUBMIT</button>
                                 <a href="{{ url('/isac_writing_home') }}" class="btn btn-danger">CANCEL</a>
                                 @endif
                             </div>

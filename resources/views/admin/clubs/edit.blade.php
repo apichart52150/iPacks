@@ -90,9 +90,9 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="crm_std_id">ID</label>
+                                <label class="col-sm-2 col-form-label" for="std_id">ID</label>
                                 <div class="col-sm-10">
-                                    <input type="text" id="crm_std_id" name="crm_std_id" class="form-control" value="{{$student->crm_std_id}}">
+                                    <input type="text" id="std_id" name="std_id" class="form-control" value="{{$student->std_id}}">
                                 </div>
                             </div>
                             <div class="form-group row">

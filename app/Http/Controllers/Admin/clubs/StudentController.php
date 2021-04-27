@@ -130,7 +130,7 @@ class StudentController extends Controller {
            'std_nickname' => $request->std_nickname,'std_email' => $request->std_email
            ,'std_point'=> $request->std_point,
            'std_bonus' => $request->std_bonus,
-           'crm_std_id' => $request->crm_std_id,
+           'std_id' => $request->std_id,
            'std_pointsac' => $request->std_pointsac,
            'std_pointspeaking' => $request->std_pointspeaking]);
 
