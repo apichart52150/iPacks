@@ -3,7 +3,7 @@
 
 // ==================== Routes User ====================== //
 	Route::get('/', function() {
-		if(session('std_id')) {
+		if(Auth::guard('student')->check()) {
 			return redirect('user_home');
 		}else {
 			return redirect('user_login');
@@ -14,15 +14,13 @@
 	Route::post('fn_login', 'Session\LoginStdController@fn_login')->name('fn_login');
 	Route::get('user_logout', 'Session\LoginStdController@fn_logout')->name('user_logout');
 
-	Route::middleware(['user'])->group(function () {
+	Route::middleware(['auth:student'])->group(function () {
 
 		Route::get('browser-settings', function() {
 			return view('student.isac.speaking.browser_settings');
 		})->name('browser-settings');
 
-		Route::get('user_home', function() {
-			return view('student.user_home');
-		})->name('user_home');
+		Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
 		Route::get('user_profile', function() {
 			$profile = \App\Model\Profile::getProfile();
@@ -202,7 +200,6 @@
 // ==================== Routes Admin ==================== //
 
 	Auth::routes();
-
 	Route::get('admin', function() {
 		if(Auth::check()) {
 			return redirect('admin_home');
@@ -213,7 +210,7 @@
 
 	Route::get('admin_home', 'Admin\HomeController@index');
 
-	Route::middleware(['auth'])->group(function () {
+	Route::middleware(['auth:web'])->group(function () {
 
 		//Speaking
 		Route::prefix('speaking')->namespace('Admin\isac\speaking')->group(function () {

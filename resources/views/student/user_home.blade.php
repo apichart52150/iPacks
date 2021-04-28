@@ -116,7 +116,7 @@
     </div>
 
     <div class="col-xl-3 col-md-6">
-        <a href="https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/ {{ session('std_name') }}">
+        <a href="#">
             <div class="card-box widget-icon bg-pink">
                 <div class="avatar-lg float-left">
                 <i class="mdi mdi-eye avatar-title display-6 m-0 " style="font-size: 5em;"></i>

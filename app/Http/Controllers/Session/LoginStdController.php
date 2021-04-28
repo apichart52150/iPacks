@@ -3,13 +3,12 @@
 namespace App\Http\Controllers\Session;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Http\Request;
-use Session;
-use App\Model\Login;
-use App\Model\Speaking;
-use DB;
+use Auth;
 use Validator;
+use App\Model\Login;
+use Illuminate\Http\Request;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginStdController extends Controller
 {
@@ -31,29 +30,37 @@ class LoginStdController extends Controller
         $data = $request->all();
         $rules = ['username' => 'required', 'password' => 'required'];
 
-        $validator = Validator::make($data, $rules);
+        $validator = Validator::make($request->all(), [
+            'username' => 'required',
+            'password' => 'required'
+        ]);
 
-        if($validator->passes()) {
+        if($validator->fails()) {
+            return redirect('user_login')
+            ->withErrors($validator)
+            ->withInput();
+        }
 
-            $student = Login::where('std_username', $request->username)
-            ->where('std_password', md5($request->password))
-            ->first();
-            
-            if($student) {
-                $gard = Auth::guard('student')->login($student);
+        $student = Login::where('std_username', $request->username)
+        ->where('std_password', md5($request->password))
+        ->first();
 
-                dd($gard);
-                return redirect('/user_home');
-            } else {
-                return back()->with('status', 'Username or password do not match');
-            }
+        if($student) {
+
+            $gard = Auth::guard('student')->login($student);
+
+            // dd($gard);
+
+            return redirect('/user_home');
+        } else {
+            return back()->with('status', 'Username or password do not match');
         }
     }
 
     public function fn_logout() {
 
-        Session::flush();
-
+        Auth::logout();
+        $request->session()->flush();
         return redirect()->route('user_login');
 
     }
