@@ -4,7 +4,6 @@ namespace App\Model\Club;
 use Illuminate\Database\Eloquent\Model;
 use Auth;
 use DB;
-use Session;
 
 class History extends Model
 {
@@ -20,7 +19,7 @@ class History extends Model
                 WHEN log.tab IN ("Register", "Registered") THEN "Registration" 
                 WHEN log.tab = "Cancel" THEN "Cancellation"
                 ELSE log.tab END) AS tab_status'))
-            ->where('log.std_id', Session::get('std_id'))
+            ->where('log.std_id', auth('student')->user()->std_id)
             ->whereNotIn('log.tab', $except_tab)
             ->get();
         

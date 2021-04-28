@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use DB;
-use Session;
+use Auth;
 use App\Model\Writing;
 use App\Model\PointsWriting;
 
@@ -34,9 +34,9 @@ class WritingController extends Controller
          // N = Sent
         // Y = Success
         // W | TH_S = Pending
-        // ST_S = Work in progress
+        // ST_S = Work in progres
 
-        if(PointsWriting::checkPoint() < 1) {
+        if(auth('student')->user()->std_pointsac < 1) {
             session()->flash('message', 'ขออภัยคุณมี Point ไม่เพียงพอสำหรับการใช้งาน');
             return redirect('user_home');
         }
@@ -56,7 +56,7 @@ class WritingController extends Controller
                     ->insert(
                         [
                             'code_test' => $request->input('code_test'),
-                            'std_id' => Session::get('std_id'),
+                            'std_id' => auth('student')->user()->std_id,
                             'test_type' => $request->input('test_type'),
                             'header_test' => $request->input('header_test'),
                             'text' => $request->input('text_result'),
@@ -78,7 +78,7 @@ class WritingController extends Controller
 
                     DB::table('log')
                         ->insert([
-                            'std_id' => Session::get('std_id'),
+                            'std_id' => auth('student')->user()->std_id,
                             'content' => 'Send '.$request->input('test_type').' '.$request->input('header_test'),
                             'tab'=>'SAC Online',
                             'score'=>'-1 Point',
@@ -106,7 +106,7 @@ class WritingController extends Controller
                     ->insert(
                         [
                             'code_test' => $request->input('code_test'),
-                            'std_id' => Session::get('std_id'),
+                            'std_id' => auth('student')->user()->std_id,
                             'test_type' => $request->input('test_type'),
                             'header_test' => $request->input('header_test'),
                             'text' => $request->input('text_result'),
@@ -121,7 +121,7 @@ class WritingController extends Controller
                 if($result) {
                     DB::table('log')
                         ->insert([
-                            'std_id' => Session::get('std_id'),
+                            'std_id' => auth('student')->user()->std_id,
                             'content' => 'Save '.$request->input('test_type').' '.$request->input('header_test'),
                             'tab'=>'SAC Online'
                         ]);
@@ -137,7 +137,6 @@ class WritingController extends Controller
             }
 
         }
-
         return 'Something went wrong! Please contact to customer service.';
     }
 }

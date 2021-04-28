@@ -86,13 +86,13 @@
 
                     <ul class="list-unstyled topnav-menu float-right mb-0">
                         <li class="dropdown notification-list mt-3">
-                            <span class="badge badge-success p-1 font-13">Speaking point {{ \App\Model\Points::checkPoint() }} points</span>
+                            <span class="badge badge-success p-1 font-13">Speaking point {{ auth('student')->user()->std_pointspeaking }} points</span>
                         </li>
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <img src="{{ asset('public/assets/images/users/user_std.png') }}" alt="user-image" class="rounded-circle">
                                 <span class="pro-user-name ml-1 text-secondary">
-                                    {{ session('std_name') }} <i class="mdi mdi-chevron-down"></i> 
+                                    {{ Auth::user()->std_name }} <i class="mdi mdi-chevron-down"></i> 
                                 </span>
                             </a>
 
@@ -213,21 +213,18 @@
                         <img src="{{ asset('public/assets/images/users/user_std.png') }}" class="rounded-circle avatar-xl img-thumbnail" alt="profile-image">
 
                         <div class="border border-primary border-top-0 border-right-0 border-left-0 mb-1" style="border-width: 3px !important;">
-                            <h5 class="m-b-5 m-t-10 text-uppercase">{{ \App\Model\Profile::getProfile()->std_name }} ( {{\App\Model\Profile::getProfile()->std_nickname }} )</h5>
+                            <h5 class="m-b-5 m-t-10 text-uppercase">{{Auth::user()->std_name}}</h5>
                         </div>
 
                         <div class="text-left mt-2 row">
-                            <div class="col-6">
-                                <p class="text-muted font-15"><strong>Full Name :</strong> <span class="m-l-15">{{\App\Model\Profile::getProfile()->std_name }}</span></p>
+                            <div class="col-md-6">
+                                <p class="text-muted font-15"><strong>Full Name :</strong> <span class="m-l-15">{{Auth::user()->std_username}}</span></p>
                             </div>
-                            <div class="col-6">
-                                <p class="text-muted font-15"><strong>Mobile :</strong><span class="m-l-15">{{\App\Model\Profile::getProfile()->std_mobile }}</span></p>
+                            <div class="col-md-6">
+                                <p class="text-muted font-15"><strong>Mobile :</strong><span class="m-l-15">{{Auth::user()->std_mobile}}</span></p>
                             </div>
-                            <div class="col-6">
-                                <p class="text-muted font-15"><strong>Teacher :</strong> <span class="m-l-15">{{\App\Model\Profile::getProfile()->th_name }}</span></p>
-                            </div>
-                            <div class="col-6">
-                                <p class="text-muted font-15"><strong>Course :</strong> <span class="m-l-15">{{\App\Model\Profile::getProfile()->coursename }}</span></p>
+                            <div class="col-md-6">
+                                <p class="text-muted font-15"><strong>Course :</strong> <span class="m-l-15">{{\App\Model\Profile::getProfile()->coursename}}</span></p>
                             </div>
                         </div>
 
@@ -235,29 +232,29 @@
 
                         <div class="text-left m-t-20 row">
                     
-                            <div class="col-6">
-                                <p class="text-muted font-16"><strong>Writing Point :</strong> <span class="badge badge-primary p-1">{{ \App\Model\PointsWriting::checkPoint() }} Point</span></p>
+                            <div class="col-md-6">
+                                <p class="text-muted font-16"><strong>Writing Point :</strong> <span class="badge badge-primary p-1">{{Auth::user()->std_pointsac}} Point</span></p>
                             </div>
 
-                            <div class="col-6">
-                                <p class="text-muted font-16"><strong>Speaking Point :</strong> <span class="badge badge-success p-1">{{ \App\Model\Points::checkPoint() }} Point</span></p>
+                            <div class="col-md-6">
+                                <p class="text-muted font-16"><strong>Speaking Point :</strong> <span class="badge badge-success p-1">{{Auth::user()->std_pointspeaking}} Point</span></p>
                             </div>
                         </div>
 
                         <div class="text-left m-t-20 row">
                     
-                            <div class="col-6">
-                                <p class="text-muted font-16"><strong>Bonus & Club :</strong> <span class="badge badge-info p-1">{{ \App\Model\Points::bonusPoint() }} Point</span></p>
+                            <div class="col-md-6">
+                                <p class="text-muted font-16"><strong>Bonus & Club :</strong> <span class="badge badge-info p-1">{{Auth::user()->std_point}} Point</span></p>
                             </div>
-                            <div class="col-6">
-                                <p class="text-muted font-16"><strong>Expire Date :</strong> <span class="badge badge-danger p-1">{{ date('d-m-Y', strtotime(\App\Model\Profile::getProfile()->lastdate)) }}</span></p>
+                            <div class="col-md-6">
+                                <p class="text-muted font-16"><strong>Expire Date :</strong> <span class="badge badge-danger p-1">{{\App\Model\Profile::getProfile()->lastdate}}</span></p>
                             </div>
                         </div>
 
                         <hr>
                         
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-md-12">
                                 <a href="{{url('clubs/status_clubs')}}" class="btn btn-bordered-primary waves-effect width-md waves-light">View Club</a>
                             </div>
                         </div>

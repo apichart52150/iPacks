@@ -4,6 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Auth;
 
 class Speaking extends Model {
 
@@ -20,12 +21,11 @@ class Speaking extends Model {
 
     } 
 
-   // show one topic 
    public static function status_speaking_topic($id) {
 
    	$topic = DB::table('speaking')
    	->select('speaking.*','users.name as th_name')
-    ->leftjoin('users','users.id','=','speaking.th_id')
+      ->leftjoin('users','users.id','=','speaking.th_id')
    	->where('speaking.id',$id)
    	->get();
 
@@ -33,27 +33,10 @@ class Speaking extends Model {
 
    }
 
-   // check speaking point form other db newcambr_isac
-   public static function checkPoint() {
-
-      $point = DB::connection('mysql')->select('select std_pointspeaking as point from student where std_id = ?',[Session('std_id')]);
- 
-      return ($point); 
-
-   }
-
-   public static function checkPointWriting() {
-
-      $pointW = DB::connection('mysql')->select('select std_pointsac as point from student where std_id = ?',[Session('std_id')]);
- 
-      return ($pointW); 
-
-   }
-
    public static function getCourse() {
       $courses = DB::table('course')
-                ->select('*')
-                ->get();
+      ->select('*')
+      ->get();
       return $courses;
    }
 

@@ -17,7 +17,7 @@ class HomeController extends Controller
     {			
 
 		//echo $std_id;die;
-    	$std_id = Session::get('std_id');
+    	$std_id = auth('student')->user()->std_id;
 		
 
 		$check_std_score = DB::table('score')
@@ -25,12 +25,14 @@ class HomeController extends Controller
 		->where('std_id','=',$std_id)
 		->get();
 
-		Session::put('class_id',$check_std_score[0]->classroom_id);
+		//get $class_id
+		$class_id = $check_std_score[0]->classroom_id;
+
 
 		// แยกชุดข้อสอบ
     	$type_quiz = DB::table('class')
     	->select('set_exam')
-    	->where('id','=', Session::get('class_id'))
+    	->where('id','=', $class_id)
     	->get();
 
 		$name_type = $type_quiz[0]->set_exam;
@@ -40,26 +42,22 @@ class HomeController extends Controller
     	->where('priority','=', $name_type)
     	->get();
 
-		$checklis = Student::checklis($std_id,Session::get('class_id'),$type_quiz[0]->set_exam);
-    	$checkread = Student::checkread($std_id,Session::get('class_id'),$type_quiz[0]->set_exam);
-    	$checkwriting = Student::checkwriting($std_id,Session::get('class_id'),$type_quiz[0]->set_exam);
-
-		// dd($checklis);
+		$checklis = Student::checklis($std_id,$class_id,$type_quiz[0]->set_exam);
+    	$checkread = Student::checkread($std_id,$class_id,$type_quiz[0]->set_exam);
+    	$checkwriting = Student::checkwriting($std_id,$class_id,$type_quiz[0]->set_exam);
 
 		$check_score = DB::table('score')
     	->select('id')
     	->where('std_id','=',$std_id) 
-    	->where('classroom_id','=',Session::get('class_id')) 
+    	->where('classroom_id','=',$class_id) 
     	->get();
-
-		Session::put('name_type',$type[0]->name);
 
 		if($type_quiz[0]->set_exam > 0){
 
 			if(count($check_score) == 0){
     			$std_score = DB::table('score')
     			->insert(['std_id' => $std_id,
-				'classroom_id' =>  Session::get('class_id'),
+				'classroom_id' =>  $class_id,
 				'set_exam' => $type_quiz[0]->set_exam]);
     		}
 

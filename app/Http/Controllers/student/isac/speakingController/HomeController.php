@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Speaking;
 use DB;
-use Session;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -15,16 +15,23 @@ class HomeController extends Controller
     public function index()
     {
 
-        $point = Speaking::checkPoint();
+        if(auth('student')->user()->std_pointspeaking < 1) {
 
-        session()->forget('lastRowId');
+            session()->flash('point','<div class="alert alert-danger" role="alert">
+            <i class="far fa-tired mr-2"></i><strong>ขออภัยขณะนี้ point ไม่เพียงพอ</strong></div>'); 
 
-        return view('student.isac.speaking.home',compact('point'));
+            return redirect('/user_home');
+
+        }else{
+
+            return view('student.isac.speaking.home',compact('point'));
+
+        }
     }
 
-    public function status_speaking() 
-    {
-        $speakings = Speaking::querySpeaking(Session('std_id'));
+    public function status_speaking() {
+
+        $speakings = Speaking::querySpeaking(auth('student')->user()->std_id);
 
         return view('student.isac.speaking.status_speaking', compact('speakings'));
     }

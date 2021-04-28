@@ -4,7 +4,6 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 use Auth;
 use DB;
-use Session;
 
 
 class Profile extends Model
@@ -14,11 +13,11 @@ class Profile extends Model
         $current_date = date('Y-m-d');
 
         $profile = DB::table('student')
-        ->select('student.std_pointsac','student.std_pointspeaking', 'student.coursetype', 'student.std_name', 'student.std_nickname','student.std_mobile', 'student.std_email', 'course.coursename','class.th_name', 'class.lastdate', 'class.startdate', 'class.nccode')
+        ->select('course.coursename', 'class.lastdate', 'class.startdate')
         ->join('class_student', 'student.std_id', '=', 'class_student.std_id')
         ->join('class', 'class_student.nccode', '=', 'class.nccode')
         ->join('course', 'class.courseid', '=', 'course.courseid')
-        ->where('student.std_id', Session::get('std_id'))
+        ->where('student.std_id', auth('student')->user()->std_id)
         ->get()[0];
        
         if(!empty($profile)) {
@@ -42,7 +41,7 @@ class Profile extends Model
             ->join('class_student', 'class_student.std_id', '=', 'student.std_id')
             ->join('class', 'class_student.nccode', '=', 'class.nccode')
             ->join('course', 'class.courseid', '=', 'course.courseid')
-            ->where('student.std_id', Session::get('std_id'))
+            ->where('student.std_id', auth('student')->user()->std_id)
             ->groupBy('student.std_id')
             ->get()[0];
 
@@ -55,7 +54,7 @@ class Profile extends Model
             ->leftjoin('class', 'class_student.nccode', '=', 'class.nccode')
             ->leftjoin('course', 'class.courseid', '=', 'course.courseid')
             ->leftjoin('borrowbook','borrowbook.std_id','=', 'class_student.std_id')
-            ->where('student.std_id', Session::get('std_id'))
+            ->where('student.std_id', auth('student')->user()->std_id)
             ->get()[0];
         }
             

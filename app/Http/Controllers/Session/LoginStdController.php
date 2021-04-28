@@ -45,6 +45,8 @@ class LoginStdController extends Controller
         ->where('std_password', md5($request->password))
         ->first();
 
+        // dd($student);
+
         if($student) {
 
             $gard = Auth::guard('student')->login($student);
@@ -60,7 +62,6 @@ class LoginStdController extends Controller
     public function fn_logout() {
 
         Auth::logout();
-        $request->session()->flush();
         return redirect()->route('user_login');
 
     }

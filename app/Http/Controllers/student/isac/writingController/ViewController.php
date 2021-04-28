@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Model\PointsWriting;
 use Auth;
 use DB;
-use Session;
 
 class ViewController extends Controller
 {
@@ -103,7 +102,7 @@ class ViewController extends Controller
                     PointsWriting::decreasePoint();
     
                     DB::table('log')->insert([
-                        'std_id' => Session::get('std_id'),
+                        'std_id' => auth('student')->user()->std_id,
                         'content' => 'Send '.$request->input('test_type').' '.$request->input('header_test'),
                         'tab'=> 'SAC Online',
                         'score'=>'-1 Point',

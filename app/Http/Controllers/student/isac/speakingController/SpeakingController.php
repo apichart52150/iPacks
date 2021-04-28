@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\student\isac\speakingController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Session;
 use DB;
 use App\Model\Speaking;
 use App\Model\Points;
@@ -45,12 +44,14 @@ class SpeakingController extends Controller
 
     public function saveSound(Request $request) {
 
+        $std_id = auth('student')->user()->std_id;
+
         $sound = $request->file('audio_data');
 
         $path = $sound->getClientOriginalName().'_'.date('dmYHis').'.mp3';
         $topic = substr($sound->getClientOriginalName(), 0 ,5).' '.substr($sound->getClientOriginalName(), 5 ,7);
 
-        $location = public_path('file_record/'.Session('std_id'));
+        $location = public_path('file_record/'.$std_id);
 
         if(is_dir($location)){
             $sound->move($location, $path);
@@ -58,20 +59,7 @@ class SpeakingController extends Controller
             $sound->move($location, $path);
         }
 
-        $profile = DB::table('student')
-            ->select('crm_std_id', 'std_pointspeaking')
-            ->where('std_id', Session('std_id'))
-            ->get();
-
-        $crm_std_id = $profile[0]->crm_std_id;
-
-        if(Points::checkPoint() > 0) {
-
-            if(empty($crm_std_id)) {
-                $crm_std_id = 0;
-            } else {
-                $crm_std_id = $crm_std_id;
-            }
+        if(auth('student')->user()->std_pointspeaking > 0) {
 
             $due_date = date('Y-m-d H:i:s');
             $due_date = strtotime($due_date);
@@ -85,10 +73,9 @@ class SpeakingController extends Controller
                 $insertSpeaking = DB::table('speaking')
                 ->insertGetId(
                     [
-                        'crm_std_id' => $crm_std_id,
-                        'std_id' => Session('std_id'),
+                        'std_id' => $std_id,
                         'topic' => $topic,
-                        'path' => Session('std_id').'/'.$path,
+                        'path' => $std_id.'/'.$path,
                         'status' => 'sent',
                         'due_date' => $due_date
                     ]
@@ -98,13 +85,12 @@ class SpeakingController extends Controller
         
                 $insertLog = DB::table('log')
                     ->insert([
-                        'std_id' => Session('std_id'),
+                        'std_id' => $std_id,
                         'content' => "iSAC Speaking : ".$topic,
                         'tab' => 'iSAC Speaking',
                         'score' => "-1 Point"
                     ]);
 
-                Session::put('lastRowId', $insertSpeaking);
 
                 DB::commit();
 

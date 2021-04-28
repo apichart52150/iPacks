@@ -14,7 +14,7 @@
 	Route::post('fn_login', 'Session\LoginStdController@fn_login')->name('fn_login');
 	Route::get('user_logout', 'Session\LoginStdController@fn_logout')->name('user_logout');
 
-	Route::middleware(['auth:student'])->group(function () {
+	Route::group(['middleware' => ['auth:student']], function() {
 
 		Route::get('browser-settings', function() {
 			return view('student.isac.speaking.browser_settings');

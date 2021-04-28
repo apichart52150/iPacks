@@ -6,21 +6,20 @@ use Illuminate\Http\Request;
 use App\Model\Writing;
 use DB;
 use File;
-use Session;
+use Auth;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class HomeController extends Controller
 {
 
-    public function __construct() {
-
-        $this->middleware('user');
-    }
- 
     public function index() {
 
-        $pointwriting = Writing::checkPoint();
+        $pointwriting = auth('student')->user()->std_pointsac;
 
         if($pointwriting < 1) {
+
+            session()->flash('point','<div class="alert alert-danger" role="alert">
+            <i class="far fa-tired mr-2"></i><strong>ขออภัยขณะนี้ point ไม่เพียงพอ</strong></div>'); 
 
             return redirect('/user_home');
 
@@ -154,7 +153,9 @@ class HomeController extends Controller
 
     public function status_writing() {
 
-        $writing = Writing::queryWriting(Session('std_id'));
+        $std_id = auth('student')->user()->std_id;
+
+        $writing = Writing::queryWriting($std_id);
 
         // dd($writing);
         return view('student.isac.writing.status_writing',  compact('writing'));

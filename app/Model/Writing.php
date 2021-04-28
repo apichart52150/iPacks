@@ -4,6 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Auth;
 
 class Writing extends Model {
 
@@ -16,19 +17,9 @@ class Writing extends Model {
         ->orderBy('sent_date', 'desc')
         ->get();
 
-
-		// dd($writing);
         return ($writing);
 
     } 
-
-   	public static function checkPoint() {
-
-      	$pointwriting = DB::connection('mysql')->select('select std_pointsac as pointwriting from student where std_id = ?',[Session('std_id')]);
- 
-      	return ($pointwriting); 
-
-   	}
 
 	// show one topic 
 	public static function status_topic($id) {
