@@ -29,10 +29,10 @@ return [
     |
     */
 
-    'lifetime' => 120,
+    'lifetime' => 1 * (60 * 24),
 
     'expire_on_close' => false,
-
+    
     /*
     |--------------------------------------------------------------------------
     | Session Encryption
