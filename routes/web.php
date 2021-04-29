@@ -6,7 +6,7 @@
 		if(Auth::guard('student')->check()) {
 			return redirect('/user_home');
 		}else {
-			return redirect('/');
+			return redirect('/user_login');
 		}
 	});
 
