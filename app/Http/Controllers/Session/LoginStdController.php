@@ -48,11 +48,7 @@ class LoginStdController extends Controller
         // dd($student);
 
         if($student) {
-
-            $gard = Auth::guard('student')->login($student);
-
-            // dd($gard);
-
+            Auth::guard('student')->login($student);
             return redirect('/user_home');
         } else {
             return back()->with('status', 'Username or password do not match');

@@ -4,9 +4,9 @@
 // ==================== Routes User ====================== //
 	Route::get('/', function() {
 		if(Auth::guard('student')->check()) {
-			return redirect('user_home');
+			return redirect('/user_home');
 		}else {
-			return redirect('user_login');
+			return redirect('/');
 		}
 	});
 
