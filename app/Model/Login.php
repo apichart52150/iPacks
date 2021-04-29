@@ -14,6 +14,7 @@ class Login extends Authenticatable
     protected $guard = 'student';
     protected $table = 'student';
     protected $primaryKey = "std_id";
+    protected $rememberTokenName = false;
 
 }
 

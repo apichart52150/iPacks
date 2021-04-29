@@ -58,16 +58,12 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card-box">
-                @if(session()->has('del_ans'))
-				{!!session()->get('del_ans')!!}
+                @if(session()->has('success_ans'))
+				{!!session()->get('success_ans')!!}
 				@endif 
 
-				@if(session()->has('edit_ans'))
-				{!!session()->get('edit_ans')!!}
-				@endif 
-
-                @if(session()->has('add_ans'))
-				{!!session()->get('add_ans')!!}
+                @if(session()->has('error_ans'))
+				{!!session()->get('error_ans')!!}
 				@endif 
 
                 <h4 class="header-title">Student</h4>
@@ -104,11 +100,7 @@
                     </thead>
                     <tbody>
 
-                    @php
-                        $student = $data['student']
-                    @endphp
-
-                    @foreach($student as $key => $row)
+                    @foreach($data['student'] as $key => $row)
                         <tr>
                             <td>{{$row->std_id}}</td>
                             <td><a href="{{ url('clubs/logs/'.$row->std_id) }}">{{$row->std_username}}</a></td>
@@ -201,29 +193,11 @@
 				</div>
 				<div class="modal-body p-4">
 
-                    <div class="row">
-                        <div class="col-sm-5 col-sm-offset-2">
-                            @if ($errors->any())
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        {!! implode('', $errors->all('<li class="error">:message</li>')) !!}
-                                    </ul>
-                                </div>
-                            @endif
-
-                            @if (@$_GET['status'] == 'er-01')
-                            <div class="alert alert-danger">
-                            <strong> Create Error </strong>  Username* นี้มีในระบบแล้ว ไม่สามารถสร้างซ้อนทับได้
-                            </div>
-                            @endif
-                        </div>
-                    </div>
-
                 <form class="form-horizontal" role="form" action="addstudent" method="POST">
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label" for="simpleinput">Class || Course</label>
                         <div class="col-sm-10">
-                            <select class="form-control" name="course" required="">
+                            <select class="form-control" id="coursetype" name="coursetype" required="">
 								<option select="" value="">เลือก Course ที่เรียน</option>
                                 @foreach ($data['course'] as $datas)
                                     <option value="{{ $datas->nccode }}">{{ $datas->coursename.' '.$datas->nccode }}</option>

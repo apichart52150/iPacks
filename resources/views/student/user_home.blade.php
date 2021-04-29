@@ -116,7 +116,7 @@
     </div>
 
     <div class="col-xl-3 col-md-6">
-        <a href="#">
+        <a href="https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/{{auth('student')->user()->std_id}}" target="_blank">
             <div class="card-box widget-icon bg-pink">
                 <div class="avatar-lg float-left">
                 <i class="mdi mdi-eye avatar-title display-6 m-0 " style="font-size: 5em;"></i>
@@ -195,14 +195,16 @@
 <div class="row">
 
     <div class="col-xl-6 col-md-6">
-        <div class="card-box widget-icon bg-primary">
-            <div class="avatar-lg float-left">
-                <i class="mdi mdi-animation avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+        <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('student')->user()->std_id }}"  target="_blank">
+            <div class="card-box widget-icon bg-primary">
+                <div class="avatar-lg float-left">
+                    <i class="mdi mdi-animation avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                </div>
+                <div class="text-center">
+                    <h2 class="mb-3 text-light"> Topic Packs</h2>
+                </div>
             </div>
-            <div class="text-center">
-                <h2 class="mb-3 text-light"> Topic Packs</h2>
-            </div>
-        </div>
+        </a>
     </div><!-- end col -->
 
     <div class="col-xl-6 col-md-6">

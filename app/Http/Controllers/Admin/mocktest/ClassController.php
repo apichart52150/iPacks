@@ -129,6 +129,7 @@ class ClassController extends Controller {
         $classdetail_by_id = Classroom::classdetail_by_id($classroom_id);
         $student_in_class = Classroom::get_classroom_and_student($classroom_id);
         
+        // dd($student_in_class);
 
         $get_class_id = ['class_id' => $classdetail_by_id[0]->id,
         'set_exam' => $classdetail_by_id[0]->name,
@@ -195,7 +196,7 @@ class ClassController extends Controller {
 
     }
 
-    //dd($data);
+    // dd($get_class_id);
 
     return view('admin.mocktest.class_detail',compact('data','get_class_id'));
     }
@@ -264,7 +265,7 @@ class ClassController extends Controller {
 
 
     }
-    //dd($data);
+    // dd($get_class_id);
 
     return view('admin.mocktest.print_classdetail',compact('data','get_class_id'));
     }

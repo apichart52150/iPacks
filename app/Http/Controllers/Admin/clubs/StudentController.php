@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin\clubs;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Session;
+use Auth;
 
 
 class StudentController extends Controller {
@@ -60,39 +60,47 @@ class StudentController extends Controller {
 
     public function addstudent(Request $request){
 
-       $student = DB::table('student')
-       ->select('std_username')
-       ->where('std_username', '=',$request->std_username)
-       ->get();
-
-       $row_student = count($student);
-
-       if($row_student == 0){
-
-        DB::table('student')->insert(
-           ['std_username' => $request->std_username, 'std_password' => md5($request->std_password), 'std_name' => $request->std_name, 'std_nickname' => $request->std_nickname, 'std_point' => $request->std_point, 'std_bonus' => $request->std_bonus, 'std_mobile' => $request->std_mobile , 'std_pointsac' => $request->std_pointsac,'std_pointspeaking' => $request->std_pointspeaking]
-       );
-
-        $data = DB::table('student')
-        ->select('*')
-        ->where('std_username', '=',$request->std_username)
-        ->limit(1)
+        $student = DB::table('student')
+        ->select('std_username')
+        ->where('std_username', '=', $request->std_username)
         ->get();
 
-        DB::table('class_student')->insert(
-           ['std_id' => $data['0']->std_id, 'nccode' => $request->course]
-        );
+        $class_student = DB::table('class')
+        ->select('id')
+        ->where('nccode', '=', $request->coursetype)
+        ->get();
 
-        return redirect('clubs/dashboard');
-    }else{
-        $status = 'er-01';
-        
-        session()->flash('add_ans','<div class="alert alert-success" role="alert">
-        <i class="mdi mdi-check-all mr-2"></i><strong>Add Student Success</strong></div>'); 
-        return redirect('clubs/student',compact('status'));
-    }
+        $row_student = count($student);
 
-        return redirect('clubs/dashboard');
+        if($row_student == 0){
+
+            DB::table('student')->insert(
+            ['coursetype' => $class_student[0]->id, 'std_username' => $request->std_username, 'std_password' => md5($request->std_password), 'std_name' => $request->std_name, 'std_nickname' => $request->std_nickname, 'std_point' => $request->std_point, 'std_bonus' => $request->std_bonus, 'std_mobile' => $request->std_mobile , 'std_pointsac' => $request->std_pointsac,'std_pointspeaking' => $request->std_pointspeaking]
+            );
+
+            $data = DB::table('student')
+            ->select('*')
+            ->where('std_username', '=',$request->std_username)
+            ->limit(1)
+            ->get();
+
+            DB::table('class_student')->insert(
+                ['std_id' => $data['0']->std_id, 'nccode' => $request->coursetype]
+            );
+
+            session()->flash('success_ans','<div class="alert alert-success" role="alert">
+            <i class="fas fa-check-circle mr-2"></i><strong>Add Student Success</strong></div>'); 
+
+            return redirect('clubs/student');
+
+        }else{
+
+            session()->flash('error_ans','<div class="alert alert-danger" role="alert">
+            <i class="far fa-window-close mr-2"></i><strong>Username* นี้มีในระบบแล้ว ไม่สามารถสร้างซ้อนทับได้</strong></div>');
+            return redirect('clubs/student');
+        }
+
+        return redirect('clubs/student');
     }
 
 
@@ -123,23 +131,33 @@ class StudentController extends Controller {
 
     public function studentupdate($std_id, Request $request)
 	{
-        // dd($std_id);
+
+        $course_type = DB::table('class')
+        ->select('id')
+        ->where('nccode','=', $request->course)
+        ->get();
+
 		DB::table('student')
         ->where('std_id', $std_id)
-        ->update(['std_username' => $request->std_username,'std_password' => md5($request->std_password),'std_mobile' => $request->std_mobile,'std_name' => $request->std_name,
-           'std_nickname' => $request->std_nickname,'std_email' => $request->std_email
-           ,'std_point'=> $request->std_point,
-           'std_bonus' => $request->std_bonus,
-           'std_id' => $request->std_id,
-           'std_pointsac' => $request->std_pointsac,
-           'std_pointspeaking' => $request->std_pointspeaking]);
+        ->update(['coursetype' => $course_type[0]->id,
+            'std_username' => $request->std_username,
+            'std_password' => md5($request->std_password),
+            'std_mobile' => $request->std_mobile,
+            'std_name' => $request->std_name,
+            'std_nickname' => $request->std_nickname,
+            'std_email' => $request->std_email,
+            'std_point'=> $request->std_point,
+            'std_bonus' => $request->std_bonus,
+            'std_id' => $request->std_id,
+            'std_pointsac' => $request->std_pointsac,
+            'std_pointspeaking' => $request->std_pointspeaking]);
 
         DB::table('class_student')
         ->where('std_id', $std_id)
-        ->update(['nccode' => $request->course ]);
+        ->update(['nccode' => $request->course]);
 
-        session()->flash('edit_ans','<div class="alert alert-success" role="alert">
-        <i class="mdi mdi-check-all mr-2"></i><strong>Update Success</strong></div>'); 
+        session()->flash('success_ans','<div class="alert alert-success" role="alert">
+        <i class="fas fa-check-circle mr-2"></i><strong>Update Success</strong></div>'); 
 
         return redirect('clubs/student');
     }
@@ -153,8 +171,8 @@ class StudentController extends Controller {
         DB::table('student')->where('std_id', '=',$std_id)->delete();
         });
 
-        session()->flash('del_ans','<div class="alert alert-danger" role="alert">
-        <i class="mdi mdi-check-all mr-2"></i><strong>Delete Success</strong></div>'); 
+        session()->flash('success_ans','<div class="alert alert-success" role="alert">
+        <i class="fas fa-check-circle mr-2"></i><strong>Delete Success</strong></div>'); 
 
 		return redirect('clubs/student');
 	}

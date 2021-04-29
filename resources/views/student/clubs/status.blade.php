@@ -37,29 +37,30 @@
 @endsection
 
 @section('page-title')
-<div class="row">
-    <div class="col-12">
-        <div class="page-title-box">
-            <div class="page-title-right">
-                <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="{{url('user_home')}}">Home</a></li>
-                    <li class="breadcrumb-item active">Club & Bonus status</li>
-                </ol>
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="{{url('user_home')}}">Home</a></li>
+                        <li class="breadcrumb-item active">Club & Bonus status</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">Club & Bonus status</h4>
             </div>
-            <h4 class="page-title">Club & Bonus status</h4>
         </div>
     </div>
-</div>
 @endsection
 
 @section('content')
 
 <div class="row">
-    <div class="col-md-6 col-xl-3">
+    <div class="col-md-12">
         @forelse($myclubs as $myclub)
             @if(strpos($myclub['title_type'], 'Bonus') !== false)
             <button type="button" class="btn btn-warning btn-raised" style="white-space: normal;"> 
-                {{ $myclub['title_type'] }} ( {{ $myclub['teacher'] }} )<br>
+                {{ $myclub['title_type'] }} 
+                {{ $myclub['teacher'] }}<br>
                 {{ $myclub['date_show'] }}
                 <div class="ripple-container"></div>
             </button>

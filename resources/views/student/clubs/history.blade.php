@@ -60,7 +60,7 @@
             <ul class="nav nav-pills navtab-bg nav-justified">
                 @foreach ($tabs as $tab)
                     @php
-                        $icon = ['Registration' => 'fas fa-registered', 'Status' => 'fas fa-history','Cancellation' => 'fas fa-calendar-times', 'SAC Paper' => 'fas fa-sticky-note', 'Borrowbook' => 'fas fa-book'];
+                        $icon = ['Registration' => 'fas fa-registered', 'Status' => 'fas fa-history','Cancellation' => 'fas fa-calendar-times'];
                     @endphp
 
                     <li class="nav-item">

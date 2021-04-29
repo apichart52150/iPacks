@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Club\History;
 use App\Model\Club\ClubRegister;
-use Session;
+use Auth;
 
 class HistoryController extends Controller
 {
@@ -40,7 +40,7 @@ class HistoryController extends Controller
 
     public function status() {
 
-        $myclubs = ClubRegister::myClub(Session::get('std_id'));
+        $myclubs = ClubRegister::myClub(auth('student')->user()->std_id);
 
         $myclubs = $myclubs->map(function ($item, $key) {
             $end_date = date('d M', strtotime($item->end_date));

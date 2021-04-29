@@ -59,11 +59,9 @@ class LoginStdController extends Controller
         }
     }
 
-    public function fn_logout() {
-
-        Auth::logout();
+    public function user_logout() {
+        Auth::guard('student')->logout();
         return redirect()->route('user_login');
-
     }
 
    

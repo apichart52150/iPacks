@@ -1,18 +1,29 @@
 @foreach ($data as $key => $subtitles)
+@php 
+if(strpos($key, 'Bonus') !== false) {
+    $color = 'warning';
+} else {
+    $color = 'primary';
+}
+@endphp
+
+
 <div class="card">
-        @php 
-        if(strpos($key, 'Bonus') !== false) {
-            $contentModal = 'เมื่อทำการยืนยันการจอง Bonus Tutorial แล้ว ไม่สามารถยกเลิกได้ไม่ว่าในกรณีใดๆ ถ้าหากทำการจอง Bonus Tutorial แล้วไม่ได้เดินทางมาเข้าเรียนทางเราขออนุญาตตัดสิทธิเพิ่ม 1 Bonus กรุณาตรวจสอบความถูกต้องก่อนทำการยืนยันการจอง Bonus Tutorial ทุกครั้ง';
-        } else {
-            $contentModal = 'เมื่อทำการยืนยันการจอง Club แล้ว ไม่สามารถยกเลิกได้ไม่ว่าใกรณีใดๆ ถ้าหากทำการจอง Club แล้วไม่ได้เดินทางมาเข้าเรียนทางเราขออนุญาตตัดสิทธิเพิ่ม 1 Point กรุณาตรวจสอบความถูกต้องก่อนทำการยืนยันการจอง Club ทุกครั้ง';
-        }
+    @php 
+    if(strpos($key, 'Bonus') !== false) {
+        $contentModal = 'เมื่อทำการยืนยันการจอง Bonus Tutorial แล้ว ไม่สามารถยกเลิกได้ไม่ว่าในกรณีใดๆ ถ้าหากทำการจอง Bonus Tutorial แล้วไม่ได้เดินทางมาเข้าเรียนทางเราขออนุญาตตัดสิทธิเพิ่ม 1 Bonus กรุณาตรวจสอบความถูกต้องก่อนทำการยืนยันการจอง Bonus Tutorial ทุกครั้ง';
+        $color = 'warning';
+    } else {
+        $contentModal = 'เมื่อทำการยืนยันการจอง Club แล้ว ไม่สามารถยกเลิกได้ไม่ว่าใกรณีใดๆ ถ้าหากทำการจอง Club แล้วไม่ได้เดินทางมาเข้าเรียนทางเราขออนุญาตตัดสิทธิเพิ่ม 1 Point กรุณาตรวจสอบความถูกต้องก่อนทำการยืนยันการจอง Club ทุกครั้ง';
+    }
     @endphp
-    <div class="card-header bg-primary py-3 text-white">
+    <div class="card-header bg-{{$color}} py-3 text-white">
         <h5 class="card-title mb-0 text-white">{{ $key }}</h5>
     </div>
     @foreach ($subtitles as $key => $clubs)
         <div class="card-body card-content pt-2">
             <p class="text-primary">{{ $key }}</p>
+
             @foreach($clubs as $club)
 
             @if($club['room_state'] == 'Available') 

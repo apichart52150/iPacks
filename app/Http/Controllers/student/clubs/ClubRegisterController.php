@@ -9,13 +9,12 @@ use DB;
 use Auth;
 use App\UserAlert;
 use App\Model\Club\ClubRegister;
-use Session;
 
 class ClubRegisterController extends Controller
 {
     public function register_club(Request $request) {
 
-        $rooms = ClubRegister::register($request->room_id, Session::get('std_id'));
+        $rooms = ClubRegister::register($request->room_id, auth('student')->user()->std_id);
 
         session()->flash('responses', $rooms);
 

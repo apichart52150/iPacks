@@ -10,7 +10,7 @@
                 <div class="page-title-box">
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item active">{{Session('name_type')}}</li>
+                            <li class="breadcrumb-item active">Writing Test</li>
                         </ol>
                     </div>
                     <h4 class="page-title">Writing</h4>
@@ -33,8 +33,8 @@
 					<form id="basic-form" action="{{ route('ans_writing') }}" method="post" onsubmit="return confirm('Are you sure you want to finish?');">
 						{{ csrf_field() }}
 
-						<input type="hidden" name="std_id" value="{{session('std_id')}}">
-						<input type="hidden" name="classroom_id" value="{{session('class_id')}}">
+						<input type="hidden" name="std_id" value="{{auth('student')->user()->std_id}}">
+						<input type="hidden" name="classroom_id" value="{{auth('student')->user()->coursetype}}">
 						<input type="hidden" name="set_exam" value="5">
 
 						<div>

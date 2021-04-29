@@ -31,19 +31,19 @@
 @endsection
 
 @section('page-title')
-<div class="row">
-    <div class="col-12">
-        <div class="page-title-box">
-            <div class="page-title-right">
-                <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="{{url('user_home')}}">Home</a></li>
-                    <li class="breadcrumb-item active">Mocktest</li>
-                </ol>
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="{{url('user_home')}}">Home</a></li>
+                        <li class="breadcrumb-item active">Mocktest</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">Mocktest</h4>
             </div>
-            <h4 class="page-title">Mocktest</h4>
         </div>
-    </div>
-</div>     
+    </div>     
 @endsection
 
 
@@ -107,7 +107,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">{{ Session('name_type') }}  Mock Test</h4>
+                <h4 class="modal-title" id="myModalLabel">{{ $data['name_type'] }}  Mock Test</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
             <div class="modal-body">
@@ -145,7 +145,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">{{ Session('name_type') }}  Mock Test</h4>
+                <h4 class="modal-title" id="myModalLabel">{{ $data['name_type'] }}  Mock Test</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
             <div class="modal-body">
@@ -186,7 +186,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">{{ Session('name_type') }}  Mock Test</h4>
+                <h4 class="modal-title" id="myModalLabel">{{ $data['name_type'] }}  Mock Test</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
             <div class="modal-body">

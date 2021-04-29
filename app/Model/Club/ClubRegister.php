@@ -79,11 +79,9 @@ class ClubRegister extends Model {
             2 = Cancel Class
             3 = Bonus S2
         */
-        $std_profile = DB::table('student')
-        ->select('student.*')
-        ->where('std_id', $std_id)
-        ->get();
-
+        
+        $point_club = auth('student')->user()->std_point;
+        $point_bonus = auth('student')->user()->std_bonus;
         
         // Get Club Room
         $club_room = DB::table('club_room')
@@ -146,7 +144,7 @@ class ClubRegister extends Model {
                 if ($sameTime) {
                     $responses = ['status' => 'failed', 'msg' => 'ขออภัยไม่สามารถลง Club ภายในช่วงเวลาเดียวกันได้'];
 
-                }else if (($std_profile[0]->std_point > 0) && ($exists_club == 0)) {
+                }else if (($point_club > 0) && ($exists_club == 0)) {
 
                     DB::beginTransaction();
 
@@ -188,7 +186,7 @@ class ClubRegister extends Model {
      
             } else if($club_room->status == '1') {
 
-                if($std_profile[0]->std_bonus > 0) {
+                if($point_bonus > 0) {
                     if ($current_endDate < $nextMonday) {
                         $isRegister = $exists_bonus_s1 < 1 ? true : false;
                     } else {
@@ -240,7 +238,7 @@ class ClubRegister extends Model {
 
             } else if($club_room->status == '3') {
 
-                if($std_profile->std_bonus > 0) {
+                if($point_bonus > 0) {
                     if ($current_endDate < $nextMonday) {
                         $isRegister = $exists_bonus_s2 < 1 ? true : false;
                     } else {
@@ -256,7 +254,7 @@ class ClubRegister extends Model {
                     try {
                         DB::table('club_register')
                         ->insert([
-                            'std_id' => $std_profile->std_id,
+                            'std_id' => $std_id,
                             'room_id' => $room_id
                         ]);
 
@@ -265,14 +263,14 @@ class ClubRegister extends Model {
                         DB::table('log')
                         ->insert([
                             'room_id' => $room_id,
-                            'std_id' => $std_profile->std_id,
+                            'std_id' => $std_id,
                             'content' => $contentLog,
                             'tab' => 'Registered',
                             'score' => '-1 Bonus'
                         ]);
 
                         DB::table('student')
-                        ->where('std_id', $std_profile->std_id)
+                        ->where('std_id', $std_id)
                         ->decrement('std_bonus');
 
                         DB::commit();

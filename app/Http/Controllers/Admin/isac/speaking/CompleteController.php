@@ -10,18 +10,14 @@ use DB;
 
 class CompleteController extends Controller
 {
-
-    public function __construct() {
-
-        $this->middleware('auth');
-    }
-
     public function index(){
 
         return view('admin.isac.speaking.complete');
     }
 
     public function completeAjax(Request $request){
+
+        $std_id = auth('student')->user()->std_id;
 
         $columns = array(
             0 => 'id',
@@ -37,7 +33,7 @@ class CompleteController extends Controller
         ->leftjoin('student','student.std_id','=','speaking.std_id')
         ->where([
             ['speaking.status','=','success'],
-            ['speaking.th_id','=', Auth::user()->id]
+            ['speaking.th_id','=', $std_id]
         ])
         ->count();
 
@@ -55,7 +51,7 @@ class CompleteController extends Controller
             ->leftjoin('student','student.std_id','=','speaking.std_id')
             ->where([
                 ['speaking.status','=','success'],
-                ['speaking.th_id','=', Auth::user()->id]
+                ['speaking.th_id','=', $std_id]
             ])
             ->offset($start)
             ->limit($limit)
@@ -70,7 +66,7 @@ class CompleteController extends Controller
             ->leftjoin('student','student.std_id','=','speaking.std_id')
             ->where([
                 ['speaking.status','=','success'],
-                ['speaking.th_id','=', Auth::user()->id]
+                ['speaking.th_id','=', $std_id]
             ])
             ->orwhere('student.std_name','LIKE',"%{search}%")
             ->orwhere('speaking.topic','LIKE',"%{search}%")
@@ -84,7 +80,7 @@ class CompleteController extends Controller
             ->leftjoin('student','student.std_id','=','speaking.std_id')
             ->where([
                 ['speaking.status','=','success'],
-                ['speaking.th_id','=', Auth::user()->id]
+                ['speaking.th_id','=', $std_id]
             ])
             ->orwhere('student.std_name','LIKE',"%{search}%")
             ->orwhere('speaking.topic','LIKE',"%{search}%")

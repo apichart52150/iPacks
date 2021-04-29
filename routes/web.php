@@ -12,9 +12,9 @@
 
 	Route::get('user_login', 'Session\LoginStdController@index')->name('user_login');
 	Route::post('fn_login', 'Session\LoginStdController@fn_login')->name('fn_login');
-	Route::get('user_logout', 'Session\LoginStdController@fn_logout')->name('user_logout');
+	Route::get('user_logout', 'Session\LoginStdController@user_logout')->name('user_logout');
 
-	Route::group(['middleware' => ['auth:student']], function() {
+	Route::middleware(['auth:student'])->group(function () {
 
 		Route::get('browser-settings', function() {
 			return view('student.isac.speaking.browser_settings');
@@ -198,10 +198,9 @@
 
 
 // ==================== Routes Admin ==================== //
-
 	Auth::routes();
 	Route::get('admin', function() {
-		if(Auth::check()) {
+		if(Auth::guard('web')->check()) {
 			return redirect('admin_home');
 		}else {
 			return redirect('login');
@@ -332,11 +331,6 @@
 			Route::post('club_check', 'ClubRegisterController@check_student');
 			Route::get('excel_club_register/{id?}', 'ClubRegisterController@excel_room');
 		});
-
-
-
-
-
 	});
 	
 // ==================== End Routes Admin ====================== //

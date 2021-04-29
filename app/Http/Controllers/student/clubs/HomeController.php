@@ -26,7 +26,7 @@ class HomeController extends Controller
         $clubs = ClubRegister::getClubRoom();
 
         //  dd($clubs);
-
+        
         $current_date = date('Y-m-d H:i:s');
 
         $rooms = array();

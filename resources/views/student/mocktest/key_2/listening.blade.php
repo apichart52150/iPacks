@@ -36,7 +36,7 @@
                 <div class="page-title-box">
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item active">{{Session('name_type')}}</li>
+                            <li class="breadcrumb-item active">Listening Test</li>
                         </ol>
                     </div>
                     <h4 class="page-title">Listening</h4>
@@ -53,8 +53,8 @@
 					<form id="basic-form" action="{{ route('ans_lis') }}" method="post" onsubmit="return confirm('Are you sure you want to finish?');">
 						{{ csrf_field() }}
 					
-						<input type="hidden" name="std_id" value="{{session()->get('std_id')}}">
-						<input type="hidden" name="class_id" value="{{session()->get('class_id')}}">
+						<input type="hidden" name="std_id" value="{{auth('student')->user()->std_id}}">
+						<input type="hidden" name="classroom_id" value="{{auth('student')->user()->coursetype}}">
 						<input type="hidden" name="set_exam" value="2">
 						<div>
 							<h3>SECTION 1 </h3>
