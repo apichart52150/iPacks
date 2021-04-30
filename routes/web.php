@@ -280,7 +280,7 @@
 
 		Route::prefix('mocktest')->namespace('Admin\mocktest')->group(function () {
 
-			Route::get('dashboard', 'DashboardController@index');
+			Route::get('dashboard', 'DashboardController@index')->name('mocktest_dashboard');
 			
 			Route::get('class_detail/{class_id}', 'ClassController@classdetail_by_id')->name('class_detail');
 			Route::post('update_set_exam','ClassController@update_set_exam')->name('update_set_exam');

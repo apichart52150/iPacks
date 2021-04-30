@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Auth;
+use Datatables;
 
 
 class StudentController extends Controller {
@@ -39,8 +40,6 @@ class StudentController extends Controller {
 			'course' => $course,
             'club_type' => $club_type
 		];
-
-        // dd($data);
        
         return view('admin.clubs.student', compact('data'));
     }

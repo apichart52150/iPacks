@@ -118,7 +118,6 @@ class ClassController extends Controller {
 
     public static function class_detail()
     {
-
         return view('admin.mocktest.class_detail');
     }
 

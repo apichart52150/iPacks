@@ -60,7 +60,6 @@ class Classroom extends Model
         $teacher_name = DB::table('users')
         ->where('status','=','teacher')
         ->get();
-
         return ($teacher_name);
 
     }
