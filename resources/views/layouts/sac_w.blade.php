@@ -155,7 +155,11 @@
                                 <img src="{{ asset('public/assets/images/logo_nc.png') }}" alt="" width="80%">
                             </span>
                             <span class="logo-sm">
-                            	<img src="{{ asset('public/assets/images/logo_nc.png') }}" alt="" width="100px">
+                                <!-- <span class="logo-sm-text-dark">X</span> -->
+                                <img src="assets/images/logo-sm.png" alt="" height="24">
+                            </span>
+                            <span class="logo-sm">
+                            	<img src="" alt="" height="24">
                             </span>
                         </a>
                     </div>
