@@ -9,45 +9,45 @@
 
                     <li class="has-submenu">
                         <a href="#">
-                            <i class=" far fa-caret-square-down"></i>iSAC<div class="arrow-down"></div>
+                            <i class=" mdi mdi-view-dashboard"></i>iSAC<div class="arrow-down"></div>
                         </a>
                         <ul class="submenu">
                             <li>
-                                <a href="{{ route('isac_writing_home') }}"><i class="far fa-caret-square-down"></i>  Writing</a> 
+                                <a href="{{ route('isac_writing_home') }}"><i class="fas fa-pencil-alt"></i>  Writing</a> 
                             <li>
-                                <a href="{{ route('browser-settings') }}"><i class="far fa-caret-square-down"></i>  Speaking</a>
+                                <a href="{{ route('browser-settings') }}"><i class="fas fa-comment-dots"></i>  Speaking</a>
                             </li>
                             <li>
-                                    <a href="#"><i class="far fa-caret-square-down"></i>  Reading</a>
+                                    <a href="https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/{{auth('student')->user()->std_id}}" target="_blank"><i class="fas fa-eye"></i>  Reading</a>
                             </li>
                             <li>
-                                    <a href="#"><i class="far fa-caret-square-down"></i>  Listening</a>
+                                    <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('student')->user()->std_id }}"  target="_blank"><i class=" fas fa-volume-up"></i>  Listening</a>
                             </li>
                         </ul>
                     </li>
 
 
                     <li class="has-submenu">
-                        <a href="{{ url('mocktest/home') }}">
-                            <i class="far fa-caret-square-down"></i>Mocktest<div class="arrow-down"></div>
+                        <a href="#">
+                            <i class="fas fa-language"></i>Language Use<div class="arrow-down"></div>
                         </a>
                     </li>
 
                     <li class="has-submenu">
                         <a href="#">
-                            <i class="far fa-caret-square-down"></i>Strategies Packs<div class="arrow-down"></div>
+                            <i class="fas fa-film"></i>Strategies Packs<div class="arrow-down"></div>
                         </a>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#">
-                            <i class="far fa-caret-square-down"></i>Topic Packs<div class="arrow-down"></div>
+                        <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('student')->user()->std_id }}"  target="_blank">
+                            <i class="fas fa-briefcase"></i>Topic Packs<div class="arrow-down"></div>
                         </a>
                     </li>
 
                     <li class="has-submenu">
                         <a href="{{ url('clubs/condition') }}">
-                            <i class="far fa-caret-square-down"></i>Bonus&Club<div class="arrow-down"></div>
+                            <i class="fas fa-users"></i>Bonus&Club<div class="arrow-down"></div>
                         </a>
                     </li>
 
@@ -105,7 +105,7 @@
         <a href="#" class="wave-light">
             <div class="card-box widget-icon bg-danger">
                 <div class="avatar-lg float-left">
-                    <i class="mdi mdi-volume-high avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                    <i class=" fas fa-volume-up avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
                 <div class="wid-icon-info text-right">
                     <h2 class="mb-1 text-light"> iSac  </h2>
@@ -119,7 +119,7 @@
         <a href="https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/{{auth('student')->user()->std_id}}" target="_blank">
             <div class="card-box widget-icon bg-pink">
                 <div class="avatar-lg float-left">
-                <i class="mdi mdi-eye avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                <i class="fas fa-eye avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
                 <div class="text-right">
                     <h2 class="mb-1 text-light"> iSac  </h2>
@@ -134,7 +134,7 @@
             <div class="card-box widget-icon bg-info">
                 <!-- <div class="ribbon-two ribbon-two-silver"><span>Silver</span></div> -->
                 <div class="avatar-lg float-left">
-                    <i class="mdi mdi-lead-pencil  avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                    <i class="fas fa-pencil-alt  avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
                 <div class="text-right">
                     <h2 class="mb-1 text-light"> iSac  </h2>
@@ -149,7 +149,7 @@
             <div class="card-box widget-icon bg-success">
                 <!-- <div class="ribbon-two ribbon-two-platinum avatar-title display-6 m-0 "><span>Platinum</span></div> -->
                 <div class="avatar-lg float-left">
-                    <i class="mdi mdi-voice avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                    <i class="fas fa-comment-dots avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
                 <div class="text-right">
                     <h2 class="mb-1 text-light"> iSac </h2>
@@ -167,7 +167,7 @@
     <div class="col-xl-6 col-md-6">
         <div class="card-box widget-icon bg-primary">
             <div class="avatar-lg float-left">
-                <i class="mdi mdi-view-compact avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                <i class="fas fa-film avatar-title display-6 m-0 " style="font-size: 5em;"></i>
             </div>
             <div class="text-center">
                 <h2 class="mb-3 text-light "> Strategies Packs</h2>
@@ -176,14 +176,14 @@
     </div><!-- end col -->
 
     <div class="col-xl-6 col-md-6">
-        <a href="{{ url('mocktest/home') }}">
+        <a href="#">
             <div class="card-box widget-icon bg-primary">
                 <!-- <div class="ribbon-two ribbon-two-diamond avatar-title display-6 m-0 "><span>Diamond</span></div> -->
                 <div class="avatar-lg float-left">
-                    <i class=" mdi mdi-alphabetical avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                    <i class="fas fa-language avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
                 <div class="text-center">
-                    <h2 class="mb-3 text-light"> Mocktest </h2>
+                    <h2 class="mb-3 text-light">Language Use</h2>
                 </div>
             </div>
         </a>
@@ -198,7 +198,7 @@
         <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('student')->user()->std_id }}"  target="_blank">
             <div class="card-box widget-icon bg-primary">
                 <div class="avatar-lg float-left">
-                    <i class="mdi mdi-animation avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                    <i class="fas fa-briefcase avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
                 <div class="text-center">
                     <h2 class="mb-3 text-light"> Topic Packs</h2>
@@ -207,19 +207,6 @@
         </a>
     </div><!-- end col -->
 
-    <div class="col-xl-6 col-md-6">
-        <a href="{{ url('clubs/condition') }}">
-            <div class="card-box widget-icon bg-primary">
-                <!-- <div class="ribbon-two ribbon-two-secondary avatar-title display-6 m-0 "><span>Premium</span></div> -->
-                <div class="avatar-lg float-left">
-                    <i class="mdi mdi-account-group avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                </div>
-                <div class="text-center">
-                    <h2 class="mb-3 text-light"> Club </h2>
-                </div>
-            </div>
-        </a>
-    </div><!-- end col -->
 </div>
 @endsection
 

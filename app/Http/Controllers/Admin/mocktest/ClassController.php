@@ -118,7 +118,6 @@ class ClassController extends Controller {
 
     public static function class_detail()
     {
-
         return view('admin.mocktest.class_detail');
     }
 
@@ -286,6 +285,8 @@ class ClassController extends Controller {
 
   public static function update_set_exam(Request $request)
   {
+
+    // dd($request->all());
 
     $update_set_exam = DB::table('class')
     ->where('id','=',$request->class_id)

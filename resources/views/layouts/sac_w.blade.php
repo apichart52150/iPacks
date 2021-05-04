@@ -84,32 +84,13 @@
     </head>
 
     <body class="unsticky-header">
-        @php 
-            use App\Model\Writing;
-            $route = Route::current()->uri;
-        @endphp
 
-        <!-- Navigation Bar-->
-        <!-- Navigation Bar-->
-        <!-- Navigation Bar-->
         <header id="topnav">
-        
-        <!-- Topbar Start -->
-        <div class="navbar-custom bg-white">
-            <div class="container-fluid">
-                <ul class="list-unstyled topnav-menu float-right mb-0">
-
-                        <li class="dropdown notification-list">
-                            <!-- Mobile menu toggle-->
-                            <a class="navbar-toggle nav-link">
-                                <div class="lines">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </a>
-                            <!-- End mobile menu toggle-->
-                        </li>
+     
+            <!-- Topbar Start -->
+            <div class="navbar-custom bg-white">
+                <div class="container-fluid">
+                    <ul class="list-unstyled topnav-menu float-right mb-0">
 
                         <li class="dropdown notification-list mt-3 mr-3">
                             @yield('test_time')
@@ -170,6 +151,10 @@
                         <!-- Navigation Menu-->
                         <ul class="navigation-menu text-center d-flex justify-content-center font-weight-bold py-1">
                             <li class="p-2 mr-3">
+                                <a href="{{ route('user_home') }}" class="p-0 text-white"><i class="fas fa-home font-20 d-block mb-1 mx-0"></i>Home</a>
+                            </li>
+
+                            <li class="p-2 mr-3">
                                 <a href="{{ route('isac_writing_home') }}" class="p-0 text-white"><i class="fas fa-folder-open font-20 d-block mb-1 mx-0"></i> iSAC WRITING</a>
                             </li>
 
@@ -194,11 +179,8 @@
 
 
         <div class="wrapper">
-            <div class="container-fluid {{ $route == 'browser-settings' ? 'mt-0' : 'mt-4'}}">
+            <div class="container-fluid p-0 mt-4">
 
-           
-           
-                       
                 <!-- start page title -->
                 @yield('page-title')
                 <!-- end page title --> 

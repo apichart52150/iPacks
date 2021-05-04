@@ -1,19 +1,6 @@
 @extends('layouts.sac_w')
 
-
-
-@section('content')
-    <style>
-        .nav-bordered a.active {
-            border-bottom: 2px solid #00BCD4 !important;
-        }
-            
-        .icons-list-demo .col-md-4:hover, .icons-list-demo .col-md-4:hover i {
-            color: #00BCD4 !important;
-        }
-    </style>
-
-    @section('page-title')
+@section('page-title')
     <div class="row">
         <div class="col-12">
             <div class="page-title-box">
@@ -28,8 +15,21 @@
             </div>
         </div>
     </div>     
-    @stop
+@endsection
 
+
+@section('content')
+    <style>
+        .nav-bordered a.active {
+            border-bottom: 2px solid #00BCD4 !important;
+        }
+            
+        .icons-list-demo .col-md-4:hover, .icons-list-demo .col-md-4:hover i {
+            color: #00BCD4 !important;
+        }
+    </style>
+
+   
 
     <div class="row">
         <div class="col-lg-6">
