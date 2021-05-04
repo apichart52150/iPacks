@@ -1,34 +1,38 @@
 @extends('layouts.sac_w')
 
-<style>
-.card-header {
-    background-color: #ffc107 !important;
-}
-</style>
 
 @section('page-title')
-<div class="row">
-	<div class="col-12">
-		<div class="page-title-box">
-			<div class="page-title-right">
-				<ol class="breadcrumb m-0">
-					<li class="breadcrumb-item"><i class="mdi mdi-keyboard-return"></i> <a href="{{ url('status_writing') }}">Back</a></li>
-					<!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
-					<li class="breadcrumb-item active">{{$data->header_test}} saved</li>
-				</ol>
-			</div>
-			<h4 class="page-title">Status Writing</h4>
-		</div>
-	</div>
-</div>     
-@stop
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><i class="mdi mdi-keyboard-return"></i> <a href="{{ url('status_writing') }}">Back</a></li>
+                        <!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
+                        <li class="breadcrumb-item active">{{$data->header_test}} saved</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">Status Writing</h4>
+            </div>
+        </div>
+    </div>     
+@endsection
+
+
 
 @section('content')
+
+    <style>
+        .card-header {
+            background-color:#00BCD4 !important;
+        }
+    </style>
+
     <div class="row">
         <div class="col-12 mt-2">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card text-center">
+                    <div class="card-box text-center">
                         <div class="card-header">
                             <ul class="nav nav-tabs card-header-tabs">
                                 <li class="nav-item">
@@ -45,7 +49,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <div class="card text-center">
+                    <div class="card-box text-center">
                         <div class="card-header">
                             <ul class="nav nav-tabs card-header-tabs">
                                 <li class="nav-item">
@@ -65,8 +69,8 @@
                                 <input type="hidden" name="level" value="{{ $data->level }}">
                                 <input type="hidden" name="btn_status" value="">
 
-                                <div class="form-group row">
-                                    <label class="col-auto col-form-label">Select target band</label>
+                                <div class="form-group">
+                                    <label class="col-auto col-form-label mt-3">Select target band</label>
                                     <div class="col-auto">
                                         <select name="targetbrand" class="form-control">
                                             <option value="5">5</option>
@@ -121,7 +125,7 @@
                 {
                     title: "Are you sure",
                     text: text,
-                    type: 'warning',
+                    type: 'info',
                     showCancelButton: true,
                     confirmButtonText: textBtn,
                     confirmButtonClass: 'btn btn-confirm btn-sm mt-2',

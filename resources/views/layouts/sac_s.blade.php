@@ -79,10 +79,9 @@
 
         <!-- Navigation Bar-->
         <header id="topnav">
-        
-            <!-- Topbar Start -->
-            <div class="navbar-custom bg-white">
-                <div class="container-fluid">
+            <div class="container-fluid">
+                <!-- Topbar Start -->
+                <div class="navbar-custom bg-white">
 
                     <ul class="list-unstyled topnav-menu float-right mb-0">
                         <li class="dropdown notification-list mt-3">
@@ -133,64 +132,50 @@
             </div>
             <!-- end Topbar -->
             
-            @if($route !== 'browser-settings')
-                <div class="topbar-menu border-bottom border-left border-right border-white border-3 bg-success">
-                    <div class="container-fluid">
-                        <div id="navigation d-block">
-                            <!-- Navigation Menu-->
-                            <ul class="navigation-menu text-center d-flex justify-content-center font-weight-bold py-1">
-                                <li class="p-2 mr-3">
-                                    <a href="{{ route('isac_speaking_home') }}" class="p-0 text-white"><i class="fas fa-folder-open font-20 d-block mb-1 mx-0"></i> iSAC SPEAKING</a>
-                                </li>
+            <div class="topbar-menu border-bottom border-left border-right border-white border-3 bg-success">
+                <div class="container-fluid">
+                    <div id="navigation d-block">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu text-center d-flex justify-content-center font-weight-bold py-1">
+                            <li class="p-2 mr-3">
+                                <a href="{{ route('user_home') }}" class="p-0 text-white"><i class="fas fa-home font-20 d-block mb-1 mx-0"></i>Home</a>
+                            </li>
+                            
+                            <li class="p-2 mr-3">
+                                <a href="{{ route('isac_speaking_home') }}" class="p-0 text-white"><i class="fas fa-folder-open font-20 d-block mb-1 mx-0"></i> iSAC SPEAKING</a>
+                            </li>
 
-                                <li class="p-2">
-                                    <a href="{{ route('status_speaking') }}" class="p-0 text-white"><i class="fas fa-file-audio font-20 d-block mb-1 mx-0"></i> STATUS</a>
-                                </li>
-                            </ul>
-                            <!-- End navigation menu -->
+                            <li class="p-2">
+                                <a href="{{ route('status_speaking') }}" class="p-0 text-white"><i class="fas fa-file-audio font-20 d-block mb-1 mx-0"></i> STATUS</a>
+                            </li>
+                        </ul>
+                        <!-- End navigation menu -->
 
-                            <div class="clearfix"></div>
-                        </div>
-                        <!-- end #navigation -->
+                        <div class="clearfix"></div>
                     </div>
-                    <!-- end container -->
+                    <!-- end #navigation -->
                 </div>
-                <!-- end navbar-custom -->
-           
-            @endif
+                <!-- end container -->
+            </div>
+            <!-- end navbar-custom -->
+        
         </header>
         <!-- End Navigation Bar-->
 
         <!-- ============================================================== -->
         <!-- Start Page Content here -->
         <!-- ============================================================== -->
-
-        @if($route == 'browser-settings')
-
-        <div class="wrapper" style="padding-top: 80px;">
-        <div class="container-fluid {{ $route == 'browser-settings' ? 'mt-0' : 'mt-4'}}">
-            <!-- start page title -->
-            @yield('page-title')
-            <!-- end page title --> 
-            @yield('content')
-            </div> <!-- end container -->
-        </div>
-
-
-        @else
+        
 
         <div class="wrapper">
-        <div class="container-fluid {{ $route == 'browser-settings' ? 'mt-0' : 'mt-4'}}">
-            <!-- start page title -->
-            @yield('page-title')
-            <!-- end page title --> 
-            @yield('content')
-            </div> <!-- end container -->
-            </div> <!-- end container -->
+            <div class="container-fluid p-0 mt-4">
+                <!-- start page title -->
+                @yield('page-title')
+                <!-- end page title --> 
+                @yield('content')
+            </div> 
         </div>
 
-        @endif
-        <!-- end wrapper -->
 
 
         <!-- Footer -->
@@ -293,7 +278,7 @@
         <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
 
         <!-- Sparkline charts -->
-        <script src="{{ asset('public/assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>]
+        <script src="{{ asset('public/assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
         
         <!-- init js -->
         <script src="{{ asset('public/assets/js/pages/dashboard-1.init.js') }}"></script>

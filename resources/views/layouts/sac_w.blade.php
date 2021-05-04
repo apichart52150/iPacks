@@ -84,20 +84,13 @@
     </head>
 
     <body class="unsticky-header">
-        @php 
-            use App\Model\Writing;
-            $route = Route::current()->uri;
-        @endphp
 
-        <!-- Navigation Bar-->
-        <!-- Navigation Bar-->
-        <!-- Navigation Bar-->
         <header id="topnav">
-        
-        <!-- Topbar Start -->
-        <div class="navbar-custom bg-white">
-            <div class="container-fluid">
-                <ul class="list-unstyled topnav-menu float-right mb-0">
+     
+            <!-- Topbar Start -->
+            <div class="navbar-custom bg-white">
+                <div class="container-fluid">
+                    <ul class="list-unstyled topnav-menu float-right mb-0">
 
                         <li class="dropdown notification-list mt-3 mr-3">
                             @yield('test_time')
@@ -143,11 +136,7 @@
                                 <img src="{{ asset('public/assets/images/logo_nc.png') }}" alt="" width="80%">
                             </span>
                             <span class="logo-sm">
-                                <!-- <span class="logo-sm-text-dark">X</span> -->
-                                <img src="assets/images/logo-sm.png" alt="" height="24">
-                            </span>
-                            <span class="logo-sm">
-                            	<img src="" alt="" height="24">
+                            	<img src="{{ asset('public/assets/images/logo_nc.png') }}" alt="" width="100px">
                             </span>
                         </a>
                     </div>
@@ -190,7 +179,7 @@
 
 
         <div class="wrapper">
-            <div class="container-fluid {{ $route == 'browser-settings' ? 'mt-0' : 'mt-4'}}">
+            <div class="container-fluid p-0 mt-4">
 
                 <!-- start page title -->
                 @yield('page-title')

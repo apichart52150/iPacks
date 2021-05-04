@@ -33,37 +33,38 @@
         <div class="card-box border-top border-success border border-1">
             <h3 class="text-center">Please select a topic</h3>
             <p class="text-center mb-3">Each topic will deduct one point from your account</p>
-            <div class="button-list">
-                @for($i = 1; $i <= 40; $i++)
-                                            
-                    <a href="#custom-modal{{$i}}" class="btn btn-success waves-effect waves-light mb-2" data-animation="fadein" data-plugin="custommodal" data-overlayColor="#38414a"><i class="fas fa-microphone-alt"></i> Topic {{$i < 10 ? "0".$i : $i}}</a>
-                
-                    <!-- Custom Modal -->
-                    <div id="custom-modal{{$i}}" class="modal-demo">
-                        <button type="button" class="close" onclick="Custombox.modal.close();">
-                            <span>&times;</span><span class="sr-only">Close</span>
-                        </button>
-                        <h4 class="custom-modal-title">Topic {{$i < 10 ? "0".$i : $i}}</h4>
-                        <div class="custom-modal-text">
-                            <ul class="text-dark">
-                                <li>Click the <b class="font-italic">Next</b> button to view your speaking topic</li>
-                                <li>Click the <b class="font-italic">Record</b> button to begin recording your answer</li>
-                                <li>Click the <b class="font-italic">Reset</b> button to redo your recording</li>
-                                <li>Click the <b class="font-italic">Allow</b> button to enable your microphone</li>
-                            </ul>
-                            
-                            <div class="text-center">
-                                <img src="{{ asset('public/assets/images/allow_mic.png') }}" class="border border-3" width="300">
+            <div class="row text-center">
+                <div class="col-12">
+                    @for($i = 1; $i <= 40; $i++)
+                                                
+                        <a href="#custom-modal{{$i}}" class="btn btn-success waves-effect waves-light mb-2" data-animation="fadein" data-plugin="custommodal" data-overlayColor="#38414a"><i class="fas fa-microphone-alt"></i> Topic {{$i < 10 ? "0".$i : $i}}</a>
+                    
+                        <!-- Custom Modal -->
+                        <div id="custom-modal{{$i}}" class="modal-demo">
+                            <button type="button" class="close" onclick="Custombox.modal.close();">
+                                <span>&times;</span><span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="custom-modal-title">Topic {{$i < 10 ? "0".$i : $i}}</h4>
+                            <div class="custom-modal-text">
+                                <ul class="text-dark">
+                                    <li>Click the <b class="font-italic">Next</b> button to view your speaking topic</li>
+                                    <li>Click the <b class="font-italic">Record</b> button to begin recording your answer</li>
+                                    <li>Click the <b class="font-italic">Reset</b> button to redo your recording</li>
+                                    <li>Click the <b class="font-italic">Allow</b> button to enable your microphone</li>
+                                </ul>
+                                
+                                <div class="text-center">
+                                    <img src="{{ asset('public/assets/images/allow_mic.png') }}" class="border border-3" width="300">
+                                </div>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div class="m-auto">
-                                <a href="{{ url('intro/Topic'.($i < 10 ? '0'.$i : $i)) }}" class="btn btn-success waves-effect waves-light">NEXT</a>
+                            <div class="modal-footer">
+                                <div class="m-auto">
+                                    <a href="{{ url('intro/Topic'.($i < 10 ? '0'.$i : $i)) }}" class="btn btn-success waves-effect waves-light">NEXT</a>
+                                </div>
                             </div>
-                        </div>
-                    </div> 
-                @endfor
-                <div id="icon" class="fa"></div>
+                        </div> 
+                    @endfor
+                </div>
             </div>
             <!-- end button-list -->
         </div>

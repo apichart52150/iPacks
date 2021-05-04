@@ -28,8 +28,8 @@
 
 
                     <li class="has-submenu">
-                        <a href="{{ url('mocktest/home') }}">
-                            <i class="fab fa-medium-m"></i>Mocktest<div class="arrow-down"></div>
+                        <a href="#">
+                            <i class="fas fa-language"></i>Language Use<div class="arrow-down"></div>
                         </a>
                     </li>
 
@@ -176,14 +176,14 @@
     </div><!-- end col -->
 
     <div class="col-xl-6 col-md-6">
-        <a href="{{ url('mocktest/home') }}">
+        <a href="#">
             <div class="card-box widget-icon bg-primary">
                 <!-- <div class="ribbon-two ribbon-two-diamond avatar-title display-6 m-0 "><span>Diamond</span></div> -->
                 <div class="avatar-lg float-left">
-                    <i class=" fab fa-medium-m avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                    <i class="fas fa-language avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                 </div>
                 <div class="text-center">
-                    <h2 class="mb-3 text-light"> Mocktest </h2>
+                    <h2 class="mb-3 text-light">Language Use</h2>
                 </div>
             </div>
         </a>
@@ -207,19 +207,6 @@
         </a>
     </div><!-- end col -->
 
-    <div class="col-xl-6 col-md-6">
-        <a href="{{ url('clubs/condition') }}">
-            <div class="card-box widget-icon bg-primary">
-                <!-- <div class="ribbon-two ribbon-two-secondary avatar-title display-6 m-0 "><span>Premium</span></div> -->
-                <div class="avatar-lg float-left">
-                    <i class="fas fa-users avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                </div>
-                <div class="text-center">
-                    <h2 class="mb-3 text-light"> Club </h2>
-                </div>
-            </div>
-        </a>
-    </div><!-- end col -->
 </div>
 @endsection
 
