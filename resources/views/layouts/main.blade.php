@@ -10,39 +10,19 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{asset('public/assets/images/newcambridge-logo_bar.png') }}">
 
-        <!-- App css -->
-        <link href="{{asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('public/assets/css/app.min.cs') }}s" rel="stylesheet" type="text/css" />
+        <!-- Lightbox css -->
+        <link href="{{ asset('public/assets/libs/magnific-popup/magnific-popup.css') }}" rel="stylesheet" type="text/css" />
 
-        
-        <!-- third party css -->
-        <link href="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('public/assets/libs/datatables/responsive.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('public/assets/libs/datatables/buttons.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('public/assets/libs/datatables/select.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
-        <!-- third party css end -->
+        <!-- App css -->
+        <link href="{{ asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
 
         <!-- Custom box css -->
         <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
-
-        <!-- Footable css -->
-        <link href="{{ asset('public/assets/libs/footable/footable.core.min.css') }}" rel="stylesheet" type="text/css" />
-        
-        <link href="{{asset('public/assets/css/style.css') }}" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="{{asset('public/plugins/jquery.steps/css/jquery.steps.css')}}" />
-        <style>
-            .wizard .content .body{
-                width: 100%;
-            }
-        </style>
     </head>
 
-
-
-
     <body class="center-menu">
-
         <!-- Navigation Bar-->
         <header id="topnav">
             <!-- Topbar Start -->
@@ -75,7 +55,7 @@
                                 <div class="dropdown-header noti-title">
                                     <h6 class="text-overflow m-0">Welcome !</h6>
                                 </div>
-
+                                
                                 <a data-toggle="modal" data-target="#myModal" class="dropdown-item notify-item">
                                     <i class="mdi mdi-account-circle"></i>
                                     <span>My Account</span>
@@ -91,33 +71,89 @@
 
                             </div>
                         </li>            
-
-
                     </ul>
 
                     <!-- LOGO -->
                     <div class="logo-box">
-                        <a href="#" class="logo text-center">
+                        <div class="logo text-center">
                             <span class="logo-lg">
                                 <img src="{{asset('public/assets/images/logo-nc.png') }}" alt="" height="45">
                                 <!-- <span class="logo-lg-text-light">Xeria</span> -->
                             </span>
                             <span class="logo-sm">
                                 <!-- <span class="logo-sm-text-dark">X</span> -->
-                                <img src="{{asset('public/assets/images/logo-nc.png') }}" alt="" height="24">
+                                <img src="{{asset('public/assets/images/logo-nc-mini.png') }}"alt="" height="45">
                             </span>
-                        </a>
+                        </div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
             </div>
             <!-- end Topbar -->
 
-            @yield('topbar')
+            <div class="topbar-menu">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class=" mdi mdi-view-dashboard"></i>iSAC<div class="arrow-down"></div>
+                                </a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="{{ route('isac_writing_home') }}"><i class="fas fa-pencil-alt"></i>  Writing</a> 
+                                    <li>
+                                        <a href="{{ route('browser-settings') }}"><i class="fas fa-comment-dots"></i>  Speaking</a>
+                                    </li>
+                                    <li>
+                                            <a href="https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/{{auth('student')->user()->std_id}}" target="_blank"><i class="fas fa-eye"></i>  Reading</a>
+                                    </li>
+                                    <li>
+                                            <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('student')->user()->std_id }}"  target="_blank"><i class=" fas fa-volume-up"></i>  Listening</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class="fas fa-language"></i>Language Use<div class="arrow-down"></div>
+                                </a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class="fas fa-film"></i>Strategies Packs<div class="arrow-down"></div>
+                                </a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('student')->user()->std_id }}"  target="_blank">
+                                    <i class="fas fa-briefcase"></i>Topic Packs<div class="arrow-down"></div>
+                                </a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="{{ url('clubs/condition') }}">
+                                    <i class="fas fa-users"></i>Bonus&Club<div class="arrow-down"></div>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- End navigation menu -->
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- end #navigation -->
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end navbar-custom -->
 
         </header>
         <!-- End Navigation Bar-->
-
         <!-- ============================================================== -->
         <!-- Start Page Content here -->
         <!-- ============================================================== -->
@@ -127,14 +163,12 @@
                 @yield('content')
             </div>
         </div>
-
-
         <!-- ============================================================== -->
         <!-- End Page content -->
         <!-- ============================================================== -->
     
-          <!-- Footer -->
-          <footer class="footer">
+        <!-- Footer -->
+        <footer class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
@@ -143,126 +177,23 @@
                 </div>
             </div>
         </footer>
-        <!-- End Footer -->
+        <!-- End Footer -->    
 
-        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body p-4 text-center">
-
-                        <img src="{{ asset('public/assets/images/users/user_std.png') }}" class="rounded-circle avatar-xl img-thumbnail" alt="profile-image">
-
-                        <div class="border border-primary border-top-0 border-right-0 border-left-0 mb-1" style="border-width: 3px !important;">
-                            <h5 class="m-b-5 m-t-10 text-uppercase">{{Auth::user()->std_name}}</h5>
-                        </div>
-
-                        <div class="text-left mt-2 row">
-                            <div class="col-md-6">
-                                <p class="text-muted font-15"><strong>Full Name :</strong> <span class="m-l-15">{{Auth::user()->std_username}}</span></p>
-                            </div>
-                            <div class="col-md-6">
-                                <p class="text-muted font-15"><strong>Mobile :</strong><span class="m-l-15">{{Auth::user()->std_mobile}}</span></p>
-                            </div>
-                            <div class="col-md-6">
-                                <p class="text-muted font-15"><strong>Course :</strong> <span class="m-l-15">{{\App\Model\Profile::getProfile()->coursename}}</span></p>
-                            </div>
-                        </div>
-
-                        <hr>
-
-                        <div class="text-left m-t-20 row">
-                    
-                            <div class="col-md-6">
-                                <p class="text-muted font-16"><strong>Writing Point :</strong> <span class="badge badge-primary p-1">{{Auth::user()->std_pointsac}} Point</span></p>
-                            </div>
-
-                            <div class="col-md-6">
-                                <p class="text-muted font-16"><strong>Speaking Point :</strong> <span class="badge badge-success p-1">{{Auth::user()->std_pointspeaking}} Point</span></p>
-                            </div>
-                        </div>
-
-                        <div class="text-left m-t-20 row">
-                    
-                            <div class="col-md-6">
-                                <p class="text-muted font-16"><strong>Bonus & Club :</strong> <span class="badge badge-info p-1">{{Auth::user()->std_point}} Point</span></p>
-                            </div>
-                            <div class="col-md-6">
-                                <p class="text-muted font-16"><strong>Expire Date :</strong> <span class="badge badge-danger p-1">{{\App\Model\Profile::getProfile()->lastdate}}</span></p>
-                            </div>
-                        </div>
-
-                        <hr>
-                        
-                        <div class="row">
-                            <div class="col-md-12">
-                                <a href="{{url('clubs/status_clubs')}}" class="btn btn-bordered-primary waves-effect width-md waves-light">View Club</a>
-                            </div>
-                        </div>
-                           
-                    </div>
-                </div>
-            </div>
-        </div><!-- /.modal -->
-
+        @include('student.profile')
        
-
-        
-
-        <!-- Right bar overlay-->
-        <div class="rightbar-overlay"></div>
-
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
 
         <!-- Modal-Effect -->
         <script src="{{ asset('public/assets/libs/custombox/custombox.min.js') }}"></script>
 
-        <script src="{{ asset('public/assets/libs/jquery-knob/jquery.knob.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/peity/jquery.peity.min.js') }}"></script>
+        <!-- Magnific Popup-->
+        <script src="{{ asset('public/assets/libs/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
 
-        <!-- Sparkline charts -->
-        <script src="{{ asset('public/assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
-
-        <!-- init js -->
-        <script src="{{ asset('public/assets/js/pages/dashboard-1.init.js') }}"></script>
+        <!-- Gallery Init-->
+        <script src="{{ asset('public/assets/js/pages/gallery.init.js') }}"></script>
 
         <!-- App js -->
         <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
-
-        <!-- add wizard -->
-
-        <!--Form Wizard--> 
-        <script src="{{ asset('public/plugins/jquery.steps/js/jquery.steps.min.js') }}" type="text/javascript"></script> 
-
-        <!--wizard initialization--> 
-        <script src="{{ asset('public/assets/pages/jquery.wizard-init.js') }}" type="text/javascript"></script>
-
-        
-        <!-- third party js -->
-        <script src="{{ asset('public/assets/libs/datatables/jquery.dataTables.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/datatables/dataTables.responsive.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/datatables/responsive.bootstrap4.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/datatables/dataTables.buttons.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/datatables/buttons.bootstrap4.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/datatables/buttons.html5.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/datatables/buttons.flash.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/datatables/buttons.print.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/datatables/dataTables.keyTable.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/datatables/dataTables.select.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/pdfmake/pdfmake.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/pdfmake/vfs_fonts.js') }}"></script>
-        <!-- third party js ends -->
-
-        <!-- Datatables init -->
-        <script src="{{ asset('public/assets/js/pages/datatables.init.js') }}"></script>
-
-        <!-- Footable js -->
-        <script src="{{ asset('public/assets/libs/footable/footable.all.min.js') }}"></script>
-
-        <!-- Init js -->
-        <script src="{{ asset('public/assets/js/pages/foo-tables.init.js') }}"></script>
-        @yield('javascript') 
-        
     </body>
 </html>
