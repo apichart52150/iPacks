@@ -180,6 +180,8 @@
         <!-- End Footer -->    
 
         @include('student.profile')
+
+        
        
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
@@ -195,5 +197,8 @@
 
         <!-- App js -->
         <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
+
+        @yield('js')
+        
     </body>
 </html>

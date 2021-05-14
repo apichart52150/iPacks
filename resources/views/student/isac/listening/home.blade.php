@@ -54,76 +54,48 @@
 
 
 <div class="row filterable-content">    
-    @foreach ($data as $id => $manu_name)
-    @php
-        if ($id == '1'){
-            $color = 'info';
-        }elseif ($id == '2'){
-            $color = 'warning';
-        }elseif ($id == '3'){
-            $color = 'danger';
-        }else{
-            $color = 'pink';
-        }
-        
-    @endphp
-       
-        <div class="col-sm-6 col-xl-3 filter-item all web illustrator">
+    
+    @foreach ($menu as $id => $manu_name)
+        @php
+            if ($id == '1'){
+                $color = 'info';
+                $name =  'Challenges Practice';
+            }elseif ($id == '2'){
+                $color = 'warning';
+                $name =  'NC Listening Test';
+            }elseif ($id == '3'){
+                $color = 'danger';
+                $name =  'Active Listening';
+            }else{
+                $color = 'pink';
+                $name =  'Language Drills Practice';
+            }
+        @endphp
+        <div class="col-sm-6 col-xl-3">
             <div class="gal-box">
-                <a data-toggle="modal" data-target="#main{{$id}}"  class="hover-scale" id="general-english">
+                <a href="#main{{$id}}" class="gal-like-btn"  data-animation="fadein" data-plugin="custommodal" data-overlayColor="#38414a">
                     <div class="widget-simple text-center w-100 p-3 bg-{{$color}}">
                         <i class="fas fa-headphones text-light fa-8x mb-2"></i>
                     </div>
                 </a>
                 <div class="gall-info"  id="headingOne">
-                    <h4 class="font-16 mt-0 text-{{$color}}">Challenge Practice</h4>
-                    <div class="accordion" id="accordionExample-{{$id}}">
-                        <a class="collapsed gal-like-btn" data-toggle="collapse" href="#collapse-{{$id}}" aria-expanded="false" aria-controls="collapse-{{$id}}">
-                            <div class="hover-scale">
-                                <div class="widget-simple">
-                                    <i class="fas fa-angle-down text-{{$color}} fa-2x"></i>
-                                </div>
+                    <h4 class="font-16 mt-0 text-{{$color}}">{{$name}}</h4>
+                    <a href="#pdf{{$id}}" class="gal-like-btn"  data-animation="flash" data-plugin="custommodal" data-overlayColor="#38414a">
+                        <div class="hover-scale">
+                            <div class="widget-simple">
+                                <i class="fas fa-cloud-download-alt text-{{$color}} fa-2x"></i>
                             </div>
-                        </a>
-                        <img src="{{ asset('public/assets/images/file-icons/pdf.svg') }}" alt="user-img" class="rounded-circle" height="24" />
-                        <span class="text-muted ml-1">Download PDF.file</span>
-                        
-                    </div>
+                        </div>
+                    </a>
+                    <img src="{{ asset('public/assets/images/file-icons/pdf.svg') }}" alt="user-img" class="rounded-circle" height="24" />
+                    <span class="text-muted ml-1">Download PDF.file</span>
                 </div> <!-- gallery info -->
             </div> <!-- end gal-box -->
         </div> <!-- end col -->
         @include('student.isac.listening.modal_listening')
-
-  
     @endforeach
-
-    <div id="collapse-1" class="collapse mt-2" aria-labelledby="heading1" data-parent="#accordionExample-1">
-        <div class="row icons-list-demo">
-            <div class="col-lg-12" >
-                <a href="#"  class="text-info">
-                    <i class="fas fa-download fa-2x" style="font-size: 18px"></i>
-                    Challenges-Practice-Advanced
-                </a>
-            </div>
-            <div class="col-lg-12">
-                <a href="#"  class="text-info">
-                    <i class="fas fa-download fa-2x" style="font-size: 18px"></i>
-                    Challenges-Practice-Business
-                </a>
-            </div>
-            <div class="col-lg-12">
-                <a href="#"  class="text-info">
-                    <i class="fas fa-download fa-2x" style="font-size: 18px"></i>
-                    Challenges-Practice-Intermediate
-                </a>
-            </div>
-        </div>
-    
-    </div>
-
-   
 </div>
 <!-- end row -->
-
 @endsection
+
 
