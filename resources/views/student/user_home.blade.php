@@ -1,68 +1,5 @@
 @extends('layouts.main')
 
-@section('topbar')
-    <div class="topbar-menu">
-        <div class="container-fluid">
-            <div id="navigation">
-                <!-- Navigation Menu-->
-                <ul class="navigation-menu">
-
-                    <li class="has-submenu">
-                        <a href="#">
-                            <i class=" mdi mdi-view-dashboard"></i>iSAC<div class="arrow-down"></div>
-                        </a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="{{ route('isac_writing_home') }}"><i class="fas fa-pencil-alt"></i>  Writing</a> 
-                            <li>
-                                <a href="{{ route('browser-settings') }}"><i class="fas fa-comment-dots"></i>  Speaking</a>
-                            </li>
-                            <li>
-                                    <a href="https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/{{auth('student')->user()->std_id}}" target="_blank"><i class="fas fa-eye"></i>  Reading</a>
-                            </li>
-                            <li>
-                                    <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('student')->user()->std_id }}"  target="_blank"><i class=" fas fa-volume-up"></i>  Listening</a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    <li class="has-submenu">
-                        <a href="#">
-                            <i class="fas fa-language"></i>Language Use<div class="arrow-down"></div>
-                        </a>
-                    </li>
-
-                    <li class="has-submenu">
-                        <a href="#">
-                            <i class="fas fa-film"></i>Strategies Packs<div class="arrow-down"></div>
-                        </a>
-                    </li>
-
-                    <li class="has-submenu">
-                        <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('student')->user()->std_id }}"  target="_blank">
-                            <i class="fas fa-briefcase"></i>Topic Packs<div class="arrow-down"></div>
-                        </a>
-                    </li>
-
-                    <li class="has-submenu">
-                        <a href="{{ url('clubs/condition') }}">
-                            <i class="fas fa-users"></i>Bonus&Club<div class="arrow-down"></div>
-                        </a>
-                    </li>
-
-                </ul>
-                <!-- End navigation menu -->
-
-                <div class="clearfix"></div>
-            </div>
-            <!-- end #navigation -->
-        </div>
-        <!-- end container -->
-    </div>
-    <!-- end navbar-custom -->
-@endsection
-
 @section('page-title')
     <!-- start page title -->
     <div class="row">
@@ -70,8 +7,7 @@
             <div class="page-title-box">
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">iPacks</a></li>
-                        <li class="breadcrumb-item active">Home</li>
+                        <li class="breadcrumb-item active"><i class="fas fa-home"></i> Home</li>
                     </ol>
                 </div>
                 <h4 class="page-title">Home</h4>
@@ -82,27 +18,10 @@
 @endsection
 
 @section('content')
-<style>
-
-     .ribbon-two-silver span {
-        background: #C0C0C0 !important;
-    }
-
-
-     .ribbon-two-platinum span {
-        background: #81C1BD !important;
-    }
-
-
-     .ribbon-two-diamond span {
-        background: #70d1f4  !important;
-    }
-
-</style>
 <div class="row d-flex justify-content-center">
     
     <div class="col-xl-3 col-md-6">
-        <a href="#" class="wave-light">
+        <a href="{{ url('isac/listening') }}" class="wave-light">
             <div class="card-box widget-icon bg-danger">
                 <div class="avatar-lg float-left">
                     <i class=" fas fa-volume-up avatar-title display-6 m-0 " style="font-size: 5em;"></i>
