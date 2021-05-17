@@ -80,7 +80,7 @@
                 </a>
                 <div class="gall-info"  id="headingOne">
                     <h4 class="font-16 mt-0 text-{{$color}}">{{$name}}</h4>
-                    <a href="#pdf{{$id}}" class="gal-like-btn"  data-animation="flash" data-plugin="custommodal" data-overlayColor="#38414a">
+                    <a class="gal-like-btn"  data-toggle="modal" data-target="#pdf{{$id}}" data-plugin="custommodal">
                         <div class="hover-scale">
                             <div class="widget-simple">
                                 <i class="fas fa-cloud-download-alt text-{{$color}} fa-2x"></i>
