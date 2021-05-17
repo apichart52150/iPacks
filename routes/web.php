@@ -73,8 +73,21 @@
 
 		Route::prefix('language')->namespace('student\isac\languageController')->group(function () {
 			Route::get('home', 'HomeController@index');
-		});
+			Route::get('{topic}', 'TopicController@index');
 
+			Route::prefix('Intermediate')->group(function () {
+				Route::get('{sub_topic}', 'ActivityController@index');
+			});
+			Route::prefix('Advanced')->group(function () {
+				Route::get('{sub_topic}', 'ActivityController@index');
+			});
+			Route::prefix('Report')->group(function () {
+				Route::get('{sub_topic}', 'ActivityController@index');
+			});
+			Route::prefix('Essays')->group(function () {
+				Route::get('{sub_topic}', 'ActivityController@index');
+			});
+		});
 	});
 
 // ==================== End Rou tes User ====================== //

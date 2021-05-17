@@ -29,30 +29,12 @@ class HomeController extends Controller
             }
         // dd($menu);
 
-            return view('student.isac.language.home', compact('menu'));
+            return view('student.language.home', compact('menu'));
         }else {
             return redirect('user_login');
         }
     }
 
-    public function submenu(Request $request){
-        $sub_menu = DB::table('sub_menu_lis')
-        ->select('*')
-        ->where('sub_menu_type','=', $request->input('main_menu'))
-        ->get();
-
-        if($request->input('type') == '1'){
-            $color = "info";
-        }elseif ($request->input('type') == '2'){
-            $color = "warning";
-        }elseif($request->input('type') == '3'){
-            $color = "danger";
-        }else{
-            $color = "pink";
-        }
-        // dd($sub_menu );
-        return view('student.isac.listening.subhome', compact('sub_menu','color'));
-    }
 
     public function audio($id){
 
