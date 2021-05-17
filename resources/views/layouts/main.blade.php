@@ -111,20 +111,20 @@
                                             <a href="https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/{{auth('student')->user()->std_id}}" target="_blank"><i class="fas fa-eye"></i>  Reading</a>
                                     </li>
                                     <li>
-                                            <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('student')->user()->std_id }}"  target="_blank"><i class=" fas fa-volume-up"></i>  Listening</a>
+                                            <a href="{{url('isac/listening')}}"><i class=" fas fa-volume-up"></i>  Listening</a>
                                     </li>
                                 </ul>
                             </li>
 
 
                             <li class="has-submenu">
-                                <a href="#">
+                                <a href="{{url('language/home')}}">
                                     <i class="fas fa-language"></i>Language Use<div class="arrow-down"></div>
                                 </a>
                             </li>
 
                             <li class="has-submenu">
-                                <a href="#">
+                                <a href="https://newcambridgethailand.com/strategies-pack/access/RG4gERG9AlIDiwiaWF0IjoxNTE2MjM5MDI/{{auth('student')->user()->std_id}}" target="_blank">
                                     <i class="fas fa-film"></i>Strategies Packs<div class="arrow-down"></div>
                                 </a>
                             </li>

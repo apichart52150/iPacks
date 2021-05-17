@@ -120,7 +120,7 @@
 <div class="row">
 
     <div class="col-xl-12 col-md-12">
-        <a href="#">
+        <a href="{{url('language/home')}}">
             <div class="card-box widget-icon bg-primary">
                 <!-- <div class="ribbon-two ribbon-two-diamond avatar-title display-6 m-0 "><span>Diamond</span></div> -->
                 <div class="avatar-lg float-left">

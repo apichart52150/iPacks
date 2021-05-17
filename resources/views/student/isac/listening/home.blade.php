@@ -83,7 +83,7 @@
                     <a class="gal-like-btn"  data-toggle="modal" data-target="#pdf{{$id}}" data-plugin="custommodal">
                         <div class="hover-scale">
                             <div class="widget-simple">
-                                <i class="fas fa-cloud-download-alt text-{{$color}} fa-2x"></i>
+                                <i class="fas fa-cloud-download-alt text-{{$color}} fa-1x"></i>
                             </div>
                         </div>
                     </a>
