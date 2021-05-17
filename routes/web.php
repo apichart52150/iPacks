@@ -71,6 +71,10 @@
 			Route::get('audio/{id?}', 'HomeController@audio')->name('audio');
 		});
 
+		Route::prefix('language')->namespace('student\isac\languageController')->group(function () {
+			Route::get('home', 'HomeController@index');
+		});
+
 	});
 
 // ==================== End Rou tes User ====================== //

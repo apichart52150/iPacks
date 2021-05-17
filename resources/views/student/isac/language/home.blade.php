@@ -59,18 +59,19 @@
         @php
             if ($id == '1'){
                 $color = 'info';
-                $name =  'Challenges Practice';
+                $name =  'Grammar and Vocabulary Intermediate';
             }elseif ($id == '2'){
                 $color = 'warning';
-                $name =  'NC Listening Test';
+                $name =  'Grammar and Vocabulary Advanced';
             }elseif ($id == '3'){
                 $color = 'danger';
-                $name =  'Active Listening';
+                $name =  'IELTS Task 1 Report';
             }else{
                 $color = 'pink';
-                $name =  'Language Drills Practice';
+                $name =  'IELTS Task 1 Essays';
             }
         @endphp
+
         <div class="col-sm-6 col-xl-3">
             <div class="gal-box">
                 <a href="#main{{$id}}" class="gal-like-btn"  data-animation="fadein" data-plugin="custommodal" data-overlayColor="#38414a">
@@ -80,15 +81,17 @@
                 </a>
                 <div class="gall-info"  id="headingOne">
                     <h4 class="font-16 mt-0 text-{{$color}}">{{$name}}</h4>
-                    <a class="gal-like-btn"  data-toggle="modal" data-target="#pdf{{$id}}" data-plugin="custommodal">
-                        <div class="hover-scale">
-                            <div class="widget-simple">
-                                <i class="fas fa-cloud-download-alt text-{{$color}} fa-1x"></i>
+                    @if (($id == 3 || $id == 4))
+                        <a class="gal-like-btn mt-2"  data-toggle="modal" data-target="#pdf{{$id}}" data-plugin="custommodal">
+                            <div class="hover-scale">
+                                <div class="widget-simple">
+                                    <i class="fas fa-cloud-download-alt text-{{$color}} fa-1x"></i>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <img src="{{ asset('public/assets/images/file-icons/pdf.svg') }}" alt="user-img" class="rounded-circle" height="24" />
-                    <span class="text-muted ml-1">Download PDF.file</span>
+                        </a>
+                        <img src="{{ asset('public/assets/images/file-icons/pdf.svg') }}" alt="user-img" class="rounded-circle" height="24" />
+                        <span class="text-muted ml-1">Download PDF.file</span>
+                    @endif
                 </div> <!-- gallery info -->
             </div> <!-- end gal-box -->
         </div> <!-- end col -->
