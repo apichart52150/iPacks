@@ -65,7 +65,7 @@
 			Route::post('store_sac_save', 'ViewController@store_sac_save')->name('store.sac-save');
 		});
 
-		Route::prefix('isac')->namespace('student\isac\ListeningController')->group(function () {
+		Route::prefix('isac')->namespace('student\isac\listeningController')->group(function () {
 			Route::get('listening', 'HomeController@index')->name('listening');
 			Route::post('submenu', 'HomeController@submenu')->name('sub_menu');
 			Route::get('audio/{id?}', 'HomeController@audio')->name('audio');
