@@ -3,7 +3,7 @@
         <div class="modal-content">
             <div class="modal-body p-4 text-center">
 
-                <img src="{{ asset('public/assets/images/users/user_std.png') }}" class="rounded-circle avatar-xl img-thumbnail" alt="profile-image">
+                <img src="{{ asset('public/assets/images/user.png') }}" class="rounded-circle avatar-xl img-thumbnail" alt="profile-image">
 
                 <div class="border border-primary border-top-0 border-right-0 border-left-0 mb-1" style="border-width: 3px !important;">
                     <h5 class="m-b-5 m-t-10 text-uppercase">{{Auth::user()->std_name}}</h5>
