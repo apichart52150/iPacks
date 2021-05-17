@@ -102,7 +102,7 @@
                         
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="{{ asset('public/assets/images/users/user_std.png') }}" alt="user-image" class="rounded-circle">
+                                <img src="{{ asset('public/assets/images/user.png') }}" alt="user-image" class="rounded-circle">
                                 <span class="pro-user-name ml-1 text-secondary">
                                     {{ Auth::user()->std_name }} <i class="mdi mdi-chevron-down"></i> 
                                 </span>
@@ -136,7 +136,7 @@
                                 <img src="{{ asset('public/assets/images/logo_nc.png') }}" alt="" width="80%">
                             </span>
                             <span class="logo-sm">
-                            	<img src="{{ asset('public/assets/images/logo_nc.png') }}" alt="" width="100px">
+                            	<img src="*" alt="" width="100px">
                             </span>
                         </a>
                     </div>

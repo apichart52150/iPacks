@@ -89,7 +89,7 @@
                         </li>
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="{{ asset('public/assets/images/users/user_std.png') }}" alt="user-image" class="rounded-circle">
+                                <img src="{{ asset('public/assets/images/user.png') }}" alt="user-image" class="rounded-circle">
                                 <span class="pro-user-name ml-1 text-secondary">
                                     {{ Auth::user()->std_name }} <i class="mdi mdi-chevron-down"></i> 
                                 </span>
@@ -122,7 +122,7 @@
                                 <img src="{{ asset('public/assets/images/logo_nc.png') }}" alt="" width="80%">
                             </span>
                             <span class="logo-sm">
-                            	<img src="{{ asset('public/assets/images/logo_nc.png') }}" alt="" width="100px">
+                            	<img src="*" alt="" width="100px">
                             </span>
                         </a>
                     </div>
@@ -195,7 +195,7 @@
                 <div class="modal-content">
                     <div class="modal-body p-4 text-center">
 
-                        <img src="{{ asset('public/assets/images/users/user_std.png') }}" class="rounded-circle avatar-xl img-thumbnail" alt="profile-image">
+                        <img src="{{ asset('public/assets/images/user.png') }}" class="rounded-circle avatar-xl img-thumbnail" alt="profile-image">
 
                         <div class="border border-primary border-top-0 border-right-0 border-left-0 mb-1" style="border-width: 3px !important;">
                             <h5 class="m-b-5 m-t-10 text-uppercase">{{Auth::user()->std_name}}</h5>
