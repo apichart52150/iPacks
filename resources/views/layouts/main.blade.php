@@ -135,12 +135,6 @@
                                 </a>
                             </li>
 
-                            <li class="has-submenu">
-                                <a href="{{ url('clubs/condition') }}">
-                                    <i class="fas fa-users"></i>Bonus&Club<div class="arrow-down"></div>
-                                </a>
-                            </li>
-
                         </ul>
                         <!-- End navigation menu -->
 
