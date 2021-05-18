@@ -41,7 +41,7 @@
                 <div class="d-flex justify-content-center align-items-center flex-wrap">
                 @foreach($activities['activities'] as $key => $activity)
                     <div class="col-xl-3 col-md-6 col-sm-12">
-                        <a href="{{ url($activities['topicNo'].'/'.substr($activities['category'], 0, 1).'/'.$key) }}" class="btn btn-block btn-{{ $activities['color'] }} d-inline-flex flex-column align-items-center justify-content-between mr-2 mt-2">
+                        <a href="{{ url('language/'.$activities['topicName'].'/'.$activities['topicLink'].'/'.$activities['topicLink']) }}" class="btn btn-block btn-{{ $activities['color'] }} d-inline-flex flex-column align-items-center justify-content-between mr-2 mt-2">
                             <span class="mt-1">{{ $activity->sub_menu_name }}</span>
                         </a>  
                     </div>
