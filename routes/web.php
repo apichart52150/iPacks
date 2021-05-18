@@ -76,27 +76,30 @@
 			Route::get('{topic}', 'TopicController@index');
 
 			Route::prefix('Intermediate')->group(function () {
-				Route::get('{sub_topic}', 'ActivityController@index');
 				Route::prefix('{sub_topic}')->group(function () {
-					Route::get('/{activity}', 'ActivityController@exam');
+					Route::get('/', 'ActivityController@index');
+					Route::get('/{sub_menu_id}', 'ActivityController@exam');
 				});
 			});
+
 			Route::prefix('Advanced')->group(function () {
-				Route::get('{sub_topic}', 'ActivityController@index');
 				Route::prefix('{sub_topic}')->group(function () {
-					Route::get('/{activity}', 'ActivityController@exam');
+					Route::get('/', 'ActivityController@index');
+					Route::get('/{sub_menu_id}', 'ActivityController@exam');
 				});
 			});
+
 			Route::prefix('Report')->group(function () {
-				Route::get('{sub_topic}', 'ActivityController@index');
 				Route::prefix('{sub_topic}')->group(function () {
-					Route::get('/{activity}', 'ActivityController@exam');
+					Route::get('/', 'ActivityController@index');
+					Route::get('/{sub_menu_id}', 'ActivityController@exam');
 				});
 			});
+
 			Route::prefix('Essays')->group(function () {
-				Route::get('{sub_topic}', 'ActivityController@index');
 				Route::prefix('{sub_topic}')->group(function () {
-					Route::get('/{activity}', 'ActivityController@exam');
+					Route::get('/', 'ActivityController@index');
+					Route::get('/{sub_menu_id}', 'ActivityController@exam');
 				});
 			});
 		});

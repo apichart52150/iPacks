@@ -11,8 +11,8 @@ class ActivityController extends Controller
     public function index($sub_topic)
     {
         $sub_menu = DB::table('sub_menu_language')
-        ->where('sub_menu_id','=', $sub_topic)
-        ->select('sub_menu_name')
+        ->where('sub_menu_type','=', $sub_topic)
+        ->select('sub_menu_name', 'sub_menu_id')
         ->get();
 
         $menu = DB::table('menu_language')
@@ -70,23 +70,24 @@ class ActivityController extends Controller
         return view('student.language.activities', compact('activities'));
     }
 
-    public function exam($activity) {
+    public function exam($sub_menu_id) {
 
         $sub_menu = DB::table('sub_menu_language')
-        ->where('sub_menu_id','=', $activity)
-        ->select('sub_menu_name')
+        ->where('sub_menu_id','=', $sub_menu_id)
+        ->select('sub_menu_name','sub_menu_type')
         ->get();
 
-        $menu = DB::table('menu_language')
-        ->where('menu_id','=', $activity)
-        ->select('menu_id','menu_name','menu_type')
+        $main_menu = DB::table('menu_language')
+        ->where('menu_id','=', $sub_menu[0]->sub_menu_type)
+        ->select('menu_id','menu_name')
         ->get();
 
-        $view = "topic1.listening.$activity";
+        $path = $sub_menu[0]->sub_menu_type;
+
+        $view = "student.language.exam.$path.$sub_menu_id";
 
         $pageTitle = [
-            'type' => 'IELTS Task 2',
-            'category' => $menu[0]->menu_name,
+            'category' => $main_menu[0]->menu_name,
             'topic' => $sub_menu[0]->sub_menu_name,
         ];
 
