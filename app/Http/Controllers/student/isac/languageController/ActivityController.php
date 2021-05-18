@@ -70,4 +70,28 @@ class ActivityController extends Controller
         return view('student.language.activities', compact('activities'));
     }
 
+    public function exam($activity) {
+
+        $sub_menu = DB::table('sub_menu_language')
+        ->where('sub_menu_id','=', $activity)
+        ->select('sub_menu_name')
+        ->get();
+
+        $menu = DB::table('menu_language')
+        ->where('menu_id','=', $activity)
+        ->select('menu_id','menu_name','menu_type')
+        ->get();
+
+        $view = "topic1.listening.$activity";
+
+        $pageTitle = [
+            'type' => 'IELTS Task 2',
+            'category' => $menu[0]->menu_name,
+            'topic' => $sub_menu[0]->sub_menu_name,
+        ];
+
+    
+        return view('student.language.exam', ['view' => $view, 'pageTitle' => $pageTitle]);
+    }
+
 }
