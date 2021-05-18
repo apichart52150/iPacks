@@ -35,7 +35,7 @@ class TopicController extends Controller
         // dd($topicInfo);
 
 
-        return view('student.language.topic', ['topic' => $topicInfo[$topic]]);
+        return view('student.language.topic', ['topic' => $topicInfo[$topic]], compact('topicInfo'));
     }
 
 }

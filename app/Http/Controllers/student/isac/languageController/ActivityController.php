@@ -20,44 +20,52 @@ class ActivityController extends Controller
         ->select('menu_name')
         ->get();
 
-
         if($sub_topic == 1 || $sub_topic == 2 || $sub_topic == 3){
-            $activities = [
-                'topicNo' => $menu[0]->menu_name,
-                'topicName' => 'Intermediate',
-                'category' => 'Grammar and Vocabulary',
-                'activities' => $sub_menu,
-                'color' => 'success', 
-                'icon' => '<i class="fas fa-check font-20"></i>', 
-            ];
+            $topicNo = 1;
+            $category = 'Grammar and Vocabulary';
+            $topicName ='Intermediate';
+            $color = 'success';
+            $icon = '<i class="fas fa-check font-20"></i>';
+
         }else  if($sub_topic == 4 || $sub_topic == 5 || $sub_topic == 6){
-            $activities = [
-                'topicNo' => $menu[0]->menu_name,
-                'topicName' => 'Advanced',
-                'category' => 'Grammar and Vocabulary',
-                'activities' => $sub_menu,
-                'color' => 'danger', 
-                'icon' => '<i class="fas fa-check-double font-20"></i>', 
-            ];
+            $topicNo = 2;
+            $category = 'Grammar and Vocabulary';
+            $topicName ='Advanced';
+            $color = 'danger';
+            $icon = '<i class="fas fa-check-double font-20"></i>';
+
         }else if($sub_topic == 7 || $sub_topic == 8){
-            $activities = [
-                'topicNo' => $menu[0]->menu_name,
-                'topicName' => 'Report',
-                'category' => 'IELTS Task 1',
-                'activities' => $sub_menu,
-                'color' => 'info', 
-                'icon' => '<i class="fas fa-paragraph font-20"></i>', 
-            ];
+            $topicNo = 3;
+            $category = 'IELTS Task 1';
+            $topicName ='Report';
+            $color = 'info';
+            $icon = '<i class="fas fa-paragraph font-20"></i>';
+
         }else{
-            $activities = [
-                'topicNo' => $menu[0]->menu_name,
-                'topicName' => 'Essays',
-                'category' => 'IELTS Task 2',
-                'activities' => $sub_menu,
-                'color' => 'primary', 
-                'icon' => '<i class="fas fa-quote-left font-20"></i>', 
-            ];
+            $topicNo = 4;
+            $category = 'IELTS Task 2';
+            $topicName ='Essays';
+            $color = 'primary';
+            $icon ='<i class="fas fa-quote-left font-20"></i>';
+
         }
+
+        $s_menu = DB::table('menu_language')
+        ->where('menu_type','=', $topicNo)
+        ->select('menu_name' , 'menu_id')
+        ->get();
+
+        $activities = [
+            'topicLink' => $sub_topic,
+            'topicNo' => $s_menu,
+            'topicName' => $topicName,
+            'category' => $category,
+            'activities' => $sub_menu,
+            'color' => $color, 
+            'icon' => $icon, 
+        ];
+
+        // dd($activities);
 
         return view('student.language.activities', compact('activities'));
     }
