@@ -4,7 +4,8 @@
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('/') }}">1-1</a></li>
-                    <li class="breadcrumb-item"><a href=""></a></li>
+                    <li class="breadcrumb-item"><a href="{{ url('') }}"></a></li>
+                    <li class="breadcrumb-item"><a href="{{ url('') }}"></a></li>
                     <li class="breadcrumb-item active"></li>
                 </ol>
             </div>
