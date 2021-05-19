@@ -133,7 +133,7 @@
                 Answer
             </p>
             <div class="accordion mb-3" id="accordionExample">
-                <div class="card mb-1">
+                <div class="card mb-1" >
                     <div class="card-header" id="headingOne">
                         <h5 class="my-0">
                             <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -158,7 +158,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-1">
+                <div class="card mb-1" >
                     <div class="card-header" id="headingTwo">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -187,7 +187,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-1">
+                <div class="card mb-1" >
                     <div class="card-header" id="headingThree">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -202,7 +202,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-1">
+                <div class="card mb-1" >
                     <div class="card-header" id="headingFour">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -231,7 +231,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-1">
+                <div class="card mb-1" >
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -260,7 +260,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-1">
+                <div class="card mb-1" >
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
@@ -318,7 +318,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-1">
+                <div class="card mb-1" >
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
@@ -347,7 +347,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-1">
+                <div class="card mb-1" >
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
@@ -376,7 +376,7 @@
                     </div>
                 </div>
 
-                <div class="card mb-1">
+                <div class="card mb-1" id="ansOne">
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
@@ -419,6 +419,7 @@
 @section('js')
 <script>
     const answers = ['A', 'B', 'C', 'C', 'B', 'C', 'C', 'A', 'C', 'C'];
+    
 
     $("#show-answer").prop("disabled", true);
 
@@ -429,14 +430,19 @@
             $(item).removeClass('border-success');
             $(item).removeClass('border-danger');
 
-            if($(item).val() == answers[idx]) {  
+            if($(item).val() == answers[idx]) {
+
+
                 $(item).addClass('border border-success');
                 $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
             } else {
+            
                 $(item).addClass('border border-danger');
                 $('<i class="fas fa-times text-danger mr-2"></i>').insertAfter($(item));
             }
+
         })
+        
         $("#check-answer").prop("disabled", true);
         $("#show-answer").prop("disabled", false);
     });
