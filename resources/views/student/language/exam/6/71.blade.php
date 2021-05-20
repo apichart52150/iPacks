@@ -156,7 +156,7 @@
                                 </dl>
                             </div>
                     </div>
-                </div>
+                </div><!-- 1 -->
 
                 <div class="card mb-1" >
                     <div class="card-header" id="headingTwo">
@@ -169,12 +169,9 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-
                                 <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> rise</i> </dt>
                                 <dd class="col-sm-10"> 
-                                    (nc): vincrease, growth, climb
-                                    <br>
-                                    (vi): to move upwards a + substantial + <strong><u>nc</u></strong>
+                                    (nc): vincrease, growth, climb - (vi): to move upwards a + substantial + <strong><u>nc</u></strong>
                                 </dd>
 
                                 <dt class="col-sm-2">raise</dt>
@@ -185,57 +182,62 @@
                             </dl>
                         </div>
                     </div>
-                </div>
+                </div><!-- 2 -->
 
                 <div class="card mb-1" >
                     <div class="card-header" id="headingThree">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3. The <span class="text-success"><u>success</u></span> of this campaign can be attributed to hardwork and preseverance.
+                                3.  The <span class="text-success"><u>success</u></span>  of this campaign can be attributed to hardwork and preseverance.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            <dl class="row">
+                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> success</i></dt>
+                                <dd class="col-sm-10">(nc): achivement, the achiving of the results The + <strong><u>nc</u></strong> + of</dd>
+
+                                <dt class="col-sm-2">succeed</dt>
+                                <dd class="col-sm-10">(adj): achieving desired results</dd>
+
+                                <dt class="col-sm-2">successful</dt>
+                                <dd class="col-sm-10">(vi): to achieve something</dd>
+                            </dl>
                         </div>
                     </div>
-                </div>
+                </div><!-- 3 -->
 
                 <div class="card mb-1" >
                     <div class="card-header" id="headingFour">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            2. There has been a substantial <span class="text-success"><u>rise</u></span> in interest rates so far this month.
+                                4.  There's not much point in <span class="text-success"><u>applying</u></span>  for the job if you're not really intersted in talking it.
+                                There's not much point in
                             </a>
                         </h5>
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> applying</i></dt>
+                                <dd class="col-sm-10">(gerund): requesting something by sending a form in + <strong><u>Gerund</u></strong></dd>
 
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> rise</i> </dt>
-                                <dd class="col-sm-10"> 
-                                    (nc): vincrease, growth, climb
-                                    <br>
-                                    (vi): to move upwards a + substantial + <strong><u>nc</u></strong>
-                                </dd>
+                                <dt class="col-sm-2">application</dt>
+                                <dd class="col-sm-10">(nc): an offical request for something in writing It needs ad article: <em>"an application"</em></dd>
 
-                                <dt class="col-sm-2">raise</dt>
-                                <dd class="col-sm-10">(vt): obsolete of <em><u>dramatic</u></em> : relating to drama, like a drama in emotional impact</dd>
-
-                                <dt class="col-sm-2">rose</dt>
-                                <dd class="col-sm-10">(adv): past simple of "rise"</dd>
+                                <dt class="col-sm-2">apply</dt>
+                                <dd class="col-sm-10">(vi): to request something offcially in writing</dd>
                             </dl>
                         </div>
                     </div>
-                </div>
+                </div><!-- 4 -->
 
                 <div class="card mb-1" >
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            5. There has been a substantial <span class="text-success"><u>rise</u></span> in interest rates so far this month.
+                            5. Smokeing in piblic is a <span class="text-success"><u>controcersial</u></span> issue.
                             </a>
                         </h5>
                     </div>
@@ -243,28 +245,24 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> rise</i> </dt>
-                                <dd class="col-sm-10"> 
-                                    (nc): vincrease, growth, climb
-                                    <br>
-                                    (vi): to move upwards a + substantial + <strong><u>nc</u></strong>
-                                </dd>
+                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> controcersial</i> </dt>
+                                <dd class="col-sm-10">(adj): causing disagreement or discussion a+ <strong><u>adjective</u></strong> + issue</dd>
 
-                                <dt class="col-sm-2">raise</dt>
-                                <dd class="col-sm-10">(vt): obsolete of <em><u>dramatic</u></em> : relating to drama, like a drama in emotional impact</dd>
+                                <dt class="col-sm-2">controversy</dt>
+                                <dd class="col-sm-10">(nc): a lot of disagreement or argument</dd>
 
-                                <dt class="col-sm-2">rose</dt>
-                                <dd class="col-sm-10">(adv): past simple of "rise"</dd>
+                                <dt class="col-sm-2">controversially</dt>
+                                <dd class="col-sm-10">(adv): in a way that causes disagreement</dd>
                             </dl>
                         </div>
                     </div>
-                </div>
+                </div><!-- 5 -->
 
                 <div class="card mb-1" >
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            6. There has been a substantial <span class="text-success"><u>rise</u></span> in interest rates so far this month.
+                            6. Keyhole surgery is an example of  <span class="text-success"><u>minimally</u></span> invasive surgery.
                             </a>
                         </h5>
                     </div>
@@ -272,28 +270,24 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> rise</i> </dt>
-                                <dd class="col-sm-10"> 
-                                    (nc): vincrease, growth, climb
-                                    <br>
-                                    (vi): to move upwards a + substantial + <strong><u>nc</u></strong>
-                                </dd>
+                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> minimally</i> </dt>
+                                <dd class="col-sm-10">(adv): in away that isa very small in amount <strong><u>adverb</u></strong> + adjective + n </dd>
 
-                                <dt class="col-sm-2">raise</dt>
-                                <dd class="col-sm-10">(vt): obsolete of <em><u>dramatic</u></em> : relating to drama, like a drama in emotional impact</dd>
+                                <dt class="col-sm-2">minimal</dt>
+                                <dd class="col-sm-10">(adj): very small in amount</dd>
 
-                                <dt class="col-sm-2">rose</dt>
-                                <dd class="col-sm-10">(adv): past simple of "rise"</dd>
+                                <dt class="col-sm-2">minimize</dt>
+                                <dd class="col-sm-10">(vt): to reduce something to the lease amount</dd>
                             </dl>
                         </div>
                     </div>
-                </div>
+                </div><!-- 6 -->
 
                 <div class="card mb-1">
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            7. There has been a substantial <span class="text-success"><u>rise</u></span> in interest rates so far this month.
+                            7. There has been a marked <span class="text-success"><u>imporvement</u></span> in his grades since he started going to bed earlier.
                             </a>
                         </h5>
                     </div>
@@ -301,28 +295,24 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> rise</i> </dt>
-                                <dd class="col-sm-10"> 
-                                    (nc): vincrease, growth, climb
-                                    <br>
-                                    (vi): to move upwards a + substantial + <strong><u>nc</u></strong>
-                                </dd>
+                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> imporvement</i> </dt>
+                                <dd class="col-sm-10">(nc): the process of getting better a + adjective + <strong><u>nc</u></strong> </dd>
 
-                                <dt class="col-sm-2">raise</dt>
-                                <dd class="col-sm-10">(vt): obsolete of <em><u>dramatic</u></em> : relating to drama, like a drama in emotional impact</dd>
+                                <dt class="col-sm-2">improve</dt>
+                                <dd class="col-sm-10">(vt): to make simeting better</dd>
 
-                                <dt class="col-sm-2">rose</dt>
-                                <dd class="col-sm-10">(adv): past simple of "rise"</dd>
+                                <dt class="col-sm-2">improved</dt>
+                                <dd class="col-sm-10">(vt): past simple and past participle of <em>"impove"</em></dd>
                             </dl>
                         </div>
                     </div>
-                </div>
+                </div><!-- 7 -->
 
                 <div class="card mb-1" >
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            8. There has been a substantial <span class="text-success"><u>rise</u></span> in interest rates so far this month.
+                            8. In spite of the <span class="text-success"><u>deecrease</u></span> in interest rates, the housing marking has failed to regenerate.
                             </a>
                         </h5>
                     </div>
@@ -330,28 +320,24 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> rise</i> </dt>
-                                <dd class="col-sm-10"> 
-                                    (nc): vincrease, growth, climb
-                                    <br>
-                                    (vi): to move upwards a + substantial + <strong><u>nc</u></strong>
-                                </dd>
+                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> deecrease</i> </dt>
+                                <dd class="col-sm-10">(nc): a growth, a rise the + <strong><u>n</u></strong> + in</dd>
 
-                                <dt class="col-sm-2">raise</dt>
-                                <dd class="col-sm-10">(vt): obsolete of <em><u>dramatic</u></em> : relating to drama, like a drama in emotional impact</dd>
+                                <dt class="col-sm-2">deecreased</dt>
+                                <dd class="col-sm-10">(vt): past simple and past participle of <em>"decrease": to become less</em></dd>
 
-                                <dt class="col-sm-2">rose</dt>
-                                <dd class="col-sm-10">(adv): past simple of "rise"</dd>
+                                <dt class="col-sm-2">deecreasingly</dt>
+                                <dd class="col-sm-10">(adv): in a way of becoming less</dd>
                             </dl>
                         </div>
                     </div>
-                </div>
+                </div><!-- 8 -->
 
                 <div class="card mb-1" >
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                            9. There has been a substantial <span class="text-success"><u>rise</u></span> in interest rates so far this month.
+                            9.  Computer are a relatively new invention: the protype was  <span class="text-success"><u>bulit</u></span> ijust a few decades ago.
                             </a>
                         </h5>
                     </div>
@@ -359,22 +345,18 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> rise</i> </dt>
-                                <dd class="col-sm-10"> 
-                                    (nc): vincrease, growth, climb
-                                    <br>
-                                    (vi): to move upwards a + substantial + <strong><u>nc</u></strong>
-                                </dd>
+                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> bulit</i> </dt>
+                                <dd class="col-sm-10">(vt): past participle of <em>"bulid"</em>: to construct, to compile <br> <strong>passive voice: the protype + was + <strong><u>V past participle</u></strong></strong></dd>
 
-                                <dt class="col-sm-2">raise</dt>
-                                <dd class="col-sm-10">(vt): obsolete of <em><u>dramatic</u></em> : relating to drama, like a drama in emotional impact</dd>
+                                <dt class="col-sm-2">building</dt>
+                                <dd class="col-sm-10">(nc): a structure with a roof and walls</dd>
 
-                                <dt class="col-sm-2">rose</dt>
-                                <dd class="col-sm-10">(adv): past simple of "rise"</dd>
+                                <dt class="col-sm-2">bulid</dt>
+                                <dd class="col-sm-10">(vt): to construct something</dd>
                             </dl>
                         </div>
                     </div>
-                </div>
+                </div><!-- 9 -->
 
                 <div class="card mb-1" id="ansOne">
                     <div class="card-header" id="headingTen">
@@ -389,11 +371,7 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> rise</i> </dt>
-                                <dd class="col-sm-10"> 
-                                    (nc): vincrease, growth, climb
-                                    <br>
-                                    (vi): to move upwards a + substantial + <strong><u>nc</u></strong>
-                                </dd>
+                                <dd class="col-sm-10"></dd>
 
                                 <dt class="col-sm-2">raise</dt>
                                 <dd class="col-sm-10">(vt): obsolete of <em><u>dramatic</u></em> : relating to drama, like a drama in emotional impact</dd>
@@ -403,7 +381,7 @@
                             </dl>
                         </div>
                     </div>
-                </div>
+                </div><!-- 10 -->
             </div>
             
         </div>  
