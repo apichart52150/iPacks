@@ -59,7 +59,7 @@
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">controversy</option>
-                    <option value="controcersial">controcersial</option>
+                    <option value="controversial">controversial</option>
                     <option value="C">controversially</option>
                 </select>
                issue.
@@ -397,8 +397,8 @@
 @section('js')
 <script>
     const answers = ['dramatic', 'rise', 'success', 'applying', 'controversial', 'minimally', 'imporvement', 'deecrease', 'bulit', 'dependent'];
-
-    $("#show-answer").prop("disabled", true);
+    let score = 0;
+    $("#show-answer").hide(true);
 
     $('#check-answer').on('click', function() {
         
@@ -410,23 +410,33 @@
             if($(item).val() == answers[idx]) {
                 $(item).addClass('border border-success');
                 $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
+                score++;
             } else {
                 $(item).addClass('border border-danger');
                 $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
             }
         })
 
-        $("#show-answer").prop("disabled", false);
-        $("#check-answer").prop("disabled", true);
+        if(score == 10){
+            alert("you're awesome");
+        }else{
+            alert('Your score is ' + score + '/10');
+        }
+
+        $("#show-answer").show(true);
+        $("#check-answer").hide(true);
     });
 
     $('#show-answer').on('click', function() {
         var x = document.getElementById("ans");
         if (x.style.display == "none") {
+            $("#show-answer").text('close');
             x.style.display = "block";
         } else {
+            $("#show-answer").text('Show Answer');
             x.style.display = "none";
         }
+        
     });
    
 </script>
