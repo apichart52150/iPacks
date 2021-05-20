@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-xl-12 col-md-12 col-sm-12">
+    <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
             <p class="lead">
                 {{$pageTitle['topic']}}
@@ -10,7 +10,7 @@
                 There hsa been a
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">dramatic</option>
+                    <option value="dramatic">dramatic</option>
                     <option value="B">dramatical</option>
                     <option value="C">dramatically</option>
                 </select>
@@ -23,7 +23,7 @@
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">raise</option>
-                    <option value="B">rise</option>
+                    <option value="rise">rise</option>
                     <option value="C">rose</option>
                 </select>
                in interest rates so far this month.
@@ -36,7 +36,7 @@
                     <option value="">-Select-</option>
                     <option value="A">successful</option>
                     <option value="B">succeed</option>
-                    <option value="C">success</option>
+                    <option value="success">success</option>
                 </select>
                of this campaign can be attributed to hardwork and preseverance.
             </div>
@@ -48,7 +48,7 @@
                     <option value="">-Select-</option>
                     <option value="A">application</option>
                     <option value="B">apply</option>
-                    <option value="C">applying</option>
+                    <option value="applying">applying</option>
                 </select>
                for the job if you're not really intersted in talking it.
             </div>
@@ -59,7 +59,7 @@
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">controversy</option>
-                    <option value="B">controcersial</option>
+                    <option value="controcersial">controcersial</option>
                     <option value="C">controversially</option>
                 </select>
                issue.
@@ -72,7 +72,7 @@
                     <option value="">-Select-</option>
                     <option value="A">minimize</option>
                     <option value="B">minimal</option>
-                    <option value="C">minimally</option>
+                    <option value="minimally">minimally</option>
                 </select>
                invasive surgery.
             </div>
@@ -84,7 +84,7 @@
                     <option value="">-Select-</option>
                     <option value="A">improve</option>
                     <option value="B">improved</option>
-                    <option value="C">imporvement</option>
+                    <option value="imporvement">imporvement</option>
                 </select>
                in his grades since he started going to bed earlier.
             </div>
@@ -94,7 +94,7 @@
                 In spite of the
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">deecrease</option>
+                    <option value="deecrease">deecrease</option>
                     <option value="B">deecreased</option>
                     <option value="C">deecreasingly</option>
                 </select>
@@ -108,7 +108,7 @@
                     <option value="">-Select-</option>
                     <option value="A">building</option>
                     <option value="B">bulid</option>
-                    <option value="C">bulit</option>
+                    <option value="bulit">bulit</option>
                 </select>
                just a few decades ago.
             </div>
@@ -120,7 +120,7 @@
                     <option value="">-Select-</option>
                     <option value="A">depends</option>
                     <option value="B">depending</option>
-                    <option value="C">dependent</option>
+                    <option value="dependent">dependent</option>
                 </select>
                on computer technology in our everyday lift.
             </div>
@@ -137,6 +137,7 @@
                     <div class="card-header" id="headingOne">
                         <h5 class="my-0">
                             <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                           
                             1. There hsa been a <span class="text-success"><u>dramatic</u></span> fall in the price of new house this year.
                             </a>
                         </h2>
@@ -346,7 +347,7 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> bulit</i> </dt>
-                                <dd class="col-sm-10">(vt): past participle of <em>"bulid"</em>: to construct, to compile <br> <strong>passive voice: the protype + was + <strong><u>V past participle</u></strong></strong></dd>
+                                <dd class="col-sm-10">(vt): past participle of <em>"bulid"</em>: to construct, to compile <br> <strong>passive voice:</strong> the protype + was + <strong><u>V past participle</u></strong></dd>
 
                                 <dt class="col-sm-2">building</dt>
                                 <dd class="col-sm-10">(nc): a structure with a roof and walls</dd>
@@ -362,7 +363,7 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10. There has been a substantial <span class="text-success"><u>rise</u></span> in interest rates so far this month.
+                            10.  We hace become very <span class="text-success"><u>dependent</u></span> on computer technology in our everyday lift.
                             </a>
                         </h5>
                     </div>
@@ -370,14 +371,14 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> rise</i> </dt>
-                                <dd class="col-sm-10"></dd>
+                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> dependent</i> </dt>
+                                <dd class="col-sm-10">(adj): requiring other support become + adverb + <strong><u>adjective</u></strong></dd>
 
-                                <dt class="col-sm-2">raise</dt>
-                                <dd class="col-sm-10">(vt): obsolete of <em><u>dramatic</u></em> : relating to drama, like a drama in emotional impact</dd>
+                                <dt class="col-sm-2">depends</dt>
+                                <dd class="col-sm-10">(vi): rely on, be controlled by</dd>
 
-                                <dt class="col-sm-2">rose</dt>
-                                <dd class="col-sm-10">(adv): past simple of "rise"</dd>
+                                <dt class="col-sm-2">depending</dt>
+                                <dd class="col-sm-10">(vi): present participle or gerund of <em>"depend"</em></dd>
                             </dl>
                         </div>
                     </div>
@@ -386,7 +387,6 @@
             
         </div>  
     </div>
-
 </div>
 
 @section('button-control')
@@ -396,8 +396,7 @@
 
 @section('js')
 <script>
-    const answers = ['A', 'B', 'C', 'C', 'B', 'C', 'C', 'A', 'C', 'C'];
-    
+    const answers = ['dramatic', 'rise', 'success', 'applying', 'controversial', 'minimally', 'imporvement', 'deecrease', 'bulit', 'dependent'];
 
     $("#show-answer").prop("disabled", true);
 
@@ -409,20 +408,16 @@
             $(item).removeClass('border-danger');
 
             if($(item).val() == answers[idx]) {
-
-
                 $(item).addClass('border border-success');
                 $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
             } else {
-            
                 $(item).addClass('border border-danger');
-                $('<i class="fas fa-times text-danger mr-2"></i>').insertAfter($(item));
+                $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
             }
-
         })
-        
-        $("#check-answer").prop("disabled", true);
+
         $("#show-answer").prop("disabled", false);
+        $("#check-answer").prop("disabled", true);
     });
 
     $('#show-answer').on('click', function() {
@@ -433,7 +428,6 @@
             x.style.display = "none";
         }
     });
-
    
 </script>
 @stop
