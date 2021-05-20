@@ -155,6 +155,19 @@
             <div class="container-fluid p-0">
                 @yield('page-title')
                 @yield('content')
+
+                @isset($pagination)
+                <div class="row mb-3">
+                    <div class="col-md-12 d-flex justify-content-between">
+                        <a href="{{ url($pagination['prev']) }}" class="btn btn-dark {{ $pagination['current'] == 'activity1' ? 'disabled' : '' }}">Previous</a>
+                        <div class="btn-controls">
+                            @yield('button-control')
+                            <button id="reset" class="btn btn-purple">Reset</button>
+                        </div>
+                        <a href="{{ url($pagination['next']) }}" class="btn btn-dark">{{ $pagination['textBtn'] }}</a>
+                    </div>
+                </div>
+                @endisset
             </div>
         </div>
         <!-- ============================================================== -->
@@ -192,6 +205,15 @@
         <!-- App js -->
         <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
 
+        <script>
+            $('input[type="text"]').attr({
+                'onChange': 'this.value = this.value.toUpperCase()',
+                'autocomplete': false,
+                'spellcheck': false
+            })
+
+            $('#reset').on('click', () => location.reload())
+        </script>
         @yield('js')
         
     </body>
