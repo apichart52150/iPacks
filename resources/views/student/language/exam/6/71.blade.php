@@ -146,7 +146,7 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> dramatic</i> </dt>
+                                    <dt class="col-sm-2"><i class="text-success mr-2"> dramatic</i> </dt>
                                     <dd class="col-sm-10"> (adj): very sudden and noticeable a + <strong><u>adjective</u></strong> + fall: </dd>
 
                                     <dt class="col-sm-2">dramatical</dt>
@@ -170,7 +170,7 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> rise</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2"> rise</i> </dt>
                                 <dd class="col-sm-10"> 
                                     (nc): vincrease, growth, climb - (vi): to move upwards a + substantial + <strong><u>nc</u></strong>
                                 </dd>
@@ -196,7 +196,7 @@
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> success</i></dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2"> success</i></dt>
                                 <dd class="col-sm-10">(nc): achivement, the achiving of the results The + <strong><u>nc</u></strong> + of</dd>
 
                                 <dt class="col-sm-2">succeed</dt>
@@ -221,7 +221,7 @@
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> applying</i></dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2"> applying</i></dt>
                                 <dd class="col-sm-10">(gerund): requesting something by sending a form in + <strong><u>Gerund</u></strong></dd>
 
                                 <dt class="col-sm-2">application</dt>
@@ -246,7 +246,7 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> controcersial</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2"> controcersial</i> </dt>
                                 <dd class="col-sm-10">(adj): causing disagreement or discussion a+ <strong><u>adjective</u></strong> + issue</dd>
 
                                 <dt class="col-sm-2">controversy</dt>
@@ -271,7 +271,7 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> minimally</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2"> minimally</i> </dt>
                                 <dd class="col-sm-10">(adv): in away that isa very small in amount <strong><u>adverb</u></strong> + adjective + n </dd>
 
                                 <dt class="col-sm-2">minimal</dt>
@@ -296,7 +296,7 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> imporvement</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2"> imporvement</i> </dt>
                                 <dd class="col-sm-10">(nc): the process of getting better a + adjective + <strong><u>nc</u></strong> </dd>
 
                                 <dt class="col-sm-2">improve</dt>
@@ -321,7 +321,7 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> deecrease</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2"> deecrease</i> </dt>
                                 <dd class="col-sm-10">(nc): a growth, a rise the + <strong><u>n</u></strong> + in</dd>
 
                                 <dt class="col-sm-2">deecreased</dt>
@@ -346,7 +346,7 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> bulit</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2"> bulit</i> </dt>
                                 <dd class="col-sm-10">(vt): past participle of <em>"bulid"</em>: to construct, to compile <br> <strong>passive voice:</strong> the protype + was + <strong><u>V past participle</u></strong></dd>
 
                                 <dt class="col-sm-2">building</dt>
@@ -371,7 +371,7 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="mdi mdi-check-bold text-success mr-2"> dependent</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2"> dependent</i> </dt>
                                 <dd class="col-sm-10">(adj): requiring other support become + adverb + <strong><u>adjective</u></strong></dd>
 
                                 <dt class="col-sm-2">depends</dt>
