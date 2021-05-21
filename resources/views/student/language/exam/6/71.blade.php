@@ -1,3 +1,9 @@
+<style>
+.mark, mark {
+    padding: .2em;
+    background-color: #ffc107;
+}
+</style>
 <div class="row">
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
@@ -103,7 +109,7 @@
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
-                Computer are a relatively new invention: the protype was 
+                Computers are a relatively new invention: the prototype was 
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">building</option>
@@ -115,14 +121,14 @@
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
-                We hace become very
+                We have become very
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">depends</option>
                     <option value="B">depending</option>
                     <option value="dependent">dependent</option>
                 </select>
-               on computer technology in our everyday lift.
+               on computer technology in our everyday have.
             </div>
         </div>
     </div>
@@ -147,7 +153,7 @@
                             <div class="card-body">
                                 <dl class="row">
                                     <dt class="col-sm-2"><i class="text-success mr-2"> dramatic</i> </dt>
-                                    <dd class="col-sm-10"> (adj): very sudden and noticeable a + <strong><u>adjective</u></strong> + fall: </dd>
+                                    <dd class="col-sm-10"> (adj): very sudden and noticeable <mark> a + <strong><u>adjective </u></strong> + fall </mark></dd>
 
                                     <dt class="col-sm-2">dramatical</dt>
                                     <dd class="col-sm-10">(adj): obsolete of <em><u>dramatic</u></em> : relating to drama, like a drama in emotional impact</dd>
@@ -172,11 +178,11 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2"> rise</i> </dt>
                                 <dd class="col-sm-10"> 
-                                    (nc): vincrease, growth, climb - (vi): to move upwards a + substantial + <strong><u>nc</u></strong>
+                                    (nc): increase, growth, climb - (vi): to move upwards <mark>a + substantial + <strong><u>nc</u></mark></strong>
                                 </dd>
 
                                 <dt class="col-sm-2">raise</dt>
-                                <dd class="col-sm-10">(vt): obsolete of <em><u>dramatic</u></em> : relating to drama, like a drama in emotional impact</dd>
+                                <dd class="col-sm-10">(vt): to lift something to a higher position</dd>
 
                                 <dt class="col-sm-2">rose</dt>
                                 <dd class="col-sm-10">(adv): past simple of "rise"</dd>
@@ -197,12 +203,12 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2"> success</i></dt>
-                                <dd class="col-sm-10">(nc): achivement, the achiving of the results The + <strong><u>nc</u></strong> + of</dd>
-
-                                <dt class="col-sm-2">succeed</dt>
-                                <dd class="col-sm-10">(adj): achieving desired results</dd>
+                                <dd class="col-sm-10">(nc): achivement, the achiving of the results <mark>The + <strong><u>nc</u></strong> + of</mark></dd>
 
                                 <dt class="col-sm-2">successful</dt>
+                                <dd class="col-sm-10">(adj): achieving desired results</dd>
+
+                                <dt class="col-sm-2">succeed</dt>
                                 <dd class="col-sm-10">(vi): to achieve something</dd>
                             </dl>
                         </div>
@@ -222,10 +228,10 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2"> applying</i></dt>
-                                <dd class="col-sm-10">(gerund): requesting something by sending a form in + <strong><u>Gerund</u></strong></dd>
+                                <dd class="col-sm-10">(gerund): requesting something by sending a form <mark>in + <strong><u>Gerund</u></strong></mark></dd>
 
                                 <dt class="col-sm-2">application</dt>
-                                <dd class="col-sm-10">(nc): an offical request for something in writing It needs ad article: <em>"an application"</em></dd>
+                                <dd class="col-sm-10">(nc): an offical request for something in writing / It needs an article: <em>"an application"</em>.</dd>
 
                                 <dt class="col-sm-2">apply</dt>
                                 <dd class="col-sm-10">(vi): to request something offcially in writing</dd>
@@ -247,7 +253,7 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2"> controcersial</i> </dt>
-                                <dd class="col-sm-10">(adj): causing disagreement or discussion a+ <strong><u>adjective</u></strong> + issue</dd>
+                                <dd class="col-sm-10">(adj): causing disagreement or discussion <mark>a+ <strong><u>adjective</u></strong> + issue</mark></dd>
 
                                 <dt class="col-sm-2">controversy</dt>
                                 <dd class="col-sm-10">(nc): a lot of disagreement or argument</dd>
@@ -272,13 +278,13 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2"> minimally</i> </dt>
-                                <dd class="col-sm-10">(adv): in away that isa very small in amount <strong><u>adverb</u></strong> + adjective + n </dd>
+                                <dd class="col-sm-10">(adv): in a way that isa very small in amount <mark><strong><u>adverb</u></strong> + adjective + n </mark></dd>
 
                                 <dt class="col-sm-2">minimal</dt>
                                 <dd class="col-sm-10">(adj): very small in amount</dd>
 
                                 <dt class="col-sm-2">minimize</dt>
-                                <dd class="col-sm-10">(vt): to reduce something to the lease amount</dd>
+                                <dd class="col-sm-10">(vt): to reduce something to the least amount</dd>
                             </dl>
                         </div>
                     </div>
@@ -297,13 +303,13 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2"> imporvement</i> </dt>
-                                <dd class="col-sm-10">(nc): the process of getting better a + adjective + <strong><u>nc</u></strong> </dd>
+                                <dd class="col-sm-10">(nc): the process of getting better <mark>a + adjective + <strong><u>nc</u></strong></mark></dd>
 
                                 <dt class="col-sm-2">improve</dt>
-                                <dd class="col-sm-10">(vt): to make simeting better</dd>
+                                <dd class="col-sm-10">(vt): to make someting better</dd>
 
                                 <dt class="col-sm-2">improved</dt>
-                                <dd class="col-sm-10">(vt): past simple and past participle of <em>"impove"</em></dd>
+                                <dd class="col-sm-10">(vt): past simple and past participle of <em>"improve"</em></dd>
                             </dl>
                         </div>
                     </div>
@@ -313,7 +319,7 @@
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            8. In spite of the <span class="text-success"><u>deecrease</u></span> in interest rates, the housing marking has failed to regenerate.
+                            8. In spite of the <span class="text-success"><u>decrease</u></span> in interest rates, the housing marking has failed to regenerate.
                             </a>
                         </h5>
                     </div>
@@ -321,10 +327,10 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> deecrease</i> </dt>
-                                <dd class="col-sm-10">(nc): a growth, a rise the + <strong><u>n</u></strong> + in</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2"> decrease</i> </dt>
+                                <dd class="col-sm-10">(nc): a growth, a rise <mark>the + <strong><u>n</u></strong> + in</mark></dd>
 
-                                <dt class="col-sm-2">deecreased</dt>
+                                <dt class="col-sm-2">decreased</dt>
                                 <dd class="col-sm-10">(vt): past simple and past participle of <em>"decrease": to become less</em></dd>
 
                                 <dt class="col-sm-2">deecreasingly</dt>
@@ -338,7 +344,7 @@
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                            9.  Computer are a relatively new invention: the protype was  <span class="text-success"><u>bulit</u></span> ijust a few decades ago.
+                            9.  Computers are a relatively new invention: the prototype was  <span class="text-success"><u>built</u></span> just a few decades ago.
                             </a>
                         </h5>
                     </div>
@@ -347,7 +353,7 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2"> bulit</i> </dt>
-                                <dd class="col-sm-10">(vt): past participle of <em>"bulid"</em>: to construct, to compile <br> <strong>passive voice:</strong> the protype + was + <strong><u>V past participle</u></strong></dd>
+                                <dd class="col-sm-10">(vt): past participle of <em>"bulid"</em>: to construct, to compile <br> <mark><strong>passive voice:</strong> the protype + was + <strong><u>V past participle</u></strong></mark></dd>
 
                                 <dt class="col-sm-2">building</dt>
                                 <dd class="col-sm-10">(nc): a structure with a roof and walls</dd>
@@ -363,7 +369,7 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10.  We hace become very <span class="text-success"><u>dependent</u></span> on computer technology in our everyday lift.
+                            10.  We have become very <span class="text-success"><u>dependent</u></span> on computer technology in our everyday lift.
                             </a>
                         </h5>
                     </div>
@@ -372,7 +378,7 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2"> dependent</i> </dt>
-                                <dd class="col-sm-10">(adj): requiring other support become + adverb + <strong><u>adjective</u></strong></dd>
+                                <dd class="col-sm-10">(adj): requiring other support <mark>become + adverb + <strong><u>adjective</u></strong></mark></dd>
 
                                 <dt class="col-sm-2">depends</dt>
                                 <dd class="col-sm-10">(vi): rely on, be controlled by</dd>
@@ -396,7 +402,7 @@
 
 @section('js')
 <script>
-    const answers = ['dramatic', 'rise', 'success', 'applying', 'controversial', 'minimally', 'imporvement', 'deecrease', 'bulit', 'dependent'];
+    const answers = ['dramatic', 'rise', 'success', 'applying', 'controversial', 'minimally', 'imporvement', 'decrease', 'bulit', 'dependent'];
     let score = 0;
     $("#show-answer").hide(true);
 
