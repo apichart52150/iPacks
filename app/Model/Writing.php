@@ -21,18 +21,21 @@ class Writing extends Model {
 
     } 
 
-	// show one topic 
-	public static function status_topic($id) {
+    public static function decreasePoint() {
+        
+        $decrease_point = DB::table('student')
+        ->select('std_pointsac', 'std_pointspeaking',DB::raw('CASE WHEN std_pointsac != 0 THEN "std_pointsac" WHEN std_pointspeaking != 0 THEN "std_pointspeaking" ELSE "nopoint" END AS current_point'))
+        ->where('std_id', auth('student')->user()->std_id)
+        ->get();
+        
+        if($decrease_point[0]->current_point == 'nopoint') {
 
-		$status = DB::table('text_result')
-		->select('text_result.id as sac_id', 'text_result.code_test', 'text_result.test_type', 'text_result.header_test', 'text_result.status', 'text_result.sent_date', 'text_result.th_sent_date', 'users.id as th_id', 'users.name as th_name')
-		->leftJoin('users', 'users.id', '=', 'text_result.th_id')
-		->where('text_result.id',$id)
-		->get();
+            return 0;
 
-		return ($status);
+        }else {
 
-	}
+            DB::table('student')->where('std_id', auth('student')->user()->std_id)->decrement($decrease_point[0]->current_point);
+        }
 
-
+    }
 }

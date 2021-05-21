@@ -2,19 +2,18 @@
 
 
 // ==================== Routes User ====================== //
-	Route::get('/', function() {
-		if(Auth::guard('student')->check()) {
-			return redirect('/user_home');
-		}else {
-			return redirect('/user_login');
-		}
-	});
+Route::get('/', function() {
+    if(Auth::guard('student')->check()) {
+        return redirect('user_home');
+    }
+    return redirect('user_login');
+});
 
 	Route::get('user_login', 'Session\LoginStdController@index')->name('user_login');
 	Route::post('fn_login', 'Session\LoginStdController@fn_login')->name('fn_login');
 	Route::get('user_logout', 'Session\LoginStdController@user_logout')->name('user_logout');
 
-	Route::middleware(['auth:student'])->group(function () {
+	Route::group(['middleware' => 'auth:student'], function() {
 
 		Route::get('browser-settings', function() {
 			return view('student.isac.speaking.browser_settings');
@@ -118,10 +117,21 @@
 			return redirect('login');
 		}
 	});
-
-	Route::get('admin_home', 'Admin\HomeController@index');
-
+	
 	Route::middleware(['auth:web'])->group(function () {
+
+		Route::prefix('')->namespace('Admin')->group(function () {
+
+			Route::get('admin_home', 'HomeController@index');
+
+			Route::get('student','StudentController@index')->name('student');
+			Route::post('addstudent', 'StudentController@addstudent')->name('addstudent');
+
+			Route::get('edit/{id?}','StudentController@edit');
+			Route::post('edit/studentupdate/{id?}', 'StudentController@studentupdate');
+
+			Route::post('studentdelete/{id?}', 'StudentController@studentdelete');
+		});
 
 		//Speaking
 		Route::prefix('speaking')->namespace('Admin\isac\speaking')->group(function () {
@@ -188,60 +198,6 @@
 
 			Route::get('restatus_writing/{id}', 'ReportController@reStatus')->name('restatus_writing');
 			Route::get('delete_writing/{id}', 'ReportController@delete_topic')->name('delete_writing.pending');
-		});
-
-		Route::prefix('mocktest')->namespace('Admin\mocktest')->group(function () {
-
-			Route::get('dashboard', 'DashboardController@index')->name('mocktest_dashboard');
-			
-			Route::get('class_detail/{class_id}', 'ClassController@classdetail_by_id')->name('class_detail');
-			Route::post('update_set_exam','ClassController@update_set_exam')->name('update_set_exam');
-			Route::post('update_class_pass', 'ClassController@update_class_pass')->name('update_class_pass');
-			Route::get('print_classdetail/{class_id}', 'ClassController@print_classdetail')->name('print_classdetail');
-
-			Route::get('all_user', 'UserController@all_user')->name('all_user');
-
-			Route::get('student_profile/{std_id}', 'StudentController@std_profile_by_id')->name('student_profile');
-			Route::post('edit_score', 'StudentController@edit_score')->name('edit_score');
-
-			Route::get('del_ans/{del_ans?}/{std_id?}', 'StudentController@del_ans')->name('del_ans');
-			Route::get('del_ans_wri/{del_ans_wri?}/{std_id?}', 'StudentController@del_ans_wri')->name('del_ans_wri');
-			
-			Route::post('update_writing','StudentController@update_writing')->name('update_writing');
-			
-			Route::get('print_L/{std_id?}', 'StudentController@print_lis_part')->name('print_L');
-			Route::get('print_R/{std_id?}', 'StudentController@print_read_part')->name('print_R');
-			Route::get('print_W1/{std_id?}', 'StudentController@print_wri_part1')->name('print_W1');
-			Route::get('print_W2/{std_id?}', 'StudentController@print_wri_part2')->name('print_W2');
-
-			Route::get('print_G1/{std_id?}', 'StudentController@print_gateway_part1')->name('print_G1');
-			Route::get('print_G2/{std_id?}', 'StudentController@print_gateway_part2')->name('print_G2');
-			Route::get('print_G3/{std_id?}', 'StudentController@print_gateway_part3')->name('print_G3');
-		});
-
-		Route::prefix('clubs')->namespace('Admin\clubs')->group(function () {
-
-			Route::get('dashboard', 'DashboardController@index');
-			Route::post('addclub', 'DashboardController@addclub')->name('addclub');
-			Route::post('endclub', 'DashboardController@endclub')->name('endclub');
-			Route::post('clubdelete/{id}', 'DashboardController@clubdelete');
-			Route::post('clubupdate/{id}', 'DashboardController@clubupdate');
-
-			Route::get('student','StudentController@index')->name('student');
-			Route::post('addstudent', 'StudentController@addstudent')->name('addstudent');
-
-			Route::get('edit/{id?}','StudentController@edit');
-			Route::post('edit/studentupdate/{id?}', 'StudentController@studentupdate');
-
-			Route::post('studentdelete/{id?}', 'StudentController@studentdelete');
-
-			Route::post('add_clubstudent', 'StudentAddclubController@add_club');
-
-			Route::get('logs/{id?}','LogsController@index');
-
-			Route::get('club_register/{id?}', 'ClubRegisterController@index');
-			Route::post('club_check', 'ClubRegisterController@check_student');
-			Route::get('excel_club_register/{id?}', 'ClubRegisterController@excel_room');
 		});
 	});
 	

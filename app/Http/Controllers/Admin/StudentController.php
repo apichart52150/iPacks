@@ -1,6 +1,5 @@
 <?php
-
-namespace App\Http\Controllers\Admin\clubs;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -41,7 +40,7 @@ class StudentController extends Controller {
             'club_type' => $club_type
 		];
        
-        return view('admin.clubs.student', compact('data'));
+        return view('admin.student', compact('data'));
     }
 
     public function create($status=null)
@@ -54,7 +53,7 @@ class StudentController extends Controller {
        ->orderBy('class.created_at', 'desc')
        ->get();
 
-       return view('admin.clubs.student', compact('course'));
+       return view('admin.student', compact('course'));
    }
 
     public function addstudent(Request $request){
@@ -90,16 +89,16 @@ class StudentController extends Controller {
             session()->flash('success_ans','<div class="alert alert-success" role="alert">
             <i class="fas fa-check-circle mr-2"></i><strong>Add Student Success</strong></div>'); 
 
-            return redirect('clubs/student');
+            return redirect('student');
 
         }else{
 
             session()->flash('error_ans','<div class="alert alert-danger" role="alert">
             <i class="far fa-window-close mr-2"></i><strong>Username* นี้มีในระบบแล้ว ไม่สามารถสร้างซ้อนทับได้</strong></div>');
-            return redirect('clubs/student');
+            return redirect('student');
         }
 
-        return redirect('clubs/student');
+        return redirect('student');
     }
 
 
@@ -125,40 +124,27 @@ class StudentController extends Controller {
 
         //    dd($course);
 
-       return view('admin.clubs.edit', compact('student','course','course_student') );
+       return view('admin.edit', compact('student','course','course_student') );
     }
 
     public function studentupdate($std_id, Request $request)
 	{
-
-        $course_type = DB::table('class')
-        ->select('id')
-        ->where('nccode','=', $request->course)
-        ->get();
-
 		DB::table('student')
         ->where('std_id', $std_id)
-        ->update(['coursetype' => $course_type[0]->id,
+        ->update([
             'std_username' => $request->std_username,
             'std_password' => md5($request->std_password),
-            'std_mobile' => $request->std_mobile,
+            'std_mobile' => $request->std_password,
             'std_name' => $request->std_name,
             'std_nickname' => $request->std_nickname,
-            'std_email' => $request->std_email,
-            'std_point'=> $request->std_point,
-            'std_bonus' => $request->std_bonus,
             'std_id' => $request->std_id,
             'std_pointsac' => $request->std_pointsac,
             'std_pointspeaking' => $request->std_pointspeaking]);
 
-        DB::table('class_student')
-        ->where('std_id', $std_id)
-        ->update(['nccode' => $request->course]);
-
         session()->flash('success_ans','<div class="alert alert-success" role="alert">
         <i class="fas fa-check-circle mr-2"></i><strong>Update Success</strong></div>'); 
 
-        return redirect('clubs/student');
+        return redirect('student');
     }
 
     
@@ -173,6 +159,6 @@ class StudentController extends Controller {
         session()->flash('success_ans','<div class="alert alert-success" role="alert">
         <i class="fas fa-check-circle mr-2"></i><strong>Delete Success</strong></div>'); 
 
-		return redirect('clubs/student');
+		return redirect('student');
 	}
 }

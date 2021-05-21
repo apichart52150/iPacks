@@ -8,19 +8,13 @@
                 <ul class="navigation-menu  d-lg-flex justify-content-center">
 
 					<li class="has-submenu">
-                        <a href="{{ url('/admin') }}" class="text-light">
+                        <a href="{{ url('admin') }}" class="text-light">
                             <i class="fas fa-home"></i>Home
                         </a>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{ url('clubs/dashboard') }}" class="text-light">
-                            <i class="fas fa-users"></i>Club Room
-                        </a>
-                    </li>
-
-                    <li class="has-submenu">
-                        <a href="{{ url('clubs/student') }}" class="text-light">
+                        <a href="{{ url('student') }}" class="text-light">
                             <i class="fas fa-address-card"></i>Student
                         </a>
                     </li>
@@ -42,7 +36,7 @@
 			<div class="page-title-box">
 				<div class="page-title-right">
 					<ol class="breadcrumb m-0">
-						<li class="breadcrumb-item"><i class="fas fa-address-card"></i> <a href="{{ url('clubs/student') }}">Back</a></li>
+						<li class="breadcrumb-item"><i class="fas fa-address-card"></i> <a href="{{ url('student') }}">Back</a></li>
 						<!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
 						<li class="breadcrumb-item active">Edit</li>
 					</ol>
@@ -76,19 +70,7 @@
                     @foreach ($student as $student)
 
                         <form class="form-horizontal" role="form" action="studentupdate/{{ $student->std_id }}" method="POST">
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="simpleinput">Class || Course</label>
-                                <div class="col-sm-10">
-                                    <select class="form-control" name="course" required="">
-                                        @foreach ($course_student as $course_students)
-                                         <option selected="" value="{{ $course_students->nccode }}">{{ $course_students->nccode }}</option>
-                                        @endforeach
-                                        @foreach ($course as $courses)
-                                            <option value="{{ $courses->nccode }}">{{ $courses->coursename.' '.$courses->nccode }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
+                            {{ csrf_field() }}
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="std_id">ID</label>
                                 <div class="col-sm-10">
@@ -105,14 +87,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="std_mobile">Mobile</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="std_mobile" name="std_mobile" value="{{$student->std_mobile}}">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="std_password">Password</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="std_password" id="std_password" value="{{$student->std_mobile}}">
+                                    <input type="number" class="form-control" id="std_password" name="std_password" value="{{$student->std_mobile}}">
                                 </div>
                             </div>
 
@@ -130,18 +105,6 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Club</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="std_point" value="{{$student->std_point}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Bonus</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="std_bonus" value="{{$student->std_bonus}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">iSAC Writing</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="std_pointsac" value="{{$student->std_pointsac}}">
@@ -155,7 +118,7 @@
                             </div>
 
                             <div class="form-group text-center">
-                                <a href="{{url('clubs/student')}}" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
+                                <a href="{{url('student')}}" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
 							    <button type="submit" class="btn btn-info waves-effect waves-light">Add</button>
                             </div>
                         </form>

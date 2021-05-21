@@ -45,13 +45,6 @@
                 </div>
 
                 <hr>
-                
-                <div class="row">
-                    <div class="col-md-12">
-                        <a href="{{url('clubs/status_clubs')}}" class="btn btn-bordered-primary waves-effect width-md waves-light">View Club</a>
-                    </div>
-                </div>
-                    
             </div>
         </div>
     </div>

@@ -5,7 +5,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
 use App\Model\Speaking;
-use App\Model\Points;
 
 class SpeakingController extends Controller
 {
@@ -81,7 +80,7 @@ class SpeakingController extends Controller
                     ]
                 );
 
-                Points::decreasePoint();
+                Speaking::decreasePoint();
         
                 $insertLog = DB::table('log')
                     ->insert([

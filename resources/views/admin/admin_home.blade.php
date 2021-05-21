@@ -20,14 +20,8 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{ url('mocktest/dashboard') }}" class="text-light">
-                            <i class="fas fa-list-alt"></i>Mocktest 
-                        </a>
-                    </li>
-
-                    <li class="has-submenu">
-                        <a href="{{ url('clubs/dashboard') }}" class="text-light">
-                            <i class="far fa-calendar-alt"></i>Club & Bonus 
+                        <a href="{{ url('student') }}" class="text-light">
+                            <i class="fas fa-address-card"></i>User 
                         </a>
                     </li>
                 </ul>
@@ -94,32 +88,17 @@
     </div>
     <!-- end row -->
 
-    <div class="row">
-        
-        <div class="col-xl-6 col-md-6">
-            <a href="{{url('mocktest/dashboard')}}">
-                <div class="widget-bg-color-icon card-box">
-                    <div class="avatar-lg rounded-circle bg-icon-primary float-left">
-                        <i class="fas fa-list-alt font-24 avatar-title text-white"></i>
-                    </div>
-                    <div class="text-right">
-                        <h3 class="text-dark mt-1"><span class="counter">Admin</span></h3>
-                        <h3 class="text-primary mb-0"><span class="counter">Mocktest</span></h3>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
+    <div class="row">     
 
-        <div class="col-xl-6 col-md-6">
-            <a href="{{url('clubs/dashboard')}}">
+        <div class="col-xl-12 col-md-12 col-sm-12">
+            <a href="{{url('student')}}">
                 <div class="widget-bg-color-icon card-box">
                     <div class="avatar-lg rounded-circle bg-icon-primary float-left">
-                        <i class="far fa-calendar-alt font-24 avatar-title text-white"></i>
+                        <i class="fas fa-address-card font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
-                        <h3 class="text-dark mt-1"><span class="counter">Admin</span></h3>
-                        <h3 class="text-primary mb-0"><span class="counter">Clubs</span></h3>
+                        <h3 class="text-dark mt-1"><span class="counter">Manage</span></h3>
+                        <h3 class="text-primary mb-0"><span class="counter">User</span></h3>
                     </div>
                     <div class="clearfix"></div>
                 </div>

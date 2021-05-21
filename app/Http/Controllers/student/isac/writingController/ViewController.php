@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\student\isac\writingController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Model\PointsWriting;
+use App\Model\Writing;
 use Auth;
 use DB;
 
@@ -50,7 +50,7 @@ class ViewController extends Controller
 
         $date_now = date('Y-m-d H:i:s');
 
-        if(PointsWriting::checkPoint() < 1) {
+        if(Writing::checkPoint() < 1) {
             session()->flash('message', 'ขออภัยคุณมี Point ไม่เพียงพอสำหรับการใช้งาน');
             return redirect('user_home');
         }
@@ -99,7 +99,7 @@ class ViewController extends Controller
                     'status' => 'N']);
 
                 if($update) {
-                    PointsWriting::decreasePoint();
+                    Writing::decreasePoint();
     
                     DB::table('log')->insert([
                         'std_id' => auth('student')->user()->std_id,
