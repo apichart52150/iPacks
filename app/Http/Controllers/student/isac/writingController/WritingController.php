@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use DB;
 use Auth;
 use App\Model\Writing;
-use App\Model\PointsWriting;
 
 
 class WritingController extends Controller
@@ -74,7 +73,7 @@ class WritingController extends Controller
                 
                 if($result) {
 
-                    PointsWriting::decreasePoint();
+                    Writing::decreasePoint();
 
                     DB::table('log')
                         ->insert([
