@@ -2,6 +2,7 @@
     <div class="modal-content">
         <div class="modal-body text-center">
             <form action="{{route('sub_menu')}}" method="POST">
+                {{ csrf_field() }}
                 <input type="hidden" name="type" value="{{$id}}">
                 <h5 class="m-b-5 m-t-10 text-uppercase">{{$name}}</h5>
                 <div class="row">
