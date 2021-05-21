@@ -1,24 +1,5 @@
 @extends('layouts.sac_s')
 
-@section('css')
-<!-- <style>
-	.fade-scale {
-	  animation: .3s fade-anim ease-in;
-	}
-
-	@keyframes fade-anim {
-		0% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		100% {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
-</style> -->
-@stop
-
 @section('content')
 <div class="row justify-content-center">
     <div class="col-md-6">
