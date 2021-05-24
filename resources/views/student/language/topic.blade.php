@@ -47,6 +47,19 @@
                     </div>
                 </div>
             </div>
+           
         @endforeach
+    </div>
+
+    <div class="row filterable-content">
+    @foreach ($topic['submenu'] as $id => $name)
+        @if (!empty($name->pdf_file))
+            <div class="col-xl-6 col-md-6 col-sm-12">
+                <a download href ="{{ asset('public/isac_listening/pdf/'.$name->pdf_file) }}" class="btn btn-block btn-{{$topic['topicColor']}} d-inline-flex flex-column align-items-center justify-content-between mr-2 mt-2">
+                    <span class="mt-1">{{$name->pdf_file}}</span>
+                </a>
+            </div>
+        @endif
+    @endforeach
     </div>
 @endsection
