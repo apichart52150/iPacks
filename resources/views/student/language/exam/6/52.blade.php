@@ -61,7 +61,7 @@
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
-                Smoking in piblic is a
+                Smoking in public is a
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">controversy</option>
@@ -90,7 +90,7 @@
                     <option value="">-Select-</option>
                     <option value="A">improve</option>
                     <option value="B">improved</option>
-                    <option value="imporvement">imporvement</option>
+                    <option value="imporvement">improvement</option>
                 </select>
                in his grades since he started going to bed earlier.
             </div>
@@ -104,7 +104,7 @@
                     <option value="B">deecreased</option>
                     <option value="C">deecreasingly</option>
                 </select>
-               in interest rates, the housing marking has failed to regenerate.
+               in interest rates, the housing market has failed to regenerate.
             </div>
 
             <div class="d-flex align-items-center mb-2">
@@ -113,8 +113,8 @@
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">building</option>
-                    <option value="B">bulid</option>
-                    <option value="bulit">bulit</option>
+                    <option value="B">build</option>
+                    <option value="built">built</option>
                 </select>
                just a few decades ago.
             </div>
@@ -136,7 +136,7 @@
     <div class="col-xl-12 col-md-12 col-sm-12" id="ans" style="display: none;">
         <div class="card-box text-dark font-16">
             <p class="lead">
-                Answer
+                Answers
             </p>
             <div class="accordion mb-3" id="accordionExample">
                 <div class="card mb-1" >
@@ -144,7 +144,7 @@
                         <h5 class="my-0">
                             <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                            
-                            1. There has been a <span class="text-success"><u>dramatic</u></span> fall in the price of new house this year.
+                            1. There has been a <span class="text-success"><u>dramatic</u></span> fall in the price of new houses this year.
                             </a>
                         </h2>
                     </div>
@@ -318,7 +318,7 @@
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            8. In spite of the <span class="text-success"><u>decrease</u></span> in interest rates, the housing marking has failed to regenerate.
+                            8. In spite of the <span class="text-success"><u>decrease</u></span> in interest rates, the housing market has failed to regenerate.
                             </a>
                         </h5>
                     </div>
@@ -357,7 +357,7 @@
                                 <dt class="col-sm-2">building</dt>
                                 <dd class="col-sm-10">(nc): a structure with a roof and walls</dd>
 
-                                <dt class="col-sm-2">bulid</dt>
+                                <dt class="col-sm-2">build</dt>
                                 <dd class="col-sm-10">(vt): to construct something</dd>
                             </dl>
                         </div>
@@ -401,7 +401,7 @@
 
 @section('js')
 <script>
-    const answers = ['dramatic', 'rise', 'success', 'applying', 'controversial', 'minimally', 'imporvement', 'decrease', 'bulit', 'dependent'];
+    const answers = ['dramatic', 'rise', 'success', 'applying', 'controversial', 'minimally', 'imporvement', 'decrease', 'built', 'dependent'];
     let score = 0;
     $("#show-answer").hide(true);
 
