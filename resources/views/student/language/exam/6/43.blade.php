@@ -216,7 +216,7 @@
                     <div class="card-header" id="headingFour">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4.  The monthly <span class="text-success"><u>variation</u></span>  fin rainfall is quite astonishing.
+                                4.  The monthly <span class="text-success"><u>variation</u></span> in rainfall is quite astonishing.
                             </a>
                         </h5>
                     </div>
@@ -224,12 +224,12 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">variation</i></dt>
-                                <dd class="col-sm-10">(nc): a change or slight difference in condition <mark>he + adj + <strong><u>nc</u></strong></mark></dd>
+                                <dd class="col-sm-10">(nc): a change or slight difference in condition <mark>the + adj + <strong><u>nc</u></strong></mark></dd>
 
                                 <dt class="col-sm-2">varied</dt>
                                 <dd class="col-sm-10">(vi): differed in size, amount or nature</dd>
 
-                                <dt class="col-sm-2">varied</dt>
+                                <dt class="col-sm-2">variety</dt>
                                 <dd class="col-sm-10">(n): the quality of being diverse</dd>
                             </dl>
                         </div>
@@ -249,7 +249,7 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">economical</i> </dt>
-                                <dd class="col-sm-10">(adj): cheap to run to <mark>be + far more + <strong><u>adj</u></strong></mark></dd>
+                                <dd class="col-sm-10">(adj): cheap to run <mark>to be + far more + <strong><u>adj</u></strong></mark></dd>
 
                                 <dt class="col-sm-2">economy</dt>
                                 <dd class="col-sm-10">(nu): the state of a country in terms of the production, consumption of goods, services and supply of money</dd>
@@ -329,8 +329,8 @@
                                 <dt class="col-sm-2">They’re</dt>
                                 <dd class="col-sm-10">subject + verb!  Try again! You need a possessive adjective.</dd>
 
-                                <dt class="col-sm-2">There (adv):</dt>
-                                <dd class="col-sm-10">in, at, on or to that place or position</dd>
+                                <dt class="col-sm-2">There</dt>
+                                <dd class="col-sm-10">(adv): in, at, on or to that place or position</dd>
                             </dl>
                         </div>
                     </div>
@@ -377,10 +377,10 @@
                                 <dd class="col-sm-10"> (adj): good or beneficial (for) <mark>less sleep + can be + <strong>adj</strong> + for</mark></dd>
 
                                 <dt class="col-sm-2">advantage</dt>
-                                <dd class="col-sm-10">(nc): a benefit, a strength: It needs <strong><em>an article. </em>"less sleep"</strong> doesn’t agree with its noun complement.</dd>
+                                <dd class="col-sm-10">(nc): a benefit, a strength / It needs <strong><em>an article. </em>"less sleep"</strong> doesn’t agree with its noun complement.</dd>
 
                                 <dt class="col-sm-2">advantages</dt>
-                                <dd class="col-sm-10">(nc): benefits, strengths <strong>less sleep</strong> doesn’t agree with its noun complement.</dd>
+                                <dd class="col-sm-10">(nc): benefits, strengths / <strong>less sleep</strong> doesn’t agree with its noun complement.</dd>
                             </dl>
                         </div>
                     </div>

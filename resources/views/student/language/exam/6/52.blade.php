@@ -44,7 +44,7 @@
                     <option value="B">succeed</option>
                     <option value="success">success</option>
                 </select>
-               of this campaign can be attributed to hardwork and preseverance.
+               of this campaign can be attributed to hardwork and perseverance.
             </div>
 
             <div class="d-flex align-items-center mb-2">
@@ -56,12 +56,12 @@
                     <option value="B">apply</option>
                     <option value="applying">applying</option>
                 </select>
-               for the job if you're not really intersted in talking it.
+               for the job if you're not really intersted in taking it.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
-                Smokeing in piblic is a
+                Smoking in piblic is a
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">controversy</option>
@@ -128,7 +128,7 @@
                     <option value="B">depending</option>
                     <option value="dependent">dependent</option>
                 </select>
-               on computer technology in our everyday have.
+               on computer technology in our everyday life.
             </div>
         </div>
     </div>
@@ -144,7 +144,7 @@
                         <h5 class="my-0">
                             <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                            
-                            1. There hsa been a <span class="text-success"><u>dramatic</u></span> fall in the price of new house this year.
+                            1. There has been a <span class="text-success"><u>dramatic</u></span> fall in the price of new house this year.
                             </a>
                         </h2>
                     </div>
@@ -185,7 +185,7 @@
                                 <dd class="col-sm-10">(vt): to lift something to a higher position</dd>
 
                                 <dt class="col-sm-2">rose</dt>
-                                <dd class="col-sm-10">(adv): past simple of "rise"</dd>
+                                <dd class="col-sm-10">(vt): past simple of "rise"</dd>
                             </dl>
                         </div>
                     </div>
@@ -195,7 +195,7 @@
                     <div class="card-header" id="headingThree">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3.  The <span class="text-success"><u>success</u></span>  of this campaign can be attributed to hardwork and preseverance.
+                                3.  The <span class="text-success"><u>success</u></span>  of this campaign can be attributed to hardwork and perseverance.
                             </a>
                         </h5>
                     </div>
@@ -203,7 +203,7 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2"> success</i></dt>
-                                <dd class="col-sm-10">(nc): achivement, the achiving of the results <mark>The + <strong><u>nc</u></strong> + of</mark></dd>
+                                <dd class="col-sm-10">(nc): achievement, the achiving of the results <mark>The + <strong><u>nc</u></strong> + of</mark></dd>
 
                                 <dt class="col-sm-2">successful</dt>
                                 <dd class="col-sm-10">(adj): achieving desired results</dd>
@@ -219,8 +219,7 @@
                     <div class="card-header" id="headingFour">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4.  There's not much point in <span class="text-success"><u>applying</u></span>  for the job if you're not really intersted in talking it.
-                                There's not much point in
+                                4.  There's not much point in <span class="text-success"><u>applying</u></span>  for the job if you're not really intersted in taking it.
                             </a>
                         </h5>
                     </div>
@@ -231,7 +230,7 @@
                                 <dd class="col-sm-10">(gerund): requesting something by sending a form <mark>in + <strong><u>Gerund</u></strong></mark></dd>
 
                                 <dt class="col-sm-2">application</dt>
-                                <dd class="col-sm-10">(nc): an offical request for something in writing / It needs an article: <em>"an application"</em>.</dd>
+                                <dd class="col-sm-10">(nc): an official request for something in writing / It needs an article: <em>"an application"</em>.</dd>
 
                                 <dt class="col-sm-2">apply</dt>
                                 <dd class="col-sm-10">(vi): to request something offcially in writing</dd>
@@ -244,7 +243,7 @@
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            5. Smokeing in piblic is a <span class="text-success"><u>controcersial</u></span> issue.
+                            5. Smoking in public is a <span class="text-success"><u>controversial</u></span> issue.
                             </a>
                         </h5>
                     </div>
@@ -252,7 +251,7 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> controcersial</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2"> controversial</i> </dt>
                                 <dd class="col-sm-10">(adj): causing disagreement or discussion <mark>a+ <strong><u>adjective</u></strong> + issue</mark></dd>
 
                                 <dt class="col-sm-2">controversy</dt>
@@ -294,7 +293,7 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            7. There has been a marked <span class="text-success"><u>imporvement</u></span> in his grades since he started going to bed earlier.
+                            7. There has been a marked <span class="text-success"><u>improvement</u></span> in his grades since he started going to bed earlier.
                             </a>
                         </h5>
                     </div>
@@ -302,11 +301,11 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> imporvement</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2"> improvement</i> </dt>
                                 <dd class="col-sm-10">(nc): the process of getting better <mark>a + adjective + <strong><u>nc</u></strong></mark></dd>
 
                                 <dt class="col-sm-2">improve</dt>
-                                <dd class="col-sm-10">(vt): to make someting better</dd>
+                                <dd class="col-sm-10">(vt): to make something better</dd>
 
                                 <dt class="col-sm-2">improved</dt>
                                 <dd class="col-sm-10">(vt): past simple and past participle of <em>"improve"</em></dd>
@@ -352,8 +351,8 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> bulit</i> </dt>
-                                <dd class="col-sm-10">(vt): past participle of <em>"bulid"</em>: to construct, to compile <br> <mark><strong>passive voice:</strong> the protype + was + <strong><u>V past participle</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2"> built</i> </dt>
+                                <dd class="col-sm-10">(vt): past participle of <em>"bulid"</em>: to construct, to compile <br> <mark><strong>passive voice:</strong> the prototype  + was + <strong><u>V past participle</u></strong></mark></dd>
 
                                 <dt class="col-sm-2">building</dt>
                                 <dd class="col-sm-10">(nc): a structure with a roof and walls</dd>
