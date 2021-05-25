@@ -13,26 +13,28 @@
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
-                There has been a
+                He was sent to prison for
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="dramatic">dramatic</option>
-                    <option value="B">dramatical</option>
-                    <option value="C">dramatically</option>
+                    <option value="">doing</option>
+                    <option value="committing">committing</option>
+                    <option value="">being</option>
+                    <option value="">having</option>
                 </select>
-               fall in the price of new houses this year.
+                a serious crime.
             </div>
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
-                There has been a substantial
+                He was found
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">raise</option>
-                    <option value="rise">rise</option>
-                    <option value="C">rose</option>
+                    <option value="">innocent</option>
+                    <option value="">not innocent</option>
+                    <option value="guilty">guilty</option>
+                    <option value="">not guilty</option> 
                 </select>
-               in interest rates so far this month.
+                and sentenced to life in prison.
             </div>
             
             <div class="d-flex align-items-center mb-2">
@@ -40,98 +42,106 @@
                 The
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">successful</option>
-                    <option value="B">succeed</option>
-                    <option value="success">success</option>
+                    <option value="">defence</option>
+                    <option value="prosecution">prosecution</option>
+                    <option value="">jury</option>
+                    <option value="">court</option>          
                 </select>
-               of this campaign can be attributed to hardwork and preseverance.
+                asked the judge to hand out a long prison sentence.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
-                There's not much point in
+                He was sentenced to death but this was later
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">application</option>
-                    <option value="B">apply</option>
-                    <option value="applying">applying</option>
+                    <option value="condemned">condemned</option>
+                    <option value="">carried out</option>
+                    <option value="">acquitted</option>
+                    <option value="">commuted</option>            
                 </select>
-               for the job if you're not really intersted in talking it.
+                to life imprisonment.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
-                Smokeing in piblic is a
+                The man was
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">controversy</option>
-                    <option value="controversial">controversial</option>
-                    <option value="C">controversially</option>
+                    <option value="acquitted">acquitted</option>
+                    <option value="">sentenced</option>
+                    <option value="">commuted</option>
+                    <option value="">committed</option>            
                 </select>
-               issue.
+                because of a lack of evidence.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
-                Keyhole surgery is an example of 
+                The
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">minimize</option>
-                    <option value="B">minimal</option>
-                    <option value="minimally">minimally</option>
+                    <option value="">judge</option>
+                    <option value="">prosecution</option>
+                    <option value="jury">jury</option>
+                    <option value="">defendant</option>              
                 </select>
-               invasive surgery.
+                was asked to come up with a speedy verdict.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
-                There has been a marked
+                The chief witness was accused of
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">improve</option>
-                    <option value="B">improved</option>
-                    <option value="imporvement">imporvement</option>
+                    <option value="">crime</option>
+                    <option value="perjury">perjury</option>
+                    <option value="">conspiracy</option>
+                    <option value="">treason</option>>
                 </select>
-               in his grades since he started going to bed earlier.
+                because the evidence he gave was not true.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
-                In spite of the
+                The 
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="deecrease">deecrease</option>
-                    <option value="B">deecreased</option>
-                    <option value="C">deecreasingly</option>
+                    <option value="">prosecution</option>
+                    <option value="">judge</option>
+                    <option value="jury">jury</option>
+                    <option value="">defence</option>          
                 </select>
-               in interest rates, the housing marking has failed to regenerate.
+                called on a number of character witnesses to speak in favour of the defendant.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
-                Computers are a relatively new invention: the prototype was 
+                Since the crime was not considered serious, the judge gave the defendant a  
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">building</option>
-                    <option value="B">bulid</option>
-                    <option value="bulit">bulit</option>
+                    <option value="fine">fine</option>
+                    <option value="">death sentence</option>
+                    <option value="">life imprisonment</option>
+                    <option value="">probation</option>      
                 </select>
-               just a few decades ago.
+               .
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
-                We have become very
+                Before the witness gave
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">depends</option>
-                    <option value="B">depending</option>
-                    <option value="dependent">dependent</option>
+                    <option value="">proof</option>
+                    <option value="">sentence</option>
+                    <option value="evidence">evidence</option>
+                    <option value="">answer</option>              
                 </select>
-               on computer technology in our everyday have.
+                , she was askwed to swear an oath.
             </div>
         </div>
-    </div>
+    </div><!--qustion-->
 
     <div class="col-xl-12 col-md-12 col-sm-12" id="ans" style="display: none;">
         <div class="card-box text-dark font-16">
@@ -143,8 +153,7 @@
                     <div class="card-header" id="headingOne">
                         <h5 class="my-0">
                             <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                           
-                            1. There hsa been a <span class="text-success"><u>dramatic</u></span> fall in the price of new house this year.
+                            1. He was sent to prison for <span class="text-success"><u>committing</u></span> a serious crime.
                             </a>
                         </h2>
                     </div>
@@ -152,14 +161,8 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2"> dramatic</i> </dt>
-                                    <dd class="col-sm-10"> (adj): very sudden and noticeable <mark> a + <strong><u>adjective </u></strong> + fall </mark></dd>
-
-                                    <dt class="col-sm-2">dramatical</dt>
-                                    <dd class="col-sm-10">(adj): obsolete of <em><u>dramatic</u></em> : relating to drama, like a drama in emotional impact</dd>
-
-                                    <dt class="col-sm-2">dramatically</dt>
-                                    <dd class="col-sm-10">(adv): noticeably, suddenly</dd>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">committing</i> </dt>
+                                    <dd class="col-sm-10">(collocation): doing something wrong or illegal <mark><strong>commit a crime</strong></mark></dd>
                                 </dl>
                             </div>
                     </div>
@@ -169,7 +172,7 @@
                     <div class="card-header" id="headingTwo">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            2. There has been a substantial <span class="text-success"><u>rise</u></span> in interest rates so far this month.
+                            2. He was found <span class="text-success"><u>guilty</u></span> and sentenced to life in prison.
                             </a>
                         </h5>
                     </div>
@@ -195,7 +198,7 @@
                     <div class="card-header" id="headingThree">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3.  The <span class="text-success"><u>success</u></span>  of this campaign can be attributed to hardwork and preseverance.
+                                3.  The <span class="text-success"><u>prosecution</u></span>  asked the judge to hand out a long prison sentence.
                             </a>
                         </h5>
                     </div>
@@ -219,8 +222,7 @@
                     <div class="card-header" id="headingFour">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4.  There's not much point in <span class="text-success"><u>applying</u></span>  for the job if you're not really intersted in talking it.
-                                There's not much point in
+                                4.  He was sentenced to death but this was later <span class="text-success"><u>commuted</u></span>  to life imprisonment.
                             </a>
                         </h5>
                     </div>
@@ -244,7 +246,7 @@
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            5. Smokeing in piblic is a <span class="text-success"><u>controcersial</u></span> issue.
+                            5. The man was <span class="text-success"><u>acquitted</u></span>  because of a lack of evidence.
                             </a>
                         </h5>
                     </div>
@@ -269,7 +271,7 @@
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            6. Keyhole surgery is an example of  <span class="text-success"><u>minimally</u></span> invasive surgery.
+                            6. The  <span class="text-success"><u>jury</u></span> was asked to come up with a speedy verdict.
                             </a>
                         </h5>
                     </div>
@@ -294,7 +296,7 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            7. There has been a marked <span class="text-success"><u>imporvement</u></span> in his grades since he started going to bed earlier.
+                            7. The chief witness was accused of  <span class="text-success"><u>perjury</u></span>  because the evidence he gave was not true
                             </a>
                         </h5>
                     </div>
@@ -319,7 +321,7 @@
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            8. In spite of the <span class="text-success"><u>decrease</u></span> in interest rates, the housing marking has failed to regenerate.
+                            8. The <span class="text-success"><u>jury</u></span> called on a number of character witnesses to speak in favour of the defendant.
                             </a>
                         </h5>
                     </div>
@@ -344,7 +346,7 @@
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                            9.  Computers are a relatively new invention: the prototype was  <span class="text-success"><u>built</u></span> just a few decades ago.
+                            9. Since the crime was not considered serious, the judge gave the defendant a  <span class="text-success"><u>fine</u></span> .
                             </a>
                         </h5>
                     </div>
@@ -369,7 +371,7 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10.  We have become very <span class="text-success"><u>dependent</u></span> on computer technology in our everyday lift.
+                            10. Before the witness gave <span class="text-success"><u>evidence</u></span> , she was askwed to swear an oath.
                             </a>
                         </h5>
                     </div>
@@ -402,7 +404,18 @@
 
 @section('js')
 <script>
-    const answers = ['dramatic', 'rise', 'success', 'applying', 'controversial', 'minimally', 'imporvement', 'decrease', 'bulit', 'dependent'];
+    const answers = [
+        'committing', 
+        'guilty', 
+        'prosecution', 
+        'commuted', 
+        'acquitted', 
+        'jury', 
+        'perjury', 
+        'jury',
+        'fine', 
+        'evidence'
+    ];
     let score = 0;
     $("#show-answer").hide(true);
 
@@ -446,4 +459,4 @@
     });
    
 </script>
-@stops
+@stop
