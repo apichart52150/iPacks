@@ -143,7 +143,7 @@
                     <div class="card-header" id="headingOne">
                         <h5 class="my-0">
                             <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            1. He was sent to prison for <span class="text-success"><u>committing</u></span> a serious crime.
+                            1.<span class="text-success"><u>Arson</u></span> is when you intentionally set fire to a building.
                             </a>
                         </h2>
                     </div>
@@ -151,7 +151,7 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">committing</i> </dt>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">Arson</i> </dt>
                                     <dd class="col-sm-10">(collocation): doing something wrong or illegal <mark><strong>commit a crime</strong></mark></dd>
                                 </dl>
                             </div>
@@ -162,14 +162,14 @@
                     <div class="card-header" id="headingTwo">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            2. He was found <span class="text-success"><u>guilty</u></span> and sentenced to life in prison.
+                            2.<span class="text-success"><u>Treason</u></span>  is when you betray your country e.g. by selling national secrets.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">guilty</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2">Treason</i> </dt>
                                 <dd class="col-sm-10">(adj): responsible for a specified wrongdoing 
                                 <br><strong><mark>Clues: sentenced to life</mark></strong></dd>
 
@@ -184,14 +184,14 @@
                     <div class="card-header" id="headingThree">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3.  The <span class="text-success"><u>prosecution</u></span>  asked the judge to hand out a long prison sentence.
+                                3.<span class="text-success"><u>Shoplifting</u></span> is when you steal things from a department store.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">prosecution</i></dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2">Shoplifting</i></dt>
                                 <dd class="col-sm-10">(nc): the party conducting legal proceeding against someone in a lawsuit</dd>
 
                                 <dt class="col-sm-2">defence</dt>
@@ -211,14 +211,14 @@
                     <div class="card-header" id="headingFour">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4.  He was sentenced to death but this was later <span class="text-success"><u>commuted</u></span>  to life imprisonment.
+                                4.<span class="text-success"><u>Embezzlement</u></span> is when you 'cook the books' at work to steal money from your employer.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">commuted</i></dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2">Embezzlement</i></dt>
                                 <dd class="col-sm-10">(vt): reduced to a less severe one</dd>
 
                                 <dt class="col-sm-2">carried out</dt>
@@ -238,7 +238,7 @@
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            5. The man was <span class="text-success"><u>acquitted</u></span>  because of a lack of evidence.
+                            5.<span class="text-success"><u>Burglary</u></span>  is when someone breaks into a building to steal items.
                             </a>
                         </h5>
                     </div>
@@ -246,7 +246,7 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">acquitted</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2">Burglary</i> </dt>
                                 <dd class="col-sm-10">(vt): free someone from a criminal charge 
                                 <br><mark><strong>clues: lack of evidence (without evidence)</strong></mark></dd>
 
@@ -267,7 +267,7 @@
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            6. The  <span class="text-success"><u>jury</u></span> was asked to come up with a speedy verdict.
+                            6.<span class="text-success"><u>Fraud</u></span> is when you assume someone else's identity, usually to steal money.
                             </a>
                         </h5>
                     </div>
@@ -275,7 +275,7 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">jury</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2">Fraud</i> </dt>
                                 <dd class="col-sm-10"> (nc): a body of people sworn to give a verdict in a legal case on the basis of evidence submitted to them in court 
                                 <br><mark><strong>clues: to come up with a speedy verdict</strong></mark></dd>
 
@@ -296,7 +296,7 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            7. The chief witness was accused of  <span class="text-success"><u>perjury</u></span>  because the evidence he gave was not true
+                            7.<span class="text-success"><u>perjury</u></span> is when you tell lies in the courtroom when you have taken an oath to tell the truth.
                             </a>
                         </h5>
                     </div>
@@ -325,14 +325,14 @@
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            8. The <span class="text-success"><u>jury</u></span> called on a number of character witnesses to speak in favour of the defendant.
+                            8.<span class="text-success"><u>Assassination</u></span> is when someone kills an important person, e.g. a king.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">jury</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2">Assassination</i> </dt>
                                 <dd class="col-sm-10"> (nc): a body of people sworn to give a verdict in a legal case on 
                                     the basis of evidence submitted to them in court 
                                     <br><mark><strong>clues: called a number of character witnesses</strong></mark>
@@ -355,7 +355,7 @@
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                            9. Since the crime was not considered serious, the judge gave the defendant a  <span class="text-success"><u>fine</u></span> .
+                            9.<span class="text-success"><u>Manslaughter</u></span> is when you kill someone unintentionally e.g. in a car accident.
                             </a>
                         </h5>
                     </div>
@@ -363,7 +363,7 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">fine</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2">Manslaughter</i> </dt>
                                 <dd class="col-sm-10">(nc): money paid as a punishment
                                 <br><mark><strong>clues: not considered serious</strong></mark></dd>
 
@@ -384,7 +384,7 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10. Before the witness gave <span class="text-success"><u>evidence</u></span> , she was askwed to swear an oath.
+                            10.<span class="text-success"><u>Bigamy</u></span> is when you have two wives at the same time, in places where it isn't allowed.
                             </a>
                         </h5>
                     </div>
@@ -392,7 +392,7 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">evidence</i></dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2">Bigamy</i></dt>
                                 <dd class="col-sm-10"> (nu): information given in a court of law in order to prove that somebody is guilty or not guilty 
                                 <br><mark><strong>clues: swear / an oath</strong></mark></dd>
 
