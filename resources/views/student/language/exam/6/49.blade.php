@@ -138,7 +138,7 @@
                     <option value="evidence">evidence</option>
                     <option value="">answer</option>              
                 </select>
-                , she was askwed to swear an oath.
+                , she was asked to swear an oath.
             </div>
         </div>
     </div><!--qustion-->
@@ -179,16 +179,11 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2"> rise</i> </dt>
-                                <dd class="col-sm-10"> 
-                                    (nc): increase, growth, climb - (vi): to move upwards <mark>a + substantial + <strong><u>nc</u></mark></strong>
-                                </dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">guilty</i> </dt>
+                                <dd class="col-sm-10">(adj): responsible for a specified wrongdoing <strong><mark>Clues: sentenced to life</mark></strong></dd>
 
-                                <dt class="col-sm-2">raise</dt>
-                                <dd class="col-sm-10">(vt): to lift something to a higher position</dd>
-
-                                <dt class="col-sm-2">rose</dt>
-                                <dd class="col-sm-10">(adv): past simple of "rise"</dd>
+                                <dt class="col-sm-2">innocent</dt>
+                                <dd class="col-sm-10">(adj): not guilty of a crime or offence</dd>
                             </dl>
                         </div>
                     </div>
@@ -205,14 +200,17 @@
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2"> success</i></dt>
-                                <dd class="col-sm-10">(nc): achivement, the achiving of the results <mark>The + <strong><u>nc</u></strong> + of</mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">prosecution</i></dt>
+                                <dd class="col-sm-10">(nc): the party conducting legal proceeding against someone in a lawsuit</dd>
 
-                                <dt class="col-sm-2">successful</dt>
-                                <dd class="col-sm-10">(adj): achieving desired results</dd>
+                                <dt class="col-sm-2">defence</dt>
+                                <dd class="col-sm-10">(nc): the legal advisor for the defendant in a lawsuit</dd>
 
-                                <dt class="col-sm-2">succeed</dt>
-                                <dd class="col-sm-10">(vi): to achieve something</dd>
+                                <dt class="col-sm-2">jury</dt>
+                                <dd class="col-sm-10">(nc): a body of people sworn to give a verdict in a legal case on the basis of evidence submitted to them in court</dd>
+
+                                <dt class="col-sm-2">court</dt>
+                                <dd class="col-sm-10">(nc): the place where a trial is held</dd>
                             </dl>
                         </div>
                     </div>
@@ -229,14 +227,17 @@
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2"> applying</i></dt>
-                                <dd class="col-sm-10">(gerund): requesting something by sending a form <mark>in + <strong><u>Gerund</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">commuted</i></dt>
+                                <dd class="col-sm-10">(vt): reduced to a less severe one</dd>
 
-                                <dt class="col-sm-2">application</dt>
-                                <dd class="col-sm-10">(nc): an offical request for something in writing / It needs an article: <em>"an application"</em>.</dd>
+                                <dt class="col-sm-2">carried out</dt>
+                                <dd class="col-sm-10">(vt): conducted</dd>
 
-                                <dt class="col-sm-2">apply</dt>
-                                <dd class="col-sm-10">(vi): to request something offcially in writing</dd>
+                                <dt class="col-sm-2">condemned</dt>
+                                <dd class="col-sm-10">(vt): sentenced to death</dd>
+
+                                <dt class="col-sm-2">acquitted</dt>
+                                <dd class="col-sm-10">(vt): free someone from a criminal charge </dd>
                             </dl>
                         </div>
                     </div>
@@ -254,14 +255,17 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> controcersial</i> </dt>
-                                <dd class="col-sm-10">(adj): causing disagreement or discussion <mark>a+ <strong><u>adjective</u></strong> + issue</mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">acquitted</i> </dt>
+                                <dd class="col-sm-10">(vt): free someone from a criminal charge <mark><strong>clues: lack of evidence (without evidence)</strong></mark></dd>
 
-                                <dt class="col-sm-2">controversy</dt>
+                                <dt class="col-sm-2">sentenced</dt>
                                 <dd class="col-sm-10">(nc): a lot of disagreement or argument</dd>
 
-                                <dt class="col-sm-2">controversially</dt>
-                                <dd class="col-sm-10">(adv): in a way that causes disagreement</dd>
+                                <dt class="col-sm-2">commuted</dt>
+                                <dd class="col-sm-10">(vt): reduced to a less severe one</dd>
+
+                                <dt class="col-sm-2">committed</dt>
+                                <dd class="col-sm-10">(vt): done something illegal</dd>
                             </dl>
                         </div>
                     </div>
