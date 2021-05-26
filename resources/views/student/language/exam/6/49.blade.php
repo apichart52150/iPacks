@@ -180,7 +180,8 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">guilty</i> </dt>
-                                <dd class="col-sm-10">(adj): responsible for a specified wrongdoing <strong><mark>Clues: sentenced to life</mark></strong></dd>
+                                <dd class="col-sm-10">(adj): responsible for a specified wrongdoing 
+                                <br><strong><mark>Clues: sentenced to life</mark></strong></dd>
 
                                 <dt class="col-sm-2">innocent</dt>
                                 <dd class="col-sm-10">(adj): not guilty of a crime or offence</dd>
@@ -256,7 +257,8 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">acquitted</i> </dt>
-                                <dd class="col-sm-10">(vt): free someone from a criminal charge <mark><strong>clues: lack of evidence (without evidence)</strong></mark></dd>
+                                <dd class="col-sm-10">(vt): free someone from a criminal charge 
+                                <br><mark><strong>clues: lack of evidence (without evidence)</strong></mark></dd>
 
                                 <dt class="col-sm-2">sentenced</dt>
                                 <dd class="col-sm-10">(nc): a lot of disagreement or argument</dd>
@@ -283,14 +285,18 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> minimally</i> </dt>
-                                <dd class="col-sm-10">(adv): in a way that isa very small in amount <mark><strong><u>adverb</u></strong> + adjective + n </mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">jury</i> </dt>
+                                <dd class="col-sm-10"> (nc): a body of people sworn to give a verdict in a legal case on the basis of evidence submitted to them in court 
+                                <br><mark><strong>clues: to come up with a speedy verdict</strong></mark></dd>
 
-                                <dt class="col-sm-2">minimal</dt>
-                                <dd class="col-sm-10">(adj): very small in amount</dd>
+                                <dt class="col-sm-2">prosecution</dt>
+                                <dd class="col-sm-10">(nc): the party conducting legal proceeding against someone in a lawsuit</dd>
 
-                                <dt class="col-sm-2">minimize</dt>
-                                <dd class="col-sm-10">(vt): to reduce something to the least amount</dd>
+                                <dt class="col-sm-2">judge</dt>
+                                <dd class="col-sm-10">(nc): the court official who decides how criminals should be punished</dd>
+
+                                <dt class="col-sm-2">defendant</dt>
+                                <dd class="col-sm-10">(nc): the person who has been accused of doing something illegal</dd>
                             </dl>
                         </div>
                     </div>
@@ -308,14 +314,18 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> imporvement</i> </dt>
-                                <dd class="col-sm-10">(nc): the process of getting better <mark>a + adjective + <strong><u>nc</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">perjury</i> </dt>
+                                <dd class="col-sm-10"> (nc): the crime of telling a lie in a court of law 
+                                <br><mark><strong>clues: evidence / not true</strong></mark></dd>
 
-                                <dt class="col-sm-2">improve</dt>
-                                <dd class="col-sm-10">(vt): to make someting better</dd>
+                                <dt class="col-sm-2">crime</dt>
+                                <dd class="col-sm-10">(nc): an illegal wrongdoing</dd>
 
-                                <dt class="col-sm-2">improved</dt>
-                                <dd class="col-sm-10">(vt): past simple and past participle of <em>"improve"</em></dd>
+                                <dt class="col-sm-2">conspiracy</dt>
+                                <dd class="col-sm-10">(nc): a secret plan made by two or more people to do something illegal</dd>
+
+                                <dt class="col-sm-2">treason</dt>
+                                <dd class="col-sm-10"> (nc): the crime of being disloyal to your country</dd>
                             </dl>
                         </div>
                     </div>
@@ -332,15 +342,20 @@
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">jury</i> </dt>
+                                <dd class="col-sm-10"> (nc): a body of people sworn to give a verdict in a legal case on 
+                                    the basis of evidence submitted to them in court 
+                                    <br><mark><strong>clues: called a number of character witnesses</strong></mark>
+                                </dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> decrease</i> </dt>
-                                <dd class="col-sm-10">(nc): a growth, a rise <mark>the + <strong><u>n</u></strong> + in</mark></dd>
+                                <dt class="col-sm-2">prosecution</dt>
+                                <dd class="col-sm-10"> (nc): the party conducting legal proceeding against someone in a lawsuit </dd>
 
-                                <dt class="col-sm-2">decreased</dt>
-                                <dd class="col-sm-10">(vt): past simple and past participle of <em>"decrease": to become less</em></dd>
+                                <dt class="col-sm-2">judge</dt>
+                                <dd class="col-sm-10">(nc): the court official who decides how criminals should be punished </dd>
 
-                                <dt class="col-sm-2">deecreasingly</dt>
-                                <dd class="col-sm-10">(adv): in a way of becoming less</dd>
+                                <dt class="col-sm-2">defence</dt>
+                                <dd class="col-sm-10">(nc): the legal advisor for the defendant in a lawsuit</dd>
                             </dl>
                         </div>
                     </div>
@@ -358,14 +373,18 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> bulit</i> </dt>
-                                <dd class="col-sm-10">(vt): past participle of <em>"bulid"</em>: to construct, to compile <br> <mark><strong>passive voice:</strong> the protype + was + <strong><u>V past participle</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">fine</i> </dt>
+                                <dd class="col-sm-10">(nc): money paid as a punishment
+                                <br><mark><strong>clues: not considered serious</strong></mark></dd>
 
-                                <dt class="col-sm-2">building</dt>
-                                <dd class="col-sm-10">(nc): a structure with a roof and walls</dd>
+                                <dt class="col-sm-2">death sentence</dt>
+                                <dd class="col-sm-10">(nc): an execution</dd>
 
-                                <dt class="col-sm-2">bulid</dt>
-                                <dd class="col-sm-10">(vt): to construct something</dd>
+                                <dt class="col-sm-2">conspiracy</dt>
+                                <dd class="col-sm-10">(nc): the act of being in prison throughout one’s life</dd>
+
+                                <dt class="col-sm-2">probation</dt>
+                                <dd class="col-sm-10">(nc): a system that allows criminals not to go to prison or to leave prison, if they behave well and see a probation officer</dd>
                             </dl>
                         </div>
                     </div>
@@ -383,14 +402,18 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> dependent</i> </dt>
-                                <dd class="col-sm-10">(adj): requiring other support <mark>become + adverb + <strong><u>adjective</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">evidence</i></dt>
+                                <dd class="col-sm-10"> (nu): information given in a court of law in order to prove that somebody is guilty or not guilty 
+                                <br><mark><strong>clues: swear / an oath</strong></mark></dd>
 
-                                <dt class="col-sm-2">depends</dt>
-                                <dd class="col-sm-10">(vi): rely on, be controlled by</dd>
+                                <dt class="col-sm-2">proof</dt>
+                                <dd class="col-sm-10">(nc): facts or documents that prove something is true / It needs an article.</dd>
 
-                                <dt class="col-sm-2">depending</dt>
-                                <dd class="col-sm-10">(vi): present participle or gerund of <em>"depend"</em></dd>
+                                <dt class="col-sm-2">sentence</dt>
+                                <dd class="col-sm-10">(nc): a punishment / It needs an article.</dd>
+
+                                <dt class="col-sm-2">answer</dt>
+                                <dd class="col-sm-10"> (nc): something that you say when you reply to a question / It needs an article.</dd>
                             </dl>
                         </div>
                     </div>
