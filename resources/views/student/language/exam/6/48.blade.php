@@ -152,7 +152,24 @@
                             <div class="card-body">
                                 <dl class="row">
                                     <dt class="col-sm-2"><i class="text-success mr-2">Arson</i> </dt>
-                                    <dd class="col-sm-10">(collocation): doing something wrong or illegal <mark><strong>commit a crime</strong></mark></dd>
+                                    <dd class="col-sm-10">(nc): the crime of deliberately making something burnt
+                                    <br><span class="badge badge-danger p-1 font-16"><strong>clues: intentionally set fire</strong></span>
+                                    </dd>
+                                </dl>
+
+                                <dl class="row">
+                                    <dt class="col-sm-2">Perjury</dt>
+                                    <dd class="col-sm-10">(nc): the crime of telling a lie in a court of law</dd>
+                                </dl>
+
+                                <dl class="row">
+                                    <dt class="col-sm-2">Embezzlement</dt>
+                                    <dd class="col-sm-10">(nc): stealing money from the company you work for</dd>
+                                </dl>
+
+                                <dl class="row">
+                                    <dt class="col-sm-2">Shoplifting</dt>
+                                    <dd class="col-sm-10">(nc): the crime of stealing things from shops</dd>
                                 </dl>
                             </div>
                     </div>
@@ -170,11 +187,17 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">Treason</i> </dt>
-                                <dd class="col-sm-10">(adj): responsible for a specified wrongdoing 
-                                <br><strong><mark>Clues: sentenced to life</mark></strong></dd>
+                                <dd class="col-sm-10"> (nc): the crime of betraying your country
+                                <br><strong><mark>Clues: betray your country</mark></strong></dd>
 
-                                <dt class="col-sm-2">innocent</dt>
-                                <dd class="col-sm-10">(adj): not guilty of a crime or offence</dd>
+                                <dt class="col-sm-2">Perjury</dt>
+                                <dd class="col-sm-10"> (nc): the crime of telling a lie in a court of law</dd>
+
+                                <dt class="col-sm-2">Fraud</dt>
+                                <dd class="col-sm-10">nc): the crime of deceiving people to gain money or</dd>
+
+                                <dt class="col-sm-2">Kidnapping</dt>
+                                <dd class="col-sm-10">(nc): taking someone illegally by force to get money for returning them</dd>
                             </dl>
                         </div>
                     </div>
@@ -192,16 +215,17 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">Shoplifting</i></dt>
-                                <dd class="col-sm-10">(nc): the party conducting legal proceeding against someone in a lawsuit</dd>
+                                <dd class="col-sm-10">(nc): the crime of stealing things from shops
+                                <br><strong><mark>Clues: steal things from a department store</mark></strong></dd>
 
-                                <dt class="col-sm-2">defence</dt>
-                                <dd class="col-sm-10">(nc): the legal advisor for the defendant in a lawsuit</dd>
+                                <dt class="col-sm-2">Burglary</dt>
+                                <dd class="col-sm-10">(nc): the crime of getting into a building to steal things</dd>
 
-                                <dt class="col-sm-2">jury</dt>
-                                <dd class="col-sm-10">(nc): a body of people sworn to give a verdict in a legal case on the basis of evidence submitted to them in court</dd>
+                                <dt class="col-sm-2">Hi-jacking</dt>
+                                <dd class="col-sm-10">(nc): the use of violence to take control of a plane</dd>
 
-                                <dt class="col-sm-2">court</dt>
-                                <dd class="col-sm-10">(nc): the place where a trial is held</dd>
+                                <dt class="col-sm-2">Mugging</dt>
+                                <dd class="col-sm-10">(nc): an attack on someone in which they are robbed in a public place</dd>
                             </dl>
                         </div>
                     </div>
@@ -219,16 +243,17 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">Embezzlement</i></dt>
-                                <dd class="col-sm-10">(vt): reduced to a less severe one</dd>
+                                <dd class="col-sm-10">(nc): stealing money from the company you work for
+                                <br><strong><mark>Clues: steal money from your employer / cook the books: to dishonestly change official records and figures</mark></strong></dd>
 
-                                <dt class="col-sm-2">carried out</dt>
-                                <dd class="col-sm-10">(vt): conducted</dd>
+                                <dt class="col-sm-2">Fraud</dt>
+                                <dd class="col-sm-10">(nc): the crime of deceiving people to gain money or goods</dd>
 
-                                <dt class="col-sm-2">condemned</dt>
-                                <dd class="col-sm-10">(vt): sentenced to death</dd>
+                                <dt class="col-sm-2">Mugging</dt>
+                                <dd class="col-sm-10">(nc): an attack on someone in which they are robbed in a public place</dd>
 
-                                <dt class="col-sm-2">acquitted</dt>
-                                <dd class="col-sm-10">(vt): free someone from a criminal charge </dd>
+                                <dt class="col-sm-2">Burglary</dt>
+                                <dd class="col-sm-10">(nc): the crime of getting into a building to steal things</dd>
                             </dl>
                         </div>
                     </div>
@@ -238,7 +263,7 @@
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            5.<span class="text-success"><u>Burglary</u></span>  is when someone breaks into a building to steal items.
+                            5.<span class="text-success"><u>Burglary</u></span> is when someone breaks into a building to steal items.
                             </a>
                         </h5>
                     </div>
@@ -247,17 +272,16 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">Burglary</i> </dt>
-                                <dd class="col-sm-10">(vt): free someone from a criminal charge 
-                                <br><mark><strong>clues: lack of evidence (without evidence)</strong></mark></dd>
+                                <dd class="col-sm-10">(nc): the crime of getting into a building to steal things</dd>
 
-                                <dt class="col-sm-2">sentenced</dt>
-                                <dd class="col-sm-10">(nc): a lot of disagreement or argument</dd>
+                                <dt class="col-sm-2">Mugging</dt>
+                                <dd class="col-sm-10">(nc): an attack on someone in which they are robbed in a public place</dd>
 
-                                <dt class="col-sm-2">commuted</dt>
-                                <dd class="col-sm-10">(vt): reduced to a less severe one</dd>
+                                <dt class="col-sm-2">Fraud</dt>
+                                <dd class="col-sm-10">(nc): the crime of deceiving people to gain money or goods</dd>
 
-                                <dt class="col-sm-2">committed</dt>
-                                <dd class="col-sm-10">(vt): done something illegal</dd>
+                                <dt class="col-sm-2">Embezzlement</dt>
+                                <dd class="col-sm-10">(nc): stealing money from the company you work for</dd>
                             </dl>
                         </div>
                     </div>
@@ -274,18 +298,17 @@
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-
                                 <dt class="col-sm-2"><i class="text-success mr-2">Fraud</i> </dt>
-                                <dd class="col-sm-10"> (nc): a body of people sworn to give a verdict in a legal case on the basis of evidence submitted to them in court 
-                                <br><mark><strong>clues: to come up with a speedy verdict</strong></mark></dd>
+                                <dd class="col-sm-10">(nc): the crime of deceiving people to gain money or goods 
+                                <br><mark><strong>clues: It doesn’t need any person but the crime.</strong></mark></dd>
 
-                                <dt class="col-sm-2">prosecution</dt>
+                                <dt class="col-sm-2">Embezzlement</dt>
                                 <dd class="col-sm-10">(nc): the party conducting legal proceeding against someone in a lawsuit</dd>
 
-                                <dt class="col-sm-2">judge</dt>
+                                <dt class="col-sm-2">Imposter</dt>
                                 <dd class="col-sm-10">(nc): the court official who decides how criminals should be punished</dd>
 
-                                <dt class="col-sm-2">defendant</dt>
+                                <dt class="col-sm-2">Arson</dt>
                                 <dd class="col-sm-10">(nc): the person who has been accused of doing something illegal</dd>
                             </dl>
                         </div>
@@ -303,19 +326,17 @@
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">Perjury</i> </dt>
+                                <dd class="col-sm-10">(nc): the crime of telling a lie in a court of law</dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">perjury</i> </dt>
-                                <dd class="col-sm-10"> (nc): the crime of telling a lie in a court of law 
-                                <br><mark><strong>clues: evidence / not true</strong></mark></dd>
+                                <dt class="col-sm-2">Arson</dt>
+                                <dd class="col-sm-10">(nc): the crime of deliberately making something burnt</dd>
 
-                                <dt class="col-sm-2">crime</dt>
-                                <dd class="col-sm-10">(nc): an illegal wrongdoing</dd>
+                                <dt class="col-sm-2">Plagiarism</dt>
+                                <dd class="col-sm-10">(nc): when someone use your words, ideas, or works and pretends they are their own</dd>
 
-                                <dt class="col-sm-2">conspiracy</dt>
-                                <dd class="col-sm-10">(nc): a secret plan made by two or more people to do something illegal</dd>
-
-                                <dt class="col-sm-2">treason</dt>
-                                <dd class="col-sm-10"> (nc): the crime of being disloyal to your country</dd>
+                                <dt class="col-sm-2">Deceit</dt>
+                                <dd class="col-sm-10">(nc): behavior that is intended to make someone believe something that is not true</dd>
                             </dl>
                         </div>
                     </div>
@@ -333,19 +354,16 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">Assassination</i> </dt>
-                                <dd class="col-sm-10"> (nc): a body of people sworn to give a verdict in a legal case on 
-                                    the basis of evidence submitted to them in court 
-                                    <br><mark><strong>clues: called a number of character witnesses</strong></mark>
-                                </dd>
+                                <dd class="col-sm-10">(nc): the act of murdering an important person</dd>
 
-                                <dt class="col-sm-2">prosecution</dt>
-                                <dd class="col-sm-10"> (nc): the party conducting legal proceeding against someone in a lawsuit </dd>
+                                <dt class="col-sm-2">Manslaughter</dt>
+                                <dd class="col-sm-10">(nc): the crime of killing someone illegally but not deliberately</dd>
 
-                                <dt class="col-sm-2">judge</dt>
-                                <dd class="col-sm-10">(nc): the court official who decides how criminals should be punished </dd>
+                                <dt class="col-sm-2">Hi-jacking</dt>
+                                <dd class="col-sm-10">(nc): the use of violence to take control of a plane</dd>
 
-                                <dt class="col-sm-2">defence</dt>
-                                <dd class="col-sm-10">(nc): the legal advisor for the defendant in a lawsuit</dd>
+                                <dt class="col-sm-2">Execution</dt>
+                                <dd class="col-sm-10">(nc): when someone is killed especially as a legal punishment</dd>
                             </dl>
                         </div>
                     </div>
@@ -364,17 +382,16 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">Manslaughter</i> </dt>
-                                <dd class="col-sm-10">(nc): money paid as a punishment
-                                <br><mark><strong>clues: not considered serious</strong></mark></dd>
+                                <dd class="col-sm-10">(nc): the crime of killing someone illegally but not deliberately</dd>
 
-                                <dt class="col-sm-2">death sentence</dt>
-                                <dd class="col-sm-10">(nc): an execution</dd>
+                                <dt class="col-sm-2">Assassination</dt>
+                                <dd class="col-sm-10">(nc): the act of murdering an important person</dd>
 
-                                <dt class="col-sm-2">conspiracy</dt>
-                                <dd class="col-sm-10">(nc): the act of being in prison throughout one’s life</dd>
+                                <dt class="col-sm-2">Murder</dt>
+                                <dd class="col-sm-10">(nc): the crime of deliberately killing someone</dd>
 
-                                <dt class="col-sm-2">probation</dt>
-                                <dd class="col-sm-10">(nc): a system that allows criminals not to go to prison or to leave prison, if they behave well and see a probation officer</dd>
+                                <dt class="col-sm-2">Self-defence</dt>
+                                <dd class="col-sm-10">(nc): something you do to protect yourself or your property</dd>
                             </dl>
                         </div>
                     </div>
@@ -393,17 +410,16 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">Bigamy</i></dt>
-                                <dd class="col-sm-10"> (nu): information given in a court of law in order to prove that somebody is guilty or not guilty 
-                                <br><mark><strong>clues: swear / an oath</strong></mark></dd>
+                                <dd class="col-sm-10">(nc): the crime of killing someone illegally but not deliberately</dd>
 
-                                <dt class="col-sm-2">proof</dt>
-                                <dd class="col-sm-10">(nc): facts or documents that prove something is true / It needs an article.</dd>
+                                <dt class="col-sm-2">Fraud</dt>
+                                <dd class="col-sm-10">(nc): the crime of deceiving people to gain money or goods</dd>
 
-                                <dt class="col-sm-2">sentence</dt>
-                                <dd class="col-sm-10">(nc): a punishment / It needs an article.</dd>
+                                <dt class="col-sm-2">Adultery</dt>
+                                <dd class="col-sm-10">(nc): sex between someone who is married and someone who is not their wife or husband</dd>
 
-                                <dt class="col-sm-2">answer</dt>
-                                <dd class="col-sm-10"> (nc): something that you say when you reply to a question / It needs an article.</dd>
+                                <dt class="col-sm-2">Deceit</dt>
+                                <dd class="col-sm-10">(nc): behavior that is intended to make someone believe something that is not true</dd>
                             </dl>
                         </div>
                     </div>
