@@ -153,7 +153,7 @@
                                 <dl class="row">
                                     <dt class="col-sm-2"><i class="text-success mr-2">Arson</i> </dt>
                                     <dd class="col-sm-10">(nc): the crime of deliberately making something burnt
-                                    <br><span class="badge badge-danger p-1 font-16"><strong>clues: intentionally set fire</strong></span>
+                                    <br><span class="badge badge-danger p-1 font-16 mt-1"><strong>clues: intentionally set fire</strong></span>
                                     </dd>
                                 </dl>
 
