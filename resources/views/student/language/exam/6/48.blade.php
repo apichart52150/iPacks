@@ -136,7 +136,7 @@
     <div class="col-xl-12 col-md-12 col-sm-12" id="ans" style="display: none;">
         <div class="card-box text-dark font-16">
             <p class="lead">
-                Answer
+                Answers
             </p>
             <div class="accordion mb-3" id="accordionExample">
                 <div class="card mb-1" >

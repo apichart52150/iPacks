@@ -152,7 +152,7 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2"> dramatic</i> </dt>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">dramatic</i> </dt>
                                     <dd class="col-sm-10"> (adj): very sudden and noticeable <mark> a + <strong><u>adjective </u></strong> + fall </mark></dd>
 
                                     <dt class="col-sm-2">dramatical</dt>
