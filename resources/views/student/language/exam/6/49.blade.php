@@ -181,7 +181,7 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">guilty</i> </dt>
                                 <dd class="col-sm-10">(adj): responsible for a specified wrongdoing 
-                                <br><strong><mark>Clues: sentenced to life</mark></strong></dd>
+                                <br><strong><mark>clues: sentenced to life</mark></strong></dd>
 
                                 <dt class="col-sm-2">innocent</dt>
                                 <dd class="col-sm-10">(adj): not guilty of a crime or offence</dd>

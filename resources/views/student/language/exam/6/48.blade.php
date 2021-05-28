@@ -15,10 +15,10 @@
                 <span class="font-weight-bold mr-2">1.</span>
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="perjury">Perjury</option>
-                    <option value="arson">Arson</option>
-                    <option value="embezzlement">Embezzlement</option>
-                    <option value="shoplifting">hoplifting</option>
+                    <option value="Perjury">Perjury</option>
+                    <option value="Arson">Arson</option>
+                    <option value="Embezzlement">Embezzlement</option>
+                    <option value="Shoplifting">Shoplifting</option>
                 </select>
                 is when you intentionally set fire to a building.
             </div>
@@ -27,9 +27,9 @@
                 <span class="font-weight-bold mr-2">2.</span>
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="perjury">Perjury</option>
-                    <option value="treason">Treason</option>
-                    <option value="fraud">Fraud</option>
+                    <option value="Perjury">Perjury</option>
+                    <option value="Treason">Treason</option>
+                    <option value="Fraud">Fraud</option>
                     <option value="kidnapping">Kidnapping</option> 
                 </select>
                 is when you betray your country e.g. by selling national secrets.
@@ -39,8 +39,8 @@
                 <span class="font-weight-bold mr-2">3.</span>
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="shoplifting">Shoplifting</option>
-                    <option value="burglary ">Burglary </option>
+                    <option value="Shoplifting">Shoplifting</option>
+                    <option value="Burglary ">Burglary </option>
                     <option value="hi-jacking">Hi-jacking</option>
                     <option value="mugging">Mugging</option>          
                 </select>
@@ -51,10 +51,10 @@
                 <span class="font-weight-bold mr-2">4.</span>
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="fraud">Fraud</option>
+                    <option value="Fraud">Fraud</option>
                     <option value="mugging">Mugging</option>
-                    <option value="burglary">Burglary</option>
-                    <option value="embezzlement">Embezzlement</option>            
+                    <option value="Burglary">Burglary</option>
+                    <option value="Embezzlement">Embezzlement</option>            
                 </select>
                 is when you 'cook the books' at work to steal money from your employer.
             </div>
@@ -64,9 +64,9 @@
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="mugging">Mugging</option>
-                    <option value="fraud">Fraud</option>
-                    <option value="embezzlement">Embezzlement</option>
-                    <option value="burglary">Burglary</option>            
+                    <option value="Fraud">Fraud</option>
+                    <option value="Embezzlement">Embezzlement</option>
+                    <option value="Burglary">Burglary</option>            
                 </select>
                 is when someone breaks into a building to steal items.
             </div>
@@ -75,10 +75,10 @@
                 <span class="font-weight-bold mr-2">6.</span>
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="embezzlement">Embezzlement</option>
+                    <option value="Embezzlement">Embezzlement</option>
                     <option value="imposter">Imposter</option>
-                    <option value="arson">Arson</option>
-                    <option value="fraud">Fraud</option>              
+                    <option value="Arson">Arson</option>
+                    <option value="Fraud">Fraud</option>              
                 </select>
                 is when you assume someone else's identity, usually to steal money.
             </div>
@@ -87,8 +87,8 @@
                 <span class="font-weight-bold mr-2">7.</span>
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="arson">Arson</option>
-                    <option value="perjury">Perjury</option>
+                    <option value="Arson">Arson</option>
+                    <option value="Perjury">Perjury</option>
                     <option value="">Plagiarism</option>
                     <option value="">Deceit</option>>
                 </select>
@@ -99,9 +99,9 @@
                 <span class="font-weight-bold mr-2">8.</span>
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="manslaughter">Manslaughter</option>
+                    <option value="Manslaughter">Manslaughter</option>
                     <option value="hi-jacking">Hi-jacking</option>
-                    <option value="assassination">Assassination</option>
+                    <option value="Assassination">Assassination</option>
                     <option value="execution">Execution</option>          
                 </select>
                 is when someone kills an important person, e.g. a king.
@@ -113,8 +113,8 @@
                     <option value="">-Select-</option>
                     <option value="self-defence">Self-defence</option>
                     <option value="murder">Murder</option>
-                    <option value="manslaughter">manslaughter</option>
-                    <option value="assassination">Assassination</option>      
+                    <option value="Manslaughter">Manslaughter</option>
+                    <option value="Assassination">Assassination</option>      
                 </select>
                 is when you kill someone unintentionally e.g. in a car accident.
             </div>
@@ -123,8 +123,8 @@
                 <span class="font-weight-bold mr-2">10.</span>
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="bigamy">Bigamy</option>
-                    <option value="fraud">Fraud</option>
+                    <option value="Bigamy">Bigamy</option>
+                    <option value="Fraud">Fraud</option>
                     <option value="adultery">Adultery</option>
                     <option value="deceit">Deceit</option>              
                 </select>
@@ -153,7 +153,7 @@
                                 <dl class="row">
                                     <dt class="col-sm-2"><i class="text-success mr-2">Arson</i> </dt>
                                     <dd class="col-sm-10">(nc): the crime of deliberately making something burnt
-                                    <br><span class="badge badge-danger p-1 font-16 mt-1"><strong>clues: intentionally set fire</strong></span>
+                                    <br><mark><strong>clues: intentionally set fire</strong></mark>
                                     </dd>
                                 </dl>
 
@@ -188,7 +188,7 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">Treason</i> </dt>
                                 <dd class="col-sm-10"> (nc): the crime of betraying your country
-                                <br><strong><mark>Clues: betray your country</mark></strong></dd>
+                                <br><strong><mark>clues: betray your country</mark></strong></dd>
 
                                 <dt class="col-sm-2">Perjury</dt>
                                 <dd class="col-sm-10"> (nc): the crime of telling a lie in a court of law</dd>
@@ -216,7 +216,7 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">Shoplifting</i></dt>
                                 <dd class="col-sm-10">(nc): the crime of stealing things from shops
-                                <br><strong><mark>Clues: steal things from a department store</mark></strong></dd>
+                                <br><strong><mark>clues: steal things from a department store</mark></strong></dd>
 
                                 <dt class="col-sm-2">Burglary</dt>
                                 <dd class="col-sm-10">(nc): the crime of getting into a building to steal things</dd>
@@ -244,7 +244,7 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">Embezzlement</i></dt>
                                 <dd class="col-sm-10">(nc): stealing money from the company you work for
-                                <br><strong><mark>Clues: steal money from your employer / cook the books: to dishonestly change official records and figures</mark></strong></dd>
+                                <br><strong><mark>clues: steal money from your employer / cook the books: to dishonestly change official records and figures</mark></strong></dd>
 
                                 <dt class="col-sm-2">Fraud</dt>
                                 <dd class="col-sm-10">(nc): the crime of deceiving people to gain money or goods</dd>
@@ -319,7 +319,7 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            7.<span class="text-success"><u>perjury</u></span> is when you tell lies in the courtroom when you have taken an oath to tell the truth.
+                            7.<span class="text-success"><u>Perjury</u></span> is when you tell lies in the courtroom when you have taken an oath to tell the truth.
                             </a>
                         </h5>
                     </div>
@@ -438,16 +438,16 @@
 @section('js')
 <script>
     const answers = [
-        'arson', 
-        'treason', 
-        'shoplifting', 
-        'embezzlement', 
-        'burglary', 
-        'fraud', 
-        'perjury', 
-        'assassination',
-        'manslaughter', 
-        'bigamy'
+        'Arson', 
+        'Treason', 
+        'Shoplifting', 
+        'Embezzlement', 
+        'Burglary', 
+        'Fraud', 
+        'Perjury', 
+        'Assassination',
+        'Manslaughter', 
+        'Bigamy'
     ];
     let score = 0;
     $("#show-answer").hide(true);
