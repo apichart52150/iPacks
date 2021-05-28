@@ -13,122 +13,127 @@
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
-                Unemployment figures for the three countries stood at 6%, 10% and 12%
+                The phrase '
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="*">respectfully</option>
-                    <option value="respectively">respectively</option>
-                    <option value="*">respectedly</option>
+                    <option value="nescafe">nescafe</option>
+                    <option value="treacle">treacle</option>
+                    <option value="mud">mud</option>
+                    <option value="Blood">Blood</option>
                 </select>
-                .
+                is thicker than water' means that family is more important than friends.
             </div>
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
-                An
+                A family in which many generations live together is known as an
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">analyze</option>
-                    <option value="analysis">analysis</option>
-                    <option value="C">analyst</option>
+                    <option value="extra big">extra big</option>
+                    <option value="traditional">traditional</option>
+                    <option value="extended">extended</option>
+                    <option value="infrastructure">infrastructure</option>
                 </select>
-                of data from recent research shows that global warming is accelerating.
+                family.
             </div>
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
-                The government has
+                A family consisting of just the parents and a couple of children is referred to as a
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">respond</option>
-                    <option value="B">responding</option>
-                    <option value="responded">responded</option>
+                    <option value="extended">extended</option>
+                    <option value="traditional">traditional</option>
+                    <option value="nuclear">nuclear</option>
+                    <option value="small">small</option>
                 </select>
-                by increasing research funding in this area.
+                family.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
-                The monthly
+                A woman whose husband has died is called a 
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="variation">variation</option>
-                    <option value="B">varied</option>
-                    <option value="*">variety</option>
+                    <option value="widow">widow</option>
+                    <option value="fiancee">fiancee</option>
+                    <option value="old-maid">old-maid</option>
+                    <option value="spinster">spinster</option>
                 </select>
-                in rainfall is quite astonishing.
+                .
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
-                Cars with smaller engine sizes tend to be far more
+                What do we call the money or gifts which one partner hands to the other party at the marriage.
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">economy</option>
-                    <option value="*">economic</option>
-                    <option value="economical">economical</option>
+                    <option value="duty">duty</option>
+                    <option value="dowry">dowry</option>
+                    <option value="camels">camels</option>
+                    <option value="birthright">birthright</option>
                 </select>
-                than those with larger engines.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
-                More recent studies
+                What do we call the man who is getting married?
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="indicate">indicate</option>
-                    <option value="B">indicating</option>
-                    <option value="*">indication</option>
+                    <option value="groom">groom</option>
+                    <option value="bridegroom">bridegroom</option>
+                    <option value="best man">best man</option>
+                    <option value="bridesmaid">bridesmaid</option>
                 </select>
-                that there is a correlation between juvenile crime and unemployment.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
-                The link between juvenile crime and drug abuse cannot be 
+                If your father marries a new wife (not your own mother), what is her relationship to you?
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">deny</option>
-                    <option value="B">denying</option>
-                    <option value="denied">denied</option>
+                    <option value="aunty">aunty</option>
+                    <option value="half-sister">half-sister</option>
+                    <option value="step-mother">step-mother</option>
+                    <option value="fairy godmother">fairy godmother</option>
                 </select>
-               .
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
-                It's important for children to have a room of
+                What do we call a man who has two wives?
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="*">they're</option>
-                    <option value="their">their</option>
-                    <option value="C">there</option>
+                    <option value="A happy man">A happy man</option>
+                    <option value="misogynist">misogynist</option>
+                    <option value="bachelor">bachelor</option>
+                    <option value="bigamist">bigamist</option>
                 </select>
-                own.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
-                The most recent
+                Having many wives is called 
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">assess</option>
-                    <option value="B">assessing</option>
-                    <option value="assessment">assessment</option>
+                    <option value="polyandry">polyandry</option>
+                    <option value="polygamy">polygamy</option>
+                    <option value="purgatory">purgatory</option>
+                    <option value="polygon">polygon</option>
                 </select>
-                of the situation seems to indicate the situation is deteriorating.
+                .
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
-                It has been proved by research that less sleep can be
+                What do we call it when two people live together as husband and wife before they get married?
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">advantage</option>
-                    <option value="B">advantages</option>
-                    <option value="advantageous">advantageous</option>
+                    <option value="engagement">engagement</option>
+                    <option value="betrothal">betrothal</option>
+                    <option value="separation">separation</option>
+                    <option value="trial marriage">trial marriage</option>
                 </select>
-                for brain development.
             </div>
         </div>
     </div>
@@ -143,7 +148,7 @@
                     <div class="card-header" id="headingOne">
                         <h5 class="my-0">
                             <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            1. Unemployment figures for the three countries stood at 6%, 10% and 12% <span class="text-success"><u>respectively</u></span> .
+                            1. The phrase ' <span class="text-success"><u>Blood</u></span> is thicker than water' means that family is more important than friends.
                             </a>
                         </h2>
                     </div>
@@ -151,14 +156,23 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">respectively</i> </dt>
-                                    <dd class="col-sm-10">(adv): in the order already mentioned</dd>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">Blood</i> </dt>
+                                    <dd class="col-sm-10">(nu): the red liquid that your heart pumps around your body</dd>
+                                </dl>
 
-                                    <dt class="col-sm-2">respectfully</dt>
-                                    <dd class="col-sm-10">(adv): with difference and respect </dd>
+                                <dl class="row">
+                                    <dt class="col-sm-2">Nescafe</dt>
+                                    <dd class="col-sm-10">(nu): a type of instant coffee</dd>
+                                </dl>
 
-                                    <dt class="col-sm-2">respectedly</dt>
-                                    <dd class="col-sm-10">(adv): in a way that is admired by many people</dd>
+                                <dl class="row">
+                                    <dt class="col-sm-2">Treacle</dt>
+                                    <dd class="col-sm-10">(nu): a thick sweet black liquid obtained from  raw sugar</dd>
+                                </dl>
+
+                                <dl class="row">
+                                    <dt class="col-sm-2">Mud</dt>
+                                    <dd class="col-sm-10">(nu): wet earth that has becomes soft and sticky </dd>
                                 </dl>
                             </div>
                     </div>
@@ -168,21 +182,22 @@
                     <div class="card-header" id="headingTwo">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            2. An <span class="text-success"><u>analysis</u></span> of data from recent research shows that global warming is accelerating.
+                            2. A family in which many generations live together is known as an <span class="text-success"><u>extended</u></span> family.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">analysis</i> </dt>
-                                <dd class="col-sm-10"> (nc): a particular study of something <mark>a + <strong><u>nc</u></strong> + of</mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">extended</i> </dt>
+                                <dd class="col-sm-10">(adj): made longer or bigger
+                                <br><strong><mark>clues: an + adj + family</mark></strong></dd>
 
-                                <dt class="col-sm-2">analyze</dt>
-                                <dd class="col-sm-10">(vt): to examine something in a systematic and careful way  </dd>
+                                <dt class="col-sm-2">traditional</dt>
+                                <dd class="col-sm-10">(adj): following ideas or methods that have existed for a long time</dd>
 
-                                <dt class="col-sm-2">analyst</dt>
-                                <dd class="col-sm-10">(nc): a person whose job is to examine something in detail </dd>
+                                <dt class="col-sm-2">infrastructure</dt>
+                                <dd class="col-sm-10">(nu): the basic systems and structures that a country needs: roads, railways, banks etc.</dd>
                             </dl>
                         </div>
                     </div>
@@ -192,21 +207,21 @@
                     <div class="card-header" id="headingThree">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3.  The government has <span class="text-success"><u>responded</u></span> by increasing research funding in this area.
+                                3. A family consisting of just the parents and a couple of children is referred to as a <span class="text-success"><u>nuclear</u></span> family.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">responded</i></dt>
-                                <dd class="col-sm-10">(vi) past participle: done something as a reaction to someone <mark>has + <strong><u>V past participle</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">nuclear</i></dt>
+                                <dd class="col-sm-10">(adj): single</dd>
 
-                                <dt class="col-sm-2">respond</dt>
-                                <dd class="col-sm-10">(vi) present simple/ infinitive: to do something as a reaction to someone</dd>
+                                <dt class="col-sm-2">extended</dt>
+                                <dd class="col-sm-10">(adj): made longer or bigger</dd>
 
-                                <dt class="col-sm-2">responding</dt>
-                                <dd class="col-sm-10">(vi) present participle/ gerund: doing something as a reaction to someone</dd>
+                                <dt class="col-sm-2">traditional</dt>
+                                <dd class="col-sm-10"> (adj): following ideas or methods that have existed for a long time</dd>
                             </dl>
                         </div>
                     </div>
@@ -216,21 +231,24 @@
                     <div class="card-header" id="headingFour">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4.  The monthly <span class="text-success"><u>variation</u></span> in rainfall is quite astonishing.
+                                4. A woman whose husband has died is called a <span class="text-success"><u>widow</u></span>.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">variation</i></dt>
-                                <dd class="col-sm-10">(nc): a change or slight difference in condition <mark>the + adj + <strong><u>nc</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">widow</i></dt>
+                                <dd class="col-sm-10">(nc): a woman whose husband has died and who has not married again </dd>
 
-                                <dt class="col-sm-2">varied</dt>
-                                <dd class="col-sm-10">(vi): differed in size, amount or nature</dd>
+                                <dt class="col-sm-2">fiancee</dt>
+                                <dd class="col-sm-10">(nc): the woman who a man is going to marry</dd>
 
-                                <dt class="col-sm-2">variety</dt>
-                                <dd class="col-sm-10">(n): the quality of being diverse</dd>
+                                <dt class="col-sm-2">old-maid</dt>
+                                <dd class="col-sm-10">(nc): a woman who has never married and not young anymore <strong><em>(offensive)</em></strong></dd>
+
+                                <dt class="col-sm-2">spinster</dt>
+                                <dd class="col-sm-10"> (nc): an unmarried woman who is not young anymore and seems unlikely to marry <strong><em>(old-fashioned)</em></strong></dd>
                             </dl>
                         </div>
                     </div>
@@ -240,7 +258,7 @@
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            5. Cars with smaller engine sizes tend to be far more <span class="text-success"><u>economical</u></span> than those with larger engines.
+                            5.What do we call the money or gifts which one partner hands to the other party at the marriage. <span class="text-success"><u>dowry</u></span>
                             </a>
                         </h5>
                     </div>
@@ -248,14 +266,17 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">economical</i> </dt>
-                                <dd class="col-sm-10">(adj): cheap to run <mark>to be + far more + <strong><u>adj</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">dowry</i> </dt>
+                                <dd class="col-sm-10">(nc): property and money a woman gives to her husband when they marry in some societies</dd>
 
-                                <dt class="col-sm-2">economy</dt>
-                                <dd class="col-sm-10">(nu): the state of a country in terms of the production, consumption of goods, services and supply of money</dd>
+                                <dt class="col-sm-2">duty</dt>
+                                <dd class="col-sm-10">(nc): obligation</dd>
 
-                                <dt class="col-sm-2">economic</dt>
-                                <dd class="col-sm-10">(adj): relating to economy</dd>
+                                <dt class="col-sm-2">camel</dt>
+                                <dd class="col-sm-10">(nc): a large desert animal with a long neck and either one or two humps</dd>
+
+                                <dt class="col-sm-2">birthright</dt>
+                                <dd class="col-sm-10"> (nc): right, property, money etc. that you should have because of the family or country you belong to</dd>
                             </dl>
                         </div>
                     </div>
@@ -265,22 +286,24 @@
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            6. More recent studies  <span class="text-success"><u>indicate</u></span> that there is a correlation between juvenile crime and unemployment.
+                            6. What do we call the man who is getting married? <span class="text-success"><u>groom</u></span>
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">groom</i> </dt>
+                                <dd class="col-sm-10"> (nc): a man who is getting married</dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">indicate</i> </dt>
-                                <dd class="col-sm-10">(vt): to show, identify or suggest <mark>Plural subject + <strong><u>V present simple, 3<sup>rd</sup> person plural</u></strong></mark></dd>
+                                <dt class="col-sm-2">bridegroom</dt>
+                                <dd class="col-sm-10">(nc): a woman who is getting married</dd>
 
-                                <dt class="col-sm-2">indicating </dt>
-                                <dd class="col-sm-10">(vi): present participle, gerund: showing, identifying, suggesting</dd>
+                                <dt class="col-sm-2">best man</dt>
+                                <dd class="col-sm-10">(nc): the man who helps the bridegroom at the wedding ceremony</dd>
 
-                                <dt class="col-sm-2">indication </dt>
-                                <dd class="col-sm-10">(nc): a piece of information that indicates something</dd>
+                                <dt class="col-sm-2">bridesmaid</dt>
+                                <dd class="col-sm-10">(nc): a girl or woman, usually unmarried, who helps a bride on her wedding day and is with her at her wedding </dd>
                             </dl>
                         </div>
                     </div>
@@ -290,22 +313,24 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            7. The link between juvenile crime and drug abuse cannot be <span class="text-success"><u>denied </u></span> .
+                            7. If your father marries a new wife (not your own mother), what is her relationship to you? <span class="text-success"><u>step-mother</u></span> 
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">step-mother</i> </dt>
+                                <dd class="col-sm-10">(nc): the crime of telling a lie in a court of law</dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> denied</i> </dt>
-                                <dd class="col-sm-10">(vt): refused to admit the truth <mark><strong>(Passive voice)</strong> subject + cannot be + <strong><u>V past participle</u></strong></mark></dd>
+                                <dt class="col-sm-2">half-sister</dt>
+                                <dd class="col-sm-10">(nc): a sister who is a daughter of only one of your parents</dd>
 
-                                <dt class="col-sm-2">deny</dt>
-                                <dd class="col-sm-10">(vt) present participle, gerund: refusing to admit the truth</dd>
+                                <dt class="col-sm-2">aunty</dt>
+                                <dd class="col-sm-10">(nc): an aunt</dd>
 
-                                <dt class="col-sm-2">denying </dt>
-                                <dd class="col-sm-10">(vt): past simple and past participle of <em>"improve"</em></dd>
+                                <dt class="col-sm-2">fairy godmother</dt>
+                                <dd class="col-sm-10">(nc): someone who helps people when they are in trouble</dd>
                             </dl>
                         </div>
                     </div>
@@ -315,22 +340,21 @@
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            8. It's important for children to have a room of <span class="text-success"><u>their</u></span> own.
+                            8. What do we call a man who has two wives? <span class="text-success"><u>bigamist</u></span>
                             </a>
                         </h5>
                     </div>
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">bigamist</i> </dt>
+                                <dd class="col-sm-10">(nc): a person who is married to two people at the same time</dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> their</i> </dt>
-                                <dd class="col-sm-10">(adj): belonging to the people previously mentioned <em><strong>"their own"</strong> refers to <strong>children.</strong></em></dd>
+                                <dt class="col-sm-2">misogynist</dt>
+                                <dd class="col-sm-10">(nc): a man who hates women</dd>
 
-                                <dt class="col-sm-2">They’re</dt>
-                                <dd class="col-sm-10">subject + verb!  Try again! You need a possessive adjective.</dd>
-
-                                <dt class="col-sm-2">There</dt>
-                                <dd class="col-sm-10">(adv): in, at, on or to that place or position</dd>
+                                <dt class="col-sm-2">bachelor</dt>
+                                <dd class="col-sm-10">(nc): a man who has never been married</dd>
                             </dl>
                         </div>
                     </div>
@@ -340,7 +364,7 @@
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                            9.  The most recent <span class="text-success"><u>assessment</u></span> of the situation seems to indicate the situation is deteriorating.
+                            9.Having many wives is called <span class="text-success"><u>polygamy</u></span>
                             </a>
                         </h5>
                     </div>
@@ -348,14 +372,17 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">assessment</i> </dt>
-                                <dd class="col-sm-10">(nu): the action of assessing someone or something <mark>the + most recent + <strong><u>n</u></strong> + of</mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">polygamy</i> </dt>
+                                <dd class="col-sm-10">(nu): the practice of being married to more than one person at the same time</dd>
 
-                                <dt class="col-sm-2">assess</dt>
-                                <dd class="col-sm-10">(vt): to evaluate or estimate the nature of</dd>
+                                <dt class="col-sm-2">polyandry</dt>
+                                <dd class="col-sm-10">    (nu): the practice of having more than one husband or permanent male sexual partner at the same time</dd>
 
-                                <dt class="col-sm-2">assessing</dt>
-                                <dd class="col-sm-10">(vt) present participle, gerund:  evaluating or estimating the nature of</dd>
+                                <dt class="col-sm-2">purgatory</dt>
+                                <dd class="col-sm-10">(nu): something that makes you suffer---used humorously</dd>
+
+                                <dt class="col-sm-2">polygon</dt>
+                                <dd class="col-sm-10">(nc): a flat shape with three or more straight sides</dd>
                             </dl>
                         </div>
                     </div>
@@ -365,7 +392,7 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10.  It has been proved by research that less sleep can be  <span class="text-success"><u>advantageous</u></span>  for brain development.
+                            10.What do we call it when two people live together as husband and wife before they get married? <span class="text-success"><u>trial marriage</u></span>
                             </a>
                         </h5>
                     </div>
@@ -373,14 +400,17 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">advantageous</i> </dt>
-                                <dd class="col-sm-10"> (adj): good or beneficial (for) <mark>less sleep + can be + <strong>adj</strong> + for</mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">trial marriage</i></dt>
+                                <dd class="col-sm-10">(nc): the crime of killing someone illegally but not deliberately</dd>
 
-                                <dt class="col-sm-2">advantage</dt>
-                                <dd class="col-sm-10">(nc): a benefit, a strength / It needs <strong><em>an article. </em>"less sleep"</strong> doesn’t agree with its noun complement.</dd>
+                                <dt class="col-sm-2">betrothal</dt>
+                                <dd class="col-sm-10">(nc): a formal promise to marry someone</dd>
 
-                                <dt class="col-sm-2">advantages</dt>
-                                <dd class="col-sm-10">(nc): benefits, strengths / <strong>less sleep</strong> doesn’t agree with its noun complement.</dd>
+                                <dt class="col-sm-2">separation</dt>
+                                <dd class="col-sm-10">(nc): when two married people stop living together as a couple</dd>
+
+                                <dt class="col-sm-2">engagement</dt>
+                                <dd class="col-sm-10">(nc): an agreement to marry someone </dd>
                             </dl>
                         </div>
                     </div>
@@ -398,7 +428,18 @@
 
 @section('js')
 <script>
-    const answers = ['respectively', 'analysis', 'responded', 'variation', 'economical', 'indicate', 'denied', 'their', 'assessment', 'advantageous'];
+     const answers = [
+        'Blood', 
+        'extended', 
+        'nuclear', 
+        'widow', 
+        'dowry', 
+        'groom', 
+        'step-mother', 
+        'bigamist',
+        'polygamy', 
+        'trial marriage'
+    ];
     let score = 0;
     $("#show-answer").hide(true);
 
