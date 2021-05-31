@@ -13,122 +13,122 @@
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
-                Unemployment figures for the three countries stood at 6%, 10% and 12%
+                There are a number of
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="*">respectfully</option>
-                    <option value="respectively">respectively</option>
-                    <option value="*">respectedly</option>
+                    <option value="advantages">advantages</option>
+                    <option value="benefits">benefits</option>
+                    <option value="drawbacks">mud</option>
                 </select>
-                .
+                that you can claim if you are disabled.
             </div>
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
-                An
+                There are a number of diseases
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">analyze</option>
-                    <option value="analysis">analysis</option>
-                    <option value="C">analyst</option>
+                    <option value="related">related</option>
+                    <option value="occurred">occurred</option>
+                    <option value="happened">happened</option>
                 </select>
-                of data from recent research shows that global warming is accelerating.
+                to industrial production.
             </div>
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
-                The government has
+                The young man was arrested and imprisoned for
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">respond</option>
-                    <option value="B">responding</option>
-                    <option value="responded">responded</option>
+                    <option value="doing">doing</option>
+                    <option value="creating">creating</option>
+                    <option value="committing">committing</option>
                 </select>
-                by increasing research funding in this area.
+                a series of crimes.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
-                The monthly
+                On being found guilty, the man was
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="variation">variation</option>
-                    <option value="B">varied</option>
-                    <option value="*">variety</option>
+                    <option value="committed">committed</option>
+                    <option value="commuted">commuted</option>
+                    <option value="sentenced">sentenced</option>
                 </select>
-                in rainfall is quite astonishing.
+                to death for the murder of his spouse.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
-                Cars with smaller engine sizes tend to be far more
+                A great deal of medical research has been
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">economy</option>
-                    <option value="*">economic</option>
-                    <option value="economical">economical</option>
+                    <option value="carried">carried</option>
+                    <option value="conducted">conducted</option>
+                    <option value="happened">happened</option>
                 </select>
-                than those with larger engines.
+                recently.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
-                More recent studies
+                The police arrested the suspect and took him into
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="indicate">indicate</option>
-                    <option value="B">indicating</option>
-                    <option value="*">indication</option>
+                    <option value="custody">custody</option>
+                    <option value="care">care</option>
+                    <option value="prison">prison</option>
                 </select>
-                that there is a correlation between juvenile crime and unemployment.
+                until the trial.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
-                The link between juvenile crime and drug abuse cannot be 
+                Experts are trying to
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">deny</option>
-                    <option value="B">denying</option>
-                    <option value="denied">denied</option>
+                    <option value="see">see</option>
+                    <option value="assess">assess</option>
+                    <option value="affect">affect</option>
                 </select>
-               .
+                the impact of the oil spill on the local environment.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
-                It's important for children to have a room of
+                At the end of the day, you'll need to 
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="*">they're</option>
-                    <option value="their">their</option>
-                    <option value="C">there</option>
+                    <option value="make">make</option>
+                    <option value="decide">decide</option>
+                    <option value="effect">effect</option>
                 </select>
-                own.
+                a decision on the issue of global warming.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
-                The most recent
+                The government has implemented a 
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">assess</option>
-                    <option value="B">assessing</option>
-                    <option value="assessment">assessment</option>
+                    <option value="differing">differing</option>
+                    <option value="divided">divided</option>
+                    <option value="diverse">diverse</option>
                 </select>
-                of the situation seems to indicate the situation is deteriorating.
+                range of measures to tackle global warming.
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
-                It has been proved by research that less sleep can be
+                A lot more needs to be done to 
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">advantage</option>
-                    <option value="B">advantages</option>
-                    <option value="advantageous">advantageous</option>
+                    <option value="tackle">tackle</option>
+                    <option value="deal">deal</option>
+                    <option value="sort">sort</option>
                 </select>
-                for brain development.
+                the problem of air pollution.
             </div>
         </div>
     </div>
@@ -143,7 +143,7 @@
                     <div class="card-header" id="headingOne">
                         <h5 class="my-0">
                             <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            1. Unemployment figures for the three countries stood at 6%, 10% and 12% <span class="text-success"><u>respectively</u></span> .
+                            1. There are a number of  <span class="text-success"><u>benefits</u></span>  that you can claim if you are disabled.
                             </a>
                         </h2>
                     </div>
@@ -151,14 +151,15 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">respectively</i> </dt>
-                                    <dd class="col-sm-10">(adv): in the order already mentioned</dd>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">benefits</i> </dt>
+                                    <dd class="col-sm-10">(nc):  money provided by your insurance
+                                    <br><strong><mark>clues: claim / disabled</mark></strong></dd>
+                                
+                                    <dt class="col-sm-2">advantages</dt>
+                                    <dd class="col-sm-10">(nc): good or useful features</dd>
 
-                                    <dt class="col-sm-2">respectfully</dt>
-                                    <dd class="col-sm-10">(adv): with difference and respect </dd>
-
-                                    <dt class="col-sm-2">respectedly</dt>
-                                    <dd class="col-sm-10">(adv): in a way that is admired by many people</dd>
+                                    <dt class="col-sm-2">drawbacks</dt>
+                                    <dd class="col-sm-10">(nc) bad or less effective features</dd>
                                 </dl>
                             </div>
                     </div>
@@ -168,21 +169,22 @@
                     <div class="card-header" id="headingTwo">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            2. An <span class="text-success"><u>analysis</u></span> of data from recent research shows that global warming is accelerating.
+                            2. There are a number of diseases <span class="text-success"><u>related</u></span> to industrial production.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">analysis</i> </dt>
-                                <dd class="col-sm-10"> (nc): a particular study of something <mark>a + <strong><u>nc</u></strong> + of</mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">related</i> </dt>
+                                <dd class="col-sm-10">(adj): connected to 
+                                <br><strong><mark>clues: related to something</mark></strong></dd>
 
-                                <dt class="col-sm-2">analyze</dt>
-                                <dd class="col-sm-10">(vt): to examine something in a systematic and careful way  </dd>
+                                <dt class="col-sm-2">occurred</dt>
+                                <dd class="col-sm-10">(vi): past simple and past participle of “occur”</dd>
 
-                                <dt class="col-sm-2">analyst</dt>
-                                <dd class="col-sm-10">(nc): a person whose job is to examine something in detail </dd>
+                                <dt class="col-sm-2">happened</dt>
+                                <dd class="col-sm-10">(vi): past simple and past participle of “happen” </dd>
                             </dl>
                         </div>
                     </div>
@@ -192,21 +194,22 @@
                     <div class="card-header" id="headingThree">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3.  The government has <span class="text-success"><u>responded</u></span> by increasing research funding in this area.
+                                3. The young man was arrested and imprisoned for  <span class="text-success"><u>committing</u></span> a series of crimes.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">responded</i></dt>
-                                <dd class="col-sm-10">(vi) past participle: done something as a reaction to someone <mark>has + <strong><u>V past participle</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">committing</i></dt>
+                                <dd class="col-sm-10">(vt): doing something illegal                                 
+                                <br><mark><strong>clues: a series of crime</strong></mark></dd>
 
-                                <dt class="col-sm-2">respond</dt>
-                                <dd class="col-sm-10">(vi) present simple/ infinitive: to do something as a reaction to someone</dd>
+                                <dt class="col-sm-2">creating</dt>
+                                <dd class="col-sm-10">(vt): to invent or design something</dd>
 
-                                <dt class="col-sm-2">responding</dt>
-                                <dd class="col-sm-10">(vi) present participle/ gerund: doing something as a reaction to someone</dd>
+                                <dt class="col-sm-2">doing</dt>
+                                <dd class="col-sm-10">(vt): performing an action</dd>
                             </dl>
                         </div>
                     </div>
@@ -216,21 +219,22 @@
                     <div class="card-header" id="headingFour">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4.  The monthly <span class="text-success"><u>variation</u></span> in rainfall is quite astonishing.
+                                4. On being found guilty, the man was <span class="text-success"><u>sentenced</u></span> to death for the murder of his spouse.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">variation</i></dt>
-                                <dd class="col-sm-10">(nc): a change or slight difference in condition <mark>the + adj + <strong><u>nc</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">sentenced</i></dt>
+                                <dd class="col-sm-10">(vt): punished
+                                <br><mark><strong>clues: to death</strong></mark></dd>
 
-                                <dt class="col-sm-2">varied</dt>
-                                <dd class="col-sm-10">(vi): differed in size, amount or nature</dd>
+                                <dt class="col-sm-2">committed</dt>
+                                <dd class="col-sm-10">(vt): done something illegal</dd>
 
-                                <dt class="col-sm-2">variety</dt>
-                                <dd class="col-sm-10">(n): the quality of being diverse</dd>
+                                <dt class="col-sm-2">commuted</dt>
+                                <dd class="col-sm-10">(vt): made a punishment less severe </dd>
                             </dl>
                         </div>
                     </div>
@@ -240,7 +244,7 @@
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            5. Cars with smaller engine sizes tend to be far more <span class="text-success"><u>economical</u></span> than those with larger engines.
+                            5. A great deal of medical research has been <span class="text-success"><u>conducted</u></span> recently.
                             </a>
                         </h5>
                     </div>
@@ -248,14 +252,15 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">economical</i> </dt>
-                                <dd class="col-sm-10">(adj): cheap to run <mark>to be + far more + <strong><u>adj</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">conducted</i> </dt>
+                                <dd class="col-sm-10">(vt): performed/ done
+                                <br><mark><strong>clues: research</strong></mark></dd>
 
-                                <dt class="col-sm-2">economy</dt>
-                                <dd class="col-sm-10">(nu): the state of a country in terms of the production, consumption of goods, services and supply of money</dd>
+                                <dt class="col-sm-2">carried</dt>
+                                <dd class="col-sm-10">(vt): held with hands, arms or back</dd>
 
-                                <dt class="col-sm-2">economic</dt>
-                                <dd class="col-sm-10">(adj): relating to economy</dd>
+                                <dt class="col-sm-2">happened</dt>
+                                <dd class="col-sm-10">(vt): occurred/ come to existence</dd>
                             </dl>
                         </div>
                     </div>
@@ -265,22 +270,22 @@
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            6. More recent studies  <span class="text-success"><u>indicate</u></span> that there is a correlation between juvenile crime and unemployment.
+                            6. The police arrested the suspect and took him into <span class="text-success"><u>custody</u></span> until the trial.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">custody</i> </dt>
+                                <dd class="col-sm-10">(nu): the state of being kept in prison
+                                <br><mark><strong>clues: in / the police / the suspect</strong></mark></dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">indicate</i> </dt>
-                                <dd class="col-sm-10">(vt): to show, identify or suggest <mark>Plural subject + <strong><u>V present simple, 3<sup>rd</sup> person plural</u></strong></mark></dd>
+                                <dt class="col-sm-2">care</dt>
+                                <dd class="col-sm-10">(nu): providing for the needs of someone</dd>
 
-                                <dt class="col-sm-2">indicating </dt>
-                                <dd class="col-sm-10">(vi): present participle, gerund: showing, identifying, suggesting</dd>
-
-                                <dt class="col-sm-2">indication </dt>
-                                <dd class="col-sm-10">(nc): a piece of information that indicates something</dd>
+                                <dt class="col-sm-2">prison</dt>
+                                <dd class="col-sm-10">(nc): a building where criminals are forced to live as a punishment</dd>
                             </dl>
                         </div>
                     </div>
@@ -290,22 +295,22 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            7. The link between juvenile crime and drug abuse cannot be <span class="text-success"><u>denied </u></span> .
+                            7. Experts are trying to <span class="text-success"><u>assess</u></span> the impact of the oil spill on the local environment.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">assess</i> </dt>
+                                <dd class="col-sm-10">(vt): to decide the quality of something
+                                <br><mark><strong>clues: Experts / the impact</strong></mark></dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> denied</i> </dt>
-                                <dd class="col-sm-10">(vt): refused to admit the truth <mark><strong>(Passive voice)</strong> subject + cannot be + <strong><u>V past participle</u></strong></mark></dd>
+                                <dt class="col-sm-2">see</dt>
+                                <dd class="col-sm-10">(vt): to think about/ to consider</dd>
 
-                                <dt class="col-sm-2">deny</dt>
-                                <dd class="col-sm-10">(vt) present participle, gerund: refusing to admit the truth</dd>
-
-                                <dt class="col-sm-2">denying </dt>
-                                <dd class="col-sm-10">(vt): past simple and past participle of <em>"improve"</em></dd>
+                                <dt class="col-sm-2">affect</dt>
+                                <dd class="col-sm-10">(vt): to cause a change in someone or something</dd>
                             </dl>
                         </div>
                     </div>
@@ -315,22 +320,22 @@
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            8. It's important for children to have a room of <span class="text-success"><u>their</u></span> own.
+                            8. At the end of the day, you'll need to <span class="text-success"><u>make</u></span> a decision on the issue of global warming.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">make</i> </dt>
+                                <dd class="col-sm-10">(nc): a person who is married to two people at the same time
+                                <br><mark><strong>clues: to make a decision</strong></mark></dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> their</i> </dt>
-                                <dd class="col-sm-10">(adj): belonging to the people previously mentioned <em><strong>"their own"</strong> refers to <strong>children.</strong></em></dd>
+                                <dt class="col-sm-2">decide</dt>
+                                <dd class="col-sm-10">(vt): to choose something after thinking about several possibilities</dd>
 
-                                <dt class="col-sm-2">They’re</dt>
-                                <dd class="col-sm-10">subject + verb!  Try again! You need a possessive adjective.</dd>
-
-                                <dt class="col-sm-2">There</dt>
-                                <dd class="col-sm-10">(adv): in, at, on or to that place or position</dd>
+                                <dt class="col-sm-2">effect</dt>
+                                <dd class="col-sm-10">(nc): the result of a particular influence</dd>
                             </dl>
                         </div>
                     </div>
@@ -340,22 +345,22 @@
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                            9.  The most recent <span class="text-success"><u>assessment</u></span> of the situation seems to indicate the situation is deteriorating.
+                            9. The government has implemented a <span class="text-success"><u>diverse</u></span> range of measures to tackle global warming.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">diverse</i> </dt>
+                                <dd class="col-sm-10">(adj): various/ including different types of things
+                                <br><mark><strong>clues: a diverse range of</strong></mark></dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">assessment</i> </dt>
-                                <dd class="col-sm-10">(nu): the action of assessing someone or something <mark>the + most recent + <strong><u>n</u></strong> + of</mark></dd>
+                                <dt class="col-sm-2">differing</dt>
+                                <dd class="col-sm-10">(vi): being different</dd>
 
-                                <dt class="col-sm-2">assess</dt>
-                                <dd class="col-sm-10">(vt): to evaluate or estimate the nature of</dd>
-
-                                <dt class="col-sm-2">assessing</dt>
-                                <dd class="col-sm-10">(vt) present participle, gerund:  evaluating or estimating the nature of</dd>
+                                <dt class="col-sm-2">divided</dt>
+                                <dd class="col-sm-10">(vt): split into two or more groups</dd>
                             </dl>
                         </div>
                     </div>
@@ -365,22 +370,22 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10.  It has been proved by research that less sleep can be  <span class="text-success"><u>advantageous</u></span>  for brain development.
+                            10. A lot more needs to be done to <span class="text-success"><u>tackle</u></span>  the problem of air pollution.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">tackle</i></dt>
+                                <dd class="col-sm-10">(vt): to try to deal with/ to solve
+                                <br><mark><strong>clues: the problem</strong></mark></dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">advantageous</i> </dt>
-                                <dd class="col-sm-10"> (adj): good or beneficial (for) <mark>less sleep + can be + <strong>adj</strong> + for</mark></dd>
+                                <dt class="col-sm-2">deal</dt>
+                                <dd class="col-sm-10">(vi): to do business (deal with something)</dd>
 
-                                <dt class="col-sm-2">advantage</dt>
-                                <dd class="col-sm-10">(nc): a benefit, a strength / It needs <strong><em>an article. </em>"less sleep"</strong> doesn’t agree with its noun complement.</dd>
-
-                                <dt class="col-sm-2">advantages</dt>
-                                <dd class="col-sm-10">(nc): benefits, strengths / <strong>less sleep</strong> doesn’t agree with its noun complement.</dd>
+                                <dt class="col-sm-2">sort</dt>
+                                <dd class="col-sm-10">(vt): to repair or to organize something</dd>
                             </dl>
                         </div>
                     </div>
@@ -398,7 +403,18 @@
 
 @section('js')
 <script>
-    const answers = ['respectively', 'analysis', 'responded', 'variation', 'economical', 'indicate', 'denied', 'their', 'assessment', 'advantageous'];
+     const answers = [
+        'benefits', 
+        'related', 
+        'committing', 
+        'sentenced', 
+        'conducted', 
+        'custody', 
+        'assess', 
+        'make',
+        'diverse', 
+        'tackle'
+    ];
     let score = 0;
     $("#show-answer").hide(true);
 
