@@ -231,7 +231,7 @@
                                     <dd class="col-sm-10">(gerund / present participle)</dd>
 
                                     <dt class="col-sm-2">{{$q111[2]}}</dt>
-                                    <dd class="col-sm-10">(nc) the ability to form pictures in your mind</dd>
+                                    <dd class="col-sm-10">(nc): the ability to form pictures in your mind</dd>
                                 </dl>
                             </div>
                     </div>
@@ -274,7 +274,7 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[1]}}</i></dt>
-                                <dd class="col-sm-10">(adv) more and more all the time                                
+                                <dd class="col-sm-10">(adv): more and more all the time                                
                                 <br><mark><strong>clues: become + adv + adj = become increasingly complex </strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q333[0]}}</dt>
@@ -325,8 +325,8 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[2]}}</i> </dt>
-                                <dd class="col-sm-10">clues: much + nu  =  much discussion
-                                <br><mark><strong>clues: research</strong></mark></dd>
+                                <dd class="col-sm-10">(nu): debates, formal talks 
+                                <br><mark><strong>clues: much + nu = much discussion</strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q555[0]}}</dt>
                                 <dd class="col-sm-10">(vt): to talk with someone to exchange ideas</dd>
@@ -425,11 +425,11 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[1]}}</i> </dt>
-                                <dd class="col-sm-10">(nc): a change in someone’s mind 
-                                <br><mark><strong>clues: a great + nc + on something/ someone</strong></mark></dd>
+                                <dd class="col-sm-10">(nc): a change in someone's mind 
+                                <br><mark><strong>clues: a great + nc + on something / someone</strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">(vt): to have influence on someone’s situation</dd>
+                                <dd class="col-sm-10">(vt): to have influence on someone's situation</dd>
 
                                 <dt class="col-sm-2">{{$q999[2]}}</dt>
                                 <dd class="col-sm-10">(nu): a feeling of love and caring</dd>

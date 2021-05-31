@@ -158,19 +158,13 @@
                                 <dl class="row">
                                     <dt class="col-sm-2"><i class="text-success mr-2">Blood</i> </dt>
                                     <dd class="col-sm-10">(nu): the red liquid that your heart pumps around your body</dd>
-                                </dl>
 
-                                <dl class="row">
                                     <dt class="col-sm-2">Nescafe</dt>
                                     <dd class="col-sm-10">(nu): a type of instant coffee</dd>
-                                </dl>
 
-                                <dl class="row">
                                     <dt class="col-sm-2">Treacle</dt>
                                     <dd class="col-sm-10">(nu): a thick sweet black liquid obtained from  raw sugar</dd>
-                                </dl>
 
-                                <dl class="row">
                                     <dt class="col-sm-2">Mud</dt>
                                     <dd class="col-sm-10">(nu): wet earth that has becomes soft and sticky </dd>
                                 </dl>

@@ -224,14 +224,14 @@
                             <div class="card-body">
                                 <dl class="row">
                                     <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[0]}}</i></dt>
-                                    <dd class="col-sm-10">(infinitive): to form a picture in your mind
-                                    <br><strong><mark>clues: to + infinitive</mark></strong></dd>
+                                    <dd class="col-sm-10">(adj): If something is possible, it can be achieved.
+                                    <br><strong><mark>clues: have made + it + adj + to infinitive</mark></strong></dd>
                                 
                                     <dt class="col-sm-2">{{$q111[1]}}</dt>
-                                    <dd class="col-sm-10">(gerund / present participle)</dd>
+                                    <dd class="col-sm-10">(nc): the fact that something might be true</dd>
 
                                     <dt class="col-sm-2">{{$q111[2]}}</dt>
-                                    <dd class="col-sm-10">(nc) the ability to form pictures in your mind</dd>
+                                    <dd class="col-sm-10">(adv): used when saying that something might be true</dd>
                                 </dl>
                             </div>
                     </div>
@@ -249,14 +249,14 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[1]}}</i></dt>
-                                <dd class="col-sm-10">(plural noun): advantages, improvements 
-                                <br><strong><mark>clues: adj + plural n = huge benefits</mark> <br> <mark>a + adj + singular n = a huge benefit</mark></strong></dd>
+                                <dd class="col-sm-10">(vt): gerund: saving something from being destroyed
+                                <br><strong><mark>clues: vt + object + much + <u>comparative adv</u> + than prepare + food + much + faster + than</mark></strong></dd>
 
                                 <dt class="col-sm-2">{{$q222[0]}}</dt>
-                                <dd class="col-sm-10">(singular noun): an advantage, an improvement</dd>
+                                <dd class="col-sm-10">(adv): quickly</dd>
 
                                 <dt class="col-sm-2">{{$q222[2]}}</dt>
-                                <dd class="col-sm-10">(adj): having a good effect</dd>
+                                <dd class="col-sm-10">(adv): superlative adverb of “fast”</dd>
                             </dl>
                         </div>
                     </div>
@@ -274,14 +274,14 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[2]}}</i></dt>
-                                <dd class="col-sm-10">(adv) more and more all the time                                
-                                <br><mark><strong>clues: become + adv + adj = become increasingly complex </strong></mark></dd>
+                                <dd class="col-sm-10">(vt): gerund: saving something from being destroyed                                
+                                <br><mark><strong>clues: of + <u>gerund</u> + noun</strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q333[0]}}</dt>
-                                <dd class="col-sm-10">(vi, vt): became bigger in amount or degree</dd>
+                                <dd class="col-sm-10">(vt): to save something from being destroyed</dd>
 
                                 <dt class="col-sm-2">{{$q333[1]}}</dt>
-                                <dd class="col-sm-10">(vi, vt): present participle: becoming bigger in amount or degree</dd>
+                                <dd class="col-sm-10">(nu): keeping something in a good condition</dd>
                             </dl>
                         </div>
                     </div>
@@ -299,14 +299,14 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
-                                <dd class="col-sm-10">(vt): past participle:  to be recognized
-                                <br><strong><mark>clues:  passive voice: can be + V past participle</mark> <br> <mark>active voice: can + vt infinitive + object</mark></strong></dd>
+                                <dd class="col-sm-10">(adv): in a way that is good for your body
+                                <br><strong><mark>clues:  to eat + <u>adv phrase</u> = to eat + <u>much more healthily</u></mark></strong></dd>
 
                                 <dt class="col-sm-2">{{$q444[0]}}</dt>
-                                <dd class="col-sm-10">(vt): to recognize and correctly name something</dd>
+                                <dd class="col-sm-10">(adj): good for your body</dd>
 
                                 <dt class="col-sm-2">{{$q444[1]}}</dt>
-                                <dd class="col-sm-10">(nc): official papers or cards</dd>
+                                <dd class="col-sm-10">(nu): the general condition of your body</dd>
                             </dl>
                         </div>
                     </div>
@@ -325,14 +325,14 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[0]}}</i> </dt>
-                                <dd class="col-sm-10">clues: much + nu  =  much discussion
-                                <br><mark><strong>clues: research</strong></mark></dd>
+                                <dd class="col-sm-10">(vi): gerund: preparing food for eating
+                                <br><mark><strong>clues: for + <u>gerund</u></strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q555[1]}}</dt>
-                                <dd class="col-sm-10">(vt): to talk with someone to exchange ideas</dd>
+                                <dd class="col-sm-10">(vi): preparing food for eatin</dd>
 
                                 <dt class="col-sm-2">{{$q555[2]}}</dt>
-                                <dd class="col-sm-10">(vt): present participle/ gerund of “discuss”</dd>
+                                <dd class="col-sm-10">(nu): the art of cooking</dd>
                             </dl>
                         </div>
                     </div>
@@ -350,14 +350,14 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[2]}}</i></dt>
-                                <dd class="col-sm-10">(adj): relating to science
-                                <br><mark><strong>clues: adj + n = scientific research</strong></mark></dd>
+                                <dd class="col-sm-10">(nu): the rage of things that you can choose from
+                                <br><mark><strong>clues: have + adv + adj + <u>noun</u> <br>  have + far + more + <u>choice</u></strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q666[0]}}</dt>
-                                <dd class="col-sm-10">(nu): knowledge about the world</dd>
+                                <dd class="col-sm-10">(v): to select</dd>
 
                                 <dt class="col-sm-2">{{$q666[1]}}</dt>
-                                <dd class="col-sm-10">(nc): a person who works or is trained in science</dd>
+                                <dd class="col-sm-10">(adj): difficult to please because you are very exact about what you like</dd>
                             </dl>
                         </div>
                     </div>
@@ -375,14 +375,14 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}</i> </dt>
-                                <dd class="col-sm-10">(nc): the act of finding out about something 
-                                <br><mark><strong>clues: singular subject + has led</strong></mark></dd>
+                                <dd class="col-sm-10">(nc): a different type of something 
+                                <br><mark><strong>clues: a greater + <u>noun</u></strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q777[0]}}</dt>
-                                <dd class="col-sm-10">(nc): people who travel through an unknown areas to find out about it</dd>
+                                <dd class="col-sm-10">(vi): to cause similar things to differ</dd>
 
                                 <dt class="col-sm-2">{{$q777[2]}}</dt>
-                                <dd class="col-sm-10"> (vt): present participle/ gerund of “explore”</dd>
+                                <dd class="col-sm-10">(adj): many different</dd>
                             </dl>
                         </div>
                     </div>
@@ -400,14 +400,14 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
-                                <dd class="col-sm-10">(vi): to have a different opinion from someone else.
-                                <br><mark><strong>clues: subject + vi + with Many people + disagree + with</strong></mark></dd>
+                                <dd class="col-sm-10">(vt): to take food into the mouth
+                                <br><mark><strong>clues: can + <u>v infinitive</u></strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10">(vi): present participle/ gerund of “disagree” </dd>
+                                <dd class="col-sm-10">(v): gerund of “eat”</dd>
 
                                 <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">(nc): a situation when people express different opinions</dd>
+                                <dd class="col-sm-10">(v): past participle of “eat”</dd>
                             </dl>
                         </div>
                     </div>
@@ -425,14 +425,16 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[2]}}</i> </dt>
-                                <dd class="col-sm-10">(nc): a change in someone’s mind 
-                                <br><mark><strong>clues: a great + nc + on something/ someone</strong></mark></dd>
+                                <dd class="col-sm-10">(adj): comparative: needing less effort 
+                                <br><mark><strong>clues: have made + noun + <u>adj</u> <br> have made + life + easier</strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q999[1]}}</dt>
-                                <dd class="col-sm-10">(vt): to have influence on someone’s situation</dd>
+                                <dd class="col-sm-10">(adv): in a way that needs little effort</dd>
 
                                 <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">(nu): a feeling of love and caring</dd>
+                                <dd class="col-sm-10">(adj): superlative: needing the least effort
+                                We use the superlative degree to compare more than two things. 
+                                The sentence compares the life at present and in the past.</dd>
                             </dl>
                         </div>
                     </div>
@@ -450,14 +452,14 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[1]}}</i></dt>
-                                <dd class="col-sm-10">(adj): more powerful
-                                <br><mark><strong>clues: grow + even + comparative adjective</strong></mark></dd>
+                                <dd class="col-sm-10">(nu): the general condition of your body 
+                                <br><mark><strong>clues: compound noun = <u>noun</u> + noun <u>health</u> + problems</strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q1000[0]}}</dt>
-                                <dd class="col-sm-10">(nu): physical energy or power</dd>
+                                <dd class="col-sm-10">(adj): good for your body</dd>
 
                                 <dt class="col-sm-2">{{$q1000[2]}}</dt>
-                                <dd class="col-sm-10">(adv): more powerfully</dd>
+                                <dd class="col-sm-10">(adv): in a way that is good for your body</dd>
                             </dl>
                         </div>
                     </div>
@@ -507,7 +509,7 @@
             }
         })
 
-        $('u').each((idx, item) => {
+        $('a u').each((idx, item) => {
             if($(item).val() == answers[idx]) {
                 $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
             } else {

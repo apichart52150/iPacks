@@ -159,7 +159,7 @@
                                     <dd class="col-sm-10">(nc): good or useful features</dd>
 
                                     <dt class="col-sm-2">drawbacks</dt>
-                                    <dd class="col-sm-10">(nc) bad or less effective features</dd>
+                                    <dd class="col-sm-10">(nc): bad or less effective features</dd>
                                 </dl>
                             </div>
                     </div>
@@ -253,14 +253,14 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">conducted</i> </dt>
-                                <dd class="col-sm-10">(vt): performed/ done
+                                <dd class="col-sm-10">(vt): performed / done
                                 <br><mark><strong>clues: research</strong></mark></dd>
 
                                 <dt class="col-sm-2">carried</dt>
                                 <dd class="col-sm-10">(vt): held with hands, arms or back</dd>
 
                                 <dt class="col-sm-2">happened</dt>
-                                <dd class="col-sm-10">(vt): occurred/ come to existence</dd>
+                                <dd class="col-sm-10">(vt): occurred / come to existence</dd>
                             </dl>
                         </div>
                     </div>
@@ -307,7 +307,7 @@
                                 <br><mark><strong>clues: Experts / the impact</strong></mark></dd>
 
                                 <dt class="col-sm-2">see</dt>
-                                <dd class="col-sm-10">(vt): to think about/ to consider</dd>
+                                <dd class="col-sm-10">(vt): to think about / to consider</dd>
 
                                 <dt class="col-sm-2">affect</dt>
                                 <dd class="col-sm-10">(vt): to cause a change in someone or something</dd>
@@ -353,7 +353,7 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">diverse</i> </dt>
-                                <dd class="col-sm-10">(adj): various/ including different types of things
+                                <dd class="col-sm-10">(adj): various / including different types of things
                                 <br><mark><strong>clues: a diverse range of</strong></mark></dd>
 
                                 <dt class="col-sm-2">differing</dt>
@@ -378,7 +378,7 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">tackle</i></dt>
-                                <dd class="col-sm-10">(vt): to try to deal with/ to solve
+                                <dd class="col-sm-10">(vt): to try to deal with / to solve
                                 <br><mark><strong>clues: the problem</strong></mark></dd>
 
                                 <dt class="col-sm-2">deal</dt>
