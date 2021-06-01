@@ -281,7 +281,7 @@
                                 <dd class="col-sm-10">(vt): to make someone more likely to do something</dd>
 
                                 <dt class="col-sm-2">{{$q333[2]}}</dt>
-                                <dd class="col-sm-10">vt): past simple / past participle of "encourage"</dd>
+                                <dd class="col-sm-10">(vt): past simple / past participle of "encourage"</dd>
                             </dl>
                         </div>
                     </div>
@@ -326,7 +326,22 @@
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[1]}}</i> </dt>
                                 <dd class="col-sm-10">(adj): causing problems or difficulties
-                                <br><mark><strong>clues: (parallel structure) make + sth + <u>adj and adj</u> make + private vehicles + <u>more expensive and inconvenient</u></strong></mark></dd>
+                                    <ul class="list-unstyled mark font-weight-bold">
+                                        <li>
+                                            clues: (parallel structure)
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    make + sth + <u>adj and adj</u>
+                                                </li>
+                                                <li>
+                                                    make + private vehicles + <u>more expensive and inconvenient</u>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </dd>
 
                                 <dt class="col-sm-2">{{$q555[0]}}</dt>
                                 <dd class="col-sm-10">(nu): problems or difficulties</dd>
@@ -425,8 +440,8 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[2]}}</i> </dt>
-                                <dd class="col-sm-10">(adj): comparative: needing less effort 
-                                <br><mark><strong>clues: is + <u>adv</u> + pronoun = is + <u>clearly</u> + one</strong></mark></dd>
+                                <dd class="col-sm-10">(vt): to look for the difference between two or more things 
+                                <br><mark><strong>clues: Cannot + v infinitive = cannot + compare</strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q999[1]}}</dt>
                                 <dd class="col-sm-10">(n): the act of comparing two or more things</dd>
