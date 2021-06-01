@@ -4,6 +4,78 @@
     background-color: #ffc107;
 }
 </style>
+@php
+    $q1 = 'Studying a language in the country where the language is spoken has a';
+    $q11 = 'range of benefits.';
+    $q111 = array(
+        'wide',
+        'width',
+        'widely'
+    );
+    $q2 = 'However, it is certainly not the only way to';
+    $q22 = 'a foreign language.';
+    $q222 = array(
+        'learn',
+        'learning',
+        'learned'
+    );
+    $q3 = 'There are, of course, ovbious advantages of';
+    $q33 = 'English in a country such as Britain or Australia.';
+    $q333 = array(
+        'learn',
+        'learning',
+        'learned'
+    );
+    $q4 = 'Continuous exposure to the target language will lead to greater';
+    $q44 = 'than simply studying it in a classroom.';
+    $q444 = array(
+        'improve',
+        'improving',
+        'improvement'
+    );
+    $q5 = 'Although it is';
+    $q55 = "to study English in an English-speaking country, a reasonable level of English can still be achieved in one's own country.";
+    $q555 = array(
+        'prefer',
+        'preferable',
+        'preference'
+    );
+    $q6 = 'Since many of the rainforest animals are';
+    $q66 = ', it would make sense for governments to pass laws to protect them.';
+    $q666 = array(
+        'danger',
+        'dangerous',
+        'endangered'
+    );
+    $q7 = 'Although nuclear weapons pose a great threat to';
+    $q77 = 'on earth, the use of such technology for peaceful purposes cannot be doubted.';
+    $q777 = array(
+        'live',
+        'life',
+        'alive'
+    );
+    $q8 = 'Telecommuting means that';
+    $q88 = 'can carry out their work at home rather than in an office.';
+    $q888 = array(
+        'employees',
+        'employed',
+        'employment'
+    );
+    $q9 = 'Telecommuting refers to office staff';
+    $q99 = 'from home rather than in a centralised office.';
+    $q999 = array(
+        'work',
+        'working',
+        'worked'
+    );
+    $q10 = 'Food is a';
+    $q100 = 'part of life and so people should be very aware of what they are eating.';
+    $q1000 = array(
+        'basis',
+        'basic',
+        'basically'
+    );
+@endphp
 <div class="row">
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
@@ -13,122 +85,122 @@
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
-                There has been a
+                {{$q1}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="dramatic">dramatic</option>
-                    <option value="B">dramatical</option>
-                    <option value="C">dramatically</option>
+                    <option value="{{$q111[0]}}">{{$q111[0]}}</option>
+                    <option value="{{$q111[1]}}">{{$q111[1]}}</option>
+                    <option value="{{$q111[2]}}">{{$q111[2]}}</option>
                 </select>
-               fall in the price of new houses this year.
+                {{$q11}}
             </div>
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
-                There has been a substantial
+                {{$q2}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">raise</option>
-                    <option value="rise">rise</option>
-                    <option value="C">rose</option>
+                    <option value="{{$q222[0]}}">{{$q222[0]}}</option>
+                    <option value="{{$q222[1]}}">{{$q222[1]}}</option>
+                    <option value="{{$q222[2]}}">{{$q222[2]}}</option>
                 </select>
-               in interest rates so far this month.
+                {{$q22}}
             </div>
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
-                The
+                {{$q3}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">successful</option>
-                    <option value="B">succeed</option>
-                    <option value="success">success</option>
+                    <option value="{{$q333[0]}}">{{$q333[0]}}</option>
+                    <option value="{{$q333[1]}}">{{$q333[1]}}</option>
+                    <option value="{{$q333[2]}}">{{$q333[2]}}</option>
                 </select>
-               of this campaign can be attributed to hardwork and preseverance.
+                {{$q33}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
-                There's not much point in
+                {{$q4}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">application</option>
-                    <option value="B">apply</option>
-                    <option value="applying">applying</option>
+                    <option value="{{$q444[0]}}">{{$q444[0]}}</option>
+                    <option value="{{$q444[1]}}">{{$q444[1]}}</option>
+                    <option value="{{$q444[2]}}">{{$q444[2]}}</option>
                 </select>
-               for the job if you're not really intersted in talking it.
+                {{$q44}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
-                Smokeing in piblic is a
+                {{$q5}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">controversy</option>
-                    <option value="controversial">controversial</option>
-                    <option value="C">controversially</option>
+                    <option value="{{$q555[0]}}">{{$q555[0]}}</option>
+                    <option value="{{$q555[1]}}">{{$q555[1]}}</option>
+                    <option value="{{$q555[2]}}">{{$q555[2]}}</option>
                 </select>
-               issue.
+                {{$q55}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
-                Keyhole surgery is an example of 
+                {{$q6}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">minimize</option>
-                    <option value="B">minimal</option>
-                    <option value="minimally">minimally</option>
+                    <option value="{{$q666[0]}}">{{$q666[0]}}</option>
+                    <option value="{{$q666[1]}}">{{$q666[1]}}</option>
+                    <option value="{{$q666[2]}}">{{$q666[2]}}</option>
                 </select>
-               invasive surgery.
+                {{$q66}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
-                There has been a marked
+                {{$q7}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">improve</option>
-                    <option value="B">improved</option>
-                    <option value="imporvement">imporvement</option>
+                    <option value="{{$q777[0]}}">{{$q777[0]}}</option>
+                    <option value="{{$q777[1]}}">{{$q777[1]}}</option>
+                    <option value="{{$q777[2]}}">{{$q777[2]}}</option>
                 </select>
-               in his grades since he started going to bed earlier.
+                {{$q77}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
-                In spite of the
+                {{$q8}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="deecrease">deecrease</option>
-                    <option value="B">deecreased</option>
-                    <option value="C">deecreasingly</option>
+                    <option value="{{$q888[0]}}">{{$q888[0]}}</option>
+                    <option value="{{$q888[1]}}">{{$q888[1]}}</option>
+                    <option value="{{$q888[2]}}">{{$q888[2]}}</option>
                 </select>
-               in interest rates, the housing marking has failed to regenerate.
+                {{$q88}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
-                Computers are a relatively new invention: the prototype was 
+                {{$q9}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">building</option>
-                    <option value="B">bulid</option>
-                    <option value="bulit">bulit</option>
+                    <option value="{{$q999[0]}}">{{$q999[0]}}</option>
+                    <option value="{{$q999[1]}}">{{$q999[1]}}</option>
+                    <option value="{{$q999[2]}}">{{$q999[2]}}</option>
                 </select>
-               just a few decades ago.
+                {{$q99}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
-                We have become very
+                {{$q10}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">depends</option>
-                    <option value="B">depending</option>
-                    <option value="dependent">dependent</option>
+                    <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
+                    <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
+                    <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
                 </select>
-               on computer technology in our everyday have.
+                {{$q100}}
             </div>
         </div>
     </div>
@@ -136,15 +208,14 @@
     <div class="col-xl-12 col-md-12 col-sm-12" id="ans" style="display: none;">
         <div class="card-box text-dark font-16">
             <p class="lead">
-                Answer
+                Answers
             </p>
             <div class="accordion mb-3" id="accordionExample">
                 <div class="card mb-1" >
                     <div class="card-header" id="headingOne">
                         <h5 class="my-0">
                             <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                           
-                            1. There hsa been a <span class="text-success"><u>dramatic</u></span> fall in the price of new house this year.
+                                1. {{$q1}} <u></u> {{$q11}}
                             </a>
                         </h2>
                     </div>
@@ -152,14 +223,15 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2"> dramatic</i> </dt>
-                                    <dd class="col-sm-10"> (adj): very sudden and noticeable <mark> a + <strong><u>adjective </u></strong> + fall </mark></dd>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[0]}}</i></dt>
+                                    <dd class="col-sm-10">(adj): with many different types of things
+                                    <br><strong><mark>clues: a + <u>adjective</u> + noun = a + <u>wide</u> + range</mark></strong></dd>
+                                
+                                    <dt class="col-sm-2">{{$q111[1]}}</dt>
+                                    <dd class="col-sm-10">(n): the distance of something from one side to the other</dd>
 
-                                    <dt class="col-sm-2">dramatical</dt>
-                                    <dd class="col-sm-10">(adj): obsolete of <em><u>dramatic</u></em> : relating to drama, like a drama in emotional impact</dd>
-
-                                    <dt class="col-sm-2">dramatically</dt>
-                                    <dd class="col-sm-10">(adv): noticeably, suddenly</dd>
+                                    <dt class="col-sm-2">{{$q111[2]}}</dt>
+                                    <dd class="col-sm-10">(adv): by many, including a lot of different things, people, or places</dd>
                                 </dl>
                             </div>
                     </div>
@@ -169,23 +241,23 @@
                     <div class="card-header" id="headingTwo">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            2. There has been a substantial <span class="text-success"><u>rise</u></span> in interest rates so far this month.
+                                2. {{$q2}} <u></u> {{$q22}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2"> rise</i> </dt>
-                                <dd class="col-sm-10"> 
-                                    (nc): increase, growth, climb - (vi): to move upwards <mark>a + substantial + <strong><u>nc</u></mark></strong>
-                                </dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[0]}}</i></dt>
+                                <dd class="col-sm-10">(vt): to gain knowledge or experience
+                                <br><mark><strong>clues: the way to + infinitive</strong></mark></dd>
 
-                                <dt class="col-sm-2">raise</dt>
-                                <dd class="col-sm-10">(vt): to lift something to a higher position</dd>
+                                <dt class="col-sm-2">{{$q222[1]}}</dt>
+                                <dd class="col-sm-10">(vt): gerund of <em>"learn"</em></dd>
 
-                                <dt class="col-sm-2">rose</dt>
-                                <dd class="col-sm-10">(adv): past simple of "rise"</dd>
+                                <dt class="col-sm-2">{{$q222[2]}}</dt>
+                                <dd class="col-sm-10">(vt): past simple / past participle of <em>"learn"</em></dd>
+                                
                             </dl>
                         </div>
                     </div>
@@ -195,21 +267,22 @@
                     <div class="card-header" id="headingThree">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3.  The <span class="text-success"><u>success</u></span>  of this campaign can be attributed to hardwork and preseverance.
+                                3. {{$q3}} <u></u> {{$q33}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2"> success</i></dt>
-                                <dd class="col-sm-10">(nc): achivement, the achiving of the results <mark>The + <strong><u>nc</u></strong> + of</mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[1]}}</i></dt>
+                                <dd class="col-sm-10"> (vt): gerund of <em>"learn"</em>                                
+                                <br><mark><strong>clues: of + <u>gerund</u></strong></mark></dd>
 
-                                <dt class="col-sm-2">successful</dt>
-                                <dd class="col-sm-10">(adj): achieving desired results</dd>
+                                <dt class="col-sm-2">{{$q333[0]}}</dt>
+                                <dd class="col-sm-10">(vt): to gain knowledge or experience</dd>
 
-                                <dt class="col-sm-2">succeed</dt>
-                                <dd class="col-sm-10">(vi): to achieve something</dd>
+                                <dt class="col-sm-2">{{$q333[2]}}</dt>
+                                <dd class="col-sm-10">(vt): past simple/ past participle of <em>"learn"</em></dd>
                             </dl>
                         </div>
                     </div>
@@ -219,22 +292,22 @@
                     <div class="card-header" id="headingFour">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4.  There's not much point in <span class="text-success"><u>applying</u></span>  for the job if you're not really intersted in talking it.
-                                There's not much point in
+                                4.{{$q4}} <u></u> {{$q44}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2"> applying</i></dt>
-                                <dd class="col-sm-10">(gerund): requesting something by sending a form <mark>in + <strong><u>Gerund</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
+                                <dd class="col-sm-10">(nc): the process of getting better
+                                <br><strong><mark>clues: adjective + <u>noun</u> = greater + <u>improvement</u></mark></strong></dd>
 
-                                <dt class="col-sm-2">application</dt>
-                                <dd class="col-sm-10">(nc): an offical request for something in writing / It needs an article: <em>"an application"</em>.</dd>
+                                <dt class="col-sm-2">{{$q444[0]}}</dt>
+                                <dd class="col-sm-10">(vt): to make something better</dd>
 
-                                <dt class="col-sm-2">apply</dt>
-                                <dd class="col-sm-10">(vi): to request something offcially in writing</dd>
+                                <dt class="col-sm-2">{{$q444[1]}}</dt>
+                                <dd class="col-sm-10">(vt): present participle of <em>improve</em></dd>
                             </dl>
                         </div>
                     </div>
@@ -244,22 +317,22 @@
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            5. Smokeing in piblic is a <span class="text-success"><u>controcersial</u></span> issue.
+                                5. {{$q5}} <u></u> {{$q55}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[1]}}</i> </dt>
+                                <dd class="col-sm-10">(adj): better or more suitable
+                                <br><mark><strong>clues: it is + <u>adjective</u> + to infinitive</strong></mark></dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> controcersial</i> </dt>
-                                <dd class="col-sm-10">(adj): causing disagreement or discussion <mark>a+ <strong><u>adjective</u></strong> + issue</mark></dd>
+                                <dt class="col-sm-2">{{$q555[0]}}</dt>
+                                <dd class="col-sm-10">(vt): to choose one thing rather than another</dd>
 
-                                <dt class="col-sm-2">controversy</dt>
-                                <dd class="col-sm-10">(nc): a lot of disagreement or argument</dd>
-
-                                <dt class="col-sm-2">controversially</dt>
-                                <dd class="col-sm-10">(adv): in a way that causes disagreement</dd>
+                                <dt class="col-sm-2">{{$q555[2]}}</dt>
+                                <dd class="col-sm-10">(nc): the fact that you like something more than another</dd>
                             </dl>
                         </div>
                     </div>
@@ -269,22 +342,22 @@
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            6. Keyhole surgery is an example of  <span class="text-success"><u>minimally</u></span> invasive surgery.
+                                6. {{$q6}} <u></u> {{$q66}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[2]}}</i></dt>
+                                <dd class="col-sm-10">(adj): in danger of being harmed or lost
+                                 <br><mark><strong>clues: the rainforest animals / to pass law to protect them</strong></mark></dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> minimally</i> </dt>
-                                <dd class="col-sm-10">(adv): in a way that isa very small in amount <mark><strong><u>adverb</u></strong> + adjective + n </mark></dd>
+                                <dt class="col-sm-2">{{$q666[0]}}</dt>
+                                <dd class="col-sm-10">(nc): the possibility of harm or death to someone</dd>
 
-                                <dt class="col-sm-2">minimal</dt>
-                                <dd class="col-sm-10">(adj): very small in amount</dd>
-
-                                <dt class="col-sm-2">minimize</dt>
-                                <dd class="col-sm-10">(vt): to reduce something to the least amount</dd>
+                                <dt class="col-sm-2">{{$q666[1]}}</dt>
+                                <dd class="col-sm-10">(adj): likely to cause harm or death to someone </dd>
                             </dl>
                         </div>
                     </div>
@@ -294,22 +367,22 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            7. There has been a marked <span class="text-success"><u>imporvement</u></span> in his grades since he started going to bed earlier.
+                                7. {{$q7}} <u></u> {{$q77}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}</i> </dt>
+                                <dd class="col-sm-10">(nu): everything that is alive 
+                                <br><mark><strong>clues: a great threat to + <u>noun</u></strong></mark></dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> imporvement</i> </dt>
-                                <dd class="col-sm-10">(nc): the process of getting better <mark>a + adjective + <strong><u>nc</u></strong></mark></dd>
+                                <dt class="col-sm-2">{{$q777[0]}}</dt>
+                                <dd class="col-sm-10">(vi): to have life, to have home somewhere</dd>
 
-                                <dt class="col-sm-2">improve</dt>
-                                <dd class="col-sm-10">(vt): to make someting better</dd>
-
-                                <dt class="col-sm-2">improved</dt>
-                                <dd class="col-sm-10">(vt): past simple and past participle of <em>"improve"</em></dd>
+                                <dt class="col-sm-2">{{$q777[2]}}</dt>
+                                <dd class="col-sm-10">(adj): living, not dead</dd>
                             </dl>
                         </div>
                     </div>
@@ -319,22 +392,38 @@
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            8. In spite of the <span class="text-success"><u>decrease</u></span> in interest rates, the housing marking has failed to regenerate.
+                                8. {{$q8}} <u></u> {{$q88}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
+                                <dd class="col-sm-10">(nc): people who are paid to work fot someone else
+                                    <ul class="list-unstyled mark font-weight-bold">
+                                        <li>
+                                            clues:
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    that + <u>subject relative pronoun</u> + v
+                                                </li>
+                                                <li>
+                                                    that + <u>employees</u> + can carry out
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> decrease</i> </dt>
-                                <dd class="col-sm-10">(nc): a growth, a rise <mark>the + <strong><u>n</u></strong> + in</mark></dd>
+                                <dt class="col-sm-2">{{$q888[1]}}</dt>
+                                <dd class="col-sm-10">(vt): had someone do a job for you and paid them for it employment</dd>
 
-                                <dt class="col-sm-2">decreased</dt>
-                                <dd class="col-sm-10">(vt): past simple and past participle of <em>"decrease": to become less</em></dd>
-
-                                <dt class="col-sm-2">deecreasingly</dt>
-                                <dd class="col-sm-10">(adv): in a way of becoming less</dd>
+                                <dt class="col-sm-2">{{$q888[2]}}</dt>
+                                <dd class="col-sm-10">(nu): work that you are paid to do for a company carry out <br> (phrasal verb): to conduct, to do a job
+                                </dd>
                             </dl>
                         </div>
                     </div>
@@ -344,22 +433,22 @@
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                            9.  Computers are a relatively new invention: the prototype was  <span class="text-success"><u>built</u></span> just a few decades ago.
+                                9. {{$q9}} <u></u> {{$q99}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[1]}}</i> </dt>
+                                <dd class="col-sm-10">(vi): present participle for <em>"who work"</em> 
+                                <br><mark><strong>clues: office staff + <u>present participle of <em>"work"</em></u> showing an active meaning</strong></mark></dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> bulit</i> </dt>
-                                <dd class="col-sm-10">(vt): past participle of <em>"bulid"</em>: to construct, to compile <br> <mark><strong>passive voice:</strong> the protype + was + <strong><u>V past participle</u></strong></mark></dd>
+                                <dt class="col-sm-2">{{$q999[0]}}</dt>
+                                <dd class="col-sm-10">(vi): to do a job</dd>
 
-                                <dt class="col-sm-2">building</dt>
-                                <dd class="col-sm-10">(nc): a structure with a roof and walls</dd>
-
-                                <dt class="col-sm-2">bulid</dt>
-                                <dd class="col-sm-10">(vt): to construct something</dd>
+                                <dt class="col-sm-2">{{$q999[2]}}</dt>
+                                <dd class="col-sm-10">(vi): past participle of <em>"work"</em></dd>
                             </dl>
                         </div>
                     </div>
@@ -369,22 +458,22 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10.  We have become very <span class="text-success"><u>dependent</u></span> on computer technology in our everyday lift.
+                            10. {{$q10}} <u></u> {{$q100}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[1]}}</i></dt>
+                                <dd class="col-sm-10">(adj): simple and not complicated 
+                                <br><mark><strong>clues: a + <u>adjective</u> + noun = a + <u>basic</u> + part </strong></mark></dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> dependent</i> </dt>
-                                <dd class="col-sm-10">(adj): requiring other support <mark>become + adverb + <strong><u>adjective</u></strong></mark></dd>
+                                <dt class="col-sm-2">{{$q1000[0]}}</dt>
+                                <dd class="col-sm-10">(nc): a way or method of doing something</dd>
 
-                                <dt class="col-sm-2">depends</dt>
-                                <dd class="col-sm-10">(vi): rely on, be controlled by</dd>
-
-                                <dt class="col-sm-2">depending</dt>
-                                <dd class="col-sm-10">(vi): present participle or gerund of <em>"depend"</em></dd>
+                                <dt class="col-sm-2">{{$q1000[2]}}</dt>
+                                <dd class="col-sm-10">(adv): in a way that is simple</dd>
                             </dl>
                         </div>
                     </div>
@@ -402,7 +491,18 @@
 
 @section('js')
 <script>
-    const answers = ['dramatic', 'rise', 'success', 'applying', 'controversial', 'minimally', 'imporvement', 'decrease', 'bulit', 'dependent'];
+     const answers = [
+        'wide', 
+        'learn', 
+        'learning', 
+        'improvement', 
+        'preferable', 
+        'endangered', 
+        'life', 
+        'employees',
+        'working', 
+        'basic'
+    ];
     let score = 0;
     $("#show-answer").hide(true);
 
@@ -420,6 +520,14 @@
             } else {
                 $(item).addClass('border border-danger');
                 $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
+            }
+        })
+
+        $('a u').each((idx, item) => {
+            if($(item).val() == answers[idx]) {
+                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
+            } else {
+                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
             }
         })
 
@@ -442,7 +550,6 @@
             $("#show-answer").text('Show Answer');
             x.style.display = "none";
         }
-        
     });
    
 </script>
