@@ -300,7 +300,22 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
                                 <dd class="col-sm-10">(vt): past participle:  to be recognized
-                                <br><strong><mark>clues:  passive voice: can be + V past participle</mark> <br> <mark>active voice: can + vt infinitive + object</mark></strong></dd>
+                                    <ul class="list-unstyled mark font-weight-bold">
+                                        <li>
+                                            clues:
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    passive voice: can be + Vt past participle
+                                                </li>
+                                                <li>
+                                                    active voice: can + vt infinitive + object
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </dd>
 
                                 <dt class="col-sm-2">{{$q444[0]}}</dt>
                                 <dd class="col-sm-10">(vt): to recognize and correctly name something</dd>
@@ -382,7 +397,7 @@
                                 <dd class="col-sm-10">(nc): people who travel through an unknown areas to find out about it</dd>
 
                                 <dt class="col-sm-2">{{$q777[2]}}</dt>
-                                <dd class="col-sm-10"> (vt): present participle/ gerund of “explore”</dd>
+                                <dd class="col-sm-10"> (vt): present participle / gerund of <em>"explore"</em></dd>
                             </dl>
                         </div>
                     </div>
@@ -400,11 +415,11 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
-                                <dd class="col-sm-10">(vi): to have a different opinion from someone else.
-                                <br><mark><strong>clues: subject + vi + with Many people + disagree + with</strong></mark></dd>
+                                <dd class="col-sm-10">(vi): to have a different opinion from someone else
+                                <br><mark><strong>clues: subject + vi + with = Many people + disagree + with</strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10">(vi): present participle/ gerund of “disagree” </dd>
+                                <dd class="col-sm-10">(vi): present participle / gerund of “disagree” </dd>
 
                                 <dt class="col-sm-2">{{$q888[2]}}</dt>
                                 <dd class="col-sm-10">(nc): a situation when people express different opinions</dd>
