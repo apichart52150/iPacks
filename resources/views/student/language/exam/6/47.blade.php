@@ -13,12 +13,12 @@
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
-                The phrase '
+                The idiom '
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="nescafe">nescafe</option>
-                    <option value="treacle">treacle</option>
-                    <option value="mud">mud</option>
+                    <option value="Nescafe">Nescafe</option>
+                    <option value="Treacle">Treacle</option>
+                    <option value="Mud">Mud</option>
                     <option value="Blood">Blood</option>
                 </select>
                 is thicker than water' means that family is more important than friends.
@@ -104,7 +104,7 @@
                 What do we call a man who has two wives?
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A happy man">A happy man</option>
+                    <option value="a happy">a happy</option>
                     <option value="misogynist">misogynist</option>
                     <option value="bachelor">bachelor</option>
                     <option value="bigamist">bigamist</option>
@@ -185,7 +185,7 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">extended</i> </dt>
                                 <dd class="col-sm-10">(adj): made longer or bigger
-                                <br><strong><mark>clues: an + adj + family</mark></strong></dd>
+                                <br><strong><mark>clues: an + adj + family / an + a word with a vowel-sound initial letter</mark></strong></dd>
 
                                 <dt class="col-sm-2">traditional</dt>
                                 <dd class="col-sm-10">(adj): following ideas or methods that have existed for a long time</dd>
@@ -315,7 +315,7 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">step-mother</i> </dt>
-                                <dd class="col-sm-10">(nc): the crime of telling a lie in a court of law</dd>
+                                <dd class="col-sm-10">(nc): a woman who is married to your father, but who is not your mother</dd>
 
                                 <dt class="col-sm-2">half-sister</dt>
                                 <dd class="col-sm-10">(nc): a sister who is a daughter of only one of your parents</dd>
@@ -395,7 +395,7 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">trial marriage</i></dt>
-                                <dd class="col-sm-10">(nc): the crime of killing someone illegally but not deliberately</dd>
+                                <dd class="col-sm-10">(nc): a test to discover how effective a marriage is</dd>
 
                                 <dt class="col-sm-2">betrothal</dt>
                                 <dd class="col-sm-10">(nc): a formal promise to marry someone</dd>

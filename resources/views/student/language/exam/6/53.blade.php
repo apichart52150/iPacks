@@ -257,7 +257,7 @@
                                 <br><mark><strong>clues: research</strong></mark></dd>
 
                                 <dt class="col-sm-2">carried</dt>
-                                <dd class="col-sm-10">(vt): held with hands, arms or back</dd>
+                                <dd class="col-sm-10">(vt): held with your hands, arms or back</dd>
 
                                 <dt class="col-sm-2">happened</dt>
                                 <dd class="col-sm-10">(vt): occurred / come to existence</dd>
@@ -328,7 +328,7 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">make</i> </dt>
-                                <dd class="col-sm-10">(nc): a person who is married to two people at the same time
+                                <dd class="col-sm-10">(vt): to produce something
                                 <br><mark><strong>clues: to make a decision</strong></mark></dd>
 
                                 <dt class="col-sm-2">decide</dt>
