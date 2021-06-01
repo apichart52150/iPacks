@@ -54,7 +54,7 @@
         'variety',
         'various'
     );
-    $q8 = 'Because of refrigerated containers we can';
+    $q8 = 'Because of refrigerated containers, we';
     $q88 = 'fruits and vegetables from exotic places.';
     $q888 = array(
         'eat',
@@ -249,14 +249,30 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[1]}}</i></dt>
-                                <dd class="col-sm-10">(vt): gerund: saving something from being destroyed
-                                <br><strong><mark>clues: vt + object + much + <u>comparative adv</u> + than prepare + food + much + faster + than</mark></strong></dd>
+                                <dd class="col-sm-10">(adv) moving more quickly
+                                    <ul class="list-unstyled mark font-weight-bold">
+                                        <li>
+                                            clues:
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                   vt + object + much + <u>comparative adv</u> + than
+                                                </li>
+                                                <li>
+                                                   prepare + food + much + faster + than
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </dd>
 
                                 <dt class="col-sm-2">{{$q222[0]}}</dt>
                                 <dd class="col-sm-10">(adv): quickly</dd>
 
                                 <dt class="col-sm-2">{{$q222[2]}}</dt>
                                 <dd class="col-sm-10">(adv): superlative adverb of “fast”</dd>
+                                
                             </dl>
                         </div>
                     </div>
@@ -275,7 +291,7 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[2]}}</i></dt>
                                 <dd class="col-sm-10">(vt): gerund: saving something from being destroyed                                
-                                <br><mark><strong>clues: of + <u>gerund</u> + noun</strong></mark></dd>
+                                <br><mark><strong>clues: of + <u>gerund</u> + object</strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q333[0]}}</dt>
                                 <dd class="col-sm-10">(vt): to save something from being destroyed</dd>
@@ -351,7 +367,22 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[2]}}</i></dt>
                                 <dd class="col-sm-10">(nu): the rage of things that you can choose from
-                                <br><mark><strong>clues: have + adv + adj + <u>noun</u> <br>  have + far + more + <u>choice</u></strong></mark></dd>
+                                    <ul class="list-unstyled mark font-weight-bold">
+                                        <li>
+                                            clues:
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    have + adv + adj + <u>noun</u>
+                                                </li>
+                                                <li>
+                                                    have + far + more + <u>choice</u>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </dd>
 
                                 <dt class="col-sm-2">{{$q666[0]}}</dt>
                                 <dd class="col-sm-10">(v): to select</dd>
@@ -426,7 +457,22 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[2]}}</i> </dt>
                                 <dd class="col-sm-10">(adj): comparative: needing less effort 
-                                <br><mark><strong>clues: have made + noun + <u>adj</u> <br> have made + life + easier</strong></mark></dd>
+                                    <ul class="list-unstyled mark font-weight-bold">
+                                        <li>
+                                            clues:
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    have made + noun + <u>adj</u>
+                                                </li>
+                                                <li>
+                                                    have made + life + easier
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </dd>
 
                                 <dt class="col-sm-2">{{$q999[1]}}</dt>
                                 <dd class="col-sm-10">(adv): in a way that needs little effort</dd>
@@ -453,8 +499,22 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[1]}}</i></dt>
                                 <dd class="col-sm-10">(nu): the general condition of your body 
-                                <br><mark><strong>clues: compound noun = <u>noun</u> + noun <u>health</u> + problems</strong></mark></dd>
-
+                                    <ul class="list-unstyled mark font-weight-bold">
+                                        <li>
+                                            clues: compound noun =
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <u>noun</u> + noun 
+                                                </li>
+                                                <li>
+                                                    <u>health</u> + problems
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </dd>
                                 <dt class="col-sm-2">{{$q1000[0]}}</dt>
                                 <dd class="col-sm-10">(adj): good for your body</dd>
 
