@@ -466,6 +466,9 @@
 
                                 <dt class="col-sm-2">{{$q888[3]}}</dt>
                                 <dd class="col-sm-10">to cancel something</dd>
+
+                                <dt class="col-sm-2">opted out</dt>
+                                <dd class="col-sm-10">avoided doing a duty</dd>
                             </dl>
                         </div>
                     </div>
