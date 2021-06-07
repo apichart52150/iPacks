@@ -4,6 +4,88 @@
     background-color: #ffc107;
 }
 </style>
+@php
+    $q1 = "Your exams start next week. You'll need to";
+    $q11 = "some serious revision.";
+    $q111 = array(
+        'make up',
+        'get down to',
+        'do away with',
+        'put by'
+    );
+    $q2 = "I wanted to buy a new car so I";
+    $q22 = "some money every month.";
+    $q222 = array(
+        'put up with',
+        'do away with',
+        'make up for',
+        'put by'
+    );
+    $q3 = "Most countries have";
+    $q33 = "capital punishment.";
+    $q333 = array(
+        'done away with',
+        'put up with',
+        'got down to',
+        'got through'
+    );
+    $q4 = "You've";
+    $q44 = "the worst of the weather. Things should improve from now on.";
+    $q444 = array(
+        'got down to',
+        'done up',
+        'got through',
+        'got along'
+    );
+    $q5 = "The twins seem to";
+    $q55 = "with each other far better now than in the past.";
+    $q555 = array(
+        'get along',
+        'make out',
+        'make up',
+        'do up'
+    );
+    $q6 = "The house is starting to look shabby. Time to";
+    $q66 = "!";
+    $q666 = array(
+        'make up for it',
+        'make it out',
+        'put it by',
+        'do it up'
+    );
+    $q7 = "In spite of the fog, it was possible to";
+    $q77 = "a shape in the distance.";
+    $q777 = array(
+        'make up',
+        'make out',
+        'do up',
+        'put up with'
+    );
+    $q8 = "The noise from the renovations is awful but I'm afraid we'll just have to";
+    $q88 = "it.";
+    $q888 = array(
+        'put it by',
+        'make it out',
+        'do away with it',
+        'put up with'
+    );
+    $q9 = "The school had to close during the floods so the students had to";
+    $q99 = "the lost time during their holidays.";
+    $q999 = array(
+        'do away with',
+        'make up for',
+        'put by',
+        'put up with'
+    );
+    $q10 = "The boy was lying. Everyone knew he was";
+    $q100 = "a story to blame someone else.";
+    $q1000 = array(
+        'making up',
+        'doing up',
+        'getting through',
+        'putting by'
+    );
+@endphp
 <div class="row">
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
@@ -13,122 +95,132 @@
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
-                Unemployment figures for the three countries stood at 6%, 10% and 12%
+                {{$q1}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="*">respectfully</option>
-                    <option value="respectively">respectively</option>
-                    <option value="*">respectedly</option>
+                    <option value="{{$q111[0]}}">{{$q111[0]}}</option>
+                    <option value="{{$q111[1]}}">{{$q111[1]}}</option>
+                    <option value="{{$q111[2]}}">{{$q111[2]}}</option>
+                    <option value="{{$q111[3]}}">{{$q111[3]}}</option>
                 </select>
-                .
+                {{$q11}}
             </div>
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
-                An
+                {{$q2}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">analyze</option>
-                    <option value="analysis">analysis</option>
-                    <option value="C">analyst</option>
+                    <option value="{{$q222[0]}}">{{$q222[0]}}</option>
+                    <option value="{{$q222[1]}}">{{$q222[1]}}</option>
+                    <option value="{{$q222[2]}}">{{$q222[2]}}</option>
+                    <option value="{{$q222[3]}}">{{$q222[3]}}</option>
                 </select>
-                of data from recent research shows that global warming is accelerating.
+                {{$q22}}
             </div>
             
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
-                The government has
+                {{$q3}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">respond</option>
-                    <option value="B">responding</option>
-                    <option value="responded">responded</option>
+                    <option value="{{$q333[0]}}">{{$q333[0]}}</option>
+                    <option value="{{$q333[1]}}">{{$q333[1]}}</option>
+                    <option value="{{$q333[2]}}">{{$q333[2]}}</option>
+                    <option value="{{$q333[3]}}">{{$q333[3]}}</option>
                 </select>
-                by increasing research funding in this area.
+                {{$q33}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
-                The monthly
+                {{$q4}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="variation">variation</option>
-                    <option value="B">varied</option>
-                    <option value="*">variety</option>
+                    <option value="{{$q444[0]}}">{{$q444[0]}}</option>
+                    <option value="{{$q444[1]}}">{{$q444[1]}}</option>
+                    <option value="{{$q444[2]}}">{{$q444[2]}}</option>
+                    <option value="{{$q444[3]}}">{{$q444[3]}}</option>
                 </select>
-                in rainfall is quite astonishing.
+                {{$q44}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
-                Cars with smaller engine sizes tend to be far more
+                {{$q5}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">economy</option>
-                    <option value="*">economic</option>
-                    <option value="economical">economical</option>
+                    <option value="{{$q555[0]}}">{{$q555[0]}}</option>
+                    <option value="{{$q555[1]}}">{{$q555[1]}}</option>
+                    <option value="{{$q555[2]}}">{{$q555[2]}}</option>
+                    <option value="{{$q555[3]}}">{{$q555[3]}}</option>
                 </select>
-                than those with larger engines.
+                {{$q55}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
-                More recent studies
+                {{$q6}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="indicate">indicate</option>
-                    <option value="B">indicating</option>
-                    <option value="*">indication</option>
+                    <option value="{{$q666[0]}}">{{$q666[0]}}</option>
+                    <option value="{{$q666[1]}}">{{$q666[1]}}</option>
+                    <option value="{{$q666[2]}}">{{$q666[2]}}</option>
+                    <option value="{{$q666[3]}}">{{$q666[3]}}</option>
                 </select>
-                that there is a correlation between juvenile crime and unemployment.
+                {{$q66}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
-                The link between juvenile crime and drug abuse cannot be 
+                {{$q7}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">deny</option>
-                    <option value="B">denying</option>
-                    <option value="denied">denied</option>
+                    <option value="{{$q777[0]}}">{{$q777[0]}}</option>
+                    <option value="{{$q777[1]}}">{{$q777[1]}}</option>
+                    <option value="{{$q777[2]}}">{{$q777[2]}}</option>
+                    <option value="{{$q777[3]}}">{{$q777[3]}}</option>
                 </select>
-               .
+                {{$q77}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
-                It's important for children to have a room of
+                {{$q8}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="*">they're</option>
-                    <option value="their">their</option>
-                    <option value="C">there</option>
+                    <option value="{{$q888[0]}}">{{$q888[0]}}</option>
+                    <option value="{{$q888[1]}}">{{$q888[1]}}</option>
+                    <option value="{{$q888[2]}}">{{$q888[2]}}</option>
+                    <option value="{{$q888[3]}}">{{$q888[3]}}</option>
                 </select>
-                own.
+                {{$q88}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
-                The most recent
+                {{$q9}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">assess</option>
-                    <option value="B">assessing</option>
-                    <option value="assessment">assessment</option>
+                    <option value="{{$q999[0]}}">{{$q999[0]}}</option>
+                    <option value="{{$q999[1]}}">{{$q999[1]}}</option>
+                    <option value="{{$q999[2]}}">{{$q999[2]}}</option>
+                    <option value="{{$q999[3]}}">{{$q999[3]}}</option>
                 </select>
-                of the situation seems to indicate the situation is deteriorating.
+                {{$q99}}
             </div>
 
             <div class="d-flex align-items-center mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
-                It has been proved by research that less sleep can be
+                {{$q10}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="A">advantage</option>
-                    <option value="B">advantages</option>
-                    <option value="advantageous">advantageous</option>
+                    <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
+                    <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
+                    <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
+                    <option value="{{$q1000[3]}}">{{$q1000[3]}}</option>
                 </select>
-                for brain development.
+                {{$q100}}
             </div>
         </div>
     </div>
@@ -139,108 +231,136 @@
                 Answers
             </p>
             <div class="accordion mb-3" id="accordionExample">
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingOne">
-                        <h5 class="my-0">
-                            <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            1. Unemployment figures for the three countries stood at 6%, 10% and 12% <span class="text-success"><u>respectively</u></span> .
-                            </a>
-                        </h2>
+                <!-- 1 -->
+                    <div class="card mb-1" >
+                        <div class="card-header" id="headingOne">
+                            <h5 class="my-0">
+                                <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    1. {{$q1}} <u></u> {{$q11}}
+                                </a>
+                            </h2>
+                        </div>
+                    
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <dl class="row">
+                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[1]}}</i></dt>
+                                        <dd class="col-sm-10">to start doing something that is difficult or needs a lot of time
+                                            <p class="font-weight-bold mark">clues: exam / revision</p>
+                                        </dd>
+                                    
+                                        <dt class="col-sm-2">{{$q111[0]}}</dt>
+                                        <dd class="col-sm-10">to combine together to form something/ to add to an amount</dd>
+
+                                        <dt class="col-sm-2">{{$q111[2]}}</dt>
+                                        <dd class="col-sm-10">to get rid of something, to stop using it</dd>
+
+                                        <dt class="col-sm-2">{{$q111[3]}}</dt>
+                                        <dd class="col-sm-10">to save money regularly in order to use it later</dd>
+                                    </dl>
+                                </div>
+                        </div>
                     </div>
+                <!-- 1 -->
                 
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <!-- 2 -->
+                    <div class="card mb-1" >
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="my-0">
+                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    2. {{$q2}} <u></u> {{$q22}}
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">respectively</i> </dt>
-                                    <dd class="col-sm-10">(adv): in the order already mentioned</dd>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[3]}}</i></dt>
+                                    <dd class="col-sm-10">to save money regularly in order to use it later
+                                        <p class="font-weight-bold mark">clues: some money every month</p>
+                                    </dd>
 
-                                    <dt class="col-sm-2">respectfully</dt>
-                                    <dd class="col-sm-10">(adv): with difference and respect </dd>
+                                    <dt class="col-sm-2">{{$q222[0]}}</dt>
+                                    <dd class="col-sm-10">to tolerate, to be patient with</dd>
 
-                                    <dt class="col-sm-2">respectedly</dt>
-                                    <dd class="col-sm-10">(adv): in a way that is admired by many people</dd>
+                                    <dt class="col-sm-2">{{$q222[1]}}</dt>
+                                    <dd class="col-sm-10">to get rid of something, to stop using it</dd>
+
+                                    <dt class="col-sm-2">{{$q222[2]}}</dt>
+                                    <dd class="col-sm-10">to make bad situations better</dd>
                                 </dl>
                             </div>
-                    </div>
-                </div><!-- 1 -->
-
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingTwo">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            2. An <span class="text-success"><u>analysis</u></span> of data from recent research shows that global warming is accelerating.
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">analysis</i> </dt>
-                                <dd class="col-sm-10"> (nc): a particular study of something <mark>a + <strong><u>nc</u></strong> + of</mark></dd>
-
-                                <dt class="col-sm-2">analyze</dt>
-                                <dd class="col-sm-10">(vt): to examine something in a systematic and careful way  </dd>
-
-                                <dt class="col-sm-2">analyst</dt>
-                                <dd class="col-sm-10">(nc): a person whose job is to examine something in detail </dd>
-                            </dl>
                         </div>
                     </div>
-                </div><!-- 2 -->
+                <!-- 2 -->
 
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingThree">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3.  The government has <span class="text-success"><u>responded</u></span> by increasing research funding in this area.
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">responded</i></dt>
-                                <dd class="col-sm-10">(vi) past participle: done something as a reaction to someone <mark>has + <strong><u>V past participle</u></strong></mark></dd>
+                <!-- 3 -->
+                    <div class="card mb-1" >
+                        <div class="card-header" id="headingThree">
+                            <h5 class="my-0">
+                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    3. {{$q3}} <u></u> {{$q33}}
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <dl class="row">
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[0]}}</i></dt>
+                                    <dd class="col-sm-10">got rid of something, stopped using it                              
+                                        <p class="font-weight-bold mark">clues: capital punishment</p>
+                                    </dd>
 
-                                <dt class="col-sm-2">respond</dt>
-                                <dd class="col-sm-10">(vi) present simple/ infinitive: to do something as a reaction to someone</dd>
+                                    <dt class="col-sm-2">{{$q333[1]}}</dt>
+                                    <dd class="col-sm-10">tolerated someone or something, been patient with</dd>
 
-                                <dt class="col-sm-2">responding</dt>
-                                <dd class="col-sm-10">(vi) present participle/ gerund: doing something as a reaction to someone</dd>
-                            </dl>
+                                    <dt class="col-sm-2">{{$q333[2]}}</dt>
+                                    <dd class="col-sm-10">started doing something that is difficult or needs a lot of time </dd>
+
+                                    <dt class="col-sm-2">{{$q333[3]}}</dt>
+                                    <dd class="col-sm-10">done an amount of work </dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
-                </div><!-- 3 -->
+                <!-- 3 -->
 
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingFour">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4.  The monthly <span class="text-success"><u>variation</u></span> in rainfall is quite astonishing.
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">variation</i></dt>
-                                <dd class="col-sm-10">(nc): a change or slight difference in condition <mark>the + adj + <strong><u>nc</u></strong></mark></dd>
+                <!-- 4 -->
+                    <div class="card mb-1" >
+                        <div class="card-header" id="headingFour">
+                            <h5 class="my-0">
+                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    4.{{$q4}} <u></u> {{$q44}}
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <dl class="row">
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
+                                    <dd class="col-sm-10">managed to come to the end of a difficult experience
+                                        <p class="font-weight-bold mark">clues: the worst / improve from now on</p>
+                                    </dd>
 
-                                <dt class="col-sm-2">varied</dt>
-                                <dd class="col-sm-10">(vi): differed in size, amount or nature</dd>
+                                    <dt class="col-sm-2">{{$q444[0]}}</dt>
+                                    <dd class="col-sm-10">started doing something that is difficult or needs a lot of time</dd>
 
-                                <dt class="col-sm-2">variety</dt>
-                                <dd class="col-sm-10">(n): the quality of being diverse</dd>
-                            </dl>
+                                    <dt class="col-sm-2">{{$q444[1]}}</dt>
+                                    <dd class="col-sm-10">to fasten / to repair or decorate / to wrap </dd>
+
+                                    <dt class="col-sm-2">{{$q444[3]}}</dt>
+                                    <dd class="col-sm-10">had a friendly relationship / made progress </dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
-                </div><!-- 4 -->
+                <!-- 4 -->
 
                 <div class="card mb-1" >
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            5. Cars with smaller engine sizes tend to be far more <span class="text-success"><u>economical</u></span> than those with larger engines.
+                                5. {{$q5}} <u></u> {{$q55}}
                             </a>
                         </h5>
                     </div>
@@ -248,14 +368,19 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">economical</i> </dt>
-                                <dd class="col-sm-10">(adj): cheap to run <mark>to be + far more + <strong><u>adj</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[0]}}</i> </dt>
+                                <dd class="col-sm-10">to like and be friendly to each other 
+                                <p class="font-weight-bold mark">clues: with each other</p>
+                                </dd>
 
-                                <dt class="col-sm-2">economy</dt>
-                                <dd class="col-sm-10">(nu): the state of a country in terms of the production, consumption of goods, services and supply of money</dd>
+                                <dt class="col-sm-2">{{$q555[1]}}</dt>
+                                <dd class="col-sm-10">to continue or succeed in life or in business</dd>
 
-                                <dt class="col-sm-2">economic</dt>
-                                <dd class="col-sm-10">(adj): relating to economy</dd>
+                                <dt class="col-sm-2">{{$q555[2]}}</dt>
+                                <dd class="col-sm-10">started doing something that is difficult or needs a lot of time</dd>
+
+                                <dt class="col-sm-2">{{$q555[3]}}</dt>
+                                <dd class="col-sm-10">to fasten / to repair or decorate / to wrap</dd>
                             </dl>
                         </div>
                     </div>
@@ -265,22 +390,26 @@
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            6. More recent studies  <span class="text-success"><u>indicate</u></span> that there is a correlation between juvenile crime and unemployment.
+                                6. {{$q6}} <u></u> {{$q66}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[3]}}</i></dt>
+                                <dd class="col-sm-10">to repair or decorate / to fasten / to wrap
+                                    <p class="font-weight-bold mark">clues: my time at school</p>
+                                </dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">indicate</i> </dt>
-                                <dd class="col-sm-10">(vt): to show, identify or suggest <mark>Plural subject + <strong><u>V present simple, 3<sup>rd</sup> person plural</u></strong></mark></dd>
+                                <dt class="col-sm-2">{{$q666[0]}}</dt>
+                                <dd class="col-sm-10">shabby</dd>
 
-                                <dt class="col-sm-2">indicating </dt>
-                                <dd class="col-sm-10">(vi): present participle, gerund: showing, identifying, suggesting</dd>
+                                <dt class="col-sm-2">{{$q666[1]}}</dt>
+                                <dd class="col-sm-10">to compensate for something bad with something good</dd>
 
-                                <dt class="col-sm-2">indication </dt>
-                                <dd class="col-sm-10">(nc): a piece of information that indicates something</dd>
+                                <dt class="col-sm-2">{{$q666[2]}}</dt>
+                                <dd class="col-sm-10">to write all the necessary information on an official document</dd>
                             </dl>
                         </div>
                     </div>
@@ -290,22 +419,26 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            7. The link between juvenile crime and drug abuse cannot be <span class="text-success"><u>denied </u></span> .
+                                7. {{$q7}} <u></u> {{$q77}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}</i> </dt>
+                                <dd class="col-sm-10">to see, hear or understand something with difficulty  
+                                    <p class="font-weight-bold mark">clues: in spite of the fog / a shape</p>
+                                </dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> denied</i> </dt>
-                                <dd class="col-sm-10">(vt): refused to admit the truth <mark><strong>(Passive voice)</strong> subject + cannot be + <strong><u>V past participle</u></strong></mark></dd>
+                                <dt class="col-sm-2">{{$q777[0]}}</dt>
+                                <dd class="col-sm-10">to tolerate, to be patient with</dd>
 
-                                <dt class="col-sm-2">deny</dt>
-                                <dd class="col-sm-10">(vt) present participle, gerund: refusing to admit the truth</dd>
+                                <dt class="col-sm-2">{{$q777[2]}}</dt>
+                                <dd class="col-sm-10">to form a particular thing, amount or number as a whole</dd>
 
-                                <dt class="col-sm-2">denying </dt>
-                                <dd class="col-sm-10">(vt): past simple and past participle of <em>"improve"</em></dd>
+                                <dt class="col-sm-2">{{$q777[3]}}</dt>
+                                <dd class="col-sm-10">to repair or decorate / to fasten / to wrap</dd>
                             </dl>
                         </div>
                     </div>
@@ -315,22 +448,26 @@
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            8. It's important for children to have a room of <span class="text-success"><u>their</u></span> own.
+                                8. {{$q8}} <u></u> {{$q88}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[3]}}</i> </dt>
+                                <dd class="col-sm-10">to tolerate, to be patient with
+                                    <p class="font-weight-bold mark">clues: noise / awful / afraid</p>
+                                </dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2"> their</i> </dt>
-                                <dd class="col-sm-10">(adj): belonging to the people previously mentioned <em><strong>"their own"</strong> refers to <strong>children.</strong></em></dd>
+                                <dt class="col-sm-2">{{$q888[0]}}</dt>
+                                <dd class="col-sm-10">to save an amount of money to use later</dd>
 
-                                <dt class="col-sm-2">They’re</dt>
-                                <dd class="col-sm-10">subject + verb!  Try again! You need a possessive adjective.</dd>
+                                <dt class="col-sm-2">{{$q888[1]}}</dt>
+                                <dd class="col-sm-10">to write all the necessary information on an official document</dd>
 
-                                <dt class="col-sm-2">There</dt>
-                                <dd class="col-sm-10">(adv): in, at, on or to that place or position</dd>
+                                <dt class="col-sm-2">{{$q888[2]}}</dt>
+                                <dd class="col-sm-10"> to destroy something</dd>
                             </dl>
                         </div>
                     </div>
@@ -340,22 +477,26 @@
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                            9.  The most recent <span class="text-success"><u>assessment</u></span> of the situation seems to indicate the situation is deteriorating.
+                                9. {{$q9}} <u></u> {{$q99}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[1]}}</i> </dt>
+                                <dd class="col-sm-10">to compensate for something bad with something good 
+                                    <p class="font-weight-bold mark">clues: noise / awful / afraid</p>
+                                </dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">assessment</i> </dt>
-                                <dd class="col-sm-10">(nu): the action of assessing someone or something <mark>the + most recent + <strong><u>n</u></strong> + of</mark></dd>
+                                <dt class="col-sm-2">{{$q999[0]}}</dt>
+                                <dd class="col-sm-10">to destroy something</dd>
 
-                                <dt class="col-sm-2">assess</dt>
-                                <dd class="col-sm-10">(vt): to evaluate or estimate the nature of</dd>
+                                <dt class="col-sm-2">{{$q999[2]}}</dt>
+                                <dd class="col-sm-10"> to save an amount of money to use later</dd>
 
-                                <dt class="col-sm-2">assessing</dt>
-                                <dd class="col-sm-10">(vt) present participle, gerund:  evaluating or estimating the nature of</dd>
+                                <dt class="col-sm-2">{{$q999[3]}}</dt>
+                                <dd class="col-sm-10">to tolerate, to be patient with</dd>
                             </dl>
                         </div>
                     </div>
@@ -365,22 +506,26 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10.  It has been proved by research that less sleep can be  <span class="text-success"><u>advantageous</u></span>  for brain development.
+                            10. {{$q10}} <u></u> {{$q100}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[0]}}</i></dt>
+                                <dd class="col-sm-10">pretending something is true in order to deceive people   
+                                    <p class="font-weight-bold mark">clues: was lying / a story</p>
+                                </dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">advantageous</i> </dt>
-                                <dd class="col-sm-10"> (adj): good or beneficial (for) <mark>less sleep + can be + <strong>adj</strong> + for</mark></dd>
+                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
+                                <dd class="col-sm-10">repairing or decorating / fastening / wrapping</dd>
 
-                                <dt class="col-sm-2">advantage</dt>
-                                <dd class="col-sm-10">(nc): a benefit, a strength / It needs <strong><em>an article. </em>"less sleep"</strong> doesn’t agree with its noun complement.</dd>
+                                <dt class="col-sm-2">{{$q1000[2]}}</dt>
+                                <dd class="col-sm-10">saving an amount of money to use later</dd>
 
-                                <dt class="col-sm-2">advantages</dt>
-                                <dd class="col-sm-10">(nc): benefits, strengths / <strong>less sleep</strong> doesn’t agree with its noun complement.</dd>
+                                <dt class="col-sm-2">{{$q1000[3]}}</dt>
+                                <dd class="col-sm-10">managing to come to the end of a difficult experience</dd>
                             </dl>
                         </div>
                     </div>
@@ -398,7 +543,18 @@
 
 @section('js')
 <script>
-    const answers = ['respectively', 'analysis', 'responded', 'variation', 'economical', 'indicate', 'denied', 'their', 'assessment', 'advantageous'];
+     const answers = [
+        'get down to', 
+        'put by', 
+        'done away with', 
+        'got through', 
+        'get along', 
+        'do it up', 
+        'make out', 
+        'put up with',
+        'make up for', 
+        'making up'
+    ];
     let score = 0;
     $("#show-answer").hide(true);
 
@@ -419,6 +575,14 @@
             }
         })
 
+        $('a u').each((idx, item) => {
+            if($(item).val() == answers[idx]) {
+                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
+            } else {
+                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
+            }
+        })
+
         if(score == 10){
             alert("you're awesome");
         }else{
@@ -434,11 +598,10 @@
         if (x.style.display == "none") {
             $("#show-answer").text('close');
             x.style.display = "block";
-        } else {
+        }else {
             $("#show-answer").text('Show Answer');
             x.style.display = "none";
         }
-        
     });
    
 </script>
