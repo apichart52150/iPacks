@@ -599,7 +599,7 @@
         if (x.style.display == "none") {
             $("#show-answer").text('close');
             x.style.display = "block";
-        } else {
+        }else {
             $("#show-answer").text('Show Answer');
             x.style.display = "none";
         }
