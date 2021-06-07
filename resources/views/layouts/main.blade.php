@@ -20,6 +20,7 @@
 
         <!-- Custom box css -->
         <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
+        @yield('css')
     </head>
 
     <body class="center-menu">

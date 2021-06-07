@@ -426,7 +426,7 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[3]}}</i> </dt>
                                 <dd class="col-sm-10">to postpone something  
-                                    <p class="font-weight-bold mark">clues: can’t…. any longer / important decisions</p>
+                                    <p class="font-weight-bold mark">clues: can’t... any longer / important decisions</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q777[0]}}</dt>
@@ -455,7 +455,7 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
                                 <dd class="col-sm-10">to occur, to happen
-                                    <p class="font-weight-bold mark">clues: can’t…. any longer / important decisions</p>
+                                    <p class="font-weight-bold mark">clues: can’t... any longer / important decisions</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q888[1]}}</dt>

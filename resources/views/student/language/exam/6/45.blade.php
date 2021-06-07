@@ -5,75 +5,85 @@
 }
 </style>
 @php
-    $q1 = 'Studying a language in the country where the language is spoken has a';
-    $q11 = 'range of benefits.';
+    $q1 = "Your exams start next week. You'll need to";
+    $q11 = "some serious revision.";
     $q111 = array(
-        'wide',
-        'width',
-        'widely'
+        'make up',
+        'get down to',
+        'do away with',
+        'put by'
     );
-    $q2 = 'However, it is certainly not the only way to';
-    $q22 = 'learn a foreign language.';
+    $q2 = "I wanted to buy a new car so I";
+    $q22 = "some money every month.";
     $q222 = array(
-        'learn',
-        'learning',
-        'learned'
+        'put up with',
+        'do away with',
+        'make up for',
+        'put by'
     );
-    $q3 = 'There are, of course, ovbious advantages of';
-    $q33 = 'English in a country such as Britain or Australia.';
+    $q3 = "Most countries have";
+    $q33 = "capital punishment.";
     $q333 = array(
-        'learn',
-        'learning',
-        'learned'
+        'done away with',
+        'put up with',
+        'got down to',
+        'got through'
     );
-    $q4 = 'Continuous exposure to the target language will lead to greater';
-    $q44 = 'than simply studying it in a classroom.';
+    $q4 = "You've";
+    $q44 = "the worst of the weather. Things should improve from now on.";
     $q444 = array(
-        'improve',
-        'improving',
-        'improvement'
+        'got down to',
+        'done up',
+        'got through',
+        'got along'
     );
-    $q5 = 'Although it is';
-    $q55 = "to study English in an English-speaking country, a reasonable level of English can still be achieved in one's own country.";
+    $q5 = "The twins seem to";
+    $q55 = "with each other far better now than in the past.";
     $q555 = array(
-        'prefer',
-        'preferable',
-        'preference'
+        'get along',
+        'make out',
+        'make up',
+        'do up'
     );
-    $q6 = 'Since many of the rainforest animals are';
-    $q66 = ', it would make sense for governments to pass laws to protect them.';
+    $q6 = "The house is starting to look shabby. Time to";
+    $q66 = "!";
     $q666 = array(
-        'danger',
-        'dangerous',
-        'endangered'
+        'make up for it',
+        'make it out',
+        'put it by',
+        'do it up'
     );
-    $q7 = 'Although nuclear weapons pose a great threat to';
-    $q77 = 'on earth, the use of such technology for peaceful purposes cannot be doubted.';
+    $q7 = "In spite of the fog, it was possible to";
+    $q77 = "a shape in the distance.";
     $q777 = array(
-        'live',
-        'life',
-        'alive'
+        'make up',
+        'make out',
+        'do up',
+        'put up with'
     );
-    $q8 = 'Telecommuting means that';
-    $q88 = 'can carry out their work at home rather than in an office.';
+    $q8 = "The noise from the renovations is awful but I'm afraid we'll just have to";
+    $q88 = "it.";
     $q888 = array(
-        'employees',
-        'employed',
-        'employment'
+        'put it by',
+        'make it out',
+        'do away with it',
+        'put up with'
     );
-    $q9 = 'Telecommuting refers to office staff';
-    $q99 = 'from home rather than in a centralised office.';
+    $q9 = "The school had to close during the floods so the students had to";
+    $q99 = "the lost time during their holidays.";
     $q999 = array(
-        'work',
-        'working',
-        'worked'
+        'do away with',
+        'make up for',
+        'put by',
+        'put up with'
     );
-    $q10 = 'Food is a';
-    $q100 = 'part of life and so people should be very aware of what they are eating.';
+    $q10 = "The boy was lying. Everyone knew he was";
+    $q100 = "a story to blame someone else.";
     $q1000 = array(
-        'basis',
-        'basic',
-        'basically'
+        'making up',
+        'doing up',
+        'getting through',
+        'putting by'
     );
 @endphp
 <div class="row">
@@ -91,6 +101,7 @@
                     <option value="{{$q111[0]}}">{{$q111[0]}}</option>
                     <option value="{{$q111[1]}}">{{$q111[1]}}</option>
                     <option value="{{$q111[2]}}">{{$q111[2]}}</option>
+                    <option value="{{$q111[3]}}">{{$q111[3]}}</option>
                 </select>
                 {{$q11}}
             </div>
@@ -103,6 +114,7 @@
                     <option value="{{$q222[0]}}">{{$q222[0]}}</option>
                     <option value="{{$q222[1]}}">{{$q222[1]}}</option>
                     <option value="{{$q222[2]}}">{{$q222[2]}}</option>
+                    <option value="{{$q222[3]}}">{{$q222[3]}}</option>
                 </select>
                 {{$q22}}
             </div>
@@ -115,6 +127,7 @@
                     <option value="{{$q333[0]}}">{{$q333[0]}}</option>
                     <option value="{{$q333[1]}}">{{$q333[1]}}</option>
                     <option value="{{$q333[2]}}">{{$q333[2]}}</option>
+                    <option value="{{$q333[3]}}">{{$q333[3]}}</option>
                 </select>
                 {{$q33}}
             </div>
@@ -127,6 +140,7 @@
                     <option value="{{$q444[0]}}">{{$q444[0]}}</option>
                     <option value="{{$q444[1]}}">{{$q444[1]}}</option>
                     <option value="{{$q444[2]}}">{{$q444[2]}}</option>
+                    <option value="{{$q444[3]}}">{{$q444[3]}}</option>
                 </select>
                 {{$q44}}
             </div>
@@ -139,6 +153,7 @@
                     <option value="{{$q555[0]}}">{{$q555[0]}}</option>
                     <option value="{{$q555[1]}}">{{$q555[1]}}</option>
                     <option value="{{$q555[2]}}">{{$q555[2]}}</option>
+                    <option value="{{$q555[3]}}">{{$q555[3]}}</option>
                 </select>
                 {{$q55}}
             </div>
@@ -151,6 +166,7 @@
                     <option value="{{$q666[0]}}">{{$q666[0]}}</option>
                     <option value="{{$q666[1]}}">{{$q666[1]}}</option>
                     <option value="{{$q666[2]}}">{{$q666[2]}}</option>
+                    <option value="{{$q666[3]}}">{{$q666[3]}}</option>
                 </select>
                 {{$q66}}
             </div>
@@ -163,6 +179,7 @@
                     <option value="{{$q777[0]}}">{{$q777[0]}}</option>
                     <option value="{{$q777[1]}}">{{$q777[1]}}</option>
                     <option value="{{$q777[2]}}">{{$q777[2]}}</option>
+                    <option value="{{$q777[3]}}">{{$q777[3]}}</option>
                 </select>
                 {{$q77}}
             </div>
@@ -175,6 +192,7 @@
                     <option value="{{$q888[0]}}">{{$q888[0]}}</option>
                     <option value="{{$q888[1]}}">{{$q888[1]}}</option>
                     <option value="{{$q888[2]}}">{{$q888[2]}}</option>
+                    <option value="{{$q888[3]}}">{{$q888[3]}}</option>
                 </select>
                 {{$q88}}
             </div>
@@ -187,6 +205,7 @@
                     <option value="{{$q999[0]}}">{{$q999[0]}}</option>
                     <option value="{{$q999[1]}}">{{$q999[1]}}</option>
                     <option value="{{$q999[2]}}">{{$q999[2]}}</option>
+                    <option value="{{$q999[3]}}">{{$q999[3]}}</option>
                 </select>
                 {{$q99}}
             </div>
@@ -199,6 +218,7 @@
                     <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
                     <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
                     <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
+                    <option value="{{$q1000[3]}}">{{$q1000[3]}}</option>
                 </select>
                 {{$q100}}
             </div>
@@ -211,122 +231,130 @@
                 Answers
             </p>
             <div class="accordion mb-3" id="accordionExample">
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingOne">
-                        <h5 class="my-0">
-                            <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                1. {{$q1}} <u></u> {{$q11}}
-                            </a>
-                        </h2>
+                <!-- 1 -->
+                    <div class="card mb-1" >
+                        <div class="card-header" id="headingOne">
+                            <h5 class="my-0">
+                                <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    1. {{$q1}} <u></u> {{$q11}}
+                                </a>
+                            </h2>
+                        </div>
+                    
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <dl class="row">
+                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[1]}}</i></dt>
+                                        <dd class="col-sm-10">to start doing something that is difficult or needs a lot of time
+                                            <p class="font-weight-bold mark">clues: exam / revision</p>
+                                        </dd>
+                                    
+                                        <dt class="col-sm-2">{{$q111[0]}}</dt>
+                                        <dd class="col-sm-10">to combine together to form something/ to add to an amount</dd>
+
+                                        <dt class="col-sm-2">{{$q111[2]}}</dt>
+                                        <dd class="col-sm-10">to get rid of something, to stop using it</dd>
+
+                                        <dt class="col-sm-2">{{$q111[3]}}</dt>
+                                        <dd class="col-sm-10">to save money regularly in order to use it later</dd>
+                                    </dl>
+                                </div>
+                        </div>
                     </div>
+                <!-- 1 -->
                 
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <!-- 2 -->
+                    <div class="card mb-1" >
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="my-0">
+                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    2. {{$q2}} <u></u> {{$q22}}
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[0]}}</i></dt>
-                                    <dd class="col-sm-10">(adj): If something is possible, it can be achieved.
-                                    <br><strong><mark>clues: have made + it + adj + to infinitive</mark></strong></dd>
-                                
-                                    <dt class="col-sm-2">{{$q111[1]}}</dt>
-                                    <dd class="col-sm-10">(nc): the fact that something might be true</dd>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[3]}}</i></dt>
+                                    <dd class="col-sm-10">to save money regularly in order to use it later
+                                        <p class="font-weight-bold mark">clues: some money every month</p>
+                                    </dd>
 
-                                    <dt class="col-sm-2">{{$q111[2]}}</dt>
-                                    <dd class="col-sm-10">(adv): used when saying that something might be true</dd>
+                                    <dt class="col-sm-2">{{$q222[0]}}</dt>
+                                    <dd class="col-sm-10">to tolerate, to be patient with</dd>
+
+                                    <dt class="col-sm-2">{{$q222[1]}}</dt>
+                                    <dd class="col-sm-10">to get rid of something, to stop using it</dd>
+
+                                    <dt class="col-sm-2">{{$q222[2]}}</dt>
+                                    <dd class="col-sm-10">to make bad situations better</dd>
                                 </dl>
                             </div>
-                    </div>
-                </div><!-- 1 -->
-
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingTwo">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                2. {{$q2}} <u></u> {{$q22}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[1]}}</i></dt>
-                                <dd class="col-sm-10">(adv) moving more quickly
-                                    <ul class="list-unstyled mark font-weight-bold">
-                                        <li>
-                                            clues:
-                                        </li>
-                                        <li>
-                                            <ul>
-                                                <li>
-                                                   vt + object + much + <u>comparative adv</u> + than
-                                                </li>
-                                                <li>
-                                                   prepare + food + much + faster + than
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q222[0]}}</dt>
-                                <dd class="col-sm-10">(adv): quickly</dd>
-
-                                <dt class="col-sm-2">{{$q222[2]}}</dt>
-                                <dd class="col-sm-10">(adv): superlative adverb of “fast”</dd>
-                                
-                            </dl>
                         </div>
                     </div>
-                </div><!-- 2 -->
+                <!-- 2 -->
 
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingThree">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3. {{$q3}} <u></u> {{$q33}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[2]}}</i></dt>
-                                <dd class="col-sm-10">(vt): gerund: saving something from being destroyed                                
-                                <br><mark><strong>clues: of + <u>gerund</u> + object</strong></mark></dd>
+                <!-- 3 -->
+                    <div class="card mb-1" >
+                        <div class="card-header" id="headingThree">
+                            <h5 class="my-0">
+                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    3. {{$q3}} <u></u> {{$q33}}
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <dl class="row">
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[0]}}</i></dt>
+                                    <dd class="col-sm-10">got rid of something, stopped using it                              
+                                        <p class="font-weight-bold mark">clues: capital punishment</p>
+                                    </dd>
 
-                                <dt class="col-sm-2">{{$q333[0]}}</dt>
-                                <dd class="col-sm-10">(vt): to save something from being destroyed</dd>
+                                    <dt class="col-sm-2">{{$q333[1]}}</dt>
+                                    <dd class="col-sm-10">tolerated someone or something, been patient with</dd>
 
-                                <dt class="col-sm-2">{{$q333[1]}}</dt>
-                                <dd class="col-sm-10">(nu): keeping something in a good condition</dd>
-                            </dl>
+                                    <dt class="col-sm-2">{{$q333[2]}}</dt>
+                                    <dd class="col-sm-10">started doing something that is difficult or needs a lot of time </dd>
+
+                                    <dt class="col-sm-2">{{$q333[3]}}</dt>
+                                    <dd class="col-sm-10">done an amount of work </dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
-                </div><!-- 3 -->
+                <!-- 3 -->
 
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingFour">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4.{{$q4}} <u></u> {{$q44}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
-                                <dd class="col-sm-10">(adv): in a way that is good for your body
-                                <br><strong><mark>clues:  to eat + <u>adv phrase</u> = to eat + <u>much more healthily</u></mark></strong></dd>
+                <!-- 4 -->
+                    <div class="card mb-1" >
+                        <div class="card-header" id="headingFour">
+                            <h5 class="my-0">
+                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    4.{{$q4}} <u></u> {{$q44}}
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <dl class="row">
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
+                                    <dd class="col-sm-10">managed to come to the end of a difficult experience
+                                        <p class="font-weight-bold mark">clues: the worst / improve from now on</p>
+                                    </dd>
 
-                                <dt class="col-sm-2">{{$q444[0]}}</dt>
-                                <dd class="col-sm-10">(adj): good for your body</dd>
+                                    <dt class="col-sm-2">{{$q444[0]}}</dt>
+                                    <dd class="col-sm-10">started doing something that is difficult or needs a lot of time</dd>
 
-                                <dt class="col-sm-2">{{$q444[1]}}</dt>
-                                <dd class="col-sm-10">(nu): the general condition of your body</dd>
-                            </dl>
+                                    <dt class="col-sm-2">{{$q444[1]}}</dt>
+                                    <dd class="col-sm-10">to fasten / to repair or decorate / to wrap </dd>
+
+                                    <dt class="col-sm-2">{{$q444[3]}}</dt>
+                                    <dd class="col-sm-10">had a friendly relationship / made progress </dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
-                </div><!-- 4 -->
+                <!-- 4 -->
 
                 <div class="card mb-1" >
                     <div class="card-header" id="headingFive">
@@ -341,14 +369,18 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[0]}}</i> </dt>
-                                <dd class="col-sm-10">(vi): gerund: preparing food for eating
-                                <br><mark><strong>clues: for + <u>gerund</u></strong></mark></dd>
+                                <dd class="col-sm-10">to like and be friendly to each other 
+                                <p class="font-weight-bold mark">clues: with each other</p>
+                                </dd>
 
                                 <dt class="col-sm-2">{{$q555[1]}}</dt>
-                                <dd class="col-sm-10">(vi): preparing food for eatin</dd>
+                                <dd class="col-sm-10">to continue or succeed in life or in business</dd>
 
                                 <dt class="col-sm-2">{{$q555[2]}}</dt>
-                                <dd class="col-sm-10">(nu): the art of cooking</dd>
+                                <dd class="col-sm-10">started doing something that is difficult or needs a lot of time</dd>
+
+                                <dt class="col-sm-2">{{$q555[3]}}</dt>
+                                <dd class="col-sm-10">to fasten / to repair or decorate / to wrap</dd>
                             </dl>
                         </div>
                     </div>
@@ -365,30 +397,19 @@
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[2]}}</i></dt>
-                                <dd class="col-sm-10">(nu): the rage of things that you can choose from
-                                    <ul class="list-unstyled mark font-weight-bold">
-                                        <li>
-                                            clues:
-                                        </li>
-                                        <li>
-                                            <ul>
-                                                <li>
-                                                    have + adv + adj + <u>noun</u>
-                                                </li>
-                                                <li>
-                                                    have + far + more + <u>choice</u>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[3]}}</i></dt>
+                                <dd class="col-sm-10">to repair or decorate / to fasten / to wrap
+                                    <p class="font-weight-bold mark">clues: my time at school</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q666[0]}}</dt>
-                                <dd class="col-sm-10">(v): to select</dd>
+                                <dd class="col-sm-10">shabby</dd>
 
                                 <dt class="col-sm-2">{{$q666[1]}}</dt>
-                                <dd class="col-sm-10">(adj): difficult to please because you are very exact about what you like</dd>
+                                <dd class="col-sm-10">to compensate for something bad with something good</dd>
+
+                                <dt class="col-sm-2">{{$q666[2]}}</dt>
+                                <dd class="col-sm-10">to write all the necessary information on an official document</dd>
                             </dl>
                         </div>
                     </div>
@@ -406,14 +427,18 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}</i> </dt>
-                                <dd class="col-sm-10">(nc): a different type of something 
-                                <br><mark><strong>clues: a greater + <u>noun</u></strong></mark></dd>
+                                <dd class="col-sm-10">to see, hear or understand something with difficulty  
+                                    <p class="font-weight-bold mark">clues: in spite of the fog / a shape</p>
+                                </dd>
 
                                 <dt class="col-sm-2">{{$q777[0]}}</dt>
-                                <dd class="col-sm-10">(vi): to cause similar things to differ</dd>
+                                <dd class="col-sm-10">to tolerate, to be patient with</dd>
 
                                 <dt class="col-sm-2">{{$q777[2]}}</dt>
-                                <dd class="col-sm-10">(adj): many different</dd>
+                                <dd class="col-sm-10">to form a particular thing, amount or number as a whole</dd>
+
+                                <dt class="col-sm-2">{{$q777[3]}}</dt>
+                                <dd class="col-sm-10">to repair or decorate / to fasten / to wrap</dd>
                             </dl>
                         </div>
                     </div>
@@ -430,15 +455,19 @@
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
-                                <dd class="col-sm-10">(vt): to take food into the mouth
-                                <br><mark><strong>clues: can + <u>v infinitive</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[3]}}</i> </dt>
+                                <dd class="col-sm-10">to tolerate, to be patient with
+                                    <p class="font-weight-bold mark">clues: noise / awful / afraid</p>
+                                </dd>
+
+                                <dt class="col-sm-2">{{$q888[0]}}</dt>
+                                <dd class="col-sm-10">to save an amount of money to use later</dd>
 
                                 <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10">(v): gerund of “eat”</dd>
+                                <dd class="col-sm-10">to write all the necessary information on an official document</dd>
 
                                 <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">(v): past participle of “eat”</dd>
+                                <dd class="col-sm-10"> to destroy something</dd>
                             </dl>
                         </div>
                     </div>
@@ -455,32 +484,19 @@
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[2]}}</i> </dt>
-                                <dd class="col-sm-10">(adj): comparative: needing less effort 
-                                    <ul class="list-unstyled mark font-weight-bold">
-                                        <li>
-                                            clues:
-                                        </li>
-                                        <li>
-                                            <ul>
-                                                <li>
-                                                    have made + noun + <u>adj</u>
-                                                </li>
-                                                <li>
-                                                    have made + life + easier
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[1]}}</i> </dt>
+                                <dd class="col-sm-10">to compensate for something bad with something good 
+                                    <p class="font-weight-bold mark">clues: noise / awful / afraid</p>
                                 </dd>
 
-                                <dt class="col-sm-2">{{$q999[1]}}</dt>
-                                <dd class="col-sm-10">(adv): in a way that needs little effort</dd>
-
                                 <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">(adj): superlative: needing the least effort
-                                We use the superlative degree to compare more than two things. 
-                                The sentence compares the life at present and in the past.</dd>
+                                <dd class="col-sm-10">to destroy something</dd>
+
+                                <dt class="col-sm-2">{{$q999[2]}}</dt>
+                                <dd class="col-sm-10"> to save an amount of money to use later</dd>
+
+                                <dt class="col-sm-2">{{$q999[3]}}</dt>
+                                <dd class="col-sm-10">to tolerate, to be patient with</dd>
                             </dl>
                         </div>
                     </div>
@@ -497,29 +513,19 @@
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[1]}}</i></dt>
-                                <dd class="col-sm-10">(nu): the general condition of your body 
-                                    <ul class="list-unstyled mark font-weight-bold">
-                                        <li>
-                                            clues: compound noun =
-                                        </li>
-                                        <li>
-                                            <ul>
-                                                <li>
-                                                    <u>noun</u> + noun 
-                                                </li>
-                                                <li>
-                                                    <u>health</u> + problems
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[0]}}</i></dt>
+                                <dd class="col-sm-10">pretending something is true in order to deceive people   
+                                    <p class="font-weight-bold mark">clues: was lying / a story</p>
                                 </dd>
-                                <dt class="col-sm-2">{{$q1000[0]}}</dt>
-                                <dd class="col-sm-10">(adj): good for your body</dd>
+
+                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
+                                <dd class="col-sm-10">repairing or decorating / fastening / wrapping</dd>
 
                                 <dt class="col-sm-2">{{$q1000[2]}}</dt>
-                                <dd class="col-sm-10">(adv): in a way that is good for your body</dd>
+                                <dd class="col-sm-10">saving an amount of money to use later</dd>
+
+                                <dt class="col-sm-2">{{$q1000[3]}}</dt>
+                                <dd class="col-sm-10">managing to come to the end of a difficult experience</dd>
                             </dl>
                         </div>
                     </div>
@@ -538,16 +544,16 @@
 @section('js')
 <script>
      const answers = [
-        'wide', 
-        'learn', 
-        'learning', 
-        'improvement', 
-        'preferable', 
-        'endangered', 
-        'life', 
-        'employees',
-        'working', 
-        'basic'
+        'get down to', 
+        'put by', 
+        'done away with', 
+        'got through', 
+        'get along', 
+        'do it up', 
+        'make out', 
+        'put up with',
+        'make up for', 
+        'making up'
     ];
     let score = 0;
     $("#show-answer").hide(true);
@@ -592,7 +598,7 @@
         if (x.style.display == "none") {
             $("#show-answer").text('close');
             x.style.display = "block";
-        } else {
+        }else {
             $("#show-answer").text('Show Answer');
             x.style.display = "none";
         }
