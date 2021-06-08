@@ -5,85 +5,85 @@
 }
 </style>
 @php
-    $q1 = "I believe schools should teach students how to";
-    $q11 = "children.";
+    $q1 = "In countries which carry out the death sentence there is no perceived reduction in the number of serious crimes.";
+    $q11 = ", it seems that capital punishment is not a deterrent to serious crime.";
     $q111 = array(
-        'bring up',
-        'grow up',
-        'take over',
-        'keep on'
+        'Even though',
+        'While',
+        'Since',
+        'Therefore'
     );
-    $q2 = "Many parents don't know how to";
-    $q22 = "children properly; for example, they let them eat too much fast food.";
+    $q2 = "There is ice on the runway ";
+    $q22 = "it looks like the flight will be delayed.";
     $q222 = array(
-        'grow up',
-        'drop out',
-        'put forward',
-        'look after'
+        'therefore',
+        'as a result',
+        'so',
+        'consequently'
     );
-    $q3 = "Married couples sometimes";
-    $q33 = "over who should do the housework. They need to decide on that before they get married.";
+    $q3 = "There are two reasons for choosing to study abroad:";
+    $q33 = ", value for money and quality education.";
     $q333 = array(
-        'look after',
-        'take over',
-        'fall out',
-        'put forward'
+        'namely',
+        'for example',
+        'one illustration',
+        'both'
     );
-    $q4 = "This report";
-    $q44 = "the reasons for the dramatic rise in population.";
+    $q4 = "Better communication is one reason for choosing to migrate to urban areas.";
+    $q44 = "reason is better education possibilities.";
     $q444 = array(
-        'cuts down on',
-        'keeps on',
-        'leaves out',
-        'drops out'
+        'Other',
+        'Another',
+        'Further',
+        'One'
     );
-    $q5 = "A successful business person";
-    $q55 = "trying even when something seems impossible.";
+    $q5 = "There are a number of causes of global warming.";
+    $q55 = "illegal logging reduces the earth's capacity to absorb carbon dioxide.";
     $q555 = array(
-        'looks after',
-        'drops out',
-        'puts forward',
-        'keeps on'
+        'First of all',
+        'Example',
+        'One reason',
+        'such as'
     );
-    $q6 = "He is behaving so immaturely. He really needs to";
-    $q66 = ".";
+    $q6 = "There are many causes of juvenile crime";
+    $q66 = "boredom, poverty and drug abuse.";
     $q666 = array(
-        'leave out',
-        'grow up',
-        'fall out',
-        'take over'
+        'examples',
+        'such as',
+        'like',
+        'such'
     );
-    $q7 = "The course was quite boring and so many students";
-    $q77 = ".";
+    $q7 = "One reason for urban migration is improved public transportation facilities. ";
+    $q77 = "better schooling and more job opportunities attract poor people to the city areas.";
     $q777 = array(
-        'fell out',
-        'took over',
-        'dropped out',
-        'put forward'
+        'Also',
+        "What's more,",
+        'In addition,',
+        'Too,'
     );
-    $q8 = "No one had any ideas out how to solve the problem until the chair-person";
-    $q88 = "this suggestion.";
+    $q8 = " ";
+    $q88 = "all the above reasons show that banning the sale of alcohol does not result in fewer alcohol-related problems.";
     $q888 = array(
-        'put forward',
-        'looked after',
-        'grew up',
-        'fell out'
+        'In conclusion,',
+        'In conclude,',
+        'To conclusion,',
+        'To summary,'
     );
-    $q9 = "My cough is getting really bad. I really should";
-    $q99 = "the number of cigarettes each day.";
+    $q9 = "Smoking in public should be prohibited";
+    $q99 = "even passive smoking can damage people's health.";
     $q999 = array(
-        'look after',
-        'drop out',
-        'leave out',
-        'cut down on'
+        'because of',
+        'since',
+        'while',
+        'so'
     );
-    $q10 = "The hospital has recetnly been";
-    $q100 = "by an international conglomerate.";
+    $q10 = "Too much fast food can lead to obesity.";
+    $q100 = "it can cause a number of health problems.";
     $q1000 = array(
-        'taken over',
-        'put forward',
-        'grown up',
-        'cut down on'
+        'So',
+        'Furthermore,',
+        'grown up,',
+        'While,'
     );
 @endphp
 <div class="row">
@@ -92,136 +92,171 @@
             <p class="lead">
                 {{$pageTitle['topic']}}
             </p>
-            
-            <div class="d-flex align-items-center mb-2">
-                <span class="font-weight-bold mr-2">1.</span>
-                {{$q1}}
-                <select class="form-control w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q111[0]}}">{{$q111[0]}}</option>
-                    <option value="{{$q111[1]}}">{{$q111[1]}}</option>
-                    <option value="{{$q111[2]}}">{{$q111[2]}}</option>
-                    <option value="{{$q111[3]}}">{{$q111[3]}}</option>
-                </select>
-                {{$q11}}
-            </div>
-            
-            <div class="d-flex align-items-center mb-2">
-                <span class="font-weight-bold mr-2">2.</span>
-                {{$q2}}
-                <select class="form-control w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q222[0]}}">{{$q222[0]}}</option>
-                    <option value="{{$q222[1]}}">{{$q222[1]}}</option>
-                    <option value="{{$q222[2]}}">{{$q222[2]}}</option>
-                    <option value="{{$q222[3]}}">{{$q222[3]}}</option>
-                </select>
-                {{$q22}}
-            </div>
-            
-            <div class="d-flex align-items-center mb-2">
-                <span class="font-weight-bold mr-2">3.</span>
-                {{$q3}}
-                <select class="form-control w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q333[0]}}">{{$q333[0]}}</option>
-                    <option value="{{$q333[1]}}">{{$q333[1]}}</option>
-                    <option value="{{$q333[2]}}">{{$q333[2]}}</option>
-                    <option value="{{$q333[3]}}">{{$q333[3]}}</option>
-                </select>
-                {{$q33}}
-            </div>
 
-            <div class="d-flex align-items-center mb-2">
-                <span class="font-weight-bold mr-2">4.</span>
-                {{$q4}}
-                <select class="form-control w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q444[0]}}">{{$q444[0]}}</option>
-                    <option value="{{$q444[1]}}">{{$q444[1]}}</option>
-                    <option value="{{$q444[2]}}">{{$q444[2]}}</option>
-                    <option value="{{$q444[3]}}">{{$q444[3]}}</option>
-                </select>
-                {{$q44}}
-            </div>
+            <table class="table table-sm table-bordered text-dark">
+                <thead>
+                    <tr class="text-center">
+                        <th class="font-weight-bold">Qustion</th>
+                        <th class="font-weight-bold">Answer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                        <span class="font-weight-bold mr-2">1.</span>
+                        {{$q1}} _____<u></u>_____ {{$q11}}</td>
+                        <td>
+                            <select class="form-control w-auto">
+                                <option value="">-Select-</option>
+                                <option value="{{$q111[0]}}">{{$q111[0]}}</option>
+                                <option value="{{$q111[1]}}">{{$q111[1]}}</option>
+                                <option value="{{$q111[2]}}">{{$q111[2]}}</option>
+                                <option value="{{$q111[3]}}">{{$q111[3]}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="font-weight-bold mr-2">2.</span>
+                            {{$q2}} _____<u></u>_____ {{$q22}}
+                        </td>
+                        <td>
+                            <select class="form-control w-auto">
+                                <option value="">-Select-</option>
+                                <option value="{{$q222[0]}}">{{$q222[0]}}</option>
+                                <option value="{{$q222[1]}}">{{$q222[1]}}</option>
+                                <option value="{{$q222[2]}}">{{$q222[2]}}</option>
+                                <option value="{{$q222[3]}}">{{$q222[3]}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="font-weight-bold mr-2">3.</span>
+                            {{$q3}} _____<u></u>_____ {{$q33}}
+                        </td>
+                        <td>
+                            <select class="form-control w-auto">
+                                <option value="">-Select-</option>
+                                <option value="{{$q333[0]}}">{{$q333[0]}}</option>
+                                <option value="{{$q333[1]}}">{{$q333[1]}}</option>
+                                <option value="{{$q333[2]}}">{{$q333[2]}}</option>
+                                <option value="{{$q333[3]}}">{{$q333[3]}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="font-weight-bold mr-2">4.</span>
+                            {{$q4}} _____<u></u>_____ {{$q44}}
+                        </td>
+                        <td>
+                            <select class="form-control w-auto">
+                                <option value="">-Select-</option>
+                                <option value="{{$q444[0]}}">{{$q444[0]}}</option>
+                                <option value="{{$q444[1]}}">{{$q444[1]}}</option>
+                                <option value="{{$q444[2]}}">{{$q444[2]}}</option>
+                                <option value="{{$q444[3]}}">{{$q444[3]}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="font-weight-bold mr-2">5.</span>
+                            {{$q5}} _____<u></u>_____ {{$q55}}
+                        </td>
+                        <td>
+                            <select class="form-control w-auto">
+                                <option value="">-Select-</option>
+                                <option value="{{$q555[0]}}">{{$q555[0]}}</option>
+                                <option value="{{$q555[1]}}">{{$q555[1]}}</option>
+                                <option value="{{$q555[2]}}">{{$q555[2]}}</option>
+                                <option value="{{$q555[3]}}">{{$q555[3]}}</option>
+                            </select>
+                        </td>
+                    </tr>
 
-            <div class="d-flex align-items-center mb-2">
-                <span class="font-weight-bold mr-2">5.</span>
-                {{$q5}}
-                <select class="form-control w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q555[0]}}">{{$q555[0]}}</option>
-                    <option value="{{$q555[1]}}">{{$q555[1]}}</option>
-                    <option value="{{$q555[2]}}">{{$q555[2]}}</option>
-                    <option value="{{$q555[3]}}">{{$q555[3]}}</option>
-                </select>
-                {{$q55}}
-            </div>
+                    <tr>
+                        <td>
+                            <span class="font-weight-bold mr-2">6.</span>
+                            {{$q6}} _____<u></u>_____ {{$q66}}
+                        </td>
+                        <td>
+                            <select class="form-control w-auto">
+                                <option value="">-Select-</option>
+                                <option value="{{$q666[0]}}">{{$q666[0]}}</option>
+                                <option value="{{$q666[1]}}">{{$q666[1]}}</option>
+                                <option value="{{$q666[2]}}">{{$q666[2]}}</option>
+                                <option value="{{$q666[3]}}">{{$q666[3]}}</option>
+                            </select>
+                        </td>
+                    </tr>
 
-            <div class="d-flex align-items-center mb-2">
-                <span class="font-weight-bold mr-2">6.</span>
-                {{$q6}}
-                <select class="form-control w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q666[0]}}">{{$q666[0]}}</option>
-                    <option value="{{$q666[1]}}">{{$q666[1]}}</option>
-                    <option value="{{$q666[2]}}">{{$q666[2]}}</option>
-                    <option value="{{$q666[3]}}">{{$q666[3]}}</option>
-                </select>
-                {{$q66}}
-            </div>
+                    <tr>
+                        <td>
+                            <span class="font-weight-bold mr-2">7.</span>
+                            {{$q7}} _____<u></u>_____ {{$q77}}
+                        </td>
+                        <td>
+                            <select class="form-control w-auto">
+                                <option value="">-Select-</option>
+                                <option value="{{$q777[0]}}">{{$q777[0]}}</option>
+                                <option value="{{$q777[1]}}">{{$q777[1]}}</option>
+                                <option value="{{$q777[2]}}">{{$q777[2]}}</option>
+                                <option value="{{$q777[3]}}">{{$q777[3]}}</option>
+                            </select>
+                        </td>
+                    </tr>
 
-            <div class="d-flex align-items-center mb-2">
-                <span class="font-weight-bold mr-2">7.</span>
-                {{$q7}}
-                <select class="form-control w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q777[0]}}">{{$q777[0]}}</option>
-                    <option value="{{$q777[1]}}">{{$q777[1]}}</option>
-                    <option value="{{$q777[2]}}">{{$q777[2]}}</option>
-                    <option value="{{$q777[3]}}">{{$q777[3]}}</option>
-                </select>
-                {{$q77}}
-            </div>
+                    <tr>
+                        <td>
+                            <span class="font-weight-bold mr-2">8.</span>
+                            {{$q8}} _____<u></u>_____ {{$q88}}
+                        </td>
+                        <td>
+                            <select class="form-control w-auto">
+                                <option value="">-Select-</option>
+                                <option value="{{$q888[0]}}">{{$q888[0]}}</option>
+                                <option value="{{$q888[1]}}">{{$q888[1]}}</option>
+                                <option value="{{$q888[2]}}">{{$q888[2]}}</option>
+                                <option value="{{$q888[3]}}">{{$q888[3]}}</option>
+                            </select>
+                        </td>
+                    </tr>
 
-            <div class="d-flex align-items-center mb-2">
-                <span class="font-weight-bold mr-2">8.</span>
-                {{$q8}}
-                <select class="form-control w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q888[0]}}">{{$q888[0]}}</option>
-                    <option value="{{$q888[1]}}">{{$q888[1]}}</option>
-                    <option value="{{$q888[2]}}">{{$q888[2]}}</option>
-                    <option value="{{$q888[3]}}">{{$q888[3]}}</option>
-                </select>
-                {{$q88}}
-            </div>
+                    <tr>
+                        <td>
+                            <span class="font-weight-bold mr-2">9.</span>
+                            {{$q9}} _____<u></u>_____ {{$q99}}
+                        </td>
+                        <td>
+                            <select class="form-control w-auto">
+                                <option value="">-Select-</option>
+                                <option value="{{$q999[0]}}">{{$q999[0]}}</option>
+                                <option value="{{$q999[1]}}">{{$q999[1]}}</option>
+                                <option value="{{$q999[2]}}">{{$q999[2]}}</option>
+                                <option value="{{$q999[3]}}">{{$q999[3]}}</option>
+                            </select>
+                        </td>
+                    </tr>
 
-            <div class="d-flex align-items-center mb-2">
-                <span class="font-weight-bold mr-2">9.</span>
-                {{$q9}}
-                <select class="form-control w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q999[0]}}">{{$q999[0]}}</option>
-                    <option value="{{$q999[1]}}">{{$q999[1]}}</option>
-                    <option value="{{$q999[2]}}">{{$q999[2]}}</option>
-                    <option value="{{$q999[3]}}">{{$q999[3]}}</option>
-                </select>
-                {{$q99}}
-            </div>
-
-            <div class="d-flex align-items-center mb-2">
-                <span class="font-weight-bold mr-2">10.</span>
-                {{$q10}}
-                <select class="form-control w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
-                    <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
-                    <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
-                    <option value="{{$q1000[3]}}">{{$q1000[3]}}</option>
-                </select>
-                {{$q100}}
-            </div>
+                    <tr>
+                        <td>
+                            <span class="font-weight-bold mr-2">10.</span>
+                            {{$q10}} _____<u></u>_____ {{$q100}}
+                        </td>
+                        <td>
+                            <select class="form-control w-auto">
+                                <option value="">-Select-</option>
+                                <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
+                                <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
+                                <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
+                                <option value="{{$q1000[3]}}">{{$q1000[3]}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
@@ -543,23 +578,36 @@
 
 @section('js')
 <script>
-     const answers = [
-        'bring up', 
-        'look after', 
-        'fall out', 
-        'leaves out', 
-        'keeps on', 
-        'grow up', 
-        'dropped out', 
-        'put forward',
-        'cut down on', 
-        'taken over'
+    const answers = [
+        'Therefore', 
+        'so', 
+        'namely', 
+        'Another', 
+        'First of all', 
+        'such as', 
+        'What’s more,', 
+        'In conclusion,',
+        'since', 
+        'Furthermore,'
     ];
     let score = 0;
     $("#show-answer").hide(true);
 
     $('#check-answer').on('click', function() {
         
+        $('td u').each((idx, item) => {
+            $(item).parent().find('i').remove();
+            $(item).removeClass('border-success');
+            $(item).removeClass('border-danger');
+
+            if($(item).val() == answers[idx]) {
+                $('<i class="fas fa-check text-success mr-2 ml-2"></i>').insertAfter($(item));
+                score++;
+            } else {
+                $(`<span class="text-success mr-2 ml-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
+            }
+        })
+
         $('select').each((idx, item) => {
             $(item).parent().find('i').remove();
             $(item).removeClass('border-success');
@@ -567,11 +615,9 @@
 
             if($(item).val() == answers[idx]) {
                 $(item).addClass('border border-success');
-                $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
                 score++;
             } else {
                 $(item).addClass('border border-danger');
-                $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
             }
         })
 

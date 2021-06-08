@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
     .drag-container {
-        margin-bottom: 25px;
+        margin-bottom: 30px;
     }
 
     .grid-5 {
@@ -114,7 +114,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script>
     const answers = [
-        "bring up",
+        "take over",
         "bring up",
         "keep on",
         "drop out",
