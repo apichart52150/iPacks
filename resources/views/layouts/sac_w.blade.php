@@ -230,9 +230,6 @@
 
         <!-- Gallery Init-->
         <script src="{{ asset('public/assets/js/pages/gallery.init.js') }}"></script>
-               
-
-       
 
         <!-- init js -->
         <script src="{{ asset('public/assets/js/pages/dashboard-1.init.js') }}"></script>
