@@ -428,7 +428,7 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[2]}}</i> </dt>
                                 <dd class="col-sm-10">: stopped doing something
-                                    <p class="font-weight-bold mark">clues: : boring / so</p>
+                                    <p class="font-weight-bold mark">clues: boring / so</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q777[0]}}</dt>
@@ -457,7 +457,7 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
                                 <dd class="col-sm-10">: suggested a plan of action
-                                    <p class="font-weight-bold mark">clues: : no one / idea / until / the chairperson</p>
+                                    <p class="font-weight-bold mark">clues: no one / idea / until / the chairperson</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q888[1]}}</dt>

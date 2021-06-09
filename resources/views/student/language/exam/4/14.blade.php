@@ -335,7 +335,7 @@
                                 <dl class="row">
                                     <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[2]}}</i></dt>
                                     <dd class="col-sm-10">(coordinate conjunction): result for compound sentences
-                                        <p class="font-weight-bold mark">clues: : <u>s+v</u> + so + <u>s+v</u>.</p>
+                                        <p class="font-weight-bold mark">clues: <u>s+v</u> + so + <u>s+v</u>.</p>
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q222[0]}}</dt>
