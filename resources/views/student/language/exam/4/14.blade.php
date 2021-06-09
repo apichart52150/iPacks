@@ -3,6 +3,11 @@
     padding: .2em;
     background-color: #ffc107;
 }
+
+.mark, mark {
+    padding: .2em;
+    background-color: #ffc107;
+}
 </style>
 @php
     $q1 = "In countries which carry out the death sentence there is no perceived reduction in the number of serious crimes.";
@@ -279,19 +284,37 @@
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <dl class="row">
-                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[0]}}</i></dt>
-                                        <dd class="col-sm-10">: raise (children)
-                                            <p class="font-weight-bold mark">clues: children</p>
+                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[3]}}</i></dt>
+                                        <dd class="col-sm-10">(adverb): result
+                                            <ul class="list-unstyled mark font-weight-bold">
+                                                <li>
+                                                    clues:
+                                                </li>
+                                                <li>
+                                                    <ul>
+                                                        <li>
+                                                            death sentence = no perceived reduction
+                                                        </li>
+                                                        <li>
+                                                            capital punishment = not a deterrent to serious crime
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
                                         </dd>
                                     
+                                        <dt class="col-sm-2">{{$q111[0]}}</dt>
+                                        <dd class="col-sm-10">(adverb): contrast</dd>
+
                                         <dt class="col-sm-2">{{$q111[1]}}</dt>
-                                        <dd class="col-sm-10">: become adult</dd>
+                                        <dd class="col-sm-10">(subordinate conjunction): time and contrast 
+                                            <p class="font-weight-bold text-primary">clause + while + clause</p>
+                                        </dd>
 
                                         <dt class="col-sm-2">{{$q111[2]}}</dt>
-                                        <dd class="col-sm-10">: assume control of something e.g. a company</dd>
-
-                                        <dt class="col-sm-2">{{$q111[3]}}</dt>
-                                        <dd class="col-sm-10">: continue</dd>
+                                        <dd class="col-sm-10">(subordinate conjunction): cause
+                                            <p class="font-weight-bold text-primary">clause + since + clause</p>
+                                        </dd>
                                     </dl>
                                 </div>
                         </div>
@@ -310,19 +333,25 @@
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[3]}}</i></dt>
-                                    <dd class="col-sm-10">: take care of someon
-                                        <p class="font-weight-bold mark">clues: children / too much fast food</p>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[2]}}</i></dt>
+                                    <dd class="col-sm-10">(coordinate conjunction): result for compound sentences
+                                        <p class="font-weight-bold mark">clues: : <u>s+v</u> + so + <u>s+v</u>.</p>
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q222[0]}}</dt>
-                                    <dd class="col-sm-10">: become adult</dd>
+                                    <dd class="col-sm-10">(adverb): result 
+                                        <p class="font-weight-bold text-primary">s+v. Therefore, s+v.</p>
+                                    </dd>
 
                                     <dt class="col-sm-2">{{$q222[1]}}</dt>
-                                    <dd class="col-sm-10">: stop doing something e.g. leave school</dd>
+                                    <dd class="col-sm-10">(adverb): result
+                                        <p class="font-weight-bold text-primary">s+v. As a result, s+v.</p>
+                                    </dd>
 
-                                    <dt class="col-sm-2">{{$q222[2]}}</dt>
-                                    <dd class="col-sm-10">: suggest or state a plan of action</dd>
+                                    <dt class="col-sm-2">{{$q222[3]}}</dt>
+                                    <dd class="col-sm-10">(adverb): result
+                                        <p class="font-weight-bold text-primary">s+v. Consequently, s+v.</p>
+                                    </dd>
                                 </dl>
                             </div>
                         </div>
@@ -341,19 +370,19 @@
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[2]}}</i></dt>
-                                    <dd class="col-sm-10">: have an argument                               
-                                        <p class="font-weight-bold mark">clues: who should do the housework</p>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[0]}}</i></dt>
+                                    <dd class="col-sm-10">(adv) used when saying the names of things you are referring to                               
+                                        <p class="font-weight-bold mark">clues:  value for money / quality education</p>
                                     </dd>
 
-                                    <dt class="col-sm-2">{{$q333[0]}}</dt>
-                                    <dd class="col-sm-10">: assume control of something e.g. a company</dd>
-
                                     <dt class="col-sm-2">{{$q333[1]}}</dt>
-                                    <dd class="col-sm-10">: take care of someone</dd>
+                                    <dd class="col-sm-10">For example, s+v.</dd>
+
+                                    <dt class="col-sm-2">{{$q333[2]}}</dt>
+                                    <dd class="col-sm-10">The noun phrase doesn’t link the words.</dd>
 
                                     <dt class="col-sm-2">{{$q333[3]}}</dt>
-                                    <dd class="col-sm-10">: suggest a plan of action</dd>
+                                    <dd class="col-sm-10">The conjunction doesn’t come after a colon (:).</dd>
                                 </dl>
                             </div>
                         </div>
@@ -372,19 +401,19 @@
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
-                                    <dd class="col-sm-10">: omits something
-                                        <p class="font-weight-bold mark">clues: the reasons</p>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[1]}}</i></dt>
+                                    <dd class="col-sm-10">(determiner) Another thing
+                                        <p class="font-weight-bold mark">clues: reason (singular nc)</p>
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q444[0]}}</dt>
-                                    <dd class="col-sm-10">: reduces something</dd>
+                                    <dd class="col-sm-10">Other + nu / plural nc</dd>
 
-                                    <dt class="col-sm-2">{{$q444[1]}}</dt>
-                                    <dd class="col-sm-10">: continues doing something</dd>
+                                    <dt class="col-sm-2">{{$q444[2]}}</dt>
+                                    <dd class="col-sm-10">Further + nu / plural nc</dd>
 
                                     <dt class="col-sm-2">{{$q444[3]}}</dt>
-                                    <dd class="col-sm-10">: stops doing something </dd>
+                                    <dd class="col-sm-10">One + the first noun</dd>
                                 </dl>
                             </div>
                         </div>
@@ -403,19 +432,19 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[3]}}</i> </dt>
-                                <dd class="col-sm-10">: continues doing something  
-                                <p class="font-weight-bold mark">clues: trying / even / impossible</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[0]}}</i> </dt>
+                                <dd class="col-sm-10">(adv)  
+                                <p class="font-weight-bold mark">clues: First of all + s+v.</p>
                                 </dd>
 
-                                <dt class="col-sm-2">{{$q555[0]}}</dt>
-                                <dd class="col-sm-10">: takes care of something</dd>
-
                                 <dt class="col-sm-2">{{$q555[1]}}</dt>
-                                <dd class="col-sm-10">: stops doing something</dd>
+                                <dd class="col-sm-10">(noun)</dd>
 
                                 <dt class="col-sm-2">{{$q555[2]}}</dt>
-                                <dd class="col-sm-10">: suggests a plan of action</dd>
+                                <dd class="col-sm-10">(noun phrase)</dd>
+
+                                <dt class="col-sm-2">{{$q555[3]}}</dt>
+                                <dd class="col-sm-10">such as + noun phrase</dd>
                             </dl>
                         </div>
                     </div>
@@ -461,19 +490,20 @@
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[2]}}</i> </dt>
-                                <dd class="col-sm-10">: stopped doing something
-                                    <p class="font-weight-bold mark">clues: : boring / so</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}</i> </dt>
+                                <dd class="col-sm-10">: Additionally,
+                                </dd>
+
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[2]}}</i></dt>
+                                <dd class="col-sm-10">: Additionally,
+                                <p class="font-weight-bold mark">clues: such as + n, n and n</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q777[0]}}</dt>
-                                <dd class="col-sm-10">: suggested a plan of action </dd>
-
-                                <dt class="col-sm-2">{{$q777[1]}}</dt>
-                                <dd class="col-sm-10">: had an argument </dd>
+                                <dd class="col-sm-10">Ok but not the best answer --- <em>informal</em></dd>
 
                                 <dt class="col-sm-2">{{$q777[3]}}</dt>
-                                <dd class="col-sm-10">: assumed control of something</dd>
+                                <dd class="col-sm-10">used at the end of the sentence or clause used after the subject or adverb --- <em>formal</em></dd>
                             </dl>
                         </div>
                     </div>
@@ -491,18 +521,18 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
-                                <dd class="col-sm-10">: suggested a plan of action
-                                    <p class="font-weight-bold mark">clues: : no one / idea / until / the chairperson</p>
+                                <dd class="col-sm-10">
+                                    <p class="font-weight-bold mark">clues: In + noun</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10">: took care of someone</dd>
+                                <dd class="col-sm-10"> </dd>
 
                                 <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">: became adult</dd>
+                                <dd class="col-sm-10">To conclude</dd>
 
                                 <dt class="col-sm-2">{{$q888[3]}}</dt>
-                                <dd class="col-sm-10">: had an argument</dd>
+                                <dd class="col-sm-10">To summarise</dd>
                             </dl>
                         </div>
                     </div>
@@ -519,19 +549,19 @@
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[3]}}</i> </dt>
-                                <dd class="col-sm-10">: reduce something 
-                                    <p class="font-weight-bold mark">clues: cough / bad / the number of cigarettes</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[1]}}</i> </dt>
+                                <dd class="col-sm-10">used to suggest a reason (clause)
+                                    <p class="font-weight-bold mark">clues: should be prohibited / damage people’s health</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">: take care of someone</dd>
-
-                                <dt class="col-sm-2">{{$q999[1]}}</dt>
-                                <dd class="col-sm-10">: stop doing something</dd>
+                                <dd class="col-sm-10">used to suggest a reason <em>(noun phrase)</em></dd>
 
                                 <dt class="col-sm-2">{{$q999[2]}}</dt>
-                                <dd class="col-sm-10">: omit something </dd>
+                                <dd class="col-sm-10">contrast</dd>
+
+                                <dt class="col-sm-2">{{$q999[3]}}</dt>
+                                <dd class="col-sm-10">used to suggest a result</dd>
                             </dl>
                         </div>
                     </div>
@@ -548,19 +578,19 @@
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[0]}}</i></dt>
-                                <dd class="col-sm-10">: assumed control of something 
-                                    <p class="font-weight-bold mark">clues: by an international conglomerate</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[1]}}</i></dt>
+                                <dd class="col-sm-10"><strong>Additionally</strong>, s+v. 
+                                    <p class="font-weight-bold mark">clues: obesity / health problems</p>
                                 </dd>
 
-                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
-                                <dd class="col-sm-10">: suggested a plan of action</dd>
+                                <dt class="col-sm-2">{{$q1000[0]}}</dt>
+                                <dd class="col-sm-10">s+v <strong>so</strong> s+v.</dd>
 
                                 <dt class="col-sm-2">{{$q1000[2]}}</dt>
-                                <dd class="col-sm-10">: become adult </dd>
+                                <dd class="col-sm-10"><strong>Since</strong> s+v, s+v.</dd>
 
                                 <dt class="col-sm-2">{{$q1000[3]}}</dt>
-                                <dd class="col-sm-10">: reduced something</dd>
+                                <dd class="col-sm-10"><strong>While</strong> s+v, s+v.</dd>
                             </dl>
                         </div>
                     </div>
@@ -578,6 +608,7 @@
 
 @section('js')
 <script>
+    var answer7 = ["What's more,", "In addition,"];
     const answers = [
         'Therefore', 
         'so', 
@@ -585,47 +616,55 @@
         'Another', 
         'First of all', 
         'such as', 
-        'What’s more,', 
+        answer7, 
         'In conclusion,',
         'since', 
         'Furthermore,'
     ];
+    
     let score = 0;
+
     $("#show-answer").hide(true);
 
     $('#check-answer').on('click', function() {
-        
-        $('td u').each((idx, item) => {
-            $(item).parent().find('i').remove();
-            $(item).removeClass('border-success');
-            $(item).removeClass('border-danger');
-
-            if($(item).val() == answers[idx]) {
-                $('<i class="fas fa-check text-success mr-2 ml-2"></i>').insertAfter($(item));
-                score++;
-            } else {
-                $(`<span class="text-success mr-2 ml-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
-            }
-        })
-
+  
         $('select').each((idx, item) => {
             $(item).parent().find('i').remove();
             $(item).removeClass('border-success');
             $(item).removeClass('border-danger');
 
-            if($(item).val() == answers[idx]) {
-                $(item).addClass('border border-success');
-                score++;
-            } else {
-                $(item).addClass('border border-danger');
+            if(idx == 6){
+                if($(item).val() == answer7[0] || $(item).val() == answer7[1]) {
+                    $(item).addClass('border border-success');
+                    score++;
+                } else {
+                    $(item).addClass('border border-danger');
+                }
+                
+            }else{
+                if($(item).val() == answers[idx]) {
+                    $(item).addClass('border border-success');
+                    score++;
+                } else {
+                    $(item).addClass('border border-danger');
+                }
             }
         })
 
         $('a u').each((idx, item) => {
-            if($(item).val() == answers[idx]) {
+            if(idx == 6){
+                $(`<span class="text-success"><u>${answer7[0]} / ${answer7[1]}</u></span>`).insertAfter($(item));
+            }else{
                 $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
-            } else {
-                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
+            }
+        })
+
+              
+        $('td u').each((idx, item) => {
+            if(idx == 6){
+                $(`<span class="text-success mr-2 ml-2">${answer7[0]} / ${answer7[1]}</span>`).insertAfter($(item));
+            }else{
+                $(`<span class="text-success mr-2 ml-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
             }
         })
 

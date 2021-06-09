@@ -5,85 +5,85 @@
 }
 </style>
 @php
-    $q1 = "I believe schools should teach students how to";
-    $q11 = "children.";
+    $q1 = " ";
+    $q11 = "I agree that the punishment should fit the crime, I don't agree that the death penalty is an effective deterrent to serious crime.";
     $q111 = array(
-        'bring up',
-        'grow up',
-        'take over',
-        'keep on'
+        'However',
+        'Whereas',
+        'Yet',
+        'While'
     );
-    $q2 = "Many parents don't know how to";
-    $q22 = "children properly; for example, they let them eat too much fast food.";
+    $q2 = "I don't like cats ";
+    $q22 = "I don't think that people should be cruel to them.";
     $q222 = array(
-        'grow up',
-        'drop out',
-        'put forward',
-        'look after'
+        'however',
+        'although',
+        'while',
+        'even though'
     );
-    $q3 = "Married couples sometimes";
-    $q33 = "over who should do the housework. They need to decide on that before they get married.";
+    $q3 = "There was a steady rise until 1990;";
+    $q33 = ", after that the trend was downward.";
     $q333 = array(
-        'look after',
-        'take over',
-        'fall out',
-        'put forward'
+        'however',
+        'while',
+        'whereas',
+        'but'
     );
-    $q4 = "This report";
-    $q44 = "the reasons for the dramatic rise in population.";
+    $q4 = " ";
+    $q44 = "the general trend was positive, there were some periods of instability.";
     $q444 = array(
-        'cuts down on',
-        'keeps on',
-        'leaves out',
-        'drops out'
+        'Even',
+        'Whereas',
+        'Although',
+        'But'
     );
-    $q5 = "A successful business person";
-    $q55 = "trying even when something seems impossible.";
+    $q5 = "In 2005 there were serious floods.";
+    $q55 = ", the following year saw a terrible drought.";
     $q555 = array(
-        'looks after',
-        'drops out',
-        'puts forward',
-        'keeps on'
+        'Although',
+        'While',
+        'In contrast',
+        'Whereas'
     );
-    $q6 = "He is behaving so immaturely. He really needs to";
-    $q66 = ".";
+    $q6 = "Last year's figures showed a decrease";
+    $q66 = "the figures for this year have so far been in positive territory.";
     $q666 = array(
-        'leave out',
-        'grow up',
-        'fall out',
-        'take over'
+        'whereas',
+        'however',
+        'in contrast',
+        'since'
     );
-    $q7 = "The course was quite boring and so many students";
-    $q77 = ".";
+    $q7 = " ";
+    $q77 = "the total revenue grew by more than 10%, the total number of vehicles sold dropped by 5%.";
     $q777 = array(
-        'fell out',
-        'took over',
-        'dropped out',
-        'put forward'
+        'Even',
+        'Although',
+        'But',
+        'However'
     );
-    $q8 = "No one had any ideas out how to solve the problem until the chair-person";
-    $q88 = "this suggestion.";
+    $q8 = " ";
+    $q88 = "he learnt to speak French very well, he didn't enjoy his time studying in Paris.";
     $q888 = array(
-        'put forward',
-        'looked after',
-        'grew up',
-        'fell out'
+        'Even though',
+        'Even',
+        'However',
+        'But'
     );
-    $q9 = "My cough is getting really bad. I really should";
-    $q99 = "the number of cigarettes each day.";
+    $q9 = "He's been living in the same apartment for twenty years";
+    $q99 = "he doesn't particularly like the area.";
     $q999 = array(
-        'look after',
-        'drop out',
-        'leave out',
-        'cut down on'
+        'while',
+        'however',
+        'whereas',
+        'yet'
     );
-    $q10 = "The hospital has recetnly been";
-    $q100 = "by an international conglomerate.";
+    $q10 = "I wouldn't do your job ";
+    $q100 = "you gave me a million dollars.";
     $q1000 = array(
-        'taken over',
-        'put forward',
-        'grown up',
-        'cut down on'
+        'although',
+        'even though',
+        'even if',
+        'while'
     );
 @endphp
 <div class="row">
@@ -244,19 +244,19 @@
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <dl class="row">
-                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[0]}}</i></dt>
-                                        <dd class="col-sm-10">: raise (children)
-                                            <p class="font-weight-bold mark">clues: children</p>
-                                        </dd>
+                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[3]}}</i></dt>
+                                        <dd class="col-sm-10"><strong>While</strong> + s+v, s+v.</dd>
                                     
-                                        <dt class="col-sm-2">{{$q111[1]}}</dt>
-                                        <dd class="col-sm-10">: become adult</dd>
+                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[1]}}</i></dt>
+                                        <dd class="col-sm-10"><strong>Whereas</strong> + s+v, s+v.
+                                            <p class="font-weight-bold mark">clues: I agree..., I don't agree...</p>
+                                        </dd>
 
                                         <dt class="col-sm-2">{{$q111[2]}}</dt>
-                                        <dd class="col-sm-10">: assume control of something e.g. a company</dd>
+                                        <dd class="col-sm-10">s+v <strong>yet</strong> s+v.</dd>
 
-                                        <dt class="col-sm-2">{{$q111[3]}}</dt>
-                                        <dd class="col-sm-10">: continue</dd>
+                                        <dt class="col-sm-2">{{$q111[0]}}</dt>
+                                        <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
                                     </dl>
                                 </div>
                         </div>
@@ -275,19 +275,33 @@
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[3]}}</i></dt>
-                                    <dd class="col-sm-10">: take care of someon
-                                        <p class="font-weight-bold mark">clues: children / too much fast food</p>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[1]}}</i></dt>
+                                    <dd class="col-sm-10">used to introduce a statement that makes the main statement seem surprising
+                                        <ul class="list-unstyled mark">
+                                            <li>
+                                                <strong>clues:</strong>
+                                            </li>
+                                            <li>
+                                                <ul>
+                                                    <li>
+                                                    s+v <strong>although</strong> s+v.
+                                                    </li>
+                                                    <li>
+                                                    I don't like cats... .I don't think...
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q222[0]}}</dt>
-                                    <dd class="col-sm-10">: become adult</dd>
-
-                                    <dt class="col-sm-2">{{$q222[1]}}</dt>
-                                    <dd class="col-sm-10">: stop doing something e.g. leave school</dd>
+                                    <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
 
                                     <dt class="col-sm-2">{{$q222[2]}}</dt>
-                                    <dd class="col-sm-10">: suggest or state a plan of action</dd>
+                                    <dd class="col-sm-10">s+v <strong>while</strong> s+v.</dd>
+
+                                    <dt class="col-sm-2">{{$q222[3]}}</dt>
+                                    <dd class="col-sm-10">s+v, <strong>even though</strong> s+v.</dd>
                                 </dl>
                             </div>
                         </div>
@@ -306,19 +320,32 @@
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[2]}}</i></dt>
-                                    <dd class="col-sm-10">: have an argument                               
-                                        <p class="font-weight-bold mark">clues: who should do the housework</p>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[0]}}</i></dt>
+                                    <dd class="col-sm-10">used to add a different piece of information                               
+                                        <ul class="list-unstyled mark">
+                                            <li>
+                                                <strong>clues:</strong>
+                                            </li>
+                                            <li>
+                                            <ul>
+                                                <li>
+                                                    s+v; <strong>however</strong>, s+v.
+                                                </li>
+                                                <li>
+                                                    a steady rise / downward
+                                                </li>
+                                            </ul>
+                                        </ul>
                                     </dd>
 
-                                    <dt class="col-sm-2">{{$q333[0]}}</dt>
-                                    <dd class="col-sm-10">: assume control of something e.g. a company</dd>
-
                                     <dt class="col-sm-2">{{$q333[1]}}</dt>
-                                    <dd class="col-sm-10">: take care of someone</dd>
+                                    <dd class="col-sm-10">s+v <strong>while</strong> s+v.</dd>
+
+                                    <dt class="col-sm-2">{{$q333[2]}}</dt>
+                                    <dd class="col-sm-10">s+v <strong>whereas</strong> s+v.</dd>
 
                                     <dt class="col-sm-2">{{$q333[3]}}</dt>
-                                    <dd class="col-sm-10">: suggest a plan of action</dd>
+                                    <dd class="col-sm-10">s+v <strong>but</strong> s+v.</dd>
                                 </dl>
                             </div>
                         </div>
@@ -338,18 +365,18 @@
                             <div class="card-body">
                                 <dl class="row">
                                     <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
-                                    <dd class="col-sm-10">: omits something
-                                        <p class="font-weight-bold mark">clues: the reasons</p>
+                                    <dd class="col-sm-10">used to introduce a statement that makes the main statement seem surprising 
+                                        <p class="font-weight-bold mark">clues: <strong>Although</strong> s+v, s+v.</p>
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q444[0]}}</dt>
-                                    <dd class="col-sm-10">: reduces something</dd>
+                                    <dd class="col-sm-10">(adv) used to emphasize something surprising. It doesn’t link two clauses.</dd>
 
                                     <dt class="col-sm-2">{{$q444[1]}}</dt>
-                                    <dd class="col-sm-10">: continues doing something</dd>
+                                    <dd class="col-sm-10">Used to say that although something is true of one thing, it is not true of another <br><strong>Whereas</strong> s+v, s+v.</dd>
 
                                     <dt class="col-sm-2">{{$q444[3]}}</dt>
-                                    <dd class="col-sm-10">: stops doing something </dd>
+                                    <dd class="col-sm-10">: s+v <strong>but</strong> s+v.</dd>
                                 </dl>
                             </div>
                         </div>
@@ -368,19 +395,19 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[3]}}</i> </dt>
-                                <dd class="col-sm-10">: continues doing something  
-                                <p class="font-weight-bold mark">clues: trying / even / impossible</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[2]}}</i> </dt>
+                                <dd class="col-sm-10">used to say that something is different from another 
+                                <p class="font-weight-bold mark">clues: s+v. <strong>In contrast</strong>, s+v.</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q555[0]}}</dt>
-                                <dd class="col-sm-10">: takes care of something</dd>
+                                <dd class="col-sm-10">s+v <strong>although</strong> s+v.</dd>
 
                                 <dt class="col-sm-2">{{$q555[1]}}</dt>
-                                <dd class="col-sm-10">: stops doing something</dd>
+                                <dd class="col-sm-10">s+v <strong>while</strong> s+v. </dd>
 
-                                <dt class="col-sm-2">{{$q555[2]}}</dt>
-                                <dd class="col-sm-10">: suggests a plan of action</dd>
+                                <dt class="col-sm-2">{{$q555[3]}}</dt>
+                                <dd class="col-sm-10">used to say that although something is true of one thing, it is not true of another <br><strong>Whereas</strong> s+v, s+v. </dd>
                             </dl>
                         </div>
                     </div>
@@ -397,19 +424,32 @@
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[1]}}</i></dt>
-                                <dd class="col-sm-10">: become adult
-                                    <p class="font-weight-bold mark">clues: immaturely</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[0]}}</i></dt>
+                                <dd class="col-sm-10">used to say that although something is true of one thing, it is not true of another
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                        <ul>
+                                            <li>
+                                                s+v <strong>whereas</strong> s+v. 
+                                            </li>
+                                            <li>
+                                                a decrease / positive territory
+                                            </li>
+                                        </ul>
+                                    </ul>
                                 </dd>
 
-                                <dt class="col-sm-2">{{$q666[0]}}</dt>
-                                <dd class="col-sm-10">: omit something</dd>
+                                <dt class="col-sm-2">{{$q666[1]}}</dt>
+                                <dd class="col-sm-10">s+v. In <strong>contrast</strong>, s+v.</dd>
 
                                 <dt class="col-sm-2">{{$q666[2]}}</dt>
-                                <dd class="col-sm-10">: have an argument</dd>
+                                <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
 
                                 <dt class="col-sm-2">{{$q666[3]}}</dt>
-                                <dd class="col-sm-10">: assume control of something</dd>
+                                <dd class="col-sm-10">used to suggest a reason <br>s+v <strong>since</strong> s+v.</dd>
                             </dl>
                         </div>
                     </div>
@@ -426,19 +466,19 @@
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[2]}}</i> </dt>
-                                <dd class="col-sm-10">: stopped doing something
-                                    <p class="font-weight-bold mark">clues: : boring / so</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}</i> </dt>
+                                <dd class="col-sm-10">used to introduce a statement that makes another statement seem surprising 
+                                    <p class="font-weight-bold mark">clues: <strong>Although</strong> s+v, s+v.</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q777[0]}}</dt>
-                                <dd class="col-sm-10">: suggested a plan of action </dd>
+                                <dd class="col-sm-10">(adv) used to emphasize something surprising. It doesn’t link two clauses.</dd>
 
-                                <dt class="col-sm-2">{{$q777[1]}}</dt>
-                                <dd class="col-sm-10">: had an argument </dd>
+                                <dt class="col-sm-2">{{$q777[2]}}</dt>
+                                <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
 
                                 <dt class="col-sm-2">{{$q777[3]}}</dt>
-                                <dd class="col-sm-10">: assumed control of something</dd>
+                                <dd class="col-sm-10">s+v <strong>but</strong> s+v.</dd>
                             </dl>
                         </div>
                     </div>
@@ -456,18 +496,18 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
-                                <dd class="col-sm-10">: suggested a plan of action
-                                    <p class="font-weight-bold mark">clues: : no one / idea / until / the chairperson</p>
+                                <dd class="col-sm-10">used to emphasize that something is true although something else is true
+                                    <p class="font-weight-bold mark">clues: <strong>Even though </strong> s+v, s+v.</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10">: took care of someone</dd>
+                                <dd class="col-sm-10">(adv) used to emphasize something surprising. It doesn’t link  two clauses.</dd>
 
                                 <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">: became adult</dd>
+                                <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
 
                                 <dt class="col-sm-2">{{$q888[3]}}</dt>
-                                <dd class="col-sm-10">: had an argument</dd>
+                                <dd class="col-sm-10">s+v <strong>but</strong> s+v.</dd>
                             </dl>
                         </div>
                     </div>
@@ -485,18 +525,31 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[3]}}</i> </dt>
-                                <dd class="col-sm-10">: reduce something 
-                                    <p class="font-weight-bold mark">clues: cough / bad / the number of cigarettes</p>
+                                <dd class="col-sm-10">used to introduce a surprising fact after what you have just said  
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                        <ul>
+                                            <li>
+                                                s+v <strong>yet</strong> s+v.
+                                            </li>
+                                            <li>
+                                                twenty years / doesn't particularly like
+                                            </li>
+                                        </ul>
+                                    </ul>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">: take care of someone</dd>
+                                <dd class="col-sm-10">used to emphasize the difference between two situations</dd>
 
                                 <dt class="col-sm-2">{{$q999[1]}}</dt>
-                                <dd class="col-sm-10">: stop doing something</dd>
+                                <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
 
                                 <dt class="col-sm-2">{{$q999[2]}}</dt>
-                                <dd class="col-sm-10">: omit something </dd>
+                                <dd class="col-sm-10">used to say that although something is true of one thing, it is not true of another </dd>
                             </dl>
                         </div>
                     </div>
@@ -513,19 +566,32 @@
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[0]}}</i></dt>
-                                <dd class="col-sm-10">: assumed control of something 
-                                    <p class="font-weight-bold mark">clues: by an international conglomerate</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[2]}}</i></dt>
+                                <dd class="col-sm-10">used to emphasize that something is still true although another thing happens  
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                        <ul>
+                                            <li>
+                                                s+v <strong>even if</strong> s+v.
+                                            </li>
+                                            <li>
+                                                s + wouldn't + v infinitive + <strong>even if</strong> + s +v past simple <br> I + wouldn’t + do... <strong>even</strong> if + you + gave... .
+                                            </li>
+                                        </ul>
+                                    </ul>
                                 </dd>
 
-                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
-                                <dd class="col-sm-10">: suggested a plan of action</dd>
+                                <dt class="col-sm-2">{{$q1000[0]}}</dt>
+                                <dd class="col-sm-10">used to introduce a statement that makes another statement seem surprisin</dd>
 
-                                <dt class="col-sm-2">{{$q1000[2]}}</dt>
-                                <dd class="col-sm-10">: become adult </dd>
+                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
+                                <dd class="col-sm-10">used to emphasize that something is true although something else is true</dd>
 
                                 <dt class="col-sm-2">{{$q1000[3]}}</dt>
-                                <dd class="col-sm-10">: reduced something</dd>
+                                <dd class="col-sm-10">used to emphasize the difference between two situations</dd>
                             </dl>
                         </div>
                     </div>
@@ -543,17 +609,18 @@
 
 @section('js')
 <script>
-     const answers = [
-        'bring up', 
-        'look after', 
-        'fall out', 
-        'leaves out', 
-        'keeps on', 
-        'grow up', 
-        'dropped out', 
-        'put forward',
-        'cut down on', 
-        'taken over'
+    var answer1 = ['While', 'Whereas'];
+    const answers = [
+        answer1, 
+        'although', 
+        'however', 
+        'Although', 
+        'In contrast', 
+        'whereas', 
+        'Although', 
+        'Even though',
+        'yet', 
+        'even if'
     ];
     let score = 0;
     $("#show-answer").hide(true);
@@ -565,20 +632,31 @@
             $(item).removeClass('border-success');
             $(item).removeClass('border-danger');
 
-            if($(item).val() == answers[idx]) {
-                $(item).addClass('border border-success');
-                $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
-                score++;
-            } else {
-                $(item).addClass('border border-danger');
-                $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
+            if(idx == 0){
+                if($(item).val() == answer1[0] || $(item).val() == answer1[1]) {
+                    $(item).addClass('border border-success');
+                    $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
+                    score++;
+                } else {
+                    $(item).addClass('border border-danger');
+                    $(`<span class="text-success mr-2 ml-2">${answer1[0]} / ${answer1[1]}</span>`).insertAfter($(item));
+                }
+            }else{
+                if($(item).val() == answers[idx]) {
+                    $(item).addClass('border border-success');
+                    $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
+                    score++;
+                } else {
+                    $(item).addClass('border border-danger');
+                    $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
+                }
             }
         })
 
         $('a u').each((idx, item) => {
-            if($(item).val() == answers[idx]) {
-                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
-            } else {
+            if(idx == 0){
+                $(`<span class="text-success"><u>${answer1[0]} / ${answer1[1]}</u></span>`).insertAfter($(item));
+            }else{
                 $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
             }
         })
