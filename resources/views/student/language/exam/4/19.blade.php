@@ -446,18 +446,13 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[2]}}</i></dt>
-                                <dd class="col-sm-10">beware of something   
-                                    <p class="font-weight-bold mark">clues: collapse soon</p>
-                                </dd>
+                                <dd class="col-sm-10"><p class="font-weight-bold mark">clues: collapse soon</p></dd>
 
-                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
-                                <dd class="col-sm-10">take control of something</dd>
+                                <dt class="col-sm-2">Vocabulary</dt>
+                                <dd class="col-sm-10"></dd>
 
-                                <dt class="col-sm-2">{{$q1000[2]}}</dt>
-                                <dd class="col-sm-10">start to talk about a particular subject</dd>
-
-                                <dt class="col-sm-2">{{$q1000[3]}}</dt>
-                                <dd class="col-sm-10">give something each person in a group</dd>
+                                <dt class="col-sm-2">snail mail</dt>
+                                <dd class="col-sm-10">(n) the system of sending letters by post, as opposed to using email --- <em>used humorously</em></dd>
                             </dl>
                         </div>
                     </div>
