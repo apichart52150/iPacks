@@ -399,17 +399,17 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[3]}}</i></dt>
                                 <dd class="col-sm-10">to repair or decorate / to fasten / to wrap
-                                    <p class="font-weight-bold mark">clues: my time at school</p>
+                                    <p class="font-weight-bold mark">clues: shabby</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q666[0]}}</dt>
-                                <dd class="col-sm-10">shabby</dd>
-
-                                <dt class="col-sm-2">{{$q666[1]}}</dt>
                                 <dd class="col-sm-10">to compensate for something bad with something good</dd>
 
-                                <dt class="col-sm-2">{{$q666[2]}}</dt>
+                                <dt class="col-sm-2">{{$q666[1]}}</dt>
                                 <dd class="col-sm-10">to write all the necessary information on an official document</dd>
+
+                                <dt class="col-sm-2">{{$q666[2]}}</dt>
+                                <dd class="col-sm-10">to save an amount of money to use later</dd>
                             </dl>
                         </div>
                     </div>
@@ -432,19 +432,19 @@
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q777[0]}}</dt>
-                                <dd class="col-sm-10">to tolerate, to be patient with</dd>
-
-                                <dt class="col-sm-2">{{$q777[2]}}</dt>
                                 <dd class="col-sm-10">to form a particular thing, amount or number as a whole</dd>
 
-                                <dt class="col-sm-2">{{$q777[3]}}</dt>
+                                <dt class="col-sm-2">{{$q777[2]}}</dt>
                                 <dd class="col-sm-10">to repair or decorate / to fasten / to wrap</dd>
+
+                                <dt class="col-sm-2">{{$q777[3]}}</dt>
+                                <dd class="col-sm-10">to tolerate, to be patient with</dd>
                             </dl>
                         </div>
                     </div>
                 </div><!-- 7 -->
 
-                <div class="card mb-1" >
+                <div class="card mb-1">
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
@@ -486,7 +486,7 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[1]}}</i> </dt>
                                 <dd class="col-sm-10">to compensate for something bad with something good 
-                                    <p class="font-weight-bold mark">clues: noise / awful / afraid</p>
+                                    <p class="font-weight-bold mark">clues: close / lost time</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q999[0]}}</dt>
@@ -522,10 +522,10 @@
                                 <dd class="col-sm-10">repairing or decorating / fastening / wrapping</dd>
 
                                 <dt class="col-sm-2">{{$q1000[2]}}</dt>
-                                <dd class="col-sm-10">saving an amount of money to use later</dd>
+                                <dd class="col-sm-10">managing to come to the end of a difficult experience</dd>
 
                                 <dt class="col-sm-2">{{$q1000[3]}}</dt>
-                                <dd class="col-sm-10">managing to come to the end of a difficult experience</dd>
+                                <dd class="col-sm-10">saving an amount of money to use later</dd>
                             </dl>
                         </div>
                     </div>

@@ -104,7 +104,7 @@
                 What do we call a man who has two wives?
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="a happy">a happy</option>
+                    <option value="a happy">a happy man</option>
                     <option value="misogynist">misogynist</option>
                     <option value="bachelor">bachelor</option>
                     <option value="bigamist">bigamist</option>

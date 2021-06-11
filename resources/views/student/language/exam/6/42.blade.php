@@ -351,7 +351,7 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[2]}}</i></dt>
                                 <dd class="col-sm-10">(adj): in danger of being harmed or lost
-                                 <br><mark><strong>clues: the rainforest animals / to pass law to protect them</strong></mark></dd>
+                                 <br><mark><strong>clues: the rainforest animals / to pass laws to protect them</strong></mark></dd>
 
                                 <dt class="col-sm-2">{{$q666[0]}}</dt>
                                 <dd class="col-sm-10">(nc): the possibility of harm or death to someone</dd>
@@ -400,7 +400,7 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
-                                <dd class="col-sm-10">(nc): people who are paid to work fot someone else
+                                <dd class="col-sm-10">(nc): people who are paid to work for someone else
                                     <ul class="list-unstyled mark font-weight-bold">
                                         <li>
                                             clues:
@@ -408,7 +408,7 @@
                                         <li>
                                             <ul>
                                                 <li>
-                                                    that + <u>subject relative pronoun</u> + v
+                                                    that + <u>subject pronoun</u> + v
                                                 </li>
                                                 <li>
                                                     that + <u>employees</u> + can carry out
@@ -417,13 +417,14 @@
                                         </li>
                                     </ul>
                                 </dd>
-
                                 <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10">(vt): had someone do a job for you and paid them for it employment</dd>
+                                <dd class="col-sm-10">(vt): had someone do a job for you and paid them for it</dd>
 
                                 <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">(nu): work that you are paid to do for a company carry out <br> (phrasal verb): to conduct, to do a job
-                                </dd>
+                                <dd class="col-sm-10">(nu): work that you are paid to do for a company <br> (phrasal verb): to conduct, to do a job</dd>
+
+                                <dt class="col-sm-2">carry out</dt>
+                                <dd class="col-sm-10">(phrasal verb): to conduct, to do a job</dd>
                             </dl>
                         </div>
                     </div>

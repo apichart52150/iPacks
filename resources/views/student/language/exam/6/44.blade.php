@@ -69,7 +69,7 @@
         'come across',
         'call off'
     );
-    $q9 = "He is a role model for all young people. People everwhere";
+    $q9 = "He is a role model for all young people. People everywhere";
     $q99 = "him.";
     $q999 = array(
         'come across',
@@ -455,7 +455,7 @@
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
                                 <dd class="col-sm-10">to occur, to happen
-                                    <p class="font-weight-bold mark">clues: can’t... any longer / important decisions</p>
+                                    <p class="font-weight-bold mark">clues: as scheduled / no one opted out</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q888[1]}}</dt>

@@ -22,7 +22,7 @@
         'look into'
     );
     $q3 = "People from a higher social status tend to";
-    $q33 = "capital punishment.";
+    $q33 = "working class people.";
     $q333 = array(
         'look up',
         'look down on',
@@ -30,7 +30,7 @@
         'look out'
     );
     $q4 = "The company tried to";
-    $q44 = "its main rival but its offer was rejected";
+    $q44 = "its main rival but its offer was rejected.";
     $q444 = array(
         'take over',
         'hand out',
@@ -49,7 +49,7 @@
     $q66 = "new legislation to control illegal deforestation.";
     $q666 = array(
         'look up',
-        'look down ont',
+        'look down on',
         'bring in',
         'bring down'
     );
@@ -281,10 +281,10 @@
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q222[0]}}</dt>
-                                    <dd class="col-sm-10">to find something</dd>
+                                    <dd class="col-sm-10">to think that you are better than someone else</dd>
 
                                     <dt class="col-sm-2">{{$q222[1]}}</dt>
-                                    <dd class="col-sm-10">to think that you are better than someone else</dd>
+                                    <dd class="col-sm-10">to find something</dd>
 
                                     <dt class="col-sm-2">{{$q222[2]}}</dt>
                                     <dd class="col-sm-10">to search for and find a particular thing among your possessions / to beware of something</dd>
@@ -343,13 +343,13 @@
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q444[1]}}</dt>
-                                    <dd class="col-sm-10">to find something</dd>
+                                    <dd class="col-sm-10">to give something to each person in a group or place</dd>
 
                                     <dt class="col-sm-2">{{$q444[2]}}</dt>
                                     <dd class="col-sm-10">to cause someone to lose power</dd>
 
                                     <dt class="col-sm-2">{{$q444[3]}}</dt>
-                                    <dd class="col-sm-10">to give something to each person in a group or place</dd>
+                                    <dd class="col-sm-10">to find something</dd>
                                 </dl>
                             </div>
                         </div>
@@ -370,7 +370,7 @@
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[1]}}</i> </dt>
                                 <dd class="col-sm-10">to submit something 
-                                <p class="font-weight-bold mark">clues: rival</p>
+                                    <p class="font-weight-bold mark">clues: the homework before the next lesson</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q555[0]}}</dt>
@@ -403,10 +403,10 @@
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q666[0]}}</dt>
-                                <dd class="col-sm-10">to think that you are better than someone else</dd>
+                                <dd class="col-sm-10">to find something</dd>
 
                                 <dt class="col-sm-2">{{$q666[1]}}</dt>
-                                <dd class="col-sm-10">to find something</dd>
+                                <dd class="col-sm-10">to think that you are better than someone else</dd>
 
                                 <dt class="col-sm-2">{{$q666[3]}}</dt>
                                 <dd class="col-sm-10">to cause someone to lose power</dd>
@@ -461,7 +461,7 @@
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q888[0]}}</dt>
-                                <dd class="col-sm-10">submitted somethin</dd>
+                                <dd class="col-sm-10">submitted something</dd>
 
                                 <dt class="col-sm-2">{{$q888[1]}}</dt>
                                 <dd class="col-sm-10">found something</dd>
@@ -485,18 +485,18 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[2]}}</i> </dt>
-                                <dd class="col-sm-10">to find it 
+                                <dd class="col-sm-10">find it 
                                     <p class="font-weight-bold mark">clues:  the meaning / on the internet</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">to introduce it</dd>
+                                <dd class="col-sm-10">take control of it</dd>
 
                                 <dt class="col-sm-2">{{$q999[1]}}</dt>
-                                <dd class="col-sm-10">to take control of it</dd>
+                                <dd class="col-sm-10">introduce it</dd>
 
                                 <dt class="col-sm-2">{{$q999[3]}}</dt>
-                                <dd class="col-sm-10">to think you are better than it</dd>
+                                <dd class="col-sm-10">think you are better than it</dd>
                             </dl>
                         </div>
                     </div>
