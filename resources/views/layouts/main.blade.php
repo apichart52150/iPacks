@@ -18,6 +18,14 @@
         <link href="{{ asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('public/assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
 
+        <!-- Plugins css-->
+        <link href="{{ asset('public/assets/libs/bootstrap-tagsinput/bootstrap-tagsinput.css') }}" rel="stylesheet" />
+        <link href="{{ asset('public/assets/libs/switchery/switchery.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/libs/multiselect/multi-select.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/libs/select2/select2.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/libs/bootstrap-select/bootstrap-select.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css') }}" rel="stylesheet" />
+
         <!-- Custom box css -->
         <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
         @yield('css')
@@ -205,6 +213,19 @@
 
         <!-- App js -->
         <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
+
+          <!-- Plugins Js -->
+        <script src="{{ asset('public/assets/libs/bootstrap-tagsinput/bootstrap-tagsinput.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/switchery/switchery.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/multiselect/jquery.multi-select.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/jquery-quicksearch/jquery.quicksearch.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/select2/select2.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/bootstrap-select/bootstrap-select.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/jquery-mask-plugin/jquery.mask.min.js') }}"></script>
+
+         <!-- init js -->
+         <script src="{{ asset('public/assets/js/pages/form-advanced.init.js') }}"></script>
 
         <script>
             $('input[type="text"]').attr({

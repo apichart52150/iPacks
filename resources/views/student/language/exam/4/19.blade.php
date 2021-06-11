@@ -272,18 +272,7 @@
                                 <div class="card-body">
                                     <dl class="row">
                                         <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[1]}}</i></dt>
-                                        <dd class="col-sm-10">to cause someone to lose power
-                                            <p class="font-weight-bold mark">clues: concerned / corruption / the people / the government</p>
-                                        </dd>
-                                    
-                                        <dt class="col-sm-2">{{$q111[0]}}</dt>
-                                        <dd class="col-sm-10">to start to talk about a particular subject</dd>
-
-                                        <dt class="col-sm-2">{{$q111[2]}}</dt>
-                                        <dd class="col-sm-10">to give something to each person in a group or place</dd>
-
-                                        <dt class="col-sm-2">{{$q111[3]}}</dt>
-                                        <dd class="col-sm-10">to give something to someone else</dd>
+                                        <dd class="col-sm-10"><p class="font-weight-bold mark">clues: clues: spend + money + on something</p></dd>
                                     </dl>
                                 </div>
                         </div>
@@ -303,18 +292,7 @@
                             <div class="card-body">
                                 <dl class="row">
                                     <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[3]}}</i></dt>
-                                    <dd class="col-sm-10">to try to find out about a problem in order to solve it
-                                        <p class="font-weight-bold mark">clues: police / transaction / bribery</p>
-                                    </dd>
-
-                                    <dt class="col-sm-2">{{$q222[0]}}</dt>
-                                    <dd class="col-sm-10">to think that you are better than someone else</dd>
-
-                                    <dt class="col-sm-2">{{$q222[1]}}</dt>
-                                    <dd class="col-sm-10">to find something</dd>
-
-                                    <dt class="col-sm-2">{{$q222[2]}}</dt>
-                                    <dd class="col-sm-10">to search for and find a particular thing among your possessions / to beware of something</dd>
+                                    <dd class="col-sm-10"><p class="font-weight-bold mark">clues: clues: in + year</p></dd>
                                 </dl>
                             </div>
                         </div>
@@ -333,19 +311,8 @@
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[1]}}</i></dt>
-                                    <dd class="col-sm-10"> to think that you are better than someone else                              
-                                        <p class="font-weight-bold mark">clues: higher social status / working class people</p>
-                                    </dd>
-
-                                    <dt class="col-sm-2">{{$q333[0]}}</dt>
-                                    <dd class="col-sm-10">to find something</dd>
-
-                                    <dt class="col-sm-2">{{$q333[2]}}</dt>
-                                    <dd class="col-sm-10">to try to find out about a problem in order to solve it</dd>
-
-                                    <dt class="col-sm-2">{{$q333[3]}}</dt>
-                                    <dd class="col-sm-10">to search for and find a particular thing among your possessions / to beware of something</dd>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[0]}}</i></dt>
+                                    <dd class="col-sm-10"><p class="font-weight-bold mark">clues: <u>between</u> year1 <u>and</u> year2 </p></dd>
                                 </dl>
                             </div>
                         </div>
@@ -364,19 +331,8 @@
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[0]}}</i></dt>
-                                    <dd class="col-sm-10">to replace someone or something
-                                        <p class="font-weight-bold mark">clues: rival</p>
-                                    </dd>
-
-                                    <dt class="col-sm-2">{{$q444[1]}}</dt>
-                                    <dd class="col-sm-10">to give something to each person in a group or place</dd>
-
-                                    <dt class="col-sm-2">{{$q444[2]}}</dt>
-                                    <dd class="col-sm-10">to cause someone to lose power</dd>
-
-                                    <dt class="col-sm-2">{{$q444[3]}}</dt>
-                                    <dd class="col-sm-10">to find something</dd>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[1]}}</i></dt>
+                                    <dd class="col-sm-10"><p class="font-weight-bold mark">clues: <u>from</u> something <u>to</u> another </p></dd>
                                 </dl>
                             </div>
                         </div>
@@ -394,20 +350,8 @@
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[1]}}</i> </dt>
-                                <dd class="col-sm-10">to submit something 
-                                    <p class="font-weight-bold mark">clues: the homework before the next lesson</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q555[0]}}</dt>
-                                <dd class="col-sm-10">to give something to each person in a group or place</dd>
-
-                                <dt class="col-sm-2">{{$q555[2]}}</dt>
-                                <dd class="col-sm-10">to find something</dd>
-
-                                <dt class="col-sm-2">{{$q555[3]}}</dt>
-                                <dd class="col-sm-10">to start to talk about a particular subject</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[0]}}</i> </dt>
+                                <dd class="col-sm-10"><p class="font-weight-bold mark">clues: <u>at</u> + 6%</p></dd>
                             </dl>
                         </div>
                     </div>
@@ -417,7 +361,7 @@
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                6. {{$q6}} <u></u> {{$q66}}
+                                6. {{$q6}} <u></u> {{$q6_6}} <u></u> {{$q66}}
                             </a>
                         </h5>
                     </div>
@@ -429,14 +373,6 @@
                                     <p class="font-weight-bold mark">clues: new legislation</p>
                                 </dd>
 
-                                <dt class="col-sm-2">{{$q666[0]}}</dt>
-                                <dd class="col-sm-10">to find something</dd>
-
-                                <dt class="col-sm-2">{{$q666[1]}}</dt>
-                                <dd class="col-sm-10">to think that you are better than someone else</dd>
-
-                                <dt class="col-sm-2">{{$q666[3]}}</dt>
-                                <dd class="col-sm-10">to cause someone to lose power</dd>
                             </dl>
                         </div>
                     </div>
@@ -453,19 +389,8 @@
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[0]}}</i> </dt>
-                                <dd class="col-sm-10">to raise someone  
-                                    <p class="font-weight-bold mark">clues: way to / children</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q777[1]}}</dt>
-                                <dd class="col-sm-10">to cause someone to lose power</dd>
-
-                                <dt class="col-sm-2">{{$q777[2]}}</dt>
-                                <dd class="col-sm-10">to replace someone or something</dd>
-
-                                <dt class="col-sm-2">{{$q777[3]}}</dt>
-                                <dd class="col-sm-10">to search for and find a particular thing among your possessions / to beware of something</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}</i> </dt>
+                                <dd class="col-sm-10"><p class="font-weight-bold mark">clues: depends + <u>on</u></p></dd>
                             </dl>
                         </div>
                     </div>
@@ -483,18 +408,7 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[3]}}</i> </dt>
-                                <dd class="col-sm-10">gave something to each person in a place
-                                    <p class="font-weight-bold mark">clues: homework task</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q888[0]}}</dt>
-                                <dd class="col-sm-10">submitted something</dd>
-
-                                <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10">found something</dd>
-
-                                <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">searched for and find a particular thing among your possessions / bewared of something</dd>
+                                <dd class="col-sm-10"><p class="font-weight-bold mark">clues: <u>prevented</u> someone + <u>from</u> doing something</p></dd>
                             </dl>
                         </div>
                     </div>
@@ -504,26 +418,17 @@
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                9. {{$q9}} <u></u> {{$q99}}
+                                9. {{$q9}} <u></u> {{$q9_9}} <u></u> {{$q99}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[2]}}</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[0]}}</i> </dt>
                                 <dd class="col-sm-10">find it 
                                     <p class="font-weight-bold mark">clues:  the meaning / on the internet</p>
                                 </dd>
-
-                                <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">take control of it</dd>
-
-                                <dt class="col-sm-2">{{$q999[1]}}</dt>
-                                <dd class="col-sm-10">introduce it</dd>
-
-                                <dt class="col-sm-2">{{$q999[3]}}</dt>
-                                <dd class="col-sm-10">think you are better than it</dd>
                             </dl>
                         </div>
                     </div>
@@ -533,14 +438,14 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10. {{$q10}} <u></u> {{$q100}}
+                            10. {{$q10}} <u></u> {{$q10_0}} <u></u> {{$q100}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[0]}}</i></dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[2]}}</i></dt>
                                 <dd class="col-sm-10">beware of something   
                                     <p class="font-weight-bold mark">clues: collapse soon</p>
                                 </dd>
@@ -570,33 +475,25 @@
 
 @section('js')
 <script>
-    var answer6 =['in','of'];
-    var answer9 =['in','of'];
-    var answer10 =['of','of'];
-
     const answers = [
         'on', 
         'in', 
         'between', 
         'from', 
         'at', 
-        answer6, 
+        'in',
+        'of',
         'on', 
         'from',
-        answer9, 
-        answer10
+        'in',
+        'of', 
+        'of',
+        'of'
     ];
-
     let score = 0;
     $("#show-answer").hide(true);
-
     $('#check-answer').on('click', function() {
-        
         $('select').each((idx, item) => {
-            $(item).parent().find('i').remove();
-            $(item).removeClass('border-success');
-            $(item).removeClass('border-danger');
-
             if($(item).val() == answers[idx]) {
                 $(item).addClass('border border-success');
                 $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
