@@ -61,7 +61,7 @@
         'dropped out',
         'put forward'
     );
-    $q8 = "No one had any ideas on how to solve the problem until the chairperson";
+    $q8 = "No one had any ideas out how to solve the problem until the chair-person";
     $q88 = "this suggestion.";
     $q888 = array(
         'put forward',
@@ -77,7 +77,7 @@
         'leave out',
         'cut down on'
     );
-    $q10 = "The hospital has recently been";
+    $q10 = "The hospital has recetnly been";
     $q100 = "by an international conglomerate.";
     $q1000 = array(
         'taken over',
@@ -312,10 +312,10 @@
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q333[0]}}</dt>
-                                    <dd class="col-sm-10">: take care of someone</dd>
+                                    <dd class="col-sm-10">: assume control of something e.g. a company</dd>
 
                                     <dt class="col-sm-2">{{$q333[1]}}</dt>
-                                    <dd class="col-sm-10">: assume control of something e.g. a company</dd>
+                                    <dd class="col-sm-10">: take care of someone</dd>
 
                                     <dt class="col-sm-2">{{$q333[3]}}</dt>
                                     <dd class="col-sm-10">: suggest a plan of action</dd>
@@ -432,13 +432,13 @@
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q777[0]}}</dt>
-                                <dd class="col-sm-10">: had an argument</dd>
+                                <dd class="col-sm-10">: suggested a plan of action </dd>
 
                                 <dt class="col-sm-2">{{$q777[1]}}</dt>
-                                <dd class="col-sm-10">: assumed control of something</dd>
+                                <dd class="col-sm-10">: had an argument </dd>
 
                                 <dt class="col-sm-2">{{$q777[3]}}</dt>
-                                <dd class="col-sm-10">: suggested a plan of action</dd>
+                                <dd class="col-sm-10">: assumed control of something</dd>
                             </dl>
                         </div>
                     </div>
