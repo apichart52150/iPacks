@@ -369,10 +369,29 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[2]}}</i></dt>
-                                <dd class="col-sm-10">to introduce a new law
-                                    <p class="font-weight-bold mark">clues: new legislation</p>
+                                <dd class="col-sm-10">
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <strong><u>a</u></strong> significant <strong><u>fall</u></strong> + <strong><u>in</u></strong>
+                                                </li>
+                                                <li>
+                                                    the sales + <strong><u>of</u></strong> + new cars
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </dd>
 
+                                <dt class="col-sm-2">Vocabulary</dt>
+                                <dd class="col-sm-10"></dd>
+
+                                <dt class="col-sm-2">recession</dt>
+                                <dd class="col-sm-10">(n) a difficult time when there is less trade than</dd>
                             </dl>
                         </div>
                     </div>
@@ -426,8 +445,22 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[0]}}</i> </dt>
-                                <dd class="col-sm-10">find it 
-                                    <p class="font-weight-bold mark">clues:  the meaning / on the internet</p>
+                                <dd class="col-sm-10">
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    a substantial <strong><u>growth</u></strong> + <strong><u>in</u></strong>
+                                                </li>
+                                                <li>
+                                                    the number <strong><u>of</u></strong> something
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </dd>
                             </dl>
                         </div>
@@ -446,7 +479,23 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[2]}}</i></dt>
-                                <dd class="col-sm-10"><p class="font-weight-bold mark">clues: collapse soon</p></dd>
+                                <dd class="col-sm-10">
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <strong>the vast majority</strong> + <strong><u>of</u></strong> something
+                                                </li>
+                                                <li>
+                                                    the difficulties <strong><u>of</u></strong> something
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </dd>
 
                                 <dt class="col-sm-2">Vocabulary</dt>
                                 <dd class="col-sm-10"></dd>
