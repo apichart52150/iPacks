@@ -5,85 +5,85 @@
 }
 </style>
 @php
-    $q1 = "I believe schools should teach students how to";
-    $q11 = "children.";
+    $q1 = "There";
+    $q11 = "a lot of developments in technology in the last few decades.";
     $q111 = array(
-        'bring up',
-        'grow up',
-        'take over',
-        'keep on'
+        'has been',
+        'have been',
+        'was',
+        'were'
     );
-    $q2 = "Many parents don't know how to";
-    $q22 = "children properly; for example, they let them eat too much fast food.";
+    $q2 = "In Singapore";
+    $q22 = "many skyscrapers and condominiums because there is not much space available.";
     $q222 = array(
-        'grow up',
-        'drop out',
-        'put forward',
-        'look after'
+        'has',
+        'have',
+        'there is',
+        'there are'
     );
-    $q3 = "Married couples sometimes";
-    $q33 = "over who should do the housework. They need to decide on that before they get married.";
+    $q3 = "Thailand";
+    $q33 = "a large number of places of historical interest.";
     $q333 = array(
-        'look after',
-        'take over',
-        'fall out',
-        'put forward'
+        'has',
+        'have',
+        'is',
+        'are'
     );
-    $q4 = "This report";
-    $q44 = "the reasons for the dramatic rise in population.";
+    $q4 = "Between 2000 and 2005 there";
+    $q44 = "a sharp decrease in the number of new homes constructed.";
     $q444 = array(
-        'cuts down on',
-        'keeps on',
-        'leaves out',
-        'drops out'
+        'is',
+        'are',
+        'was',
+        'were'
     );
-    $q5 = "A successful business person";
-    $q55 = "trying even when something seems impossible.";
+    $q5 = "In my opinion, cannabis should";
+    $q55 = "decriminalized.";
     $q555 = array(
-        'looks after',
-        'drops out',
-        'puts forward',
-        'keeps on'
+        'be',
+        'being',
+        'have',
+        'been'
     );
-    $q6 = "He is behaving so immaturely. He really needs to";
-    $q66 = ".";
+    $q6 = "In the next 20 years the sales of new vehicles is";
+    $q66 = "to fall significantly.";
     $q666 = array(
-        'leave out',
-        'grow up',
-        'fall out',
-        'take over'
+        'expecting',
+        'might',
+        'having',
+        'expected'
     );
-    $q7 = "The course was quite boring and so many students";
-    $q77 = ".";
+    $q7 = "During the final decade, the birth-rate";
+    $q77 = "significantly.";
     $q777 = array(
-        'fell out',
-        'took over',
-        'dropped out',
-        'put forward'
+        'fell',
+        'was falling',
+        'fall',
+        'felt'
     );
-    $q8 = "No one had any ideas out how to solve the problem until the chair-person";
-    $q88 = "this suggestion.";
+    $q8 = "With the exception of Asia, investment";
+    $q88 = "in all regions in the last few months.";
     $q888 = array(
-        'put forward',
-        'looked after',
-        'grew up',
-        'fell out'
+        'was decreasing',
+        'decreases',
+        'decreased',
+        'has decreased'
     );
-    $q9 = "My cough is getting really bad. I really should";
-    $q99 = "the number of cigarettes each day.";
+    $q9 = "Statistics";
+    $q99 = "that the mortality rate slowed during the final quarter of last year.";
     $q999 = array(
-        'look after',
-        'drop out',
-        'leave out',
-        'cut down on'
+        'show',
+        'shows',
+        'is showing',
+        'are showing'
     );
-    $q10 = "The hospital has recetnly been";
-    $q100 = "by an international conglomerate.";
+    $q10 = "By the end of last century, smallpox ";
+    $q100 = "eradicated from the world.";
     $q1000 = array(
-        'taken over',
-        'put forward',
-        'grown up',
-        'cut down on'
+        'was being',
+        'has been',
+        'had been',
+        'have been'
     );
 @endphp
 <div class="row">
@@ -244,19 +244,33 @@
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <dl class="row">
-                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[0]}}</i></dt>
-                                        <dd class="col-sm-10">: raise (children)
-                                            <p class="font-weight-bold mark">clues: children</p>
+                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[1]}}</i></dt>
+                                        <dd class="col-sm-10"> plural / present perfect
+                                            <ul class="list-unstyled mark">
+                                                <li>
+                                                    clues:
+                                                </li>
+                                                <li>
+                                                    <ul>
+                                                        <li>
+                                                        present perfect tense + <strong>in the last</strong> few = decades
+                                                        </li>
+                                                        <li>
+                                                        There + <strong><u>have been</u></strong> + plural noun
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
                                         </dd>
                                     
-                                        <dt class="col-sm-2">{{$q111[1]}}</dt>
-                                        <dd class="col-sm-10">: become adult</dd>
+                                        <dt class="col-sm-2">{{$q111[0]}}</dt>
+                                        <dd class="col-sm-10"> singular / present perfect </dd>
 
                                         <dt class="col-sm-2">{{$q111[2]}}</dt>
-                                        <dd class="col-sm-10">: assume control of something e.g. a company</dd>
+                                        <dd class="col-sm-10"> singular / past simple</dd>
 
                                         <dt class="col-sm-2">{{$q111[3]}}</dt>
-                                        <dd class="col-sm-10">: continue</dd>
+                                        <dd class="col-sm-10"> plural / past simple</dd>
                                     </dl>
                                 </div>
                         </div>
@@ -276,18 +290,18 @@
                             <div class="card-body">
                                 <dl class="row">
                                     <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[3]}}</i></dt>
-                                    <dd class="col-sm-10">: take care of someon
-                                        <p class="font-weight-bold mark">clues: children / too much fast food</p>
+                                    <dd class="col-sm-10"> plural / present simple
+                                        <p class="mark">clues: <strong>there are</strong> + plural noun</p>
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q222[0]}}</dt>
-                                    <dd class="col-sm-10">: become adult</dd>
+                                    <dd class="col-sm-10"> Singular subject + has</dd>
 
                                     <dt class="col-sm-2">{{$q222[1]}}</dt>
-                                    <dd class="col-sm-10">: stop doing something e.g. leave school</dd>
+                                    <dd class="col-sm-10"> Plural subject + have</dd>
 
                                     <dt class="col-sm-2">{{$q222[2]}}</dt>
-                                    <dd class="col-sm-10">: suggest or state a plan of action</dd>
+                                    <dd class="col-sm-10"> there is + singular noun</dd>
                                 </dl>
                             </div>
                         </div>
@@ -306,19 +320,19 @@
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[2]}}</i></dt>
-                                    <dd class="col-sm-10">: have an argument                               
-                                        <p class="font-weight-bold mark">clues: who should do the housework</p>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[0]}}</i></dt>
+                                    <dd class="col-sm-10"> singular / present simple                             
+                                        <p class="mark">clues:  <strong>Thailand</strong> + singular verb</p>
                                     </dd>
 
-                                    <dt class="col-sm-2">{{$q333[0]}}</dt>
-                                    <dd class="col-sm-10">: assume control of something e.g. a company</dd>
-
                                     <dt class="col-sm-2">{{$q333[1]}}</dt>
-                                    <dd class="col-sm-10">: take care of someone</dd>
+                                    <dd class="col-sm-10"> plural subject + have</dd>
+
+                                    <dt class="col-sm-2">{{$q333[2]}}</dt>
+                                    <dd class="col-sm-10"> plural subject + are</dd>
 
                                     <dt class="col-sm-2">{{$q333[3]}}</dt>
-                                    <dd class="col-sm-10">: suggest a plan of action</dd>
+                                    <dd class="col-sm-10"> singular subject + is</dd>
                                 </dl>
                             </div>
                         </div>
@@ -337,19 +351,19 @@
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
-                                    <dd class="col-sm-10">: omits something
-                                        <p class="font-weight-bold mark">clues: the reasons</p>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[3]}}</i></dt>
+                                    <dd class="col-sm-10"> plural / past simple
+                                        <p class="mark">clues: between 2000 and 2005</p>
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q444[0]}}</dt>
-                                    <dd class="col-sm-10">: reduces something</dd>
+                                    <dd class="col-sm-10"> singular subject + is</dd>
 
                                     <dt class="col-sm-2">{{$q444[1]}}</dt>
-                                    <dd class="col-sm-10">: continues doing something</dd>
+                                    <dd class="col-sm-10"> plural subject + are</dd>
 
-                                    <dt class="col-sm-2">{{$q444[3]}}</dt>
-                                    <dd class="col-sm-10">: stops doing something </dd>
+                                    <dt class="col-sm-2">{{$q444[2]}}</dt>
+                                    <dd class="col-sm-10"> singular subject + was</dd>
                                 </dl>
                             </div>
                         </div>
@@ -368,19 +382,33 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[3]}}</i> </dt>
-                                <dd class="col-sm-10">: continues doing something  
-                                <p class="font-weight-bold mark">clues: trying / even / impossible</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[0]}}</i> </dt>
+                                <dd class="col-sm-10"> infinitive  
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            clues:
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                should + <strong>be</strong> + v past participle (passive voice) 
+                                                </li>
+                                                <li>
+                                                should + <strong>be</strong> + decriminalized   
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </dd>
 
-                                <dt class="col-sm-2">{{$q555[0]}}</dt>
-                                <dd class="col-sm-10">: takes care of something</dd>
-
                                 <dt class="col-sm-2">{{$q555[1]}}</dt>
-                                <dd class="col-sm-10">: stops doing something</dd>
+                                <dd class="col-sm-10"> present participle</dd>
 
                                 <dt class="col-sm-2">{{$q555[2]}}</dt>
-                                <dd class="col-sm-10">: suggests a plan of action</dd>
+                                <dd class="col-sm-10"> infinitive</dd>
+
+                                <dt class="col-sm-2">{{$q555[3]}}</dt>
+                                <dd class="col-sm-10"> past participle of <em>"be"</em></dd>
                             </dl>
                         </div>
                     </div>
@@ -397,19 +425,33 @@
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[1]}}</i></dt>
-                                <dd class="col-sm-10">: become adult
-                                    <p class="font-weight-bold mark">clues: immaturely</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[3]}}</i></dt>
+                                <dd class="col-sm-10"> (vt) past participle of <em>"expect"</em>
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            clues:
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                subject + is + <strong>vt past participle</strong> (passive voice)
+                                                </li>
+                                                <li>
+                                                the sales of new vehicles + is + <strong>expected</strong>
+                                                </li>
+                                                <li>
+                                                subject + vt + object (active voice)  
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q666[0]}}</dt>
-                                <dd class="col-sm-10">: omit something</dd>
+                                <dd class="col-sm-10"> past participle of <em>"expect"</em></dd>
 
-                                <dt class="col-sm-2">{{$q666[2]}}</dt>
-                                <dd class="col-sm-10">: have an argument</dd>
-
-                                <dt class="col-sm-2">{{$q666[3]}}</dt>
-                                <dd class="col-sm-10">: assume control of something</dd>
+                                <dt class="col-sm-2">{{$q666[1]}}</dt>
+                                <dd class="col-sm-10"> modal verb</dd>
                             </dl>
                         </div>
                     </div>
@@ -426,19 +468,19 @@
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[2]}}</i> </dt>
-                                <dd class="col-sm-10">: stopped doing something
-                                    <p class="font-weight-bold mark">clues: boring / so</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[0]}}</i> </dt>
+                                <dd class="col-sm-10"> (vt) past simple <em>"fall"</em> 
+                                    <p class="mark">clues: during the final decade + <strong>subject + past simple verb</strong></p>
                                 </dd>
 
-                                <dt class="col-sm-2">{{$q777[0]}}</dt>
-                                <dd class="col-sm-10">: suggested a plan of action </dd>
-
                                 <dt class="col-sm-2">{{$q777[1]}}</dt>
-                                <dd class="col-sm-10">: had an argument </dd>
+                                <dd class="col-sm-10">past continuous of <em>"fall"</em> </dd>
+
+                                <dt class="col-sm-2">{{$q777[2]}}</dt>
+                                <dd class="col-sm-10">infinitive</dd>
 
                                 <dt class="col-sm-2">{{$q777[3]}}</dt>
-                                <dd class="col-sm-10">: assumed control of something</dd>
+                                <dd class="col-sm-10">past simple and past participle of <em>"feel"</em></dd>
                             </dl>
                         </div>
                     </div>
@@ -455,19 +497,19 @@
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
-                                <dd class="col-sm-10">: suggested a plan of action
-                                    <p class="font-weight-bold mark">clues: no one / idea / until / the chairperson</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[3]}}</i> </dt>
+                                <dd class="col-sm-10">singular / present perfect 
+                                    <p class="mark">clues: present perfect + <strong><u>in the last</u></strong> few months</p>
                                 </dd>
 
+                                <dt class="col-sm-2">{{$q888[0]}}</dt>
+                                <dd class="col-sm-10">past continuous</dd>
+
                                 <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10">: took care of someone</dd>
+                                <dd class="col-sm-10">present simple</dd>
 
                                 <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">: became adult</dd>
-
-                                <dt class="col-sm-2">{{$q888[3]}}</dt>
-                                <dd class="col-sm-10">: had an argument</dd>
+                                <dd class="col-sm-10">past simple</dd>
                             </dl>
                         </div>
                     </div>
@@ -484,19 +526,19 @@
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[3]}}</i> </dt>
-                                <dd class="col-sm-10">: reduce something 
-                                    <p class="font-weight-bold mark">clues: cough / bad / the number of cigarettes</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[0]}}</i> </dt>
+                                <dd class="col-sm-10">plural / present simple 
+                                    <p class="mark">clues: Statistics + <strong><u>plural verb</u></strong></p>
                                 </dd>
 
-                                <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">: take care of someone</dd>
-
                                 <dt class="col-sm-2">{{$q999[1]}}</dt>
-                                <dd class="col-sm-10">: stop doing something</dd>
+                                <dd class="col-sm-10">singular / present simple</dd>
 
                                 <dt class="col-sm-2">{{$q999[2]}}</dt>
-                                <dd class="col-sm-10">: omit something </dd>
+                                <dd class="col-sm-10">singular / present continuous</dd>
+
+                                <dt class="col-sm-2">{{$q999[3]}}</dt>
+                                <dd class="col-sm-10">plural / present continuous</dd>
                             </dl>
                         </div>
                     </div>
@@ -513,19 +555,36 @@
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[0]}}</i></dt>
-                                <dd class="col-sm-10">: assumed control of something 
-                                    <p class="font-weight-bold mark">clues: by an international conglomerate</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[2]}}</i></dt>
+                                <dd class="col-sm-10">past perfect /passive voice 
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            clues:
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                had been + <strong><u>v past participle</u></strong> = had been + <strong><u>eradicated</u></strong>
+                                                </li>
+                                                <li>
+                                                by the end of last century = past perfect time expression
+                                                </li>
+                                                <li>
+                                                subject + vt + object (active voice)  
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </dd>
 
-                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
-                                <dd class="col-sm-10">: suggested a plan of action</dd>
+                                <dt class="col-sm-2">{{$q1000[0]}}</dt>
+                                <dd class="col-sm-10">singular / past continuous</dd>
 
-                                <dt class="col-sm-2">{{$q1000[2]}}</dt>
-                                <dd class="col-sm-10">: become adult </dd>
+                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
+                                <dd class="col-sm-10">singular / present perfect</dd>
 
                                 <dt class="col-sm-2">{{$q1000[3]}}</dt>
-                                <dd class="col-sm-10">: reduced something</dd>
+                                <dd class="col-sm-10">plural / present perfect</dd>
                             </dl>
                         </div>
                     </div>
@@ -544,16 +603,16 @@
 @section('js')
 <script>
      const answers = [
-        'bring up', 
-        'look after', 
-        'fall out', 
-        'leaves out', 
-        'keeps on', 
-        'grow up', 
-        'dropped out', 
-        'put forward',
-        'cut down on', 
-        'taken over'
+        'have been', 
+        'there are', 
+        'has', 
+        'were', 
+        'be', 
+        'expected', 
+        'fell', 
+        'has decreased',
+        'show', 
+        'had been'
     ];
     let score = 0;
     $("#show-answer").hide(true);
@@ -561,10 +620,6 @@
     $('#check-answer').on('click', function() {
         
         $('select').each((idx, item) => {
-            $(item).parent().find('i').remove();
-            $(item).removeClass('border-success');
-            $(item).removeClass('border-danger');
-
             if($(item).val() == answers[idx]) {
                 $(item).addClass('border border-success');
                 $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
