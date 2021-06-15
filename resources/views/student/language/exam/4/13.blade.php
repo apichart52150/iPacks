@@ -10,258 +10,238 @@
 }
 </style>
 @php
-    $q1 = "In countries which carry out the death sentence there is no perceived reduction in the number of serious crimes.";
-    $q11 = ", it seems that capital punishment is not a deterrent to serious crime.";
+    $q1 = "The diagram";
+    $q11 = "how the Australian weather department gathers and processes information which it uses to predict the weather.";
     $q111 = array(
-        'Even though',
-        'While',
-        'Since',
-        'Therefore'
+        'show',
+        'shows',
+        'showing',
+        'showed'
     );
-    $q2 = "There is ice on the runway ";
-    $q22 = "it looks like the flight will be delayed.";
+    $q2 = "Details of weather";
+    $q22 = "gathered through the use of satellites in space, radar on land and buoys floating on the sea.";
     $q222 = array(
-        'therefore',
-        'as a result',
-        'so',
-        'consequently'
+        'is',
+        'is being',
+        'are',
+        'are being'
     );
-    $q3 = "There are two reasons for choosing to study abroad:";
-    $q33 = ", value for money and quality education.";
+    $q3 = "Once the weather forecast";
+    $q33 = "produced, the broadcast is prepared.";
     $q333 = array(
-        'namely',
-        'for example',
-        'one illustration',
-        'both'
+        'is being',
+        'have been',
+        'has been',
+        'was'
     );
-    $q4 = "Better communication is one reason for choosing to migrate to urban areas.";
-    $q44 = "reason is better education possibilities.";
+    $q4 = "It is clear that, while there are a few similarities between the two bicycles, there";
+    $q44 = "also significant differences in design";
     $q444 = array(
-        'Other',
-        'Another',
-        'Further',
-        'One'
+        'is',
+        'was',
+        'are',
+        'were'
     );
-    $q5 = "There are a number of causes of global warming.";
-    $q55 = "illegal logging reduces the earth's capacity to absorb carbon dioxide.";
+    $q5 = "Overall, the changes in design of the bicycle";
+    $q55 = "the need for speed, safety and comfort.";
     $q555 = array(
-        'First of all',
-        'Example',
-        'One reason',
-        'such as'
+        'reflect',
+        'reflects',
+        'reflecting',
+        'are reflecting'
     );
-    $q6 = "There are many causes of juvenile crime";
-    $q66 = "boredom, poverty and drug abuse.";
+    $q6 = "The diagram shows how the sun’s energy is trapped by greenhouse gases,";
+    $q66 = "in the phenomenon known as 'global warming'.";
     $q666 = array(
-        'examples',
-        'such as',
-        'like',
-        'such'
+        'result',
+        'results',
+        'is resulting',
+        'resulting'
     );
-    $q7 = "One reason for urban migration is improved public transportation facilities. ";
-    $q77 = "better schooling and more job opportunities attract poor people to the city areas.";
+    $q7 = "Energy from the sun";
+    $q7_7 = "the earth,";
+    $q77 = "up the surface.";
     $q777 = array(
-        'Also',
-        "What's more,",
-        'In addition,',
-        'Too,'
+        'reacht',
+        "reaches",
+        'reach',
+        'heating'
     );
-    $q8 = " ";
-    $q88 = "all the above reasons show that banning the sale of alcohol does not result in fewer alcohol-related problems.";
+    $q77_7 = array(
+        'heat',
+        "heats",
+        'heating',
+        'reaches'
+    );
+    $q8 = "Trees absorb carbon dioxide, so if the number of trees";
+    $q88 = ", the levels of carbon dioxide in the atmosphere will increase.";
     $q888 = array(
-        'In conclusion,',
-        'In conclude,',
-        'To conclusion,',
-        'To summary,'
+        'reduce',
+        'reduces',
+        'is reducing',
+        'is reduced'
     );
-    $q9 = "Smoking in public should be prohibited";
-    $q99 = "even passive smoking can damage people's health.";
+    $q9 = "Overall, it is apparent that human activity";
+    $q99 = "an important role in this natural process.";
     $q999 = array(
-        'because of',
-        'since',
-        'while',
-        'so'
+        'play',
+        'plays',
+        'playing',
+        'is played'
     );
-    $q10 = "Too much fast food can lead to obesity.";
-    $q100 = "it can cause a number of health problems.";
+    $q10 = "Between 1868 and 1883 the village was relatively small and";
+    $q100 = "along the main road.";
     $q1000 = array(
-        'So',
-        'Furthermore,',
-        'grown up,',
-        'While,'
+        'is located',
+        'locating',
+        'was locating',
+        'was located'
     );
 @endphp
 <div class="row">
     <div class="col-xl-12 col-md-12">
-        <div class="card-box text-dark font-16">
+    <div class="card-box text-dark font-16">
             <p class="lead">
                 {{$pageTitle['topic']}}
             </p>
+            
+            <div class="d-flex align-items-center mb-2">
+                <span class="font-weight-bold mr-2">1.</span>
+                {{$q1}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q111[0]}}">{{$q111[0]}}</option>
+                    <option value="{{$q111[1]}}">{{$q111[1]}}</option>
+                    <option value="{{$q111[2]}}">{{$q111[2]}}</option>
+                    <option value="{{$q111[3]}}">{{$q111[3]}}</option>
+                </select>
+                {{$q11}}
+            </div>
+            
+            <div class="d-flex align-items-center mb-2">
+                <span class="font-weight-bold mr-2">2.</span>
+                {{$q2}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q222[0]}}">{{$q222[0]}}</option>
+                    <option value="{{$q222[1]}}">{{$q222[1]}}</option>
+                    <option value="{{$q222[2]}}">{{$q222[2]}}</option>
+                    <option value="{{$q222[3]}}">{{$q222[3]}}</option>
+                </select>
+                {{$q22}}
+            </div>
+            
+            <div class="d-flex align-items-center mb-2">
+                <span class="font-weight-bold mr-2">3.</span>
+                {{$q3}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q333[0]}}">{{$q333[0]}}</option>
+                    <option value="{{$q333[1]}}">{{$q333[1]}}</option>
+                    <option value="{{$q333[2]}}">{{$q333[2]}}</option>
+                    <option value="{{$q333[3]}}">{{$q333[3]}}</option>
+                </select>
+                {{$q33}}
+            </div>
 
-            <table class="table table-sm table-bordered text-dark">
-                <thead>
-                    <tr class="text-center">
-                        <th class="font-weight-bold">Qustion</th>
-                        <th class="font-weight-bold">Answer</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                        <span class="font-weight-bold mr-2">1.</span>
-                        {{$q1}} _____<u></u>_____ {{$q11}}</td>
-                        <td>
-                            <select class="form-control w-auto">
-                                <option value="">-Select-</option>
-                                <option value="{{$q111[0]}}">{{$q111[0]}}</option>
-                                <option value="{{$q111[1]}}">{{$q111[1]}}</option>
-                                <option value="{{$q111[2]}}">{{$q111[2]}}</option>
-                                <option value="{{$q111[3]}}">{{$q111[3]}}</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="font-weight-bold mr-2">2.</span>
-                            {{$q2}} _____<u></u>_____ {{$q22}}
-                        </td>
-                        <td>
-                            <select class="form-control w-auto">
-                                <option value="">-Select-</option>
-                                <option value="{{$q222[0]}}">{{$q222[0]}}</option>
-                                <option value="{{$q222[1]}}">{{$q222[1]}}</option>
-                                <option value="{{$q222[2]}}">{{$q222[2]}}</option>
-                                <option value="{{$q222[3]}}">{{$q222[3]}}</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="font-weight-bold mr-2">3.</span>
-                            {{$q3}} _____<u></u>_____ {{$q33}}
-                        </td>
-                        <td>
-                            <select class="form-control w-auto">
-                                <option value="">-Select-</option>
-                                <option value="{{$q333[0]}}">{{$q333[0]}}</option>
-                                <option value="{{$q333[1]}}">{{$q333[1]}}</option>
-                                <option value="{{$q333[2]}}">{{$q333[2]}}</option>
-                                <option value="{{$q333[3]}}">{{$q333[3]}}</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="font-weight-bold mr-2">4.</span>
-                            {{$q4}} _____<u></u>_____ {{$q44}}
-                        </td>
-                        <td>
-                            <select class="form-control w-auto">
-                                <option value="">-Select-</option>
-                                <option value="{{$q444[0]}}">{{$q444[0]}}</option>
-                                <option value="{{$q444[1]}}">{{$q444[1]}}</option>
-                                <option value="{{$q444[2]}}">{{$q444[2]}}</option>
-                                <option value="{{$q444[3]}}">{{$q444[3]}}</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="font-weight-bold mr-2">5.</span>
-                            {{$q5}} _____<u></u>_____ {{$q55}}
-                        </td>
-                        <td>
-                            <select class="form-control w-auto">
-                                <option value="">-Select-</option>
-                                <option value="{{$q555[0]}}">{{$q555[0]}}</option>
-                                <option value="{{$q555[1]}}">{{$q555[1]}}</option>
-                                <option value="{{$q555[2]}}">{{$q555[2]}}</option>
-                                <option value="{{$q555[3]}}">{{$q555[3]}}</option>
-                            </select>
-                        </td>
-                    </tr>
+            <div class="d-flex align-items-center mb-2">
+                <span class="font-weight-bold mr-2">4.</span>
+                {{$q4}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q444[0]}}">{{$q444[0]}}</option>
+                    <option value="{{$q444[1]}}">{{$q444[1]}}</option>
+                    <option value="{{$q444[2]}}">{{$q444[2]}}</option>
+                    <option value="{{$q444[3]}}">{{$q444[3]}}</option>
+                </select>
+                {{$q44}}
+            </div>
 
-                    <tr>
-                        <td>
-                            <span class="font-weight-bold mr-2">6.</span>
-                            {{$q6}} _____<u></u>_____ {{$q66}}
-                        </td>
-                        <td>
-                            <select class="form-control w-auto">
-                                <option value="">-Select-</option>
-                                <option value="{{$q666[0]}}">{{$q666[0]}}</option>
-                                <option value="{{$q666[1]}}">{{$q666[1]}}</option>
-                                <option value="{{$q666[2]}}">{{$q666[2]}}</option>
-                                <option value="{{$q666[3]}}">{{$q666[3]}}</option>
-                            </select>
-                        </td>
-                    </tr>
+            <div class="d-flex align-items-center mb-2">
+                <span class="font-weight-bold mr-2">5.</span>
+                {{$q5}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q555[0]}}">{{$q555[0]}}</option>
+                    <option value="{{$q555[1]}}">{{$q555[1]}}</option>
+                    <option value="{{$q555[2]}}">{{$q555[2]}}</option>
+                    <option value="{{$q555[3]}}">{{$q555[3]}}</option>
+                </select>
+                {{$q55}}
+            </div>
 
-                    <tr>
-                        <td>
-                            <span class="font-weight-bold mr-2">7.</span>
-                            {{$q7}} _____<u></u>_____ {{$q77}}
-                        </td>
-                        <td>
-                            <select class="form-control w-auto">
-                                <option value="">-Select-</option>
-                                <option value="{{$q777[0]}}">{{$q777[0]}}</option>
-                                <option value="{{$q777[1]}}">{{$q777[1]}}</option>
-                                <option value="{{$q777[2]}}">{{$q777[2]}}</option>
-                                <option value="{{$q777[3]}}">{{$q777[3]}}</option>
-                            </select>
-                        </td>
-                    </tr>
+            <div class="d-flex align-items-center mb-2">
+                <span class="font-weight-bold mr-2">6.</span>
+                {{$q6}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q666[0]}}">{{$q666[0]}}</option>
+                    <option value="{{$q666[1]}}">{{$q666[1]}}</option>
+                    <option value="{{$q666[2]}}">{{$q666[2]}}</option>
+                    <option value="{{$q666[3]}}">{{$q666[3]}}</option>
+                </select>
+                {{$q66}}
+            </div>
 
-                    <tr>
-                        <td>
-                            <span class="font-weight-bold mr-2">8.</span>
-                            {{$q8}} _____<u></u>_____ {{$q88}}
-                        </td>
-                        <td>
-                            <select class="form-control w-auto">
-                                <option value="">-Select-</option>
-                                <option value="{{$q888[0]}}">{{$q888[0]}}</option>
-                                <option value="{{$q888[1]}}">{{$q888[1]}}</option>
-                                <option value="{{$q888[2]}}">{{$q888[2]}}</option>
-                                <option value="{{$q888[3]}}">{{$q888[3]}}</option>
-                            </select>
-                        </td>
-                    </tr>
+            <div class="d-flex align-items-center mb-2">
+                <span class="font-weight-bold mr-2">7.</span>
+                {{$q7}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q777[0]}}">{{$q777[0]}}</option>
+                    <option value="{{$q777[1]}}">{{$q777[1]}}</option>
+                    <option value="{{$q777[2]}}">{{$q777[2]}}</option>
+                    <option value="{{$q777[3]}}">{{$q777[3]}}</option>
+                </select>
+                {{$q7_7}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q77_7[0]}}">{{$q77_7[0]}}</option>
+                    <option value="{{$q77_7[1]}}">{{$q77_7[1]}}</option>
+                    <option value="{{$q77_7[2]}}">{{$q77_7[2]}}</option>
+                    <option value="{{$q77_7[3]}}">{{$q77_7[3]}}</option>
+                </select>
+                {{$q77}}
+            </div>
 
-                    <tr>
-                        <td>
-                            <span class="font-weight-bold mr-2">9.</span>
-                            {{$q9}} _____<u></u>_____ {{$q99}}
-                        </td>
-                        <td>
-                            <select class="form-control w-auto">
-                                <option value="">-Select-</option>
-                                <option value="{{$q999[0]}}">{{$q999[0]}}</option>
-                                <option value="{{$q999[1]}}">{{$q999[1]}}</option>
-                                <option value="{{$q999[2]}}">{{$q999[2]}}</option>
-                                <option value="{{$q999[3]}}">{{$q999[3]}}</option>
-                            </select>
-                        </td>
-                    </tr>
+            <div class="d-flex align-items-center mb-2">
+                <span class="font-weight-bold mr-2">8.</span>
+                {{$q8}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q888[0]}}">{{$q888[0]}}</option>
+                    <option value="{{$q888[1]}}">{{$q888[1]}}</option>
+                    <option value="{{$q888[2]}}">{{$q888[2]}}</option>
+                    <option value="{{$q888[3]}}">{{$q888[3]}}</option>
+                </select>
+                {{$q88}}
+            </div>
 
-                    <tr>
-                        <td>
-                            <span class="font-weight-bold mr-2">10.</span>
-                            {{$q10}} _____<u></u>_____ {{$q100}}
-                        </td>
-                        <td>
-                            <select class="form-control w-auto">
-                                <option value="">-Select-</option>
-                                <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
-                                <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
-                                <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
-                                <option value="{{$q1000[3]}}">{{$q1000[3]}}</option>
-                            </select>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="d-flex align-items-center mb-2">
+                <span class="font-weight-bold mr-2">9.</span>
+                {{$q9}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q999[0]}}">{{$q999[0]}}</option>
+                    <option value="{{$q999[1]}}">{{$q999[1]}}</option>
+                    <option value="{{$q999[2]}}">{{$q999[2]}}</option>
+                    <option value="{{$q999[3]}}">{{$q999[3]}}</option>
+                </select>
+                {{$q99}}
+            </div>
+
+            <div class="d-flex align-items-center mb-2">
+                <span class="font-weight-bold mr-2">10.</span>
+                {{$q10}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
+                    <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
+                    <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
+                    <option value="{{$q1000[3]}}">{{$q1000[3]}}</option>
+                </select>
+                {{$q100}}
+            </div>
         </div>
     </div>
 
@@ -284,19 +264,19 @@
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <dl class="row">
-                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[3]}}</i></dt>
-                                        <dd class="col-sm-10">(adverb): result
-                                            <ul class="list-unstyled mark font-weight-bold">
+                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[1]}}</i></dt>
+                                        <dd class="col-sm-10">singular / present simple
+                                            <ul class="list-unstyled mark">
                                                 <li>
-                                                    clues:
+                                                   <strong>clues:</strong>
                                                 </li>
                                                 <li>
                                                     <ul>
                                                         <li>
-                                                            death sentence = no perceived reduction
+                                                        Subject + <strong><u>singular verb</u></strong>
                                                         </li>
                                                         <li>
-                                                            capital punishment = not a deterrent to serious crime
+                                                        The diagram + <strong><u>shows</u></strong>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -304,17 +284,13 @@
                                         </dd>
                                     
                                         <dt class="col-sm-2">{{$q111[0]}}</dt>
-                                        <dd class="col-sm-10">(adverb): contrast</dd>
-
-                                        <dt class="col-sm-2">{{$q111[1]}}</dt>
-                                        <dd class="col-sm-10">(subordinate conjunction): time and contrast 
-                                            <p class="font-weight-bold text-primary">clause + while + clause</p>
-                                        </dd>
+                                        <dd class="col-sm-10">plural/ present simple</dd>
 
                                         <dt class="col-sm-2">{{$q111[2]}}</dt>
-                                        <dd class="col-sm-10">(subordinate conjunction): cause
-                                            <p class="font-weight-bold text-primary">clause + since + clause</p>
-                                        </dd>
+                                        <dd class="col-sm-10">present participle of <em>"show"</em></dd>
+
+                                        <dt class="col-sm-2">{{$q111[3]}}</dt>
+                                        <dd class="col-sm-10">past simple and past participle of <em>"show"</em></dd>
                                     </dl>
                                 </div>
                         </div>
@@ -334,24 +310,33 @@
                             <div class="card-body">
                                 <dl class="row">
                                     <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[2]}}</i></dt>
-                                    <dd class="col-sm-10">(coordinate conjunction): result for compound sentences
-                                        <p class="font-weight-bold mark">clues: <u>s+v</u> + so + <u>s+v</u>.</p>
+                                    <dd class="col-sm-10">plural / present simple
+                                        <ul class="list-unstyled mark">
+                                            <li>
+                                                <strong>clues:</strong>
+                                            </li>
+                                            <li>
+                                                <ul>
+                                                    <li>
+                                                    plural subject + <strong><u>plural verb</u></strong> (passive voice)
+                                                    </li>
+                                                    <li>
+                                                    <strong><u>Details</u></strong> of weather + <strong><u>are</u></strong> gathered 
+                                                    <br><em>The sentence talks about a fact and how something works.</em>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q222[0]}}</dt>
-                                    <dd class="col-sm-10">(adverb): result 
-                                        <p class="font-weight-bold text-primary">s+v. Therefore, s+v.</p>
-                                    </dd>
+                                    <dd class="col-sm-10">singular / present simple</dd>
 
                                     <dt class="col-sm-2">{{$q222[1]}}</dt>
-                                    <dd class="col-sm-10">(adverb): result
-                                        <p class="font-weight-bold text-primary">s+v. As a result, s+v.</p>
-                                    </dd>
+                                    <dd class="col-sm-10">singular / present continuous</dd>
 
                                     <dt class="col-sm-2">{{$q222[3]}}</dt>
-                                    <dd class="col-sm-10">(adverb): result
-                                        <p class="font-weight-bold text-primary">s+v. Consequently, s+v.</p>
-                                    </dd>
+                                    <dd class="col-sm-10">plural / present continuous <em>(temporary events or prediction)</em></dd>
                                 </dl>
                             </div>
                         </div>
@@ -370,19 +355,34 @@
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[0]}}</i></dt>
-                                    <dd class="col-sm-10">(adv) used when saying the names of things you are referring to                               
-                                        <p class="font-weight-bold mark">clues:  value for money / quality education</p>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[2]}}</i></dt>
+                                    <dd class="col-sm-10">singular / present perfect                               
+                                        <ul class="list-unstyled mark">
+                                            <li>
+                                                <strong>clues:</strong>
+                                            </li>
+                                            <li>
+                                                <ul>
+                                                    <li>
+                                                    singular subject + <strong><u>singular verb</u></strong> (passive voice)
+                                                    </li>
+                                                    <li>
+                                                    the weather forecast + <strong><u>has</u> been produced</strong> 
+                                                    <br><em>Once + present perfect, present simple</em>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </dd>
 
-                                    <dt class="col-sm-2">{{$q333[1]}}</dt>
-                                    <dd class="col-sm-10">For example, s+v.</dd>
+                                    <dt class="col-sm-2">{{$q333[0]}}</dt>
+                                    <dd class="col-sm-10">singular / present continuous</dd>
 
-                                    <dt class="col-sm-2">{{$q333[2]}}</dt>
-                                    <dd class="col-sm-10">The noun phrase doesn’t link the words.</dd>
+                                    <dt class="col-sm-2">{{$q333[1]}}</dt>
+                                    <dd class="col-sm-10">plural / present perfect</dd>
 
                                     <dt class="col-sm-2">{{$q333[3]}}</dt>
-                                    <dd class="col-sm-10">The conjunction doesn’t come after a colon (:).</dd>
+                                    <dd class="col-sm-10">past simple</dd>
                                 </dl>
                             </div>
                         </div>
@@ -401,19 +401,33 @@
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[1]}}</i></dt>
-                                    <dd class="col-sm-10">(determiner) Another thing
-                                        <p class="font-weight-bold mark">clues: reason (singular nc)</p>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
+                                    <dd class="col-sm-10">plural / present simple
+                                        <ul class="list-unstyled mark">
+                                            <li>
+                                                <strong>clues:</strong>
+                                            </li>
+                                            <li>
+                                                <ul>
+                                                    <li>
+                                                    there + <strong><u>plural verb</u></strong> + plural noun
+                                                    </li>
+                                                    <li>
+                                                    there + <strong><u>are</u></strong> + significant differences
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q444[0]}}</dt>
-                                    <dd class="col-sm-10">Other + nu / plural nc</dd>
+                                    <dd class="col-sm-10">singular / present simple</dd>
 
-                                    <dt class="col-sm-2">{{$q444[2]}}</dt>
-                                    <dd class="col-sm-10">Further + nu / plural nc</dd>
+                                    <dt class="col-sm-2">{{$q444[1]}}</dt>
+                                    <dd class="col-sm-10">singular / past simple</dd>
 
                                     <dt class="col-sm-2">{{$q444[3]}}</dt>
-                                    <dd class="col-sm-10">One + the first noun</dd>
+                                    <dd class="col-sm-10">plural / past simpl</dd>
                                 </dl>
                             </div>
                         </div>
@@ -433,18 +447,32 @@
                             <dl class="row">
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[0]}}</i> </dt>
-                                <dd class="col-sm-10">(adv)  
-                                <p class="font-weight-bold mark">clues: First of all + s+v.</p>
+                                <dd class="col-sm-10">plural / present simple 
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                plural subject + <strong><u>plural verb</u></strong>
+                                                </li>
+                                                <li>
+                                                <strong>the changes</strong> in design of the bicycle + <strong><u></u></strong>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q555[1]}}</dt>
-                                <dd class="col-sm-10">(noun)</dd>
+                                <dd class="col-sm-10">singular / present simple</dd>
 
                                 <dt class="col-sm-2">{{$q555[2]}}</dt>
-                                <dd class="col-sm-10">(noun phrase)</dd>
+                                <dd class="col-sm-10">present participle of <em>"reflect"</em></dd>
 
                                 <dt class="col-sm-2">{{$q555[3]}}</dt>
-                                <dd class="col-sm-10">such as + noun phrase</dd>
+                                <dd class="col-sm-10">plural / past continuous</dd>
                             </dl>
                         </div>
                     </div>
@@ -461,19 +489,19 @@
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[1]}}</i></dt>
-                                <dd class="col-sm-10">: become adult
-                                    <p class="font-weight-bold mark">clues: immaturely</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[3]}}</i></dt>
+                                <dd class="col-sm-10">present participle
+                                    <p class="mark"><strong>clues:</strong> Sentence, + <strong><u>participial phrase</u></strong></p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q666[0]}}</dt>
-                                <dd class="col-sm-10">: omit something</dd>
+                                <dd class="col-sm-10">infinitive</dd>
+
+                                <dt class="col-sm-2">{{$q666[1]}}</dt>
+                                <dd class="col-sm-10">present continuous</dd>
 
                                 <dt class="col-sm-2">{{$q666[2]}}</dt>
-                                <dd class="col-sm-10">: have an argument</dd>
-
-                                <dt class="col-sm-2">{{$q666[3]}}</dt>
-                                <dd class="col-sm-10">: assume control of something</dd>
+                                <dd class="col-sm-10">singular / present simple</dd>
                             </dl>
                         </div>
                     </div>
@@ -483,27 +511,40 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                7. {{$q7}} <u></u> {{$q77}}
+                                7. {{$q7}} <u></u> {{$q7_7}} <u></u> {{$q77}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}</i> </dt>
-                                <dd class="col-sm-10">: Additionally,
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}, {{$q77_7[2]}}</i> </dt>
+                                <dd class="col-sm-10">singular / present simple, present participle
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                Sentence, + <strong><u>participial phrase</u></strong>
+                                                </li>
+                                                <li>
+                                                <strong>Energy</strong> from the sun + <strong><u>singular verb</u></strong>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[2]}}</i></dt>
-                                <dd class="col-sm-10">: Additionally,
-                                <p class="font-weight-bold mark">clues: such as + n, n and n</p>
-                                </dd>
+                                <dt class="col-sm-2">{{$q777[2]}}, {{$q77_7[0]}}</dt>
+                                <dd class="col-sm-10">initive, infinitive</dd>
 
-                                <dt class="col-sm-2">{{$q777[0]}}</dt>
-                                <dd class="col-sm-10">Ok but not the best answer --- <em>informal</em></dd>
+                                <dt class="col-sm-2">{{$q777[1]}}, {{$q77_7[1]}}</dt>
+                                <dd class="col-sm-10">singular / present simple, singular / present simple</dd>
 
-                                <dt class="col-sm-2">{{$q777[3]}}</dt>
-                                <dd class="col-sm-10">used at the end of the sentence or clause used after the subject or adverb --- <em>formal</em></dd>
+                                <dt class="col-sm-2">{{$q777[2]}}, {{$q77_7[2]}}</dt>
+                                <dd class="col-sm-10">plural / present simple, present participle</dd>
                             </dl>
                         </div>
                     </div>
@@ -520,19 +561,36 @@
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
-                                <dd class="col-sm-10">
-                                    <p class="font-weight-bold mark">clues: In + noun</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[3]}}</i> </dt>
+                                <dd class="col-sm-10">(vt) singular / present simple (passive voice)
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                subject + is + <strong>vt past participle</strong> ------ passive voice
+                                                </li>
+                                                <li>
+                                                <strong>the number</strong> of tress + <strong><u>is reduced</u></strong>
+                                                </li>
+                                                <li>
+                                                subject + vt + object ------ active voice
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </dd>
 
+                                <dt class="col-sm-2">{{$q888[0]}}</dt>
+                                <dd class="col-sm-10">infinitive</dd>
+
                                 <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10"> </dd>
+                                <dd class="col-sm-10">singular / present simple (active voice)</dd>
 
                                 <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">To conclude</dd>
-
-                                <dt class="col-sm-2">{{$q888[3]}}</dt>
-                                <dd class="col-sm-10">To summarise</dd>
+                                <dd class="col-sm-10">singular / present continuous (active voice)</dd>
                             </dl>
                         </div>
                     </div>
@@ -550,18 +608,35 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[1]}}</i> </dt>
-                                <dd class="col-sm-10">used to suggest a reason (clause)
-                                    <p class="font-weight-bold mark">clues: should be prohibited / damage people’s health</p>
+                                <dd class="col-sm-10">(vt) singular / present simple (active voice)
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                subject+ <strong><u>vt</u></strong> + object ------ active voice
+                                                </li>
+                                                <li>
+                                                human activity + <strong>plays</strong> + an important role
+                                                </li>
+                                                <li>
+                                                subject + is + vt past participle ------ passive voice
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">used to suggest a reason <em>(noun phrase)</em></dd>
+                                <dd class="col-sm-10">infinitive</dd>
 
                                 <dt class="col-sm-2">{{$q999[2]}}</dt>
-                                <dd class="col-sm-10">contrast</dd>
+                                <dd class="col-sm-10">present participle of <em>"play"</em></dd>
 
                                 <dt class="col-sm-2">{{$q999[3]}}</dt>
-                                <dd class="col-sm-10">used to suggest a result</dd>
+                                <dd class="col-sm-10">singular / present simple (passive voice)</dd>
                             </dl>
                         </div>
                     </div>
@@ -578,19 +653,39 @@
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[1]}}</i></dt>
-                                <dd class="col-sm-10"><strong>Additionally</strong>, s+v. 
-                                    <p class="font-weight-bold mark">clues: obesity / health problems</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[3]}}</i></dt>
+                                <dd class="col-sm-10">(vt) singular / past simple (passive voice)
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                subject + was + <strong><u>vt past participle</u></strong> ------ passive voice
+                                                </li>
+                                                <li>
+                                                the village + <strong><u>was located</u></strong>
+                                                </li>
+                                                <li>
+                                                subject + vt + object
+                                                </li>
+                                                <li>
+                                                between 1868 and 1883 = past simple time expression
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q1000[0]}}</dt>
-                                <dd class="col-sm-10">s+v <strong>so</strong> s+v.</dd>
+                                <dd class="col-sm-10">singular / present continuous (passive voice)</dd>
+
+                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
+                                <dd class="col-sm-10">present participle of <em>"locate"</em></dd>
 
                                 <dt class="col-sm-2">{{$q1000[2]}}</dt>
-                                <dd class="col-sm-10"><strong>Since</strong> s+v, s+v.</dd>
-
-                                <dt class="col-sm-2">{{$q1000[3]}}</dt>
-                                <dd class="col-sm-10"><strong>While</strong> s+v, s+v.</dd>
+                                <dd class="col-sm-10">past continuous (active voice)</dd>
                             </dl>
                         </div>
                     </div>
@@ -608,63 +703,41 @@
 
 @section('js')
 <script>
-    var answer7 = ["What's more,", "In addition,"];
     const answers = [
-        'Therefore', 
-        'so', 
-        'namely', 
-        'Another', 
-        'First of all', 
-        'such as', 
-        answer7, 
-        'In conclusion,',
-        'since', 
-        'Furthermore,'
+        'shows', 
+        'are', 
+        'has been', 
+        'are', 
+        'reflect', 
+        'resulting', 
+        'reaches',
+        'heating', 
+        'is reduced',
+        'plays', 
+        'was located'
     ];
     
     let score = 0;
-
     $("#show-answer").hide(true);
 
     $('#check-answer').on('click', function() {
-  
+        
         $('select').each((idx, item) => {
-            $(item).parent().find('i').remove();
-            $(item).removeClass('border-success');
-            $(item).removeClass('border-danger');
-
-            if(idx == 6){
-                if($(item).val() == answer7[0] || $(item).val() == answer7[1]) {
-                    $(item).addClass('border border-success');
-                    score++;
-                } else {
-                    $(item).addClass('border border-danger');
-                }
-                
-            }else{
-                if($(item).val() == answers[idx]) {
-                    $(item).addClass('border border-success');
-                    score++;
-                } else {
-                    $(item).addClass('border border-danger');
-                }
+            if($(item).val() == answers[idx]) {
+                $(item).addClass('border border-success');
+                $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
+                score++;
+            } else {
+                $(item).addClass('border border-danger');
+                $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
             }
         })
 
         $('a u').each((idx, item) => {
-            if(idx == 6){
-                $(`<span class="text-success"><u>${answer7[0]} / ${answer7[1]}</u></span>`).insertAfter($(item));
-            }else{
+            if($(item).val() == answers[idx]) {
                 $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
-            }
-        })
-
-              
-        $('td u').each((idx, item) => {
-            if(idx == 6){
-                $(`<span class="text-success mr-2 ml-2">${answer7[0]} / ${answer7[1]}</span>`).insertAfter($(item));
-            }else{
-                $(`<span class="text-success mr-2 ml-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
+            } else {
+                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
             }
         })
 

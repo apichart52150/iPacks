@@ -49,10 +49,16 @@
     $q6_6 = "new legislation to control illegal deforestation.";
     $q66 = "new cars during the recession.";
     $q666 = array(
-        'off, in',
-        'in, from',
-        'on, of',
-        'in, of'
+        'off',
+        'in',
+        'on',
+        'of'
+    );
+    $q66_6 = array(
+        'in',
+        'from',
+        'of',
+        'off'
     );
     $q7 = "The number of foreign tourists arriving in Thailand depends";
     $q77 = "the political situation.";
@@ -74,19 +80,33 @@
     $q9_9 = "the number";
     $q99 = "new-born babies during the period.";
     $q999 = array(
-        'in, of',
-        'in, from',
-        'at, from',
-        'at, for'
+        'of',
+        'in',
+        'for',
+        'at'
+    );
+
+    $q99_9 = array(
+        'of',
+        'from',
+        'for',
+        'at'
     );
     $q10 = "The vast majority";
     $q10_0 = "young people have never experienced the difficulties";
     $q100 = "'snail-mail'";
     $q1000 = array(
-        'of, for',
-        'with, by',
-        'of, of',
-        'in, of'
+        'of',
+        'with',
+        'by',
+        'in'
+    );
+
+    $q10_00 = array(
+        'for',
+        'by',
+        'of',
+        'in'
     );
 @endphp
 <div class="row">
@@ -174,10 +194,10 @@
                 {{$q6_6}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="{{$q666[0]}}">{{$q666[0]}}</option>
-                    <option value="{{$q666[1]}}">{{$q666[1]}}</option>
-                    <option value="{{$q666[2]}}">{{$q666[2]}}</option>
-                    <option value="{{$q666[3]}}">{{$q666[3]}}</option>
+                    <option value="{{$q66_6[0]}}">{{$q66_6[0]}}</option>
+                    <option value="{{$q66_6[1]}}">{{$q66_6[1]}}</option>
+                    <option value="{{$q66_6[2]}}">{{$q66_6[2]}}</option>
+                    <option value="{{$q66_6[3]}}">{{$q66_6[3]}}</option>
                 </select>
                 {{$q66}}
             </div>
@@ -221,10 +241,10 @@
                 {{$q9_9}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="{{$q999[0]}}">{{$q999[0]}}</option>
-                    <option value="{{$q999[1]}}">{{$q999[1]}}</option>
-                    <option value="{{$q999[2]}}">{{$q999[2]}}</option>
-                    <option value="{{$q999[3]}}">{{$q999[3]}}</option>
+                    <option value="{{$q99_9[0]}}">{{$q99_9[0]}}</option>
+                    <option value="{{$q99_9[1]}}">{{$q99_9[1]}}</option>
+                    <option value="{{$q99_9[2]}}">{{$q99_9[2]}}</option>
+                    <option value="{{$q99_9[3]}}">{{$q99_9[3]}}</option>
                 </select>
                 {{$q99}}
             </div>
@@ -242,10 +262,10 @@
                 {{$q10_0}}
                 <select class="form-control w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
-                    <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
-                    <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
-                    <option value="{{$q1000[3]}}">{{$q1000[3]}}</option>
+                    <option value="{{$q10_00[0]}}">{{$q10_00[0]}}</option>
+                    <option value="{{$q10_00[1]}}">{{$q10_00[1]}}</option>
+                    <option value="{{$q10_00[2]}}">{{$q10_00[2]}}</option>
+                    <option value="{{$q10_00[3]}}">{{$q10_00[3]}}</option>
                 </select>
                 {{$q100}}
             </div>
@@ -368,7 +388,7 @@
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[2]}}</i></dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[1]}},{{$q66_6[2]}}</i></dt>
                                 <dd class="col-sm-10">
                                     <ul class="list-unstyled mark">
                                         <li>
@@ -444,7 +464,7 @@
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[0]}}</i> </dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[1]}},{{$q99_9[0]}}</i> </dt>
                                 <dd class="col-sm-10">
                                     <ul class="list-unstyled mark">
                                         <li>
@@ -478,7 +498,7 @@
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[2]}}</i></dt>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[0]}},{{$q10_00[2]}}</i></dt>
                                 <dd class="col-sm-10">
                                     <ul class="list-unstyled mark">
                                         <li>
