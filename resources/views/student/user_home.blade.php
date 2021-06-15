@@ -35,6 +35,10 @@
         border-width: 2px;
     }
 
+    .ribbon-box .ribbon-two-secondary span {
+        background: #C5B358 !important;
+    }
+
 </style>
 
 
