@@ -168,12 +168,16 @@
                 @isset($pagination)
                 <div class="row mb-3">
                     <div class="col-md-12 d-flex justify-content-between">
-                        <a href="{{ url($pagination['prev']) }}" class="btn btn-dark {{ $pagination['current'] == 'activity1' ? 'disabled' : '' }}">Previous</a>
+                        <a href="{{ url($pagination['prev']) }}" class="btn btn-dark {{ $pagination['current'] == '1' ? 'disabled' : '' }}">Previous</a>
                         <div class="btn-controls">
                             @yield('button-control')
                             <button id="reset" class="btn btn-purple">Reset</button>
                         </div>
+                        @if ($pagination['current'] == '157')
+                        <a href="{{ url('/language/home') }}" class="btn btn-dark">Back Home</a>
+                        @else
                         <a href="{{ url($pagination['next']) }}" class="btn btn-dark">{{ $pagination['textBtn'] }}</a>
+                        @endif
                     </div>
                 </div>
                 @endisset
