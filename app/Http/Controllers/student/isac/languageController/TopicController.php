@@ -8,6 +8,10 @@ use DB;
 
 class TopicController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth:student');
+    }
+    
     public function index($topic) {
 
         if($topic == 'Intermediate'){

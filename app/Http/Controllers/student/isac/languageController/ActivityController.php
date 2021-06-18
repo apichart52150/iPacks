@@ -8,6 +8,9 @@ use DB;
 
 class ActivityController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth:student');
+    }
 
     public $topicType = [
         '1' => 'Intermediate',
