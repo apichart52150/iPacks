@@ -35,7 +35,7 @@
         'was'
     );
     $q4 = "It is clear that, while there are a few similarities between the two bicycles, there";
-    $q44 = "also significant differences in design";
+    $q44 = "also significant differences in design.";
     $q444 = array(
         'is',
         'was',
@@ -62,16 +62,16 @@
     $q7_7 = "the earth,";
     $q77 = "up the surface.";
     $q777 = array(
-        'reacht',
-        "reaches",
+        'reached',
+        'reaches',
         'reach',
-        'heating'
+        'reaching'
     );
     $q77_7 = array(
         'heat',
-        "heats",
+        'heats',
         'heating',
-        'reaches'
+        'heated'
     );
     $q8 = "Trees absorb carbon dioxide, so if the number of trees";
     $q88 = ", the levels of carbon dioxide in the atmosphere will increase.";
@@ -427,7 +427,7 @@
                                     <dd class="col-sm-10">singular / past simple</dd>
 
                                     <dt class="col-sm-2">{{$q444[3]}}</dt>
-                                    <dd class="col-sm-10">plural / past simpl</dd>
+                                    <dd class="col-sm-10">plural / past simple</dd>
                                 </dl>
                             </div>
                         </div>
