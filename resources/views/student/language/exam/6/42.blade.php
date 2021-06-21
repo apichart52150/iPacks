@@ -421,7 +421,7 @@
                                 <dd class="col-sm-10">(vt): had someone do a job for you and paid them for it</dd>
 
                                 <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">(nu): work that you are paid to do for a company <br> (phrasal verb): to conduct, to do a job</dd>
+                                <dd class="col-sm-10">(nu): work that you are paid to do for a company</dd>
 
                                 <dt class="col-sm-2">carry out</dt>
                                 <dd class="col-sm-10">(phrasal verb): to conduct, to do a job</dd>

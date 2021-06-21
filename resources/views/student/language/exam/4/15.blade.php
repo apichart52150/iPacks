@@ -90,7 +90,7 @@
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
             <p class="lead">
-                {{$pageTitle['topic']}}
+                {{$pageTitle['topic']}} (Contrast)
             </p>
             
             <div class="d-flex align-items-center mb-2">
@@ -276,7 +276,8 @@
                             <div class="card-body">
                                 <dl class="row">
                                     <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[1]}}</i></dt>
-                                    <dd class="col-sm-10">used to introduce a statement that makes the main statement seem surprising
+                                    <dd class="col-sm-10">- used to introduce a statement that makes the main statement seem surprising
+                                    <br> -  used to add a statement that balances or reduces the effect of what you have just said
                                         <ul class="list-unstyled mark">
                                             <li>
                                                 <strong>clues:</strong>
@@ -301,7 +302,8 @@
                                     <dd class="col-sm-10">s+v <strong>while</strong> s+v.</dd>
 
                                     <dt class="col-sm-2">{{$q222[3]}}</dt>
-                                    <dd class="col-sm-10">s+v, <strong>even though</strong> s+v.</dd>
+                                    <dd class="col-sm-10">s+v, <strong>even though</strong> s+v.
+                                    <br>- used to emphasize that something is true although something else has happened or is true </dd>
                                 </dl>
                             </div>
                         </div>
@@ -339,7 +341,8 @@
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q333[1]}}</dt>
-                                    <dd class="col-sm-10">s+v <strong>while</strong> s+v.</dd>
+                                    <dd class="col-sm-10">s+v <strong>while</strong> s+v.
+                                    <br>used to contrast two different things or people which are supposed to be the same</dd>
 
                                     <dt class="col-sm-2">{{$q333[2]}}</dt>
                                     <dd class="col-sm-10">s+v <strong>whereas</strong> s+v.</dd>
@@ -438,15 +441,18 @@
                                             <li>
                                                 a decrease / positive territory
                                             </li>
+                                            <li>
+                                                Last year’s figures / the figures for this year
+                                            </li>
                                         </ul>
                                     </ul>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q666[1]}}</dt>
-                                <dd class="col-sm-10">s+v. In <strong>contrast</strong>, s+v.</dd>
+                                <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
 
                                 <dt class="col-sm-2">{{$q666[2]}}</dt>
-                                <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
+                                <dd class="col-sm-10">s+v. <strong>In contrast</strong>, s+v.</dd>
 
                                 <dt class="col-sm-2">{{$q666[3]}}</dt>
                                 <dd class="col-sm-10">used to suggest a reason <br>s+v <strong>since</strong> s+v.</dd>
@@ -549,7 +555,8 @@
                                 <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
 
                                 <dt class="col-sm-2">{{$q999[2]}}</dt>
-                                <dd class="col-sm-10">used to say that although something is true of one thing, it is not true of another </dd>
+                                <dd class="col-sm-10">- used to say that although something is true of one thing, it is not true of another 
+                                <br>- used to contrast two different things or people which are supposed to be the same</dd>
                             </dl>
                         </div>
                     </div>
@@ -585,10 +592,10 @@
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q1000[0]}}</dt>
-                                <dd class="col-sm-10">used to introduce a statement that makes another statement seem surprisin</dd>
+                                <dd class="col-sm-10">used to introduce a statement that makes another statement seem surprising</dd>
 
                                 <dt class="col-sm-2">{{$q1000[1]}}</dt>
-                                <dd class="col-sm-10">used to emphasize that something is true although something else is true</dd>
+                                <dd class="col-sm-10">used to emphasize that something is true although something else has happened or is true</dd>
 
                                 <dt class="col-sm-2">{{$q1000[3]}}</dt>
                                 <dd class="col-sm-10">used to emphasize the difference between two situations</dd>

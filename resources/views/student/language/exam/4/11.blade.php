@@ -5,85 +5,108 @@
 }
 </style>
 @php
-    $q1 = "I believe schools should teach students how to";
-    $q11 = "children.";
+    $q1 = "Most teenagers tend to spend their money";
+    $q11 = "clothes and music.";
     $q111 = array(
-        'bring up',
-        'grow up',
-        'take over',
-        'keep on'
+        'for',
+        'on',
+        'by',
+        'at'
     );
-    $q2 = "Many parents don't know how to";
-    $q22 = "children properly; for example, they let them eat too much fast food.";
+    $q2 = "There was a sharp decrease in the birth rate";
+    $q22 = "2007.";
     $q222 = array(
-        'grow up',
-        'drop out',
-        'put forward',
-        'look after'
+        'at',
+        'on',
+        'with',
+        'in'
     );
-    $q3 = "Married couples sometimes";
-    $q33 = "over who should do the housework. They need to decide on that before they get married.";
+    $q3 = "The number of cars sold fluctuated";
+    $q33 = "2000 and 2009.";
     $q333 = array(
-        'look after',
-        'take over',
-        'fall out',
-        'put forward'
+        'between',
+        'from',
+        'within',
+        'at'
     );
-    $q4 = "This report";
-    $q44 = "the reasons for the dramatic rise in population.";
+    $q4 = "The number of tourists entering the Kingdom rose";
+    $q44 = " 12 million to 13 million in that year.";
     $q444 = array(
-        'cuts down on',
-        'keeps on',
-        'leaves out',
-        'drops out'
+        'between',
+        'from',
+        'at',
+        'within'
     );
-    $q5 = "A successful business person";
-    $q55 = "trying even when something seems impossible.";
+    $q5 = "The unemployment rate remained";
+    $q55 = "6% for the next few years.";
     $q555 = array(
-        'looks after',
-        'drops out',
-        'puts forward',
-        'keeps on'
+        'at',
+        'in',
+        'with',
+        'for'
     );
-    $q6 = "He is behaving so immaturely. He really needs to";
-    $q66 = ".";
+    $q6 = "There was a significant fall";
+    $q6_6 = "new legislation to control illegal deforestation.";
+    $q66 = "new cars during the recession.";
     $q666 = array(
-        'leave out',
-        'grow up',
-        'fall out',
-        'take over'
+        'off',
+        'in',
+        'on',
+        'of'
     );
-    $q7 = "The course was quite boring and so many students";
-    $q77 = ".";
+    $q66_6 = array(
+        'in',
+        'from',
+        'of',
+        'off'
+    );
+    $q7 = "The number of foreign tourists arriving in Thailand depends";
+    $q77 = "the political situation.";
     $q777 = array(
-        'fell out',
-        'took over',
-        'dropped out',
-        'put forward'
+        'of',
+        'on',
+        'with',
+        'for'
     );
-    $q8 = "No one had any ideas on how to solve the problem until the chairperson";
-    $q88 = "this suggestion.";
+    $q8 = "The recession prevented the company";
+    $q88 = "reaching its targets.";
     $q888 = array(
-        'put forward',
-        'looked after',
-        'grew up',
-        'fell out'
+        'by',
+        'for',
+        'to',
+        'from'
     );
-    $q9 = "My cough is getting really bad. I really should";
-    $q99 = "the number of cigarettes each day.";
+    $q9 = "There was a substantial growth";
+    $q9_9 = "the number";
+    $q99 = "new-born babies during the period.";
     $q999 = array(
-        'look after',
-        'drop out',
-        'leave out',
-        'cut down on'
+        'of',
+        'in',
+        'for',
+        'at'
     );
-    $q10 = "The hospital has recently been";
-    $q100 = "by an international conglomerate.";
+
+    $q99_9 = array(
+        'of',
+        'from',
+        'for',
+        'at'
+    );
+    $q10 = "The vast majority";
+    $q10_0 = "young people have never experienced the difficulties";
+    $q100 = "'snail-mail'";
     $q1000 = array(
-        'taken over',
-        'put forward',
-        'grown up',
-        'cut down on'
+        'of',
+        'with',
+        'by',
+        'in'
+    );
+
+    $q10_00 = array(
+        'for',
+        'by',
+        'of',
+        'in'
     );
 @endphp
 <div class="row">
@@ -168,6 +191,14 @@
                     <option value="{{$q666[2]}}">{{$q666[2]}}</option>
                     <option value="{{$q666[3]}}">{{$q666[3]}}</option>
                 </select>
+                {{$q6_6}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q66_6[0]}}">{{$q66_6[0]}}</option>
+                    <option value="{{$q66_6[1]}}">{{$q66_6[1]}}</option>
+                    <option value="{{$q66_6[2]}}">{{$q66_6[2]}}</option>
+                    <option value="{{$q66_6[3]}}">{{$q66_6[3]}}</option>
+                </select>
                 {{$q66}}
             </div>
 
@@ -207,6 +238,14 @@
                     <option value="{{$q999[2]}}">{{$q999[2]}}</option>
                     <option value="{{$q999[3]}}">{{$q999[3]}}</option>
                 </select>
+                {{$q9_9}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q99_9[0]}}">{{$q99_9[0]}}</option>
+                    <option value="{{$q99_9[1]}}">{{$q99_9[1]}}</option>
+                    <option value="{{$q99_9[2]}}">{{$q99_9[2]}}</option>
+                    <option value="{{$q99_9[3]}}">{{$q99_9[3]}}</option>
+                </select>
                 {{$q99}}
             </div>
 
@@ -219,6 +258,14 @@
                     <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
                     <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
                     <option value="{{$q1000[3]}}">{{$q1000[3]}}</option>
+                </select>
+                {{$q10_0}}
+                <select class="form-control w-auto mx-2">
+                    <option value="">-Select-</option>
+                    <option value="{{$q10_00[0]}}">{{$q10_00[0]}}</option>
+                    <option value="{{$q10_00[1]}}">{{$q10_00[1]}}</option>
+                    <option value="{{$q10_00[2]}}">{{$q10_00[2]}}</option>
+                    <option value="{{$q10_00[3]}}">{{$q10_00[3]}}</option>
                 </select>
                 {{$q100}}
             </div>
@@ -244,19 +291,8 @@
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <dl class="row">
-                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[0]}}</i></dt>
-                                        <dd class="col-sm-10">: raise (children)
-                                            <p class="font-weight-bold mark">clues: children</p>
-                                        </dd>
-                                    
-                                        <dt class="col-sm-2">{{$q111[1]}}</dt>
-                                        <dd class="col-sm-10">: become adult</dd>
-
-                                        <dt class="col-sm-2">{{$q111[2]}}</dt>
-                                        <dd class="col-sm-10">: assume control of something e.g. a company</dd>
-
-                                        <dt class="col-sm-2">{{$q111[3]}}</dt>
-                                        <dd class="col-sm-10">: continue</dd>
+                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[1]}}</i></dt>
+                                        <dd class="col-sm-10"><p class="font-weight-bold mark">clues: clues: spend + money + on something</p></dd>
                                     </dl>
                                 </div>
                         </div>
@@ -276,18 +312,7 @@
                             <div class="card-body">
                                 <dl class="row">
                                     <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[3]}}</i></dt>
-                                    <dd class="col-sm-10">: take care of someon
-                                        <p class="font-weight-bold mark">clues: children / too much fast food</p>
-                                    </dd>
-
-                                    <dt class="col-sm-2">{{$q222[0]}}</dt>
-                                    <dd class="col-sm-10">: become adult</dd>
-
-                                    <dt class="col-sm-2">{{$q222[1]}}</dt>
-                                    <dd class="col-sm-10">: stop doing something e.g. leave school</dd>
-
-                                    <dt class="col-sm-2">{{$q222[2]}}</dt>
-                                    <dd class="col-sm-10">: suggest or state a plan of action</dd>
+                                    <dd class="col-sm-10"><p class="font-weight-bold mark">clues: clues: in + year</p></dd>
                                 </dl>
                             </div>
                         </div>
@@ -306,19 +331,8 @@
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[2]}}</i></dt>
-                                    <dd class="col-sm-10">: have an argument                               
-                                        <p class="font-weight-bold mark">clues: who should do the housework</p>
-                                    </dd>
-
-                                    <dt class="col-sm-2">{{$q333[0]}}</dt>
-                                    <dd class="col-sm-10">: take care of someone</dd>
-
-                                    <dt class="col-sm-2">{{$q333[1]}}</dt>
-                                    <dd class="col-sm-10">: assume control of something e.g. a company</dd>
-
-                                    <dt class="col-sm-2">{{$q333[3]}}</dt>
-                                    <dd class="col-sm-10">: suggest a plan of action</dd>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[0]}}</i></dt>
+                                    <dd class="col-sm-10"><p class="font-weight-bold mark">clues: <u>between</u> year1 <u>and</u> year2 </p></dd>
                                 </dl>
                             </div>
                         </div>
@@ -337,19 +351,8 @@
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
-                                    <dd class="col-sm-10">: omits something
-                                        <p class="font-weight-bold mark">clues: the reasons</p>
-                                    </dd>
-
-                                    <dt class="col-sm-2">{{$q444[0]}}</dt>
-                                    <dd class="col-sm-10">: reduces something</dd>
-
-                                    <dt class="col-sm-2">{{$q444[1]}}</dt>
-                                    <dd class="col-sm-10">: continues doing something</dd>
-
-                                    <dt class="col-sm-2">{{$q444[3]}}</dt>
-                                    <dd class="col-sm-10">: stops doing something </dd>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[1]}}</i></dt>
+                                    <dd class="col-sm-10"><p class="font-weight-bold mark">clues: <u>from</u> something <u>to</u> another </p></dd>
                                 </dl>
                             </div>
                         </div>
@@ -367,20 +370,8 @@
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[3]}}</i> </dt>
-                                <dd class="col-sm-10">: continues doing something  
-                                <p class="font-weight-bold mark">clues: trying / even / impossible</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q555[0]}}</dt>
-                                <dd class="col-sm-10">: takes care of something</dd>
-
-                                <dt class="col-sm-2">{{$q555[1]}}</dt>
-                                <dd class="col-sm-10">: stops doing something</dd>
-
-                                <dt class="col-sm-2">{{$q555[2]}}</dt>
-                                <dd class="col-sm-10">: suggests a plan of action</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[0]}}</i> </dt>
+                                <dd class="col-sm-10"><p class="font-weight-bold mark">clues: <u>at</u> + 6%</p></dd>
                             </dl>
                         </div>
                     </div>
@@ -390,26 +381,37 @@
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                6. {{$q6}} <u></u> {{$q66}}
+                                6. {{$q6}} <u></u> {{$q6_6}} <u></u> {{$q66}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[1]}}</i></dt>
-                                <dd class="col-sm-10">: become adult
-                                    <p class="font-weight-bold mark">clues: immaturely</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[1]}},{{$q66_6[2]}}</i></dt>
+                                <dd class="col-sm-10">
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <strong><u>a</u></strong> significant <strong><u>fall</u></strong> + <strong><u>in</u></strong>
+                                                </li>
+                                                <li>
+                                                    the sales + <strong><u>of</u></strong> + new cars
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </dd>
 
-                                <dt class="col-sm-2">{{$q666[0]}}</dt>
-                                <dd class="col-sm-10">: omit something</dd>
+                                <dt class="col-sm-2">Vocabulary</dt>
+                                <dd class="col-sm-10"></dd>
 
-                                <dt class="col-sm-2">{{$q666[2]}}</dt>
-                                <dd class="col-sm-10">: have an argument</dd>
-
-                                <dt class="col-sm-2">{{$q666[3]}}</dt>
-                                <dd class="col-sm-10">: assume control of something</dd>
+                                <dt class="col-sm-2">recession</dt>
+                                <dd class="col-sm-10">(n) a difficult time when there is less trade than</dd>
                             </dl>
                         </div>
                     </div>
@@ -426,19 +428,8 @@
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[2]}}</i> </dt>
-                                <dd class="col-sm-10">: stopped doing something
-                                    <p class="font-weight-bold mark">clues: boring / so</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q777[0]}}</dt>
-                                <dd class="col-sm-10">: had an argument</dd>
-
-                                <dt class="col-sm-2">{{$q777[1]}}</dt>
-                                <dd class="col-sm-10">: assumed control of something</dd>
-
-                                <dt class="col-sm-2">{{$q777[3]}}</dt>
-                                <dd class="col-sm-10">: suggested a plan of action</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}</i> </dt>
+                                <dd class="col-sm-10"><p class="font-weight-bold mark">clues: depends + <u>on</u></p></dd>
                             </dl>
                         </div>
                     </div>
@@ -455,19 +446,8 @@
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
-                                <dd class="col-sm-10">: suggested a plan of action
-                                    <p class="font-weight-bold mark">clues: no one / idea / until / the chairperson</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10">: took care of someone</dd>
-
-                                <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">: became adult</dd>
-
-                                <dt class="col-sm-2">{{$q888[3]}}</dt>
-                                <dd class="col-sm-10">: had an argument</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[3]}}</i> </dt>
+                                <dd class="col-sm-10"><p class="font-weight-bold mark">clues: <u>prevented</u> someone + <u>from</u> doing something</p></dd>
                             </dl>
                         </div>
                     </div>
@@ -477,26 +457,31 @@
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                9. {{$q9}} <u></u> {{$q99}}
+                                9. {{$q9}} <u></u> {{$q9_9}} <u></u> {{$q99}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[3]}}</i> </dt>
-                                <dd class="col-sm-10">: reduce something 
-                                    <p class="font-weight-bold mark">clues: cough / bad / the number of cigarettes</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[1]}},{{$q99_9[0]}}</i> </dt>
+                                <dd class="col-sm-10">
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    a substantial <strong><u>growth</u></strong> + <strong><u>in</u></strong>
+                                                </li>
+                                                <li>
+                                                    the number <strong><u>of</u></strong> something
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </dd>
-
-                                <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">: take care of someone</dd>
-
-                                <dt class="col-sm-2">{{$q999[1]}}</dt>
-                                <dd class="col-sm-10">: stop doing something</dd>
-
-                                <dt class="col-sm-2">{{$q999[2]}}</dt>
-                                <dd class="col-sm-10">: omit something </dd>
                             </dl>
                         </div>
                     </div>
@@ -506,26 +491,37 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10. {{$q10}} <u></u> {{$q100}}
+                            10. {{$q10}} <u></u> {{$q10_0}} <u></u> {{$q100}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[0]}}</i></dt>
-                                <dd class="col-sm-10">: assumed control of something 
-                                    <p class="font-weight-bold mark">clues: by an international conglomerate</p>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[0]}},{{$q10_00[2]}}</i></dt>
+                                <dd class="col-sm-10">
+                                    <ul class="list-unstyled mark">
+                                        <li>
+                                            <strong>clues:</strong>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <strong>the vast majority</strong> + <strong><u>of</u></strong> something
+                                                </li>
+                                                <li>
+                                                    the difficulties <strong><u>of</u></strong> something
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </dd>
 
-                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
-                                <dd class="col-sm-10">: suggested a plan of action</dd>
+                                <dt class="col-sm-2">Vocabulary</dt>
+                                <dd class="col-sm-10"></dd>
 
-                                <dt class="col-sm-2">{{$q1000[2]}}</dt>
-                                <dd class="col-sm-10">: become adult </dd>
-
-                                <dt class="col-sm-2">{{$q1000[3]}}</dt>
-                                <dd class="col-sm-10">: reduced something</dd>
+                                <dt class="col-sm-2">snail mail</dt>
+                                <dd class="col-sm-10">(n) the system of sending letters by post, as opposed to using email --- <em>used humorously</em></dd>
                             </dl>
                         </div>
                     </div>
@@ -543,28 +539,25 @@
 
 @section('js')
 <script>
-     const answers = [
-        'bring up', 
-        'look after', 
-        'fall out', 
-        'leaves out', 
-        'keeps on', 
-        'grow up', 
-        'dropped out', 
-        'put forward',
-        'cut down on', 
-        'taken over'
+    const answers = [
+        'on', 
+        'in', 
+        'between', 
+        'from', 
+        'at', 
+        'in',
+        'of',
+        'on', 
+        'from',
+        'in',
+        'of', 
+        'of',
+        'of'
     ];
     let score = 0;
     $("#show-answer").hide(true);
-
     $('#check-answer').on('click', function() {
-        
         $('select').each((idx, item) => {
-            $(item).parent().find('i').remove();
-            $(item).removeClass('border-success');
-            $(item).removeClass('border-danger');
-
             if($(item).val() == answers[idx]) {
                 $(item).addClass('border border-success');
                 $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));

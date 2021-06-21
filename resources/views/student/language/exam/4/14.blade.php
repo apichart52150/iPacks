@@ -48,7 +48,7 @@
         'First of all',
         'Example',
         'One reason',
-        'such as'
+        'Such as'
     );
     $q6 = "There are many causes of juvenile crime";
     $q66 = "boredom, poverty and drug abuse.";
@@ -87,7 +87,7 @@
     $q1000 = array(
         'So',
         'Furthermore,',
-        'grown up,',
+        'Since,',
         'While,'
     );
 @endphp
@@ -101,15 +101,15 @@
             <table class="table table-sm table-bordered text-dark">
                 <thead>
                     <tr class="text-center">
-                        <th class="font-weight-bold">Qustion</th>
-                        <th class="font-weight-bold">Answer</th>
+                        <th class="font-weight-bold">Qustions</th>
+                        <th class="font-weight-bold">Answers</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
                         <span class="font-weight-bold mr-2">1.</span>
-                        {{$q1}} _____<u></u>_____ {{$q11}}</td>
+                        {{$q1}} ___<u></u>___ {{$q11}}</td>
                         <td>
                             <select class="form-control w-auto">
                                 <option value="">-Select-</option>
@@ -123,7 +123,7 @@
                     <tr>
                         <td>
                             <span class="font-weight-bold mr-2">2.</span>
-                            {{$q2}} _____<u></u>_____ {{$q22}}
+                            {{$q2}} ___<u></u>___ {{$q22}}
                         </td>
                         <td>
                             <select class="form-control w-auto">
@@ -138,7 +138,7 @@
                     <tr>
                         <td>
                             <span class="font-weight-bold mr-2">3.</span>
-                            {{$q3}} _____<u></u>_____ {{$q33}}
+                            {{$q3}} ___<u></u>___ {{$q33}}
                         </td>
                         <td>
                             <select class="form-control w-auto">
@@ -153,7 +153,7 @@
                     <tr>
                         <td>
                             <span class="font-weight-bold mr-2">4.</span>
-                            {{$q4}} _____<u></u>_____ {{$q44}}
+                            {{$q4}} ___<u></u>___ {{$q44}}
                         </td>
                         <td>
                             <select class="form-control w-auto">
@@ -168,7 +168,7 @@
                     <tr>
                         <td>
                             <span class="font-weight-bold mr-2">5.</span>
-                            {{$q5}} _____<u></u>_____ {{$q55}}
+                            {{$q5}} ___<u></u>___ {{$q55}}
                         </td>
                         <td>
                             <select class="form-control w-auto">
@@ -184,7 +184,7 @@
                     <tr>
                         <td>
                             <span class="font-weight-bold mr-2">6.</span>
-                            {{$q6}} _____<u></u>_____ {{$q66}}
+                            {{$q6}} ___<u></u>___ {{$q66}}
                         </td>
                         <td>
                             <select class="form-control w-auto">
@@ -200,7 +200,7 @@
                     <tr>
                         <td>
                             <span class="font-weight-bold mr-2">7.</span>
-                            {{$q7}} _____<u></u>_____ {{$q77}}
+                            {{$q7}} ___<u></u>___ {{$q77}}
                         </td>
                         <td>
                             <select class="form-control w-auto">
@@ -216,7 +216,7 @@
                     <tr>
                         <td>
                             <span class="font-weight-bold mr-2">8.</span>
-                            {{$q8}} _____<u></u>_____ {{$q88}}
+                            {{$q8}} ___<u></u>___ {{$q88}}
                         </td>
                         <td>
                             <select class="form-control w-auto">
@@ -232,7 +232,7 @@
                     <tr>
                         <td>
                             <span class="font-weight-bold mr-2">9.</span>
-                            {{$q9}} _____<u></u>_____ {{$q99}}
+                            {{$q9}} ___<u></u>___ {{$q99}}
                         </td>
                         <td>
                             <select class="form-control w-auto">
@@ -248,7 +248,7 @@
                     <tr>
                         <td>
                             <span class="font-weight-bold mr-2">10.</span>
-                            {{$q10}} _____<u></u>_____ {{$q100}}
+                            {{$q10}} ___<u></u>___ {{$q100}}
                         </td>
                         <td>
                             <select class="form-control w-auto">
@@ -462,18 +462,18 @@
                         <div class="card-body">
                             <dl class="row">
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[1]}}</i></dt>
-                                <dd class="col-sm-10">: become adult
-                                    <p class="font-weight-bold mark">clues: immaturely</p>
+                                <dd class="col-sm-10">used when giving an example of something
+                                    <p class="font-weight-bold mark">clues: such as + noun 1, noun 2 and noun 3 </p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q666[0]}}</dt>
-                                <dd class="col-sm-10">: omit something</dd>
+                                <dd class="col-sm-10">(noun)</dd>
 
                                 <dt class="col-sm-2">{{$q666[2]}}</dt>
-                                <dd class="col-sm-10">: have an argument</dd>
+                                <dd class="col-sm-10">(preposition) --- <em>informal</em></dd>
 
                                 <dt class="col-sm-2">{{$q666[3]}}</dt>
-                                <dd class="col-sm-10">: assume control of something</dd>
+                                <dd class="col-sm-10">(determiner) of the same kind as the thing or a person which has already been mentioned </dd>
                             </dl>
                         </div>
                     </div>
@@ -496,7 +496,7 @@
 
                                 <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[2]}}</i></dt>
                                 <dd class="col-sm-10">: Additionally,
-                                <p class="font-weight-bold mark">clues: such as + n, n and n</p>
+                                <p class="font-weight-bold mark">clues: urban migration / attract poor people to the city areas</p>
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q777[0]}}</dt>
@@ -526,13 +526,13 @@
                                 </dd>
 
                                 <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10"> </dd>
+                                <dd class="col-sm-10">Ungrammatical (To conclude / In conclusion) </dd>
 
                                 <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">To conclude</dd>
+                                <dd class="col-sm-10">Ungrammatical (To conclude / In conclusion)</dd>
 
                                 <dt class="col-sm-2">{{$q888[3]}}</dt>
-                                <dd class="col-sm-10">To summarise</dd>
+                                <dd class="col-sm-10">Ungrammatical (To summary / In summarise) </dd>
                             </dl>
                         </div>
                     </div>
@@ -558,10 +558,10 @@
                                 <dd class="col-sm-10">used to suggest a reason <em>(noun phrase)</em></dd>
 
                                 <dt class="col-sm-2">{{$q999[2]}}</dt>
-                                <dd class="col-sm-10">contrast</dd>
+                                <dd class="col-sm-10">used to contrasting idea (clause)</dd>
 
                                 <dt class="col-sm-2">{{$q999[3]}}</dt>
-                                <dd class="col-sm-10">used to suggest a result</dd>
+                                <dd class="col-sm-10">used to suggest a result (dependent clause)</dd>
                             </dl>
                         </div>
                     </div>
