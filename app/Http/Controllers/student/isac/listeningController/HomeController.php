@@ -58,15 +58,8 @@ class HomeController extends Controller
         return view('student.isac.listening.subhome', compact('sub_menu','color'));
     }
 
-    public function audio($id){
+    public function audio($id, $name){
 
-        $audio_file = DB::table('sub_menu_lis')
-        ->select('name_audio')
-        ->where('sub_menu_type','=', $id)
-        ->get();
-
-        $file_name = $id.'/'.$audio_file[0]->name_audio;
-
-        return view('student.isac.listening.audio' ,compact('file_name',''));
+        return view('student.isac.listening.audio' ,compact('id','name'));
     }
 }
