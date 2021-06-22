@@ -503,7 +503,8 @@
                                 <dd class="col-sm-10">Ok but not the best answer --- <em>informal</em></dd>
 
                                 <dt class="col-sm-2">{{$q777[3]}}</dt>
-                                <dd class="col-sm-10">used at the end of the sentence or clause used after the subject or adverb --- <em>formal</em></dd>
+                                <dd class="col-sm-10">- used at the end of the sentence or clause 
+                                <br>- Used after the subject or adverb  --- <em>formal</em></dd>
                             </dl>
                         </div>
                     </div>
@@ -532,7 +533,7 @@
                                 <dd class="col-sm-10">Ungrammatical (To conclude / In conclusion)</dd>
 
                                 <dt class="col-sm-2">{{$q888[3]}}</dt>
-                                <dd class="col-sm-10">Ungrammatical (To summary / In summarise) </dd>
+                                <dd class="col-sm-10">Ungrammatical (To summarise / To summarize / In conclusion)  </dd>
                             </dl>
                         </div>
                     </div>
@@ -558,7 +559,7 @@
                                 <dd class="col-sm-10">used to suggest a reason <em>(noun phrase)</em></dd>
 
                                 <dt class="col-sm-2">{{$q999[2]}}</dt>
-                                <dd class="col-sm-10">used to contrasting idea (clause)</dd>
+                                <dd class="col-sm-10">used to suggest contrasting idea (clause)</dd>
 
                                 <dt class="col-sm-2">{{$q999[3]}}</dt>
                                 <dd class="col-sm-10">used to suggest a result (dependent clause)</dd>

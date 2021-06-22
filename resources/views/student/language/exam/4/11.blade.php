@@ -46,7 +46,7 @@
         'for'
     );
     $q6 = "There was a significant fall";
-    $q6_6 = "new legislation to control illegal deforestation.";
+    $q6_6 = "the sales";
     $q66 = "new cars during the recession.";
     $q666 = array(
         'off',
@@ -94,7 +94,7 @@
     );
     $q10 = "The vast majority";
     $q10_0 = "young people have never experienced the difficulties";
-    $q100 = "'snail-mail'";
+    $q100 = "'snail-mail'.";
     $q1000 = array(
         'of',
         'with',

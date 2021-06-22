@@ -341,11 +341,11 @@
                                     </dd>
 
                                     <dt class="col-sm-2">{{$q333[1]}}</dt>
-                                    <dd class="col-sm-10">s+v <strong>while</strong> s+v.
-                                    <br>used to contrast two different things or people which are supposed to be the same</dd>
+                                    <dd class="col-sm-10">s+v <strong>while</strong> s+v.</dd>
 
                                     <dt class="col-sm-2">{{$q333[2]}}</dt>
-                                    <dd class="col-sm-10">s+v <strong>whereas</strong> s+v.</dd>
+                                    <dd class="col-sm-10">s+v <strong>whereas</strong> s+v.
+                                    <br>used to contrast two different things or people which are supposed to be the same</dd>
 
                                     <dt class="col-sm-2">{{$q333[3]}}</dt>
                                     <dd class="col-sm-10">s+v <strong>but</strong> s+v.</dd>
