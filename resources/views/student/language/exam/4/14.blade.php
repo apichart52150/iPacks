@@ -504,7 +504,7 @@
 
                                 <dt class="col-sm-2">{{$q777[3]}}</dt>
                                 <dd class="col-sm-10">- used at the end of the sentence or clause 
-                                <br>- Used after the subject or adverb  --- <em>formal</em></dd>
+                                <br>- used after the subject or adverb  --- <em>formal</em></dd>
                             </dl>
                         </div>
                     </div>

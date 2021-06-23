@@ -59,7 +59,7 @@ class HomeController extends Controller
     }
 
     public function audio($id, $name){
-
+        
         return view('student.isac.listening.audio' ,compact('id','name'));
     }
 }

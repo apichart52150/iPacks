@@ -24,7 +24,9 @@
         <div class="card card-body border-top border-info border border-1 ">
             <audio src="{{asset('public/isac_listening/'.$id.'/'.$name)}}" controlslist="nodownload" controls="" class="m-auto w-100"></audio>
         </div>
-        <a href="{{url('/isac/listening')}}" class="btn btn-primary waves-effect waves-light">Back</a>
+        <form>
+            <input type="button" class="btn btn-primary waves-effect waves-light" value="Back to Unit Menu" onclick="history.back()">
+        </form>
     </div>
 </div>
 <!-- end row -->
