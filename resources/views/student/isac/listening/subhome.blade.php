@@ -8,10 +8,10 @@
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('/isac/listening') }}">Home</a></li>
                         <!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
-                        <li class="breadcrumb-item active">iSAC Listening</li>
+                        <li class="breadcrumb-item active">{{$main->menu_name}}</li>
                     </ol>
                 </div>
-                <h4 class="page-title">iSAC Listening</h4>
+                <h4 class="page-title">{{$main->menu_name}}</h4>
             </div>
         </div>
     </div>

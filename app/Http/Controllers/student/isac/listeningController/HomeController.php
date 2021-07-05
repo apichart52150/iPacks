@@ -40,6 +40,12 @@ class HomeController extends Controller
     }
 
     public function submenu(Request $request){
+
+        $main = DB::table('menu_lis')
+        ->select('menu_name')
+        ->where('menu_id', '=',  $request->input('type'))
+        ->first();
+
         $sub_menu = DB::table('sub_menu_lis')
         ->select('*')
         ->where('sub_menu_type','=', $request->input('main_menu'))
@@ -55,7 +61,8 @@ class HomeController extends Controller
             $color = "pink";
         }
         // dd($sub_menu );
-        return view('student.isac.listening.subhome', compact('sub_menu','color'));
+        
+        return view('student.isac.listening.subhome', compact('sub_menu','color','main'));
     }
 
     public function audio($id, $name){
