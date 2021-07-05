@@ -5,7 +5,7 @@
 }
 </style>
 @php
-    $q1 = "We don't have the right tools for the job so we'll jut have to";
+    $q1 = "We don't have the right tools for the job so we'll just have to";
     $q11 = "what we've got.";
     $q111 = array(
         'get over',
@@ -93,10 +93,10 @@
                 {{$pageTitle['topic']}}
             </p>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
                 {{$q1}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q111[0]}}">{{$q111[0]}}</option>
                     <option value="{{$q111[1]}}">{{$q111[1]}}</option>
@@ -560,7 +560,7 @@
     $("#show-answer").hide(true);
 
     $('#check-answer').on('click', function() {
-        
+
         $('select').each((idx, item) => {
             $(item).parent().find('i').remove();
             $(item).removeClass('border-success');
@@ -575,6 +575,8 @@
                 $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
             }
         })
+
+
 
         $('a u').each((idx, item) => {
             if($(item).val() == answers[idx]) {
@@ -604,6 +606,6 @@
             x.style.display = "none";
         }
     });
-   
+
 </script>
 @stop
