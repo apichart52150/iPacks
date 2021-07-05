@@ -11,10 +11,10 @@
                 {{$pageTitle['topic']}}
             </p>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
                 There are a number of
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="advantages">advantages</option>
                     <option value="benefits">benefits</option>
@@ -23,10 +23,10 @@
                 that you can claim if you are disabled.
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
                 There are a number of diseases
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="related">related</option>
                     <option value="occurred">occurred</option>
@@ -35,10 +35,10 @@
                 to industrial production.
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
                 The young man was arrested and imprisoned for
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="doing">doing</option>
                     <option value="creating">creating</option>
@@ -47,10 +47,10 @@
                 a series of crimes.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
                 On being found guilty, the man was
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="committed">committed</option>
                     <option value="commuted">commuted</option>
@@ -59,10 +59,10 @@
                 to death for the murder of his spouse.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
                 A great deal of medical research has been
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="carried">carried</option>
                     <option value="conducted">conducted</option>
@@ -71,10 +71,10 @@
                 recently.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
                 The police arrested the suspect and took him into
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="custody">custody</option>
                     <option value="care">care</option>
@@ -83,10 +83,10 @@
                 until the trial.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
                 Experts are trying to
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="see">see</option>
                     <option value="assess">assess</option>
@@ -95,10 +95,10 @@
                 the impact of the oil spill on the local environment.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
                 At the end of the day, you'll need to 
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="make">make</option>
                     <option value="decide">decide</option>
@@ -107,10 +107,10 @@
                 a decision on the issue of global warming.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
                 The government has implemented a 
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="differing">differing</option>
                     <option value="divided">divided</option>
@@ -119,10 +119,10 @@
                 range of measures to tackle global warming.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
                 A lot more needs to be done to 
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="tackle">tackle</option>
                     <option value="deal">deal</option>

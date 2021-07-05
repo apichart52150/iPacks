@@ -11,10 +11,10 @@
                 {{$pageTitle['topic']}}
             </p>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
                 Unemployment figures for the three countries stood at 6%, 10% and 12%
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="*">respectfully</option>
                     <option value="respectively">respectively</option>
@@ -23,10 +23,10 @@
                 .
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
                 An
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">analyze</option>
                     <option value="analysis">analysis</option>
@@ -35,10 +35,10 @@
                 of data from recent research shows that global warming is accelerating.
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
                 The government has
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">respond</option>
                     <option value="B">responding</option>
@@ -47,10 +47,10 @@
                 by increasing research funding in this area.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
                 The monthly
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="variation">variation</option>
                     <option value="B">varied</option>
@@ -59,10 +59,10 @@
                 in rainfall is quite astonishing.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
                 Cars with smaller engine sizes tend to be far more
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">economy</option>
                     <option value="*">economic</option>
@@ -71,10 +71,10 @@
                 than those with larger engines.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
                 More recent studies
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="indicate">indicate</option>
                     <option value="B">indicating</option>
@@ -83,10 +83,10 @@
                 that there is a correlation between juvenile crime and unemployment.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
                 The link between juvenile crime and drug abuse cannot be 
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">deny</option>
                     <option value="B">denying</option>
@@ -95,10 +95,10 @@
                .
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
                 It's important for children to have a room of
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="*">they're</option>
                     <option value="their">their</option>
@@ -107,10 +107,10 @@
                 own.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
                 The most recent
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">assess</option>
                     <option value="B">assessing</option>
@@ -119,10 +119,10 @@
                 of the situation seems to indicate the situation is deteriorating.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
                 It has been proved by research that less sleep can be
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">advantage</option>
                     <option value="B">advantages</option>

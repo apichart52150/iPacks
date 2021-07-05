@@ -11,9 +11,9 @@
                 {{$pageTitle['topic']}}
             </p>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="Perjury">Perjury</option>
                     <option value="Arson">Arson</option>
@@ -23,9 +23,9 @@
                 is when you intentionally set fire to a building.
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="Perjury">Perjury</option>
                     <option value="Treason">Treason</option>
@@ -35,9 +35,9 @@
                 is when you betray your country e.g. by selling national secrets.
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="Shoplifting">Shoplifting</option>
                     <option value="Burglary ">Burglary </option>
@@ -47,9 +47,9 @@
                 is when you steal things from a department store.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="Fraud">Fraud</option>
                     <option value="mugging">Mugging</option>
@@ -59,9 +59,9 @@
                 is when you 'cook the books' at work to steal money from your employer.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="mugging">Mugging</option>
                     <option value="Fraud">Fraud</option>
@@ -71,9 +71,9 @@
                 is when someone breaks into a building to steal items.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="Embezzlement">Embezzlement</option>
                     <option value="imposter">Imposter</option>
@@ -83,9 +83,9 @@
                 is when you assume someone else's identity, usually to steal money.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="Arson">Arson</option>
                     <option value="Perjury">Perjury</option>
@@ -95,9 +95,9 @@
                 is when you tell lies in the courtroom when you have taken an oath to tell the truth.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="Manslaughter">Manslaughter</option>
                     <option value="hi-jacking">Hi-jacking</option>
@@ -107,9 +107,9 @@
                 is when someone kills an important person, e.g. a king.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="self-defence">Self-defence</option>
                     <option value="murder">Murder</option>
@@ -119,9 +119,9 @@
                 is when you kill someone unintentionally e.g. in a car accident.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="Bigamy">Bigamy</option>
                     <option value="Fraud">Fraud</option>

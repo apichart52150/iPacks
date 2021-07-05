@@ -11,10 +11,10 @@
                 {{$pageTitle['topic']}}
             </p>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
                 There has been a
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="dramatic">dramatic</option>
                     <option value="B">dramatical</option>
@@ -23,10 +23,10 @@
                fall in the price of new houses this year.
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
                 There has been a substantial
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">raise</option>
                     <option value="rise">rise</option>
@@ -35,10 +35,10 @@
                in interest rates so far this month.
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
                 The
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">successful</option>
                     <option value="B">succeed</option>
@@ -47,10 +47,10 @@
                of this campaign can be attributed to hardwork and perseverance.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
                 There's not much point in
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">application</option>
                     <option value="B">apply</option>
@@ -59,10 +59,10 @@
                for the job if you're not really intersted in taking it.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
                 Smoking in public is a
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">controversy</option>
                     <option value="controversial">controversial</option>
@@ -71,10 +71,10 @@
                issue.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
                 Keyhole surgery is an example of 
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">minimize</option>
                     <option value="B">minimal</option>
@@ -83,10 +83,10 @@
                invasive surgery.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
                 There has been a marked
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">improve</option>
                     <option value="B">improved</option>
@@ -95,10 +95,10 @@
                in his grades since he started going to bed earlier.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
                 In spite of the
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="deecrease">deecrease</option>
                     <option value="B">deecreased</option>
@@ -107,10 +107,10 @@
                in interest rates, the housing market has failed to regenerate.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
                 Computers are a relatively new invention: the prototype was 
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">building</option>
                     <option value="B">build</option>
@@ -119,10 +119,10 @@
                just a few decades ago.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
                 We have become very
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="A">depends</option>
                     <option value="B">depending</option>

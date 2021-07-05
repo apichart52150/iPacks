@@ -102,7 +102,7 @@
                 <thead>
                     <tr class="text-center">
                         <th class="font-weight-bold">Qustions</th>
-                        <th class="font-weight-bold">Answers</th>
+                        <th class="font-weight-bold w-25">Answers</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -111,7 +111,7 @@
                         <span class="font-weight-bold mr-2">1.</span>
                         {{$q1}} ___<u></u>___ {{$q11}}</td>
                         <td>
-                            <select class="form-control w-auto">
+                            <select class="form-control w-100">
                                 <option value="">-Select-</option>
                                 <option value="{{$q111[0]}}">{{$q111[0]}}</option>
                                 <option value="{{$q111[1]}}">{{$q111[1]}}</option>
@@ -126,7 +126,7 @@
                             {{$q2}} ___<u></u>___ {{$q22}}
                         </td>
                         <td>
-                            <select class="form-control w-auto">
+                            <select class="form-control w-100">
                                 <option value="">-Select-</option>
                                 <option value="{{$q222[0]}}">{{$q222[0]}}</option>
                                 <option value="{{$q222[1]}}">{{$q222[1]}}</option>
@@ -141,7 +141,7 @@
                             {{$q3}} ___<u></u>___ {{$q33}}
                         </td>
                         <td>
-                            <select class="form-control w-auto">
+                            <select class="form-control w-100">
                                 <option value="">-Select-</option>
                                 <option value="{{$q333[0]}}">{{$q333[0]}}</option>
                                 <option value="{{$q333[1]}}">{{$q333[1]}}</option>
@@ -156,7 +156,7 @@
                             {{$q4}} ___<u></u>___ {{$q44}}
                         </td>
                         <td>
-                            <select class="form-control w-auto">
+                            <select class="form-control w-100">
                                 <option value="">-Select-</option>
                                 <option value="{{$q444[0]}}">{{$q444[0]}}</option>
                                 <option value="{{$q444[1]}}">{{$q444[1]}}</option>
@@ -171,7 +171,7 @@
                             {{$q5}} ___<u></u>___ {{$q55}}
                         </td>
                         <td>
-                            <select class="form-control w-auto">
+                            <select class="form-control w-100">
                                 <option value="">-Select-</option>
                                 <option value="{{$q555[0]}}">{{$q555[0]}}</option>
                                 <option value="{{$q555[1]}}">{{$q555[1]}}</option>
@@ -187,7 +187,7 @@
                             {{$q6}} ___<u></u>___ {{$q66}}
                         </td>
                         <td>
-                            <select class="form-control w-auto">
+                            <select class="form-control w-100">
                                 <option value="">-Select-</option>
                                 <option value="{{$q666[0]}}">{{$q666[0]}}</option>
                                 <option value="{{$q666[1]}}">{{$q666[1]}}</option>
@@ -203,7 +203,7 @@
                             {{$q7}} ___<u></u>___ {{$q77}}
                         </td>
                         <td>
-                            <select class="form-control w-auto">
+                            <select class="form-control w-100">
                                 <option value="">-Select-</option>
                                 <option value="{{$q777[0]}}">{{$q777[0]}}</option>
                                 <option value="{{$q777[1]}}">{{$q777[1]}}</option>
@@ -219,7 +219,7 @@
                             {{$q8}} ___<u></u>___ {{$q88}}
                         </td>
                         <td>
-                            <select class="form-control w-auto">
+                            <select class="form-control w-100">
                                 <option value="">-Select-</option>
                                 <option value="{{$q888[0]}}">{{$q888[0]}}</option>
                                 <option value="{{$q888[1]}}">{{$q888[1]}}</option>
@@ -235,7 +235,7 @@
                             {{$q9}} ___<u></u>___ {{$q99}}
                         </td>
                         <td>
-                            <select class="form-control w-auto">
+                            <select class="form-control w-100">
                                 <option value="">-Select-</option>
                                 <option value="{{$q999[0]}}">{{$q999[0]}}</option>
                                 <option value="{{$q999[1]}}">{{$q999[1]}}</option>
@@ -251,7 +251,7 @@
                             {{$q10}} ___<u></u>___ {{$q100}}
                         </td>
                         <td>
-                            <select class="form-control w-auto">
+                            <select class="form-control w-100">
                                 <option value="">-Select-</option>
                                 <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
                                 <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>

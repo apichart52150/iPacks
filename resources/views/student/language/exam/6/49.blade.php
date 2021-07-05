@@ -11,10 +11,10 @@
                 {{$pageTitle['topic']}}
             </p>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
                 He was sent to prison for
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="">doing</option>
                     <option value="committing">committing</option>
@@ -24,10 +24,10 @@
                 a serious crime.
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
                 He was found
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="">innocent</option>
                     <option value="">not innocent</option>
@@ -37,10 +37,10 @@
                 and sentenced to life in prison.
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
                 The
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="">defence</option>
                     <option value="prosecution">prosecution</option>
@@ -50,10 +50,10 @@
                 asked the judge to hand out a long prison sentence.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
                 He was sentenced to death but this was later
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="condemned">condemned</option>
                     <option value="">carried out</option>
@@ -63,10 +63,10 @@
                 to life imprisonment.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
                 The man was
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="acquitted">acquitted</option>
                     <option value="">sentenced</option>
@@ -76,10 +76,10 @@
                 because of a lack of evidence.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
                 The
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="">judge</option>
                     <option value="">prosecution</option>
@@ -89,10 +89,10 @@
                 was asked to come up with a speedy verdict.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
                 The chief witness was accused of
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="">crime</option>
                     <option value="perjury">perjury</option>
@@ -102,10 +102,10 @@
                 because the evidence he gave was not true.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
                 The 
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="">prosecution</option>
                     <option value="">judge</option>
@@ -115,10 +115,10 @@
                 called on a number of character witnesses to speak in favour of the defendant.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
                 Since the crime was not considered serious, the judge gave the defendant a  
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="fine">fine</option>
                     <option value="">death sentence</option>
@@ -128,10 +128,10 @@
                .
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
                 Before the witness gave
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="">proof</option>
                     <option value="">sentence</option>

@@ -116,10 +116,10 @@
                 {{$pageTitle['topic']}}
             </p>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
                 {{$q1}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q111[0]}}">{{$q111[0]}}</option>
                     <option value="{{$q111[1]}}">{{$q111[1]}}</option>
@@ -129,10 +129,10 @@
                 {{$q11}}
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
                 {{$q2}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q222[0]}}">{{$q222[0]}}</option>
                     <option value="{{$q222[1]}}">{{$q222[1]}}</option>
@@ -142,10 +142,10 @@
                 {{$q22}}
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
                 {{$q3}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q333[0]}}">{{$q333[0]}}</option>
                     <option value="{{$q333[1]}}">{{$q333[1]}}</option>
@@ -155,10 +155,10 @@
                 {{$q33}}
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
                 {{$q4}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q444[0]}}">{{$q444[0]}}</option>
                     <option value="{{$q444[1]}}">{{$q444[1]}}</option>
@@ -168,10 +168,10 @@
                 {{$q44}}
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
                 {{$q5}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q555[0]}}">{{$q555[0]}}</option>
                     <option value="{{$q555[1]}}">{{$q555[1]}}</option>
@@ -181,10 +181,10 @@
                 {{$q55}}
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
                 {{$q6}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q666[0]}}">{{$q666[0]}}</option>
                     <option value="{{$q666[1]}}">{{$q666[1]}}</option>
@@ -192,7 +192,7 @@
                     <option value="{{$q666[3]}}">{{$q666[3]}}</option>
                 </select>
                 {{$q6_6}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q66_6[0]}}">{{$q66_6[0]}}</option>
                     <option value="{{$q66_6[1]}}">{{$q66_6[1]}}</option>
@@ -202,10 +202,10 @@
                 {{$q66}}
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
                 {{$q7}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q777[0]}}">{{$q777[0]}}</option>
                     <option value="{{$q777[1]}}">{{$q777[1]}}</option>
@@ -215,10 +215,10 @@
                 {{$q77}}
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
                 {{$q8}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q888[0]}}">{{$q888[0]}}</option>
                     <option value="{{$q888[1]}}">{{$q888[1]}}</option>
@@ -228,10 +228,10 @@
                 {{$q88}}
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
                 {{$q9}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q999[0]}}">{{$q999[0]}}</option>
                     <option value="{{$q999[1]}}">{{$q999[1]}}</option>
@@ -239,7 +239,7 @@
                     <option value="{{$q999[3]}}">{{$q999[3]}}</option>
                 </select>
                 {{$q9_9}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q99_9[0]}}">{{$q99_9[0]}}</option>
                     <option value="{{$q99_9[1]}}">{{$q99_9[1]}}</option>
@@ -249,10 +249,10 @@
                 {{$q99}}
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
                 {{$q10}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
                     <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
@@ -260,7 +260,7 @@
                     <option value="{{$q1000[3]}}">{{$q1000[3]}}</option>
                 </select>
                 {{$q10_0}}
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q10_00[0]}}">{{$q10_00[0]}}</option>
                     <option value="{{$q10_00[1]}}">{{$q10_00[1]}}</option>

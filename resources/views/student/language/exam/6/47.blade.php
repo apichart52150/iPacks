@@ -11,10 +11,10 @@
                 {{$pageTitle['topic']}}
             </p>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
                 The idiom '
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="Nescafe">Nescafe</option>
                     <option value="Treacle">Treacle</option>
@@ -24,10 +24,10 @@
                 is thicker than water' means that family is more important than friends.
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
                 A family in which many generations live together is known as an
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="extra big">extra big</option>
                     <option value="traditional">traditional</option>
@@ -37,10 +37,10 @@
                 family.
             </div>
             
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
                 A family consisting of just the parents and a couple of children is referred to as a
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="extended">extended</option>
                     <option value="traditional">traditional</option>
@@ -50,10 +50,10 @@
                 family.
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
                 A woman whose husband has died is called a 
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="widow">widow</option>
                     <option value="fiancee">fiancee</option>
@@ -63,10 +63,10 @@
                 .
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
                 What do we call the money or gifts which one partner hands to the other party at the marriage.
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="duty">duty</option>
                     <option value="dowry">dowry</option>
@@ -75,10 +75,10 @@
                 </select>
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
                 What do we call the man who is getting married?
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="groom">groom</option>
                     <option value="bridegroom">bridegroom</option>
@@ -87,10 +87,10 @@
                 </select>
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
                 If your father marries a new wife (not your own mother), what is her relationship to you?
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="aunty">aunty</option>
                     <option value="half-sister">half-sister</option>
@@ -99,10 +99,10 @@
                 </select>
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
                 What do we call a man who has two wives?
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="a happy">a happy man</option>
                     <option value="misogynist">misogynist</option>
@@ -111,10 +111,10 @@
                 </select>
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
                 Having many wives is called 
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="polyandry">polyandry</option>
                     <option value="polygamy">polygamy</option>
@@ -124,10 +124,10 @@
                 .
             </div>
 
-            <div class="d-flex align-items-center mb-2">
+            <div class="mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
                 What do we call it when two people live together as husband and wife before they get married?
-                <select class="form-control w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="engagement">engagement</option>
                     <option value="betrothal">betrothal</option>
