@@ -2,12 +2,12 @@
 
 
 // ==================== Routes User ====================== //
-Route::get('/', function() {
-    if(Auth::guard('student')->check()) {
-        return redirect('user_home');
-    }
-    return redirect('user_login');
-});
+	Route::get('/', function() {
+		if(Auth::guard('student')->check()) {
+			return redirect('user_home');
+		}
+		return redirect('user_login');
+	});
 
 	Route::get('user_login', 'Session\LoginStdController@index')->name('user_login');
 	Route::post('fn_login', 'Session\LoginStdController@fn_login')->name('fn_login');
