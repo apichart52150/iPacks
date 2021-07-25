@@ -33,6 +33,7 @@
 
     <body class="center-menu">
         <!-- Navigation Bar-->
+        
         <header id="topnav">
             <!-- Topbar Start -->
             <div class="navbar-custom">
@@ -100,6 +101,8 @@
             </div>
             <!-- end Topbar -->
 
+            @if(Auth::user()->std_condition == 1)
+
             <div class="topbar-menu">
                 <div class="container-fluid">
                     <div id="navigation">
@@ -154,7 +157,29 @@
                 <!-- end container -->
             </div>
             <!-- end navbar-custom -->
+            @else
+            <div class="topbar-menu">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
 
+                            <li class="has-submenu">
+                                <a href="{{url('/')}}">
+                                    <i class="mdi mdi-home"></i>Home<div class="arrow-down"></div>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- End navigation menu -->
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- end #navigation -->
+                </div>
+                <!-- end container -->
+            </div>
+            @endif
         </header>
         <!-- End Navigation Bar-->
         <!-- ============================================================== -->

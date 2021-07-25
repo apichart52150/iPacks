@@ -13,34 +13,10 @@ class StudentController extends Controller {
 	public function index() {
 
         $student = DB::table('student')
-        ->leftJoin('class_student', 'student.std_id', '=', 'class_student.std_id')
-        ->leftJoin('class', 'class_student.nccode', '=', 'class.nccode')
-        ->leftJoin('course', 'class.courseid', '=', 'course.courseid')
-        ->select('student.*','class_student.nccode','class.lastdate','class.courseid','course.coursename')
-        ->where('class.lastdate','>',date('Y-m-d'))
-        ->orderBy('student.updated_at','DESC')
+        ->select('*')
         ->get();
-
-        $course = DB::table('course')
-       ->join('class','course.courseid', '=', 'class.courseid')
-       ->where('class.lastdate', '>',date('Y-m-d'))
-       ->select('course.courseid','course.coursename','class.nccode','class.startdate','class.lastdate')
-       ->orderBy('class.created_at', 'desc')
-       ->get();
-
-        $club_type  = DB::table('club_room')
-        ->join('club_subtitle', 'club_subtitle.id', '=', 'club_room.subtitle_id')
-        ->join('club_type', 'club_type.id', '=', 'club_subtitle.type_id')
-        ->select('club_room.*','club_type.title_type','club_subtitle.title')
-        ->get();
-
-        $data = [
-			'student' => $student,
-			'course' => $course,
-            'club_type' => $club_type
-		];
        
-        return view('admin.student', compact('data'));
+        return view('admin.student', compact('student'));
     }
 
     public function create($status=null)
@@ -63,29 +39,20 @@ class StudentController extends Controller {
         ->where('std_username', '=', $request->std_username)
         ->get();
 
-        $class_student = DB::table('class')
-        ->select('id')
-        ->where('nccode', '=', $request->coursetype)
-        ->get();
-
         $row_student = count($student);
 
         if($row_student == 0){
 
-            DB::table('student')->insert(
-            ['coursetype' => $class_student[0]->id, 'std_username' => $request->std_username, 'std_password' => md5($request->std_password), 'std_name' => $request->std_name, 'std_nickname' => $request->std_nickname, 'std_point' => $request->std_point, 'std_bonus' => $request->std_bonus, 'std_mobile' => $request->std_mobile , 'std_pointsac' => $request->std_pointsac,'std_pointspeaking' => $request->std_pointspeaking]
+            DB::table('student')->insert([
+                'std_username' => $request->std_username, 
+                'std_password' => md5($request->std_mobile), 
+                'std_name' => $request->std_name,
+                'std_nickname' => $request->std_nickname, 
+                'std_mobile' => $request->std_mobile , 
+                'std_pointsac' => $request->std_pointsac,
+                'std_pointspeaking' => $request->std_pointspeaking]
             );
-
-            $data = DB::table('student')
-            ->select('*')
-            ->where('std_username', '=',$request->std_username)
-            ->limit(1)
-            ->get();
-
-            DB::table('class_student')->insert(
-                ['std_id' => $data['0']->std_id, 'nccode' => $request->coursetype]
-            );
-
+        
             session()->flash('success_ans','<div class="alert alert-success" role="alert">
             <i class="fas fa-check-circle mr-2"></i><strong>Add Student Success</strong></div>'); 
 

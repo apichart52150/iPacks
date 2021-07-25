@@ -80,30 +80,18 @@
                     <tr>
                         <th class="min-width">Id</th>
                         <th data-sort-initial="true" data-toggle="true">Username</th>
-                        <th class="min-width">Tel</th>
-                        <th class="min-width">iSAC_W</th>
-                        <th class="min-width">iSAC_S</th>
-                        <th class="min-width">Status</th>
-                        <th class="min-width">Manage : </th>
+                        <th>Mobile</th>
+                        <th>Manage : </th>
                     </tr>
                     </thead>
                     <tbody>
 
-                    @foreach($data['student'] as $key => $row)
+                    @foreach($student as $key => $row)
                         <tr>
                             <td>{{$row->std_id}}</td>
                             <td><a href="#">{{$row->std_username}}</a></td>
                             <td>{{ $row->std_mobile }}</td>
-                            <td>{{ $row->std_pointsac }}</td><!-- iSAC_W -->
-                            <td>{{ $row->std_pointspeaking }}</td><!-- SAC_S -->
 
-                            <?php $lastdate=$row->lastdate.'23:59:59';?>
-                            @if( strtotime($lastdate) >= strtotime(Carbon\Carbon::now()) )
-                                <td><span class="badge label-table badge-success p-1">ใช้งาน</span></td>
-                            @else
-                                <td><span class="badge label-table badge-danger p-1">หมดอายุ</span></td>
-                            @endif
-                            
                             <td>
                                 <div class="d-flex flex-row">
                                     <a href="{{url('edit/'.$row->std_id)}}" class="btn btn-info btn-xs mr-1">Edit</a>
@@ -122,5 +110,65 @@
         </div> <!-- end col -->
     </div>
     <!-- end row -->
+    <div class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Add new User</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				</div>
+				<div class="modal-body p-4">
+
+                <form class="form-horizontal" role="form" action="addstudent" method="POST">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="std_username">Username</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="std_username" name="std_username">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="std_mobile">Mobile</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="std_mobile" name="std_mobile">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Full Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="std_name">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Nickname</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="std_nickname">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">iSAC Writing</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="std_pointsac">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">iSAC Speaking</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="std_pointspeaking">
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <a href="{{url('clubs/student')}}" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
+                        <button type="submit" class="btn btn-info waves-effect waves-light">Add</button>
+                    </div>
+                </form>
+				</div>
+			</div>
+		</div>
+	</div><!-- /.modal -->
 
 @endsection

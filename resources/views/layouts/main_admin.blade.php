@@ -9,8 +9,18 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{ asset('public/assets/images/favicon.ico') }}">
 
+        <!-- third party css -->
+        <link href="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/libs/datatables/responsive.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/libs/datatables/buttons.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/libs/datatables/select.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+        <!-- third party css end -->
+
         <!-- Custom box css -->
         <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
+
+        <!-- Footable css -->
+        <link href="{{ asset('public/assets/libs/footable/footable.core.min.css') }}" rel="stylesheet" type="text/css" />
 
         <!-- App css -->
         <link href="{{ asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
@@ -43,7 +53,7 @@
 
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="{{ asset('public/assets/images/user.png') }}" alt="user-image" class="rounded-circle">
+                                <img src="{{ asset('public/assets/images/users/useradmin.png') }}" alt="user-image" class="rounded-circle">
                                 <span class="pro-user-name ml-1">
                                     {{ Auth::user()->name }} <i class="mdi mdi-chevron-down"></i> 
                                 </span>
@@ -100,12 +110,12 @@
         <!-- ============================================================== -->
 
         <div class="wrapper">
-            <div class="container-fluid">
+        <div class="container-fluid">
            
-                @yield('page-title')
-            
-                @yield('content')
-            </div>
+            @yield('page-title')
+           
+            @yield('content')
+          
         </div>
 
         <!-- end wrapper -->
@@ -126,8 +136,37 @@
         <!-- End Page content -->
         <!-- ============================================================== -->
     
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
+
+        <!-- third party js -->
+        <script src="{{ asset('public/assets/libs/datatables/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.responsive.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/responsive.bootstrap4.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.buttons.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/buttons.bootstrap4.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/buttons.html5.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/buttons.flash.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/buttons.print.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.keyTable.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.select.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/pdfmake/pdfmake.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/pdfmake/vfs_fonts.js') }}"></script>
+        <!-- third party js ends -->
+
+        <!-- Datatables init -->
+        <script src="{{ asset('public/assets/js/pages/datatables.init.js') }}"></script>
+
+        <!-- Footable js -->
+        <script src="{{ asset('public/assets/libs/footable/footable.all.min.js') }}"></script>
+
+        <!-- Init js -->
+        <script src="{{ asset('public/assets/js/pages/foo-tables.init.js') }}"></script>
+
 
     </body>
 </html>

@@ -41,7 +41,7 @@
 
 </style>
 
-
+@if(Auth::user()->std_condition == 1)
 <div class="row d-flex justify-content-center">
     <div class="col-xl-3 col-md-6">
         <a href="{{ url('isac/listening') }}" class="wave-light">
@@ -157,7 +157,6 @@
     </div><!-- end col -->
 </div>
 
-
 <div class="row">
     <div class="col-xl-6 col-md-6 col-sm-12">
         <a href="{{url('language/home')}}">
@@ -195,5 +194,44 @@
         </a>
     </div><!-- end col -->
 </div>
+@else
+<div class="row d-flex justify-content-center">
+    <div class="col-xl-6 col-sm-12">
+        <a href="{{ url('isac/listening') }}" class="wave-light">
+            <div class="card-box widget-icon bg-danger">
+                <div class="avatar-lg float-left">
+                    <div class="hover-scale">
+                        <div class="widget-simple">
+                            <i class=" fas fa-volume-up avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="wid-icon-info text-right">
+                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h4 class="text-light mb-1">Listening</h4>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-xl-6 col-sm-12">
+        <a href="{{url('language/home')}}">
+            <div class="card-box widget-icon bg-pink">
+                <div class="avatar-lg float-left">
+                    <div class="hover-scale">
+                        <div class="widget-simple">
+                            <i class="fas fa-eye avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h4 class="text-light mb-1">Language Use</h4>
+                </div>
+            </div>
+        </a>
+    </div><!-- end col -->
+</div>
+@endif
 @endsection
 
