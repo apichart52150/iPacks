@@ -16,31 +16,14 @@
                     <div class="col-md-6">
                         <p class="text-muted font-15"><strong>Mobile :</strong><span class="m-l-15">{{Auth::user()->std_mobile}}</span></p>
                     </div>
-                    <div class="col-md-6">
-                        <p class="text-muted font-15"><strong>Course :</strong> <span class="m-l-15">{{\App\Model\Profile::getProfile()->coursename}}</span></p>
-                    </div>
                 </div>
 
                 <hr>
 
                 <div class="text-left m-t-20 row">
-            
                     <div class="col-md-6">
-                        <p class="text-muted font-16"><strong>Writing Point :</strong> <span class="badge badge-primary p-1">{{Auth::user()->std_pointsac}} Point</span></p>
-                    </div>
-
-                    <div class="col-md-6">
-                        <p class="text-muted font-16"><strong>Speaking Point :</strong> <span class="badge badge-success p-1">{{Auth::user()->std_pointspeaking}} Point</span></p>
-                    </div>
-                </div>
-
-                <div class="text-left m-t-20 row">
-            
-                    <div class="col-md-6">
-                        <p class="text-muted font-16"><strong>Bonus & Club :</strong> <span class="badge badge-info p-1">{{Auth::user()->std_point}} Point</span></p>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="text-muted font-16"><strong>Expire Date :</strong> <span class="badge badge-danger p-1">{{\App\Model\Profile::getProfile()->lastdate}}</span></p>
+                        <p class="text-muted font-16"><strong>Expire Date :</strong> <span class="badge badge-danger p-1">20 Aug 2021 </span></p>
+                        <p class="text-muted font-16"><strong>Expire Time :</strong> <span class="badge badge-danger p-1">23:59:59 น.</span></p>
                     </div>
                 </div>
 
