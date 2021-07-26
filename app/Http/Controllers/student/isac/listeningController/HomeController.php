@@ -40,10 +40,9 @@ class HomeController extends Controller
     }
 
     public function submenu(Request $request){
-
         $main = DB::table('menu_lis')
         ->select('menu_name')
-        ->where('menu_id', '=',  $request->input('type'))
+        ->where('menu_id', '=',  $request->input('main_menu'))
         ->first();
 
         $sub_menu = DB::table('sub_menu_lis')
@@ -51,18 +50,30 @@ class HomeController extends Controller
         ->where('sub_menu_type','=', $request->input('main_menu'))
         ->get();
 
+
+
         if($request->input('type') == '1'){
-            $color = "info";
+            $data = array(
+                'color' => "info", 
+                'sub_menu' => "Language Drills Practice"
+            );
         }elseif ($request->input('type') == '2'){
-            $color = "warning";
+            $data = array(
+                'color' => "waning", 
+                'sub_menu' => "NC Listening Test"
+            );
         }elseif($request->input('type') == '3'){
-            $color = "danger";
+            $data = array(
+                'color' => "danger", 
+                'sub_menu' => "Active Listening"
+            );
         }else{
-            $color = "pink";
+            $data = array(
+                'color' => "pink", 
+                'sub_menu' => "Challenges Practice"
+            );
         }
-        // dd($sub_menu );
-        
-        return view('student.isac.listening.subhome', compact('sub_menu','color','main'));
+        return view('student.isac.listening.subhome', compact('sub_menu','data','main'));
     }
 
     public function audio($id, $name){
