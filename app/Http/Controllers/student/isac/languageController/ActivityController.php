@@ -24,6 +24,7 @@ class ActivityController extends Controller
         $sub_menu = DB::table('sub_menu_language')
         ->where('sub_menu_type','=', $sub_topic)
         ->select('sub_menu_name', 'sub_menu_id')
+        ->orderBy('sub_menu_id', 'asc')
         ->get();
 
         $menu = DB::table('menu_language')

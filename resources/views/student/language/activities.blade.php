@@ -40,9 +40,11 @@
             <div class="card-box border border-{{ $activities['color'] }}">
                 <div class="d-flex justify-content-center align-items-center flex-wrap">
                 @foreach($activities['activities'] as $key => $activity)
-                    <div class="col-xl-3 col-md-6 col-sm-12">
-                        <a href="{{ url('language/'.$activities['category'].'/'.$activity->sub_menu_id.'/'.$activity->sub_menu_id) }}" class="btn btn-block btn-{{ $activities['color'] }} d-inline-flex flex-column align-items-center justify-content-between mr-2 mt-2">
-                            <span class="mt-1">{{ $activity->sub_menu_name }}</span>
+                    <div class="col-xl-6 col-md-6 col-sm-12">
+                        <a href="{{ url('language/'.$activities['category'].'/'.$activity->sub_menu_id.'/'.$activity->sub_menu_id) }}">
+                            <div class="card card-body text-center bg-{{ $activities['color'] }}">
+                                <h4 class="card-text text-white">{{ $activity->sub_menu_name }}</h4>
+                            </div>
                         </a>  
                     </div>
                     @endforeach  
