@@ -148,9 +148,8 @@
                             ______________ over the period, while the number of divorces (2)______________ . At the (3)______________
                             of the period there were 80,000 marriages. In the same year, only 20,000 couples decided to get divorced. The next decade saw a slight (4)______________ 
                             in the number of marriages, while the number of divorces (5)______________ 
-                            to almost 30,000. In 1960 there was a (6)______________ 
-                            drop in marriages to just under 60,000. During that same period, the number of divorces continued its upward trend to stand (7)______________ 
-                            40,000. For the next three decades, the number of marriages (8)______________ 
+                            to almost 30,000. In 1960 there was a (6)______________ drop in marriages to just under 60,000. During that same period, the number of divorces continued its upward trend to stand 
+                            (7)______________ 40,000. For the next three decades, the number of marriages (8)______________ 
                             again to reach around 65,000 before falling again. The number of divorces continued to rise until the mid 1980’s when it (9)______________ 
                             slightly until the year 2000. By the end of the period the number of marriages stood (10)______________ 
                             just over 50,000, (11)______________ the number of divorces had risen to just under 50,000.To sum up, the (12)______________ 
