@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 200px;
+        width: 140px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -26,15 +26,6 @@
         transform: translateY(-50%);
     }
 </style>
-@php
-    $q1 = array(
-        'decreased',
-        'fell',
-        'dropped',
-        'reduced'
-    );
-@endphp
-
 <div class="row">
     <div class="col-md-12">
         <div class="card-box text-dark font-15">
@@ -42,7 +33,7 @@
                 <div class="col-md-6">
                     <div class="border border-dark px-2 text-center">
                         <h5>The graph below shows the number of marriages and divorces in a particular city between 1950 and 2010.</h5>
-                        <img src="{{ asset('public/img_lang/p_11.jpg') }}" class="m-2">
+                        <img src="{{ asset('public/img_lang/p_11.jpg') }}" class="img-fluid" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -115,37 +106,11 @@
             </div>
         </div>
     </div>
-    <div class="col-xl-12 col-md-12 col-sm-12" id="ans" style="display: none;">
-        <div class="card-box text-dark font-16">
-            <p class="lead">
-                Task 1.1
-            </p>
-            <div class="row">
-                <div class="col-6">
-                    <p>1. decreased; fell; dropped; reduced</p>
-                    <p>2. increased; rose; grew</p>
-                    <p>3. beginning; start</p>
-                    <p>4. decrease; fall; drop; reduction</p>
-                    <p>5. increased; rose; grew</p>
-                    <p>6. dramatic; substantial; considerable; big; large </p>
-                </div>
-                <div class="col-6">
-                    <p>7. at</p>
-                    <p>8. increased; rose; grew</p>
-                    <p>9. decreased; fell; dropped; reduced</p>
-                    <p>10. at</p>
-                    <p>11. while; whereas; but</p>
-                    <p>12. number </p>
-                </div>
-            </div>
-        </div>  
-    </div>
 </div>
 
 
 @section('button-control')
     <button id="check-answer" class="btn btn-info">Check Answers</button>
-    <button id="show-answer" class="btn btn-success">Show Answer</button>
 @endsection
 
 @section('js')
@@ -166,9 +131,6 @@
 
     let score = 0;
 
-    $("#show-answer").hide(true);
-
-    $('#show-answer').click(showAnswers) 
     $('#check-answer').click(checkAnswers) 
 
     function checkAnswers() {
@@ -285,20 +247,6 @@
             alert("you're awesome");
         }else{
             alert('Your score is ' + score + '/12');
-        }
-
-        $("#show-answer").show(true);
-        $("#check-answer").hide(true);
-    }
-
-    function showAnswers() {
-        var x = document.getElementById("ans");
-        if (x.style.display == "none") {
-            $("#show-answer").text('close');
-            x.style.display = "block";
-        }else {
-            $("#show-answer").text('Show Answer');
-            x.style.display = "none";
         }
     }
 </script>
