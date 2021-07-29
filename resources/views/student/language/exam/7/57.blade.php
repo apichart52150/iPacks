@@ -174,9 +174,6 @@
     function checkAnswers() {
         let icon;
         $(':text').each((idx, item) => {
-            let ans = "answer"+idx;
-            // console.log(idx);
-
             switch(idx) {
                 case 0:
                     if(jQuery.inArray($(item).val().toLowerCase(),  answer0) != -1) {
