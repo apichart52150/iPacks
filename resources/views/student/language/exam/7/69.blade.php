@@ -130,18 +130,18 @@
 @section('js')
 <script>
 
-    const answer1 = ['between'];
-    const answer2 = ['bigger', 'larger', 'higher'];
-    const answer3 = ['smaller'];
-    const answer4 = ['income', 'money'];
-    const answer5 = ['more', 'better', 'greater'];
-    const answer6 = ['while','whereas', 'but'];
-    const answer7 = ['food','nutrition'];
-    const answer8 = ['however','though'];
-    const answer9 = ['one-fifth', '20%'];
-    const answer10 = ['population'];
-    const answer11 = ['longer'];
-    const answer12 = ['less'];
+    const answer1 = ['show', 'illustrate'];
+    const answer2 = ['namely'];
+    const answer3 = ['figures'];
+    const answer4 = ['exception'];
+    const answer5 = ['Tokyo'];
+    const answer6 = ['of'];
+    const answer7 = ['by'];
+    const answer8 = ['respectively'];
+    const answer9 = ['increase'];
+    const answer10 = ['at'];
+    const answer11 = ['expected', 'projected', 'forecast', 'likely', 'predicted'];
+    const answer12 = ['million'];
 
     let score = 0;
 
@@ -257,7 +257,7 @@
             `)
         })
 
-        if(score == 15){
+        if(score == 12){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

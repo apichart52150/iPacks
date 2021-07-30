@@ -257,7 +257,7 @@
             `)
         })
 
-        if(score == 15){
+        if(score == 12){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);
