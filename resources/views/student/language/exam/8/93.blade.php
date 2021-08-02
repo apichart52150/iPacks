@@ -28,17 +28,17 @@
 </style>
 @php
     //$question -> input
-    $q1 = "The map shows how Biggsville, a village not";
-    $q2 = "rice. It can be seen that there are six major";
-    $q3 = "in this process, which take place in the rice fields, the processing plant, and finally the retail shops where the processed rice is";
-    $q4 = "The first stage is the preparation of the fields. In order to prepare the fields, the land must be";
-    $q5 = "This means that the soil is turned to make planting easier. In the";
-    $q6 = "ploughing was usually done using animals such as horses or buffalo, although nowadays ploughing is often done using a ";
-    $q7 = "over the fields and fertilizer is added to help the seeds to grow strong. Once the seeds have formed leaves, the young plants are thinned out and transplanted into rows. After a period of a few months, the mature rice crop is";
-    $q8 = "decade, it increased again to finish at 8,900 transplants in 2010. In Australia, 4,200 transplants";
-    $q9 = "again either manually or by machine. After harvesting, the";
-    $q10 = "are removed in the milling stage. Following this, the rice is";
-    $end = "usually in the sun, and then packed into sacks. Finally the packed rice can be sent to retail outlets, where it is sold.";
+    $q1 = "The map shows how Biggsville, a village not ";
+    $q2 = "from London, has developed since 1868, when the village was first established. It can be seen that there is a ";
+    $q3 = "between the growth of the village and the development of transportation infrastructure, namely, roads and";
+    $q4 = "access. In its early stages, the village was built between two main roads and it continued to grow along these roads in a";
+    $q5 = "direction. The construction of the railway in 1909 resulted in further growth in this direction. There was also";
+    $q6 = "to the south of the railway and along the main road south of the railway station line";
+    $q7 = "1922 and 1970. This trend continued until 1970 when a motorway was";
+    $q8 = "to the east of the existing village, crossing both the railway line and one of the main roads. Over the next twenty-five years, the village increased in";
+    $q9 = "as further accommodation was built along the motorway, mostly on the eastern side but also some to the west. To";
+    $q10 = "up, the village developed to the south, west and east of the ";
+    $end = "location, in conjunction with the construction of transportation routes.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -129,16 +129,16 @@
 @section('js')
 <script>
     // no space answer
-    const answer1 = ['cultivating', 'growing'];
-    const answer2 = ['stages'];
-    const answer3 = ['sold'];
-    const answer4 = ['ploughed'];
-    const answer5 = ['past'];
-    const answer6 = ['tractor'];
-    const answer7 = ['scattered', 'dispersed', 'sown'];
-    const answer8 = ['harvested'];
-    const answer9 = ['husks'];
-    const answer10 = ['dried'];
+    const answer1 = ['far'];
+    const answer2 = ['correlation', 'link'];
+    const answer3 = ['railway'];
+    const answer4 = ['south-westerly'];
+    const answer5 = ['expansion', 'development', 'construction'];
+    const answer6 = ['between'];
+    const answer7 = ['built', 'constructed'];
+    const answer8 = ['size'];
+    const answer9 = ['sum'];
+    const answer10 = ['original'];
 
     let score = 0;
 
