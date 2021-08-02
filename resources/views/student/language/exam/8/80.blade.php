@@ -28,22 +28,19 @@
 </style>
 @php
     //$question -> input
-    $q1 = "The bar-chart above shows how many crimes were committed in three countries from 2005 to 2015. It can be seen that the crime";
-    $q2 = "experienced a steady decrease in Country A while Country B showed a";
-    $q3 = "trend with a slight increase in each period. The number of crimes committed in Country C showed an";
-    $q4 = "drop over the period but with a slight increase in 2010 over the figure five years earlier. The pie-charts show the percentage breakdown for different types of crime committed in";
-    $q5 = "Country A and Country B. Country A showed the highes";
-    $q6 = "of theft, while assault was the most";
-    $q7 = "crime in Country B. To start with the number of crimes, it can be seen that,";
-    $q8 = "Country A topped the group consistently throughout the period, the incidence of crime fell from the";
-    $q9 = "point of just under 6,000 crimes committed in 2005 to just over 4,000 crimes ten years later. This decreasing trend is in contrast to";
-    $q10 = "of Country B, which recorded a slight increase from around 2,000 crimes in 2005 to around 2,200 crimes a";
-    $q11 = "later. Country C started out at around 3,800 crimes in 2005,";
-    $q12 = "by a small rise to around 3,900 crimes, before dropping back to approximately 3,700 incidences of crime. When it";
-    $q13 = "to the kinds of crime committed, theft";
-    $q14 = "for 40% of all crimes in Country A, with drug offences and assault taking 10% and 20%";
-    $q15 = " ‘Other’ crimes accounted for the remaining 30%. In Country B, however, assault was the leading crime with 40% of all crimes committed. Thirty per cent of all crimes were drug offences, followed by theft (20%) and ‘other’ (the";
-    $end = "10%).";
+    $q1 = "The line graph gives details of three fuel sources used by a certain country to";
+    $q2 = "energy from the period 1990 until 2020:";
+    $q3 = ", fossil fuels (coal, gas, oil), nuclear energy, and alternative energy sources (coal, gas, oil),nuclear energy, and alternative energy sources (e.g. solar energy, hydroelectricity,wind power).Overall, it can be seen that although fossil fuels were by far the most";
+    $q4 = "source of energy at the beginning of the period, there has been a steady fall in the use of";
+    $q5 = "fuels, and the future of energy production is";
+    $q6 = "to rely on alternative energy sources. To begin with fossil fuels, these accounted for 70% of total energy";
+    $q7 = "in 1990, while the remaining 30% was taken up by nuclear energy and alternative energy sources, with 20% and 10% respectively. By the";
+    $q8 = "of the century, the dependence on coal, gas and oil had fallen 10";
+    $q9 = "This decrease was absorbed by nuclear energy, which rose by ";
+    $q10 = "the same amount, 10%. There was no change in the use of alternative energy sources at this time. The next fifteen years,";
+    $q11 = "saw a dramatic rise in the use of alternatives for energy production,overtaking both fossil fuels, which";
+    $q12 = "its downward trend, and nuclear power, which plateaued at 30%. Similar trends are projected to occur until 2020, with alternatives";
+    $end = " for one half of all energy generation. Nuclear is expected to remain stable at 30%, while fossil fuels is likely to fall to an all-time low of just 20%.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -127,21 +124,6 @@
                             <div class="input-con">
                                 <input type="text" class="form-control">
                             </div>
-                            {{$q13}}
-                            <span class="font-weight-bold">13.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q14}}
-                            <span class="font-weight-bold">14.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q15}}
-                            <span class="font-weight-bold">15.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
                             {{$end}}
                         </div>
                     </div>
@@ -159,21 +141,18 @@
 @section('js')
 <script>
     // no space answer
-    const answer1 = ['rate'];
-    const answer2 = ['reverse', 'different'];
-    const answer3 = ['overall'];
-    const answer4 = ['both'];
-    const answer5 = ['incidence', 'rate'];
-    const answer6 = ['common', 'frequent'];
-    const answer7 = ['although'];
-    const answer8 = ['starting'];
-    const answer9 = ['that'];
-    const answer10 = ['decade'];
-    const answer11 = ['followed'];
-    const answer12 = ['comes'];
-    const answer13 = ['accounted'];
-    const answer14 = ['respectively'];
-    const answer15 = ['final', 'remaining', 'other'];
+    const answer1 = ['generate', 'produce'];
+    const answer2 = ['namely'];
+    const answer3 = ['important'];
+    const answer4 = ['such', 'these'];
+    const answer5 = ['expected', 'likely', 'projected', 'forecast'];
+    const answer6 = ['generation', 'production'];
+    const answer7 = ['turn', 'end'];
+    const answer8 = ['percent'];
+    const answer9 = ['exactly'];
+    const answer10 = ['however' ,'though'];
+    const answer11 = ['continued'];
+    const answer12 = ['accounting'];
 
     let score = 0;
 
@@ -279,30 +258,6 @@
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
                     break;
-                case 12:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer13) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                            score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 13:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer14) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                            score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 14:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer15) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                            score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -313,7 +268,7 @@
             `)
         })
 
-        if(score == 15){
+        if(score == 12){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);
