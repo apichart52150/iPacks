@@ -33,7 +33,7 @@
                 <div class="col-md-6">
                     <div class="border border-dark px-2 text-center">
                         <h5>The graph below shows the number of marriages and divorces in a particular city between 1950 and 2010.</h5>
-                        <img src="{{ asset('public/img_lang/p_11.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <img src="{{ asset('public/img_lang/gap1/gap1_1.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-6">

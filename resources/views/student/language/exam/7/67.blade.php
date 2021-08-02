@@ -48,7 +48,7 @@
                 <div class="col-md-6">
                     <div class="border border-dark px-2 text-center">
                         <h5>The bar-chart below shows the advertising budget in millions of dollars for a major company during a twenty-year period.</h5>
-                        <img src="{{ asset('public/img_lang/p_111.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <img src="{{ asset('public/img_lang/gap1/gap1_11.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-6">

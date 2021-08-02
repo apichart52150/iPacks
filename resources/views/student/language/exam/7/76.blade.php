@@ -51,7 +51,7 @@
                 <div class="col-md-6">
                     <div class="border border-dark px-2 text-center">
                         <h5>The bar-chart shows the rainfall in a particular city over a 6-year period (measured in mm), and the line-graph shows the average temperature over the same period (in degrees Celsius).</h5>
-                        <img src="{{ asset('public/img_lang/p_120.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <img src="{{ asset('public/img_lang/gap1/gap1_20.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-6">

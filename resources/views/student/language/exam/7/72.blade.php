@@ -46,7 +46,7 @@
                 <div class="col-md-6">
                     <div class="border border-dark px-2 text-center">
                         <h5>The diagrams below show the development of a university over a ten-year period.</h5>
-                        <img src="{{ asset('public/img_lang/p_116.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <img src="{{ asset('public/img_lang/gap1/gap1_16.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-6">
