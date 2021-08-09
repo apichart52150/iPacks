@@ -59,7 +59,7 @@ class HomeController extends Controller
             );
         }elseif ($request->input('type') == '2'){
             $data = array(
-                'color' => "waning", 
+                'color' => "warning", 
                 'sub_menu' => "NC Listening Test"
             );
         }elseif($request->input('type') == '3'){
