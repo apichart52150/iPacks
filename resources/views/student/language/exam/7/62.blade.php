@@ -39,7 +39,7 @@
     $q10 = "times more cargo than the Boeing 787.When it comes to distance, the range of the Dreamliner is slightly less";
     $q11 = "that of the Airbus, with ranges of 15,200 and 15,400 kilometres respectively. In addition, when it comes to speed, both aircraft can travel at similar speeds of 900 kilometres per";
     $q12 = ". The final difference is the number of engines of each aircraft. The Dreamliner has just two engines,";
-    $end = ", why women tend to live longer than men.";
+    $end = "the Airbus has four, two under each wing.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -48,7 +48,7 @@
                 <div class="col-md-6">
                     <div class="border border-dark px-2 text-center">
                         <h5></h5>
-                        <img src="{{ asset('public/img_lang/p_16.jpg') }}" class="img-fluid" alt="Responsive image">
+                        <img src="{{ asset('public/img_lang/gap1/gap1_6.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -152,7 +152,7 @@
         $(':text').each((idx, item) => {
             switch(idx) {
                 case 0:
-                    if(jQuery.inArray($(item).val().toLowerCase(),  answer1) != -1) {
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer1) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
                          score++;
                     } else {
@@ -160,7 +160,7 @@
                     }
                     break;
                 case 1:
-                    if(jQuery.inArray($(item).val().toLowerCase(),  answer2) != -1) {
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer2) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
                          score++;
                     } else {
@@ -168,7 +168,7 @@
                     }
                     break;
                 case 2:
-                    if(jQuery.inArray($(item).val().toLowerCase(),  answer3) != -1) {
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer3) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
                          score++;
                     } else {
@@ -176,7 +176,7 @@
                     }
                     break;
                 case 3:
-                    if(jQuery.inArray($(item).val().toLowerCase(),  answer4) != -1) {
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer4) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
                          score++;
                     } else {
@@ -184,7 +184,7 @@
                     }
                     break;
                 case 4:
-                    if(jQuery.inArray($(item).val().toLowerCase(),  answer5) != -1) {
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer5) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
                          score++;
                     } else {
@@ -192,7 +192,7 @@
                     }
                     break;
                 case 5:
-                    if(jQuery.inArray($(item).val().toLowerCase(),  answer6) != -1) {
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer6) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
                          score++;
                     } else {
@@ -200,7 +200,7 @@
                     }
                     break;
                 case 6:
-                    if(jQuery.inArray($(item).val().toLowerCase(),  answer7) != -1) {
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer7) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
                          score++;
                     } else {
@@ -208,7 +208,7 @@
                     }
                     break;
                 case 7:
-                    if(jQuery.inArray($(item).val().toLowerCase(),  answer8) != -1) {
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer8) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
                          score++;
                     } else {
@@ -216,7 +216,7 @@
                     }
                     break;
                 case 8:
-                    if(jQuery.inArray($(item).val().toLowerCase(),  answer9) != -1) {
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer9) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
                          score++;
                     } else {
@@ -224,7 +224,7 @@
                     }
                     break;
                 case 9:
-                    if(jQuery.inArray($(item).val().toLowerCase(),  answer10) != -1) {
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer10) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
                          score++;
                     } else {
@@ -232,7 +232,7 @@
                     }
                     break;
                 case 10:
-                    if(jQuery.inArray($(item).val().toLowerCase(),  answer11) != -1) {
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
                          score++;
                     } else {
@@ -240,7 +240,7 @@
                     }
                     break;
                 case 11:
-                    if(jQuery.inArray($(item).val().toLowerCase(),  answer12) != -1) {
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
                          score++;
                     } else {
@@ -257,10 +257,10 @@
             `)
         })
 
-        if(score == 15){
+        if(score == 12){
             alert("you're awesome");
         }else{
-            alert('Your score is ' + score + '/15');
+            alert('Your score is ' + score);
         }
     }
 </script>
