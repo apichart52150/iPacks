@@ -35,6 +35,7 @@
     .grid-5 {
         grid-template-columns: repeat(6, 1fr);
     }
+
 </style>
 @php
     $q1 = "The table gives";
