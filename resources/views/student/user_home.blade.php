@@ -193,6 +193,13 @@
             </div>
         </a>
     </div><!-- end col -->
+
+    <div class="timeline-desk">
+        <div class="timeline-box">
+            <h4 class="mt-0 font-16">Recommended</h4>
+            <p class="mb-0"><i class="mdi mdi-monitor-screenshot"></i> Pactice on Computer</p>
+        </div>
+    </div>
 </div>
 @else
 <div class="row d-flex justify-content-center">
