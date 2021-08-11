@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','iPACKS | LOGIN')
+@section('title','iPACKS | REGISTER')
 
 @section('content')
 <div class="container">
@@ -9,7 +9,7 @@
 				<div class="card-body p-4">
 					<div class="text-center">
 						<div class="text-center mb-3">
-	                        <h3 class="font-weight-bold text-primary"><i class="fas fa-info"></i> PACKS <span class="d-none d-sm-inline">|</span> <span class="text-dark">LOGIN</span> </h3>
+	                        <h3 class="font-weight-bold text-primary"><i class="fas fa-info"></i> PACKS <span class="d-none d-sm-inline">|</span> <span class="text-dark">REGISTER</span> </h3>
 	                    </div>
 					</div>
 					<div id="overlay">
@@ -17,7 +17,7 @@
                     		<div class="spinner-grow avatar-lg text-light m-2" role="status"></div>
                     	</div>
                     </div>
-					<form action="{{ route('fn_login') }}" method="POST" novalidate>
+					<form action="{{ route('fn_register') }}" method="POST" novalidate>
 						{{ csrf_field() }}
 						<div class="form-group mb-3">
 							<label for="username">Username</label>

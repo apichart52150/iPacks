@@ -9,8 +9,12 @@
 		return redirect('user_login');
 	});
 
-	Route::get('user_login', 'Session\LoginStdController@index')->name('user_login');
+	Route::get('user_login', 'Session\LoginStdController@login')->name('user_login');
 	Route::post('fn_login', 'Session\LoginStdController@fn_login')->name('fn_login');
+
+	Route::get('user_register', 'Session\LoginStdController@register')->name('user_register');
+	Route::post('fn_register', 'Session\LoginStdController@fn_register')->name('fn_register');
+	
 	Route::get('user_logout', 'Session\LoginStdController@user_logout')->name('user_logout');
 
 	Route::group(['middleware' => 'auth:student'], function() {
@@ -18,6 +22,15 @@
 		Route::get('browser-settings', function() {
 			return view('student.isac.speaking.browser_settings');
 		})->name('browser-settings');
+		
+
+		Route::get('wait', function() {
+			return view('student.wait');
+		})->name('wait');
+
+		Route::get('succ', function() {
+			return view('student.succ');
+		})->name('succ');
 
 		Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
