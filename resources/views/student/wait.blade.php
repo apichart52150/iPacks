@@ -17,101 +17,39 @@
     <!-- end page title -->
 @endsection
 
-<style>
-    .hover-scale i.fas {
-        transform: scale(1);
-        transition: transform .15s ease;
-    }
-
-    .hover-scale:hover i.fas {
-        transform: scale(1.1);
-    }
-
-    .border-2 {
-        border-width: 2px;
-    }
-
-    .ribbon-box .ribbon-two-secondary span {
-        background: #C5B358 !important;
-    }
-
-</style>
+@section('content')
 
 @if(Auth::user()->std_status == 'wait')
 
+    <center><h1>ถ้ายังไม่ได้จ่ายตัง</h1></center>
+
     <div class="row d-flex justify-content-center">
-        <div class="col-xl-3 col-md-6">
-            <div class="card-box widget-icon bg-danger">
-                <div class="avatar-lg float-left">
-                    <div class="hover-scale">
-                        <div class="widget-simple">
-                            <i class=" fas fa-volume-up avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="wid-icon-info text-right">
-                    <h2 class="mb-1 text-light">wait</h2>
-                    <h4 class="text-light mb-1">wait</h4>
-                </div>
+        <div class="col-xl-6 col-md-6 col-sm-12">
+            <div class="card-box widget-icon bg-secondary">
+                <h1>Standard</h1> 
+            </div>
+        </div>
+
+        <div class="col-xl-6 col-md-6 col-sm-12">
+            <div class="card-box widget-icon bg-warning">
+               <h1>Premium</h1>
             </div>
         </div>
     </div>
 
-@elseif (Auth::user()->std_status == 'paid')
+@elseif (Auth::user()->std_status == 'expire')
+    <center><h1>ถ้าหมดอายุ</h1></center>
 
     <div class="row d-flex justify-content-center">
-        <div class="col-xl-6 col-sm-12">
-            <a href="{{ url('isac/listening') }}" class="wave-light">
-                <div class="card-box widget-icon bg-danger">
-                    <div class="avatar-lg float-left">
-                        <div class="hover-scale">
-                            <div class="widget-simple">
-                                <i class=" fas fa-volume-up avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wid-icon-info text-right">
-                        <h2 class="mb-1 text-light">iSac</h2>
-                        <h4 class="text-light mb-1">Listening</h4>
-                    </div>
-                </div>
-            </a>
+        <div class="col-xl-6 col-md-6 col-sm-12">
+            <div class="card-box widget-icon bg-secondary">
+                <h1>Standard</h1> 
+            </div>
         </div>
 
-        <div class="col-xl-6 col-sm-12">
-            <a href="{{url('language/home')}}">
-                <div class="card-box widget-icon bg-pink">
-                    <div class="avatar-lg float-left">
-                        <div class="hover-scale">
-                            <div class="widget-simple">
-                                <i class="fas fa-eye avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-right">
-                        <h2 class="mb-1 text-light">iSac</h2>
-                        <h4 class="text-light mb-1">Language Use</h4>
-                    </div>
-                </div>
-            </a>
-        </div><!-- end col -->
-    </div>
-
-@elseif (Auth::user()->std_status == 'expire')
-    <div class="row d-flex justify-content-center">
-        <div class="col-xl-3 col-md-6">
-            <div class="card-box widget-icon bg-danger">
-                <div class="avatar-lg float-left">
-                    <div class="hover-scale">
-                        <div class="widget-simple">
-                            <i class=" fas fa-volume-up avatar-title display-6 m-0 " style="font-size: 5em;"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="wid-icon-info text-right">
-                    <h2 class="mb-1 text-light">Expire</h2>
-                    <h4 class="text-light mb-1">Expire</h4>
-                </div>
+        <div class="col-xl-6 col-md-6 col-sm-12">
+            <div class="card-box widget-icon bg-warning">
+            <h1>Premium</h1>
             </div>
         </div>
     </div>

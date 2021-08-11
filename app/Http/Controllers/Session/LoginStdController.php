@@ -16,7 +16,7 @@ class LoginStdController extends Controller
 
     use AuthenticatesUsers;
 
-    protected $redirectTo = 'user_home';
+    protected $redirectTo = '/';
    
 
     public function login() {
@@ -26,12 +26,6 @@ class LoginStdController extends Controller
 
     public function fn_login(Request $request) {
 
-        $username = $request->username;
-        $password = $request->password;
-
-        $data = $request->all();
-        $rules = ['username' => 'required', 'password' => 'required'];
-
         $validator = Validator::make($request->all(), [
             'username' => 'required',
             'password' => 'required'
@@ -39,22 +33,36 @@ class LoginStdController extends Controller
 
         if($validator->fails()) {
             return redirect('user_login')
-            ->withErrors($validator)
-            ->withInput();
+                ->withErrors($validator)
+                ->withInput();
         }
 
         $student = Login::where('std_username', $request->username)
         ->where('std_password', md5($request->password))
         ->first();
 
-        // dd($student);
-
         if($student) {
+
             Auth::guard('student')->login($student);
-            return redirect('user_home');
+
+            if(Auth::guard('student')->user()->std_status == 'wait'){
+
+                return redirect('wait');
+
+            }elseif(Auth::guard('student')->user()->std_status == 'expire'){
+
+                return redirect('expire');
+
+            }else{
+
+                return redirect('/');
+
+            }
+
         } else {
-            return back()->with('status', 'Username or password do not match');
+            return back()->with('status', 'Username or Password do not match');
         }
+
     }
 
 
@@ -67,20 +75,15 @@ class LoginStdController extends Controller
 
         $student = DB::table('student')
         ->select('std_username')
-        ->where('std_username', '=', $request->std_username)
+        ->where('std_username', '=', $request->username)
         ->get();
 
-        $row_student = count($student);
-
-        if($row_student == 0){
+        if(count($student) == 0){
 
             DB::table('student')->insert([
                 'std_username' => $request->username, 
                 'std_password' => md5($request->password), 
             ]);
-        
-            session()->flash('success_ans','<div class="alert alert-success" role="alert">
-            <i class="fas fa-check-circle mr-2"></i><strong>Add Student Success</strong></div>'); 
 
             $validator = Validator::make($request->all(), [
                 'username' => 'required',
@@ -97,19 +100,14 @@ class LoginStdController extends Controller
             ->where('std_password', md5($request->password))
             ->first();
     
-            // dd($student);
-    
-            if($student) {
-                Auth::guard('student')->login($student);
-                return redirect('success');
-            } else {
-                return back()->with('status', 'Username or password do not match');
-            }
+            Auth::guard('student')->login($student);
+
+            return redirect('success');
 
         }else{
-            session()->flash('error_ans','<div class="alert alert-danger" role="alert">
-            <i class="far fa-window-close mr-2"></i><strong>Username* นี้มีในระบบแล้ว ไม่สามารถสร้างซ้อนทับได้</strong></div>');
-            return redirect('user_register');
+
+            return back()->with('status', 'Username* นี้มีในระบบแล้ว ไม่สามารถสร้างซ้อนทับได้');
+
         }
     }
 

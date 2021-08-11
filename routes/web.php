@@ -23,14 +23,13 @@
 			return view('student.isac.speaking.browser_settings');
 		})->name('browser-settings');
 		
-
 		Route::get('wait', function() {
 			return view('student.wait');
 		})->name('wait');
 
-		Route::get('succ', function() {
-			return view('student.succ');
-		})->name('succ');
+		Route::get('success', function() {
+			return view('student.success');
+		})->name('success');
 
 		Route::get('user_home', 'student\HomeController@index')->name('user_home');
 

@@ -57,10 +57,12 @@
 
     </div>
 
+    <footer class="footer footer-alt">
+        2021 © i.PACK by <a href="https://newcambridge.com" class="text-white">New Cambridge</a>
+    </footer>
 
     <!-- Vendor js -->
     <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
-    @yield('javascript')
     <!-- App js -->
     <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
 </body>

@@ -6,9 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Model\Login;
 
 
-class HomeController extends Controller
+class HomeController extends Controller 
 {
     public function __construct() {
         $this->middleware('auth:student');
