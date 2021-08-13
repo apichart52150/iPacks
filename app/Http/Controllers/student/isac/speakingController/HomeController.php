@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Model\Speaking;
 use DB;
 use Auth;
+use Session;
 
 class HomeController extends Controller
 {

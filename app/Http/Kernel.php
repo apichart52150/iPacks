@@ -36,6 +36,10 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
+        'student' => [
+            \Illuminate\Session\Middleware\AuthenticateSession::class,
+        ],
+
         'api' => [
             'throttle:60,1',
             'bindings',

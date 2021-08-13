@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Auth;
 use DB;
 use Validator;
+use Session;
 use App\Model\Login;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -17,6 +18,11 @@ class LoginStdController extends Controller
     use AuthenticatesUsers;
 
     protected $redirectTo = 'user_home';
+
+    public function __construct()
+    {
+        $this->middleware('student')->except('logout');
+    }
    
 
     public function login() {
@@ -25,6 +31,7 @@ class LoginStdController extends Controller
     
 
     public function fn_login(Request $request) {
+        
 
         $validator = Validator::make($request->all(), [
             'username' => 'required',
@@ -44,6 +51,10 @@ class LoginStdController extends Controller
         if($student) {
 
             Auth::guard('student')->login($student);
+        
+            $new_sessid = Session::getId(); 
+
+            // dd($new_sessid);
 
             $status = Auth::guard('student')->user()->std_status;
 
@@ -115,6 +126,7 @@ class LoginStdController extends Controller
 
     public function user_logout() {
         Auth::guard('student')->logout();
+        Session::flush();
         return redirect('user_login');
     }
 

@@ -7,11 +7,14 @@ use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Model\Login;
+use Session;
 
 
 class HomeController extends Controller 
 {
     public function index(){
+
+        // dd(Session::getId());
         $currentDate = date('Y-m-d H:i:s');
         $lastDate = "2021-08-20 23:59:59";
 
