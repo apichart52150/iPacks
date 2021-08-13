@@ -28,7 +28,9 @@
                             <div class="card-body p-4">
                             
                                 <div class="text-center w-75 m-auto">
-                                   <h1>Register Success</h1>
+                                    @if(session()->has('status'))
+                                        <h3>{{ session()->get('status') }}</h3>
+                                    @endif
                                 </div>
 
                                 <div class="text-center">
@@ -49,9 +51,9 @@
                                         </div>
                                     </div>
                                     
-                                    <p class="text-muted mt-2"> You are now successfully register. </p>
+                                    <p class="text-muted mt-2"> Now your's our mamber. </p>
 
-                                    <h3>Choose your plan</h3>
+                                    <h3>Choose your package</h3>
 
                                     <div class="row mt-3">
                                         <div class="col-6">
@@ -69,7 +71,7 @@
 
                         <div class="row mt-3">
                             <div class="col-12 text-center">
-                                <p class="text-muted">Back to <a href="{{route('wait')}}" class="text-white font-weight-medium ml-1">Home</a></p>
+                                <p class="text-muted">Back to <a href="{{ route('user_logout') }}" class="text-white font-weight-medium ml-1">Login</a></p>
                             </div> <!-- end col -->
                         </div>
                         <!-- end row -->

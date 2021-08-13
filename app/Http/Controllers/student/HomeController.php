@@ -11,10 +11,6 @@ use App\Model\Login;
 
 class HomeController extends Controller 
 {
-    public function __construct() {
-        $this->middleware('auth:student');
-    }
-
     public function index(){
         $currentDate = date('Y-m-d H:i:s');
         $lastDate = "2021-08-20 23:59:59";

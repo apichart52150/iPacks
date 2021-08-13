@@ -16,7 +16,7 @@ class LoginStdController extends Controller
 
     use AuthenticatesUsers;
 
-    protected $redirectTo = '/';
+    protected $redirectTo = 'user_home';
    
 
     public function login() {
@@ -49,15 +49,15 @@ class LoginStdController extends Controller
 
             if($status == 'wait'){
 
-                return redirect('wait', compact('status'));
+                return redirect('success')->with('status', 'Welcome!');
 
             }elseif($status == 'expire'){
 
-                return redirect('expire', compact('status'));
+                return redirect('success')->with('status', 'Your package is expire');
 
             }else{
 
-                return redirect('/');
+                return redirect('user_home');
 
             }
 
@@ -108,14 +108,14 @@ class LoginStdController extends Controller
 
         }else{
 
-            return back()->with('status', 'Username* นี้มีในระบบแล้ว ไม่สามารถสร้างซ้อนทับได้');
+            return back()->with('status', 'Username* is already have');
 
         }
     }
 
     public function user_logout() {
         Auth::guard('student')->logout();
-        return redirect()->route('user_login');
+        return redirect('user_login');
     }
 
    
