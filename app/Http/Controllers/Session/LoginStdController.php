@@ -104,7 +104,7 @@ class LoginStdController extends Controller
     
             Auth::guard('student')->login($student);
 
-            return redirect('success');
+            return redirect('success')->with('status', 'Register success');;
 
         }else{
 
