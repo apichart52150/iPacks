@@ -45,13 +45,15 @@ class LoginStdController extends Controller
 
             Auth::guard('student')->login($student);
 
-            if(Auth::guard('student')->user()->std_status == 'wait'){
+            $status = Auth::guard('student')->user()->std_status;
 
-                return redirect('wait');
+            if($status == 'wait'){
 
-            }elseif(Auth::guard('student')->user()->std_status == 'expire'){
+                return redirect('wait', compact('status'));
 
-                return redirect('expire');
+            }elseif($status == 'expire'){
+
+                return redirect('expire', compact('status'));
 
             }else{
 
