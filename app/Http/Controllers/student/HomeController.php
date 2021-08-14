@@ -16,19 +16,7 @@ class HomeController extends Controller
     
     public function index(){
 
-        $check = DB::table('student')
-        ->select('session_id')
-        ->where('std_id', '=', auth('student')->user()->std_id)
-        ->first();
-
-        // dd($check->session_id);
-
-        if($check->session_id != session()->get('ss_id')){
-
-            return redirect('user_logout');
-
-        }else{
-
+            
             $currentDate = date('Y-m-d H:i:s');
             $lastDate = "2021-08-20 23:59:59";
 
@@ -42,7 +30,7 @@ class HomeController extends Controller
                 }
             }
 
-        }
+        
         
     }
 
