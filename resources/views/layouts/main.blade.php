@@ -254,7 +254,7 @@
         <script src="{{ asset('public/assets/libs/jquery-mask-plugin/jquery.mask.min.js') }}"></script>
 
          <!-- init js -->
-         <script src="{{ asset('public/assets/js/pages/form-advanced.init.js') }}"></script>
+        <script src="{{ asset('public/assets/js/pages/form-advanced.init.js') }}"></script>
 
         <script>
             $('input[type="text"]').attr({
@@ -265,7 +265,6 @@
 
             $('#reset').on('click', () => location.reload())
         </script>
-        @yield('js')
         
     </body>
 </html>

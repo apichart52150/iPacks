@@ -12,7 +12,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 class HomeController extends Controller
 {
     public function __construct() {
-        $this->middleware('auth:student');
+        $this->middleware('student');
     }
 
     public function index() {

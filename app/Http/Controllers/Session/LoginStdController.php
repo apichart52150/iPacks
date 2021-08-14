@@ -38,23 +38,27 @@ class LoginStdController extends Controller
             'password' => 'required'
         ]);
 
+
         if($validator->fails()) {
             return redirect('user_login')
-                ->withErrors($validator)
-                ->withInput();
+            ->withErrors($validator)
+            ->withInput();
         }
 
         $student = Login::where('std_username', $request->username)
         ->where('std_password', md5($request->password))
         ->first();
 
+
         if($student) {
 
-            Auth::guard('student')->login($student);
-        
             $new_sessid = Session::getId(); 
 
-            // dd($new_sessid);
+            session::put('ss_id',$new_sessid);
+
+            DB::table('student')->where('std_id', $student->std_id)->update(['session_id' => $new_sessid]);
+            
+            Auth::guard('student')->login($student);
 
             $status = Auth::guard('student')->user()->std_status;
 
@@ -127,7 +131,7 @@ class LoginStdController extends Controller
     public function user_logout() {
         Auth::guard('student')->logout();
         Session::flush();
-        return redirect('user_login');
+        return redirect()->to('user_login');
     }
 
    
