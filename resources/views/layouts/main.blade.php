@@ -265,16 +265,15 @@
 
             $('#reset').on('click', () => location.reload())
 
+           
             var session_id = "{!! (session('ss_id'))?session('ss_id'):'' !!}";
             var user_id = "{!! (Auth::user())?Auth::user()->session_id:'' !!}";
 
-            console.log(session_id);
-            console.log(user_id);
-
-            if(user_id != session_id) {
+            if(user_id !== session_id) {
                 alert('Your account login from another device!!', 'Warning Alert');
                 window.location.href = "{{ route('user_logout')}}";
             } 
+
         </script>
         
     </body>

@@ -65,5 +65,15 @@
     <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
     <!-- App js -->
     <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
+
+    <script>
+        var session_id = "{!! (session('ss_id'))?session('ss_id'):'' !!}";
+        var user_id = "{!! (Auth::user())?Auth::user()->session_id:'' !!}";
+
+        if(user_id != session_id) {
+            alert('Your account login from another device!!', 'Warning Alert');
+            window.location.href = "{{ route('user_logout')}}";
+        } 
+    </script>
 </body>
 </html>

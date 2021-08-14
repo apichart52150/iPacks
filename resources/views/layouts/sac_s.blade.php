@@ -226,6 +226,16 @@
         <!-- init js -->
         <script src="{{ asset('public/assets/js/pages/dashboard-1.init.js') }}"></script>
 
+        <script>
+            var session_id = "{!! (session('ss_id'))?session('ss_id'):'' !!}";
+            var user_id = "{!! (Auth::user())?Auth::user()->session_id:'' !!}";
+
+            if(user_id != session_id) {
+                alert('Your account login from another device!!', 'Warning Alert');
+                window.location.href = "{{ route('user_logout')}}";
+            } 
+        </script>
+
         @yield('javascript')
 
     </body>

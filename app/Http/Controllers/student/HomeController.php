@@ -15,22 +15,19 @@ class HomeController extends Controller
 {
     
     public function index(){
-
             
-            $currentDate = date('Y-m-d H:i:s');
-            $lastDate = "2021-08-20 23:59:59";
+        $currentDate = date('Y-m-d H:i:s');
+        $lastDate = "2021-08-20 23:59:59";
 
-            if(auth('student')->user()->std_condition == 1){
+        if(auth('student')->user()->std_condition == 1){
+            return view('student.user_home');
+        }else{
+            if(strtotime($lastDate) >= strtotime($currentDate)){
                 return view('student.user_home');
             }else{
-                if(strtotime($lastDate) >= strtotime($currentDate)){
-                    return view('student.user_home');
-                }else{
-                    return view('student.expire');
-                }
+                return view('student.expire');
             }
-
-        
+        }
         
     }
 
