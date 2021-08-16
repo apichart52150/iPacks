@@ -49,6 +49,14 @@
     $q9 = "amount of all the countries. When it comes to education, there is a different trend. Both Australia and Japan spend 4000 million dollars on education,";
     $q10 = "than any of the other countries in the group. The USA spends 500 million";
     $q11 = "than this, at 3500 million dollars. Russia and China both allocate sums of 3000 million dollars for education. While most countries spend more money on defence than on education, Japan spends four";
+    $q12 = "The table gives";
+    $q13 = "The table gives";
+    $q14 = "The table gives";
+    $q15 = "The table gives";
+    $q16 = "The table gives";
+    $q17 = "The table gives";
+    $q18 = "The table gives";
+    $q19 = "The table gives";
     $end = "more money on education than on defence.";
 
     $a1 = "academically";
@@ -163,53 +171,43 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q13}}
+                            <span class="font-weight-bold">13.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q14}}
+                            <span class="font-weight-bold">14.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q15}}
+                            <span class="font-weight-bold">15.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q16}}
+                            <span class="font-weight-bold">16.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q17}}
+                            <span class="font-weight-bold">17.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q18}}
+                            <span class="font-weight-bold">18.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q19}}
+                            <span class="font-weight-bold">19.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>

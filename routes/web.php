@@ -33,6 +33,10 @@
 
 		Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
+		Route::get('isac_reading', 'student\HomeController@isac_reading')->name('isac_reading');
+		Route::get('strategies_pack', 'student\HomeController@strategies_pack')->name('strategies_pack');
+		Route::get('topic_pack', 'student\HomeController@topic_pack')->name('topic_pack');
+
 		Route::get('user_profile', function() {
 			$profile = \App\Model\Profile::getProfile();
 			return view('student.user_profile', compact('profile'));
