@@ -16,19 +16,7 @@ class HomeController extends Controller
     
     public function index()
     {
-
-        if(auth('student')->user()->std_pointspeaking < 1) {
-
-            session()->flash('point','<div class="alert alert-danger" role="alert">
-            <i class="far fa-tired mr-2"></i><strong>ขออภัยขณะนี้ point ไม่เพียงพอ</strong></div>'); 
-
-            return redirect('/user_home');
-
-        }else{
-
-            return view('student.isac.speaking.home',compact('point'));
-
-        }
+        return view('student.isac.speaking.home');
     }
 
     public function status_speaking() {
