@@ -11,7 +11,7 @@
 
                 <div class="text-left mt-2 row">
                     <div class="col-md-6">
-                        <p class="text-muted font-15"><strong>Full Name :</strong> <span class="m-l-15">{{Auth::user()->std_username}}</span></p>
+                        <p class="text-muted font-15"><strong>Full Name :</strong> <span class="m-l-15">{{Auth::user()->std_first_name}} {{Auth::user()->std_last_name}}</span></p>
                     </div>
                     <div class="col-md-6">
                         <p class="text-muted font-15"><strong>Mobile :</strong><span class="m-l-15">{{Auth::user()->std_mobile}}</span></p>
@@ -22,8 +22,12 @@
 
                 <div class="text-left m-t-20 row">
                     <div class="col-md-6">
-                        <p class="text-muted font-16"><strong>Expire Date :</strong> <span class="badge badge-danger p-1">20 Aug 2021 </span></p>
-                        <p class="text-muted font-16"><strong>Expire Time :</strong> <span class="badge badge-danger p-1">23:59:59 น.</span></p>
+                        @if (Auth::user()->std_level == 'premium')
+                            <p class="text-muted font-16"><strong>Package</strong> <span class="badge badge-warning p-1">{{Auth::user()->std_level}}</span></p>
+                        @else
+                            <p class="text-muted font-16"><strong>Package</strong> <span class="badge badge-secondary p-1">{{Auth::user()->std_level}}</span></p>
+                        @endif
+                        <p class="text-muted font-16"><strong>Expire Date :</strong> <span class="badge badge-danger p-1"> {{Auth::user()->expire_date}} </span></p>
                     </div>
                 </div>
 

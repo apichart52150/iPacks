@@ -55,10 +55,10 @@
 
                                     <div class="row mt-3">
                                         <div class="col-6">
-                                            <button type="button" class="btn btn-block btn--md btn-secondary waves-effect waves-light">Standard</button>
+                                            <a href="{{ url('payment/'.'standard') }}" type="button" class="btn btn-block btn--md btn-secondary waves-effect waves-light">Standard</a>
                                         </div>
                                         <div class="col-6">
-                                            <button type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">Premium</button>
+                                            <a href="{{ url('payment/'.'premium') }}" type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">Premium</a>
                                         </div>
                                     </div>
                                 </div>

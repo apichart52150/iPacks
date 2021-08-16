@@ -119,7 +119,7 @@
                                             <a href="{{ route('browser-settings') }}"><i class="fas fa-comment-dots"></i>  Speaking</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('isac_reading') }}"><i class="fas fa-eye"></i>  Reading</a>
+                                            <a href="{{ route('isac_reading') }}" target="_blank"><i class="fas fa-eye"></i>  Reading</a>
                                         </li>
                                         <li>
                                                 <a href="{{url('isac/listening')}}"><i class=" fas fa-volume-up"></i>  Listening</a>
@@ -135,13 +135,13 @@
                                 </li>
 
                                 <li class="has-submenu">
-                                    <a href="{{ route('strategies_pack') }}">
+                                    <a href="{{ route('strategies_pack') }}" target="_blank">
                                         <i class="fas fa-film"></i>Strategies Packs<div class="arrow-down"></div>
                                     </a>
                                 </li>
 
                                 <li class="has-submenu">
-                                    <a href="{{ route('topic_pack') }}">
+                                    <a href="{{ route('topic_pack') }}" target="_blank">
                                         <i class="fas fa-briefcase"></i>Topic Packs<div class="arrow-down"></div>
                                     </a>
                                 </li>
@@ -169,7 +169,7 @@
                                     </a>
                                     <ul class="submenu">
                                         <li>
-                                            <a href="{{ route('isac_reading') }}"><i class="fas fa-eye"></i>  Reading</a>
+                                            <a href="{{ route('isac_reading') }}" target="_blank"><i class="fas fa-eye"></i>  Reading</a>
                                         </li>
                                         <li>
                                             <a href="{{url('isac/listening')}}"><i class=" fas fa-volume-up"></i>  Listening</a>
@@ -185,13 +185,13 @@
                                 </li>
 
                                 <li class="has-submenu">
-                                    <a href="{{ route('strategies_pack') }}">
+                                    <a href="{{ route('strategies_pack') }}" target="_blank">
                                         <i class="fas fa-film"></i>Strategies Packs<div class="arrow-down"></div>
                                     </a>
                                 </li>
 
                                 <li class="has-submenu">
-                                    <a href="{{ route('topic_pack') }}">
+                                    <a href="{{ route('topic_pack') }}" target="_blank">
                                         <i class="fas fa-briefcase"></i>Topic Packs<div class="arrow-down"></div>
                                     </a>
                                 </li>
