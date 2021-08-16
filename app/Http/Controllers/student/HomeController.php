@@ -35,7 +35,7 @@ class HomeController extends Controller
         if (auth('student')->user()->session_id == session()->get('ss_id')) {
             return redirect()->to("https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/".auth('student')->user()->std_id);
         }else {
-            redirect()->to('user_logout');
+            return redirect()->to('user_logout');
         }
     }
 		
@@ -43,7 +43,7 @@ class HomeController extends Controller
         if (auth('student')->user()->session_id == session()->get('ss_id')) {
             return redirect()->to("https://newcambridgethailand.com/strategies-pack/access/RG4gERG9AlIDiwiaWF0IjoxNTE2MjM5MDI/".auth('student')->user()->std_id);
         }else {
-            redirect()->to('user_logout');
+            return redirect()->to('user_logout');
         }
 
     }
@@ -52,7 +52,7 @@ class HomeController extends Controller
         if (auth('student')->user()->session_id == session()->get('ss_id')) {
             return redirect()->to("https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/".auth('student')->user()->std_id );
         }else {
-            redirect()->to('user_logout');
+            return redirect()->to('user_logout');
         }
 
     }
