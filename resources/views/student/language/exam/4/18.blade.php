@@ -5,85 +5,85 @@
     }
     </style>
     @php
-        $q1 = "'Tourism brings additional income to developing nations.";
-        $q11 = ", it creates jobs for the local population.' Which of the following answers is NOT suitable?";
+        $q1 = "There has been an ";
+        $q11 = "downturn in the last few decades.";
         $q111 = array(
-            'Moreover',
-            'In addition',
-            'Furthermore',
-            'Too'
+            'economic',
+            'economical',
+            'economy',
+            'economics'
         );
-        $q2 = " ";
-        $q22 = "creating new jobs for locals, tourism also helps develop the local craft industry.";
+        $q2 = "This car is far more";
+        $q22 = "than that one. It uses far less petrol.";
         $q222 = array(
-            'Apart from',
-            'As well',
-            'In addition',
-            'Moreover'
+            'economic',
+            'economically',
+            'economical',
+            'economy'
         );
-        $q3 = "Tourism can create environmental pollution.";
-        $q33 = ", it can cause cultural pollution.";
+        $q3 = "The";
+        $q33 = "sector plays an important role in the nation's development.";
         $q333 = array(
-            'However',
-            'Although',
-            'Furthermore',
-            'Too'
+            'financial',
+            'financially',
+            'finances',
+            'financed'
         );
-        $q4 = "It is important to plan your trip carefully:";
-        $q44 = "an up-to-date passport, you may require an entry visa.";
+        $q4 = "A solid infrastructure is important for any";
+        $q44 = "nation's economy.";
         $q444 = array(
-            'in addition',
-            'as well as',
-            'additionally',
-            'apart'
+            'develop',
+            'development',
+            'developing',
+            'develops'
         );
-        $q5 = "You should quit smoking, stop drinking alcohol, avoid drugs and eat a healthy diet.";
-        $q55 = ", you should live a more healthy life-style.";
+        $q5 = "A strong economic base is crucial for the";
+        $q55 = "of any nation's education system.";
         $q555 = array(
-            'Furthermore',
-            'However',
-            'In short',
-            'As a result'
+            'developing',
+            'develop',
+            'developed',
+            'development'
         );
-        $q6 = "You've been eating a lot of junk food recently.";
-        $q66 = "you have gained around ten kilos.";
+        $q6 = "A well-equipped police force is the key factor as a";
+        $q66 = "to serious crime.";
         $q666 = array(
-            'Moreover',
-            'To conclude',
-            'However',
-            'As a result'
+            'deterrent',
+            'deterring',
+            'deterred',
+            'deter'
         );
-        $q7 = "She didn't get a good night's sleep before the exam.";
-        $q77 = ", she didn't do very well.";
+        $q7 = "Large-scale corruption prevented the nation from";
+        $q77 = "to its full potential.";
         $q777 = array(
-            'In addition',
-            'Consequently',
-            'In short',
-            'To sum up'
+            'develop',
+            'developed',
+            'developing',
+            'develops'
         );
-        $q8 = "The ozone layer is becoming depleted, the air in urban areas is too dirty to breathe and our waterways are no longer safe to swim in.";
-        $q88 = ", pollution is slowly killing our planet.";
+        $q8 = "Government policies helped to reduce the incidence of";
+        $q88 = ".";
         $q888 = array(
-            'However',
-            'Moreover',
-            'To sum up',
-            'Therefore'
+            'unemployment',
+            'unemployed',
+            'unemploying',
+            'unemployees'
         );
-        $q9 = "You are not allowed to take liquids on board a flight.";
-        $q99 = ", weapons of all descriptions are prohibited.";
+        $q9 = "The";
+        $q99 = "rate could be reduced by legalizing soft-core drugs such as cannabis.";
         $q999 = array(
-            'Therefore',
-            'As well as',
-            "In short",
-            'In addition'
+            'criminal',
+            'crime',
+            "crimes",
+            'criminals'
         );
-        $q10 = " ";
-        $q100 = "passive smoking can damage the health of people who come into contact with smokers, smoking in public places should be banned.";
+        $q10 = "Government corruption is one of the most serious ";
+        $q100 = "in our society.";
         $q1000 = array(
-            'Because of',
-            'Since',
-            'Although',
-            'As a result'
+            'crime',
+            'crimes',
+            'criminal',
+            'criminals'
         );
     @endphp
     <div class="row">
@@ -233,16 +233,16 @@
     @section('js')
     <script>
          const answers = [
-            'Too',  //1
-            'Apart from',  //2
-            'Furthermore',  //3
-            'as well as',  //4
-            'In short',  //5
-            'As a result',  //6
-            'Consequently',  //7
-            'To sum up',  //8
-            "In addition",  //9
-            'Since'   //10
+            'economic',  //1
+            'economical',  //2
+            'financial',  //3
+            'developing',  //4
+            'development',  //5
+            'deterrent',  //6
+            'developing',  //7
+            'unemployment',  //8
+            'crime',  //9
+            'crimes'   //10
         ];
         let score = 0;
     
