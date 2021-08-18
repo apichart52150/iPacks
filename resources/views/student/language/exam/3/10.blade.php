@@ -114,7 +114,7 @@
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" class="custom-control-input" id="2-3" name="q2" value="c">
-                            <label class="custom-control-label" for="2-3">c{{  $q222[2]  }}</label>
+                            <label class="custom-control-label" for="2-3">{{  $q222[2]  }}</label>
                         </div>
                         <div class="custom-control custom-radio">
                             <input type="radio" class="custom-control-input" id="2-4" name="q2" value="d">
@@ -182,7 +182,6 @@
                         </div>
                     </div>
                 </div>
-            
                 <div class="col-md-6">
                     <label>6. {{ $q6 }}</label>
                     <div class="ml-2">
@@ -306,15 +305,15 @@
         const q9 = $('input[name="q9"]');
         const q10 = $('input[name="q10"]');
 
+        let score = 0;
 
+        $('#check-answer').on('click', () => {
 
-
-        $('#show-answer').on('click', () => {
-            
             $(q1).each((index, item) => {
             $(item).parent().find('i').remove();
-            if (['a'].includes($(item).val())) {
+            if (['b'].includes($(item).val())) {
                 $(item).parent().append('<i class="fas fa-check text-success"></i>');
+                score++;
             } else {
                 $(item).parent().append('<i class="fas fa-times text-danger"></i>');
             }
@@ -322,8 +321,9 @@
 
             $(q2).each((index, item) => {
             $(item).parent().find('i').remove();
-            if (['c'].includes($(item).val())) {
+            if (['d'].includes($(item).val())) {
                 $(item).parent().append('<i class="fas fa-check text-success"></i>');
+                score++;
             } else {
                 $(item).parent().append('<i class="fas fa-times text-danger"></i>');
             }
@@ -331,12 +331,85 @@
 
             $(q3).each((index, item) => {
             $(item).parent().find('i').remove();
-            if (['d'].includes($(item).val())) {
+            if (['a'].includes($(item).val())) {
                 $(item).parent().append('<i class="fas fa-check text-success"></i>');
+                score++;
             } else {
                 $(item).parent().append('<i class="fas fa-times text-danger"></i>');
             }
             });
+
+            $(q4).each((index, item) => {
+            $(item).parent().find('i').remove();
+            if (['c'].includes($(item).val())) {
+                $(item).parent().append('<i class="fas fa-check text-success"></i>');
+                score++;
+            } else {
+                $(item).parent().append('<i class="fas fa-times text-danger"></i>');
+            }
+            });
+
+            $(q5).each((index, item) => {
+            $(item).parent().find('i').remove();
+            if (['a'].includes($(item).val())) {
+                $(item).parent().append('<i class="fas fa-check text-success"></i>');
+                score++;
+            } else {
+                $(item).parent().append('<i class="fas fa-times text-danger"></i>');
+            }
+            });
+            
+            $(q6).each((index, item) => {
+            $(item).parent().find('i').remove();
+            if (['c'].includes($(item).val())) {
+                $(item).parent().append('<i class="fas fa-check text-success"></i>');
+                score++;
+            } else {
+                $(item).parent().append('<i class="fas fa-times text-danger"></i>');
+            }
+            });
+
+            $(q7).each((index, item) => {
+            $(item).parent().find('i').remove();
+            if (['b'].includes($(item).val())) {
+                $(item).parent().append('<i class="fas fa-check text-success"></i>');
+                score++;
+            } else {
+                $(item).parent().append('<i class="fas fa-times text-danger"></i>');
+            }
+            });
+
+            $(q8).each((index, item) => {
+            $(item).parent().find('i').remove();
+            if (['d'].includes($(item).val())) {
+                $(item).parent().append('<i class="fas fa-check text-success"></i>');
+                score++;
+            } else {
+                $(item).parent().append('<i class="fas fa-times text-danger"></i>');
+            }
+            });
+
+            $(q9).each((index, item) => {
+            $(item).parent().find('i').remove();
+            if (['a'].includes($(item).val())) {
+                $(item).parent().append('<i class="fas fa-check text-success"></i>');
+                score++;
+            } else {
+                $(item).parent().append('<i class="fas fa-times text-danger"></i>');
+            }
+            });
+
+            $(q10).each((index, item) => {
+            $(item).parent().find('i').remove();
+            if (['a'].includes($(item).val())) {
+                $(item).parent().append('<i class="fas fa-check text-success"></i>');
+                score++;
+            } else {
+                $(item).parent().append('<i class="fas fa-times text-danger"></i>');
+            }
+            });
+
+            $("#check-answer").hide(true);
         })
 
     </script>
