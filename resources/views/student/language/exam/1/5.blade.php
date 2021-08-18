@@ -5,85 +5,85 @@
     }
     </style>
     @php
-        $q1 = "Chiang Mai isn't";
-        $q11 = "Bangkok.";
+        $q1 = "It doesn't cost as";
+        $q11 = "to go by bus as it does by plane.";
         $q111 = array(
-            'big as',
-            'bigger as',
-            'biggest than',
-            'as big as'
+            'much',
+            'many',
+            'more',
+            'most'
         );
-        $q2 = "My Toyota doesn't use";
-        $q22 = "as your Ferrari.";
+        $q2 = "He's the";
+        $q22 = "unpleasant person I have ever met!";
         $q222 = array(
-            'as much fuel',
-            'more fuel',
-            'most fuel',
-            'the most fuel'
+            'much',
+            'many',
+            'more',
+            'most'
         );
-        $q3 = "My father doesn't earn as ";
-        $q33 = "my mother.";
+        $q3 = "There were";
+        $q33 = "people on the bus than I had expected.";
         $q333 = array(
-            'more money than',
-            'much money than',
-            'most money as',
-            'much money as'
+            'much',
+            'many',
+            'more',
+            'most'
         );
-        $q4 = "You should try to arrive";
-        $q44 = "possible to get a good seat.";
+        $q4 = "Speaking Thai is ";
+        $q44 = "difficult than reading it.";
         $q444 = array(
-            'as early as',
-            'earlier than',
-            'earliest',
-            'the earliest'
+            'much',
+            'many',
+            'more',
+            'most'
         );
-        $q5 = "He doesn't eat";
-        $q55 = "I do but I'm much fatter.";
+        $q5 = " ";
+        $q55 = "more people live to be 100 years old than before.";
         $q555 = array(
-            'more than',
-            'as much as',
-            'the most',
-            'as more as'
+            'Much',
+            'Many',
+            'More',
+            'Most'
         );
-        $q6 = "Going by air doesn't take";
-        $q66 = "going by rail.";
+        $q6 = "There are";
+        $q66 = "more cars on the road now than 50 years ago.";
         $q666 = array(
-            'longer as',
-            'as longer than',
-            'as long as',
-            'the longest as'
+            'much',
+            'many',
+            'more',
+            'most'
         );
-        $q7 = "Fast food such as hamburgers is not";
-        $q77 = "as vegetables.";
+        $q7 = "It's";
+        $q77 = "more difficult to find a job now than it was in the past.";
         $q777 = array(
-            'healthy',
-            'healthier',
-            'the healthiest',
-            'as healthy'
+            'much',
+            'many',
+            'more',
+            'most'
         );
-        $q8 = "A Rolls Royce isn't";
-        $q88 = "a Toyota.";
+        $q8 = "There are increasingly ";
+        $q88 = "cars on the road nowadays.";
         $q888 = array(
-            'economical as',
-            'as economical as',
-            'more economical as',
-            'the most economical than'
+            'much',
+            'many',
+            'more',
+            'most'
         );
-        $q9 = "My old bicycle is";
-        $q99 = "your new mountain bike.";
+        $q9 = "English language is the";
+        $q99 = "popular subject among girls in the class.";
         $q999 = array(
-            'not as comfortable as',
-            'more comfortable as',
-            'the most comfortable',
-            'comfortable than'
+            'much',
+            'many',
+            'more',
+            'most'
         );
-        $q10 = "The decrease in sales wasn't ";
-        $q100 = "the decrease in revenue.";
+        $q10 = "The infant mortality rate is";
+        $q100 = "lower now than it used to be.";
         $q1000 = array(
-            'dramatic as',
-            'as dramatic as',
-            'more dramatic as',
-            'most dramatic as'
+            'much',
+            'many',
+            'more',
+            'most'
         );
     @endphp
     <div class="row">
@@ -233,16 +233,16 @@
     @section('js')
     <script>
          const answers = [
-            'as big as',   //1
-            'as much fuel',  //2
-            'much money as',  //3
-            'as early as',   //4
-            'as much as',    //5
-            'as long as',    //6
-            'as healthy',  //7
-            'as economical as',   //8
-            'not as comfortable as',  //9
-            'as dramatic as'    //10
+            'much',  //1
+            'most',  //2
+            'more',  //3
+            'more',  //4
+            'Many',  //5
+            'many',  //6
+            'much',  //7
+            'more',  //8
+            'most',  //9
+            'much'   //10
         ];
         let score = 0;
     

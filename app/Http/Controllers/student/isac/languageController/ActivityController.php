@@ -86,7 +86,7 @@ class ActivityController extends Controller
 
         $sub_menu = DB::table('sub_menu_language')
         ->where('sub_menu_id','=', $exam_id)
-        ->select('sub_menu_name','sub_menu_type','sub_menu_id')
+        ->select('*')
         ->get();
 
         $main_menu = DB::table('menu_language')
@@ -94,9 +94,9 @@ class ActivityController extends Controller
         ->select('menu_id','menu_name', 'menu_type')
         ->get();
 
-        $navigation =  DB::table('sub_menu_language')
+        $navigation_count =  DB::table('sub_menu_language')
         ->where('sub_menu_type','=', $sub_menu[0]->sub_menu_type)
-        ->select('sub_menu_type')
+        ->select('sub_menu_count')
         ->get();
 
         $path = $sub_menu[0]->sub_menu_type;
@@ -114,10 +114,18 @@ class ActivityController extends Controller
             'prev' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_id-1)."/".($exam_id-1),
             'current' => $exam_id,
             'next' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_id+1)."/".($exam_id+1),
-            'textBtn' => $exam_id == count($navigation) ? 'Finish' : 'Next'
+            'textBtn' => $sub_menu[0]->sub_menu_count == count($navigation_count) ? 'Finish' : 'Next'
         ];
 
-        // dd($pagination['prev']);
+        if($pagination['textBtn'] == 'Finish'){
+            $pagination = [
+                'prev' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_id-1)."/".($exam_id-1),
+                'current' => $exam_id,
+                'next' => "language/".$this->topicType[$main_menu[0]->menu_type],
+                'textBtn' => $sub_menu[0]->sub_menu_count == count($navigation_count) ? 'Finish' : 'Next'
+            ];
+        }
+        // dd($pagination['next']);
 
     
         return view('student.language.exam', ['view' => $view, 'pageTitle' => $pageTitle, 'pagination' => $pagination]);

@@ -85,7 +85,7 @@
 		});
 
 		Route::prefix('language')->namespace('student\isac\languageController')->group(function () {
-			Route::get('home', 'HomeController@index');
+			Route::get('home', 'HomeController@index')->name('language_home');
 			Route::get('{topic}', 'TopicController@index');
 
 			Route::prefix('Intermediate')->group(function () {
