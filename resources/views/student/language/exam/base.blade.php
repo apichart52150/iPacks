@@ -38,38 +38,88 @@
 
 </style>
 @php
-    $q1 = "What would the world be like without Shakespeare or the Olympics? While";
-    $q2 = "about the amount of money spent each year";
-    $q3 = "defence and education by five different nations. Figures are given in millions of dollars. Overall, it can be seen that all countries, with the";
-    $q4 = "of Japan, allocate more money to defence";
-    $q5 = " to education. Starting with the defence budget, Russia spends the";
-    $q6 = "amount of money on defending its borders. At 7000 million dollars, this is 500 million dollars";
-    $q7 = "than the USA. Russia’s budget for defence is";
-    $q8 = "as high as China’s, which amounts to 3500 million dollars. Australia allocates 4500 million dollars to defence, while Japan spends just 1000 million dollars, the";
-    $q9 = "amount of all the countries. When it comes to education, there is a different trend. Both Australia and Japan spend 4000 million dollars on education,";
-    $q10 = "than any of the other countries in the group. The USA spends 500 million";
-    $q11 = "than this, at 3500 million dollars. Russia and China both allocate sums of 3000 million dollars for education. While most countries spend more money on defence than on education, Japan spends four";
-    $end = "more money on education than on defence.";
+    $q1 = "";
+    $q2 = "";
+    $q3 = "";
+    $q4 = "";
+    $q5 = "";
+    $q6 = "";
+    $q7 = "";
+    $q8 = "";
+    $q9 = "";
+    $q10 = "";
+    $q11 = "";
+    $q12 = "";
+    $q13 = "";
+    $q14 = "";
+    $q15 = "";
+    $q16 = "";
+    $q17 = "";
+    $q18 = "";
+    $q19 = "";
+    $q20 = "";
+    $q21 = "";
+    $q22 = "";
+    $q23 = "";
+    $q24 = "";
+    $q25 = "";
+    $q26 = "";
+    $q27 = "";
+    $q28 = "";
+    $q29 = "";
+    $q30 = "";
+    $q31 = "";
+    $q32 = "";
+    $q33 = "";
+    $q34 = "";
+    $q35 = "";
+    $q36 = "";
+    $q37 = "";
+    $q38 = "";
+    $q39 = "";
+    $q40 = "";
+    $end = "";
 
-    $a1 = "academically";
-    $a2 = "areas";
-    $a3 = "behalf";
-    $a4 = "benefit";
-    $a5 = "construction";
-    $a6 = "constructions";
-    $a7 = "contributed";
-    $a8 = "create";
-    $a9 = "identical";
-    $a10 = "induce";
-    $a11 = "medical";
-    $a12 = "mental";
-    $a13 = "physical";
-    $a14 = "plus";
-    $a15 = "retain";
-    $a16 = "specifically";
-    $a17 = "sufficient";
-    $a18 = "thereby";
-    $a19 = "welfare";
+    $a1 = "";
+    $a2 = "";
+    $a3 = "";
+    $a4 = "";
+    $a5 = "";
+    $a6 = "";
+    $a7 = "";
+    $a8 = "";
+    $a9 = "";
+    $a10 = "";
+    $a11 = "";
+    $a12 = "";
+    $a13 = "";
+    $a14 = "";
+    $a15 = "";
+    $a16 = "";
+    $a17 = "";
+    $a18 = "";
+    $a19 = "";
+    $a20 = "";
+    $a21 = "";
+    $a22 = "";
+    $a23 = "";
+    $a24 = "";
+    $a25 = "";
+    $a26 = "";
+    $a27 = "";
+    $a28 = "";
+    $a29 = "";
+    $a30 = "";
+    $a31 = "";
+    $a32 = "";
+    $a33 = "";
+    $a34 = "";
+    $a35 = "";
+    $a36 = "";
+    $a37 = "";
+    $a38 = "";
+    $a39 = "";
+    $a40 = "";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -99,6 +149,27 @@
                                 <div class="drag">{{ $a17 }}</div>
                                 <div class="drag">{{ $a18 }}</div>
                                 <div class="drag">{{ $a19 }}</div>
+                                <div class="drag">{{ $a20 }}</div>
+                                <div class="drag">{{ $a21 }}</div>
+                                <div class="drag">{{ $a22 }}</div>
+                                <div class="drag">{{ $a23 }}</div>
+                                <div class="drag">{{ $a24 }}</div>
+                                <div class="drag">{{ $a25 }}</div>
+                                <div class="drag">{{ $a26 }}</div>
+                                <div class="drag">{{ $a27 }}</div>
+                                <div class="drag">{{ $a28 }}</div>
+                                <div class="drag">{{ $a29 }}</div>
+                                <div class="drag">{{ $a30 }}</div>
+                                <div class="drag">{{ $a31 }}</div>
+                                <div class="drag">{{ $a32 }}</div>
+                                <div class="drag">{{ $a33 }}</div>
+                                <div class="drag">{{ $a34 }}</div>
+                                <div class="drag">{{ $a35 }}</div>
+                                <div class="drag">{{ $a36 }}</div>
+                                <div class="drag">{{ $a37 }}</div>
+                                <div class="drag">{{ $a38 }}</div>
+                                <div class="drag">{{ $a39 }}</div>
+                                <div class="drag">{{ $a40 }}</div>
                             </div>
                         </div>
                     </div>
@@ -163,53 +234,148 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q13}}
+                            <span class="font-weight-bold">13.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q14}}
+                            <span class="font-weight-bold">14.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q15}}
+                            <span class="font-weight-bold">15.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q16}}
+                            <span class="font-weight-bold">16.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q17}}
+                            <span class="font-weight-bold">17.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q18}}
+                            <span class="font-weight-bold">18.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q19}}
+                            <span class="font-weight-bold">19.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q20}}
+                            <span class="font-weight-bold">20.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q21}}
+                            <span class="font-weight-bold">21.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q22}}
+                            <span class="font-weight-bold">22.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q23}}
+                            <span class="font-weight-bold">23.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q24}}
+                            <span class="font-weight-bold">24.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q25}}
+                            <span class="font-weight-bold">25.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q26}}
+                            <span class="font-weight-bold">26.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q27}}
+                            <span class="font-weight-bold">27.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q28}}
+                            <span class="font-weight-bold">28.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q29}}
+                            <span class="font-weight-bold">29.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q30}}
+                            <span class="font-weight-bold">30.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q31}}
+                            <span class="font-weight-bold">31.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q32}}
+                            <span class="font-weight-bold">32.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q33}}
+                            <span class="font-weight-bold">33.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q34}}
+                            <span class="font-weight-bold">34.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q35}}
+                            <span class="font-weight-bold">35.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q36}}
+                            <span class="font-weight-bold">36.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q37}}
+                            <span class="font-weight-bold">37.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q38}}
+                            <span class="font-weight-bold">38.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q39}}
+                            <span class="font-weight-bold">39.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q40}}
+                            <span class="font-weight-bold">40.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
@@ -234,25 +400,46 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a11 ?>",
-         $q2 = "<?php echo $a1 ?>",
-         $q3 = "<?php echo $a1 ?>",
-         $q4 = "<?php echo $a1 ?>",
-         $q5 = "<?php echo $a1 ?>",
-         $q6 = "<?php echo $a1 ?>",
-         $q7 = "<?php echo $a1 ?>",
-         $q8 = "<?php echo $a1 ?>",
-         $q9 = "<?php echo $a1 ?>",
-         $q10 = "<?php echo $a1 ?>",
-         $q11 = "<?php echo $a1 ?>",
-         $q12 = "<?php echo $a1 ?>",
-         $q13 = "<?php echo $a1 ?>",
-         $q14 = "<?php echo $a1 ?>",
-         $q15 = "<?php echo $a1 ?>",
-         $q16 = "<?php echo $a1 ?>",
-         $q17 = "<?php echo $a1 ?>",
-         $q18 = "<?php echo $a1 ?>",
-         $q19 = "<?php echo $a1 ?>",
+         $q1 = "<?php echo $a ?>",
+         $q2 = "<?php echo $a ?>",
+         $q3 = "<?php echo $a ?>",
+         $q4 = "<?php echo $a ?>",
+         $q5 = "<?php echo $a ?>",
+         $q6 = "<?php echo $a ?>",
+         $q7 = "<?php echo $a ?>",
+         $q8 = "<?php echo $a ?>",
+         $q9 = "<?php echo $a ?>",
+         $q10 = "<?php echo $a ?>",
+         $q11 = "<?php echo $a ?>",
+         $q12 = "<?php echo $a ?>",
+         $q13 = "<?php echo $a ?>",
+         $q14 = "<?php echo $a ?>",
+         $q15 = "<?php echo $a ?>",
+         $q16 = "<?php echo $a ?>",
+         $q17 = "<?php echo $a ?>",
+         $q18 = "<?php echo $a ?>",
+         $q19 = "<?php echo $a ?>",
+         $q20 = "<?php echo $a ?>",
+         $q21 = "<?php echo $a ?>",
+         $q22 = "<?php echo $a ?>",
+         $q23 = "<?php echo $a ?>",
+         $q24 = "<?php echo $a ?>",
+         $q25 = "<?php echo $a ?>",
+         $q26 = "<?php echo $a ?>",
+         $q27 = "<?php echo $a ?>",
+         $q28 = "<?php echo $a ?>",
+         $q29 = "<?php echo $a ?>",
+         $q30 = "<?php echo $a ?>",
+         $q31 = "<?php echo $a ?>",
+         $q32 = "<?php echo $a ?>",
+         $q33 = "<?php echo $a ?>",
+         $q34 = "<?php echo $a ?>",
+         $q35 = "<?php echo $a ?>",
+         $q36 = "<?php echo $a ?>",
+         $q37 = "<?php echo $a ?>",
+         $q38 = "<?php echo $a ?>",
+         $q39 = "<?php echo $a ?>",
+         $q40 = "<?php echo $a ?>",
     ];
 
     console.log(answers);
