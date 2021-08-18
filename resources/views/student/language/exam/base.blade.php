@@ -78,6 +78,26 @@
     $q38 = "";
     $q39 = "";
     $q40 = "";
+    $q41 = "";
+    $q42 = "";
+    $q43 = "";
+    $q44 = "";
+    $q45 = "";
+    $q46 = "";
+    $q47 = "";
+    $q48 = "";
+    $q49 = "";
+    $q50 = "";
+    $q51 = "";
+    $q52 = "";
+    $q53 = "";
+    $q54 = "";
+    $q55 = "";
+    $q56 = "";
+    $q57 = "";
+    $q58 = "";
+    $q59 = "";
+    $q60 = "";
     $end = "";
 
     $a1 = "";
@@ -120,6 +140,26 @@
     $a38 = "";
     $a39 = "";
     $a40 = "";
+    $a41 = "";
+    $a42 = "";
+    $a43 = "";
+    $a44 = "";
+    $a45 = "";
+    $a46 = "";
+    $a47 = "";
+    $a48 = "";
+    $a49 = "";
+    $a50 = "";
+    $a51 = "";
+    $a52 = "";
+    $a53 = "";
+    $a54 = "";
+    $a55 = "";
+    $a56 = "";
+    $a57 = "";
+    $a58 = "";
+    $a59 = "";
+    $a60 = "";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -170,6 +210,26 @@
                                 <div class="drag">{{ $a38 }}</div>
                                 <div class="drag">{{ $a39 }}</div>
                                 <div class="drag">{{ $a40 }}</div>
+                                <div class="drag">{{ $a41 }}</div>
+                                <div class="drag">{{ $a42 }}</div>
+                                <div class="drag">{{ $a43 }}</div>
+                                <div class="drag">{{ $a44 }}</div>
+                                <div class="drag">{{ $a45 }}</div>
+                                <div class="drag">{{ $a46 }}</div>
+                                <div class="drag">{{ $a47 }}</div>
+                                <div class="drag">{{ $a48 }}</div>
+                                <div class="drag">{{ $a49 }}</div>
+                                <div class="drag">{{ $a50 }}</div>
+                                <div class="drag">{{ $a51 }}</div>
+                                <div class="drag">{{ $a52 }}</div>
+                                <div class="drag">{{ $a53 }}</div>
+                                <div class="drag">{{ $a54 }}</div>
+                                <div class="drag">{{ $a55 }}</div>
+                                <div class="drag">{{ $a56 }}</div>
+                                <div class="drag">{{ $a57 }}</div>
+                                <div class="drag">{{ $a58 }}</div>
+                                <div class="drag">{{ $a59 }}</div>
+                                <div class="drag">{{ $a60 }}</div>
                             </div>
                         </div>
                     </div>
@@ -379,6 +439,106 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
+                            {{$q41}}
+                            <span class="font-weight-bold">41.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q42}}
+                            <span class="font-weight-bold">42.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q43}}
+                            <span class="font-weight-bold">43.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q44}}
+                            <span class="font-weight-bold">44.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q45}}
+                            <span class="font-weight-bold">45.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q46}}
+                            <span class="font-weight-bold">46.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q47}}
+                            <span class="font-weight-bold">47.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q48}}
+                            <span class="font-weight-bold">48.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q49}}
+                            <span class="font-weight-bold">49.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q50}}
+                            <span class="font-weight-bold">50.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q51}}
+                            <span class="font-weight-bold">51.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q52}}
+                            <span class="font-weight-bold">52.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q53}}
+                            <span class="font-weight-bold">53.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q54}}
+                            <span class="font-weight-bold">54.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q55}}
+                            <span class="font-weight-bold">55.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q56}}
+                            <span class="font-weight-bold">56.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q57}}
+                            <span class="font-weight-bold">57.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q58}}
+                            <span class="font-weight-bold">58.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q59}}
+                            <span class="font-weight-bold">59.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q60}}
+                            <span class="font-weight-bold">60.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
                             {{$end}}
                         </div>
                     </div>
@@ -440,6 +600,26 @@
          $q38 = "<?php echo $a ?>",
          $q39 = "<?php echo $a ?>",
          $q40 = "<?php echo $a ?>",
+         $q41 = "<?php echo $a ?>",
+         $q42 = "<?php echo $a ?>",
+         $q43 = "<?php echo $a ?>",
+         $q44 = "<?php echo $a ?>",
+         $q45 = "<?php echo $a ?>",
+         $q46 = "<?php echo $a ?>",
+         $q47 = "<?php echo $a ?>",
+         $q48 = "<?php echo $a ?>",
+         $q49 = "<?php echo $a ?>",
+         $q50 = "<?php echo $a ?>",
+         $q51 = "<?php echo $a ?>",
+         $q52 = "<?php echo $a ?>",
+         $q53 = "<?php echo $a ?>",
+         $q54 = "<?php echo $a ?>",
+         $q55 = "<?php echo $a ?>",
+         $q56 = "<?php echo $a ?>",
+         $q57 = "<?php echo $a ?>",
+         $q58 = "<?php echo $a ?>",
+         $q59 = "<?php echo $a ?>",
+         $q60 = "<?php echo $a ?>",
     ];
 
     console.log(answers);

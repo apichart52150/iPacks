@@ -1,686 +1,373 @@
+<link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
-.mark, mark {
-    padding: .2em;
-    background-color: #ffc107;
-}
+    .input-con {
+        display: inline-block;
+        position: relative;
+    }
+
+    .drag-container {
+        margin-bottom: 25px;
+    }
+
+    .answers-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+
+    .answers-container p {
+        font-size: 16px;
+    }
+
+    .dropbox {
+        border: 1px dashed #ccc;
+        border-radius: 5px;
+        padding: 3px;
+        width: 100%;
+        height: auto;
+        min-width: 80px;
+    }
+
+    .dropbox .drag {margin: 0;
+    }
+
+    .grid-5 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
 </style>
 @php
-    $q1 = " ";
-    $q11 = "I agree that the punishment should fit the crime, I don't agree that the death penalty is an effective deterrent to serious crime.";
-    $q111 = array(
-        'However',
-        'Whereas',
-        'Yet',
-        'While'
-    );
-    $q2 = "I don't like cats ";
-    $q22 = "I don't think that people should be cruel to them.";
-    $q222 = array(
-        'however',
-        'although',
-        'while',
-        'even though'
-    );
-    $q3 = "There was a steady rise until 1990;";
-    $q33 = ", after that the trend was downward.";
-    $q333 = array(
-        'however',
-        'while',
-        'whereas',
-        'but'
-    );
-    $q4 = " ";
-    $q44 = "the general trend was positive, there were some periods of instability.";
-    $q444 = array(
-        'Even',
-        'Whereas',
-        'Although',
-        'But'
-    );
-    $q5 = "In 2005 there were serious floods.";
-    $q55 = ", the following year saw a terrible drought.";
-    $q555 = array(
-        'Although',
-        'While',
-        'In contrast',
-        'Whereas'
-    );
-    $q6 = "Last year's figures showed a decrease";
-    $q66 = "the figures for this year have so far been in positive territory.";
-    $q666 = array(
-        'whereas',
-        'however',
-        'in contrast',
-        'since'
-    );
-    $q7 = " ";
-    $q77 = "the total revenue grew by more than 10%, the total number of vehicles sold dropped by 5%.";
-    $q777 = array(
-        'Even',
-        'Although',
-        'But',
-        'However'
-    );
-    $q8 = " ";
-    $q88 = "he learnt to speak French very well, he didn't enjoy his time studying in Paris.";
-    $q888 = array(
-        'Even though',
-        'Even',
-        'However',
-        'But'
-    );
-    $q9 = "He's been living in the same apartment for twenty years";
-    $q99 = "he doesn't particularly like the area.";
-    $q999 = array(
-        'while',
-        'however',
-        'whereas',
-        'yet'
-    );
-    $q10 = "I wouldn't do your job ";
-    $q100 = "you gave me a million dollars.";
-    $q1000 = array(
-        'although',
-        'even though',
-        'even if',
-        'while'
-    );
+    $q1 = "The use of";
+    $q2 = "punishment for children is a contentious";
+    $q3 = "nowadays. It is also emotive, and most people have strong feelings on the matter. Some people oppose the use of corporal punishment while others believe it can have a";
+    $q4 = "effect on their children's behavior. This essay will outline some of these arguments for and against. There are various arguments put forward against smacking children. First of all,";
+    $q5 = "abuse of any sort is an";
+    $q6 = "of disapproval. If a parent smacks a child, it shows that the parent does not love the child. This feeling is";
+    $q7 = "each time the child is hit and the child develops a feeling of being unwanted. This can result in a feeling of";
+    $q8 = "and a loss of self-esteem and self-confidence. Secondly, the fact that a parent uses";
+    $q9 = "force to punish a child sends a clear message to the child that";
+    $q10 = "abuse is acceptable behaviour. The child is then";
+    $q11 = "likely to use force against other people, too. As the saying goes, 'violence breeds violence'. There are, however, arguments in favour of using smacking occasionally to remediate a child's misbehaviour. When a child's behavior is out of control, for example during a tantrum, a light smack may be just enough to bring the child back to";
+    $q12 = "behaviour. This does not mean";
+    $q13 = "brutalizing the child but a single slap may be what is needed. There is, after, all, a big difference between";
+    $q14 = "assault which puts the child's health and safety at risk, and a slap or smack to remediate behavior. There is also the argument that a parent who";
+    $q15 = "their child and does not attempt to manage the child's behaviour can be accused of negligence in terms of helping the child to develop social skills. In";
+    $q16 = ", it is important to";
+    $q17 = "between a smack and";
+    $q18 = "abuse. A smack may represent the concern of a loving parent to provide";
+    $q19 = "for the child's social development,";
+    $q20 = "";
+    $q21 = "assault may show";
+    $q22 = "psychotic tendencies in the parent. In the end, it boils down to the personal relationship which a parent develops with the child. Even parents who oppose corporal punishment will need to set";
+    $q23 = "remedial";
+    $end = "in place so that the child learns the difference between acceptable and unacceptable social behaviour.";
+
+    $a1 = "alternative";
+    $a2 = "conclusion";
+    $a3 = "differentiate";
+    $a4 = "guidelines";
+    $a5 = "ignores";
+    $a6 = "indication";
+    $a7 = "insecurity";
+    $a8 = "issue";
+    $a9 = "normal";
+    $a10 = "physical";
+    $a11 = "physical";
+    $a12 = "physical";
+    $a13 = "physical";
+    $a14 = "physical";
+    $a15 = "physical";
+    $a16 = "physical";
+    $a17 = "physically";
+    $a18 = "positive";
+    $a19 = "reinforced";
+    $a20 = "responses";
+    $a21 = "subsequently";
+    $a22 = "underlying";
+    $a23 = "whereas";
 @endphp
 <div class="row">
-    <div class="col-xl-12 col-md-12">
-        <div class="card-box text-dark font-16">
-            <p class="lead">
-                {{$pageTitle['topic']}}
-            </p>
-            
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">1.</span>
-                {{$q1}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q111[0]}}">{{$q111[0]}}</option>
-                    <option value="{{$q111[1]}}">{{$q111[1]}}</option>
-                    <option value="{{$q111[2]}}">{{$q111[2]}}</option>
-                    <option value="{{$q111[3]}}">{{$q111[3]}}</option>
-                </select>
-                {{$q11}}
-            </div>
-            
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">2.</span>
-                {{$q2}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q222[0]}}">{{$q222[0]}}</option>
-                    <option value="{{$q222[1]}}">{{$q222[1]}}</option>
-                    <option value="{{$q222[2]}}">{{$q222[2]}}</option>
-                    <option value="{{$q222[3]}}">{{$q222[3]}}</option>
-                </select>
-                {{$q22}}
-            </div>
-            
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">3.</span>
-                {{$q3}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q333[0]}}">{{$q333[0]}}</option>
-                    <option value="{{$q333[1]}}">{{$q333[1]}}</option>
-                    <option value="{{$q333[2]}}">{{$q333[2]}}</option>
-                    <option value="{{$q333[3]}}">{{$q333[3]}}</option>
-                </select>
-                {{$q33}}
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
+                <div class="col-md-12">
+                    <div class="border border-dark px-2 text-center">
+                        <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
+                        <div class="drag-container">
+                            <div class="d-grid grid-5" id="choices">
+                                <div class="drag">{{ $a1 }}</div>
+                                <div class="drag">{{ $a2 }}</div>
+                                <div class="drag">{{ $a3 }}</div>
+                                <div class="drag">{{ $a4 }}</div>
+                                <div class="drag">{{ $a5 }}</div>
+                                <div class="drag">{{ $a6 }}</div>
+                                <div class="drag">{{ $a7 }}</div>
+                                <div class="drag">{{ $a8 }}</div>
+                                <div class="drag">{{ $a9 }}</div>
+                                <div class="drag">{{ $a10 }}</div>
+                                <div class="drag">{{ $a11 }}</div>
+                                <div class="drag">{{ $a12 }}</div>
+                                <div class="drag">{{ $a13 }}</div>
+                                <div class="drag">{{ $a14 }}</div>
+                                <div class="drag">{{ $a15 }}</div>
+                                <div class="drag">{{ $a16 }}</div>
+                                <div class="drag">{{ $a17 }}</div>
+                                <div class="drag">{{ $a18 }}</div>
+                                <div class="drag">{{ $a19 }}</div>
+                                <div class="drag">{{ $a20 }}</div>
+                                <div class="drag">{{ $a21 }}</div>
+                                <div class="drag">{{ $a22 }}</div>
+                                <div class="drag">{{ $a23 }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">4.</span>
-                {{$q4}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q444[0]}}">{{$q444[0]}}</option>
-                    <option value="{{$q444[1]}}">{{$q444[1]}}</option>
-                    <option value="{{$q444[2]}}">{{$q444[2]}}</option>
-                    <option value="{{$q444[3]}}">{{$q444[3]}}</option>
-                </select>
-                {{$q44}}
-            </div>
-
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">5.</span>
-                {{$q5}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q555[0]}}">{{$q555[0]}}</option>
-                    <option value="{{$q555[1]}}">{{$q555[1]}}</option>
-                    <option value="{{$q555[2]}}">{{$q555[2]}}</option>
-                    <option value="{{$q555[3]}}">{{$q555[3]}}</option>
-                </select>
-                {{$q55}}
-            </div>
-
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">6.</span>
-                {{$q6}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q666[0]}}">{{$q666[0]}}</option>
-                    <option value="{{$q666[1]}}">{{$q666[1]}}</option>
-                    <option value="{{$q666[2]}}">{{$q666[2]}}</option>
-                    <option value="{{$q666[3]}}">{{$q666[3]}}</option>
-                </select>
-                {{$q66}}
-            </div>
-
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">7.</span>
-                {{$q7}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q777[0]}}">{{$q777[0]}}</option>
-                    <option value="{{$q777[1]}}">{{$q777[1]}}</option>
-                    <option value="{{$q777[2]}}">{{$q777[2]}}</option>
-                    <option value="{{$q777[3]}}">{{$q777[3]}}</option>
-                </select>
-                {{$q77}}
-            </div>
-
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">8.</span>
-                {{$q8}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q888[0]}}">{{$q888[0]}}</option>
-                    <option value="{{$q888[1]}}">{{$q888[1]}}</option>
-                    <option value="{{$q888[2]}}">{{$q888[2]}}</option>
-                    <option value="{{$q888[3]}}">{{$q888[3]}}</option>
-                </select>
-                {{$q88}}
-            </div>
-
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">9.</span>
-                {{$q9}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q999[0]}}">{{$q999[0]}}</option>
-                    <option value="{{$q999[1]}}">{{$q999[1]}}</option>
-                    <option value="{{$q999[2]}}">{{$q999[2]}}</option>
-                    <option value="{{$q999[3]}}">{{$q999[3]}}</option>
-                </select>
-                {{$q99}}
-            </div>
-
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">10.</span>
-                {{$q10}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
-                    <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
-                    <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
-                    <option value="{{$q1000[3]}}">{{$q1000[3]}}</option>
-                </select>
-                {{$q100}}
+            <div class="row justify-content-center mb-2">
+                <div class="col-md-12">
+                    <div class="border border-dark p-2" style="line-height: 35px;">
+                            {{$q1}}
+                            <span class="font-weight-bold">1.</span> 
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q2}}
+                            <span class="font-weight-bold">2.</span> 
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q3}}
+                            <span class="font-weight-bold">3.</span> 
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q4}}
+                            <span class="font-weight-bold">4.</span> 
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q5}}
+                            <span class="font-weight-bold">5.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q6}}
+                            <span class="font-weight-bold">6.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q7}}
+                            <span class="font-weight-bold">7.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q8}}
+                            <span class="font-weight-bold">8.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q9}}
+                            <span class="font-weight-bold">9.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q10}}
+                            <span class="font-weight-bold">10.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q11}}
+                            <span class="font-weight-bold">11.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q13}}
+                            <span class="font-weight-bold">13.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q14}}
+                            <span class="font-weight-bold">14.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q15}}
+                            <span class="font-weight-bold">15.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q16}}
+                            <span class="font-weight-bold">16.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q17}}
+                            <span class="font-weight-bold">17.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q18}}
+                            <span class="font-weight-bold">18.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q19}}
+                            <span class="font-weight-bold">19.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q20}}
+                            <span class="font-weight-bold">20.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q21}}
+                            <span class="font-weight-bold">21.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q22}}
+                            <span class="font-weight-bold">22.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q23}}
+                            <span class="font-weight-bold">23.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$end}}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="col-xl-12 col-md-12 col-sm-12" id="ans" style="display: none;">
-        <div class="card-box text-dark font-16">
-            <p class="lead">
-                Answers
-            </p>
-            <div class="accordion mb-3" id="accordionExample">
-                <!-- 1 -->
-                    <div class="card mb-1" >
-                        <div class="card-header" id="headingOne">
-                            <h5 class="my-0">
-                                <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    1. {{$q1}} <u></u> {{$q11}}
-                                </a>
-                            </h2>
-                        </div>
-                    
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <dl class="row">
-                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[3]}}</i></dt>
-                                        <dd class="col-sm-10"><strong>While</strong> + s+v, s+v.</dd>
-                                    
-                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[1]}}</i></dt>
-                                        <dd class="col-sm-10"><strong>Whereas</strong> + s+v, s+v.
-                                            <p class="font-weight-bold mark">clues: I agree..., I don't agree...</p>
-                                        </dd>
-
-                                        <dt class="col-sm-2">{{$q111[2]}}</dt>
-                                        <dd class="col-sm-10">s+v <strong>yet</strong> s+v.</dd>
-
-                                        <dt class="col-sm-2">{{$q111[0]}}</dt>
-                                        <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
-                                    </dl>
-                                </div>
-                        </div>
-                    </div>
-                <!-- 1 -->
-                
-                <!-- 2 -->
-                    <div class="card mb-1" >
-                        <div class="card-header" id="headingTwo">
-                            <h5 class="my-0">
-                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    2. {{$q2}} <u></u> {{$q22}}
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[1]}}</i></dt>
-                                    <dd class="col-sm-10">used to introduce a statement that makes the main statement seem surprising
-                                        <ul class="list-unstyled mark">
-                                            <li>
-                                                <strong>clues:</strong>
-                                            </li>
-                                            <li>
-                                                <ul>
-                                                    <li>
-                                                    s+v <strong>although</strong> s+v.
-                                                    </li>
-                                                    <li>
-                                                    I don't like cats... .I don't think...
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </dd>
-
-                                    <dt class="col-sm-2">{{$q222[0]}}</dt>
-                                    <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
-
-                                    <dt class="col-sm-2">{{$q222[2]}}</dt>
-                                    <dd class="col-sm-10">s+v <strong>while</strong> s+v.</dd>
-
-                                    <dt class="col-sm-2">{{$q222[3]}}</dt>
-                                    <dd class="col-sm-10">s+v, <strong>even though</strong> s+v.</dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                <!-- 2 -->
-
-                <!-- 3 -->
-                    <div class="card mb-1" >
-                        <div class="card-header" id="headingThree">
-                            <h5 class="my-0">
-                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    3. {{$q3}} <u></u> {{$q33}}
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[0]}}</i></dt>
-                                    <dd class="col-sm-10">used to add a different piece of information                               
-                                        <ul class="list-unstyled mark">
-                                            <li>
-                                                <strong>clues:</strong>
-                                            </li>
-                                            <li>
-                                            <ul>
-                                                <li>
-                                                    s+v; <strong>however</strong>, s+v.
-                                                </li>
-                                                <li>
-                                                    a steady rise / downward
-                                                </li>
-                                            </ul>
-                                        </ul>
-                                    </dd>
-
-                                    <dt class="col-sm-2">{{$q333[1]}}</dt>
-                                    <dd class="col-sm-10">s+v <strong>while</strong> s+v.</dd>
-
-                                    <dt class="col-sm-2">{{$q333[2]}}</dt>
-                                    <dd class="col-sm-10">s+v <strong>whereas</strong> s+v.</dd>
-
-                                    <dt class="col-sm-2">{{$q333[3]}}</dt>
-                                    <dd class="col-sm-10">s+v <strong>but</strong> s+v.</dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                <!-- 3 -->
-
-                <!-- 4 -->
-                    <div class="card mb-1" >
-                        <div class="card-header" id="headingFour">
-                            <h5 class="my-0">
-                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    4.{{$q4}} <u></u> {{$q44}}
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
-                                    <dd class="col-sm-10">used to introduce a statement that makes the main statement seem surprising 
-                                        <p class="font-weight-bold mark">clues: <strong>Although</strong> s+v, s+v.</p>
-                                    </dd>
-
-                                    <dt class="col-sm-2">{{$q444[0]}}</dt>
-                                    <dd class="col-sm-10">(adv) used to emphasize something surprising. It doesn’t link two clauses.</dd>
-
-                                    <dt class="col-sm-2">{{$q444[1]}}</dt>
-                                    <dd class="col-sm-10">Used to say that although something is true of one thing, it is not true of another <br><strong>Whereas</strong> s+v, s+v.</dd>
-
-                                    <dt class="col-sm-2">{{$q444[3]}}</dt>
-                                    <dd class="col-sm-10">: s+v <strong>but</strong> s+v.</dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                <!-- 4 -->
-
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingFive">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                5. {{$q5}} <u></u> {{$q55}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[2]}}</i> </dt>
-                                <dd class="col-sm-10">used to say that something is different from another 
-                                <p class="font-weight-bold mark">clues: s+v. <strong>In contrast</strong>, s+v.</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q555[0]}}</dt>
-                                <dd class="col-sm-10">s+v <strong>although</strong> s+v.</dd>
-
-                                <dt class="col-sm-2">{{$q555[1]}}</dt>
-                                <dd class="col-sm-10">s+v <strong>while</strong> s+v. </dd>
-
-                                <dt class="col-sm-2">{{$q555[3]}}</dt>
-                                <dd class="col-sm-10">used to say that although something is true of one thing, it is not true of another <br><strong>Whereas</strong> s+v, s+v. </dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div><!-- 5 -->
-
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingSix">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                6. {{$q6}} <u></u> {{$q66}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[0]}}</i></dt>
-                                <dd class="col-sm-10">used to say that although something is true of one thing, it is not true of another
-                                    <ul class="list-unstyled mark">
-                                        <li>
-                                            <strong>clues:</strong>
-                                        </li>
-                                        <li>
-                                        <ul>
-                                            <li>
-                                                s+v <strong>whereas</strong> s+v. 
-                                            </li>
-                                            <li>
-                                                a decrease / positive territory
-                                            </li>
-                                        </ul>
-                                    </ul>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q666[1]}}</dt>
-                                <dd class="col-sm-10">s+v. In <strong>contrast</strong>, s+v.</dd>
-
-                                <dt class="col-sm-2">{{$q666[2]}}</dt>
-                                <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
-
-                                <dt class="col-sm-2">{{$q666[3]}}</dt>
-                                <dd class="col-sm-10">used to suggest a reason <br>s+v <strong>since</strong> s+v.</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div><!-- 6 -->
-
-                <div class="card mb-1">
-                    <div class="card-header" id="headingSeven">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                7. {{$q7}} <u></u> {{$q77}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}</i> </dt>
-                                <dd class="col-sm-10">used to introduce a statement that makes another statement seem surprising 
-                                    <p class="font-weight-bold mark">clues: <strong>Although</strong> s+v, s+v.</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q777[0]}}</dt>
-                                <dd class="col-sm-10">(adv) used to emphasize something surprising. It doesn’t link two clauses.</dd>
-
-                                <dt class="col-sm-2">{{$q777[2]}}</dt>
-                                <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
-
-                                <dt class="col-sm-2">{{$q777[3]}}</dt>
-                                <dd class="col-sm-10">s+v <strong>but</strong> s+v.</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div><!-- 7 -->
-
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingEight">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                8. {{$q8}} <u></u> {{$q88}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
-                                <dd class="col-sm-10">used to emphasize that something is true although something else is true
-                                    <p class="font-weight-bold mark">clues: <strong>Even though </strong> s+v, s+v.</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10">(adv) used to emphasize something surprising. It doesn’t link  two clauses.</dd>
-
-                                <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
-
-                                <dt class="col-sm-2">{{$q888[3]}}</dt>
-                                <dd class="col-sm-10">s+v <strong>but</strong> s+v.</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div><!-- 8 -->
-
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingNine">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                9. {{$q9}} <u></u> {{$q99}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[3]}}</i> </dt>
-                                <dd class="col-sm-10">used to introduce a surprising fact after what you have just said  
-                                    <ul class="list-unstyled mark">
-                                        <li>
-                                            <strong>clues:</strong>
-                                        </li>
-                                        <li>
-                                        <ul>
-                                            <li>
-                                                s+v <strong>yet</strong> s+v.
-                                            </li>
-                                            <li>
-                                                twenty years / doesn't particularly like
-                                            </li>
-                                        </ul>
-                                    </ul>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">used to emphasize the difference between two situations</dd>
-
-                                <dt class="col-sm-2">{{$q999[1]}}</dt>
-                                <dd class="col-sm-10">s+v. <strong>However</strong>, s+v.</dd>
-
-                                <dt class="col-sm-2">{{$q999[2]}}</dt>
-                                <dd class="col-sm-10">used to say that although something is true of one thing, it is not true of another </dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div><!-- 9 -->
-
-                <div class="card mb-1" id="ansOne">
-                    <div class="card-header" id="headingTen">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10. {{$q10}} <u></u> {{$q100}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[2]}}</i></dt>
-                                <dd class="col-sm-10">used to emphasize that something is still true although another thing happens  
-                                    <ul class="list-unstyled mark">
-                                        <li>
-                                            <strong>clues:</strong>
-                                        </li>
-                                        <li>
-                                        <ul>
-                                            <li>
-                                                s+v <strong>even if</strong> s+v.
-                                            </li>
-                                            <li>
-                                                s + wouldn't + v infinitive + <strong>even if</strong> + s +v past simple <br> I + wouldn’t + do... <strong>even</strong> if + you + gave... .
-                                            </li>
-                                        </ul>
-                                    </ul>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q1000[0]}}</dt>
-                                <dd class="col-sm-10">used to introduce a statement that makes another statement seem surprisin</dd>
-
-                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
-                                <dd class="col-sm-10">used to emphasize that something is true although something else is true</dd>
-
-                                <dt class="col-sm-2">{{$q1000[3]}}</dt>
-                                <dd class="col-sm-10">used to emphasize the difference between two situations</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div><!-- 10 -->
-            </div>
-            
-        </div>  
-    </div>
 </div>
+
 
 @section('button-control')
     <button id="check-answer" class="btn btn-info">Check Answers</button>
-    <button id="show-answer" class="btn btn-success">Show Answer</button>
 @endsection
 
 @section('js')
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script>
-    var answer1 = ['While', 'Whereas'];
+    $("#show-answer").prop("disabled", true);
+
     const answers = [
-        answer1, 
-        'although', 
-        'however', 
-        'Although', 
-        'In contrast', 
-        'whereas', 
-        'Although', 
-        'Even though',
-        'yet', 
-        'even if'
+         $q1 = "<?php echo $a10 ?>",
+         $q2 = "<?php echo $a8 ?>",
+         $q3 = "<?php echo $a18 ?>",
+         $q4 = "<?php echo $a10 ?>",
+         $q5 = "<?php echo $a6 ?>",
+         $q6 = "<?php echo $a19 ?>",
+         $q7 = "<?php echo $a7 ?>",
+         $q8 = "<?php echo $a10 ?>",
+         $q9 = "<?php echo $a10 ?>",
+         $q10 = "<?php echo $a21 ?>",
+         $q11 = "<?php echo $a9 ?>",
+         $q12 = "<?php echo $a17 ?>",
+         $q13 = "<?php echo $a10 ?>",
+         $q14 = "<?php echo $a5 ?>",
+         $q15 = "<?php echo $a2 ?>",
+         $q16 = "<?php echo $a3 ?>",
+         $q17 = "<?php echo $a10 ?>",
+         $q18 = "<?php echo $a4 ?>",
+         $q19 = "<?php echo $a23 ?>",
+         $q20 = "<?php echo $a10 ?>",
+         $q21 = "<?php echo $a22 ?>",
+         $q22 = "<?php echo $a1 ?>",
+         $q23 = "<?php echo $a20 ?>",
     ];
-    let score = 0;
-    $("#show-answer").hide(true);
 
-    $('#check-answer').on('click', function() {
-        
-        $('select').each((idx, item) => {
-            $(item).parent().find('i').remove();
-            $(item).removeClass('border-success');
-            $(item).removeClass('border-danger');
+    console.log(answers);
 
-            if(idx == 0){
-                if($(item).val() == answer1[0] || $(item).val() == answer1[1]) {
-                    $(item).addClass('border border-success');
-                    $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
-                    score++;
-                } else {
-                    $(item).addClass('border border-danger');
-                    $(`<span class="text-success mr-2 ml-2">${answer1[0]} / ${answer1[1]}</span>`).insertAfter($(item));
-                }
-            }else{
-                if($(item).val() == answers[idx]) {
-                    $(item).addClass('border border-success');
-                    $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
-                    score++;
-                } else {
-                    $(item).addClass('border border-danger');
-                    $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
-                }
-            }
-        })
-
-        $('a u').each((idx, item) => {
-            if(idx == 0){
-                $(`<span class="text-success"><u>${answer1[0]} / ${answer1[1]}</u></span>`).insertAfter($(item));
-            }else{
-                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
-            }
-        })
-
-        if(score == 10){
-            alert("you're awesome");
-        }else{
-            alert('Your score is ' + score + '/10');
-        }
-
-        $("#show-answer").show(true);
-        $("#check-answer").hide(true);
+    $(".drag").draggable({
+        revert: "invalid",
+        cursor: "move",
+        opacity: 0.7,
+        zIndex: 100,
+        containment: ".card-box",
+        stop: function (event, ui) {
+          if ($("#choices").children().length == 0) {
+            $("#check-answer").prop("disabled", false);
+          }
+        },
     });
 
-    $('#show-answer').on('click', function() {
-        var x = document.getElementById("ans");
-        if (x.style.display == "none") {
-            $("#show-answer").text('close');
-            x.style.display = "block";
-        }else {
-            $("#show-answer").text('Show Answer');
-            x.style.display = "none";
-        }
+    $(".dropbox").droppable({
+        accept: ".drag",
+        tolerance: "touch",
+        zIndex: 100,
+        over: function (event, ui) {
+            $(this).css("border-color", "#777");
+        },
+        out: function (event, ui) {
+            $(this).css("border-color", "#ccc");
+        },
+        drop: function (event, ui) {
+            if ($(this).children().length > 0) {
+                var move = $(this).children().detach();
+                $(ui.draggable).css({ top: 0, left: 0 }).parent().append(move);
+            }
+            $(this).css("border-color", "#ccc");
+            $(this).append($(ui.draggable).css({ top: 0, left: 0 }));
+        },
     });
-   
+
+    $("#check-answer").on("click", () => {
+
+        let droppables = $(".dropbox");
+
+        droppables.each((idx, item) => {
+            if($(item).children().text().trim() == answers[idx]) {
+                checkAnswer($(item).children(), 'correct');
+            } else {
+                checkAnswer($(item).children(), 'incorrect');
+            }
+        });
+
+        $(".drag").draggable({
+            disabled: true,
+        });
+
+        $("#check-answer").prop("disabled", true);
+        $("#show-answer").prop("disabled", false);
+    });
+
+    $('#show-answer').on('click', () => {
+
+        $('.dropbox').each((idx, item) => {
+
+            if($(item).children().length == 1) {
+                if($(item).children().hasClass('color-danger')) {
+                    if($(item).children().text(answers[idx])) {
+                        $(item).children().removeClass('color-danger')
+                    }
+                }
+            } else {
+                $(item).append(`<div class="drag">${ answers[idx] }</div>`)
+            }
+
+            $('.drag-container .drag').remove();
+        })
+    });
+
+    function checkAnswer(ele, status) {
+        let bgColor;
+
+        status == 'correct' ? (bgColor = 'color-success') : (bgColor = 'color-danger')
+
+        ele.addClass(bgColor)
+    }
 </script>
 @stop
