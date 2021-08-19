@@ -4,6 +4,78 @@
     background-color: #ffc107;
 }
 </style>
+@php
+    $q1 = 'Microwave ovens have made it';
+    $q11 = 'to prepare food quickly.';
+    $q111 = array(
+        'possible',
+        'possibility',
+        'possibly'
+    );
+    $q2 = 'Nowadays we can prepare food much';
+    $q22 = 'than in the past.';
+    $q222 = array(
+        'fast',
+        'faster',
+        'fastest'
+    );
+    $q3 = 'Modern methods of';
+    $q33 = 'food have made it posible to enjoy a wide range of food.';
+    $q333 = array(
+        'preserve',
+        'preservation',
+        'preserving'
+    );
+    $q4 = 'People tend to eat much more';
+    $q44 = 'than in the past.';
+    $q444 = array(
+        'health',
+        'healthy',
+        'healthily'
+    );
+    $q5 = 'Modern appliances make it easier to prepare food for ';
+    $q55 = '.';
+    $q555 = array(
+        'cooking',
+        'cook',
+        'cookery'
+    );
+    $q6 = 'We have far more';
+    $q66 = 'when it comes to diet than ever before.';
+    $q666 = array(
+        'choose',
+        'choosy',
+        'choice'
+    );
+    $q7 = 'Globalisation has resulted in a greater';
+    $q77 = 'of food available throughout the year.';
+    $q777 = array(
+        'vary',
+        'variety',
+        'various'
+    );
+    $q8 = 'Because of refrigerated containers, we';
+    $q88 = 'fruits and vegetables from exotic places.';
+    $q888 = array(
+        'eat',
+        'eating',
+        'eaten'
+    );
+    $q9 = 'We can eat fresh, healthy food every day because modern methods of food preparation and preservation have made life ';
+    $q99 = '.';
+    $q999 = array(
+        'easily',
+        'easiest',
+        'easier'
+    );
+    $q10 = 'Fast food can lead to a number of';
+    $q100 = 'problems.';
+    $q1000 = array(
+        'healthy',
+        'health',
+        'healthily'
+    );
+@endphp
 <div class="row">
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
@@ -13,125 +85,125 @@
             
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
-                <select class="form-control d-inline w-auto mx-2">
+                {{$q1}}
+                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="Perjury">Perjury</option>
-                    <option value="Arson">Arson</option>
-                    <option value="Embezzlement">Embezzlement</option>
-                    <option value="Shoplifting">Shoplifting</option>
+                    <option value="{{$q111[0]}}">{{$q111[0]}}</option>
+                    <option value="{{$q111[1]}}">{{$q111[1]}}</option>
+                    <option value="{{$q111[2]}}">{{$q111[2]}}</option>
                 </select>
-                is when you intentionally set fire to a building.
+                {{$q11}}
             </div>
             
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
-                <select class="form-control d-inline w-auto mx-2">
+                {{$q2}}
+                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="Perjury">Perjury</option>
-                    <option value="Treason">Treason</option>
-                    <option value="Fraud">Fraud</option>
-                    <option value="kidnapping">Kidnapping</option> 
+                    <option value="{{$q222[0]}}">{{$q222[0]}}</option>
+                    <option value="{{$q222[1]}}">{{$q222[1]}}</option>
+                    <option value="{{$q222[2]}}">{{$q222[2]}}</option>
                 </select>
-                is when you betray your country e.g. by selling national secrets.
+                {{$q22}}
             </div>
             
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
-                <select class="form-control d-inline w-auto mx-2">
+                {{$q3}}
+                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="Shoplifting">Shoplifting</option>
-                    <option value="Burglary ">Burglary </option>
-                    <option value="hi-jacking">Hi-jacking</option>
-                    <option value="mugging">Mugging</option>          
+                    <option value="{{$q333[0]}}">{{$q333[0]}}</option>
+                    <option value="{{$q333[1]}}">{{$q333[1]}}</option>
+                    <option value="{{$q333[2]}}">{{$q333[2]}}</option>
                 </select>
-                is when you steal things from a department store.
+                {{$q33}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
-                <select class="form-control d-inline w-auto mx-2">
+                {{$q4}}
+                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="Fraud">Fraud</option>
-                    <option value="mugging">Mugging</option>
-                    <option value="Burglary">Burglary</option>
-                    <option value="Embezzlement">Embezzlement</option>            
+                    <option value="{{$q444[0]}}">{{$q444[0]}}</option>
+                    <option value="{{$q444[1]}}">{{$q444[1]}}</option>
+                    <option value="{{$q444[2]}}">{{$q444[2]}}</option>
                 </select>
-                is when you 'cook the books' at work to steal money from your employer.
+                {{$q44}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
-                <select class="form-control d-inline w-auto mx-2">
+                {{$q5}}
+                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="mugging">Mugging</option>
-                    <option value="Fraud">Fraud</option>
-                    <option value="Embezzlement">Embezzlement</option>
-                    <option value="Burglary">Burglary</option>            
+                    <option value="{{$q555[0]}}">{{$q555[0]}}</option>
+                    <option value="{{$q555[1]}}">{{$q555[1]}}</option>
+                    <option value="{{$q555[2]}}">{{$q555[2]}}</option>
                 </select>
-                is when someone breaks into a building to steal items.
+                {{$q55}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
-                <select class="form-control d-inline w-auto mx-2">
+                {{$q6}}
+                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="Embezzlement">Embezzlement</option>
-                    <option value="imposter">Imposter</option>
-                    <option value="Arson">Arson</option>
-                    <option value="Fraud">Fraud</option>              
+                    <option value="{{$q666[0]}}">{{$q666[0]}}</option>
+                    <option value="{{$q666[1]}}">{{$q666[1]}}</option>
+                    <option value="{{$q666[2]}}">{{$q666[2]}}</option>
                 </select>
-                is when you assume someone else's identity, usually to steal money.
+                {{$q66}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
-                <select class="form-control d-inline w-auto mx-2">
+                {{$q7}}
+                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="Arson">Arson</option>
-                    <option value="Perjury">Perjury</option>
-                    <option value="">Plagiarism</option>
-                    <option value="">Deceit</option>>
+                    <option value="{{$q777[0]}}">{{$q777[0]}}</option>
+                    <option value="{{$q777[1]}}">{{$q777[1]}}</option>
+                    <option value="{{$q777[2]}}">{{$q777[2]}}</option>
                 </select>
-                is when you tell lies in the courtroom when you have taken an oath to tell the truth.
+                {{$q77}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
-                <select class="form-control d-inline w-auto mx-2">
+                {{$q8}}
+                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="Manslaughter">Manslaughter</option>
-                    <option value="hi-jacking">Hi-jacking</option>
-                    <option value="Assassination">Assassination</option>
-                    <option value="execution">Execution</option>          
+                    <option value="{{$q888[0]}}">{{$q888[0]}}</option>
+                    <option value="{{$q888[1]}}">{{$q888[1]}}</option>
+                    <option value="{{$q888[2]}}">{{$q888[2]}}</option>
                 </select>
-                is when someone kills an important person, e.g. a king.
+                {{$q88}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
-                <select class="form-control d-inline w-auto mx-2">
+                {{$q9}}
+                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="self-defence">Self-defence</option>
-                    <option value="murder">Murder</option>
-                    <option value="Manslaughter">Manslaughter</option>
-                    <option value="Assassination">Assassination</option>      
+                    <option value="{{$q999[0]}}">{{$q999[0]}}</option>
+                    <option value="{{$q999[1]}}">{{$q999[1]}}</option>
+                    <option value="{{$q999[2]}}">{{$q999[2]}}</option>
                 </select>
-                is when you kill someone unintentionally e.g. in a car accident.
+                {{$q99}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
-                <select class="form-control d-inline w-auto mx-2">
+                {{$q10}}
+                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="Bigamy">Bigamy</option>
-                    <option value="Fraud">Fraud</option>
-                    <option value="adultery">Adultery</option>
-                    <option value="deceit">Deceit</option>              
+                    <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
+                    <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
+                    <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
                 </select>
-                is when you have two wives at the same time, in places where it isn't allowed.
+                {{$q100}}
             </div>
         </div>
-    </div><!--qustion-->
+    </div>
 
     <div class="col-xl-12 col-md-12 col-sm-12" id="ans" style="display: none;">
         <div class="card-box text-dark font-16">
@@ -143,7 +215,7 @@
                     <div class="card-header" id="headingOne">
                         <h5 class="my-0">
                             <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            1.<span class="text-success"><u>Arson</u></span> is when you intentionally set fire to a building.
+                                1. {{$q1}} <u></u> {{$q11}}
                             </a>
                         </h2>
                     </div>
@@ -151,25 +223,15 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">Arson</i> </dt>
-                                    <dd class="col-sm-10">(nc): the crime of deliberately making something burnt
-                                    <br><mark><strong>clues: intentionally set fire</strong></mark>
-                                    </dd>
-                                </dl>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[0]}}</i></dt>
+                                    <dd class="col-sm-10">(adj): If something is possible, it can be achieved.
+                                    <br><strong><mark>clues: have made + it + adj + to infinitive</mark></strong></dd>
+                                
+                                    <dt class="col-sm-2">{{$q111[1]}}</dt>
+                                    <dd class="col-sm-10">(nc): the fact that something might be true</dd>
 
-                                <dl class="row">
-                                    <dt class="col-sm-2">Perjury</dt>
-                                    <dd class="col-sm-10">(nc): the crime of telling a lie in a court of law</dd>
-                                </dl>
-
-                                <dl class="row">
-                                    <dt class="col-sm-2">Embezzlement</dt>
-                                    <dd class="col-sm-10">(nc): stealing money from the company you work for</dd>
-                                </dl>
-
-                                <dl class="row">
-                                    <dt class="col-sm-2">Shoplifting</dt>
-                                    <dd class="col-sm-10">(nc): the crime of stealing things from shops</dd>
+                                    <dt class="col-sm-2">{{$q111[2]}}</dt>
+                                    <dd class="col-sm-10">(adv): used when saying that something might be true</dd>
                                 </dl>
                             </div>
                     </div>
@@ -179,25 +241,38 @@
                     <div class="card-header" id="headingTwo">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            2.<span class="text-success"><u>Treason</u></span>  is when you betray your country e.g. by selling national secrets.
+                                2. {{$q2}} <u></u> {{$q22}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">Treason</i> </dt>
-                                <dd class="col-sm-10"> (nc): the crime of betraying your country
-                                <br><strong><mark>clues: betray your country</mark></strong></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[1]}}</i></dt>
+                                <dd class="col-sm-10">(adv) moving more quickly
+                                    <ul class="list-unstyled mark font-weight-bold">
+                                        <li>
+                                            clues:
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                   vt + object + much + <u>comparative adv</u> + than
+                                                </li>
+                                                <li>
+                                                   prepare + food + much + faster + than
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </dd>
 
-                                <dt class="col-sm-2">Perjury</dt>
-                                <dd class="col-sm-10"> (nc): the crime of telling a lie in a court of law</dd>
+                                <dt class="col-sm-2">{{$q222[0]}}</dt>
+                                <dd class="col-sm-10">(adv): quickly</dd>
 
-                                <dt class="col-sm-2">Fraud</dt>
-                                <dd class="col-sm-10">nc): the crime of deceiving people to gain money or</dd>
-
-                                <dt class="col-sm-2">Kidnapping</dt>
-                                <dd class="col-sm-10">(nc): taking someone illegally by force to get money for returning them</dd>
+                                <dt class="col-sm-2">{{$q222[2]}}</dt>
+                                <dd class="col-sm-10">(adv): superlative adverb of “fast”</dd>
+                                
                             </dl>
                         </div>
                     </div>
@@ -207,25 +282,22 @@
                     <div class="card-header" id="headingThree">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3.<span class="text-success"><u>Shoplifting</u></span> is when you steal things from a department store.
+                                3. {{$q3}} <u></u> {{$q33}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">Shoplifting</i></dt>
-                                <dd class="col-sm-10">(nc): the crime of stealing things from shops
-                                <br><strong><mark>clues: steal things from a department store</mark></strong></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[2]}}</i></dt>
+                                <dd class="col-sm-10">(vt): gerund: saving something from being destroyed                                
+                                <br><mark><strong>clues: of + <u>gerund</u> + object</strong></mark></dd>
 
-                                <dt class="col-sm-2">Burglary</dt>
-                                <dd class="col-sm-10">(nc): the crime of getting into a building to steal things</dd>
+                                <dt class="col-sm-2">{{$q333[0]}}</dt>
+                                <dd class="col-sm-10">(vt): to save something from being destroyed</dd>
 
-                                <dt class="col-sm-2">Hi-jacking</dt>
-                                <dd class="col-sm-10">(nc): the use of violence to take control of a plane</dd>
-
-                                <dt class="col-sm-2">Mugging</dt>
-                                <dd class="col-sm-10">(nc): an attack on someone in which they are robbed in a public place</dd>
+                                <dt class="col-sm-2">{{$q333[1]}}</dt>
+                                <dd class="col-sm-10">(nu): keeping something in a good condition</dd>
                             </dl>
                         </div>
                     </div>
@@ -235,25 +307,22 @@
                     <div class="card-header" id="headingFour">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4.<span class="text-success"><u>Embezzlement</u></span> is when you 'cook the books' at work to steal money from your employer.
+                                4.{{$q4}} <u></u> {{$q44}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">Embezzlement</i></dt>
-                                <dd class="col-sm-10">(nc): stealing money from the company you work for
-                                <br><strong><mark>clues: steal money from your employer / cook the books: to dishonestly change official records and figures</mark></strong></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
+                                <dd class="col-sm-10">(adv): in a way that is good for your body
+                                <br><strong><mark>clues:  to eat + <u>adv phrase</u> = to eat + <u>much more healthily</u></mark></strong></dd>
 
-                                <dt class="col-sm-2">Fraud</dt>
-                                <dd class="col-sm-10">(nc): the crime of deceiving people to gain money or goods</dd>
+                                <dt class="col-sm-2">{{$q444[0]}}</dt>
+                                <dd class="col-sm-10">(adj): good for your body</dd>
 
-                                <dt class="col-sm-2">Mugging</dt>
-                                <dd class="col-sm-10">(nc): an attack on someone in which they are robbed in a public place</dd>
-
-                                <dt class="col-sm-2">Burglary</dt>
-                                <dd class="col-sm-10">(nc): the crime of getting into a building to steal things</dd>
+                                <dt class="col-sm-2">{{$q444[1]}}</dt>
+                                <dd class="col-sm-10">(nu): the general condition of your body</dd>
                             </dl>
                         </div>
                     </div>
@@ -263,7 +332,7 @@
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            5.<span class="text-success"><u>Burglary</u></span> is when someone breaks into a building to steal items.
+                                5. {{$q5}} <u></u> {{$q55}}
                             </a>
                         </h5>
                     </div>
@@ -271,17 +340,15 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">Burglary</i> </dt>
-                                <dd class="col-sm-10">(nc): the crime of getting into a building to steal things</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[0]}}</i> </dt>
+                                <dd class="col-sm-10">(vi): gerund: preparing food for eating
+                                <br><mark><strong>clues: for + <u>gerund</u></strong></mark></dd>
 
-                                <dt class="col-sm-2">Mugging</dt>
-                                <dd class="col-sm-10">(nc): an attack on someone in which they are robbed in a public place</dd>
+                                <dt class="col-sm-2">{{$q555[1]}}</dt>
+                                <dd class="col-sm-10">(vi): preparing food for eatin</dd>
 
-                                <dt class="col-sm-2">Fraud</dt>
-                                <dd class="col-sm-10">(nc): the crime of deceiving people to gain money or goods</dd>
-
-                                <dt class="col-sm-2">Embezzlement</dt>
-                                <dd class="col-sm-10">(nc): stealing money from the company you work for</dd>
+                                <dt class="col-sm-2">{{$q555[2]}}</dt>
+                                <dd class="col-sm-10">(nu): the art of cooking</dd>
                             </dl>
                         </div>
                     </div>
@@ -291,25 +358,37 @@
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            6.<span class="text-success"><u>Fraud</u></span> is when you assume someone else's identity, usually to steal money.
+                                6. {{$q6}} <u></u> {{$q66}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">Fraud</i> </dt>
-                                <dd class="col-sm-10">(nc): the crime of deceiving people to gain money or goods 
-                                <br><mark><strong>clues: It doesn’t need any person but the crime.</strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[2]}}</i></dt>
+                                <dd class="col-sm-10">(nu): the rage of things that you can choose from
+                                    <ul class="list-unstyled mark font-weight-bold">
+                                        <li>
+                                            clues:
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    have + adv + adj + <u>noun</u>
+                                                </li>
+                                                <li>
+                                                    have + far + more + <u>choice</u>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </dd>
 
-                                <dt class="col-sm-2">Embezzlement</dt>
-                                <dd class="col-sm-10">(nc): the party conducting legal proceeding against someone in a lawsuit</dd>
+                                <dt class="col-sm-2">{{$q666[0]}}</dt>
+                                <dd class="col-sm-10">(v): to select</dd>
 
-                                <dt class="col-sm-2">Imposter</dt>
-                                <dd class="col-sm-10">(nc): the court official who decides how criminals should be punished</dd>
-
-                                <dt class="col-sm-2">Arson</dt>
-                                <dd class="col-sm-10">(nc): the person who has been accused of doing something illegal</dd>
+                                <dt class="col-sm-2">{{$q666[1]}}</dt>
+                                <dd class="col-sm-10">(adj): difficult to please because you are very exact about what you like</dd>
                             </dl>
                         </div>
                     </div>
@@ -319,24 +398,22 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            7.<span class="text-success"><u>Perjury</u></span> is when you tell lies in the courtroom when you have taken an oath to tell the truth.
+                                7. {{$q7}} <u></u> {{$q77}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">Perjury</i> </dt>
-                                <dd class="col-sm-10">(nc): the crime of telling a lie in a court of law</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}</i> </dt>
+                                <dd class="col-sm-10">(nc): a different type of something 
+                                <br><mark><strong>clues: a greater + <u>noun</u></strong></mark></dd>
 
-                                <dt class="col-sm-2">Arson</dt>
-                                <dd class="col-sm-10">(nc): the crime of deliberately making something burnt</dd>
+                                <dt class="col-sm-2">{{$q777[0]}}</dt>
+                                <dd class="col-sm-10">(vi): to cause similar things to differ</dd>
 
-                                <dt class="col-sm-2">Plagiarism</dt>
-                                <dd class="col-sm-10">(nc): when someone use your words, ideas, or works and pretends they are their own</dd>
-
-                                <dt class="col-sm-2">Deceit</dt>
-                                <dd class="col-sm-10">(nc): behavior that is intended to make someone believe something that is not true</dd>
+                                <dt class="col-sm-2">{{$q777[2]}}</dt>
+                                <dd class="col-sm-10">(adj): many different</dd>
                             </dl>
                         </div>
                     </div>
@@ -346,24 +423,22 @@
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            8.<span class="text-success"><u>Assassination</u></span> is when someone kills an important person, e.g. a king.
+                                8. {{$q8}} <u></u> {{$q88}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">Assassination</i> </dt>
-                                <dd class="col-sm-10">(nc): the act of murdering an important person</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
+                                <dd class="col-sm-10">(vt): to take food into the mouth
+                                <br><mark><strong>clues: can + <u>v infinitive</u></strong></mark></dd>
 
-                                <dt class="col-sm-2">Manslaughter</dt>
-                                <dd class="col-sm-10">(nc): the crime of killing someone illegally but not deliberately</dd>
+                                <dt class="col-sm-2">{{$q888[1]}}</dt>
+                                <dd class="col-sm-10">(v): gerund of “eat”</dd>
 
-                                <dt class="col-sm-2">Hi-jacking</dt>
-                                <dd class="col-sm-10">(nc): the use of violence to take control of a plane</dd>
-
-                                <dt class="col-sm-2">Execution</dt>
-                                <dd class="col-sm-10">(nc): when someone is killed especially as a legal punishment</dd>
+                                <dt class="col-sm-2">{{$q888[2]}}</dt>
+                                <dd class="col-sm-10">(v): past participle of “eat”</dd>
                             </dl>
                         </div>
                     </div>
@@ -373,25 +448,39 @@
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                            9.<span class="text-success"><u>Manslaughter</u></span> is when you kill someone unintentionally e.g. in a car accident.
+                                9. {{$q9}} <u></u> {{$q99}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[2]}}</i> </dt>
+                                <dd class="col-sm-10">(adj): comparative: needing less effort 
+                                    <ul class="list-unstyled mark font-weight-bold">
+                                        <li>
+                                            clues:
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    have made + noun + <u>adj</u>
+                                                </li>
+                                                <li>
+                                                    have made + life + easier
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">Manslaughter</i> </dt>
-                                <dd class="col-sm-10">(nc): the crime of killing someone illegally but not deliberately</dd>
+                                <dt class="col-sm-2">{{$q999[1]}}</dt>
+                                <dd class="col-sm-10">(adv): in a way that needs little effort</dd>
 
-                                <dt class="col-sm-2">Assassination</dt>
-                                <dd class="col-sm-10">(nc): the act of murdering an important person</dd>
-
-                                <dt class="col-sm-2">Murder</dt>
-                                <dd class="col-sm-10">(nc): the crime of deliberately killing someone</dd>
-
-                                <dt class="col-sm-2">Self-defence</dt>
-                                <dd class="col-sm-10">(nc): something you do to protect yourself or your property</dd>
+                                <dt class="col-sm-2">{{$q999[0]}}</dt>
+                                <dd class="col-sm-10">(adj): superlative: needing the least effort
+                                We use the superlative degree to compare more than two things. 
+                                The sentence compares the life at present and in the past.</dd>
                             </dl>
                         </div>
                     </div>
@@ -401,25 +490,36 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10.<span class="text-success"><u>Bigamy</u></span> is when you have two wives at the same time, in places where it isn't allowed.
+                            10. {{$q10}} <u></u> {{$q100}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[1]}}</i></dt>
+                                <dd class="col-sm-10">(nu): the general condition of your body 
+                                    <ul class="list-unstyled mark font-weight-bold">
+                                        <li>
+                                            clues: compound noun =
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <u>noun</u> + noun 
+                                                </li>
+                                                <li>
+                                                    <u>health</u> + problems
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt class="col-sm-2">{{$q1000[0]}}</dt>
+                                <dd class="col-sm-10">(adj): good for your body</dd>
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">Bigamy</i></dt>
-                                <dd class="col-sm-10">(nc): the crime of killing someone illegally but not deliberately</dd>
-
-                                <dt class="col-sm-2">Fraud</dt>
-                                <dd class="col-sm-10">(nc): the crime of deceiving people to gain money or goods</dd>
-
-                                <dt class="col-sm-2">Adultery</dt>
-                                <dd class="col-sm-10">(nc): sex between someone who is married and someone who is not their wife or husband</dd>
-
-                                <dt class="col-sm-2">Deceit</dt>
-                                <dd class="col-sm-10">(nc): behavior that is intended to make someone believe something that is not true</dd>
+                                <dt class="col-sm-2">{{$q1000[2]}}</dt>
+                                <dd class="col-sm-10">(adv): in a way that is good for your body</dd>
                             </dl>
                         </div>
                     </div>
@@ -437,17 +537,17 @@
 
 @section('js')
 <script>
-    const answers = [
-        'Arson', 
-        'Treason', 
-        'Shoplifting', 
-        'Embezzlement', 
-        'Burglary', 
-        'Fraud', 
-        'Perjury', 
-        'Assassination',
-        'Manslaughter', 
-        'Bigamy'
+     const answers = [
+        'possible', 
+        'faster', 
+        'preserving', 
+        'healthily', 
+        'cooking', 
+        'choice', 
+        'variety', 
+        'eat',
+        'easier', 
+        'health'
     ];
     let score = 0;
     $("#show-answer").hide(true);
@@ -466,6 +566,14 @@
             } else {
                 $(item).addClass('border border-danger');
                 $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
+            }
+        })
+
+        $('a u').each((idx, item) => {
+            if($(item).val() == answers[idx]) {
+                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
+            } else {
+                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
             }
         })
 
@@ -488,7 +596,6 @@
             $("#show-answer").text('Show Answer');
             x.style.display = "none";
         }
-        
     });
    
 </script>

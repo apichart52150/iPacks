@@ -5,75 +5,80 @@
 }
 </style>
 @php
-    $q1 = 'Nowadays many people have expressed their concerns over nuclear technology because of the associated';
-    $q11 = '.';
+    $q1 = "The phrase '";
+    $q11 = "is thicker than water' means that family is more important than friends.";
     $q111 = array(
-        'endanger',
-        'dangerous',
-        'dangers'
+        'Nescafe',
+        'Treacle',
+        'Treacle',
+        'Blood'
     );
-    $q2 = 'Anyone who';
-    $q22 = 'in a city is aware of the increasing number of cars on the roads.';
+    $q2 = 'A family in which many generations live together is known as an';
+    $q22 = 'family.';
     $q222 = array(
-        'lives',
-        'living',
-        'live'
+        'extra big',
+        'traditional',
+        'extended',
+        'infrastructure'
     );
-    $q3 = 'There are a number of ways of';
-    $q33 = 'people to use public transport in cities.';
+    $q3 = 'A family consisting of just the parents and a couple of children is referred to as a';
+    $q33 = 'family.';
     $q333 = array(
-        'encourage',
-        'encouraging',
-        'encouraged'
+        'extended',
+        'traditional',
+        'nuclear',
+        'small'
     );
-    $q4 = 'A large number of';
-    $q44 = 'now have the technological expertise required to produce nuclear weapons.';
+    $q4 = 'A woman whose husband has died is called a';
+    $q44 = '.';
     $q444 = array(
-        'nation',
-        'nations',
-        'national'
+        'widow',
+        'fiancee',
+        'old-maid',
+        'spinster'
     );
-    $q5 = 'One way to encourage people to use public transport is to make private vehicles more expensive and';
-    $q55 = '.';
+    $q5 = 'What do we call the money or gifts which one partner hands to the other party at the marriage.';
     $q555 = array(
-        'inconvenience',
-        'inconvenient',
-        'inconveniently'
+        'duty',
+        'dowry',
+        'camels',
+        'birthright'
     );
-    $q6 = 'The age of retirement';
-    $q66 = 'from country to country.';
+    $q6 = 'What do we call the man who is getting married ?';
     $q666 = array(
-        'variety',
-        'various',
-        'varies'
+        'groom',
+        'bridegroom',
+        'best man',
+        'bridesmaid'
     );
-    $q7 = 'As people live longer they are able to contribute more to';
-    $q77 = '.';
+    $q7 = 'If your father marries a new wife (not your own mother), what is her relationship to you ?';
     $q777 = array(
-        'society',
-        'social',
-        'socialise'
+        'aunty',
+        'half-sister',
+        'step-mother',
+        'fairy godmother'
     );
-    $q8 = 'The problem of air pollution is';
-    $q88 = 'one which affects us all.';
+    $q8 = 'What do we call a man who has two wives ?';
     $q888 = array(
-        'clarity',
-        'clear',
-        'clearly'
+        'A happy man',
+        'misogynist',
+        'bachelor',
+        'bigamist'
     );
-    $q9 = "Learning a foreign language in one's own country cannot";
-    $q99 = 'to learning the language in the country where it is spoken.';
+    $q9 = 'Having many wives is called';
+    $q99 = ".";
     $q999 = array(
-        'comparison',
-        'compared',
-        'compare'
+        'polyandry',
+        'polygamy',
+        'purgatory',
+        'polygon'
     );
-    $q10 = 'Recycling can make a huge';
-    $q100 = 'to pollution both on land and at sea.';
+    $q10 = 'What do we call it when two people live together as husband and wife before they get married ?';
     $q1000 = array(
-        'differ',
-        'different',
-        'difference'
+        'engagement',
+        'betrothal',
+        'separation',
+        'trial marriage'
     );
 @endphp
 <div class="row">
@@ -86,11 +91,12 @@
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
                 {{$q1}}
-                 <select class="form-control d-inline w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q111[0]}}">{{$q111[0]}}</option>
                     <option value="{{$q111[1]}}">{{$q111[1]}}</option>
                     <option value="{{$q111[2]}}">{{$q111[2]}}</option>
+                    <option value="{{$q111[3]}}">{{$q111[3]}}</option>
                 </select>
                 {{$q11}}
             </div>
@@ -98,11 +104,12 @@
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
                 {{$q2}}
-                 <select class="form-control d-inline w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q222[0]}}">{{$q222[0]}}</option>
                     <option value="{{$q222[1]}}">{{$q222[1]}}</option>
                     <option value="{{$q222[2]}}">{{$q222[2]}}</option>
+                    <option value="{{$q222[3]}}">{{$q222[3]}}</option>
                 </select>
                 {{$q22}}
             </div>
@@ -110,11 +117,12 @@
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
                 {{$q3}}
-                 <select class="form-control d-inline w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q333[0]}}">{{$q333[0]}}</option>
                     <option value="{{$q333[1]}}">{{$q333[1]}}</option>
                     <option value="{{$q333[2]}}">{{$q333[2]}}</option>
+                    <option value="{{$q333[3]}}">{{$q333[3]}}</option>
                 </select>
                 {{$q33}}
             </div>
@@ -122,11 +130,12 @@
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
                 {{$q4}}
-                 <select class="form-control d-inline w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q444[0]}}">{{$q444[0]}}</option>
                     <option value="{{$q444[1]}}">{{$q444[1]}}</option>
                     <option value="{{$q444[2]}}">{{$q444[2]}}</option>
+                    <option value="{{$q444[3]}}">{{$q444[3]}}</option>
                 </select>
                 {{$q44}}
             </div>
@@ -134,59 +143,60 @@
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
                 {{$q5}}
-                 <select class="form-control d-inline w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q555[0]}}">{{$q555[0]}}</option>
                     <option value="{{$q555[1]}}">{{$q555[1]}}</option>
                     <option value="{{$q555[2]}}">{{$q555[2]}}</option>
+                    <option value="{{$q555[3]}}">{{$q555[3]}}</option>
                 </select>
-                {{$q55}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
                 {{$q6}}
-                 <select class="form-control d-inline w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q666[0]}}">{{$q666[0]}}</option>
                     <option value="{{$q666[1]}}">{{$q666[1]}}</option>
                     <option value="{{$q666[2]}}">{{$q666[2]}}</option>
+                    <option value="{{$q666[3]}}">{{$q666[3]}}</option>
                 </select>
-                {{$q66}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
                 {{$q7}}
-                 <select class="form-control d-inline w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q777[0]}}">{{$q777[0]}}</option>
                     <option value="{{$q777[1]}}">{{$q777[1]}}</option>
                     <option value="{{$q777[2]}}">{{$q777[2]}}</option>
+                    <option value="{{$q777[3]}}">{{$q777[3]}}</option>
                 </select>
-                {{$q77}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
                 {{$q8}}
-                 <select class="form-control d-inline w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q888[0]}}">{{$q888[0]}}</option>
                     <option value="{{$q888[1]}}">{{$q888[1]}}</option>
                     <option value="{{$q888[2]}}">{{$q888[2]}}</option>
+                    <option value="{{$q888[3]}}">{{$q888[3]}}</option>
                 </select>
-                {{$q88}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
                 {{$q9}}
-                 <select class="form-control d-inline w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q999[0]}}">{{$q999[0]}}</option>
                     <option value="{{$q999[1]}}">{{$q999[1]}}</option>
                     <option value="{{$q999[2]}}">{{$q999[2]}}</option>
+                    <option value="{{$q999[3]}}">{{$q999[3]}}</option>
                 </select>
                 {{$q99}}
             </div>
@@ -194,13 +204,13 @@
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
                 {{$q10}}
-                 <select class="form-control d-inline w-auto mx-2">
+                <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
                     <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
                     <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
                     <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
+                    <option value="{{$q1000[3]}}">{{$q1000[3]}}</option>
                 </select>
-                {{$q100}}
             </div>
         </div>
     </div>
@@ -215,7 +225,7 @@
                     <div class="card-header" id="headingOne">
                         <h5 class="my-0">
                             <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                1. {{$q1}} <u></u> {{$q11}}
+                            1. The phrase ' <span class="text-success"><u>Blood</u></span> is thicker than water' means that family is more important than friends.
                             </a>
                         </h2>
                     </div>
@@ -223,15 +233,17 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[2]}}</i></dt>
-                                    <dd class="col-sm-10">(nc): the possibility of harms or death to someone 
-                                    <br><strong><mark>clues: the + adjective + noun = the associated dangers</mark></strong></dd>
-                                
-                                    <dt class="col-sm-2">{{$q111[0]}}</dt>
-                                    <dd class="col-sm-10">(vt): to put someone or something at risk</dd>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">Blood</i> </dt>
+                                    <dd class="col-sm-10">(nu): the red liquid that your heart pumps around your body</dd>
 
-                                    <dt class="col-sm-2">{{$q111[1]}}</dt>
-                                    <dd class="col-sm-10">(adj): harmful</dd>
+                                    <dt class="col-sm-2">Nescafe</dt>
+                                    <dd class="col-sm-10">(nu): a type of instant coffee</dd>
+
+                                    <dt class="col-sm-2">Treacle</dt>
+                                    <dd class="col-sm-10">(nu): a thick sweet black liquid obtained from  raw sugar</dd>
+
+                                    <dt class="col-sm-2">Mud</dt>
+                                    <dd class="col-sm-10">(nu): wet earth that has becomes soft and sticky </dd>
                                 </dl>
                             </div>
                     </div>
@@ -241,22 +253,22 @@
                     <div class="card-header" id="headingTwo">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                2. {{$q2}} <u></u> {{$q22}}
+                            2. A family in which many generations live together is known as an <span class="text-success"><u>extended</u></span> family.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[0]}}</i></dt>
-                                <dd class="col-sm-10">(vi): has home somewhere
-                                <br><strong><mark>clues: Anyone + who + <u>v singular</u></mark></strong></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">extended</i> </dt>
+                                <dd class="col-sm-10">(adj): made longer or bigger
+                                <br><strong><mark>clues: an + adj + family / an + a word with a vowel-sound initial letter</mark></strong></dd>
 
-                                <dt class="col-sm-2">{{$q222[1]}}</dt>
-                                <dd class="col-sm-10">(vi): present participle / gerund: having home somewhere</dd>
+                                <dt class="col-sm-2">traditional</dt>
+                                <dd class="col-sm-10">(adj): following ideas or methods that have existed for a long time</dd>
 
-                                <dt class="col-sm-2">{{$q222[2]}}</dt>
-                                <dd class="col-sm-10">(vi): to have home somewhere</dd>
+                                <dt class="col-sm-2">infrastructure</dt>
+                                <dd class="col-sm-10">(nu): the basic systems and structures that a country needs: roads, railways, banks etc.</dd>
                             </dl>
                         </div>
                     </div>
@@ -266,22 +278,21 @@
                     <div class="card-header" id="headingThree">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3. {{$q3}} <u></u> {{$q33}}
+                                3. A family consisting of just the parents and a couple of children is referred to as a <span class="text-success"><u>nuclear</u></span> family.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[1]}}</i></dt>
-                                <dd class="col-sm-10">(vt): gerund: making someone more likely to do something                                
-                                <br><mark><strong>clues: of + <u>gerund</u> + object = of <u>encouraging</u> people</strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">nuclear</i></dt>
+                                <dd class="col-sm-10">(adj): single</dd>
 
-                                <dt class="col-sm-2">{{$q333[0]}}</dt>
-                                <dd class="col-sm-10">(vt): to make someone more likely to do something</dd>
+                                <dt class="col-sm-2">extended</dt>
+                                <dd class="col-sm-10">(adj): made longer or bigger</dd>
 
-                                <dt class="col-sm-2">{{$q333[2]}}</dt>
-                                <dd class="col-sm-10">(vt): past simple / past participle of "encourage"</dd>
+                                <dt class="col-sm-2">traditional</dt>
+                                <dd class="col-sm-10"> (adj): following ideas or methods that have existed for a long time</dd>
                             </dl>
                         </div>
                     </div>
@@ -291,22 +302,24 @@
                     <div class="card-header" id="headingFour">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4.{{$q4}} <u></u> {{$q44}}
+                                4. A woman whose husband has died is called a <span class="text-success"><u>widow</u></span>.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[1]}}</i></dt>
-                                <dd class="col-sm-10">(nc): countries
-                                <br><strong><mark>clues:  a large number of + <u>plural noun</u></mark></strong></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">widow</i></dt>
+                                <dd class="col-sm-10">(nc): a woman whose husband has died and who has not married again </dd>
 
-                                <dt class="col-sm-2">{{$q444[0]}}</dt>
-                                <dd class="col-sm-10">(nc): a country</dd>
+                                <dt class="col-sm-2">fiancee</dt>
+                                <dd class="col-sm-10">(nc): the woman who a man is going to marry</dd>
 
-                                <dt class="col-sm-2">{{$q444[2]}}</dt>
-                                <dd class="col-sm-10">(adj): typical of a whole country and its people</dd>
+                                <dt class="col-sm-2">old-maid</dt>
+                                <dd class="col-sm-10">(nc): a woman who has never married and not young anymore <strong><em>(offensive)</em></strong></dd>
+
+                                <dt class="col-sm-2">spinster</dt>
+                                <dd class="col-sm-10"> (nc): an unmarried woman who is not young anymore and seems unlikely to marry <strong><em>(old-fashioned)</em></strong></dd>
                             </dl>
                         </div>
                     </div>
@@ -316,7 +329,7 @@
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                5. {{$q5}} <u></u> {{$q55}}
+                            5.What do we call the money or gifts which one partner hands to the other party at the marriage. <span class="text-success"><u>dowry</u></span>
                             </a>
                         </h5>
                     </div>
@@ -324,30 +337,17 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[1]}}</i> </dt>
-                                <dd class="col-sm-10">(adj): causing problems or difficulties
-                                    <ul class="list-unstyled mark font-weight-bold">
-                                        <li>
-                                            clues: (parallel structure)
-                                        </li>
-                                        <li>
-                                            <ul>
-                                                <li>
-                                                    make + sth + <u>adj and adj</u>
-                                                </li>
-                                                <li>
-                                                    make + private vehicles + <u>more expensive and inconvenient</u>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">dowry</i> </dt>
+                                <dd class="col-sm-10">(nc): property and money a woman gives to her husband when they marry in some societies</dd>
 
-                                <dt class="col-sm-2">{{$q555[0]}}</dt>
-                                <dd class="col-sm-10">(nu): problems or difficulties</dd>
+                                <dt class="col-sm-2">duty</dt>
+                                <dd class="col-sm-10">(nc): obligation</dd>
 
-                                <dt class="col-sm-2">{{$q555[2]}}</dt>
-                                <dd class="col-sm-10">(adv): in a way that causes problems or difficulties</dd>
+                                <dt class="col-sm-2">camel</dt>
+                                <dd class="col-sm-10">(nc): a large desert animal with a long neck and either one or two humps</dd>
+
+                                <dt class="col-sm-2">birthright</dt>
+                                <dd class="col-sm-10"> (nc): right, property, money etc. that you should have because of the family or country you belong to</dd>
                             </dl>
                         </div>
                     </div>
@@ -357,22 +357,24 @@
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                6. {{$q6}} <u></u> {{$q66}}
+                            6. What do we call the man who is getting married? <span class="text-success"><u>groom</u></span>
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[2]}}</i></dt>
-                                <dd class="col-sm-10">(vi): changes in some way
-                                <br><mark><strong>clues: subject + v = The age of retirement + <u>varies</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">groom</i> </dt>
+                                <dd class="col-sm-10"> (nc): a man who is getting married</dd>
 
-                                <dt class="col-sm-2">{{$q666[0]}}</dt>
-                                <dd class="col-sm-10">(nc): a different type of something</dd>
+                                <dt class="col-sm-2">bridegroom</dt>
+                                <dd class="col-sm-10">(nc): a woman who is getting married</dd>
 
-                                <dt class="col-sm-2">{{$q666[1]}}</dt>
-                                <dd class="col-sm-10">(adj): many different</dd>
+                                <dt class="col-sm-2">best man</dt>
+                                <dd class="col-sm-10">(nc): the man who helps the bridegroom at the wedding ceremony</dd>
+
+                                <dt class="col-sm-2">bridesmaid</dt>
+                                <dd class="col-sm-10">(nc): a girl or woman, usually unmarried, who helps a bride on her wedding day and is with her at her wedding </dd>
                             </dl>
                         </div>
                     </div>
@@ -382,22 +384,24 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                7. {{$q7}} <u></u> {{$q77}}
+                            7. If your father marries a new wife (not your own mother), what is her relationship to you? <span class="text-success"><u>step-mother</u></span> 
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[0]}}</i> </dt>
-                                <dd class="col-sm-10">(vi): a large group of people living together in an organized way 
-                                <br><mark><strong>clues: contribute more to + <u>noun</u> = contribute more to + <u>society</u></strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">step-mother</i> </dt>
+                                <dd class="col-sm-10">(nc): a woman who is married to your father, but who is not your mother</dd>
 
-                                <dt class="col-sm-2">{{$q777[1]}}</dt>
-                                <dd class="col-sm-10">(adj): relating to society</dd>
+                                <dt class="col-sm-2">half-sister</dt>
+                                <dd class="col-sm-10">(nc): a sister who is a daughter of only one of your parents</dd>
 
-                                <dt class="col-sm-2">{{$q777[2]}}</dt>
-                                <dd class="col-sm-10">(vi): to spend time with other people for pleasure</dd>
+                                <dt class="col-sm-2">aunty</dt>
+                                <dd class="col-sm-10">(nc): an aunt</dd>
+
+                                <dt class="col-sm-2">fairy godmother</dt>
+                                <dd class="col-sm-10">(nc): someone who helps people when they are in trouble</dd>
                             </dl>
                         </div>
                     </div>
@@ -407,22 +411,21 @@
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                8. {{$q8}} <u></u> {{$q88}}
+                            8. What do we call a man who has two wives? <span class="text-success"><u>bigamist</u></span>
                             </a>
                         </h5>
                     </div>
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[2]}}</i> </dt>
-                                <dd class="col-sm-10">(vt): to look for the difference between two or more things
-                                <br><mark><strong>clues: is + <u>adv</u> + pronoun = is + <u>clearly</u> + one</strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">bigamist</i> </dt>
+                                <dd class="col-sm-10">(nc): a person who is married to two people at the same time</dd>
 
-                                <dt class="col-sm-2">{{$q888[0]}}</dt>
-                                <dd class="col-sm-10">(nu): the quality of being clear and easy to understand</dd>
+                                <dt class="col-sm-2">misogynist</dt>
+                                <dd class="col-sm-10">(nc): a man who hates women</dd>
 
-                                <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10">(adj): easy to see </dd>
+                                <dt class="col-sm-2">bachelor</dt>
+                                <dd class="col-sm-10">(nc): a man who has never been married</dd>
                             </dl>
                         </div>
                     </div>
@@ -432,22 +435,25 @@
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                9. {{$q9}} <u></u> {{$q99}}
+                            9.Having many wives is called <span class="text-success"><u>polygamy</u></span>
                             </a>
                         </h5>
                     </div>
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[2]}}</i> </dt>
-                                <dd class="col-sm-10">(vt): to look for the difference between two or more things 
-                                <br><mark><strong>clues: Cannot + v infinitive = cannot + compare</strong></mark></dd>
 
-                                <dt class="col-sm-2">{{$q999[1]}}</dt>
-                                <dd class="col-sm-10">(n): the act of comparing two or more things</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">polygamy</i> </dt>
+                                <dd class="col-sm-10">(nu): the practice of being married to more than one person at the same time</dd>
 
-                                <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">(vt): past simple / past participle of "compare"</dd>
+                                <dt class="col-sm-2">polyandry</dt>
+                                <dd class="col-sm-10">    (nu): the practice of having more than one husband or permanent male sexual partner at the same time</dd>
+
+                                <dt class="col-sm-2">purgatory</dt>
+                                <dd class="col-sm-10">(nu): something that makes you suffer---used humorously</dd>
+
+                                <dt class="col-sm-2">polygon</dt>
+                                <dd class="col-sm-10">(nc): a flat shape with three or more straight sides</dd>
                             </dl>
                         </div>
                     </div>
@@ -457,22 +463,25 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10. {{$q10}} <u></u> {{$q100}}
+                            10.What do we call it when two people live together as husband and wife before they get married? <span class="text-success"><u>trial marriage</u></span>
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[2]}}</i></dt>
-                                <dd class="col-sm-10">(nc): the fact of not being the same 
-                                <br><mark><strong>clues: make a difference = to improve a situation</strong></mark></dd>
 
-                                <dt class="col-sm-2">{{$q1000[0]}}</dt>
-                                <dd class="col-sm-10">(vi): to be not like something or someone else</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">trial marriage</i></dt>
+                                <dd class="col-sm-10">(nc): a test to discover how effective a marriage is</dd>
 
-                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
-                                <dd class="col-sm-10">(adj): not the same</dd>
+                                <dt class="col-sm-2">betrothal</dt>
+                                <dd class="col-sm-10">(nc): a formal promise to marry someone</dd>
+
+                                <dt class="col-sm-2">separation</dt>
+                                <dd class="col-sm-10">(nc): when two married people stop living together as a couple</dd>
+
+                                <dt class="col-sm-2">engagement</dt>
+                                <dd class="col-sm-10">(nc): an agreement to marry someone </dd>
                             </dl>
                         </div>
                     </div>
@@ -491,16 +500,16 @@
 @section('js')
 <script>
      const answers = [
-        'dangers', 
-        'lives', 
-        'encouraging', 
-        'nations', 
-        'inconvenient', 
-        'varies', 
-        'society', 
-        'clearly',
-        'compare', 
-        'difference'
+        'Blood', 
+        'extended', 
+        'nuclear', 
+        'widow', 
+        'dowry', 
+        'groom', 
+        'step-mother', 
+        'bigamist',
+        'polygamy', 
+        'trial marriage'
     ];
     let score = 0;
     $("#show-answer").hide(true);
@@ -519,14 +528,6 @@
             } else {
                 $(item).addClass('border border-danger');
                 $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
-            }
-        })
-
-        $('a u').each((idx, item) => {
-            if($(item).val() == answers[idx]) {
-                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
-            } else {
-                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
             }
         })
 
@@ -549,6 +550,7 @@
             $("#show-answer").text('Show Answer');
             x.style.display = "none";
         }
+        
     });
    
 </script>

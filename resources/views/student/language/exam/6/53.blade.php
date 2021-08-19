@@ -4,6 +4,88 @@
     background-color: #ffc107;
 }
 </style>
+@php
+    $q1 = "Your exams start next week. You'll need to";
+    $q11 = "some serious revision.";
+    $q111 = array(
+        'make up',
+        'get down to',
+        'do away with',
+        'put by'
+    );
+    $q2 = "I wanted to buy a new car so I";
+    $q22 = "some money every month.";
+    $q222 = array(
+        'put up with',
+        'do away with',
+        'make up for',
+        'put by'
+    );
+    $q3 = "Most countries have";
+    $q33 = "capital punishment.";
+    $q333 = array(
+        'done away with',
+        'put up with',
+        'got down to',
+        'got through'
+    );
+    $q4 = "You've";
+    $q44 = "the worst of the weather. Things should improve from now on.";
+    $q444 = array(
+        'got down to',
+        'done up',
+        'got through',
+        'got along'
+    );
+    $q5 = "The twins seem to";
+    $q55 = "with each other far better now than in the past.";
+    $q555 = array(
+        'get along',
+        'make out',
+        'make up',
+        'do up'
+    );
+    $q6 = "The house is starting to look shabby. Time to";
+    $q66 = "!";
+    $q666 = array(
+        'make up for it',
+        'make it out',
+        'put it by',
+        'do it up'
+    );
+    $q7 = "In spite of the fog, it was possible to";
+    $q77 = "a shape in the distance.";
+    $q777 = array(
+        'make up',
+        'make out',
+        'do up',
+        'put up with'
+    );
+    $q8 = "The noise from the renovations is awful but I'm afraid we'll just have to";
+    $q88 = "it.";
+    $q888 = array(
+        'put it by',
+        'make it out',
+        'do away with it',
+        'put up with'
+    );
+    $q9 = "The school had to close during the floods so the students had to";
+    $q99 = "the lost time during their holidays.";
+    $q999 = array(
+        'do away with',
+        'make up for',
+        'put by',
+        'put up with'
+    );
+    $q10 = "The boy was lying. Everyone knew he was";
+    $q100 = "a story to blame someone else.";
+    $q1000 = array(
+        'making up',
+        'doing up',
+        'getting through',
+        'putting by'
+    );
+@endphp
 <div class="row">
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
@@ -13,122 +95,132 @@
             
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
-                There are a number of
+                {{$q1}}
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="advantages">advantages</option>
-                    <option value="benefits">benefits</option>
-                    <option value="drawbacks">mud</option>
+                    <option value="{{$q111[0]}}">{{$q111[0]}}</option>
+                    <option value="{{$q111[1]}}">{{$q111[1]}}</option>
+                    <option value="{{$q111[2]}}">{{$q111[2]}}</option>
+                    <option value="{{$q111[3]}}">{{$q111[3]}}</option>
                 </select>
-                that you can claim if you are disabled.
+                {{$q11}}
             </div>
             
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
-                There are a number of diseases
+                {{$q2}}
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="related">related</option>
-                    <option value="occurred">occurred</option>
-                    <option value="happened">happened</option>
+                    <option value="{{$q222[0]}}">{{$q222[0]}}</option>
+                    <option value="{{$q222[1]}}">{{$q222[1]}}</option>
+                    <option value="{{$q222[2]}}">{{$q222[2]}}</option>
+                    <option value="{{$q222[3]}}">{{$q222[3]}}</option>
                 </select>
-                to industrial production.
+                {{$q22}}
             </div>
             
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
-                The young man was arrested and imprisoned for
+                {{$q3}}
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="doing">doing</option>
-                    <option value="creating">creating</option>
-                    <option value="committing">committing</option>
+                    <option value="{{$q333[0]}}">{{$q333[0]}}</option>
+                    <option value="{{$q333[1]}}">{{$q333[1]}}</option>
+                    <option value="{{$q333[2]}}">{{$q333[2]}}</option>
+                    <option value="{{$q333[3]}}">{{$q333[3]}}</option>
                 </select>
-                a series of crimes.
+                {{$q33}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
-                On being found guilty, the man was
+                {{$q4}}
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="committed">committed</option>
-                    <option value="commuted">commuted</option>
-                    <option value="sentenced">sentenced</option>
+                    <option value="{{$q444[0]}}">{{$q444[0]}}</option>
+                    <option value="{{$q444[1]}}">{{$q444[1]}}</option>
+                    <option value="{{$q444[2]}}">{{$q444[2]}}</option>
+                    <option value="{{$q444[3]}}">{{$q444[3]}}</option>
                 </select>
-                to death for the murder of his spouse.
+                {{$q44}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
-                A great deal of medical research has been
+                {{$q5}}
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="carried">carried</option>
-                    <option value="conducted">conducted</option>
-                    <option value="happened">happened</option>
+                    <option value="{{$q555[0]}}">{{$q555[0]}}</option>
+                    <option value="{{$q555[1]}}">{{$q555[1]}}</option>
+                    <option value="{{$q555[2]}}">{{$q555[2]}}</option>
+                    <option value="{{$q555[3]}}">{{$q555[3]}}</option>
                 </select>
-                recently.
+                {{$q55}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
-                The police arrested the suspect and took him into
+                {{$q6}}
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="custody">custody</option>
-                    <option value="care">care</option>
-                    <option value="prison">prison</option>
+                    <option value="{{$q666[0]}}">{{$q666[0]}}</option>
+                    <option value="{{$q666[1]}}">{{$q666[1]}}</option>
+                    <option value="{{$q666[2]}}">{{$q666[2]}}</option>
+                    <option value="{{$q666[3]}}">{{$q666[3]}}</option>
                 </select>
-                until the trial.
+                {{$q66}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
-                Experts are trying to
+                {{$q7}}
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="see">see</option>
-                    <option value="assess">assess</option>
-                    <option value="affect">affect</option>
+                    <option value="{{$q777[0]}}">{{$q777[0]}}</option>
+                    <option value="{{$q777[1]}}">{{$q777[1]}}</option>
+                    <option value="{{$q777[2]}}">{{$q777[2]}}</option>
+                    <option value="{{$q777[3]}}">{{$q777[3]}}</option>
                 </select>
-                the impact of the oil spill on the local environment.
+                {{$q77}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
-                At the end of the day, you'll need to 
+                {{$q8}}
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="make">make</option>
-                    <option value="decide">decide</option>
-                    <option value="effect">effect</option>
+                    <option value="{{$q888[0]}}">{{$q888[0]}}</option>
+                    <option value="{{$q888[1]}}">{{$q888[1]}}</option>
+                    <option value="{{$q888[2]}}">{{$q888[2]}}</option>
+                    <option value="{{$q888[3]}}">{{$q888[3]}}</option>
                 </select>
-                a decision on the issue of global warming.
+                {{$q88}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
-                The government has implemented a 
+                {{$q9}}
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="differing">differing</option>
-                    <option value="divided">divided</option>
-                    <option value="diverse">diverse</option>
+                    <option value="{{$q999[0]}}">{{$q999[0]}}</option>
+                    <option value="{{$q999[1]}}">{{$q999[1]}}</option>
+                    <option value="{{$q999[2]}}">{{$q999[2]}}</option>
+                    <option value="{{$q999[3]}}">{{$q999[3]}}</option>
                 </select>
-                range of measures to tackle global warming.
+                {{$q99}}
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
-                A lot more needs to be done to 
+                {{$q10}}
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="tackle">tackle</option>
-                    <option value="deal">deal</option>
-                    <option value="sort">sort</option>
+                    <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
+                    <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
+                    <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
+                    <option value="{{$q1000[3]}}">{{$q1000[3]}}</option>
                 </select>
-                the problem of air pollution.
+                {{$q100}}
             </div>
         </div>
     </div>
@@ -139,112 +231,136 @@
                 Answers
             </p>
             <div class="accordion mb-3" id="accordionExample">
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingOne">
-                        <h5 class="my-0">
-                            <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            1. There are a number of  <span class="text-success"><u>benefits</u></span>  that you can claim if you are disabled.
-                            </a>
-                        </h2>
+                <!-- 1 -->
+                    <div class="card mb-1" >
+                        <div class="card-header" id="headingOne">
+                            <h5 class="my-0">
+                                <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    1. {{$q1}} <u></u> {{$q11}}
+                                </a>
+                            </h2>
+                        </div>
+                    
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <dl class="row">
+                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[1]}}</i></dt>
+                                        <dd class="col-sm-10">to start doing something that is difficult or needs a lot of time
+                                            <p class="font-weight-bold mark">clues: exam / revision</p>
+                                        </dd>
+                                    
+                                        <dt class="col-sm-2">{{$q111[0]}}</dt>
+                                        <dd class="col-sm-10">to combine together to form something/ to add to an amount</dd>
+
+                                        <dt class="col-sm-2">{{$q111[2]}}</dt>
+                                        <dd class="col-sm-10">to get rid of something, to stop using it</dd>
+
+                                        <dt class="col-sm-2">{{$q111[3]}}</dt>
+                                        <dd class="col-sm-10">to save money regularly in order to use it later</dd>
+                                    </dl>
+                                </div>
+                        </div>
                     </div>
+                <!-- 1 -->
                 
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <!-- 2 -->
+                    <div class="card mb-1" >
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="my-0">
+                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    2. {{$q2}} <u></u> {{$q22}}
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">benefits</i> </dt>
-                                    <dd class="col-sm-10">(nc):  money provided by your insurance
-                                    <br><strong><mark>clues: claim / disabled</mark></strong></dd>
-                                
-                                    <dt class="col-sm-2">advantages</dt>
-                                    <dd class="col-sm-10">(nc): good or useful features</dd>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[3]}}</i></dt>
+                                    <dd class="col-sm-10">to save money regularly in order to use it later
+                                        <p class="font-weight-bold mark">clues: some money every month</p>
+                                    </dd>
 
-                                    <dt class="col-sm-2">drawbacks</dt>
-                                    <dd class="col-sm-10">(nc): bad or less effective features</dd>
+                                    <dt class="col-sm-2">{{$q222[0]}}</dt>
+                                    <dd class="col-sm-10">to tolerate, to be patient with</dd>
+
+                                    <dt class="col-sm-2">{{$q222[1]}}</dt>
+                                    <dd class="col-sm-10">to get rid of something, to stop using it</dd>
+
+                                    <dt class="col-sm-2">{{$q222[2]}}</dt>
+                                    <dd class="col-sm-10">to make bad situations better</dd>
                                 </dl>
                             </div>
-                    </div>
-                </div><!-- 1 -->
-
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingTwo">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            2. There are a number of diseases <span class="text-success"><u>related</u></span> to industrial production.
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">related</i> </dt>
-                                <dd class="col-sm-10">(adj): connected to 
-                                <br><strong><mark>clues: related to something</mark></strong></dd>
-
-                                <dt class="col-sm-2">occurred</dt>
-                                <dd class="col-sm-10">(vi): past simple and past participle of “occur”</dd>
-
-                                <dt class="col-sm-2">happened</dt>
-                                <dd class="col-sm-10">(vi): past simple and past participle of “happen” </dd>
-                            </dl>
                         </div>
                     </div>
-                </div><!-- 2 -->
+                <!-- 2 -->
 
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingThree">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3. The young man was arrested and imprisoned for  <span class="text-success"><u>committing</u></span> a series of crimes.
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">committing</i></dt>
-                                <dd class="col-sm-10">(vt): doing something illegal                                 
-                                <br><mark><strong>clues: a series of crime</strong></mark></dd>
+                <!-- 3 -->
+                    <div class="card mb-1" >
+                        <div class="card-header" id="headingThree">
+                            <h5 class="my-0">
+                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    3. {{$q3}} <u></u> {{$q33}}
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <dl class="row">
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[0]}}</i></dt>
+                                    <dd class="col-sm-10">got rid of something, stopped using it                              
+                                        <p class="font-weight-bold mark">clues: capital punishment</p>
+                                    </dd>
 
-                                <dt class="col-sm-2">creating</dt>
-                                <dd class="col-sm-10">(vt): to invent or design something</dd>
+                                    <dt class="col-sm-2">{{$q333[1]}}</dt>
+                                    <dd class="col-sm-10">tolerated someone or something, been patient with</dd>
 
-                                <dt class="col-sm-2">doing</dt>
-                                <dd class="col-sm-10">(vt): performing an action</dd>
-                            </dl>
+                                    <dt class="col-sm-2">{{$q333[2]}}</dt>
+                                    <dd class="col-sm-10">started doing something that is difficult or needs a lot of time </dd>
+
+                                    <dt class="col-sm-2">{{$q333[3]}}</dt>
+                                    <dd class="col-sm-10">done an amount of work </dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
-                </div><!-- 3 -->
+                <!-- 3 -->
 
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingFour">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4. On being found guilty, the man was <span class="text-success"><u>sentenced</u></span> to death for the murder of his spouse.
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">sentenced</i></dt>
-                                <dd class="col-sm-10">(vt): punished
-                                <br><mark><strong>clues: to death</strong></mark></dd>
+                <!-- 4 -->
+                    <div class="card mb-1" >
+                        <div class="card-header" id="headingFour">
+                            <h5 class="my-0">
+                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    4.{{$q4}} <u></u> {{$q44}}
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <dl class="row">
+                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
+                                    <dd class="col-sm-10">managed to come to the end of a difficult experience
+                                        <p class="font-weight-bold mark">clues: the worst / improve from now on</p>
+                                    </dd>
 
-                                <dt class="col-sm-2">committed</dt>
-                                <dd class="col-sm-10">(vt): done something illegal</dd>
+                                    <dt class="col-sm-2">{{$q444[0]}}</dt>
+                                    <dd class="col-sm-10">started doing something that is difficult or needs a lot of time</dd>
 
-                                <dt class="col-sm-2">commuted</dt>
-                                <dd class="col-sm-10">(vt): made a punishment less severe </dd>
-                            </dl>
+                                    <dt class="col-sm-2">{{$q444[1]}}</dt>
+                                    <dd class="col-sm-10">to fasten / to repair or decorate / to wrap </dd>
+
+                                    <dt class="col-sm-2">{{$q444[3]}}</dt>
+                                    <dd class="col-sm-10">had a friendly relationship / made progress </dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
-                </div><!-- 4 -->
+                <!-- 4 -->
 
                 <div class="card mb-1" >
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            5. A great deal of medical research has been <span class="text-success"><u>conducted</u></span> recently.
+                                5. {{$q5}} <u></u> {{$q55}}
                             </a>
                         </h5>
                     </div>
@@ -252,15 +368,19 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">conducted</i> </dt>
-                                <dd class="col-sm-10">(vt): performed / done
-                                <br><mark><strong>clues: research</strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[0]}}</i> </dt>
+                                <dd class="col-sm-10">to like and be friendly to each other 
+                                <p class="font-weight-bold mark">clues: with each other</p>
+                                </dd>
 
-                                <dt class="col-sm-2">carried</dt>
-                                <dd class="col-sm-10">(vt): held with your hands, arms or back</dd>
+                                <dt class="col-sm-2">{{$q555[1]}}</dt>
+                                <dd class="col-sm-10">to continue or succeed in life or in business</dd>
 
-                                <dt class="col-sm-2">happened</dt>
-                                <dd class="col-sm-10">(vt): occurred / come to existence</dd>
+                                <dt class="col-sm-2">{{$q555[2]}}</dt>
+                                <dd class="col-sm-10">started doing something that is difficult or needs a lot of time</dd>
+
+                                <dt class="col-sm-2">{{$q555[3]}}</dt>
+                                <dd class="col-sm-10">to fasten / to repair or decorate / to wrap</dd>
                             </dl>
                         </div>
                     </div>
@@ -270,22 +390,26 @@
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            6. The police arrested the suspect and took him into <span class="text-success"><u>custody</u></span> until the trial.
+                                6. {{$q6}} <u></u> {{$q66}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">custody</i> </dt>
-                                <dd class="col-sm-10">(nu): the state of being kept in prison
-                                <br><mark><strong>clues: in / the police / the suspect</strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[3]}}</i></dt>
+                                <dd class="col-sm-10">to repair or decorate / to fasten / to wrap
+                                    <p class="font-weight-bold mark">clues: shabby</p>
+                                </dd>
 
-                                <dt class="col-sm-2">care</dt>
-                                <dd class="col-sm-10">(nu): providing for the needs of someone</dd>
+                                <dt class="col-sm-2">{{$q666[0]}}</dt>
+                                <dd class="col-sm-10">to compensate for something bad with something good</dd>
 
-                                <dt class="col-sm-2">prison</dt>
-                                <dd class="col-sm-10">(nc): a building where criminals are forced to live as a punishment</dd>
+                                <dt class="col-sm-2">{{$q666[1]}}</dt>
+                                <dd class="col-sm-10">to write all the necessary information on an official document</dd>
+
+                                <dt class="col-sm-2">{{$q666[2]}}</dt>
+                                <dd class="col-sm-10">to save an amount of money to use later</dd>
                             </dl>
                         </div>
                     </div>
@@ -295,47 +419,55 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            7. Experts are trying to <span class="text-success"><u>assess</u></span> the impact of the oil spill on the local environment.
+                                7. {{$q7}} <u></u> {{$q77}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">assess</i> </dt>
-                                <dd class="col-sm-10">(vt): to decide the quality of something
-                                <br><mark><strong>clues: Experts / the impact</strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}</i> </dt>
+                                <dd class="col-sm-10">to see, hear or understand something with difficulty  
+                                    <p class="font-weight-bold mark">clues: in spite of the fog / a shape</p>
+                                </dd>
 
-                                <dt class="col-sm-2">see</dt>
-                                <dd class="col-sm-10">(vt): to think about / to consider</dd>
+                                <dt class="col-sm-2">{{$q777[0]}}</dt>
+                                <dd class="col-sm-10">to form a particular thing, amount or number as a whole</dd>
 
-                                <dt class="col-sm-2">affect</dt>
-                                <dd class="col-sm-10">(vt): to cause a change in someone or something</dd>
+                                <dt class="col-sm-2">{{$q777[2]}}</dt>
+                                <dd class="col-sm-10">to repair or decorate / to fasten / to wrap</dd>
+
+                                <dt class="col-sm-2">{{$q777[3]}}</dt>
+                                <dd class="col-sm-10">to tolerate, to be patient with</dd>
                             </dl>
                         </div>
                     </div>
                 </div><!-- 7 -->
 
-                <div class="card mb-1" >
+                <div class="card mb-1">
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            8. At the end of the day, you'll need to <span class="text-success"><u>make</u></span> a decision on the issue of global warming.
+                                8. {{$q8}} <u></u> {{$q88}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">make</i> </dt>
-                                <dd class="col-sm-10">(vt): to produce something
-                                <br><mark><strong>clues: to make a decision</strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[3]}}</i> </dt>
+                                <dd class="col-sm-10">to tolerate, to be patient with
+                                    <p class="font-weight-bold mark">clues: noise / awful / afraid</p>
+                                </dd>
 
-                                <dt class="col-sm-2">decide</dt>
-                                <dd class="col-sm-10">(vt): to choose something after thinking about several possibilities</dd>
+                                <dt class="col-sm-2">{{$q888[0]}}</dt>
+                                <dd class="col-sm-10">to save an amount of money to use later</dd>
 
-                                <dt class="col-sm-2">effect</dt>
-                                <dd class="col-sm-10">(nc): the result of a particular influence</dd>
+                                <dt class="col-sm-2">{{$q888[1]}}</dt>
+                                <dd class="col-sm-10">to write all the necessary information on an official document</dd>
+
+                                <dt class="col-sm-2">{{$q888[2]}}</dt>
+                                <dd class="col-sm-10"> to destroy something</dd>
                             </dl>
                         </div>
                     </div>
@@ -345,22 +477,26 @@
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                            9. The government has implemented a <span class="text-success"><u>diverse</u></span> range of measures to tackle global warming.
+                                9. {{$q9}} <u></u> {{$q99}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">diverse</i> </dt>
-                                <dd class="col-sm-10">(adj): various / including different types of things
-                                <br><mark><strong>clues: a diverse range of</strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[1]}}</i> </dt>
+                                <dd class="col-sm-10">to compensate for something bad with something good 
+                                    <p class="font-weight-bold mark">clues: close / lost time</p>
+                                </dd>
 
-                                <dt class="col-sm-2">differing</dt>
-                                <dd class="col-sm-10">(vi): being different</dd>
+                                <dt class="col-sm-2">{{$q999[0]}}</dt>
+                                <dd class="col-sm-10">to destroy something</dd>
 
-                                <dt class="col-sm-2">divided</dt>
-                                <dd class="col-sm-10">(vt): split into two or more groups</dd>
+                                <dt class="col-sm-2">{{$q999[2]}}</dt>
+                                <dd class="col-sm-10"> to save an amount of money to use later</dd>
+
+                                <dt class="col-sm-2">{{$q999[3]}}</dt>
+                                <dd class="col-sm-10">to tolerate, to be patient with</dd>
                             </dl>
                         </div>
                     </div>
@@ -370,22 +506,26 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10. A lot more needs to be done to <span class="text-success"><u>tackle</u></span>  the problem of air pollution.
+                            10. {{$q10}} <u></u> {{$q100}}
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">tackle</i></dt>
-                                <dd class="col-sm-10">(vt): to try to deal with / to solve
-                                <br><mark><strong>clues: the problem</strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[0]}}</i></dt>
+                                <dd class="col-sm-10">pretending something is true in order to deceive people   
+                                    <p class="font-weight-bold mark">clues: was lying / a story</p>
+                                </dd>
 
-                                <dt class="col-sm-2">deal</dt>
-                                <dd class="col-sm-10">(vi): to do business (deal with something)</dd>
+                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
+                                <dd class="col-sm-10">repairing or decorating / fastening / wrapping</dd>
 
-                                <dt class="col-sm-2">sort</dt>
-                                <dd class="col-sm-10">(vt): to repair or to organize something</dd>
+                                <dt class="col-sm-2">{{$q1000[2]}}</dt>
+                                <dd class="col-sm-10">managing to come to the end of a difficult experience</dd>
+
+                                <dt class="col-sm-2">{{$q1000[3]}}</dt>
+                                <dd class="col-sm-10">saving an amount of money to use later</dd>
                             </dl>
                         </div>
                     </div>
@@ -404,16 +544,16 @@
 @section('js')
 <script>
      const answers = [
-        'benefits', 
-        'related', 
-        'committing', 
-        'sentenced', 
-        'conducted', 
-        'custody', 
-        'assess', 
-        'make',
-        'diverse', 
-        'tackle'
+        'get down to', 
+        'put by', 
+        'done away with', 
+        'got through', 
+        'get along', 
+        'do it up', 
+        'make out', 
+        'put up with',
+        'make up for', 
+        'making up'
     ];
     let score = 0;
     $("#show-answer").hide(true);
@@ -435,6 +575,14 @@
             }
         })
 
+        $('a u').each((idx, item) => {
+            if($(item).val() == answers[idx]) {
+                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
+            } else {
+                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
+            }
+        })
+
         if(score == 10){
             alert("you're awesome");
         }else{
@@ -450,11 +598,10 @@
         if (x.style.display == "none") {
             $("#show-answer").text('close');
             x.style.display = "block";
-        } else {
+        }else {
             $("#show-answer").text('Show Answer');
             x.style.display = "none";
         }
-        
     });
    
 </script>

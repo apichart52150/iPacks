@@ -4,78 +4,6 @@
     background-color: #ffc107;
 }
 </style>
-@php
-    $q1 = 'We have become so dependent on computers that it is hard to';
-    $q11 = 'life without them.';
-    $q111 = array(
-        'imagine',
-        'imagining',
-        'imagination'
-    );
-    $q2 = 'Computers are expected to bring huge';
-    $q22 = 'in the near future, too.';
-    $q222 = array(
-        'benefit',
-        'benefits',
-        'beneficial'
-    );
-    $q3 = 'There is an inevitability that technology will progress and become';
-    $q33 = 'complex.';
-    $q333 = array(
-        'increased',
-        'increasingly',
-        'increasing'
-    );
-    $q4 = 'A number of factors relating to global warming can be';
-    $q44 = '.';
-    $q444 = array(
-        'identify',
-        'identification',
-        'identified'
-    );
-    $q5 = 'There is much ';
-    $q55 = 'nowadays as to whether or not relationships between family members is as close as before.';
-    $q555 = array(
-        'discuss',
-        'discussing',
-        'discussion'
-    );
-    $q6 = 'There has been a lot of';
-    $q66 = "research recently into the causes of the so-called 'cot-death' syndrome.";
-    $q666 = array(
-        'science',
-        'scientist',
-        'scientific'
-    );
-    $q7 = 'Space';
-    $q77 = 'has led to many useful innovations in our everyday lives.';
-    $q777 = array(
-        'explorers',
-        'exploration',
-        'exploring'
-    );
-    $q8 = 'Many people';
-    $q88 = 'with spending large amounts of money on military equipment.';
-    $q888 = array(
-        'disagree',
-        'disagreeing',
-        'disagreement'
-    );
-    $q9 = 'The mass media tens to have a great';
-    $q99 = "on people's opinions.";
-    $q999 = array(
-        'affect',
-        'effect',
-        'affection'
-    );
-    $q10 = 'It is likely that media influence will grow even';
-    $q100 = ' in the future.';
-    $q1000 = array(
-        'strength',
-        'stronger',
-        'more strongly'
-    );
-@endphp
 <div class="row">
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
@@ -85,125 +13,135 @@
             
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">1.</span>
-                {{$q1}}
+                He was sent to prison for
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="{{$q111[0]}}">{{$q111[0]}}</option>
-                    <option value="{{$q111[1]}}">{{$q111[1]}}</option>
-                    <option value="{{$q111[2]}}">{{$q111[2]}}</option>
+                    <option value="">doing</option>
+                    <option value="committing">committing</option>
+                    <option value="">being</option>
+                    <option value="">having</option>
                 </select>
-                {{$q11}}
+                a serious crime.
             </div>
             
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">2.</span>
-                {{$q2}}
+                He was found
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="{{$q222[0]}}">{{$q222[0]}}</option>
-                    <option value="{{$q222[1]}}">{{$q222[1]}}</option>
-                    <option value="{{$q222[2]}}">{{$q222[2]}}</option>
+                    <option value="">innocent</option>
+                    <option value="">not innocent</option>
+                    <option value="guilty">guilty</option>
+                    <option value="">not guilty</option> 
                 </select>
-                {{$q22}}
+                and sentenced to life in prison.
             </div>
             
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">3.</span>
-                {{$q3}}
+                The
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="{{$q333[0]}}">{{$q333[0]}}</option>
-                    <option value="{{$q333[1]}}">{{$q333[1]}}</option>
-                    <option value="{{$q333[2]}}">{{$q333[2]}}</option>
+                    <option value="">defence</option>
+                    <option value="prosecution">prosecution</option>
+                    <option value="">jury</option>
+                    <option value="">court</option>          
                 </select>
-                {{$q33}}
+                asked the judge to hand out a long prison sentence.
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">4.</span>
-                {{$q4}}
+                He was sentenced to death but this was later
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="{{$q444[0]}}">{{$q444[0]}}</option>
-                    <option value="{{$q444[1]}}">{{$q444[1]}}</option>
-                    <option value="{{$q444[2]}}">{{$q444[2]}}</option>
+                    <option value="condemned">condemned</option>
+                    <option value="">carried out</option>
+                    <option value="">acquitted</option>
+                    <option value="">commuted</option>            
                 </select>
-                {{$q44}}
+                to life imprisonment.
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">5.</span>
-                {{$q5}}
+                The man was
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="{{$q555[0]}}">{{$q555[0]}}</option>
-                    <option value="{{$q555[1]}}">{{$q555[1]}}</option>
-                    <option value="{{$q555[2]}}">{{$q555[2]}}</option>
+                    <option value="acquitted">acquitted</option>
+                    <option value="">sentenced</option>
+                    <option value="">commuted</option>
+                    <option value="">committed</option>            
                 </select>
-                {{$q55}}
+                because of a lack of evidence.
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">6.</span>
-                {{$q6}}
+                The
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="{{$q666[0]}}">{{$q666[0]}}</option>
-                    <option value="{{$q666[1]}}">{{$q666[1]}}</option>
-                    <option value="{{$q666[2]}}">{{$q666[2]}}</option>
+                    <option value="">judge</option>
+                    <option value="">prosecution</option>
+                    <option value="jury">jury</option>
+                    <option value="">defendant</option>              
                 </select>
-                {{$q66}}
+                was asked to come up with a speedy verdict.
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">7.</span>
-                {{$q7}}
+                The chief witness was accused of
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="{{$q777[0]}}">{{$q777[0]}}</option>
-                    <option value="{{$q777[1]}}">{{$q777[1]}}</option>
-                    <option value="{{$q777[2]}}">{{$q777[2]}}</option>
+                    <option value="">crime</option>
+                    <option value="perjury">perjury</option>
+                    <option value="">conspiracy</option>
+                    <option value="">treason</option>>
                 </select>
-                {{$q77}}
+                because the evidence he gave was not true.
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">8.</span>
-                {{$q8}}
+                The 
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="{{$q888[0]}}">{{$q888[0]}}</option>
-                    <option value="{{$q888[1]}}">{{$q888[1]}}</option>
-                    <option value="{{$q888[2]}}">{{$q888[2]}}</option>
+                    <option value="">prosecution</option>
+                    <option value="">judge</option>
+                    <option value="jury">jury</option>
+                    <option value="">defence</option>          
                 </select>
-                {{$q88}}
+                called on a number of character witnesses to speak in favour of the defendant.
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">9.</span>
-                {{$q9}}
+                Since the crime was not considered serious, the judge gave the defendant a  
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="{{$q999[0]}}">{{$q999[0]}}</option>
-                    <option value="{{$q999[1]}}">{{$q999[1]}}</option>
-                    <option value="{{$q999[2]}}">{{$q999[2]}}</option>
+                    <option value="fine">fine</option>
+                    <option value="">death sentence</option>
+                    <option value="">life imprisonment</option>
+                    <option value="">probation</option>      
                 </select>
-                {{$q99}}
+               .
             </div>
 
             <div class="mb-2">
                 <span class="font-weight-bold mr-2">10.</span>
-                {{$q10}}
+                Before the witness gave
                 <select class="form-control d-inline w-auto mx-2">
                     <option value="">-Select-</option>
-                    <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
-                    <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
-                    <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
+                    <option value="">proof</option>
+                    <option value="">sentence</option>
+                    <option value="evidence">evidence</option>
+                    <option value="">answer</option>              
                 </select>
-                {{$q100}}
+                , she was asked to swear an oath.
             </div>
         </div>
-    </div>
+    </div><!--qustion-->
 
     <div class="col-xl-12 col-md-12 col-sm-12" id="ans" style="display: none;">
         <div class="card-box text-dark font-16">
@@ -215,7 +153,7 @@
                     <div class="card-header" id="headingOne">
                         <h5 class="my-0">
                             <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                1. {{$q1}} <u></u> {{$q11}}
+                            1. He was sent to prison for <span class="text-success"><u>committing</u></span> a serious crime.
                             </a>
                         </h2>
                     </div>
@@ -223,15 +161,8 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[0]}}</i></dt>
-                                    <dd class="col-sm-10">(infinitive): to form a picture in your mind
-                                    <br><strong><mark>clues: to + infinitive</mark></strong></dd>
-                                
-                                    <dt class="col-sm-2">{{$q111[1]}}</dt>
-                                    <dd class="col-sm-10">(gerund / present participle)</dd>
-
-                                    <dt class="col-sm-2">{{$q111[2]}}</dt>
-                                    <dd class="col-sm-10">(nc): the ability to form pictures in your mind</dd>
+                                    <dt class="col-sm-2"><i class="text-success mr-2">committing</i> </dt>
+                                    <dd class="col-sm-10">(collocation): doing something wrong or illegal <mark><strong>commit a crime</strong></mark></dd>
                                 </dl>
                             </div>
                     </div>
@@ -241,22 +172,19 @@
                     <div class="card-header" id="headingTwo">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                2. {{$q2}} <u></u> {{$q22}}
+                            2. He was found <span class="text-success"><u>guilty</u></span> and sentenced to life in prison.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[1]}}</i></dt>
-                                <dd class="col-sm-10">(plural noun): advantages, improvements 
-                                <br><strong><mark>clues: adj + plural n = huge benefits</mark> <br> <mark>a + adj + singular n = a huge benefit</mark></strong></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">guilty</i> </dt>
+                                <dd class="col-sm-10">(adj): responsible for a specified wrongdoing 
+                                <br><strong><mark>clues: sentenced to life</mark></strong></dd>
 
-                                <dt class="col-sm-2">{{$q222[0]}}</dt>
-                                <dd class="col-sm-10">(singular noun): an advantage, an improvement</dd>
-
-                                <dt class="col-sm-2">{{$q222[2]}}</dt>
-                                <dd class="col-sm-10">(adj): having a good effect</dd>
+                                <dt class="col-sm-2">innocent</dt>
+                                <dd class="col-sm-10">(adj): not guilty of a crime or offence</dd>
                             </dl>
                         </div>
                     </div>
@@ -266,22 +194,24 @@
                     <div class="card-header" id="headingThree">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3. {{$q3}} <u></u> {{$q33}}
+                                3.  The <span class="text-success"><u>prosecution</u></span>  asked the judge to hand out a long prison sentence.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[1]}}</i></dt>
-                                <dd class="col-sm-10">(adv): more and more all the time                                
-                                <br><mark><strong>clues: become + adv + adj = become increasingly complex </strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">prosecution</i></dt>
+                                <dd class="col-sm-10">(nc): the party conducting legal proceeding against someone in a lawsuit</dd>
 
-                                <dt class="col-sm-2">{{$q333[0]}}</dt>
-                                <dd class="col-sm-10">(vi, vt): became bigger in amount or degree</dd>
+                                <dt class="col-sm-2">defence</dt>
+                                <dd class="col-sm-10">(nc): the legal advisor for the defendant in a lawsuit</dd>
 
-                                <dt class="col-sm-2">{{$q333[2]}}</dt>
-                                <dd class="col-sm-10">(vi, vt): present participle: becoming bigger in amount or degree</dd>
+                                <dt class="col-sm-2">jury</dt>
+                                <dd class="col-sm-10">(nc): a body of people sworn to give a verdict in a legal case on the basis of evidence submitted to them in court</dd>
+
+                                <dt class="col-sm-2">court</dt>
+                                <dd class="col-sm-10">(nc): the place where a trial is held</dd>
                             </dl>
                         </div>
                     </div>
@@ -291,37 +221,24 @@
                     <div class="card-header" id="headingFour">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4.{{$q4}} <u></u> {{$q44}}
+                                4.  He was sentenced to death but this was later <span class="text-success"><u>commuted</u></span>  to life imprisonment.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
-                                <dd class="col-sm-10">(vt): past participle:  to be recognized
-                                    <ul class="list-unstyled mark font-weight-bold">
-                                        <li>
-                                            clues:
-                                        </li>
-                                        <li>
-                                            <ul>
-                                                <li>
-                                                    passive voice: can be + Vt past participle
-                                                </li>
-                                                <li>
-                                                    active voice: can + vt infinitive + object
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">commuted</i></dt>
+                                <dd class="col-sm-10">(vt): reduced to a less severe one</dd>
 
-                                <dt class="col-sm-2">{{$q444[0]}}</dt>
-                                <dd class="col-sm-10">(vt): to recognize and correctly name something</dd>
+                                <dt class="col-sm-2">carried out</dt>
+                                <dd class="col-sm-10">(vt): conducted</dd>
 
-                                <dt class="col-sm-2">{{$q444[1]}}</dt>
-                                <dd class="col-sm-10">(nc): official papers or cards</dd>
+                                <dt class="col-sm-2">condemned</dt>
+                                <dd class="col-sm-10">(vt): sentenced to death</dd>
+
+                                <dt class="col-sm-2">acquitted</dt>
+                                <dd class="col-sm-10">(vt): free someone from a criminal charge </dd>
                             </dl>
                         </div>
                     </div>
@@ -331,7 +248,7 @@
                     <div class="card-header" id="headingFive">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                5. {{$q5}} <u></u> {{$q55}}
+                            5. The man was <span class="text-success"><u>acquitted</u></span>  because of a lack of evidence.
                             </a>
                         </h5>
                     </div>
@@ -339,15 +256,18 @@
                         <div class="card-body">
                             <dl class="row">
 
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[2]}}</i> </dt>
-                                <dd class="col-sm-10">(nu): debates, formal talks 
-                                <br><mark><strong>clues: much + nu = much discussion</strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">acquitted</i> </dt>
+                                <dd class="col-sm-10">(vt): free someone from a criminal charge 
+                                <br><mark><strong>clues: lack of evidence (without evidence)</strong></mark></dd>
 
-                                <dt class="col-sm-2">{{$q555[0]}}</dt>
-                                <dd class="col-sm-10">(vt): to talk with someone to exchange ideas</dd>
+                                <dt class="col-sm-2">sentenced</dt>
+                                <dd class="col-sm-10">(nc): a lot of disagreement or argument</dd>
 
-                                <dt class="col-sm-2">{{$q555[1]}}</dt>
-                                <dd class="col-sm-10">(vt): present participle/ gerund of “discuss”</dd>
+                                <dt class="col-sm-2">commuted</dt>
+                                <dd class="col-sm-10">(vt): reduced to a less severe one</dd>
+
+                                <dt class="col-sm-2">committed</dt>
+                                <dd class="col-sm-10">(vt): done something illegal</dd>
                             </dl>
                         </div>
                     </div>
@@ -357,22 +277,26 @@
                     <div class="card-header" id="headingSix">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                6. {{$q6}} <u></u> {{$q66}}
+                            6. The  <span class="text-success"><u>jury</u></span> was asked to come up with a speedy verdict.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[2]}}</i></dt>
-                                <dd class="col-sm-10">(adj): relating to science
-                                <br><mark><strong>clues: adj + n = scientific research</strong></mark></dd>
 
-                                <dt class="col-sm-2">{{$q666[0]}}</dt>
-                                <dd class="col-sm-10">(nu): knowledge about the world</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">jury</i> </dt>
+                                <dd class="col-sm-10"> (nc): a body of people sworn to give a verdict in a legal case on the basis of evidence submitted to them in court 
+                                <br><mark><strong>clues: to come up with a speedy verdict</strong></mark></dd>
 
-                                <dt class="col-sm-2">{{$q666[1]}}</dt>
-                                <dd class="col-sm-10">(nc): a person who works or is trained in science</dd>
+                                <dt class="col-sm-2">prosecution</dt>
+                                <dd class="col-sm-10">(nc): the party conducting legal proceeding against someone in a lawsuit</dd>
+
+                                <dt class="col-sm-2">judge</dt>
+                                <dd class="col-sm-10">(nc): the court official who decides how criminals should be punished</dd>
+
+                                <dt class="col-sm-2">defendant</dt>
+                                <dd class="col-sm-10">(nc): the person who has been accused of doing something illegal</dd>
                             </dl>
                         </div>
                     </div>
@@ -382,22 +306,26 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                7. {{$q7}} <u></u> {{$q77}}
+                            7. The chief witness was accused of  <span class="text-success"><u>perjury</u></span>  because the evidence he gave was not true
                             </a>
                         </h5>
                     </div>
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[1]}}</i> </dt>
-                                <dd class="col-sm-10">(nc): the act of finding out about something 
-                                <br><mark><strong>clues: singular subject + has led</strong></mark></dd>
 
-                                <dt class="col-sm-2">{{$q777[0]}}</dt>
-                                <dd class="col-sm-10">(nc): people who travel through an unknown areas to find out about it</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">perjury</i> </dt>
+                                <dd class="col-sm-10"> (nc): the crime of telling a lie in a court of law 
+                                <br><mark><strong>clues: evidence / not true</strong></mark></dd>
 
-                                <dt class="col-sm-2">{{$q777[2]}}</dt>
-                                <dd class="col-sm-10"> (vt): present participle / gerund of <em>"explore"</em></dd>
+                                <dt class="col-sm-2">crime</dt>
+                                <dd class="col-sm-10">(nc): an illegal wrongdoing</dd>
+
+                                <dt class="col-sm-2">conspiracy</dt>
+                                <dd class="col-sm-10">(nc): a secret plan made by two or more people to do something illegal</dd>
+
+                                <dt class="col-sm-2">treason</dt>
+                                <dd class="col-sm-10"> (nc): the crime of being disloyal to your country</dd>
                             </dl>
                         </div>
                     </div>
@@ -407,22 +335,27 @@
                     <div class="card-header" id="headingEight">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                8. {{$q8}} <u></u> {{$q88}}
+                            8. The <span class="text-success"><u>jury</u></span> called on a number of character witnesses to speak in favour of the defendant.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
-                                <dd class="col-sm-10">(vi): to have a different opinion from someone else
-                                <br><mark><strong>clues: subject + vi + with = Many people + disagree + with</strong></mark></dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">jury</i> </dt>
+                                <dd class="col-sm-10"> (nc): a body of people sworn to give a verdict in a legal case on 
+                                    the basis of evidence submitted to them in court 
+                                    <br><mark><strong>clues: called a number of character witnesses</strong></mark>
+                                </dd>
 
-                                <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10">(vi): present participle / gerund of “disagree” </dd>
+                                <dt class="col-sm-2">prosecution</dt>
+                                <dd class="col-sm-10"> (nc): the party conducting legal proceeding against someone in a lawsuit </dd>
 
-                                <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">(nc): a situation when people express different opinions</dd>
+                                <dt class="col-sm-2">judge</dt>
+                                <dd class="col-sm-10">(nc): the court official who decides how criminals should be punished </dd>
+
+                                <dt class="col-sm-2">defence</dt>
+                                <dd class="col-sm-10">(nc): the legal advisor for the defendant in a lawsuit</dd>
                             </dl>
                         </div>
                     </div>
@@ -432,22 +365,26 @@
                     <div class="card-header" id="headingNine">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                9. {{$q9}} <u></u> {{$q99}}
+                            9. Since the crime was not considered serious, the judge gave the defendant a  <span class="text-success"><u>fine</u></span> .
                             </a>
                         </h5>
                     </div>
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[1]}}</i> </dt>
-                                <dd class="col-sm-10">(nc): a change in someone's mind 
-                                <br><mark><strong>clues: a great + nc + on something / someone</strong></mark></dd>
 
-                                <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">(vt): to have influence on someone's situation</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">fine</i> </dt>
+                                <dd class="col-sm-10">(nc): money paid as a punishment
+                                <br><mark><strong>clues: not considered serious</strong></mark></dd>
 
-                                <dt class="col-sm-2">{{$q999[2]}}</dt>
-                                <dd class="col-sm-10">(nu): a feeling of love and caring</dd>
+                                <dt class="col-sm-2">death sentence</dt>
+                                <dd class="col-sm-10">(nc): an execution</dd>
+
+                                <dt class="col-sm-2">conspiracy</dt>
+                                <dd class="col-sm-10">(nc): the act of being in prison throughout one’s life</dd>
+
+                                <dt class="col-sm-2">probation</dt>
+                                <dd class="col-sm-10">(nc): a system that allows criminals not to go to prison or to leave prison, if they behave well and see a probation officer</dd>
                             </dl>
                         </div>
                     </div>
@@ -457,22 +394,26 @@
                     <div class="card-header" id="headingTen">
                         <h5 class="my-0">
                             <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10. {{$q10}} <u></u> {{$q100}}
+                            10. Before the witness gave <span class="text-success"><u>evidence</u></span> , she was askwed to swear an oath.
                             </a>
                         </h5>
                     </div>
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[1]}}</i></dt>
-                                <dd class="col-sm-10">(adj): more powerful
-                                <br><mark><strong>clues: grow + even + comparative adjective</strong></mark></dd>
 
-                                <dt class="col-sm-2">{{$q1000[0]}}</dt>
-                                <dd class="col-sm-10">(nu): physical energy or power</dd>
+                                <dt class="col-sm-2"><i class="text-success mr-2">evidence</i></dt>
+                                <dd class="col-sm-10"> (nu): information given in a court of law in order to prove that somebody is guilty or not guilty 
+                                <br><mark><strong>clues: swear / an oath</strong></mark></dd>
 
-                                <dt class="col-sm-2">{{$q1000[2]}}</dt>
-                                <dd class="col-sm-10">(adv): more powerfully</dd>
+                                <dt class="col-sm-2">proof</dt>
+                                <dd class="col-sm-10">(nc): facts or documents that prove something is true / It needs an article.</dd>
+
+                                <dt class="col-sm-2">sentence</dt>
+                                <dd class="col-sm-10">(nc): a punishment / It needs an article.</dd>
+
+                                <dt class="col-sm-2">answer</dt>
+                                <dd class="col-sm-10"> (nc): something that you say when you reply to a question / It needs an article.</dd>
                             </dl>
                         </div>
                     </div>
@@ -490,17 +431,17 @@
 
 @section('js')
 <script>
-     const answers = [
-        'imagine', 
-        'benefits', 
-        'increasingly', 
-        'identified', 
-        'discussion', 
-        'scientific', 
-        'exploration', 
-        'disagree',
-        'effect', 
-        'stronger'
+    const answers = [
+        'committing', 
+        'guilty', 
+        'prosecution', 
+        'commuted', 
+        'acquitted', 
+        'jury', 
+        'perjury', 
+        'jury',
+        'fine', 
+        'evidence'
     ];
     let score = 0;
     $("#show-answer").hide(true);
@@ -519,14 +460,6 @@
             } else {
                 $(item).addClass('border border-danger');
                 $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
-            }
-        })
-
-        $('u').each((idx, item) => {
-            if($(item).val() == answers[idx]) {
-                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
-            } else {
-                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
             }
         })
 
@@ -549,6 +482,7 @@
             $("#show-answer").text('Show Answer');
             x.style.display = "none";
         }
+        
     });
    
 </script>
