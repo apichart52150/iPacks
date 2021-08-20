@@ -81,11 +81,11 @@ class ActivityController extends Controller
         return view('student.language.activities', compact('activities'));
     }
 
-    public function exam($exam_id, $exam_count) {
+    public function exam($exam_type, $exam_id) {
 
         $sub_menu = DB::table('sub_menu_language')
-        ->where('sub_menu_count','=', $exam_count)
-        ->where('sub_menu_type', '=', $exam_id)
+        ->where('exam_id','=', $exam_id)
+        ->where('sub_menu_type', '=', $exam_type)
         ->select('*')
         ->get();
 
@@ -96,10 +96,10 @@ class ActivityController extends Controller
 
         $navigation_count =  DB::table('sub_menu_language')
         ->where('sub_menu_type','=', $sub_menu[0]->sub_menu_type)
-        ->select('sub_menu_count')
+        ->select('exam_id')
         ->get();
 
-        $view = "student.language.exam.$exam_id.$exam_count";
+        $view = "student.language.exam.$exam_type.$exam_id";
 
         $pageTitle = [
             'category' => $main_menu[0]->menu_name,
@@ -109,20 +109,20 @@ class ActivityController extends Controller
         ];
 
         $pagination = [
-            'prev' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_id)."/".($exam_count-1),
-            'current' => $exam_count,
-            'next' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_id)."/".($exam_count+1),
-            'textBtn' => $exam_count == count($navigation_count) ? 'Finish' : 'Next'
+            'prev' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_type)."/".($exam_id-1),
+            'current' => $exam_id,
+            'next' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_type)."/".($exam_id+1),
+            'textBtn' => $exam_id == count($navigation_count) ? 'Finish' : 'Next'
         ];
 
         // dd($pagination);
 
         if($pagination['textBtn'] == 'Finish'){
             $pagination = [
-                'prev' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_id)."/".($exam_count-1),
-                'current' => $exam_count,
+                'prev' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_type)."/".($exam_id-1),
+                'current' => $exam_id,
                 'next' => "language/".$this->topicType[$main_menu[0]->menu_type],
-                'textBtn' => $exam_count == count($navigation_count) ? 'Finish' : 'Next'
+                'textBtn' => $exam_id == count($navigation_count) ? 'Finish' : 'Next'
             ];
         }
         // dd($pagination['next']);

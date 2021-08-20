@@ -38,69 +38,67 @@
                 </div>
                 <div class="col-md-6">
                     <div class="border border-dark p-2">
-                    
-                            The line-graphs give details of how many people got married and divorced in one city from 1950 to 2010. Figures are given in thousands. Overall, it can be seen that the number of marriages
-                            <span class="font-weight-bold">1.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            over the period, while the number of divorces 
-                            <span class="font-weight-bold">2.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            At the 
-                            <span class="font-weight-bold">3.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            of the period there were 80,000 marriages. In the same year, only 20,000 couples decided to get divorced. The next decade saw a slight
-                            <span class="font-weight-bold">4.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            in the number of marriages, while the number of divorces 
-                            <span class="font-weight-bold">5.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            to almost 30,000. In 1960 there was a 
-                            <span class="font-weight-bold">6.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            drop in marriages to just under 60,000. During that same period, the number of divorces continued its upward trend to stand 
-                            <span class="font-weight-bold">7.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            40,000. For the next three decades, the number of marriages 
-                            <span class="font-weight-bold">8.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            again to reach around 65,000 before falling again. The number of divorces continued to rise until the mid 1980’s when it
-                            <span class="font-weight-bold">9.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            slightly until the year 2000. By the end of the period the number of marriages stood
-                            <span class="font-weight-bold">10.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            just over 50,000,
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            the number of divorces had risen to just under 50,000. To sum up, the 
-                            <span class="font-weight-bold">12.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            of marriages had fallen by around 30,000, while the number of divorces had risen by a similar number.
+                        The line-graphs give details of how many people got married and divorced in one city from 1950 to 2010. Figures are given in thousands. Overall, it can be seen that the number of marriages
+                        <span class="font-weight-bold">1.</span> 
+                        <div class="input-con">
+                            <input type="text" class="form-control">
                         </div>
+                        over the period, while the number of divorces 
+                        <span class="font-weight-bold">2.</span> 
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        At the 
+                        <span class="font-weight-bold">3.</span> 
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        of the period there were 80,000 marriages. In the same year, only 20,000 couples decided to get divorced. The next decade saw a slight
+                        <span class="font-weight-bold">4.</span> 
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        in the number of marriages, while the number of divorces 
+                        <span class="font-weight-bold">5.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        to almost 30,000. In 1960 there was a 
+                        <span class="font-weight-bold">6.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        drop in marriages to just under 60,000. During that same period, the number of divorces continued its upward trend to stand 
+                        <span class="font-weight-bold">7.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        40,000. For the next three decades, the number of marriages 
+                        <span class="font-weight-bold">8.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        again to reach around 65,000 before falling again. The number of divorces continued to rise until the mid 1980’s when it
+                        <span class="font-weight-bold">9.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        slightly until the year 2000. By the end of the period the number of marriages stood
+                        <span class="font-weight-bold">10.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        just over 50,000,
+                        <span class="font-weight-bold">11.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        the number of divorces had risen to just under 50,000. To sum up, the 
+                        <span class="font-weight-bold">12.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        of marriages had fallen by around 30,000, while the number of divorces had risen by a similar number.
                     </div>
                 </div>
             </div>

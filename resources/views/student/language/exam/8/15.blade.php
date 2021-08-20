@@ -112,7 +112,6 @@
                                 <input type="text" class="form-control">
                             </div>
                             {{$end}}
-                        </div>
                     </div>
                 </div>
             </div>

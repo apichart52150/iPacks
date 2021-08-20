@@ -51,58 +51,57 @@
                 </div>
                 <div class="col-md-6">
                     <div class="border border-dark p-2">
-                            {{$q1}}
-                            <span class="font-weight-bold">1.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q2}}
-                            <span class="font-weight-bold">2.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q3}}
-                            <span class="font-weight-bold">3.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q4}}
-                            <span class="font-weight-bold">4.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q5}}
-                            <span class="font-weight-bold">5.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q6}}
-                            <span class="font-weight-bold">6.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q7}}
-                            <span class="font-weight-bold">7.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q8}}
-                            <span class="font-weight-bold">8.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q9}}
-                            <span class="font-weight-bold">9.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q10}}
-                            <span class="font-weight-bold">10.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$end}}
+                        {{$q1}}
+                        <span class="font-weight-bold">1.</span> 
+                        <div class="input-con">
+                            <input type="text" class="form-control">
                         </div>
+                        {{$q2}}
+                        <span class="font-weight-bold">2.</span> 
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q3}}
+                        <span class="font-weight-bold">3.</span> 
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q4}}
+                        <span class="font-weight-bold">4.</span> 
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q5}}
+                        <span class="font-weight-bold">5.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q6}}
+                        <span class="font-weight-bold">6.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q7}}
+                        <span class="font-weight-bold">7.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q8}}
+                        <span class="font-weight-bold">8.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q9}}
+                        <span class="font-weight-bold">9.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q10}}
+                        <span class="font-weight-bold">10.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$end}}
                     </div>
                 </div>
             </div>

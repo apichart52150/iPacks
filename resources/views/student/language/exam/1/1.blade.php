@@ -1,9 +1,10 @@
 <style>
-.mark, mark {
-    padding: .2em;
-    background-color: #ffc107;
-}
+    .mark, mark {
+        padding: .2em;
+        background-color: #ffc107;
+    }
 </style>
+
 @php
     $q1 = "My mother is";
     $q11 = "dentist.";
@@ -76,6 +77,7 @@
         'the',
     );
 @endphp
+
 <div class="row">
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
@@ -211,46 +213,46 @@
 @endsection
 
 @section('js')
-<script>
-     const answers = [
-        'a', 
-        'the', 
-        'the', 
-        'no article', 
-        'a', 
-        'a', 
-        'the', 
-        'no article',
-        'the', 
-        'an'
-    ];
-    let score = 0;
+    <script>
+        const answers = [
+            'a', 
+            'the', 
+            'the', 
+            'no article', 
+            'a', 
+            'a', 
+            'the', 
+            'no article',
+            'the', 
+            'an'
+        ];
+        let score = 0;
 
-    $('#check-answer').on('click', function() {
-        
-        $('select').each((idx, item) => {
-            $(item).parent().find('i').remove();
-            $(item).removeClass('border-success');
-            $(item).removeClass('border-danger');
+        $('#check-answer').on('click', function() {
+            
+            $('select').each((idx, item) => {
+                $(item).parent().find('i').remove();
+                $(item).removeClass('border-success');
+                $(item).removeClass('border-danger');
 
-            if($(item).val() == answers[idx]) {
-                $(item).addClass('border border-success');
-                $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
-                score++;
-            } else {
-                $(item).addClass('border border-danger');
-                $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
+                if($(item).val() == answers[idx]) {
+                    $(item).addClass('border border-success');
+                    $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
+                    score++;
+                } else {
+                    $(item).addClass('border border-danger');
+                    $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
+                }
+            })
+
+            if(score == 10){
+                alert("you're awesome");
+            }else{
+                alert('Your score is ' + score + '/10');
             }
-        })
 
-        if(score == 10){
-            alert("you're awesome");
-        }else{
-            alert('Your score is ' + score + '/10');
-        }
+            $("#check-answer").hide(true);
+        });
 
-        $("#check-answer").hide(true);
-    });
-
-</script>
+    </script>
 @stop
