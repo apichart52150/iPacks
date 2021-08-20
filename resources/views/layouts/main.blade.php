@@ -247,11 +247,7 @@
                             @yield('button-control')
                             <button id="reset" class="btn btn-purple">Reset</button>
                         </div>
-                        @if ($pagination['current'] == '157')
-                        <a href="{{ url('/language/home') }}" class="btn btn-dark">Back Home</a>
-                        @else
                         <a href="{{ url($pagination['next']) }}" class="btn btn-dark">{{ $pagination['textBtn'] }}</a>
-                        @endif
                     </div>
                 </div>
                 @endisset
