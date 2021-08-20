@@ -38,38 +38,46 @@
 
 </style>
 @php
-    $q1 = "What would the world be like without Shakespeare or the Olympics? While";
-    $q2 = "about the amount of money spent each year";
-    $q3 = "defence and education by five different nations. Figures are given in millions of dollars. Overall, it can be seen that all countries, with the";
-    $q4 = "of Japan, allocate more money to defence";
-    $q5 = " to education. Starting with the defence budget, Russia spends the";
-    $q6 = "amount of money on defending its borders. At 7000 million dollars, this is 500 million dollars";
-    $q7 = "than the USA. Russia’s budget for defence is";
-    $q8 = "as high as China’s, which amounts to 3500 million dollars. Australia allocates 4500 million dollars to defence, while Japan spends just 1000 million dollars, the";
-    $q9 = "amount of all the countries. When it comes to education, there is a different trend. Both Australia and Japan spend 4000 million dollars on education,";
-    $q10 = "than any of the other countries in the group. The USA spends 500 million";
-    $q11 = "than this, at 3500 million dollars. Russia and China both allocate sums of 3000 million dollars for education. While most countries spend more money on defence than on education, Japan spends four";
-    $end = "more money on education than on defence.";
+    $q1 = "From my everyday experience and observation I think that artists as well as scientists bring many";
+    $q2 = "to society. It is a";
+    $q3 = "question whether the";
+    $q4 = "of artists are more or less than the";
+    $q5 = "of scientists to society. For several reasons, which I will mention below, I think that both types are valuable for every society. The";
+    $q6 = "of artists to the society are very essential. Art can form a person's spiritual sense, their views and personalities. People learn history, the";
+    $q7 = "of their country through art. We also watch movies that entertain and at the same time extend our";
+    $q8 = "of interests. Another important";
+    $q9 = "of this is that art is an ancient means of";
+    $q10 = ". In old times people depicted the herds of wild animals on the walls of their caves. They performed different rituals around the fireplace asking their gods for health, good harvest and weather. Our language is a result of people's need to";
+    $q11 = ". On the other side, the";
+    $q12 = "of scientists could not be exaggerated. All humankind is indebted to the scientists because of their work and";
+    $q13 = ". Scientists make our life easier. We have cars and airplanes to move fast from one place to another. We have microwaves and a host of preprocessed food to make the cooking much easier. We have different ";
+    $q14 = "that simplify all we do.";
+    $q15 = ", scientists are making great";
+    $q16 = "in medicine that make our life longer and happier. Nowadays people have a great opportunity to do many things faster by use of";
+    $q17 = ". To sum up, I believe that artists nourish our souls when scientists and";
+    $q18 = "feed our minds. So we cannot";
+    $q19 = "or";
+    $end = "one of them.";
 
-    $a1 = "academically";
-    $a2 = "areas";
-    $a3 = "behalf";
-    $a4 = "benefit";
-    $a5 = "construction";
-    $a6 = "constructions";
-    $a7 = "contributed";
-    $a8 = "create";
-    $a9 = "identical";
-    $a10 = "induce";
-    $a11 = "medical";
-    $a12 = "mental";
-    $a13 = "physical";
-    $a14 = "plus";
-    $a15 = "retain";
-    $a16 = "specifically";
-    $a17 = "sufficient";
-    $a18 = "thereby";
-    $a19 = "welfare";
+    $a1 = "achievements";
+    $a2 = "achievements";
+    $a3 = "aspect";
+    $a4 = "benefits";
+    $a5 = "communicate";
+    $a6 = "communication";
+    $a7 = "computers";
+    $a8 = "contribution";
+    $a9 = "contributions";
+    $a10 = "contributions";
+    $a11 = "contributions";
+    $a12 = "controversial";
+    $a13 = "devices";
+    $a14 = "eliminate";
+    $a15 = "finally";
+    $a16 = "range";
+    $a17 = "technology";
+    $a18 = "traditions";
+    $a19 = "underestimate";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -163,53 +171,43 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q13}}
+                            <span class="font-weight-bold">13.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q14}}
+                            <span class="font-weight-bold">14.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q15}}
+                            <span class="font-weight-bold">15.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q16}}
+                            <span class="font-weight-bold">16.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q17}}
+                            <span class="font-weight-bold">17.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q18}}
+                            <span class="font-weight-bold">18.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
+                            {{$q19}}
+                            <span class="font-weight-bold">19.</span>
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
@@ -234,25 +232,25 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a11 ?>",
-         $q2 = "<?php echo $a1 ?>",
-         $q3 = "<?php echo $a1 ?>",
-         $q4 = "<?php echo $a1 ?>",
-         $q5 = "<?php echo $a1 ?>",
-         $q6 = "<?php echo $a1 ?>",
-         $q7 = "<?php echo $a1 ?>",
-         $q8 = "<?php echo $a1 ?>",
-         $q9 = "<?php echo $a1 ?>",
-         $q10 = "<?php echo $a1 ?>",
-         $q11 = "<?php echo $a1 ?>",
+         $q1 = "<?php echo $a4 ?>",
+         $q2 = "<?php echo $a12 ?>",
+         $q3 = "<?php echo $a9 ?>",
+         $q4 = "<?php echo $a9 ?>",
+         $q5 = "<?php echo $a9 ?>",
+         $q6 = "<?php echo $a18 ?>",
+         $q7 = "<?php echo $a16 ?>",
+         $q8 = "<?php echo $a3 ?>",
+         $q9 = "<?php echo $a6 ?>",
+         $q10 = "<?php echo $a5 ?>",
+         $q11 = "<?php echo $a8 ?>",
          $q12 = "<?php echo $a1 ?>",
-         $q13 = "<?php echo $a1 ?>",
-         $q14 = "<?php echo $a1 ?>",
+         $q13 = "<?php echo $a13 ?>",
+         $q14 = "<?php echo $a15 ?>",
          $q15 = "<?php echo $a1 ?>",
-         $q16 = "<?php echo $a1 ?>",
-         $q17 = "<?php echo $a1 ?>",
-         $q18 = "<?php echo $a1 ?>",
-         $q19 = "<?php echo $a1 ?>",
+         $q16 = "<?php echo $a7 ?>",
+         $q17 = "<?php echo $a17 ?>",
+         $q18 = "<?php echo $a14 ?>",
+         $q19 = "<?php echo $a19 ?>",
     ];
 
     console.log(answers);

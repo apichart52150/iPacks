@@ -95,7 +95,7 @@
                     <div class="border border-dark px-2 text-center">
                         <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
                         <div class="w-100">
-                            <img src="{{asset('public/img_lang/AWL1/AWL1_130.png') }}" alt="">
+                            <img src="{{asset('public/img_lang/AWL1/AWL1_130.png') }}" class="w-100" alt="">
                         </div>
                         <div class="drag-container">
                             <div class="d-grid grid-5" id="choices">
