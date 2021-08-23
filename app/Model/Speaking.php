@@ -11,7 +11,7 @@ class Speaking extends Model {
     public static function querySpeaking($std_id) {
 
         $speaking = DB::table('speaking')
-        ->select('speaking.*','users.name as th_name')
+        ->select('speaking.*','users.username as th_name')
         ->where('std_id','=', $std_id)
         ->leftjoin('users','users.id','=','speaking.th_id')
         ->orderBy('created_at', 'desc')
@@ -24,7 +24,7 @@ class Speaking extends Model {
     public static function status_speaking_topic($id) {
 
         $topic = DB::table('speaking')
-        ->select('speaking.*','users.name as th_name')
+        ->select('speaking.*','users.username as th_name')
         ->leftjoin('users','users.id','=','speaking.th_id')
         ->where('speaking.id',$id)
         ->get();

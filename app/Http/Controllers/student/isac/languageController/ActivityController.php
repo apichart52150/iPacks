@@ -19,11 +19,10 @@ class ActivityController extends Controller
         '4' => 'Essays',
     ];
 
-    public function index($sub_topic)
-    {
+    public function index($sub_topic) {
         $sub_menu = DB::table('sub_menu_language')
         ->where('sub_menu_type','=', $sub_topic)
-        ->select('sub_menu_name', 'sub_menu_id')
+        ->select('*')
         ->orderBy('sub_menu_id', 'asc')
         ->get();
 
@@ -82,11 +81,12 @@ class ActivityController extends Controller
         return view('student.language.activities', compact('activities'));
     }
 
-    public function exam($exam_id) {
+    public function exam($exam_type, $exam_id) {
 
         $sub_menu = DB::table('sub_menu_language')
-        ->where('sub_menu_id','=', $exam_id)
-        ->select('sub_menu_name','sub_menu_type','sub_menu_id')
+        ->where('exam_id','=', $exam_id)
+        ->where('sub_menu_type', '=', $exam_type)
+        ->select('*')
         ->get();
 
         $main_menu = DB::table('menu_language')
@@ -94,14 +94,12 @@ class ActivityController extends Controller
         ->select('menu_id','menu_name', 'menu_type')
         ->get();
 
-        $navigation =  DB::table('sub_menu_language')
+        $navigation_count =  DB::table('sub_menu_language')
         ->where('sub_menu_type','=', $sub_menu[0]->sub_menu_type)
-        ->select('sub_menu_type')
+        ->select('exam_id')
         ->get();
 
-        $path = $sub_menu[0]->sub_menu_type;
-
-        $view = "student.language.exam.$path.$exam_id";
+        $view = "student.language.exam.$exam_type.$exam_id";
 
         $pageTitle = [
             'category' => $main_menu[0]->menu_name,
@@ -111,13 +109,23 @@ class ActivityController extends Controller
         ];
 
         $pagination = [
-            'prev' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_id-1)."/".($exam_id-1),
+            'prev' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_type)."/".($exam_id-1),
             'current' => $exam_id,
-            'next' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_id+1)."/".($exam_id+1),
-            'textBtn' => $exam_id == count($navigation) ? 'Finish' : 'Next'
+            'next' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_type)."/".($exam_id+1),
+            'textBtn' => $exam_id == count($navigation_count) ? 'Finish' : 'Next'
         ];
 
-        // dd($pagination['prev']);
+        // dd($pagination);
+
+        if($pagination['textBtn'] == 'Finish'){
+            $pagination = [
+                'prev' => "language/".$this->topicType[$main_menu[0]->menu_type]."/".($exam_type)."/".($exam_id-1),
+                'current' => $exam_id,
+                'next' => "language/".$this->topicType[$main_menu[0]->menu_type],
+                'textBtn' => $exam_id == count($navigation_count) ? 'Finish' : 'Next'
+            ];
+        }
+        // dd($pagination['next']);
 
     
         return view('student.language.exam', ['view' => $view, 'pageTitle' => $pageTitle, 'pagination' => $pagination]);

@@ -23,6 +23,10 @@
 			return view('student.isac.speaking.browser_settings');
 		})->name('browser-settings');
 		
+
+		Route::get('payment/{status}', 'payment\paymentController@form_payment')->name('payment');
+		Route::post('confirm_payment', 'payment\paymentController@payment')->name('confirm_payment');
+
 		Route::get('wait', function() {
 			return view('student.wait');
 		})->name('wait');
@@ -31,16 +35,12 @@
 			return view('student.success');
 		})->name('success');
 
+
 		Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
 		Route::get('isac_reading', 'student\HomeController@isac_reading')->name('isac_reading');
 		Route::get('strategies_pack', 'student\HomeController@strategies_pack')->name('strategies_pack');
 		Route::get('topic_pack', 'student\HomeController@topic_pack')->name('topic_pack');
-
-		Route::get('user_profile', function() {
-			$profile = \App\Model\Profile::getProfile();
-			return view('student.user_profile', compact('profile'));
-		})->name('user_profile');
 		
 		// sac speaking
 		Route::prefix('')->namespace('student\isac\speakingController')->group(function () {
@@ -87,7 +87,7 @@
 		});
 
 		Route::prefix('language')->namespace('student\isac\languageController')->group(function () {
-			Route::get('home', 'HomeController@index');
+			Route::get('home', 'HomeController@index')->name('language_home');
 			Route::get('{topic}', 'TopicController@index');
 
 			Route::prefix('Intermediate')->group(function () {

@@ -84,9 +84,6 @@
                 <div class="navbar-custom bg-white">
 
                     <ul class="list-unstyled topnav-menu float-right mb-0">
-                        <li class="dropdown notification-list mt-3">
-                            <span class="badge badge-success p-1 font-13">Speaking point {{ auth('student')->user()->std_pointspeaking }} points</span>
-                        </li>
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <img src="{{ asset('public/assets/images/user.png') }}" alt="user-image" class="rounded-circle">
@@ -234,6 +231,16 @@
                 alert('Your account login from another device!!', 'Warning Alert');
                 window.location.href = "{{ route('user_logout')}}";
             } 
+        </script>
+
+        <script>
+            var check_level = "{!! (Auth::user())?Auth::user()->std_level:'' !!}";
+
+            if(check_level != 'premium') {
+                alert('Your account is standard. Please upgrade youre package to access it!!', 'Warning Alert');
+                window.location.href = "{{ route('user_home')}}";
+            }
+
         </script>
 
         @yield('javascript')

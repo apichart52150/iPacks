@@ -41,7 +41,7 @@
                 <div class="d-flex justify-content-center align-items-center flex-wrap">
                 @foreach($activities['activities'] as $key => $activity)
                     <div class="col-xl-6 col-md-6 col-sm-12">
-                        <a href="{{ url('language/'.$activities['category'].'/'.$activity->sub_menu_id.'/'.$activity->sub_menu_id) }}">
+                        <a href="{{ url('language/'.$activities['category'].'/'.$activity->sub_menu_type.'/'.$activity->exam_id) }}">
                             <div class="card card-body text-center bg-{{ $activities['color'] }}">
                                 <h4 class="card-text text-white">{{ $activity->sub_menu_name }}</h4>
                             </div>

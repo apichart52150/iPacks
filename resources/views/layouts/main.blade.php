@@ -101,84 +101,133 @@
             </div>
             <!-- end Topbar -->
 
-            @if(Auth::user()->std_condition == 1)
+            @if(Auth::user()->std_level == 'premium')
+                <div class="topbar-menu">
+                    <div class="container-fluid">
+                        <div id="navigation">
+                            <!-- Navigation Menu-->
+                            <ul class="navigation-menu">
 
-            <div class="topbar-menu">
-                <div class="container-fluid">
-                    <div id="navigation">
-                        <!-- Navigation Menu-->
-                        <ul class="navigation-menu">
+                                <li class="has-submenu">
+                                    <a href="#">
+                                        <i class=" mdi mdi-view-dashboard"></i>iSAC<div class="arrow-down"></div>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li>
+                                            <a href="{{ route('isac_writing_home') }}"><i class="fas fa-pencil-alt"></i>  Writing</a> 
+                                        <li>
+                                            <a href="{{ route('browser-settings') }}"><i class="fas fa-comment-dots"></i>  Speaking</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('isac_reading') }}" target="_blank"><i class="fas fa-eye"></i>  Reading</a>
+                                        </li>
+                                        <li>
+                                                <a href="{{url('isac/listening')}}"><i class=" fas fa-volume-up"></i>  Listening</a>
+                                        </li>
+                                    </ul>
+                                </li>
 
-                            <li class="has-submenu">
-                                <a href="#">
-                                    <i class=" mdi mdi-view-dashboard"></i>iSAC<div class="arrow-down"></div>
-                                </a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="{{ route('isac_writing_home') }}"><i class="fas fa-pencil-alt"></i>  Writing</a> 
-                                    <li>
-                                        <a href="{{ route('browser-settings') }}"><i class="fas fa-comment-dots"></i>  Speaking</a>
-                                    </li>
-                                    <li>
-                                            <a href="https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/{{auth('student')->user()->std_id}}" target="_blank"><i class="fas fa-eye"></i>  Reading</a>
-                                    </li>
-                                    <li>
+
+                                <li class="has-submenu">
+                                    <a href="{{url('language/home')}}">
+                                        <i class="fas fa-language"></i>Language Use<div class="arrow-down"></div>
+                                    </a>
+                                </li>
+
+                                <li class="has-submenu">
+                                    <a href="{{ route('strategies_pack') }}" target="_blank">
+                                        <i class="fas fa-film"></i>Strategies Packs<div class="arrow-down"></div>
+                                    </a>
+                                </li>
+
+                                <li class="has-submenu">
+                                    <a href="{{ route('topic_pack') }}" target="_blank">
+                                        <i class="fas fa-briefcase"></i>Topic Packs<div class="arrow-down"></div>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <!-- End navigation menu -->
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- end #navigation -->
+                    </div>
+                    <!-- end container -->
+                </div>
+                <!-- end navbar-custom -->
+            @elseif(Auth::user()->std_level == 'standard')
+                <div class="topbar-menu">
+                    <div class="container-fluid">
+                        <div id="navigation">
+                            <!-- Navigation Menu-->
+                            <ul class="navigation-menu">
+
+                                <li class="has-submenu">
+                                    <a href="#">
+                                        <i class=" mdi mdi-view-dashboard"></i>iSAC<div class="arrow-down"></div>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li>
+                                            <a href="{{ route('isac_reading') }}" target="_blank"><i class="fas fa-eye"></i>  Reading</a>
+                                        </li>
+                                        <li>
                                             <a href="{{url('isac/listening')}}"><i class=" fas fa-volume-up"></i>  Listening</a>
-                                    </li>
-                                </ul>
-                            </li>
+                                        </li>
+                                    </ul>
+                                </li>
 
 
-                            <li class="has-submenu">
-                                <a href="{{url('language/home')}}">
-                                    <i class="fas fa-language"></i>Language Use<div class="arrow-down"></div>
-                                </a>
-                            </li>
+                                <li class="has-submenu">
+                                    <a href="{{ url('language/home') }}">
+                                        <i class="fas fa-language"></i>Language Use<div class="arrow-down"></div>
+                                    </a>
+                                </li>
 
-                            <li class="has-submenu">
-                                <a href="https://newcambridgethailand.com/strategies-pack/access/RG4gERG9AlIDiwiaWF0IjoxNTE2MjM5MDI/{{auth('student')->user()->std_id}}" target="_blank">
-                                    <i class="fas fa-film"></i>Strategies Packs<div class="arrow-down"></div>
-                                </a>
-                            </li>
+                                <li class="has-submenu">
+                                    <a href="{{ route('strategies_pack') }}" target="_blank">
+                                        <i class="fas fa-film"></i>Strategies Packs<div class="arrow-down"></div>
+                                    </a>
+                                </li>
 
-                            <li class="has-submenu">
-                                <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('student')->user()->std_id }}"  target="_blank">
-                                    <i class="fas fa-briefcase"></i>Topic Packs<div class="arrow-down"></div>
-                                </a>
-                            </li>
+                                <li class="has-submenu">
+                                    <a href="{{ route('topic_pack') }}" target="_blank">
+                                        <i class="fas fa-briefcase"></i>Topic Packs<div class="arrow-down"></div>
+                                    </a>
+                                </li>
 
-                        </ul>
-                        <!-- End navigation menu -->
+                            </ul>
+                            <!-- End navigation menu -->
 
-                        <div class="clearfix"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- end #navigation -->
                     </div>
-                    <!-- end #navigation -->
+                    <!-- end container -->
                 </div>
-                <!-- end container -->
-            </div>
-            <!-- end navbar-custom -->
+                <!-- end navbar-custom -->
             @else
-            <div class="topbar-menu">
-                <div class="container-fluid">
-                    <div id="navigation">
-                        <!-- Navigation Menu-->
-                        <ul class="navigation-menu">
+                <div class="topbar-menu">
+                    <div class="container-fluid">
+                        <div id="navigation">
+                            <!-- Navigation Menu-->
+                            <ul class="navigation-menu">
 
-                            <li class="has-submenu">
-                                <a href="{{url('/')}}">
-                                    <i class="mdi mdi-home"></i>Home<div class="arrow-down"></div>
-                                </a>
-                            </li>
+                                <li class="has-submenu">
+                                    <a href="{{url('/')}}">
+                                        <i class="mdi mdi-home"></i>Home<div class="arrow-down"></div>
+                                    </a>
+                                </li>
 
-                        </ul>
-                        <!-- End navigation menu -->
+                            </ul>
+                            <!-- End navigation menu -->
 
-                        <div class="clearfix"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- end #navigation -->
                     </div>
-                    <!-- end #navigation -->
+                    <!-- end container -->
                 </div>
-                <!-- end container -->
-            </div>
             @endif
         </header>
         <!-- End Navigation Bar-->
@@ -198,11 +247,7 @@
                             @yield('button-control')
                             <button id="reset" class="btn btn-purple">Reset</button>
                         </div>
-                        @if ($pagination['current'] == '157')
-                        <a href="{{ url('/language/home') }}" class="btn btn-dark">Back Home</a>
-                        @else
                         <a href="{{ url($pagination['next']) }}" class="btn btn-dark">{{ $pagination['textBtn'] }}</a>
-                        @endif
                     </div>
                 </div>
                 @endisset

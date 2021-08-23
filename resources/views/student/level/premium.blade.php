@@ -41,7 +41,7 @@
 
 </style>
 
-@if(Auth::user()->std_condition == 1)
+@if(Auth::user()->std_level != 'user')
 <div class="row d-flex justify-content-center">
     <div class="col-xl-3 col-md-6">
         <a href="{{ url('isac/listening') }}" class="wave-light">

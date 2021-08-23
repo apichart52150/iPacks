@@ -47,7 +47,6 @@
         <!-- App css -->
         <link href="{{ asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('public/assets/css/icons.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('public/assets/css/style.css') }}" rel="stylesheet" type="text/css" />
 
         <!-- Global Styles -->
         <style>
@@ -96,10 +95,6 @@
                             @yield('test_time')
                         </li>
                        
-                        <li class="dropdown notification-list mt-3">
-                            <span class="badge badge-info font-13 p-1">Writing point {{Auth::user()->std_pointsac}} points</span>
-                        </li>
-                        
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <img src="{{ asset('public/assets/images/user.png') }}" alt="user-image" class="rounded-circle">
@@ -136,7 +131,7 @@
                                 <img src="{{ asset('public/assets/images/logo_nc.png') }}" alt="" width="80%">
                             </span>
                             <span class="logo-sm">
-                            	<img src="*" alt="" width="100px">
+                            	<img src="{{ asset('public/assets/images/icon-nc-color.png') }}" alt="" width="100px">
                             </span>
                         </a>
                     </div>
@@ -218,7 +213,6 @@
         <script src="{{ asset('public/assets/js/jquery.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/popper.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('public/assets/js/waves.js') }}"></script>
         <script src="{{ asset('public/assets/js/jquery.slimscroll.js') }}"></script>
         <script src="{{ asset('public/assets/js/jquery.scrollTo.min.js') }}"></script>
 
@@ -236,7 +230,6 @@
 
          <!-- Sweet Alert Js  -->
         <script src="{{ asset('public/assets/plugins/sweet-alert/sweetalert2.min.js') }}"></script>
-        <script src="{{ asset('public/assets/pages/jquery.sweet-alert.init.js') }}"></script>
         
         <script src="{{ asset('public/assets/libs/datatables/jquery.dataTables.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.js') }}"></script>
@@ -287,6 +280,16 @@
                 alert('Your account login from another device!!', 'Warning Alert');
                 window.location.href = "{{ route('user_logout')}}";
             } 
+        </script>
+
+        <script>
+            var check_level = "{!! (Auth::user())?Auth::user()->std_level:'' !!}";
+
+            if(check_level != 'premium') {
+                alert('Your account is standard. Please upgrade youre package to access it!!', 'Warning Alert');
+                window.location.href = "{{ route('user_home')}}";
+            }
+
         </script>
 
         @yield('javascript')
