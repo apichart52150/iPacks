@@ -38,38 +38,52 @@
 
 </style>
 @php
-    $q1 = "There can be no doubt that drug abuse has become a";
-    $q2 = "problem around the";
-    $q3 = ". While law";
-    $q4 = "agencies struggle to keep the problem under control, drug barons make huge profits from trafficking drugs around the world. Some governments deal severely with drug users, often";
-    $q5 = "the death sentence for possession of drugs. Other countries, however, choose to more lenient in their treatment of drug offenders. This essay will examine some of the pros and cons of punishing drug offenders harshly. There are a number of arguments in favour of handing out harsh punishments for drug abuse. First of all, many believe that if enough drug users are put behind bars, then the problem will decrease in size. Others take a stronger position and suggest that drug offenders should be sentenced to death. They believe that harsh punishments will deter drug addicts from using drugs. A number of countries in South-east Asia have adopted this position. However, there are strong arguments against the use of harsh penalties against drug users. First of all, it is not the users who are doing the harm. Those who traffic the drugs as a business are the real criminals; for example the drug barons in South America, Africa and Asia. They are the ones who should be hunted down and punished, not the users, who are merely victims themselves. In";
-    $q6 = "to those countries which";
-    $q7 = "the death sentence for drug abuse, it can be argued that putting people to death does not in any way reduce the problem. If it did, then there would not be an increase in drug abuse in those countries.";
-    $q8 = "show, however, that drug abuse is on the increase even in those countries which use the death penalty. In";
-    $q9 = ", while the drug problem is an emotive";
-    $q10 = "since it";
-    $q11 = "the breakdown of society and family life in particular, it must be dealt with effectively. That means striking at the";
-    $q12 = "of the problem i.e. the drug barons, rather than the users. Effective law";
-    $q13 = "is more likely to result in a reduction of drug";
-    $q14 = ". The question is, though, can law";
-    $q15 = "officers remain detached from the corruption which surrounds the drug";
-    $end = "business?";
+    $q1 = "The number of obese youngsters has increased";
+    $q2 = "recently. One";
+    $q3 = "reason for this";
+    $q4 = "is the";
+    $q5 = "of fast food, sometimes referred to as '91junk' food since it contains little nutritional value. Since fast food is popular mostly among the younger";
+    $q6 = ", it has been suggested that advertisements for fast food should be banned. There are good reasons why the government should";
+    $q7 = "fast food advertising. First of all, the fast food producers tend to";
+    $q8 = "young people since they are the";
+    $q9 = "";
+    $q10 = "of their products. They buy television air-time to";
+    $q11 = "with peak viewing time for children. While youngsters watch their favourite programmes, they are bombarded with commercials advertising fast food products which are";
+    $q12 = "risks to their health. In addition, the fast food products are also";
+    $q13 = "by free gifts for children who";
+    $q14 = "the fast food. These free gifts may encourage the youngsters to buy the food, even if the food itself is not particularly tasty. For these reasons some people argue that advertising should be controlled or even banned. There are a number of considerations, however, when it comes to banning commercial advertising. First of all, the television companies depend on advertising";
+    $q15 = "to";
+    $q16 = "the costs of showing television programmes. If the advertising";
+    $q17 = "is decreased, the quality of programmes may also be reduced. Secondly, if the government";
+    $q18 = "advertising for fast food, then surely it will have to control advertising for a wide";
+    $q19 = "of other products which can also be harmful to children: for example, cosmetics and other body enhancers, which may also be dangerous for the health.";
+    $q20 = ", when it comes to watching television, it should be the parents who control what their children view. Children should be supervised while they spend time in front of the television screen so that their parents can educate them how to";
+    $q21 = "what they see on television. All in all, while there may be a case for government";
+    $q22 = "of television advertising, at the end of the day it is really the parents' responsibility to supervise and";
+    $end = "their children's viewing.";
 
-    $a1 = "availability";
-    $a2 = "conclusion";
-    $a3 = "core";
-    $a4 = "distribution";
-    $a5 = "enforcement";
-    $a6 = "enforcement";
-    $a7 = "enforcement";
-    $a8 = "globe";
-    $a9 = "impose";
-    $a10 = "imposing";
-    $a11 = "involves";
-    $a12 = "issue";
-    $a13 = "major";
-    $a14 = "response";
-    $a15 = "statistics";
+    $a1 = "accompanied";
+    $a2 = "availability";
+    $a3 = "coincide";
+    $a4 = "consume";
+    $a5 = "consumers";
+    $a6 = "evaluate";
+    $a7 = "finally";
+    $a8 = "generation";
+    $a9 = "major";
+    $a10 = "monitor";
+    $a11 = "potentially";
+    $a12 = "principal";
+    $a13 = "range";
+    $a14 = "regulate";
+    $a15 = "regulation";
+    $a16 = "restricts";
+    $a17 = "revenue";
+    $a18 = "revenue";
+    $a19 = "significantly";
+    $a20 = "subsidise";
+    $a21 = "target";
+    $a22 = "trend";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -95,6 +109,13 @@
                                 <div class="drag">{{ $a13 }}</div>
                                 <div class="drag">{{ $a14 }}</div>
                                 <div class="drag">{{ $a15 }}</div>
+                                <div class="drag">{{ $a16 }}</div>
+                                <div class="drag">{{ $a17 }}</div>
+                                <div class="drag">{{ $a18 }}</div>
+                                <div class="drag">{{ $a19 }}</div>
+                                <div class="drag">{{ $a20 }}</div>
+                                <div class="drag">{{ $a21 }}</div>
+                                <div class="drag">{{ $a22 }}</div>
                             </div>
                         </div>
                     </div>
@@ -179,6 +200,41 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
+                            {{$q16}}
+                            <span class="font-weight-bold">16.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q17}}
+                            <span class="font-weight-bold">17.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q18}}
+                            <span class="font-weight-bold">18.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q19}}
+                            <span class="font-weight-bold">19.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q20}}
+                            <span class="font-weight-bold">20.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q21}}
+                            <span class="font-weight-bold">21.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q22}}
+                            <span class="font-weight-bold">22.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
                             {{$end}}
                         </div>
                     </div>
@@ -200,21 +256,28 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a13 ?>",
-         $q2 = "<?php echo $a8 ?>",
-         $q3 = "<?php echo $a5 ?>",
-         $q4 = "<?php echo $a10 ?>",
-         $q5 = "<?php echo $a14 ?>",
-         $q6 = "<?php echo $a9 ?>",
-         $q7 = "<?php echo $a15 ?>",
-         $q8 = "<?php echo $a2 ?>",
-         $q9 = "<?php echo $a12 ?>",
-         $q10 = "<?php echo $a11 ?>",
-         $q11 = "<?php echo $a3 ?>",
-         $q12 = "<?php echo $a5 ?>",
-         $q13 = "<?php echo $a1 ?>",
-         $q14 = "<?php echo $a5 ?>",
-         $q15 = "<?php echo $a4 ?>",
+         $q1 = "<?php echo $a19 ?>",
+         $q2 = "<?php echo $a9 ?>",
+         $q3 = "<?php echo $a22 ?>",
+         $q4 = "<?php echo $a2 ?>",
+         $q5 = "<?php echo $a8 ?>",
+         $q6 = "<?php echo $a14 ?>",
+         $q7 = "<?php echo $a21 ?>",
+         $q8 = "<?php echo $a12 ?>",
+         $q9 = "<?php echo $a5 ?>",
+         $q10 = "<?php echo $a3 ?>",
+         $q11 = "<?php echo $a11 ?>",
+         $q12 = "<?php echo $a1 ?>",
+         $q13 = "<?php echo $a4 ?>",
+         $q14 = "<?php echo $a17 ?>",
+         $q15 = "<?php echo $a20 ?>",
+         $q16 = "<?php echo $a17 ?>",
+         $q17 = "<?php echo $a16?>",
+         $q18 = "<?php echo $a13 ?>",
+         $q19 = "<?php echo $a7 ?>",
+         $q20 = "<?php echo $a6 ?>",
+         $q21 = "<?php echo $a15 ?>",
+         $q22 = "<?php echo $a10 ?>",
     ];
 
     console.log(answers);

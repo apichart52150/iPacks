@@ -38,42 +38,40 @@
 
 </style>
 @php
-    $q1 = "It is generally accepted that we all need leisure time to";
-    $q2 = "from the";
-    $q3 = "of work and everyday life. Personally, I prefer to be active during this time, as I think this suits me better. However, what we do with our leisure time is up to us and no one can say that any particular activity is the best. Some people";
-    $q4 = "by watching movies, reading or surfing the internet. People who have";
-    $q5 = "demanding";
-    $q6 = "may choose these types of activities. If you are a nurse or builder, you may feel that you don't want to do a five-kilometre run after work, because you are already";
-    $q7 = "tired. Other people do very sedentary";
-    $q8 = ".";
-    $q9 = "";
-    $q10 = ", for example, may spend all day sitting in front of a";
-    $q11 = "screen. At the end of the working day, they may be keen to stretch their limbs and improve their health by swimming or going to the gym. Another";
-    $q12 = "that influences our choice of leisure";
-    $q13 = "is where we work. People who work indoors often prefer outdoor hobbies,";
-    $q14 = "for people who work outdoors, the";
-    $q15 = "may be true. I am a student myself and this";
-    $q16 = "a lot of sitting in";
-    $q17 = ", so I need to get out into the fresh air afterwards. In any situation, the important thing is that people need to stay healthy by choosing what is best for them. The only wrong way to spend free time, in my view, is to have a sedentary";
-    $end = "and then go home and watch television.";
+    $q1 = "Nowadays, in our competitive world, in order to succeed, knowledge from school and university is not enough. Therefore, the student who";
+    $q2 = "from the school to university gets less";
+    $q3 = "and";
+    $q4 = "less too, than those who gain experience and skills before going to a tertiary";
+    $q5 = ". There are two reasons to prove my opinion. I call the group of people who study from school to university group A and the other group is group B. Firstly, at school and university, what students in group A gain is mostly";
+    $q6 = ". Of course, ";
+    $q7 = "is very necessary; however, you can't do everything with";
+    $q8 = ". You must have practical experience. This is what group A lack very much. After graduating, without experience, group A can't accomplish their work perfectly. On the other hand, it takes them time and money to keep up with other experienced students. Therefore, group A can";
+    $q9 = "less than group B who have the most two important things: skills and experience. Secondly, as group A";
+    $q10 = "less, they surely get less";
+    $q11 = ". Moreover, many companies which employ people in group A have to train them from the beginning. Students in group B have useful experience and skills from the beginning of their employment. As a result, group B give more";
+    $q12 = ". In";
+    $q13 = ", I think student should go to travel or find a";
+    $q14 = "before";
+    $q15 = "to university.";
+    $q16 = ", they will not only have basic knowledge but also skills and experience which are useful for them to get a good";
+    $end = "and a brilliant future.";
 
-    $a1 = "analysts";
-    $a2 = "computer";
-    $a3 = "computer";
-    $a4 = "factor";
-    $a5 = "involves";
-    $a6 = "job";
-    $a7 = "jobs";
-    $a8 = "jobs";
-    $a9 = "lectures";
-    $a10 = "physically";
-    $a11 = "physically";
-    $a12 = "pursuit";
-    $a13 = "recover";
-    $a14 = "relax";
-    $a15 = "reverse";
-    $a16 = "stresses";
-    $a17 = "whereas";
+    $a1 = "benefit";
+    $a2 = "benefit";
+    $a3 = "benefit";
+    $a4 = "conclusion";
+    $a5 = "contribute";
+    $a6 = "contribute";
+    $a7 = "contributes";
+    $a8 = "institute";
+    $a9 = "job";
+    $a10 = "job";
+    $a11 = "proceeding";
+    $a12 = "proceeds";
+    $a13 = "theory";
+    $a14 = "theory";
+    $a15 = "theory";
+    $a16 = "thereby";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -100,7 +98,6 @@
                                 <div class="drag">{{ $a14 }}</div>
                                 <div class="drag">{{ $a15 }}</div>
                                 <div class="drag">{{ $a16 }}</div>
-                                <div class="drag">{{ $a17 }}</div>
                             </div>
                         </div>
                     </div>
@@ -190,11 +187,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q17}}
-                            <span class="font-weight-bold">17.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                         </div>
                     </div>
@@ -216,23 +208,22 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a13 ?>",
-         $q2 = "<?php echo $a16 ?>",
-         $q3 = "<?php echo $a14 ?>",
-         $q4 = "<?php echo $a10 ?>",
-         $q5 = "<?php echo $a7 ?>",
-         $q6 = "<?php echo $a10 ?>",
-         $q7 = "<?php echo $a7 ?>",
-         $q8 = "<?php echo $a2 ?>",
-         $q9 = "<?php echo $a1 ?>",
-         $q10 = "<?php echo $a2 ?>",
-         $q11 = "<?php echo $a4 ?>",
-         $q12 = "<?php echo $a12 ?>",
-         $q13 = "<?php echo $a17 ?>",
-         $q14 = "<?php echo $a15 ?>",
-         $q15 = "<?php echo $a5 ?>",
+         $q1 = "<?php echo $a12 ?>",
+         $q2 = "<?php echo $a1 ?>",
+         $q3 = "<?php echo $a7 ?>",
+         $q4 = "<?php echo $a8 ?>",
+         $q5 = "<?php echo $a13 ?>",
+         $q6 = "<?php echo $a13 ?>",
+         $q7 = "<?php echo $a13 ?>",
+         $q8 = "<?php echo $a5 ?>",
+         $q9 = "<?php echo $a5 ?>",
+         $q10 = "<?php echo $a1 ?>",
+         $q11 = "<?php echo $a1 ?>",
+         $q12 = "<?php echo $a4 ?>",
+         $q13 = "<?php echo $a9 ?>",
+         $q14 = "<?php echo $a11 ?>",
+         $q15 = "<?php echo $a16 ?>",
          $q16 = "<?php echo $a9 ?>",
-         $q17 = "<?php echo $a6 ?>",
     ];
 
     console.log(answers);

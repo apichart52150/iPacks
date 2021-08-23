@@ -38,28 +38,60 @@
 
 </style>
 @php
-    $q1 = "Many people have to work under somebody's supervision. In most cases an employee does not choose his or her boss, unless a supervisor is elected. In the following";
-    $q2 = 'I will list the most important qualities of my "ideal boss". First of all, he must be impartial. I believe that it is very important to make a';
-    $q3 = "decision, think about somebody's";
-    $q4 = ", impartially. For";
-    $q5 = ", my friend is a supervisor in a dairy mill. It is his family's business so a lot of his relatives work there. But he never";
-    $q6 = "someone because he or she is his family. I think it is a good quality for a boss. Second of all, my " .'"ideal boss"' ." must be honest, patient and attentive. He should pay attention to people's feelings, encourage them by increasing their salary, listen to their suggestions about improving";
-    $q7 = "conditions and productivity. For";
-    $q8 = ", if he is not satisfied with the result he should understand the origin of the problem and explain to people how to fix it. In addition, he must know how to solve";
-    $q9 = "that can arise between employees. Another important quality of a boss is the ability to make the right decisions and to learn from other people's mistakes.";
-    $q10 = ", I think a good boss must value his or her employees because the profit directly depends on the people who work there. In";
-    $end = ", I think a good boss should be able to make his people enjoy the work they are doing and encourage their diligence.";
+    $q1 = "These days, many people are afraid of";
+    $q2 = "";
+    $q3 = "because of the dangers associated with its use. In my opinion, although it is true that";
+    $q4 = "weapons";
+    $q5 = "the greatest threat to life, the use of";
+    $q6 = "";
+    $q7 = "for peaceful purposes also carries some serious risks.";
+    $q8 = "power stations provide an important";
+    $q9 = "of cheap power for many industrialised nations and some developing countries. However, there is always the danger of radiation leaking from these plants. Even though safety precautions are taken, there have been numerous disasters such as the explosion of a";
+    $q10 = "plant in Russia not long ago.";
+    $q11 = "";
+    $q12 = "is even used to help cure some diseases such as cancer. Radiation can be applied to the body to burn away cancerous cells. This is, however, a dangerous";
+    $q13 = ", and the application of radiation is almost always painful and not always successful. The most worrying";
+    $q14 = "of";
+    $q15 = "";
+    $q16 = ", though, is its use for";
+    $q17 = "purposes. Enough atomic bombs have already been built to completely destroy the planet, and the real danger is that one day some country will start a war with these weapons. Too many countries now have the";
+    $q18 = "";
+    $q19 = "to make such bombs, and there is currently much";
+    $q20 = "about how to control the situation. In";
+    $q21 = ",";
+    $q22 = "";
+    $q23 = "certainly has";
+    $q24 = "uses, but is,";
+    $q25 = ", dangerous. However, it would have been better if it had never been used to";
+    $q26 = "";
+    $end = "weapons. If life on Earth is to continue.";
 
-    $a1 = "conclusion";
-    $a2 = "conflicts";
-    $a3 = "finally";
-    $a4 = "instance";
-    $a5 = "instance";
-    $a6 = "labour";
-    $a7 = "paragraphs";
-    $a8 = "promotes";
-    $a9 = "promotion";
-    $a10 = "technical";
+    $a1 = "aspect";
+    $a2 = "conclusion";
+    $a3 = "create";
+    $a4 = "debate";
+    $a5 = "military";
+    $a6 = "nonetheless";
+    $a7 = "nuclear";
+    $a8 = "nuclear";
+    $a9 = "nuclear";
+    $a10 = "nuclear";
+    $a11 = "nuclear";
+    $a12 = "nuclear";
+    $a13 = "nuclear";
+    $a14 = "nuclear";
+    $a15 = "nuclear";
+    $a16 = "pose";
+    $a17 = "positive";
+    $a18 = "procedure";
+    $a19 = "required";
+    $a20 = "source";
+    $a21 = "technology";
+    $a22 = "technology";
+    $a23 = "technology";
+    $a24 = "technology";
+    $a25 = "technology";
+    $a26 = "technology";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -80,6 +112,22 @@
                                 <div class="drag">{{ $a8 }}</div>
                                 <div class="drag">{{ $a9 }}</div>
                                 <div class="drag">{{ $a10 }}</div>
+                                <div class="drag">{{ $a11 }}</div>
+                                <div class="drag">{{ $a12 }}</div>
+                                <div class="drag">{{ $a13 }}</div>
+                                <div class="drag">{{ $a14 }}</div>
+                                <div class="drag">{{ $a15 }}</div>
+                                <div class="drag">{{ $a16 }}</div>
+                                <div class="drag">{{ $a17 }}</div>
+                                <div class="drag">{{ $a18 }}</div>
+                                <div class="drag">{{ $a19 }}</div>
+                                <div class="drag">{{ $a20 }}</div>
+                                <div class="drag">{{ $a21 }}</div>
+                                <div class="drag">{{ $a22 }}</div>
+                                <div class="drag">{{ $a23 }}</div>
+                                <div class="drag">{{ $a24 }}</div>
+                                <div class="drag">{{ $a25 }}</div>
+                                <div class="drag">{{ $a26 }}</div>
                             </div>
                         </div>
                     </div>
@@ -139,6 +187,86 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
+                            {{$q11}}
+                            <span class="font-weight-bold">11.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q13}}
+                            <span class="font-weight-bold">13.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q14}}
+                            <span class="font-weight-bold">14.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q15}}
+                            <span class="font-weight-bold">15.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q16}}
+                            <span class="font-weight-bold">16.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q17}}
+                            <span class="font-weight-bold">17.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q18}}
+                            <span class="font-weight-bold">18.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q19}}
+                            <span class="font-weight-bold">19.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q20}}
+                            <span class="font-weight-bold">20.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q21}}
+                            <span class="font-weight-bold">21.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q22}}
+                            <span class="font-weight-bold">22.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q23}}
+                            <span class="font-weight-bold">23.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q24}}
+                            <span class="font-weight-bold">24.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q25}}
+                            <span class="font-weight-bold">25.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q26}}
+                            <span class="font-weight-bold">26.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
                             {{$end}}
                         </div>
                     </div>
@@ -161,15 +289,31 @@
 
     const answers = [
          $q1 = "<?php echo $a7 ?>",
-         $q2 = "<?php echo $a10 ?>",
-         $q3 = "<?php echo $a9 ?>",
-         $q4 = "<?php echo $a4 ?>",
-         $q5 = "<?php echo $a8 ?>",
-         $q6 = "<?php echo $a6 ?>",
-         $q7 = "<?php echo $a4 ?>",
-         $q8 = "<?php echo $a2 ?>",
-         $q9 = "<?php echo $a3 ?>",
-         $q10 = "<?php echo $a1 ?>",
+         $q2 = "<?php echo $a21 ?>",
+         $q3 = "<?php echo $a7 ?>",
+         $q4 = "<?php echo $a16 ?>",
+         $q5 = "<?php echo $a7 ?>",
+         $q6 = "<?php echo $a21 ?>",
+         $q7 = "<?php echo $a7 ?>",
+         $q8 = "<?php echo $a20 ?>",
+         $q9 = "<?php echo $a7 ?>",
+         $q10 = "<?php echo $a7 ?>",
+         $q11 = "<?php echo $a21 ?>",
+         $q12 = "<?php echo $a18 ?>",
+         $q13 = "<?php echo $a1 ?>",
+         $q14 = "<?php echo $a7 ?>",
+         $q15 = "<?php echo $a21 ?>",
+         $q16 = "<?php echo $a5 ?>",
+         $q17 = "<?php echo $a21 ?>",
+         $q18 = "<?php echo $a19 ?>",
+         $q19 = "<?php echo $a4 ?>",
+         $q20 = "<?php echo $a2 ?>",
+         $q21 = "<?php echo $a7 ?>",
+         $q22 = "<?php echo $a21 ?>",
+         $q23 = "<?php echo $a17 ?>",
+         $q24 = "<?php echo $a6 ?>",
+         $q25 = "<?php echo $a3 ?>",
+         $q26 = "<?php echo $a7 ?>",
     ];
 
     console.log(answers);

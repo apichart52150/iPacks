@@ -38,36 +38,30 @@
 
 </style>
 @php
-    $q1 = "Over the past few";
-    $q2 = ", the increasing amount of industrial waste and household garbage has become a";
-    $q3 = "problem in many countries. People have questioned what caused this problem and what can be done to improve the situation. In my opinion, two of the most critical causes of this waste material problem are the increased";
-    $q4 = "and a shortage of space for landfill. To begin with, modern lifestyle has";
-    $q5 = "greatly to the increasing amount of waste and garbage we produce everyday. In other words, we have turned into a materialistic and mass-consumption society where we use more and throw away more than ever before. Moreover, countries are running out of space to store garbage and waste material. In fact,";
-    $q6 = "land for waste";
-    $q7 = "raises";
-    $q8 = "in many countries. To solve this intractable problem, every citizen needs to";
-    $q9 = "in producing less garbage. For example, we can bring our own personal shopping bags instead of using plastic bags provided by stores and shops. Besides, the government can";
-    $q10 = "stricter laws on companies to use biodegradable packaging or use recycled material. Indeed, this alone can";
-    $q11 = "much of the waste which is sent to at land fills. Companies can also";
-    $q12 = "by developing new raw material which is recyclable and will";
-    $q13 = "lead to less garbage. One good example of this is that tyre companies develop new tyres for cars which are not made of rubber but of new biodegradable material. As discussed above,";
-    $q14 = ", business and the government can share the responsibility to reduce the amount of waste material and to save the earth. I hope that in the future our offspring will be better off with the well-preserved (14)";
-    $end = ".";
+    $q1 = "From my everyday experience and observation I can stand that the best way of learning about life is through personal experience. However, some people think that it is wiser to learn about life through listening to the advice of family and friends. It does not mean I totally disagree with this way of learning. Moreover, I think that it is wise for a person to take an";
+    $q2 = "position because each of these ways has its own advantages. Bellow I will give my reasons to support my point of view. From the one side, learning through one's personal experience brings many";
+    $q3 = ". First of all, scientists say that personal experience has greater";
+    $q4 = "on a person. I have to agree with this. Take for example children. They will not believe their parents that something can hurt them until they try it and make sure in it.";
+    $q5 = ", most likely they will remember this experience longer. Second of all, people learn how to";
+    $q6 = "their mistakes, make";
+    $q7 = "and next time try to avoid them. So, I think it is a great experience that makes people stronger, more self-confident and";
+    $q8 = ". They gain more knowledge and experience that will be very helpful and valuable in the future. From the other side, listening to the advice of family and friends brings many";
+    $q9 = "too. Parents with great patience pass down their knowledge and experience to their children. They teach them all they know and they want their children do not make the same mistakes. In addition to those practical";
+    $q10 = ", learning from someone's advice is painless. For example, parents nowadays very often talk to their children about drugs. I think it is a great example when one should not try drugs in order to gain new experience. I think it is a case when children must trust their parents. To";
+    $q11 = "up, I think it is wise to combine both of these ways to learn and try to";
+    $end = "personal mistakes as well as not personal. I think together they can greatly simplify one's life and make the way to success shorter.";
 
-    $a1 = "consumption";
-    $a2 = "contribute";
-    $a3 = "controversies";
-    $a4 = "decades";
-    $a5 = "disposal";
-    $a6 = "eliminate";
-    $a7 = "enforce";
-    $a8 = "environment";
-    $a9 = "individuals";
-    $a10 = "major";
-    $a11 = "participate";
-    $a12 = "securing";
-    $a13 = "ultimately";
-    $a14 = "contributed";
+    $a1 = "analyze";
+    $a2 = "analyze";
+    $a3 = "benefits";
+    $a4 = "benefits";
+    $a5 = "benefits";
+    $a6 = "conclusions";
+    $a7 = "furthermore";
+    $a8 = "impact";
+    $a9 = "intermediate";
+    $a10 = "persistent";
+    $a11 = "sum";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -89,9 +83,6 @@
                                 <div class="drag">{{ $a9 }}</div>
                                 <div class="drag">{{ $a10 }}</div>
                                 <div class="drag">{{ $a11 }}</div>
-                                <div class="drag">{{ $a12 }}</div>
-                                <div class="drag">{{ $a13 }}</div>
-                                <div class="drag">{{ $a14 }}</div>
                             </div>
                         </div>
                     </div>
@@ -156,21 +147,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q12}}
-                            <span class="font-weight-bold">12.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q13}}
-                            <span class="font-weight-bold">13.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q14}}
-                            <span class="font-weight-bold">14.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                         </div>
                     </div>
@@ -192,20 +168,17 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a4 ?>",
-         $q2 = "<?php echo $a10 ?>",
-         $q3 = "<?php echo $a1 ?>",
-         $q4 = "<?php echo $a14 ?>",
-         $q5 = "<?php echo $a12 ?>",
-         $q6 = "<?php echo $a5 ?>",
-         $q7 = "<?php echo $a3 ?>",
-         $q8 = "<?php echo $a11 ?>",
-         $q9 = "<?php echo $a7 ?>",
-         $q10 = "<?php echo $a6 ?>",
-         $q11 = "<?php echo $a2 ?>",
-         $q12 = "<?php echo $a13 ?>",
-         $q13 = "<?php echo $a9 ?>",
-         $q14 = "<?php echo $a8 ?>",
+         $q1 = "<?php echo $a9 ?>",
+         $q2 = "<?php echo $a3 ?>",
+         $q3 = "<?php echo $a8 ?>",
+         $q4 = "<?php echo $a7 ?>",
+         $q5 = "<?php echo $a1 ?>",
+         $q6 = "<?php echo $a6 ?>",
+         $q7 = "<?php echo $a10 ?>",
+         $q8 = "<?php echo $a3 ?>",
+         $q9 = "<?php echo $a3 ?>",
+         $q10 = "<?php echo $a11 ?>",
+         $q11 = "<?php echo $a1 ?>",
     ];
 
     console.log(answers);

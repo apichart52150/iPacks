@@ -38,88 +38,54 @@
 
 </style>
 @php
-    $q1 = "When";
-    $q2 = "first made their way into the business";
-    $q3 = ", everyone believed that they would make people's";
-    $q4 = "easier. What was not expected was that";
-    $q5 = "would";
-    $q6 = "";
-    $q7 = ". Besides";
-    $q8 = "to unemployment, these";
-    $q9 = "workers often";
-    $q10 = "";
-    $q11 = "";
-    $q12 = "performance. A number of";
-    $q13 = "have been lost as a direct result of new";
-    $q14 = "";
-    $q15 = ". Ticket agents in various";
-    $q16 = "";
-    $q17 = ", from subway/underground stations to airports are";
-    $q18 = "nonexistent these days. Bank tellers have been greatly reduced due to";
-    $q19 = "bank machines. In addition, many call centres that have help lines are almost entirely computerised. A few years ago I worked as a helper in our local library. Today this position does not exist, because six new";
-    $q20 = "have been installed. The number of positions lost to";
-    $q21 = "grows exponentially, and unemployment continues to get worse. While a";
-    $q22 = "may easily";
-    $q23 = "the main";
-    $q24 = "of these";
-    $q25 = ", most";
-    $q26 = "fall short when customers have a";
-    $q27 = "request or problem. A pre-paid ticket booth does not have";
-    $q28 = "about the entertainment district and cannot offer friendly directions to a tourist.";
-    $q29 = ", an";
-    $q30 = "bank machine cannot provide";
-    $q31 = "and reassurance to a customer who has just had his";
-    $q32 = "card stolen. And, more often than not,";
-    $q33 = "telephone operators cannot answer the one question that we have, and we end up waiting on the line to speak with someone anyway. Every time I go into the library where I worked I notice elderly people who don't know how to use the";
-    $q34 = "and can't find anyone to help. In the future, I believe a new business";
-    $q35 = "will";
-    $q36 = ". As";
-    $q37 = "";
-    $q38 = "";
-    $q39 = ", new positions will have to be invented. More and more people will go into business for themselves, and hopefully put the personal touch back into business. I believe that the human workforce will";
-    $q40 = "that it is more valuable than";
-    $end = ".";
+    $q1 = "";
+    $q2 = "is a";
+    $q3 = "of advancement and increase in";
+    $q4 = "between the worlds' countries and people. It";
+    $q5 = "";
+    $q6 = ", knowledge and skills. GlobalIzation is gaining speed over the entire world. It has attracted enough world attention needed from international organizations in";
+    $q7 = "and encouraging human rights and freedom , opportunities for";
+    $q8 = ", social and";
+    $q9 = "rights. However, there are some countries that are missing out on the opportunities that are offered and it's taken as a big problem for their country. They are the poorer countries that are not connected to the people";
+    $q10 = "and their people are unskilled due to the lack of knowledge and";
+    $q11 = ". They are also unable to trade with the other countries which are richer and larger as they are unable to meet the demands";
+    $q12 = "on them. They also will not have the opportunities and the";
+    $q13 = "that are";
+    $q14 = ".";
+    $q15 = "has also encouraged crime, like the";
+    $q16 = "trade in drug trafficking around the world by air, sea and land. This has";
+    $q17 = "human smuggling. This has brought about a lot of problems to the country and the family of the drug addicts. This will also lead to other crimes like robbery and violence in the country. Another";
+    $q18 = "side of";
+    $q19 = "is the dumping of the dangerous waste into the river, sea or the ocean. This will Affect the aquatic creatures, contaminate the water and cause harm to the people too. To";
+    $q20 = ",";
+    $q21 = "has played an";
+    $q22 = "part in the world's economics but the international organization should also not forget the poorer countries and the developed countries should also tackle the other";
+    $q23 = "side that";
+    $end = "the world.";
 
-    $a1 = "achieve";
-    $a2 = "assistance";
-    $a3 = "automated";
-    $a4 = "automated";
-    $a5 = "automated";
-    $a6 = "automated";
-    $a7 = "computer";
-    $a8 = "computer";
-    $a9 = "computer";
-    $a10 = "computers";
-    $a11 = "computers";
-    $a12 = "computers";
-    $a13 = "computers";
-    $a14 = "computers";
-    $a15 = "computers";
-    $a16 = "computers";
-    $a17 = "contributing";
-    $a18 = "credit";
-    $a19 = "demonstrate";
-    $a20 = "eliminate";
-    $a21 = "eliminate";
-    $a22 = "evolve";
-    $a23 = "exhibit";
-    $a24 = "facilities";
-    $a25 = "inadequate";
-    $a26 = "insight";
-    $a27 = "job";
-    $a28 = "jobs";
-    $a29 = "jobs";
-    $a30 = "jobs";
-    $a31 = "jobs";
-    $a32 = "jobs";
-    $a33 = "sector";
-    $a34 = "similarly";
-    $a35 = "tasks";
-    $a36 = "technology";
-    $a37 = "transportation";
-    $a38 = "trend";
-    $a39 = "unique";
-    $a40 = "virtually";
+    $a1 = "affects";
+    $a2 = "challenges";
+    $a3 = "communication";
+    $a4 = "conclude";
+    $a5 = "cultural";
+    $a6 = "economic";
+    $a7 = "enormous";
+    $a8 = "globalization";
+    $a9 = "globalization";
+    $a10 = "globalization";
+    $a11 = "globalization";
+    $a12 = "globally";
+    $a13 = "illegal";
+    $a14 = "imposed";
+    $a15 = "interaction";
+    $a16 = "involved";
+    $a17 = "involves";
+    $a18 = "negative";
+    $a19 = "negative";
+    $a20 = "process";
+    $a21 = "promoting";
+    $a22 = "required";
+    $a23 = "technology";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -153,23 +119,6 @@
                                 <div class="drag">{{ $a21 }}</div>
                                 <div class="drag">{{ $a22 }}</div>
                                 <div class="drag">{{ $a23 }}</div>
-                                <div class="drag">{{ $a24 }}</div>
-                                <div class="drag">{{ $a25 }}</div>
-                                <div class="drag">{{ $a26 }}</div>
-                                <div class="drag">{{ $a27 }}</div>
-                                <div class="drag">{{ $a28 }}</div>
-                                <div class="drag">{{ $a29 }}</div>
-                                <div class="drag">{{ $a30 }}</div>
-                                <div class="drag">{{ $a31 }}</div>
-                                <div class="drag">{{ $a32 }}</div>
-                                <div class="drag">{{ $a33 }}</div>
-                                <div class="drag">{{ $a34 }}</div>
-                                <div class="drag">{{ $a35 }}</div>
-                                <div class="drag">{{ $a36 }}</div>
-                                <div class="drag">{{ $a37 }}</div>
-                                <div class="drag">{{ $a38 }}</div>
-                                <div class="drag">{{ $a39 }}</div>
-                                <div class="drag">{{ $a40 }}</div>
                             </div>
                         </div>
                     </div>
@@ -294,91 +243,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q24}}
-                            <span class="font-weight-bold">24.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q25}}
-                            <span class="font-weight-bold">25.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q26}}
-                            <span class="font-weight-bold">26.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q27}}
-                            <span class="font-weight-bold">27.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q28}}
-                            <span class="font-weight-bold">28.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q29}}
-                            <span class="font-weight-bold">29.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q30}}
-                            <span class="font-weight-bold">30.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q31}}
-                            <span class="font-weight-bold">31.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q32}}
-                            <span class="font-weight-bold">32.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q33}}
-                            <span class="font-weight-bold">33.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q34}}
-                            <span class="font-weight-bold">34.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q35}}
-                            <span class="font-weight-bold">35.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q36}}
-                            <span class="font-weight-bold">36.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q37}}
-                            <span class="font-weight-bold">37.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q38}}
-                            <span class="font-weight-bold">38.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q39}}
-                            <span class="font-weight-bold">39.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q40}}
-                            <span class="font-weight-bold">40.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                         </div>
                     </div>
@@ -400,46 +264,29 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a10 ?>",
-         $q2 = "<?php echo $a33 ?>",
-         $q3 = "<?php echo $a28 ?>",
-         $q4 = "<?php echo $a10 ?>",
-         $q5 = "<?php echo $a20 ?>",
-         $q6 = "<?php echo $a28 ?>",
-         $q7 = "<?php echo $a17 ?>",
-         $q8 = "<?php echo $a3 ?>",
-         $q9 = "<?php echo $a23 ?>",
-         $q10 = "<?php echo $a25 ?>",
-         $q11 = "<?php echo $a27 ?>",
-         $q12 = "<?php echo $a28 ?>",
-         $q13 = "<?php echo $a7 ?>",
-         $q14 = "<?php echo $a36 ?>",
-         $q15 = "<?php echo $a37 ?>",
-         $q16 = "<?php echo $a24 ?>",
-         $q17 = "<?php echo $a40 ?>",
-         $q18 = "<?php echo $a3 ?>",
-         $q19 = "<?php echo $a10 ?>",
-         $q20 = "<?php echo $a10 ?>",
+         $q1 = "<?php echo $a8 ?>",
+         $q2 = "<?php echo $a20 ?>",
+         $q3 = "<?php echo $a15 ?>",
+         $q4 = "<?php echo $a17 ?>",
+         $q5 = "<?php echo $a3 ?>",
+         $q6 = "<?php echo $a21 ?>",
+         $q7 = "<?php echo $a6 ?>",
+         $q8 = "<?php echo $a5 ?>",
+         $q9 = "<?php echo $a12 ?>",
+         $q10 = "<?php echo $a23 ?>",
+         $q11 = "<?php echo $a14 ?>",
+         $q12 = "<?php echo $a2 ?>",
+         $q13 = "<?php echo $a22 ?>",
+         $q14 = "<?php echo $a8 ?>",
+         $q15 = "<?php echo $a13 ?>",
+         $q16 = "<?php echo $a16 ?>",
+         $q17 = "<?php echo $a18 ?>",
+         $q18 = "<?php echo $a8 ?>",
+         $q19 = "<?php echo $a4 ?>",
+         $q20 = "<?php echo $a8 ?>",
          $q21 = "<?php echo $a7 ?>",
-         $q22 = "<?php echo $a1 ?>",
-         $q23 = "<?php echo $a35 ?>",
-         $q24 = "<?php echo $a28 ?>",
-         $q25 = "<?php echo $a10 ?>",
-         $q26 = "<?php echo $a39 ?>",
-         $q27 = "<?php echo $a26 ?>",
-         $q28 = "<?php echo $a34 ?>",
-         $q29 = "<?php echo $a3 ?>",
-         $q30 = "<?php echo $a2 ?>",
-         $q31 = "<?php echo $a18 ?>",
-         $q32 = "<?php echo $a3 ?>",
-         $q33 = "<?php echo $a7 ?>",
-         $q34 = "<?php echo $a38 ?>",
-         $q35 = "<?php echo $a22 ?>",
-         $q36 = "<?php echo $a10 ?>",
-         $q37 = "<?php echo $a20 ?>",
-         $q38 = "<?php echo $a28 ?>",
-         $q39 = "<?php echo $a19 ?>",
-         $q40 = "<?php echo $a10 ?>",
+         $q22 = "<?php echo $a18 ?>",
+         $q23 = "<?php echo $a1 ?>",
     ];
 
     console.log(answers);

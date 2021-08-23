@@ -38,84 +38,72 @@
 
 </style>
 @php
-    $q1 = "With budget airlines travelling";
-    $q2 = "has become easier and cheaper than ever before. Visiting foreign destinations, once the dream of many people, has now become reality. The reality of travelling, however, is not always as pleasant as one expects, and the dream sometimes turns into a nightmare. Modern";
-    $q3 = "such as the internet means that we can now";
-    $q4 = "Places";
-    $q5 = ", and even take part in";
-    $q6 = "tours of those places,";
-    $q7 = "us to experience those places without having to actually travel there. This";
-    $q8 = "has its";
-    $q9 = "";
-    $q10 = "but there are also drawbacks to";
-    $q11 = "tourism. There can be no doubt that travelling to different countries allows us to experience";
-    $q12 = "";
-    $q13 = "at first-hand. Each country has its own";
-    $q14 = "atmosphere,";
-    $q15 = "by a mixture of smells, tastes, climate and";
-    $q16 = ". In addition, the country's";
-    $q17 = "heritage";
-    $q18 = ", folklore and";
-    $q19 = "provide an";
-    $q20 = "into the nation's history and give an";
-    $q21 = "of the people's character. The language, also, can be heard as it is spoken in its natural";
-    $q22 = ", and continued";
-    $q23 = " to the language is likely to result in some learning of that language. This real-life experience is likely to have a long-lasting effect. However, the effect may not always be a pleasant one as there are many problems which can";
-    $q24 = "";
-    $q25 = "travel. The practicalities of";
-    $q26 = "visas and other bureaucratic";
-    $q27 = "can take the edge off the trip even before you set off. Travel logistics such as making flight connections, being stranded at airports or docks due to bad weather or strikes also add to the frustration of the reality. In addition,";
-    $q28 = "of '";
-    $q29 = "shock' can seriously reduce the novelty value of being in a foreign country. For example, different food, strange customs, unfamiliar";
-    $q30 = "and homesickness can all make your ideal holiday abroad a nightmare. In";
-    $q31 = ",";
-    $q32 = "travel can give valuable";
-    $q33 = "into alien";
-    $q34 = "but the practicalities";
-    $q35 = "in travelling may not suit everyone. Fortunately, with advanced";
-    $q36 = "it is now possible to experience visits to foreign places in the comfort of";
-    $q37 = "tourism. At the end of the day, it is up to each";
-    $q38 = "to choose the";
-    $end = "which best fits their personality.";
+    $q1 = "Some people find a";
+    $q2 = "and work with the same company for many years. Others, however, prefer to stay with the same company for a short spell only and then move on to a different";
+    $q3 = ". There are advantages and disadvantages about changing";
+    $q4 = "frequently. People who stay in the same";
+    $q5 = "for a long time do so for a number of reasons. First of all, they regard that";
+    $q6 = "as part of a";
+    $q7 = "career path, rather than simply as a means to earn a high salary. The terms and conditions which";
+    $q8 = "the";
+    $q9 = "are usually satisfactory and will improve incrementally the longer the person stays with the company. The longer the person does the same";
+    $q10 = ", the more experience they";
+    $q11 = "and the more proficiently they can perform their duties.";
+    $q12 = "generally comes at regular";
+    $q13 = ", and the employee may even work for just one company until it is time to retire. Such loyalty is usually rewarded by the company not only in";
+    $q14 = "terms but also with";
+    $q15 = "";
+    $q16 = "and added perks and bonuses. In addition to this, the work practices and";
+    $q17 = "";
+    $q18 = "of the company is usually conducive to people staying a long time. In other words, there is not a";
+    $q19 = "of competition and";
+    $q20 = ". On the other hand, some people prefer to move from";
+    $q21 = "to";
+    $q22 = "on a regular basis in order to find improved terms and conditions of service. They may expect higher remuneration in return for showing a competitive spirit and by working longer hours to meet deadlines. Once an employee has reached a certain level, above which (s)he is unlikely to";
+    $q23 = ", then it may be the time to search for new opportunities elsewhere. There are, of course, other reasons for moving on. If, for example, working conditions are unpleasant, or if the relationship with one's";
+    $q24 = "is unbearable, then it is advisable to change";
+    $q25 = ". One of the most common reasons for searching for a new";
+    $q26 = "is if the boss makes too many demands on the employees.";
+    $q27 = "";
+    $q28 = "from one workplace to another, however, can result in a feeling of not belonging to any particular workplace, or even";
+    $q29 = "";
+    $q30 = "satisfaction. In";
+    $q31 = ", there are arguments for and against changing employment frequently. It largely depends on the";
+    $q32 = "and on the ambitions and expectations held by the";
+    $end = "employee.";
 
     $a1 = "accompany";
-    $a2 = "aspects";
-    $a3 = "aspects";
-    $a4 = "concept";
-    $a5 = "conclusion";
-    $a6 = "context";
-    $a7 = "created";
-    $a8 = "cultural";
-    $a9 = "cultural";
-    $a10 = "culture";
-    $a11 = "culture";
-    $a12 = "cultures";
-    $a13 = "currency";
-    $a14 = "distinct";
-    $a15 = "diversity";
-    $a16 = "documents";
-    $a17 = "enabling";
-    $a18 = "exposure";
-    $a19 = "indication";
-    $a20 = "individual";
-    $a21 = "insight";
-    $a22 = "insights";
-    $a23 = "involved";
-    $a24 = "obtaining";
-    $a25 = "option";
-    $a26 = "overseas";
-    $a27 = "overseas";
-    $a28 = "overseas";
-    $a29 = "overseas";
-    $a30 = "positive";
-    $a31 = "research";
-    $a32 = "sites";
-    $a33 = "technology";
-    $a34 = "technology";
-    $a35 = "traditions";
-    $a36 = "virtual";
-    $a37 = "virtual";
-    $a38 = "virtual";
+    $a2 = "acquire";
+    $a3 = "colleagues";
+    $a4 = "conclusion";
+    $a5 = "constant";
+    $a6 = "corporate";
+    $a7 = "culture";
+    $a8 = "culture";
+    $a9 = "diminished";
+    $a10 = "financial";
+    $a11 = "individual";
+    $a12 = "individual";
+    $a13 = "intervals";
+    $a14 = "job";
+    $a15 = "job";
+    $a16 = "job";
+    $a17 = "job";
+    $a18 = "job";
+    $a19 = "job";
+    $a20 = "job";
+    $a21 = "job";
+    $a22 = "job";
+    $a23 = "job";
+    $a24 = "job";
+    $a25 = "jobs";
+    $a26 = "jobs";
+    $a27 = "proceed";
+    $a28 = "promotion";
+    $a29 = "security";
+    $a30 = "shifting";
+    $a31 = "stress";
+    $a32 = "structured";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -158,12 +146,6 @@
                                 <div class="drag">{{ $a30 }}</div>
                                 <div class="drag">{{ $a31 }}</div>
                                 <div class="drag">{{ $a32 }}</div>
-                                <div class="drag">{{ $a33 }}</div>
-                                <div class="drag">{{ $a34 }}</div>
-                                <div class="drag">{{ $a35 }}</div>
-                                <div class="drag">{{ $a36 }}</div>
-                                <div class="drag">{{ $a37 }}</div>
-                                <div class="drag">{{ $a38 }}</div>
                             </div>
                         </div>
                     </div>
@@ -333,36 +315,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q33}}
-                            <span class="font-weight-bold">33.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q34}}
-                            <span class="font-weight-bold">34.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q35}}
-                            <span class="font-weight-bold">35.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q36}}
-                            <span class="font-weight-bold">36.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q37}}
-                            <span class="font-weight-bold">37.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q38}}
-                            <span class="font-weight-bold">38.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                         </div>
                     </div>
@@ -384,44 +336,38 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a26 ?>",
-         $q2 = "<?php echo $a33 ?>",
-         $q3 = "<?php echo $a31 ?>",
-         $q4 = "<?php echo $a26 ?>",
-         $q5 = "<?php echo $a36 ?>",
-         $q6 = "<?php echo $a17 ?>",
-         $q7 = "<?php echo $a4 ?>",
-         $q8 = "<?php echo $a30 ?>",
-         $q9 = "<?php echo $a2 ?>",
-         $q10 = "<?php echo $a36 ?>",
-         $q11 = "<?php echo $a8 ?>",
-         $q12 = "<?php echo $a15 ?>",
-         $q13 = "<?php echo $a14 ?>",
-         $q14 = "<?php echo $a7 ?>",
-         $q15 = "<?php echo $a10 ?>",
-         $q16 = "<?php echo $a8 ?>",
-         $q17 = "<?php echo $a32 ?>",
-         $q18 = "<?php echo $a35 ?>",
-         $q19 = "<?php echo $a21 ?>",
-         $q20 = "<?php echo $a19 ?>",
-         $q21 = "<?php echo $a6 ?>",
-         $q22 = "<?php echo $a18 ?>",
-         $q23 = "<?php echo $a1 ?>",
-         $q24 = "<?php echo $a26 ?>",
-         $q25 = "<?php echo $a24 ?>",
-         $q26 = "<?php echo $a16 ?>",
-         $q27 = "<?php echo $a2 ?>",
-         $q28 = "<?php echo $a10 ?>",
-         $q29 = "<?php echo $a13 ?>",
-         $q30 = "<?php echo $a5 ?>",
-         $q31 = "<?php echo $a26 ?>",
-         $q32 = "<?php echo $a22 ?>",
-         $q33 = "<?php echo $a12 ?>",
-         $q34 = "<?php echo $a23 ?>",
-         $q35 = "<?php echo $a33 ?>",
-         $q36 = "<?php echo $a36 ?>",
-         $q37 = "<?php echo $a20 ?>",
-         $q38 = "<?php echo $a25 ?>",
+         $q1 = "<?php echo $a14 ?>",
+         $q2 = "<?php echo $a14 ?>",
+         $q3 = "<?php echo $a25 ?>",
+         $q4 = "<?php echo $a14 ?>",
+         $q5 = "<?php echo $a14 ?>",
+         $q6 = "<?php echo $a32 ?>",
+         $q7 = "<?php echo $a1 ?>",
+         $q8 = "<?php echo $a14 ?>",
+         $q9 = "<?php echo $a14 ?>",
+         $q10 = "<?php echo $a2 ?>",
+         $q11 = "<?php echo $a28 ?>",
+         $q12 = "<?php echo $a13 ?>",
+         $q13 = "<?php echo $a10 ?>",
+         $q14 = "<?php echo $a14 ?>",
+         $q15 = "<?php echo $a29 ?>",
+         $q16 = "<?php echo $a6 ?>",
+         $q17 = "<?php echo $a7 ?>",
+         $q18 = "<?php echo $a7 ?>",
+         $q19 = "<?php echo $a31 ?>",
+         $q20 = "<?php echo $a14 ?>",
+         $q21 = "<?php echo $a14 ?>",
+         $q22 = "<?php echo $a27 ?>",
+         $q23 = "<?php echo $a3 ?>",
+         $q24 = "<?php echo $a25 ?>",
+         $q25 = "<?php echo $a14 ?>",
+         $q26 = "<?php echo $a5 ?>",
+         $q27 = "<?php echo $a30 ?>",
+         $q28 = "<?php echo $a9 ?>",
+         $q29 = "<?php echo $a14 ?>",
+         $q30 = "<?php echo $a4 ?>",
+         $q31 = "<?php echo $a11 ?>",
+         $q32 = "<?php echo $a11 ?>",
     ];
 
     console.log(answers);

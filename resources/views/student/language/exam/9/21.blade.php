@@ -38,24 +38,62 @@
 
 </style>
 @php
-    $q1 = "As human population is";
-    $q2 = "/";
-    $q3 = "rising every year, people's";
-    $q4 = "are increasing too. We need more food, more machines, more place to live. As a result of this people need more land to satisfy their";
-    $q5 = ". We cultivate and irrigate more and more land to plant vegetables, build new buildings, airports, roads, etc. I think sometimes we forget that we are not alone on this planet. I have to disagree with those people who think that human needs are more important than saving land for endangered animals. I base my opinion on the following points. First of all, as I already mentioned, we are not alone on this planet. A few centuries ago we were the part of wild nature. I think we need to remember this fact and respect all creatures around us. Second of all, I believe that we all need to think of the problem of overpopulation. The human population is";
-    $q6 = "/";
-    $q7 = "increasing and we have to do something about it. From my opinion, every family should have no more than two children. It will help to stop the growth of population, decrease human needs for farmland, housing and industry. In";
-    $q8 = ", I think it is a very";
-    $end = "question nowadays. My point is that all people should answer this question and find the solution.";
+    $q1 = "Today";
+    $q2 = "are used almost everywhere. It is impossible to imagine our life without PCs, Internet, hand phones and other";
+    $q3 = "";
+    $q4 = ". But what of the future? In what fields will";
+    $q5 = "be used and what";
+    $q6 = "will humans have in this world in the future? Computers certainly make our life easier; we can easily get information about any product we plan to buy or place we plan to visit within a few seconds using personal";
+    $q7 = "and Internet. Scientists";
+    $q8 = "that in the near future it will be possible to smell a new perfume using Internet and watch 3D scenes at home like we do in the theater. According to forecasts of HR agencies, machines will replace the";
+    $q9 = "of cashiers,";
+    $q10 = "and";
+    $q11 = "pilots. Some";
+    $q12 = "in Japan are already selling housewife-robots, which help old people to keep their home clean.";
+    $q13 = "the fact that";
+    $q14 = "help us, they make us dependent.";
+    $q15 = ", people spend more time behind";
+    $q16 = "than ever before. And some of them feel a need for more time to be spent with people in live";
+    $q17 = ". In addition, system failure of one of the important modules of a";
+    $q18 = "can bring about serious";
+    $q19 = ". Suffice to mention";
+    $q20 = "problems which";
+    $q21 = "at the end of the 1990s, problems concerning the coming year 2000 (Y2K) and catastrophes that were";
+    $q22 = ". Fortunately imminent disasters did not happen. However, it is difficult to imagine what could have happened if all the";
+    $q23 = "had";
+    $q24 = ". We live in a";
+    $q25 = "era:";
+    $q26 = "penetrate everywhere with all the";
+    $q27 = "they provide and all the dangers they hide. However we are satisfied with them and sometimes we even thank them because they help us in";
+    $end = ", studying, doing business, entertaining and saving lives in critical situations.";
 
-    $a1 = "conclusion";
-    $a2 = "dramatically";
-    $a3 = "dramatically";
-    $a4 = "requirements";
-    $a5 = "requirements";
-    $a6 = "significantly";
-    $a7 = "significantly";
-    $a8 = "topical";
+    $a1 = "apparently";
+    $a2 = "benefits";
+    $a3 = "civil";
+    $a4 = "communicating";
+    $a5 = "computer";
+    $a6 = "computer";
+    $a7 = "computer";
+    $a8 = "computers";
+    $a9 = "computers";
+    $a10 = "computers";
+    $a11 = "computers";
+    $a12 = "computers";
+    $a13 = "consequences";
+    $a14 = "contact";
+    $a15 = "corporations";
+    $a16 = "despite";
+    $a17 = "devices";
+    $a18 = "job";
+    $a19 = "military";
+    $a20 = "monitors";
+    $a21 = "occurred";
+    $a22 = "occurred";
+    $a23 = "predict";
+    $a24 = "predicted";
+    $a25 = "predictions";
+    $a26 = "role";
+    $a27 = "technological";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -74,6 +112,25 @@
                                 <div class="drag">{{ $a6 }}</div>
                                 <div class="drag">{{ $a7 }}</div>
                                 <div class="drag">{{ $a8 }}</div>
+                                <div class="drag">{{ $a9 }}</div>
+                                <div class="drag">{{ $a10 }}</div>
+                                <div class="drag">{{ $a11 }}</div>
+                                <div class="drag">{{ $a12 }}</div>
+                                <div class="drag">{{ $a13 }}</div>
+                                <div class="drag">{{ $a14 }}</div>
+                                <div class="drag">{{ $a15 }}</div>
+                                <div class="drag">{{ $a16 }}</div>
+                                <div class="drag">{{ $a17 }}</div>
+                                <div class="drag">{{ $a18 }}</div>
+                                <div class="drag">{{ $a19 }}</div>
+                                <div class="drag">{{ $a20 }}</div>
+                                <div class="drag">{{ $a21 }}</div>
+                                <div class="drag">{{ $a22 }}</div>
+                                <div class="drag">{{ $a23 }}</div>
+                                <div class="drag">{{ $a24 }}</div>
+                                <div class="drag">{{ $a25 }}</div>
+                                <div class="drag">{{ $a26 }}</div>
+                                <div class="drag">{{ $a27 }}</div>
                             </div>
                         </div>
                     </div>
@@ -123,6 +180,101 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
+                            {{$q9}}
+                            <span class="font-weight-bold">9.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q10}}
+                            <span class="font-weight-bold">10.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q11}}
+                            <span class="font-weight-bold">11.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q13}}
+                            <span class="font-weight-bold">13.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q14}}
+                            <span class="font-weight-bold">14.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q15}}
+                            <span class="font-weight-bold">15.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q16}}
+                            <span class="font-weight-bold">16.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q17}}
+                            <span class="font-weight-bold">17.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q18}}
+                            <span class="font-weight-bold">18.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q19}}
+                            <span class="font-weight-bold">19.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q20}}
+                            <span class="font-weight-bold">20.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q21}}
+                            <span class="font-weight-bold">21.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q22}}
+                            <span class="font-weight-bold">22.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q23}}
+                            <span class="font-weight-bold">23.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q24}}
+                            <span class="font-weight-bold">24.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q25}}
+                            <span class="font-weight-bold">25.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q26}}
+                            <span class="font-weight-bold">26.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q27}}
+                            <span class="font-weight-bold">27.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
                             {{$end}}
                         </div>
                     </div>
@@ -144,14 +296,33 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a6 ?>",
-         $q2 = "<?php echo $a2 ?>",
-         $q3 = "<?php echo $a4 ?>",
-         $q4 = "<?php echo $a4 ?>",
-         $q5 = "<?php echo $a2 ?>",
-         $q6 = "<?php echo $a6 ?>",
-         $q7 = "<?php echo $a1 ?>",
-         $q8 = "<?php echo $a8 ?>",
+         $q1 = "<?php echo $a8 ?>",
+         $q2 = "<?php echo $a27 ?>",
+         $q3 = "<?php echo $a17 ?>",
+         $q4 = "<?php echo $a8 ?>",
+         $q5 = "<?php echo $a26 ?>",
+         $q6 = "<?php echo $a8 ?>",
+         $q7 = "<?php echo $a23 ?>",
+         $q8 = "<?php echo $a18 ?>",
+         $q9 = "<?php echo $a3 ?>",
+         $q10 = "<?php echo $a19 ?>",
+         $q11 = "<?php echo $a15 ?>",
+         $q12 = "<?php echo $a16 ?>",
+         $q13 = "<?php echo $a8 ?>",
+         $q14 = "<?php echo $a1 ?>",
+         $q15 = "<?php echo $a20 ?>",
+         $q16 = "<?php echo $a14 ?>",
+         $q17 = "<?php echo $a5 ?>",
+         $q18 = "<?php echo $a13 ?>",
+         $q19 = "<?php echo $a5 ?>",
+         $q20 = "<?php echo $a21 ?>",
+         $q21 = "<?php echo $a24 ?>",
+         $q22 = "<?php echo $a25 ?>",
+         $q23 = "<?php echo $a21 ?>",
+         $q24 = "<?php echo $a5 ?>",
+         $q25 = "<?php echo $a8 ?>",
+         $q26 = "<?php echo $a2 ?>",
+         $q27 = "<?php echo $a4 ?>",
     ];
 
     console.log(answers);

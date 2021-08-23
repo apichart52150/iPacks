@@ -38,34 +38,34 @@
 
 </style>
 @php
-    $q1 = "A much";
-    $q2 = "";
-    $q3 = "these days is whether citizens should take out private health insurance or not. The cost of providing free";
-    $q4 = "care for both the wealthy and the poor is far too great for any government, and most people agree that if you can pay for insurance, you should. In this essay, I will argue that all who can afford it should be insured, but free";
-    $q5 = "care must be made";
-    $q6 = "for those too poor to do so. The most important reason for encouraging people to take out private health insurance is the cost to the government of";
-    $q7 = "health care. Free health cover for people who are able to pay for it is a waste of public money. Of course, people will only pay health insurance premiums if they know that they are getting good value for their money. If they get sick, they should pay very little or nothing at all. In addition, the privately insured are entitled to special";
-    $q8 = "such as having the choice of their own doctors, and being able to avoid long waiting lists for hospital beds. On the other hand, those who really cannot afford to pay private insurance premiums, which are often very high, are still entitled as citizens to the best";
-    $q9 = "care";
-    $q10 = ": they cannot be expected to pay their own";
-    $q11 = "bills. However, if they are working, they should still pay a";
-    $q12 = 'of their wage (say 1% to 2%) as a tax which goes towards the cost of providing "free"';
-    $q13 = "services. In";
-    $end = ", most people should privately insure their health, but it is unreasonable to suppose that all citizens can afford it. Therefore, a safety net in the form of a basic free health care system must exist for the very poor and the unemployed.";
+    $q1 = "Freedom plays an important";
+    $q2 = "in everybody's life. We can see in today's modernized era nobody likes to have some";
+    $q3 = "";
+    $q4 = "upon them, whether it be a child or an";
+    $q5 = ". Some people think that there should be some strict rules of behaviour for children, but I disagree with this statement. It is a reality that more";
+    $q6 = "can cause more frustration in children, which leads to many other";
+    $q7 = "problems as well. Moreover they can behave in a stubborn way. Sometimes they feel under pressure, which can be a main reason for their poor performance in their studies. In other words we have to look at other";
+    $q8 = "as well, like if we usually";
+    $q9 = "our children's bad habits, then they may not be good human beings in their future life. Moreover if we never pay attention to the children's main activities then they may be";
+    $q10 = "bad habits. They should know the value of respect for their elders. They ought to know the importance of relationships. They should be";
+    $q11 = "of their";
+    $q12 = "values as well. In a nutshell, I would like to say that children should be taught the value of their";
+    $q13 = "and rituals and respect towards their elders for their future life, but most of the extra";
+    $end = "should be avoided. It would be better to make them good human beings in their coming future.";
 
-    $a1 = "available";
-    $a2 = "available";
-    $a3 = "benefits";
-    $a4 = "conclusion";
-    $a5 = "debated";
-    $a6 = "issue";
-    $a7 = "medical";
-    $a8 = "medical";
-    $a9 = "medical";
-    $a10 = "medical";
-    $a11 = "medical";
-    $a12 = "percentage";
-    $a13 = "subsidized";
+    $a1 = "acquiring";
+    $a2 = "adult";
+    $a3 = "aspects";
+    $a4 = "aware";
+    $a5 = "cultural";
+    $a6 = "ignore";
+    $a7 = "imposed";
+    $a8 = "mental";
+    $a9 = "restrictions";
+    $a10 = "restrictions";
+    $a11 = "restrictions";
+    $a12 = "role";
+    $a13 = "traditions";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -184,19 +184,19 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a5 ?>",
-         $q2 = "<?php echo $a6 ?>",
+         $q1 = "<?php echo $a12 ?>",
+         $q2 = "<?php echo $a9 ?>",
          $q3 = "<?php echo $a7 ?>",
-         $q4 = "<?php echo $a7 ?>",
-         $q5 = "<?php echo $a1 ?>",
-         $q6 = "<?php echo $a13 ?>",
+         $q4 = "<?php echo $a2 ?>",
+         $q5 = "<?php echo $a9 ?>",
+         $q6 = "<?php echo $a8 ?>",
          $q7 = "<?php echo $a3 ?>",
-         $q8 = "<?php echo $a7 ?>",
+         $q8 = "<?php echo $a6 ?>",
          $q9 = "<?php echo $a1 ?>",
-         $q10 = "<?php echo $a7 ?>",
-         $q11 = "<?php echo $a12 ?>",
-         $q12 = "<?php echo $a7 ?>",
-         $q13 = "<?php echo $a4 ?>",
+         $q10 = "<?php echo $a4 ?>",
+         $q11 = "<?php echo $a5 ?>",
+         $q12 = "<?php echo $a13 ?>",
+         $q13 = "<?php echo $a9 ?>",
     ];
 
     console.log(answers);

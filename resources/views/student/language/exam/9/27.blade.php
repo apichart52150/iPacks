@@ -38,60 +38,20 @@
 
 </style>
 @php
-    $q1 = "These days, many people are afraid of";
-    $q2 = "";
-    $q3 = "because of the dangers associated with its use. In my opinion, although it is true that";
-    $q4 = "weapons";
-    $q5 = "the greatest threat to life, the use of";
-    $q6 = "";
-    $q7 = "for peaceful purposes also carries some serious risks.";
-    $q8 = "power stations provide an important";
-    $q9 = "of cheap power for many industrialised nations and some developing countries. However, there is always the danger of radiation leaking from these plants. Even though safety precautions are taken, there have been numerous disasters such as the explosion of a";
-    $q10 = "plant in Russia not long ago.";
-    $q11 = "";
-    $q12 = "is even used to help cure some diseases such as cancer. Radiation can be applied to the body to burn away cancerous cells. This is, however, a dangerous";
-    $q13 = ", and the application of radiation is almost always painful and not always successful. The most worrying";
-    $q14 = "of";
-    $q15 = "";
-    $q16 = ", though, is its use for";
-    $q17 = "purposes. Enough atomic bombs have already been built to completely destroy the planet, and the real danger is that one day some country will start a war with these weapons. Too many countries now have the";
-    $q18 = "";
-    $q19 = "to make such bombs, and there is currently much";
-    $q20 = "about how to control the situation. In";
-    $q21 = ",";
-    $q22 = "";
-    $q23 = "certainly has";
-    $q24 = "uses, but is,";
-    $q25 = ", dangerous. However, it would have been better if it had never been used to";
-    $q26 = "";
-    $end = "weapons. If life on Earth is to continue.";
+    $q1 = "It is clear to me that the idea of a single global currency is an excellent ideal to work towards. There can be no doubt that trade and travel would be vastly easier. On the other hand I believe that it would cause problems today. The";
+    $q2 = "of a single currency can be seen with the use in Europe of the Euro. Whenever you are travelling between countries using the Euro, the problems of currency changing and exchange rates are history.";
+    $q3 = ", business between countries using the Euros is so much easier; no more worrying about exchange rate risk and pricing. Everyone&%238219;s money is the same. The same thing is true with the US dollar. Most countries do not use the US dollar but it is accepted in many places. There are many countries that you can travel to and just take US dollars to use. At present, though, a global currency would be impossible. Firstly most countries would not accept the idea. Secondly all countries are in different";
+    $q4 = "states. Some are";
+    $q5 = "very strong and some are in a state of collapse with inflation ruining the";
+    $q6 = ". Such countries could not be brought into a world currency as it would cause massive";
+    $end = "instability worldwide. So it is clear that a global currency would indeed cause some serious problems. So, in conclusion I see a global currency as a future ideal but it will not happen in my lifetime. It would make trade and travel much easier but the problems it would cause nowadays would be insurmountable.";
 
-    $a1 = "aspect";
-    $a2 = "conclusion";
-    $a3 = "create";
-    $a4 = "debate";
-    $a5 = "military";
-    $a6 = "nonetheless";
-    $a7 = "nuclear";
-    $a8 = "nuclear";
-    $a9 = "nuclear";
-    $a10 = "nuclear";
-    $a11 = "nuclear";
-    $a12 = "nuclear";
-    $a13 = "nuclear";
-    $a14 = "nuclear";
-    $a15 = "nuclear";
-    $a16 = "pose";
-    $a17 = "positive";
-    $a18 = "procedure";
-    $a19 = "required";
-    $a20 = "source";
-    $a21 = "technology";
-    $a22 = "technology";
-    $a23 = "technology";
-    $a24 = "technology";
-    $a25 = "technology";
-    $a26 = "technology";
+    $a1 = "benefits";
+    $a2 = "economic";
+    $a3 = "economically";
+    $a4 = "economy";
+    $a5 = "financial";
+    $a6 = "similarly";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -108,26 +68,6 @@
                                 <div class="drag">{{ $a4 }}</div>
                                 <div class="drag">{{ $a5 }}</div>
                                 <div class="drag">{{ $a6 }}</div>
-                                <div class="drag">{{ $a7 }}</div>
-                                <div class="drag">{{ $a8 }}</div>
-                                <div class="drag">{{ $a9 }}</div>
-                                <div class="drag">{{ $a10 }}</div>
-                                <div class="drag">{{ $a11 }}</div>
-                                <div class="drag">{{ $a12 }}</div>
-                                <div class="drag">{{ $a13 }}</div>
-                                <div class="drag">{{ $a14 }}</div>
-                                <div class="drag">{{ $a15 }}</div>
-                                <div class="drag">{{ $a16 }}</div>
-                                <div class="drag">{{ $a17 }}</div>
-                                <div class="drag">{{ $a18 }}</div>
-                                <div class="drag">{{ $a19 }}</div>
-                                <div class="drag">{{ $a20 }}</div>
-                                <div class="drag">{{ $a21 }}</div>
-                                <div class="drag">{{ $a22 }}</div>
-                                <div class="drag">{{ $a23 }}</div>
-                                <div class="drag">{{ $a24 }}</div>
-                                <div class="drag">{{ $a25 }}</div>
-                                <div class="drag">{{ $a26 }}</div>
                             </div>
                         </div>
                     </div>
@@ -167,106 +107,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q7}}
-                            <span class="font-weight-bold">7.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q8}}
-                            <span class="font-weight-bold">8.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q9}}
-                            <span class="font-weight-bold">9.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q10}}
-                            <span class="font-weight-bold">10.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q12}}
-                            <span class="font-weight-bold">12.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q13}}
-                            <span class="font-weight-bold">13.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q14}}
-                            <span class="font-weight-bold">14.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q15}}
-                            <span class="font-weight-bold">15.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q16}}
-                            <span class="font-weight-bold">16.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q17}}
-                            <span class="font-weight-bold">17.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q18}}
-                            <span class="font-weight-bold">18.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q19}}
-                            <span class="font-weight-bold">19.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q20}}
-                            <span class="font-weight-bold">20.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q21}}
-                            <span class="font-weight-bold">21.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q22}}
-                            <span class="font-weight-bold">22.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q23}}
-                            <span class="font-weight-bold">23.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q24}}
-                            <span class="font-weight-bold">24.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q25}}
-                            <span class="font-weight-bold">25.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q26}}
-                            <span class="font-weight-bold">26.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                         </div>
                     </div>
@@ -288,32 +128,12 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a7 ?>",
-         $q2 = "<?php echo $a21 ?>",
-         $q3 = "<?php echo $a7 ?>",
-         $q4 = "<?php echo $a16 ?>",
-         $q5 = "<?php echo $a7 ?>",
-         $q6 = "<?php echo $a21 ?>",
-         $q7 = "<?php echo $a7 ?>",
-         $q8 = "<?php echo $a20 ?>",
-         $q9 = "<?php echo $a7 ?>",
-         $q10 = "<?php echo $a7 ?>",
-         $q11 = "<?php echo $a21 ?>",
-         $q12 = "<?php echo $a18 ?>",
-         $q13 = "<?php echo $a1 ?>",
-         $q14 = "<?php echo $a7 ?>",
-         $q15 = "<?php echo $a21 ?>",
-         $q16 = "<?php echo $a5 ?>",
-         $q17 = "<?php echo $a21 ?>",
-         $q18 = "<?php echo $a19 ?>",
-         $q19 = "<?php echo $a4 ?>",
-         $q20 = "<?php echo $a2 ?>",
-         $q21 = "<?php echo $a7 ?>",
-         $q22 = "<?php echo $a21 ?>",
-         $q23 = "<?php echo $a17 ?>",
-         $q24 = "<?php echo $a6 ?>",
-         $q25 = "<?php echo $a3 ?>",
-         $q26 = "<?php echo $a7 ?>",
+         $q1 = "<?php echo $a1 ?>",
+         $q2 = "<?php echo $a6 ?>",
+         $q3 = "<?php echo $a2 ?>",
+         $q4 = "<?php echo $a3 ?>",
+         $q5 = "<?php echo $a4 ?>",
+         $q6 = "<?php echo $a5 ?>",
     ];
 
     console.log(answers);
