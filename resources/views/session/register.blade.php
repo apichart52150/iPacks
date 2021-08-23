@@ -41,7 +41,7 @@
 						</div>
 
 						<div class="form-group mb-0 text-center">
-							<button class="btn btn-primary btn-block" type="submit"> Sign In </button>
+							<button class="btn btn-primary btn-block" type="submit"> Register </button>
 						</div>
 
 					</form>
@@ -49,7 +49,7 @@
 			</div>
 			<div class="row mt-3">
 				<div class="col-12 text-center">
-					<p class="text-muted">Already have account?  <a href="{{ route('user_login') }}" class="text-white font-weight-medium ml-1">Sign In</a></p>
+					<p class="text-muted">Already have account?  <a href="{{ route('user_login') }}" class="text-white font-weight-medium ml-1">Log In</a></p>
 				</div> <!-- end col -->
 			</div>
 		</div>
