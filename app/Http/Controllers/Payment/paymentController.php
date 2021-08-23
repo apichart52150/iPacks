@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Payment;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use DB;
 
 class PaymentController extends Controller
