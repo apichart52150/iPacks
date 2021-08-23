@@ -106,7 +106,11 @@
                     <div id="navigation">
                         <!-- Navigation Menu-->
                         <ul class="navigation-menu">
-
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class="mdi mdi-home"></i>Home<div class="arrow-down"></div>
+                                </a>
+                            </li>
                         </ul>
                         <!-- End navigation menu -->
 
