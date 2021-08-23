@@ -508,7 +508,6 @@
                                 <div class="dropbox"></div>
                             </div>
                             {{$end}}
-                        </div>
                     </div>
                 </div>
             </div>

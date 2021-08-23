@@ -149,158 +149,157 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2" style="line-height: 35px;">
-                            {{$q1}}
-                            <span class="font-weight-bold">1.</span> 
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q2}}
-                            <span class="font-weight-bold">2.</span> 
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q3}}
-                            <span class="font-weight-bold">3.</span> 
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q4}}
-                            <span class="font-weight-bold">4.</span> 
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q5}}
-                            <span class="font-weight-bold">5.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q6}}
-                            <span class="font-weight-bold">6.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q7}}
-                            <span class="font-weight-bold">7.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q8}}
-                            <span class="font-weight-bold">8.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q9}}
-                            <span class="font-weight-bold">9.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q10}}
-                            <span class="font-weight-bold">10.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q12}}
-                            <span class="font-weight-bold">12.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q13}}
-                            <span class="font-weight-bold">13.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q14}}
-                            <span class="font-weight-bold">14.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q15}}
-                            <span class="font-weight-bold">15.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q16}}
-                            <span class="font-weight-bold">16.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q17}}
-                            <span class="font-weight-bold">17.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q18}}
-                            <span class="font-weight-bold">18.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q19}}
-                            <span class="font-weight-bold">19.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q20}}
-                            <span class="font-weight-bold">20.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q21}}
-                            <span class="font-weight-bold">21.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q22}}
-                            <span class="font-weight-bold">22.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q23}}
-                            <span class="font-weight-bold">23.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q24}}
-                            <span class="font-weight-bold">24.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q25}}
-                            <span class="font-weight-bold">25.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q26}}
-                            <span class="font-weight-bold">26.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q27}}
-                            <span class="font-weight-bold">27.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q28}}
-                            <span class="font-weight-bold">28.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q29}}
-                            <span class="font-weight-bold">29.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q30}}
-                            <span class="font-weight-bold">30.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$end}}
+                        {{$q1}}
+                        <span class="font-weight-bold">1.</span> 
+                        <div class="input-con">
+                            <div class="dropbox"></div>
                         </div>
+                        {{$q2}}
+                        <span class="font-weight-bold">2.</span> 
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q3}}
+                        <span class="font-weight-bold">3.</span> 
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q4}}
+                        <span class="font-weight-bold">4.</span> 
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q5}}
+                        <span class="font-weight-bold">5.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q6}}
+                        <span class="font-weight-bold">6.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q7}}
+                        <span class="font-weight-bold">7.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q8}}
+                        <span class="font-weight-bold">8.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q9}}
+                        <span class="font-weight-bold">9.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q10}}
+                        <span class="font-weight-bold">10.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q11}}
+                        <span class="font-weight-bold">11.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q12}}
+                        <span class="font-weight-bold">12.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q13}}
+                        <span class="font-weight-bold">13.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q14}}
+                        <span class="font-weight-bold">14.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q15}}
+                        <span class="font-weight-bold">15.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q16}}
+                        <span class="font-weight-bold">16.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q17}}
+                        <span class="font-weight-bold">17.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q18}}
+                        <span class="font-weight-bold">18.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q19}}
+                        <span class="font-weight-bold">19.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q20}}
+                        <span class="font-weight-bold">20.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q21}}
+                        <span class="font-weight-bold">21.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q22}}
+                        <span class="font-weight-bold">22.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q23}}
+                        <span class="font-weight-bold">23.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q24}}
+                        <span class="font-weight-bold">24.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q25}}
+                        <span class="font-weight-bold">25.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q26}}
+                        <span class="font-weight-bold">26.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q27}}
+                        <span class="font-weight-bold">27.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q28}}
+                        <span class="font-weight-bold">28.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q29}}
+                        <span class="font-weight-bold">29.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$q30}}
+                        <span class="font-weight-bold">30.</span>
+                        <div class="input-con">
+                            <div class="dropbox"></div>
+                        </div>
+                        {{$end}}
                     </div>
                 </div>
             </div>
