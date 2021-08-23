@@ -90,15 +90,15 @@
     $a18 = "objective";
     $a19 = "obtaining";
     $a20 = "option";
-    $a21 = "overseas ";
-    $a22 = "overseas ";
-    $a23 = "overseas ";
-    $a24 = "overseas ";
-    $a25 = "overseas ";
-    $a26 = "overseas ";
-    $a27 = "overseas ";
-    $a28 = "overseas ";
-    $a29 = "overseas ";
+    $a21 = "overseas";
+    $a22 = "overseas";
+    $a23 = "overseas";
+    $a24 = "overseas";
+    $a25 = "overseas";
+    $a26 = "overseas";
+    $a27 = "overseas";
+    $a28 = "overseas";
+    $a29 = "overseas";
     $a30 = "sum";
 @endphp
 <div class="row">

@@ -127,7 +127,7 @@
     $a36 = "role";
     $a37 = "traditional";
     $a38 = "traditional";
-    $a39 = "traditional";
+    $a39 = "advantages";
     $a40 = "scenario";
     $a41 = "style";
     $a42 = "style";
@@ -483,7 +483,7 @@
          $q9 = "<?php echo $a34 ?>",
          $q10 = "<?php echo $a2 ?>",
          $q11 = "<?php echo $a23 ?>",
-         $q12 = "<?php echo $a37 ?>",
+         $q12 = "<?php echo $a39 ?>",
          $q13 = "<?php echo $a2 ?>",
          $q14 = "<?php echo $a31 ?>",
          $q15 = "<?php echo $a14 ?>",

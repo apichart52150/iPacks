@@ -84,7 +84,7 @@
     $a17 = "partner";
     $a18 = "partner";
     $a19 = "partner";
-    $a20 = "partner";
+    $a20 = "cultures";
     $a21 = "process";
     $a22 = "requires";
     $a23 = "security";
@@ -300,7 +300,7 @@
          $q18 = "<?php echo $a23 ?>",
          $q19 = "<?php echo $a7 ?>",
          $q20 = "<?php echo $a14 ?>",
-         $q21 = "<?php echo $a10 ?>",
+         $q21 = "<?php echo $a20 ?>",
          $q22 = "<?php echo $a9 ?>",
          $q23 = "<?php echo $a2 ?>",
          $q24 = "<?php echo $a14 ?>",

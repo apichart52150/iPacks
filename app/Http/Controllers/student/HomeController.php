@@ -19,14 +19,15 @@ class HomeController extends Controller
         $currentDate = date('Y-m-d H:i:s');
         $lastDate = "2021-08-20 23:59:59";
 
-        if(auth('student')->user()->std_condition == 1){
-            return view('student.user_home');
-        }else{
+        if(auth('student')->user()->std_level == 'user'){
             if(strtotime($lastDate) >= strtotime($currentDate)){
                 return view('student.user_home');
             }else{
                 return view('student.expire');
             }
+           
+        }else{
+            return view('student.user_home');
         }
         
     }
