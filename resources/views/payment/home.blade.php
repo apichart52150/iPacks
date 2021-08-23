@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.payment')
 @section('content')
 <div class="container-fluid">
 
@@ -9,10 +9,10 @@
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="{{ route('success') }}">back</a></li>
-                        <li class="breadcrumb-item active">Payment - Standard</li>
+                        <li class="breadcrumb-item active">Payment - {{ $status }}</li>
                     </ol>
                 </div>
-                <h4 class="page-title">Payment - Standard</h4>
+                <h4 class="page-title">Payment - {{ $status }}</h4>
             </div>
         </div>
     </div>     
@@ -21,11 +21,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card-box">
-                <h4 class="header-title">Input Types</h4>
-                <p class="sub-header">
-                    Most common form control, text-based input fields. Includes support for all HTML5 types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.
-                </p>
-
+                <h4 class="header-title">Payment Form</h4>
                 @php
                     
                 @endphp
@@ -60,14 +56,14 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Mobile</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="tel" name="std_mobile" required>
+                                        <input class="form-control" type="tel" name="std_mobile"  placeholder="Mobile" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="email" name="std_email" required>
+                                        <input class="form-control" type="email" name="std_email"  placeholder="Email" required>
                                     </div>
                                 </div>
 
