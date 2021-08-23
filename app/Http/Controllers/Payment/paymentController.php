@@ -14,9 +14,6 @@ class paymentController extends Controller
     }
 
     public function form_payment(Request $request){
-
-        dd($request->status);
-
         $status = $request->status;
         return view('payment.home', compact('status'));
     }
