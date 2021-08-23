@@ -8,6 +8,11 @@ use DB;
 
 class paymentController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('student');
+    }
+
     public function form_payment(Request $request){
 
         $status = $request->status;
