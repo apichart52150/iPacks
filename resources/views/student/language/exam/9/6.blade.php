@@ -38,38 +38,56 @@
 
 </style>
 @php
-    $q1 = "The World Cup football matches and the Olympics are held worldwide with great national support and expectations. As a fan of those competitions, I agree with the idea that sporting events can help international relations and national unity. In this essay, I will think about the effects of these popular sporting events. First of all, the World Cup, Olympics and other international games work for easing";
-    $q2 = "among different nations. For example, South and North Korea have football games regularly which give two nations a chance to understand each other deeply. In the mid 1990s, hundreds of North Korean supporters came to South Korea with the footballers and they were very excited during the sporting events. Even if it sounds ridiculous, many South Koreans were quite surprised at that moment when North Koreans shouted and cried during the match. We all realized that they were very";
-    $q3 = "sports fans even though they were occasionally very secretive. Through the sports, two divided nations could reduce their political and";
-    $q4 = "";
-    $q5 = "and could feel the patriotic unity. On the other hand, some sports matches can make international relations worse. For";
-    $q6 = ", football or baseball games between Korea and Japan are always big matches in two countries where";
-    $q7 = "overflow. Sometimes, after the matches, the two rivals blame each other and their patriotic emotions explode in an aggressive way. A much worse";
-    $q8 = "is that the troubles caused by losing games";
-    $q9 = "the players directly. As far as I know, a";
-    $q10 = "of Korean players in Japan suffered from";
-    $q11 = "";
-    $q12 = "after the match between the two countries. In";
-    $q13 = ", I think that international sporting occasions can be one of the good ways to ease";
-    $q14 = "or to";
-    $q15 = "patriotism safely. However, I believe that games cannot be the";
-    $end = "way for sound patriotism or peaceful international relations.";
+    $q1 = "These days with increasing urban populations, there are";
+    $q2 = "MAJOR problems with congestion and not only the price, but also";
+    $q3 = "of";
+    $q4 = "in large cities of the world. It seems that one possible solution could be to";
+    $q5 = "large companies and factories as well as their respective employees out of these urban";
+    $q6 = "and into more rural ones. In my opinion, I strongly agree that this would have a desired effect in making cities more livable. To begin with, the traffic problem in cities doesn't only exist from commuting employees, but also the general public travelling around the city. While this may be a fact, if the number of workers’";
+    $q7 = "is reduced on city streets, a large";
+    $q8 = "of traffic will";
+    $q9 = "";
+    $q10 = "in rush hours. For example, peak hour traffic is undoubtedly made up largely of staff from companies going to and from home. Secondly, with regards to housing problems, populations will always continue to grow in cities and therefore inadvertently reduce the number of cheap and";
+    $q11 = "apartments. This is certainly";
+    $q12 = ": however, a large";
+    $q13 = "of these apartments are";
+    $q14 = "by employees from large firms and their families. If this workforce is";
+    $q15 = "to housing";
+    $q16 = "in the country, city apartment blocks will fall in price and certainly increase in";
+    $q17 = ". In";
+    $q18 = ", by";
+    $q19 = "workers to rural";
+    $q20 = "to work and";
+    $q21 = ", heavy traffic conditions and lack of";
+    $q22 = "";
+    $q23 = "in city centres will";
+    $q24 = "change for the better. As far as I'm concerned, I agree that the government should";
+    $end = "such a law in order to increase our standard of living in our hectic city life.";
 
-    $a1 = "affect";
-    $a2 = "conclusion";
-    $a3 = "couple";
-    $a4 = "discrimination";
-    $a5 = "fundamental";
-    $a6 = "ideological";
-    $a7 = "instance";
-    $a8 = "invisible";
-    $a9 = "normal";
-    $a10 = "release";
-    $a11 = "scenario";
-    $a12 = "tensions";
-    $a13 = "tensions";
-    $a14 = "tensions";
-    $a15 = "tensions";
+    $a1 = "accommodation";
+    $a2 = "accommodation";
+    $a3 = "adequate";
+    $a4 = "areas";
+    $a5 = "areas";
+    $a6 = "availability";
+    $a7 = "availability";
+    $a8 = "available";
+    $a9 = "conclusion";
+    $a10 = "decline";
+    $a11 = "enforce";
+    $a12 = "estates";
+    $a13 = "major";
+    $a14 = "obvious";
+    $a15 = "obviously";
+    $a16 = "obviously";
+    $a17 = "occupied";
+    $a18 = "percentage";
+    $a19 = "proportion";
+    $a20 = "relocate";
+    $a21 = "relocated";
+    $a22 = "relocating";
+    $a23 = "reside";
+    $a24 = "vehicles";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -95,6 +113,15 @@
                                 <div class="drag">{{ $a13 }}</div>
                                 <div class="drag">{{ $a14 }}</div>
                                 <div class="drag">{{ $a15 }}</div>
+                                <div class="drag">{{ $a16 }}</div>
+                                <div class="drag">{{ $a17 }}</div>
+                                <div class="drag">{{ $a18 }}</div>
+                                <div class="drag">{{ $a19 }}</div>
+                                <div class="drag">{{ $a20 }}</div>
+                                <div class="drag">{{ $a21 }}</div>
+                                <div class="drag">{{ $a22 }}</div>
+                                <div class="drag">{{ $a23 }}</div>
+                                <div class="drag">{{ $a24 }}</div>
                             </div>
                         </div>
                     </div>
@@ -179,6 +206,51 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
+                            {{$q16}}
+                            <span class="font-weight-bold">16.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q17}}
+                            <span class="font-weight-bold">17.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q18}}
+                            <span class="font-weight-bold">18.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q19}}
+                            <span class="font-weight-bold">19.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q20}}
+                            <span class="font-weight-bold">20.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q21}}
+                            <span class="font-weight-bold">21.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q22}}
+                            <span class="font-weight-bold">22.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q23}}
+                            <span class="font-weight-bold">23.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q24}}
+                            <span class="font-weight-bold">24.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -199,21 +271,30 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a12 ?>",
-         $q2 = "<?php echo $a9 ?>",
-         $q3 = "<?php echo $a6 ?>",
-         $q4 = "<?php echo $a12 ?>",
-         $q5 = "<?php echo $a7 ?>",
-         $q6 = "<?php echo $a12 ?>",
-         $q7 = "<?php echo $a11 ?>",
-         $q8 = "<?php echo $a1 ?>",
-         $q9 = "<?php echo $a3 ?>",
+         $q1 = "<?php echo $a13 ?>",
+         $q2 = "<?php echo $a6 ?>",
+         $q3 = "<?php echo $a1 ?>",
+         $q4 = "<?php echo $a20 ?>",
+         $q5 = "<?php echo $a4 ?>",
+         $q6 = "<?php echo $a24 ?>",
+         $q7 = "<?php echo $a18 ?>",
+         $q8 = "<?php echo $a15 ?>",
+         $q9 = "<?php echo $a10 ?>",
          $q10 = "<?php echo $a8 ?>",
-         $q11 = "<?php echo $a4 ?>",
-         $q12 = "<?php echo $a2 ?>",
-         $q13 = "<?php echo $a12 ?>",
-         $q14 = "<?php echo $a10 ?>",
-         $q15 = "<?php echo $a5 ?>",
+         $q11 = "<?php echo $a14 ?>",
+         $q12 = "<?php echo $a19 ?>",
+         $q13 = "<?php echo $a17 ?>",
+         $q14 = "<?php echo $a21 ?>",
+         $q15 = "<?php echo $a12 ?>",
+         $q16 = "<?php echo $a6 ?>",
+         $q17 = "<?php echo $a9 ?>",
+         $q18 = "<?php echo $a22 ?>",
+         $q19 = "<?php echo $a4 ?>",
+         $q20 = "<?php echo $a23 ?>",
+         $q21 = "<?php echo $a3 ?>",
+         $q22 = "<?php echo $a1 ?>",
+         $q23 = "<?php echo $a15 ?>",
+         $q24 = "<?php echo $a11 ?>",
     ];
 
     console.log(answers);

@@ -37,17 +37,4 @@ class HomeController extends Controller
             return redirect('user_login');
         }
     }
-
-
-    public function audio($id){
-
-        $audio_file = DB::table('sub_menu_lis')
-        ->select('name_audio')
-        ->where('sub_menu_type','=', $id)
-        ->get();
-
-        $file_name = $id.'/'.$audio_file[0]->name_audio;
-
-        return view('student.isac.listening.audio' ,compact('file_name',''));
-    }
 }

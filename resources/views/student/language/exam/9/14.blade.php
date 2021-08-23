@@ -38,32 +38,18 @@
 
 </style>
 @php
-    $q1 = "Some people think that old, historic buildings are no need for the city and they should be destroyed and replaced with modern ones. However, other people believe that historic buildings must be preserved in order to know and remember our past. For several reasons that I will mention bellow I agree with those people who want to preserve old, historical buildings. First of all, by preserving historical buildings we pass our history to our future";
-    $q2 = ". I think that out children should know their history, learn from it and respect it. People need to know their";
-    $q3 = "and customs, which are priceless and irreplaceable. Our history is our knowledge and power. From my opinion we need to preserve and";
-    $q4 = "historical buildings. By destroying them we show our disrespect to our forefathers and their";
-    $q5 = ". Second of all, by preserving historical buildings a city can attract many travelers. Welcoming tourists a city can get many";
-    $q6 = "including money, which can be spent on preserving historical buildings as well as on improving roads and";
-    $q7 = ". Also, many tourists mean a lot of new business opportunities. Another important";
-    $q8 = "of this is that businessmen will be willing to build new recreational centers, hotels, movie theatres, shopping centres to make a city more attractive for travelers. In addition to those practical";
-    $q9 = ", many people will have the opportunity to get a";
-    $q10 = ". All this is good for the";
-    $q11 = "of the city. To";
-    $q12 = "up, I believe that preserving old, historical buildings can bring only";
-    $end = "to a city and all humankind.";
+    $q1 = "Over the past few decades, along with growing interest in child education, people's attention to the family";
+    $q2 = "where a child is brought up has also";
+    $q3 = "increased. Some people have begun to feel that a child who has grown up in a poor family tends to be better prepared to deal with problems. In my opinion, however, family";
+    $q4 = "alone does not much influence a child's ability to solve problems. A child who was born into a poor family would have had more situations where they had to solve a problem or make a decision on their own. This is because in most unfortunate families, both parents are usually working and children are put into situations where they have to take care of themselves. By contrast, due to their wealth, rich children can experience and learn things that unfortunate children cannot. For example, they usually go to the best schools and receive a higher education there, which prepares them better for solving problems in their life. However, few would disagree with the fact that each";
+    $q5 = "is different. That is, problem solving skills come more from life experience. In other words, the more a person experiences in life, the more they can use these experiences to adjust, to adapt and to solve problems they encounter. Personality also can be a";
+    $end = "in dealing with problems. A person who is optimistic, outgoing, confident and open-minded can look at and solve problems more effectively. As discussed above, nature and nurture have an equal influence on a child's ability to face challenges. Parents should spare no effort to figure out how they can help their children to be independent. I hope that in the future the next generation will grow up as mature citizens.";
 
-    $a1 = "aspect";
-    $a2 = "benefits";
-    $a3 = "benefits";
-    $a4 = "benefits";
-    $a5 = "economy";
-    $a6 = "facilities";
-    $a7 = "generations";
-    $a8 = "job";
-    $a9 = "restore";
-    $a10 = "sum";
-    $a11 = "traditions";
-    $a12 = "traditions";
+    $a1 = "environment";
+    $a2 = "environment";
+    $a3 = "factor";
+    $a4 = "individual";
+    $a5 = "significantly";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -79,13 +65,6 @@
                                 <div class="drag">{{ $a3 }}</div>
                                 <div class="drag">{{ $a4 }}</div>
                                 <div class="drag">{{ $a5 }}</div>
-                                <div class="drag">{{ $a6 }}</div>
-                                <div class="drag">{{ $a7 }}</div>
-                                <div class="drag">{{ $a8 }}</div>
-                                <div class="drag">{{ $a9 }}</div>
-                                <div class="drag">{{ $a10 }}</div>
-                                <div class="drag">{{ $a11 }}</div>
-                                <div class="drag">{{ $a12 }}</div>
                             </div>
                         </div>
                     </div>
@@ -120,41 +99,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q6}}
-                            <span class="font-weight-bold">6.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q7}}
-                            <span class="font-weight-bold">7.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q8}}
-                            <span class="font-weight-bold">8.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q9}}
-                            <span class="font-weight-bold">9.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q10}}
-                            <span class="font-weight-bold">10.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q12}}
-                            <span class="font-weight-bold">12.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -175,18 +119,11 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a7 ?>",
-         $q2 = "<?php echo $a11 ?>",
-         $q3 = "<?php echo $a9 ?>",
-         $q4 = "<?php echo $a11 ?>",
-         $q5 = "<?php echo $a2 ?>",
-         $q6 = "<?php echo $a6 ?>",
-         $q7 = "<?php echo $a1 ?>",
-         $q8 = "<?php echo $a2 ?>",
-         $q9 = "<?php echo $a8 ?>",
-         $q10 = "<?php echo $a5 ?>",
-         $q11 = "<?php echo $a10 ?>",
-         $q12 = "<?php echo $a2 ?>",
+         $q1 = "<?php echo $a1 ?>",
+         $q2 = "<?php echo $a5 ?>",
+         $q3 = "<?php echo $a1 ?>",
+         $q4 = "<?php echo $a4 ?>",
+         $q5 = "<?php echo $a3 ?>",
     ];
 
     console.log(answers);

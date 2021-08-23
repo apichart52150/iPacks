@@ -38,46 +38,52 @@
 
 </style>
 @php
-    $q1 = "When it comes to children's education, parents are faced with a lot of choices. They can choose to send their children to a government or private school or they can opt to teach their children themselves in their own home. There are advantages and disadvantages of both";
-    $q2 = ", and this essay will outline some of these. There are";
-    $q3 = "advantages of choosing to send your child to a formal school learning";
-    $q4 = ". First of all, the school is staffed by trained specialists who can teach a variety of subjects with a";
-    $q5 = "of educational";
-    $q6 = "";
-    $q7 = ". In addition, schools provide a variety of extra-curricular activities such as sports and clubs which will help children to develop in non-academic fields. Probably the most important";
-    $q8 = "of school-life, however, is the fact that it gives young children the chance to meet other young people and learn how to socialise at an early age. Socialisation at school also helps develop other skills such as team-work skills and group";
-    $q9 = "skills. There are, however, a number of arguments in favour of educating children in the safety and comfort of one's own home. First of all, although school gives the opportunity for children to meet and socialise with other children it also";
-    $q10 = "them to";
-    $q11 = "such as bullying, which can have a long-term detrimental effect on a child's development. In addition, school classes tend to be rather large with up to 50 students in a class. If that case, it is easy for a child with learning difficulties to slip through the system and not receive the special attention he/she needs. Learning at home is also much less";
-    $q12 = "in terms of the competitive nature of schools. Some young learners do not fare well in a competitive learning";
-    $q13 = "and prefer the more";
-    $q14 = "";
-    $q15 = "of the home. From the arguments above, it is";
-    $q16 = "that there are pros and cons of choosing to educate children at school or at home. An important";
-    $q17 = "in reaching such a decision will depend on the nature of the child, and the quality of the schools";
-    $q18 = "for the child in the neighbourhood. At the end of the day, the most important";
-    $q19 = "is how to produce a well-balanced happy";
-    $end = ".";
+    $q1 = "Almost ten per cent of the earth's surface is covered by tropical rainforests. These forests contain a wide variety of natural";
+    $q2 = ". Many people suggest that these";
+    $q3 = "should be";
+    $q4 = "to make life more comfortable and convenient for humans. Other people, however, are not in favour of such development. This essay will consider arguments from both points of view. The rainforests of the world contain a vast amount of natural";
+    $q5 = "which could be";
+    $q6 = "for the development of mankind. These";
+    $q7 = "include deposits of fossil fuels such as coal, gas and oil, as well as large amounts of valuable minerals such as gold. Since the world is running out of fossil fuels, it seems sensible to make use of these";
+    $q8 = "hidden deep inside the jungle. Getting";
+    $q9 = "to these";
+    $q10 = "would mean cutting down all the trees, which would be very expensive but the cost of this could be";
+    $q11 = "by making use of the forest timber. Clearing the forests would result in a number of";
+    $q12 = ". Firstly, the cleared land could be used to develop";
+    $q13 = "and settlements for people. This could prevent over-crowding in cities. In addition, the dangerous creatures that live in the forests could be eradicated. A further";
+    $q14 = "would be the possibility of planting crops for food and bio-fuel such as palm oil, which has been done in countries such as Malaysia and Indonesia. There are, however, some very strong arguments in favour of preserving the rainforests. First of all, the jungles provide a home for millions of indigenous people who";
+    $q15 = "on the forest for their food and shelter. These people have lived in the rainforests for many millions of years and help";
+    $q16 = "a healthy balance between humans and plants and animals that live there. In addition, many of the plants that grow there are important for their medicinal value or for use in industrial products. Probably the most important argument, however, is the fact that rainforests protect the world from natural disasters as a result of climate change. The forests help";
+    $q17 = "a healthy balance by absorbing carbon dioxide in the atmosphere and by producing oxygen for people to breathe. The trees also hold soil together and prevent soil";
+    $q18 = "which can result in land-slides and flooding. All in all, then, it seems that the conservation of the rainforests is very important for the";
+    $q19 = "future of mankind. Clearing rainforests for short-term";
+    $q20 = "";
+    $q21 = "will lead to the extinction of humans, flora and fauna that live there, and possibly even to the destruction of the";
+    $q22 = "";
+    $end = "itself.";
 
-    $a1 = "approach";
-    $a2 = "aspect";
-    $a3 = "available";
-    $a4 = "available";
-    $a5 = "dynamic";
-    $a6 = "environment";
+    $a1 = "access";
+    $a2 = "benefit";
+    $a3 = "benefits";
+    $a4 = "benefits";
+    $a5 = "communities";
+    $a6 = "economic";
     $a7 = "environment";
-    $a8 = "equipment";
-    $a9 = "exposes";
-    $a10 = "factor";
-    $a11 = "factor";
-    $a12 = "individual";
-    $a13 = "issues";
-    $a14 = "obvious";
-    $a15 = "obvious";
-    $a16 = "options";
-    $a17 = "range";
-    $a18 = "relaxed";
-    $a19 = "stressful";
+    $a8 = "erosion";
+    $a9 = "exploited";
+    $a10 = "exploited";
+    $a11 = "global";
+    $a12 = "maintain";
+    $a13 = "maintain";
+    $a14 = "minimized";
+    $a15 = "rely";
+    $a16 = "resources";
+    $a17 = "resources";
+    $a18 = "resources";
+    $a19 = "resources";
+    $a20 = "resources";
+    $a21 = "resources";
+    $a22 = "sustainable";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -107,6 +113,9 @@
                                 <div class="drag">{{ $a17 }}</div>
                                 <div class="drag">{{ $a18 }}</div>
                                 <div class="drag">{{ $a19 }}</div>
+                                <div class="drag">{{ $a20 }}</div>
+                                <div class="drag">{{ $a21 }}</div>
+                                <div class="drag">{{ $a22 }}</div>
                             </div>
                         </div>
                     </div>
@@ -211,6 +220,21 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
+                            {{$q20}}
+                            <span class="font-weight-bold">20.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q21}}
+                            <span class="font-weight-bold">21.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q22}}
+                            <span class="font-weight-bold">22.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -232,24 +256,27 @@
 
     const answers = [
          $q1 = "<?php echo $a16 ?>",
-         $q2 = "<?php echo $a14 ?>",
-         $q3 = "<?php echo $a6 ?>",
-         $q4 = "<?php echo $a17 ?>",
-         $q5 = "<?php echo $a8 ?>",
-         $q6 = "<?php echo $a3 ?>",
-         $q7 = "<?php echo $a2 ?>",
-         $q8 = "<?php echo $a5 ?>",
-         $q9 = "<?php echo $a9 ?>",
-         $q10 = "<?php echo $a13 ?>",
-         $q11 = "<?php echo $a19 ?>",
-         $q12 = "<?php echo $a6 ?>",
-         $q13 = "<?php echo $a18 ?>",
-         $q14 = "<?php echo $a1 ?>",
-         $q15 = "<?php echo $a14 ?>",
-         $q16 = "<?php echo $a10 ?>",
-         $q17 = "<?php echo $a3 ?>",
-         $q18 = "<?php echo $a10 ?>",
-         $q19 = "<?php echo $a12 ?>",
+         $q2 = "<?php echo $a16 ?>",
+         $q3 = "<?php echo $a9 ?>",
+         $q4 = "<?php echo $a16 ?>",
+         $q5 = "<?php echo $a9 ?>",
+         $q6 = "<?php echo $a16 ?>",
+         $q7 = "<?php echo $a16 ?>",
+         $q8 = "<?php echo $a1 ?>",
+         $q9 = "<?php echo $a16 ?>",
+         $q10 = "<?php echo $a14 ?>",
+         $q11 = "<?php echo $a3 ?>",
+         $q12 = "<?php echo $a5 ?>",
+         $q13 = "<?php echo $a2 ?>",
+         $q14 = "<?php echo $a15 ?>",
+         $q15 = "<?php echo $a12 ?>",
+         $q16 = "<?php echo $a12 ?>",
+         $q17 = "<?php echo $a8 ?>",
+         $q18 = "<?php echo $a22 ?>",
+         $q19 = "<?php echo $a6 ?>",
+         $q20 = "<?php echo $a3 ?>",
+         $q21 = "<?php echo $a11 ?>",
+         $q22 = "<?php echo $a7 ?>",
     ];
 
     console.log(answers);

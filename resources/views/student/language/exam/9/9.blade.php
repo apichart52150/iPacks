@@ -38,38 +38,26 @@
 
 </style>
 @php
-    $q1 = "The linegraph describes the growth of wages in Somecountry from 1993 to 2003. The growth started at two";
-    $q2 = "in 1993, but it did not stay there very long; it rapidly doubled in 1994. Further on, the figure";
-    $q3 = "to three";
-    $q4 = "in 1995, stayed steady for a year, before it";
-    $q5 = "to rise slowly ending up at just under four";
-    $q6 = "in 1997. 1998 was the best year, when the wages peaked at six";
-    $q7 = ". However, after 1998 the wages";
-    $q8 = "nearly every year. Only a year after, the";
-    $q9 = "dropped to well under three";
-    $q10 = ", and stayed there on";
-    $q11 = "three";
-    $q12 = "till 2000. In 2002 the wages reached the trough of just one";
-    $q13 = "growth. Fortunately the growth rose in 2003 to just under two";
-    $q14 = ".";
-    $q15 = ", the growth rate in wages in Somecountry";
-    $end = "striking changes through the ten years.";
+    $q1 = "Some people like to live in the same house, have the same";
+    $q2 = "and habits all their lives. However, others aspire to changes and new experiences. Personally, for several reasons, which I will explain below, I prefer the first";
+    $q3 = "to life. First of all, changes in one's life bring many";
+    $q4 = ". One tries new things, gains new knowledge and experience. I think it is great because without change life becomes boring. I always try to make changes in my life. Moreover, when I feel that my life is boring I do not feel good about it. I feel like I spent those days for nothing. I did not do anything exciting, I learnt nothing interesting and I just wasted my time. Second of all, people need changes.";
+    $q5 = ", we need obstacles to overcome and reach our";
+    $q6 = ". I believe that change makes us stronger, more";
+    $q7 = ", more self-confident, and more patient. Also, I feel that all people who succeeded in life like change and new experience because it is impossible to be the best in some field without perfecting the present knowledge and gain new experience. People take hold of every opportunity to learn more and change their life for the best. On the other side, people who like their lives to stay the same are very permanent. They have the same";
+    $q8 = "all their life, the same habits, the same week-ends and even the same years in years out. I think it is boring. What will they tell their children about their lives? What kind of";
+    $q9 = "will they make for the society? I think such people are just afraid of change. I think curiosity and aspiration to the new experience are two of the main reasons of human ";
+    $end = ". People have always wanted to break limits and gain more knowledge and experience. So, people who enjoy change are the engine of human development.";
 
-    $a1 = "approximately";
-    $a2 = "declined";
-    $a3 = "declined";
-    $a4 = "demonstrated";
-    $a5 = "overall";
-    $a6 = "percent";
-    $a7 = "percent";
-    $a8 = "percent";
-    $a9 = "percent";
-    $a10 = "percent";
-    $a11 = "percent";
-    $a12 = "percent";
-    $a13 = "percent";
-    $a14 = "percentage";
-    $a15 = "proceeded";
+    $a1 = "approach";
+    $a2 = "benefits";
+    $a3 = "contribution";
+    $a4 = "evolution";
+    $a5 = "furthermore";
+    $a6 = "goals";
+    $a7 = "job";
+    $a8 = "job";
+    $a9 = "persistent";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -78,9 +66,6 @@
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
-                        <div class="w-100">
-                            <img src="{{asset('public/img_lang/AWL1/AWL1_131.png') }}" class="w-100" alt="">
-                        </div>
                         <div class="drag-container">
                             <div class="d-grid grid-5" id="choices">
                                 <div class="drag">{{ $a1 }}</div>
@@ -92,12 +77,6 @@
                                 <div class="drag">{{ $a7 }}</div>
                                 <div class="drag">{{ $a8 }}</div>
                                 <div class="drag">{{ $a9 }}</div>
-                                <div class="drag">{{ $a10 }}</div>
-                                <div class="drag">{{ $a11 }}</div>
-                                <div class="drag">{{ $a12 }}</div>
-                                <div class="drag">{{ $a13 }}</div>
-                                <div class="drag">{{ $a14 }}</div>
-                                <div class="drag">{{ $a15 }}</div>
                             </div>
                         </div>
                     </div>
@@ -152,36 +131,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q10}}
-                            <span class="font-weight-bold">10.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q12}}
-                            <span class="font-weight-bold">12.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q13}}
-                            <span class="font-weight-bold">13.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q14}}
-                            <span class="font-weight-bold">14.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q15}}
-                            <span class="font-weight-bold">15.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -202,21 +151,15 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a6 ?>",
-         $q2 = "<?php echo $a2 ?>",
-         $q3 = "<?php echo $a6 ?>",
-         $q4 = "<?php echo $a15 ?>",
+         $q1 = "<?php echo $a7 ?>",
+         $q2 = "<?php echo $a1 ?>",
+         $q3 = "<?php echo $a2 ?>",
+         $q4 = "<?php echo $a5 ?>",
          $q5 = "<?php echo $a6 ?>",
-         $q6 = "<?php echo $a6 ?>",
-         $q7 = "<?php echo $a2 ?>",
-         $q8 = "<?php echo $a14 ?>",
-         $q9 = "<?php echo $a6 ?>",
-         $q10 = "<?php echo $a1 ?>",
-         $q11 = "<?php echo $a6 ?>",
-         $q12 = "<?php echo $a6 ?>",
-         $q13 = "<?php echo $a6 ?>",
-         $q14 = "<?php echo $a5 ?>",
-         $q15 = "<?php echo $a4 ?>",
+         $q6 = "<?php echo $a9 ?>",
+         $q7 = "<?php echo $a7 ?>",
+         $q8 = "<?php echo $a3 ?>",
+         $q9 = "<?php echo $a4 ?>",
     ];
 
     console.log(answers);

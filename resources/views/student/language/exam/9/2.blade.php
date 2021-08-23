@@ -38,62 +38,58 @@
 
 </style>
 @php
-    $q1 = "Today";
-    $q2 = "are used almost everywhere. It is impossible to imagine our life without PCs, Internet, hand phones and other";
-    $q3 = "";
-    $q4 = ". But what of the future? In what fields will";
-    $q5 = "be used and what";
-    $q6 = "will humans have in this world in the future? Computers certainly make our life easier; we can easily get information about any product we plan to buy or place we plan to visit within a few seconds using personal";
-    $q7 = "and Internet. Scientists";
-    $q8 = "that in the near future it will be possible to smell a new perfume using Internet and watch 3D scenes at home like we do in the theater. According to forecasts of HR agencies, machines will replace the";
-    $q9 = "of cashiers,";
-    $q10 = "and";
-    $q11 = "pilots. Some";
-    $q12 = "in Japan are already selling housewife-robots, which help old people to keep their home clean.";
-    $q13 = "the fact that";
-    $q14 = "help us, they make us dependent.";
-    $q15 = ", people spend more time behind";
-    $q16 = "than ever before. And some of them feel a need for more time to be spent with people in live";
-    $q17 = ". In addition, system failure of one of the important modules of a";
-    $q18 = "can bring about serious";
-    $q19 = ". Suffice to mention";
-    $q20 = "problems which";
-    $q21 = "at the end of the 1990s, problems concerning the coming year 2000 (Y2K) and catastrophes that were";
-    $q22 = ". Fortunately imminent disasters did not happen. However, it is difficult to imagine what could have happened if all the";
-    $q23 = "had";
-    $q24 = ". We live in a";
-    $q25 = "era:";
-    $q26 = "penetrate everywhere with all the";
-    $q27 = "they provide and all the dangers they hide. However we are satisfied with them and sometimes we even thank them because they help us in";
-    $end = ", studying, doing business, entertaining and saving lives in critical situations.";
+    $q1 = "What would the world be like without Shakespeare or the Olympics? While";
+    $q2 = "care and education are perhaps the highest causes to which money can be";
+    $q3 = ", the arts and athletics are in some ways just as valuable. So, to ask the government to not extend support to these two";
+    $q4 = "could be just as detrimental to the";
+    $q5 = "of society as the lack of";
+    $q6 = 'health care and education. The Romans believed in "mens sana in corpore sano". In short, that there is indeed a correlation between a healthy body and healthy mind. When we are healthy, we feel better and so are more likely to be productive';
+    $q7 = ".";
+    $q8 = ", the practice of sports can also teach us the very same discipline we need for our studies. Even a brisk walk or watching an exciting athletic match can refresh the mind for greater work. Moreover, sports can serve to";
+    $q9 = 'healthier bodies, which in turn would serve as a form of "preventive medicine"';
+    $q10 = "cutting down on";
+    $q11 = "costs. In the same vein, the arts are known to";
+    $q12 = "a sense of well-being in performers and audience alike, reducing";
+    $q13 = "problems and their associated";
+    $q14 = "manifestations and again,";
+    $q15 = "costs. As such, building theatres and stadiums, which spur interest in the arts and sports respectively, actually would be practically";
+    $q16 = "to spending money on";
+    $q17 = "care and education. Now I realize the question";
+    $q18 = "addresses the building of theatres and sports stadiums by government. Some people would contend athletics and the arts can still be enjoyed and practised without such";
+    $q19 = ". I would hazard that these buildings stand as the altars to the sports and arts worlds, inspiring would-be athletes and performers. Without such venues where would sports spectators and music aficionados be able to enjoy these events? Now some other people would also say business could support their";
+    $q20 = ", but we know the avarice of business could very likely jeopardize the lofty spirit of athletics and the arts just as well. Therefore, allowing government to";
+    $q21 = "some say in the matter on";
+    $q22 = "of the people would, I believe, be in the best interest of the people. In short, as long as the government does not go overboard in its expenditure on these buildings and uses such venues for the";
+    $q23 = "of all, then, as mentioned above, people will";
+    $q24 = "in terms of both";
+    $q25 = "care and education as well. This is not to say the government should neglect";
+    $end = "care and education, but rather to think of this not as an either-or choice but as a win-win situation for all.";
 
-    $a1 = "apparently";
-    $a2 = "benefits";
-    $a3 = "civil";
-    $a4 = "communicating";
-    $a5 = "computer";
-    $a6 = "computer";
-    $a7 = "computer";
-    $a8 = "computers";
-    $a9 = "computers";
-    $a10 = "computers";
-    $a11 = "computers";
-    $a12 = "computers";
-    $a13 = "consequences";
-    $a14 = "contact";
-    $a15 = "corporations";
-    $a16 = "despite";
-    $a17 = "devices";
-    $a18 = "job";
-    $a19 = "military";
-    $a20 = "monitors";
-    $a21 = "occurred";
-    $a22 = "occurred";
-    $a23 = "predict";
-    $a24 = "predicted";
-    $a25 = "predictions";
-    $a26 = "role";
-    $a27 = "technological";
+    $a1 = "academically";
+    $a2 = "areas";
+    $a3 = "behalf";
+    $a4 = "benefit";
+    $a5 = "benefit";
+    $a6 = "construction";
+    $a7 = "constructions";
+    $a8 = "contributed";
+    $a9 = "create";
+    $a10 = "identical";
+    $a11 = "induce";
+    $a12 = "medical";
+    $a13 = "medical";
+    $a14 = "medical";
+    $a15 = "medical";
+    $a16 = "medical";
+    $a17 = "medical";
+    $a18 = "mental";
+    $a19 = "physical";
+    $a20 = "plus";
+    $a21 = "retain";
+    $a22 = "specifically";
+    $a23 = "sufficient";
+    $a24 = "thereby";
+    $a25 = "welfare";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -129,8 +125,6 @@
                                 <div class="drag">{{ $a23 }}</div>
                                 <div class="drag">{{ $a24 }}</div>
                                 <div class="drag">{{ $a25 }}</div>
-                                <div class="drag">{{ $a26 }}</div>
-                                <div class="drag">{{ $a27 }}</div>
                             </div>
                         </div>
                     </div>
@@ -265,16 +259,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q26}}
-                            <span class="font-weight-bold">26.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q27}}
-                            <span class="font-weight-bold">27.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -295,33 +279,31 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a8 ?>",
-         $q2 = "<?php echo $a27 ?>",
-         $q3 = "<?php echo $a17 ?>",
-         $q4 = "<?php echo $a8 ?>",
-         $q5 = "<?php echo $a26 ?>",
-         $q6 = "<?php echo $a8 ?>",
-         $q7 = "<?php echo $a23 ?>",
-         $q8 = "<?php echo $a18 ?>",
-         $q9 = "<?php echo $a3 ?>",
-         $q10 = "<?php echo $a19 ?>",
-         $q11 = "<?php echo $a15 ?>",
-         $q12 = "<?php echo $a16 ?>",
-         $q13 = "<?php echo $a8 ?>",
-         $q14 = "<?php echo $a1 ?>",
-         $q15 = "<?php echo $a20 ?>",
-         $q16 = "<?php echo $a14 ?>",
-         $q17 = "<?php echo $a5 ?>",
-         $q18 = "<?php echo $a13 ?>",
-         $q19 = "<?php echo $a5 ?>",
+         $q1 = "<?php echo $a12 ?>",
+         $q2 = "<?php echo $a8 ?>",
+         $q3 = "<?php echo $a2 ?>",
+         $q4 = "<?php echo $a25 ?>",
+         $q5 = "<?php echo $a23 ?>",
+         $q6 = "<?php echo $a1 ?>",
+         $q7 = "<?php echo $a20 ?>",
+         $q8 = "<?php echo $a9 ?>",
+         $q9 = "<?php echo $a24 ?>",
+         $q10 = "<?php echo $a12 ?>",
+         $q11 = "<?php echo $a11 ?>",
+         $q12 = "<?php echo $a18 ?>",
+         $q13 = "<?php echo $a19 ?>",
+         $q14 = "<?php echo $a12 ?>",
+         $q15 = "<?php echo $a10 ?>",
+         $q16 = "<?php echo $a12 ?>",
+         $q17 = "<?php echo $a22 ?>",
+         $q18 = "<?php echo $a7 ?>",
+         $q19 = "<?php echo $a6 ?>",
          $q20 = "<?php echo $a21 ?>",
-         $q21 = "<?php echo $a24 ?>",
-         $q22 = "<?php echo $a25 ?>",
-         $q23 = "<?php echo $a21 ?>",
-         $q24 = "<?php echo $a5 ?>",
-         $q25 = "<?php echo $a8 ?>",
-         $q26 = "<?php echo $a2 ?>",
-         $q27 = "<?php echo $a4 ?>",
+         $q21 = "<?php echo $a3 ?>",
+         $q22 = "<?php echo $a4 ?>",
+         $q23 = "<?php echo $a5 ?>",
+         $q24 = "<?php echo $a12 ?>",
+         $q25 = "<?php echo $a12 ?>",
     ];
 
     console.log(answers);

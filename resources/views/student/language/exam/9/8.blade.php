@@ -38,54 +38,32 @@
 
 </style>
 @php
-    $q1 = "The main";
-    $q2 = "is that all";
-    $q3 = "including kindergarten increased every year. Kindergarten started highest at 2.4 and ended highest at 2.9";
-    $q4 = "with a";
-    $q5 = "increase. But";
-    $q6 = "1-2 and";
-    $q7 = "5-6 shows a slightly different";
-    $q8 = ": both started at 1.5";
-    $q9 = "in 1999 and";
-    $q10 = "slightly in 2000. Both of them increased slowly in 2002 and both held that course to 2004 where";
-    $q11 = "1-2 ended at 2.1";
-    $q12 = "and";
-    $q13 = "5-6 ended at 2.6";
-    $q14 = ".";
-    $q15 = "3-4 had a slow but steady growth through all six years. It started at 1.6";
-    $q16 = "in 1999 and increased 0.1 every year except in 2003 when it peaked up 0.2";
-    $q17 = ".";
-    $q18 = "7-8 started at 1.6";
-    $q19 = "and stayed there for three years until it rapidly rose to 2.2 and peaked at 2.5 in 2004.";
-    $q20 = ", all";
-    $q21 = "including kindergarten experienced a rise of";
-    $q22 = "";
-    $q23 = "1";
-    $end = "and more in 6 years.";
+    $q1 = "Some people think that old, historic buildings are no need for the city and they should be destroyed and replaced with modern ones. However, other people believe that historic buildings must be preserved in order to know and remember our past. For several reasons that I will mention bellow I agree with those people who want to preserve old, historical buildings. First of all, by preserving historical buildings we pass our history to our future";
+    $q2 = ". I think that out children should know their history, learn from it and respect it. People need to know their";
+    $q3 = "and customs, which are priceless and irreplaceable. Our history is our knowledge and power. From my opinion we need to preserve and";
+    $q4 = "historical buildings. By destroying them we show our disrespect to our forefathers and their";
+    $q5 = ". Second of all, by preserving historical buildings a city can attract many travelers. Welcoming tourists a city can get many";
+    $q6 = "including money, which can be spent on preserving historical buildings as well as on improving roads and";
+    $q7 = ". Also, many tourists mean a lot of new business opportunities. Another important";
+    $q8 = "of this is that businessmen will be willing to build new recreational centers, hotels, movie theatres, shopping centres to make a city more attractive for travelers. In addition to those practical";
+    $q9 = ", many people will have the opportunity to get a";
+    $q10 = ". All this is good for the";
+    $q11 = "of the city. To";
+    $q12 = "up, I believe that preserving old, historical buildings can bring only";
+    $end = "to a city and all humankind.";
 
-    $a1 = "approximately";
-    $a2 = "constant";
-    $a3 = "declined";
-    $a4 = "grades";
-    $a5 = "grades";
-    $a6 = "grades";
-    $a7 = "grades";
-    $a8 = "grades";
-    $a9 = "grades";
-    $a10 = "grades";
-    $a11 = "grades";
-    $a12 = "minimum";
-    $a13 = "overall";
-    $a14 = "percent";
-    $a15 = "percent";
-    $a16 = "percent";
-    $a17 = "percent";
-    $a18 = "percent";
-    $a19 = "percent";
-    $a20 = "percent";
-    $a21 = "percent";
-    $a22 = "trend";
-    $a23 = "trend";
+    $a1 = "aspect";
+    $a2 = "benefits";
+    $a3 = "benefits";
+    $a4 = "benefits";
+    $a5 = "economy";
+    $a6 = "facilities";
+    $a7 = "generations";
+    $a8 = "job";
+    $a9 = "restore";
+    $a10 = "sum";
+    $a11 = "traditions";
+    $a12 = "traditions";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -94,9 +72,6 @@
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
-                        <div class="w-100">
-                            <img src="{{asset('public/img_lang/AWL1/AWL1_130.png') }}" class="w-100" alt="">
-                        </div>
                         <div class="drag-container">
                             <div class="d-grid grid-5" id="choices">
                                 <div class="drag">{{ $a1 }}</div>
@@ -111,17 +86,6 @@
                                 <div class="drag">{{ $a10 }}</div>
                                 <div class="drag">{{ $a11 }}</div>
                                 <div class="drag">{{ $a12 }}</div>
-                                <div class="drag">{{ $a13 }}</div>
-                                <div class="drag">{{ $a14 }}</div>
-                                <div class="drag">{{ $a15 }}</div>
-                                <div class="drag">{{ $a16 }}</div>
-                                <div class="drag">{{ $a17 }}</div>
-                                <div class="drag">{{ $a18 }}</div>
-                                <div class="drag">{{ $a19 }}</div>
-                                <div class="drag">{{ $a20 }}</div>
-                                <div class="drag">{{ $a21 }}</div>
-                                <div class="drag">{{ $a22 }}</div>
-                                <div class="drag">{{ $a23 }}</div>
                             </div>
                         </div>
                     </div>
@@ -191,61 +155,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q13}}
-                            <span class="font-weight-bold">13.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q14}}
-                            <span class="font-weight-bold">14.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q15}}
-                            <span class="font-weight-bold">15.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q16}}
-                            <span class="font-weight-bold">16.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q17}}
-                            <span class="font-weight-bold">17.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q18}}
-                            <span class="font-weight-bold">18.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q19}}
-                            <span class="font-weight-bold">19.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q20}}
-                            <span class="font-weight-bold">20.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q21}}
-                            <span class="font-weight-bold">21.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q22}}
-                            <span class="font-weight-bold">22.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q23}}
-                            <span class="font-weight-bold">23.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -266,29 +175,18 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a22 ?>",
-         $q2 = "<?php echo $a4 ?>",
-         $q3 = "<?php echo $a14 ?>",
-         $q4 = "<?php echo $a2 ?>",
-         $q5 = "<?php echo $a4 ?>",
-         $q6 = "<?php echo $a4 ?>",
-         $q7 = "<?php echo $a22 ?>",
-         $q8 = "<?php echo $a14 ?>",
-         $q9 = "<?php echo $a3 ?>",
-         $q10 = "<?php echo $a4 ?>",
-         $q11 = "<?php echo $a14 ?>",
-         $q12 = "<?php echo $a4 ?>",
-         $q13 = "<?php echo $a14 ?>",
-         $q14 = "<?php echo $a4 ?>",
-         $q15 = "<?php echo $a14 ?>",
-         $q16 = "<?php echo $a14 ?>",
-         $q17 = "<?php echo $a4 ?>",
-         $q18 = "<?php echo $a14 ?>",
-         $q19 = "<?php echo $a13 ?>",
-         $q20 = "<?php echo $a4 ?>",
-         $q21 = "<?php echo $a1 ?>",
-         $q22 = "<?php echo $a12 ?>",
-         $q23 = "<?php echo $a14 ?>",
+         $q1 = "<?php echo $a7 ?>",
+         $q2 = "<?php echo $a11 ?>",
+         $q3 = "<?php echo $a9 ?>",
+         $q4 = "<?php echo $a11 ?>",
+         $q5 = "<?php echo $a2 ?>",
+         $q6 = "<?php echo $a6 ?>",
+         $q7 = "<?php echo $a1 ?>",
+         $q8 = "<?php echo $a2 ?>",
+         $q9 = "<?php echo $a8 ?>",
+         $q10 = "<?php echo $a5 ?>",
+         $q11 = "<?php echo $a10 ?>",
+         $q12 = "<?php echo $a2 ?>",
     ];
 
     console.log(answers);

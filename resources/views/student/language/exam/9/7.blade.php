@@ -38,46 +38,22 @@
 
 </style>
 @php
-    $q1 = "News";
-    $q2 = "decide what to broadcast on television and what to print in newspapers. There are two";
-    $q3 = "that influence their decisions. The first is the kind of customers they cater to. Each group of reader and viewer has their own";
-    $q4 = ". For example, if your customers are mostly teenagers, you have to";
-    $q5 = "on something attracting them such as stories, photographs about pop stars, film stars, funny tales, and young fashion. It will be very silly if you try to provide teenagers with";
-    $q6 = ", political news. On the";
-    $q7 = ", businessmen and politicians may never read news about James Blunt or Keira Knightley. Therefore, what influences news";
-    $q8 = "’' decisions the most is the taste of their customers. The second is the attraction of news. Who will read or watch your news if it happened one year, one month, even one week ago? The answer is nobody, absolutely no one. In the";
-    $q9 = "and competitive world nowadays, people always ask for really current news. In order to satisfy customers, there is a pressure on all";
-    $q10 = "to find continually what has already happened not only yesterday but even an hour ago. Or else, they will lose their customers. No";
-    $q11 = "wants that to happen. On television or in newspaper, we seem to become used to bad news. It is a little difficult for us to receive a piece of good news. We can't";
-    $q12 = "that bad things";
-    $q13 = "on the earth day by day. However, news";
-    $q14 = "try to gain more and more customers, which means more and more money, by";
-    $q15 = "bad news. This is because bad news makes us curious. We want to know why it is bad, what it is about, whether it influences us or not. As a result, we will buy newspapers or watch television to find out. And the happiest people are, of course, news";
-    $q16 = ". I think it would be better if more good news was reported. Bad news makes us worry and feel sad,";
-    $q17 = "good news makes us happy. However much bad news there is, there should be the same amount of good news. So we can give something bad a lot of thought while still be joyful with good news. Any inequalities between good news and bad news should be avoided. That is the best solution. Now, we can't live without news.";
-    $q18 = ", the";
-    $q19 = "of news";
-    $end = "is very important. We should support them. And what they have to do is try their best to provide us with useful news, both good and bad.";
+    $q1 = "Many old people in Britain, after a lifetime of hard work and the toil of bringing up children, are put into homes for the elderly by their families. There, they are looked after by";
+    $q2 = "nurses, and this is sometimes at the expense of the government. However, this situation has raised";
+    $q3 = "about whether we extend to our elders the care and respect they deserve. The critics of this system say that it is the duty of the family to look after its senior members in the years when they are no longer able to work. They point out that in retirement homes old people tend to feel useless and unwanted by their family members, who seldom come to see them. In addition, there is";
+    $q4 = "that younger people";
+    $q5 = "from the experience and wisdom of older people who live with them on a daily basis. On the other hand, those who support the system say that retired parents can be a burden to young families. Not only is it expensive to support old people who have little or no";
+    $q6 = ", but the fact that old people are often ill and need a great deal of looking after can be too much for their busy children. In my opinion, neither side is completely right. Old people in good health and with enough";
+    $q7 = "to support themselves can be a great help to their children. For";
+    $end = ", they can look after their grandchildren while children are out at work. On the other had, sick and penniless old people are better off being looked after in retirement homes at";
 
-    $a1 = "concentrate";
-    $a2 = "contrary";
-    $a3 = "deny";
-    $a4 = "economic";
-    $a5 = "editor";
-    $a6 = "editors";
-    $a7 = "editors";
-    $a8 = "editors";
-    $a9 = "editors";
-    $a10 = "editors";
-    $a11 = "editors";
-    $a12 = "energetic";
-    $a13 = "factors";
-    $a14 = "features";
-    $a15 = "occur";
-    $a16 = "publishing";
-    $a17 = "role";
-    $a18 = "Therefore";
-    $a19 = "whereas";
+    $a1 = "benefit";
+    $a2 = "controversy";
+    $a3 = "evidence";
+    $a4 = "finances";
+    $a5 = "income";
+    $a6 = "instance";
+    $a7 = "professional";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -95,18 +71,6 @@
                                 <div class="drag">{{ $a5 }}</div>
                                 <div class="drag">{{ $a6 }}</div>
                                 <div class="drag">{{ $a7 }}</div>
-                                <div class="drag">{{ $a8 }}</div>
-                                <div class="drag">{{ $a9 }}</div>
-                                <div class="drag">{{ $a10 }}</div>
-                                <div class="drag">{{ $a11 }}</div>
-                                <div class="drag">{{ $a12 }}</div>
-                                <div class="drag">{{ $a13 }}</div>
-                                <div class="drag">{{ $a14 }}</div>
-                                <div class="drag">{{ $a15 }}</div>
-                                <div class="drag">{{ $a16 }}</div>
-                                <div class="drag">{{ $a17 }}</div>
-                                <div class="drag">{{ $a18 }}</div>
-                                <div class="drag">{{ $a19 }}</div>
                             </div>
                         </div>
                     </div>
@@ -151,66 +115,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q8}}
-                            <span class="font-weight-bold">8.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q9}}
-                            <span class="font-weight-bold">9.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q10}}
-                            <span class="font-weight-bold">10.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q12}}
-                            <span class="font-weight-bold">12.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q13}}
-                            <span class="font-weight-bold">13.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q14}}
-                            <span class="font-weight-bold">14.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q15}}
-                            <span class="font-weight-bold">15.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q16}}
-                            <span class="font-weight-bold">16.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q17}}
-                            <span class="font-weight-bold">17.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q18}}
-                            <span class="font-weight-bold">18.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q19}}
-                            <span class="font-weight-bold">19.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -231,25 +135,13 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a6 ?>",
-         $q2 = "<?php echo $a13 ?>",
-         $q3 = "<?php echo $a14 ?>",
+         $q1 = "<?php echo $a7 ?>",
+         $q2 = "<?php echo $a2 ?>",
+         $q3 = "<?php echo $a3 ?>",
          $q4 = "<?php echo $a1 ?>",
-         $q5 = "<?php echo $a4 ?>",
-         $q6 = "<?php echo $a2 ?>",
+         $q5 = "<?php echo $a5 ?>",
+         $q6 = "<?php echo $a4 ?>",
          $q7 = "<?php echo $a6 ?>",
-         $q8 = "<?php echo $a12 ?>",
-         $q9 = "<?php echo $a6 ?>",
-         $q10 = "<?php echo $a5 ?>",
-         $q11 = "<?php echo $a3 ?>",
-         $q12 = "<?php echo $a15 ?>",
-         $q13 = "<?php echo $a6 ?>",
-         $q14 = "<?php echo $a16 ?>",
-         $q15 = "<?php echo $a6 ?>",
-         $q16 = "<?php echo $a19 ?>",
-         $q17 = "<?php echo $a18 ?>",
-         $q18 = "<?php echo $a17 ?>",
-         $q19 = "<?php echo $a6 ?>",
     ];
 
     console.log(answers);
