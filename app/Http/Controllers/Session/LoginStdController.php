@@ -68,7 +68,7 @@ class LoginStdController extends Controller
 
             }elseif($status == 'expire'){
 
-                return redirect('success')->with('status', 'Your package is expire');
+                return redirect('expire');
 
             }else{
 

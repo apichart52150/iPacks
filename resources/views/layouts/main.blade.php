@@ -28,6 +28,9 @@
 
         <!-- Custom box css -->
         <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
+
+         <!-- Sweet Alert-->
+         <link href="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
         @yield('css')
     </head>
 
@@ -270,8 +273,6 @@
         <!-- End Footer -->    
 
         @include('student.profile')
-
-        
        
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
