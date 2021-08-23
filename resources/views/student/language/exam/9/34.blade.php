@@ -38,74 +38,54 @@
 
 </style>
 @php
-    $q1 = "With the advent of";
-    $q2 = ", a common language to";
-    $q3 = "trade and";
-    $q4 = "seems";
-    $q5 = ". Some oppose the development of a single language on the grounds that it may lead to";
-    $q6 = "";
-    $q7 = "and a loss of local linguistic knowledge. Yet, I am of the opinion that it is possible to use an official international language and still";
-    $q8 = "one's own language and";
-    $q9 = ". Firstly, many countries already use an official language or languages. For example, in India there are two official languages: Hindi and English. In a country such as India where there are many languages spoken, there is a need for official languages to";
-    $q10 = "";
-    $q11 = "between different";
-    $q12 = "of the population and the different states. In China, where different dialects are spoken, Mandarin, the official language,";
-    $q13 = "people from different provinces to comprehend each other. Secondly, in an age of rampant ";
-    $q14 = "there is no doubt that an international language is";
-    $q15 = ". How is an African businessman going to";
-    $q16 = "business in China when there are such differences between languages? In this sense, not only is an international language an";
-    $q17 = ", but also a necessity for trade, commerce and";
-    $q18 = "";
-    $q19 = "in the 21st century. The critics opposing the adoption of an international official language argue that it would lead to a loss of";
-    $q20 = "";
-    $q21 = ". However, the use of an international official language doesn't mean that local languages will die out. For example, English already";
-    $q22 = "as a kind of unofficial international language but this doesn't mean that people";
-    $q23 = "";
-    $q24 = "in English or they neglect their own language. English is used in";
-    $q25 = "";
-    $q26 = "(trade, business, etc) and native languages are used for everyday";
-    $q27 = ". In";
-    $q28 = ", as the world becomes smaller the need for an official international language seems unavoidable. English has already";
-    $q29 = "this";
-    $q30 = "although its";
-    $q31 = "is unofficial. In my view, the use of either an official or unofficial international language is necessary to";
-    $q32 = "";
-    $q33 = "in a time of rapid";
-    $end = ".";
+    $q1 = "The main";
+    $q2 = "is that all";
+    $q3 = "including kindergarten increased every year. Kindergarten started highest at 2.4 and ended highest at 2.9";
+    $q4 = "with a";
+    $q5 = "increase. But";
+    $q6 = "1-2 and";
+    $q7 = "5-6 shows a slightly different";
+    $q8 = ": both started at 1.5";
+    $q9 = "in 1999 and";
+    $q10 = "slightly in 2000. Both of them increased slowly in 2002 and both held that course to 2004 where";
+    $q11 = "1-2 ended at 2.1";
+    $q12 = "and";
+    $q13 = "5-6 ended at 2.6";
+    $q14 = ".";
+    $q15 = "3-4 had a slow but steady growth through all six years. It started at 1.6";
+    $q16 = "in 1999 and increased 0.1 every year except in 2003 when it peaked up 0.2";
+    $q17 = ".";
+    $q18 = "7-8 started at 1.6";
+    $q19 = "and stayed there for three years until it rapidly rose to 2.2 and peaked at 2.5 in 2004.";
+    $q20 = ", all";
+    $q21 = "including kindergarten experienced a rise of";
+    $q22 = "";
+    $q23 = "1";
+    $end = "and more in 6 years.";
 
-    $a1 = "assumed";
-    $a2 = "brief";
-    $a3 = "communication";
-    $a4 = "communication";
-    $a5 = "communication";
-    $a6 = "conduct";
-    $a7 = "contexts";
-    $a8 = "converse";
-    $a9 = "cultural";
-    $a10 = "cultural";
-    $a11 = "culture";
-    $a12 = "economic";
-    $a13 = "enables";
-    $a14 = "ensure";
-    $a15 = "erosion";
-    $a16 = "expansion";
-    $a17 = "facilitate";
-    $a18 = "facilitate";
-    $a19 = "functions";
-    $a20 = "globalization";
-    $a21 = "globalization";
-    $a22 = "globalization";
-    $a23 = "identity";
-    $a24 = "inevitability";
-    $a25 = "inevitable";
-    $a26 = "inevitable";
-    $a27 = "instruction";
-    $a28 = "retain";
-    $a29 = "role";
-    $a30 = "sections";
-    $a31 = "solely";
-    $a32 = "specific";
-    $a33 = "status";
+    $a1 = "approximately";
+    $a2 = "constant";
+    $a3 = "declined";
+    $a4 = "grades";
+    $a5 = "grades";
+    $a6 = "grades";
+    $a7 = "grades";
+    $a8 = "grades";
+    $a9 = "grades";
+    $a10 = "grades";
+    $a11 = "grades";
+    $a12 = "minimum";
+    $a13 = "overall";
+    $a14 = "percent";
+    $a15 = "percent";
+    $a16 = "percent";
+    $a17 = "percent";
+    $a18 = "percent";
+    $a19 = "percent";
+    $a20 = "percent";
+    $a21 = "percent";
+    $a22 = "trend";
+    $a23 = "trend";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -114,6 +94,9 @@
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
+                        <div class="w-100">
+                            <img src="{{asset('public/img_lang/AWL1/AWL1_130.png') }}" class="w-100" alt="">
+                        </div>
                         <div class="drag-container">
                             <div class="d-grid grid-5" id="choices">
                                 <div class="drag">{{ $a1 }}</div>
@@ -139,16 +122,6 @@
                                 <div class="drag">{{ $a21 }}</div>
                                 <div class="drag">{{ $a22 }}</div>
                                 <div class="drag">{{ $a23 }}</div>
-                                <div class="drag">{{ $a24 }}</div>
-                                <div class="drag">{{ $a25 }}</div>
-                                <div class="drag">{{ $a26 }}</div>
-                                <div class="drag">{{ $a27 }}</div>
-                                <div class="drag">{{ $a28 }}</div>
-                                <div class="drag">{{ $a29 }}</div>
-                                <div class="drag">{{ $a30 }}</div>
-                                <div class="drag">{{ $a31 }}</div>
-                                <div class="drag">{{ $a32 }}</div>
-                                <div class="drag">{{ $a33 }}</div>
                             </div>
                         </div>
                     </div>
@@ -273,56 +246,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q24}}
-                            <span class="font-weight-bold">24.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q25}}
-                            <span class="font-weight-bold">25.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q26}}
-                            <span class="font-weight-bold">26.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q27}}
-                            <span class="font-weight-bold">27.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q28}}
-                            <span class="font-weight-bold">28.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q29}}
-                            <span class="font-weight-bold">29.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q30}}
-                            <span class="font-weight-bold">30.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q31}}
-                            <span class="font-weight-bold">31.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q32}}
-                            <span class="font-weight-bold">32.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q33}}
-                            <span class="font-weight-bold">33.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -343,39 +266,29 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a20 ?>",
-         $q2 = "<?php echo $a17 ?>",
-         $q3 = "<?php echo $a3 ?>",
-         $q4 = "<?php echo $a25 ?>",
-         $q5 = "<?php echo $a9 ?>",
-         $q6 = "<?php echo $a15 ?>",
-         $q7 = "<?php echo $a28 ?>",
-         $q8 = "<?php echo $a11 ?>",
-         $q9 = "<?php echo $a14 ?>",
-         $q10 = "<?php echo $a3 ?>",
-         $q11 = "<?php echo $a30 ?>",
-         $q12 = "<?php echo $a13 ?>",
-         $q13 = "<?php echo $a20 ?>",
-         $q14 = "<?php echo $a25 ?>",
-         $q15 = "<?php echo $a6 ?>",
-         $q16 = "<?php echo $a24 ?>",
-         $q17 = "<?php echo $a12 ?>",
-         $q18 = "<?php echo $a16 ?>",
-         $q19 = "<?php echo $a9 ?>",
-         $q20 = "<?php echo $a23 ?>",
-         $q21 = "<?php echo $a19 ?>",
-         $q22 = "<?php echo $a8 ?>",
-         $q23 = "<?php echo $a31 ?>",
-         $q24 = "<?php echo $a32 ?>",
-         $q25 = "<?php echo $a7 ?>",
-         $q26 = "<?php echo $a27 ?>",
-         $q27 = "<?php echo $a2 ?>",
-         $q28 = "<?php echo $a1 ?>",
-         $q29 = "<?php echo $a29 ?>",
-         $q30 = "<?php echo $a33 ?>",
-         $q31 = "<?php echo $a17 ?>",
-         $q32 = "<?php echo $a3 ?>",
-         $q33 = "<?php echo $a20 ?>",
+         $q1 = "<?php echo $a22 ?>",
+         $q2 = "<?php echo $a4 ?>",
+         $q3 = "<?php echo $a14 ?>",
+         $q4 = "<?php echo $a2 ?>",
+         $q5 = "<?php echo $a4 ?>",
+         $q6 = "<?php echo $a4 ?>",
+         $q7 = "<?php echo $a22 ?>",
+         $q8 = "<?php echo $a14 ?>",
+         $q9 = "<?php echo $a3 ?>",
+         $q10 = "<?php echo $a4 ?>",
+         $q11 = "<?php echo $a14 ?>",
+         $q12 = "<?php echo $a4 ?>",
+         $q13 = "<?php echo $a14 ?>",
+         $q14 = "<?php echo $a4 ?>",
+         $q15 = "<?php echo $a14 ?>",
+         $q16 = "<?php echo $a14 ?>",
+         $q17 = "<?php echo $a4 ?>",
+         $q18 = "<?php echo $a14 ?>",
+         $q19 = "<?php echo $a13 ?>",
+         $q20 = "<?php echo $a4 ?>",
+         $q21 = "<?php echo $a1 ?>",
+         $q22 = "<?php echo $a12 ?>",
+         $q23 = "<?php echo $a14 ?>",
     ];
 
     console.log(answers);

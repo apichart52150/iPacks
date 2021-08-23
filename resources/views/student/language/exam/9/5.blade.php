@@ -38,50 +38,44 @@
 
 </style>
 @php
-    $q1 = "Most of the firms, organization and companies as well as government agencies have introduced";
-    $q2 = "on smoking in work places and public amenities respectively. It has become fashionable in the world today to blame smoking. However, although I feel that smoking can be harmful, I don't think it should be banned completely. I would also argue that people should have the right whether they smoke or not. Let me deal with the three";
-    $q3 = "sides of smoking. Firstly, smoking certainly helps many people to";
-    $q4 = ". For some, it even improves";
-    $q5 = ". If someone is upset owing to debt or they have an exam, they like to smoke to reduce the pressure or";
-    $q6 = ". Most people like to smoke when they are";
-    $q7 = "with friends. Secondly, governments throughout the world make huge profits from taxes on cigarettes. The";
-    $q8 = "";
-    $q9 = "from taxes provides";
-    $q10 = "which are used for building schools, hospitals and public places such as parks, gardens, sports ground and foot paths. Thirdly, the tobacco industry also employs tens of thousands of people all over the world, particularly in poorer countries like Zimbabwe or India. Without cigarettes, these people would have no";
-    $q11 = ".";
-    $q12 = "these";
-    $q13 = "effects there are lots of";
-    $q14 = "effects of smoking too.";
-    $q15 = ", smoking has been proven to be dangerous for health. As one cigarette contain more than 4000";
-    $q16 = "substances, it causes many diseases like heart attacks, asthma, bronchitis, lung cancer and cough. According to recent";
-    $q17 = ", in Britain about 3,500 people are killed each year in road accidents and 120,000 are killed by smoking.";
-    $q18 = ", smoking costs the government millions of dollars because of the large number of people who need treatment in hospitals for smoking-related problems. Moreover, there is also concern today about";
-    $q19 = "smoking. Recent";
-    $q20 = "shows that non-smokers can suffer health problems if they spend long";
-    $q21 = "of time among people who do smoke. In the UK children whose parents smoke are three times as likely to start smoking themselves. In short, I think the world would be a better place without cigarettes. However, the decision as to whether to smoke or not should be for each";
-    $end = "to make. I suggest people should not smoke in a room or place where there are non-smokers but surely they should be free to smoke elsewhere.";
+    $q1 = "I would have to completely disagree with the statement above. In the following";
+    $q2 = "I will outline the basic";
+    $q3 = "of my position. First of all, I will list the";
+    $q4 = "disadvantages for employers. In today's market a company must be very";
+    $q5 = "in order to compete with other firms. So, imagine the situation when a company cannot fire its employees to stay in the market. It will lead to losing not only profit, but the clients, market share and competitive ability. Now, imagine the situation when a company is growing fast, everything is good and the next few years are going to be excellent. So, employers need more people to expand the production. However, nobody can tell what will happen in a few years. In this case, employers will be afraid to hire new people and extend their business because they will not be able to fire them if something goes wrong. Another important";
+    $q6 = "of this is that a company cannot have the best employees. It cannot hire the better ones without dismissing other employees. What kind of disadvantages will an employee have in exchange for this kind of";
+    $q7 = "";
+    $q8 = "? First of all, it will be very difficult to find a";
+    $q9 = "if one is not the best, because an employer does not want to spend money on employees’ education. Besides, employers will not have a chance to fire someone if he does not do his";
+    $q10 = "well. Second of all, employees with this kind of";
+    $q11 = "tend not to perfect themselves because after they are hired they can not lose their";
+    $q12 = ". In";
+    $q13 = ", I would like to add that this statement has some";
+    $q14 = "";
+    $q15 = "too such as";
+    $q16 = ", a strong spirit of the company, etc. This system takes place in Japan and some companies succeeded in it. But I think that the reason of it subsists in the Japanese";
+    $q17 = ", the particular";
+    $q18 = "";
+    $end = ", habits and customs. However, on today's market here in the United States a company can not afford to hire employees for their entire life.";
 
-    $a1 = "chemical";
-    $a2 = "concentration";
-    $a3 = "despite";
-    $a4 = "funds";
-    $a5 = "furthermore";
-    $a6 = "income";
-    $a7 = "individual";
-    $a8 = "initially";
-    $a9 = "jobs";
-    $a10 = "negative";
-    $a11 = "obtained";
-    $a12 = "passive";
-    $a13 = "period";
-    $a14 = "positive";
+    $a1 = "aspect";
+    $a2 = "aspects";
+    $a3 = "concepts";
+    $a4 = "conclusion";
+    $a5 = "constancy";
+    $a6 = "cultural";
+    $a7 = "features";
+    $a8 = "flexible";
+    $a9 = "job";
+    $a10 = "job";
+    $a11 = "job";
+    $a12 = "job";
+    $a13 = "major";
+    $a14 = "paragraphs";
     $a15 = "positive";
-    $a16 = "relax";
-    $a17 = "relaxing";
-    $a18 = "research";
-    $a19 = "research";
-    $a20 = "restrictions";
-    $a21 = "tension";
+    $a16 = "security";
+    $a17 = "security";
+    $a18 = "traditions";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -110,9 +104,6 @@
                                 <div class="drag">{{ $a16 }}</div>
                                 <div class="drag">{{ $a17 }}</div>
                                 <div class="drag">{{ $a18 }}</div>
-                                <div class="drag">{{ $a19 }}</div>
-                                <div class="drag">{{ $a20 }}</div>
-                                <div class="drag">{{ $a21 }}</div>
                             </div>
                         </div>
                     </div>
@@ -212,21 +203,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q19}}
-                            <span class="font-weight-bold">19.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q20}}
-                            <span class="font-weight-bold">20.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q21}}
-                            <span class="font-weight-bold">21.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -247,27 +223,24 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a20 ?>",
-         $q2 = "<?php echo $a14 ?>",
-         $q3 = "<?php echo $a16 ?>",
-         $q4 = "<?php echo $a2 ?>",
-         $q5 = "<?php echo $a21 ?>",
-         $q6 = "<?php echo $a17 ?>",
-         $q7 = "<?php echo $a6 ?>",
-         $q8 = "<?php echo $a11 ?>",
-         $q9 = "<?php echo $a4 ?>",
-         $q10 = "<?php echo $a9 ?>",
-         $q11 = "<?php echo $a3 ?>",
-         $q12 = "<?php echo $a14 ?>",
-         $q13 = "<?php echo $a10 ?>",
-         $q14 = "<?php echo $a8 ?>",
-         $q15 = "<?php echo $a1 ?>",
+         $q1 = "<?php echo $a14 ?>",
+         $q2 = "<?php echo $a3 ?>",
+         $q3 = "<?php echo $a13 ?>",
+         $q4 = "<?php echo $a8 ?>",
+         $q5 = "<?php echo $a1 ?>",
+         $q6 = "<?php echo $a9 ?>",
+         $q7 = "<?php echo $a16 ?>",
+         $q8 = "<?php echo $a9 ?>",
+         $q9 = "<?php echo $a9 ?>",
+         $q10 = "<?php echo $a16 ?>",
+         $q11 = "<?php echo $a9 ?>",
+         $q12 = "<?php echo $a4 ?>",
+         $q13 = "<?php echo $a15 ?>",
+         $q14 = "<?php echo $a2 ?>",
+         $q15 = "<?php echo $a5 ?>",
          $q16 = "<?php echo $a18 ?>",
-         $q17 = "<?php echo $a5 ?>",
-         $q18 = "<?php echo $a12 ?>",
-         $q19 = "<?php echo $a18 ?>",
-         $q20 = "<?php echo $a13 ?>",
-         $q21 = "<?php echo $a7 ?>",
+         $q17 = "<?php echo $a6 ?>",
+         $q18 = "<?php echo $a7 ?>",
     ];
 
     console.log(answers);

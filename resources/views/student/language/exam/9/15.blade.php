@@ -38,26 +38,58 @@
 
 </style>
 @php
-    $q1 = "Some people like to live in the same house, have the same";
-    $q2 = "and habits all their lives. However, others aspire to changes and new experiences. Personally, for several reasons, which I will explain below, I prefer the first";
-    $q3 = "to life. First of all, changes in one's life bring many";
-    $q4 = ". One tries new things, gains new knowledge and experience. I think it is great because without change life becomes boring. I always try to make changes in my life. Moreover, when I feel that my life is boring I do not feel good about it. I feel like I spent those days for nothing. I did not do anything exciting, I learnt nothing interesting and I just wasted my time. Second of all, people need changes.";
-    $q5 = ", we need obstacles to overcome and reach our";
-    $q6 = ". I believe that change makes us stronger, more";
-    $q7 = ", more self-confident, and more patient. Also, I feel that all people who succeeded in life like change and new experience because it is impossible to be the best in some field without perfecting the present knowledge and gain new experience. People take hold of every opportunity to learn more and change their life for the best. On the other side, people who like their lives to stay the same are very permanent. They have the same";
-    $q8 = "all their life, the same habits, the same week-ends and even the same years in years out. I think it is boring. What will they tell their children about their lives? What kind of";
-    $q9 = "will they make for the society? I think such people are just afraid of change. I think curiosity and aspiration to the new experience are two of the main reasons of human ";
-    $end = ". People have always wanted to break limits and gain more knowledge and experience. So, people who enjoy change are the engine of human development.";
+    $q1 = "Nowadays, many children are";
+    $q2 = "in different types of";
+    $q3 = "to have some kind of";
+    $q4 = "";
+    $q5 = "for themselves. However, whether this is good for their development and personality is a";
+    $q6 = "";
+    $q7 = ". I personally believe that paid work is harmful for children for several reasons. It is said that children learn valuable experience in the work place. This may be true. However, I would argue that children are mainly employed in";
+    $q8 = "that";
+    $q9 = "";
+    $q10 = "work and are low paid. Recent";
+    $q11 = "";
+    $q12 = "the common";
+    $q13 = "to which children are";
+    $q14 = "include washing dishes, cleaning floors or serving food in restaurants. Meanwhile, these kinds of";
+    $q15 = "actually do not provide children with necessary and useful skills which they can apply in their future career. This brings me to the second point. People in fravour of children working argue that it is an effective";
+    $q16 = "of learning. The point is children should be able to apply knowledge taught to them in a real life working";
+    $q17 = ". Although this is undoubtedly true, it also means that children may neglect the classroom study and even fail the class. The worst thing is yet to come. They may become so";
+    $q18 = "with the";
+    $q19 = "which a small amount of money can bring, and leave school.";
+    $q20 = ", supporters claim that it helps them to build responsibility in the family. They will understand how difficult it is to earn money and, therefore, have a compassionate view with their parents. This is true to a certain extent, but may have a totally adverse effect on children. As children can make money at an early age, they would feel that it is";
+    $q21 = "to spend their own money on luxury";
+    $q22 = ". In";
+    $q23 = ", I think that parents should take measures to";
+    $q24 = "their child to work, otherwise it would have";
+    $q25 = "";
+    $end = "on their futures.";
 
-    $a1 = "approach";
-    $a2 = "benefits";
-    $a3 = "contribution";
-    $a4 = "evolution";
-    $a5 = "furthermore";
-    $a6 = "goals";
-    $a7 = "job";
-    $a8 = "job";
-    $a9 = "persistent";
+    $a1 = "appropriate";
+    $a2 = "assigned";
+    $a3 = "assurance";
+    $a4 = "benefits";
+    $a5 = "conclusion";
+    $a6 = "consequences";
+    $a7 = "debatable";
+    $a8 = "environment";
+    $a9 = "finally";
+    $a10 = "financial";
+    $a11 = "involved";
+    $a12 = "issue";
+    $a13 = "items";
+    $a14 = "jobs";
+    $a15 = "jobs";
+    $a16 = "jobs";
+    $a17 = "manual";
+    $a18 = "method";
+    $a19 = "negative";
+    $a20 = "occupied";
+    $a21 = "require";
+    $a22 = "research";
+    $a23 = "restrict";
+    $a24 = "reveals";
+    $a25 = "tasks";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -77,6 +109,22 @@
                                 <div class="drag">{{ $a7 }}</div>
                                 <div class="drag">{{ $a8 }}</div>
                                 <div class="drag">{{ $a9 }}</div>
+                                <div class="drag">{{ $a10 }}</div>
+                                <div class="drag">{{ $a11 }}</div>
+                                <div class="drag">{{ $a12 }}</div>
+                                <div class="drag">{{ $a13 }}</div>
+                                <div class="drag">{{ $a14 }}</div>
+                                <div class="drag">{{ $a15 }}</div>
+                                <div class="drag">{{ $a16 }}</div>
+                                <div class="drag">{{ $a17 }}</div>
+                                <div class="drag">{{ $a18 }}</div>
+                                <div class="drag">{{ $a19 }}</div>
+                                <div class="drag">{{ $a20 }}</div>
+                                <div class="drag">{{ $a21 }}</div>
+                                <div class="drag">{{ $a22 }}</div>
+                                <div class="drag">{{ $a23 }}</div>
+                                <div class="drag">{{ $a24 }}</div>
+                                <div class="drag">{{ $a25 }}</div>
                             </div>
                         </div>
                     </div>
@@ -131,6 +179,86 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
+                            {{$q10}}
+                            <span class="font-weight-bold">10.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q11}}
+                            <span class="font-weight-bold">11.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q13}}
+                            <span class="font-weight-bold">13.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q14}}
+                            <span class="font-weight-bold">14.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q15}}
+                            <span class="font-weight-bold">15.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q16}}
+                            <span class="font-weight-bold">16.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q17}}
+                            <span class="font-weight-bold">17.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q18}}
+                            <span class="font-weight-bold">18.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q19}}
+                            <span class="font-weight-bold">19.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q20}}
+                            <span class="font-weight-bold">20.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q21}}
+                            <span class="font-weight-bold">21.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q22}}
+                            <span class="font-weight-bold">22.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q23}}
+                            <span class="font-weight-bold">23.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q24}}
+                            <span class="font-weight-bold">24.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q25}}
+                            <span class="font-weight-bold">25.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -151,15 +279,31 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a7 ?>",
-         $q2 = "<?php echo $a1 ?>",
-         $q3 = "<?php echo $a2 ?>",
-         $q4 = "<?php echo $a5 ?>",
-         $q5 = "<?php echo $a6 ?>",
-         $q6 = "<?php echo $a9 ?>",
-         $q7 = "<?php echo $a7 ?>",
-         $q8 = "<?php echo $a3 ?>",
-         $q9 = "<?php echo $a4 ?>",
+         $q1 = "<?php echo $a20 ?>",
+         $q2 = "<?php echo $a14 ?>",
+         $q3 = "<?php echo $a10 ?>",
+         $q4 = "<?php echo $a3 ?>",
+         $q5 = "<?php echo $a7 ?>",
+         $q6 = "<?php echo $a12 ?>",
+         $q7 = "<?php echo $a14 ?>",
+         $q8 = "<?php echo $a21 ?>",
+         $q9 = "<?php echo $a17 ?>",
+         $q10 = "<?php echo $a22 ?>",
+         $q11 = "<?php echo $a24 ?>",
+         $q12 = "<?php echo $a25 ?>",
+         $q13 = "<?php echo $a2 ?>",
+         $q14 = "<?php echo $a14 ?>",
+         $q15 = "<?php echo $a18 ?>",
+         $q16 = "<?php echo $a8 ?>",
+         $q17 = "<?php echo $a11 ?>",
+         $q18 = "<?php echo $a4 ?>",
+         $q19 = "<?php echo $a9 ?>",
+         $q20 = "<?php echo $a1 ?>",
+         $q21 = "<?php echo $a13 ?>",
+         $q22 = "<?php echo $a5 ?>",
+         $q23 = "<?php echo $a23 ?>",
+         $q24 = "<?php echo $a19 ?>",
+         $q25 = "<?php echo $a6 ?>",
     ];
 
     console.log(answers);

@@ -38,52 +38,57 @@
 
 </style>
 @php
-    $q1 = "Almost ten per cent of the earth's surface is covered by tropical rainforests. These forests contain a wide variety of natural";
-    $q2 = ". Many people suggest that these";
-    $q3 = "should be";
-    $q4 = "to make life more comfortable and convenient for humans. Other people, however, are not in favour of such development. This essay will consider arguments from both points of view. The rainforests of the world contain a vast amount of natural";
-    $q5 = "which could be";
-    $q6 = "for the development of mankind. These";
-    $q7 = "include deposits of fossil fuels such as coal, gas and oil, as well as large amounts of valuable minerals such as gold. Since the world is running out of fossil fuels, it seems sensible to make use of these";
-    $q8 = "hidden deep inside the jungle. Getting";
-    $q9 = "to these";
-    $q10 = "would mean cutting down all the trees, which would be very expensive but the cost of this could be";
-    $q11 = "by making use of the forest timber. Clearing the forests would result in a number of";
-    $q12 = ". Firstly, the cleared land could be used to develop";
-    $q13 = "and settlements for people. This could prevent over-crowding in cities. In addition, the dangerous creatures that live in the forests could be eradicated. A further";
-    $q14 = "would be the possibility of planting crops for food and bio-fuel such as palm oil, which has been done in countries such as Malaysia and Indonesia. There are, however, some very strong arguments in favour of preserving the rainforests. First of all, the jungles provide a home for millions of indigenous people who";
-    $q15 = "on the forest for their food and shelter. These people have lived in the rainforests for many millions of years and help";
-    $q16 = "a healthy balance between humans and plants and animals that live there. In addition, many of the plants that grow there are important for their medicinal value or for use in industrial products. Probably the most important argument, however, is the fact that rainforests protect the world from natural disasters as a result of climate change. The forests help";
-    $q17 = "a healthy balance by absorbing carbon dioxide in the atmosphere and by producing oxygen for people to breathe. The trees also hold soil together and prevent soil";
-    $q18 = "which can result in land-slides and flooding. All in all, then, it seems that the conservation of the rainforests is very important for the";
-    $q19 = "future of mankind. Clearing rainforests for short-term";
-    $q20 = "";
-    $q21 = "will lead to the extinction of humans, flora and fauna that live there, and possibly even to the destruction of the";
-    $q22 = "";
-    $end = "itself.";
-
-    $a1 = "access";
-    $a2 = "benefit";
+$q1 = "It has become common practice recently for young people to delay entry into university so that they have the opportunity to travel around the world or get some work experience before they start their tertiary education course. Taking a breather before university can have";
+    $q2 = "results but there are also some disadvantages to this, too. There are a number of advantages of postponing university entrance. First of all, the year off will give young people the chance to";
+    $q3 = "their mind and broaden their horizons in terms of career opportunities. After finishing high school, many students have had little hands-on experience of real life situations. By travelling around the world they will have to confront a variety of different situations. What's more they will be faced with these problems without the";
+    $q4 = "and support of their family, which is likely to result in greater independence and an increase in self-confidence. As the year goes by, the";
+    $q5 = "and";
+    $q6 = "of the young person may";
+    $q7 = "and career preferences may change. It is important that young people make these discoveries before it is too late. There are, though, a number of arguments against taking a year off before university. First of all, the";
+    $q8 = "";
+    $q9 = "must be considered. By delaying university entrance, the young person may find that the";
+    $q10 = "' tuition";
+    $q11 = "may have risen";
+    $q12 = "by the time (s)he is ready to start studying. Evan a modest rise of 5%25 can lead to";
+    $q13 = "";
+    $q14 = "increases over a four year study";
+    $q15 = ". In addition, the cost of the gap year is likely to be substantial, too. Travelling around is not cheap, even if there is the possibility to do some part-time work along the way. Another consideration is the fact that the young person may enjoy the time off studying so much that (s)he decides not to go to university after all. Once the momentum of studying at school has gone, it may be difficult to find the";
+    $q16 = "for further study. This may well";
+    $q17 = "badly on future career";
+    $q18 = ". In";
+    $q19 = ", while there are certain";
+    $q20 = "of taking a gap year, the experience is not without risk. It is important to understand the reasons for postponing university entrance and to be";
+    $q21 = "of the";
+    $q22 = "dangers of such an";
+    $q23 = ". With careful planning, however, the experience can certainly";
+    $q24 = "future";
+    $q25 = "";
+    $end = ".";
+    $a1 = "aspects";
+    $a2 = "aware";
     $a3 = "benefits";
-    $a4 = "benefits";
-    $a5 = "communities";
-    $a6 = "economic";
-    $a7 = "environment";
-    $a8 = "erosion";
-    $a9 = "exploited";
-    $a10 = "exploited";
-    $a11 = "global";
-    $a12 = "maintain";
-    $a13 = "maintain";
-    $a14 = "minimized";
-    $a15 = "rely";
-    $a16 = "resources";
-    $a17 = "resources";
-    $a18 = "resources";
-    $a19 = "resources";
-    $a20 = "resources";
-    $a21 = "resources";
-    $a22 = "sustainable";
+    $a4 = "compounded";
+    $a5 = "conclusion";
+    $a6 = "considerably";
+    $a7 = "enhance";
+    $a8 = "evolve";
+    $a9 = "expand";
+    $a10 = "fee";
+    $a11 = "fees";
+    $a12 = "financial";
+    $a13 = "impact";
+    $a14 = "institutions";
+    $a15 = "job";
+    $a16 = "motivation";
+    $a17 = "notions";
+    $a18 = "options";
+    $a19 = "period";
+    $a20 = "perspectives";
+    $a21 = "positive";
+    $a22 = "potential";
+    $a23 = "prospects";
+    $a24 = "security";
+    $a25 = "undertaking";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -116,6 +121,9 @@
                                 <div class="drag">{{ $a20 }}</div>
                                 <div class="drag">{{ $a21 }}</div>
                                 <div class="drag">{{ $a22 }}</div>
+                                <div class="drag">{{ $a23 }}</div>
+                                <div class="drag">{{ $a24 }}</div>
+                                <div class="drag">{{ $a25 }}</div>
                             </div>
                         </div>
                     </div>
@@ -235,6 +243,21 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
+                            {{$q23}}
+                            <span class="font-weight-bold">23.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q24}}
+                            <span class="font-weight-bold">24.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q25}}
+                            <span class="font-weight-bold">25.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -255,28 +278,31 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a16 ?>",
-         $q2 = "<?php echo $a16 ?>",
-         $q3 = "<?php echo $a9 ?>",
-         $q4 = "<?php echo $a16 ?>",
-         $q5 = "<?php echo $a9 ?>",
-         $q6 = "<?php echo $a16 ?>",
-         $q7 = "<?php echo $a16 ?>",
+        $q1 = "<?php echo $a21 ?>",
+         $q2 = "<?php echo $a9 ?>",
+         $q3 = "<?php echo $a24 ?>",
+         $q4 = "<?php echo $a17 ?>",
+         $q5 = "<?php echo $a20 ?>",
+         $q6 = "<?php echo $a8 ?>",
+         $q7 = "<?php echo $a12 ?>",
          $q8 = "<?php echo $a1 ?>",
-         $q9 = "<?php echo $a16 ?>",
-         $q10 = "<?php echo $a14 ?>",
-         $q11 = "<?php echo $a3 ?>",
-         $q12 = "<?php echo $a5 ?>",
-         $q13 = "<?php echo $a2 ?>",
-         $q14 = "<?php echo $a15 ?>",
-         $q15 = "<?php echo $a12 ?>",
-         $q16 = "<?php echo $a12 ?>",
-         $q17 = "<?php echo $a8 ?>",
-         $q18 = "<?php echo $a22 ?>",
-         $q19 = "<?php echo $a6 ?>",
-         $q20 = "<?php echo $a3 ?>",
-         $q21 = "<?php echo $a11 ?>",
-         $q22 = "<?php echo $a7 ?>",
+         $q9 = "<?php echo $a14 ?>",
+         $q10 = "<?php echo $a11 ?>",
+         $q11 = "<?php echo $a6 ?>",
+         $q12 = "<?php echo $a4 ?>",
+         $q13 = "<?php echo $a10 ?>",
+         $q14 = "<?php echo $a19 ?>",
+         $q15 = "<?php echo $a16 ?>",
+         $q16 = "<?php echo $a13 ?>",
+         $q17 = "<?php echo $a18 ?>",
+         $q18 = "<?php echo $a5 ?>",
+         $q19 = "<?php echo $a3 ?>",
+         $q20 = "<?php echo $a2 ?>",
+         $q21 = "<?php echo $a22 ?>",
+         $q22 = "<?php echo $a25 ?>",
+         $q23 = "<?php echo $a7 ?>",
+         $q24 = "<?php echo $a15 ?>",
+         $q25 = "<?php echo $a23 ?>",
     ];
 
     console.log(answers);

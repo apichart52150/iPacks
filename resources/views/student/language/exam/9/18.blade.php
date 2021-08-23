@@ -38,30 +38,56 @@
 
 </style>
 @php
-    $q1 = "Some parents believe that watching television is bad for their children. So they try to";
-    $q2 = "their children from watching TV. However, other parents think that there is nothing bad in watching TV. Personally, I think that watching TV brings children only";
-    $q3 = "unless they sit in front of TV set less then a";
-    $q4 = "of hours daily. For the following reasons, which I will mention below, I believe that television plays an essential";
-    $q5 = "in a child's development. First of all, television helps a child to extent his or her";
-    $q6 = "of interests. Children can find out many new things and make many exciting discoveries for themselves. In addition to these practical";
-    $q7 = "television improves children's vocabulary, their memory and gives them the opportunity to gain more knowledge. I think it is essential for a child. Of course, someone can say that there are plenty of different sources of information such as books and teachers. But I think in our modern world children must learn faster and use all";
-    $q8 = "";
-    $q9 = "in order to succeed. Second, watching documentary programs helps children to learn more about wild life, our";
-    $q10 = "and about the importance of preserving our forest and wild animals that live there. Scientists say that a child should not watch TV more then 40 minutes";
-    $q11 = ". For example, my mother always made us have a break after watching TV more then half an hour and let our eyes rest for several minutes before turning on the TV again. I think it is the best solution. To";
-    $end = "up, I believe that television gives children and all people the opportunity to learn what cannot be learnt from books. Television and movies in particular allow people to feel the reality and see what they will most likely not be able to see in their lives. Personally, when I was a child I liked to watch cognitive programs about wild animals. Unfortunately, my family had only one TV, but these programs were the only ones we all wanted to watch. So, we gathered in our living room and watched them in complete silence and I always remember those moments with a smile on my face.";
+    $q1 = "There have been immense advances in";
+    $q2 = "in most";
+    $q3 = "of people's lives, especially in the field of education. Nowadays, an increasing number of students";
+    $q4 = "on";
+    $q5 = "for";
+    $q6 = "and to produce a perfect paper for school";
+    $q7 = ". Others have decided to leave the original way of learning and to get knowledge through online schools. These changes in the learning";
+    $q8 = "have brought a special concern regarding the possible decrease of importance of teachers in the classroom. Some people believe the";
+    $q9 = "of teachers started to fade because";
+    $q10 = "have been helping some students to progress in their studies more quickly than when compared with a";
+    $q11 = "classroom. For example, in the same classroom, students have different intellectual";
+    $q12 = ", thus some would be tied to a slow advance in their studies because of others' incapacity of understanding. In this way, pupils could progress in their";
+    $q13 = "of knowledge at their own pace using";
+    $q14 = "instead of learning from teachers. However, the presence of a teacher is essential for students because the human";
+    $q15 = "influences them in";
+    $q16 = "ways. Firstly, students realize that they are not dealing with a machine but with a human being who deserves attention and respect. They also learn the importance of studying in group and respect other students, which helps them to improve their social skills. Moreover, teachers are";
+    $q17 = "in the learning";
+    $q18 = "because they";
+    $q19 = "some student's deficiencies and help them to solve their problems by repeating the same explanation, giving extra exercises or even suggesting a private tutor.";
+    $q20 = ", students can have a bigger chance not to fail in a subject. In";
+    $q21 = ", the";
+    $q22 = "for teachers in the learning";
+    $q23 = "is still very important and it will continue to be in the future because no machine can replace the human";
+    $q24 = "and its";
+    $end = ".";
 
-    $a1 = "benefits";
-    $a2 = "benefits";
-    $a3 = "contemporary";
-    $a4 = "couple";
-    $a5 = "environment";
-    $a6 = "range";
-    $a7 = "restrict";
-    $a8 = "role";
-    $a9 = "successively";
-    $a10 = "sum";
-    $a11 = "technology";
+    $a1 = "acknowledge";
+    $a2 = "acquisition";
+    $a3 = "aspects";
+    $a4 = "capacities";
+    $a5 = "computers";
+    $a6 = "computers";
+    $a7 = "computers";
+    $a8 = "conclusion";
+    $a9 = "consequences";
+    $a10 = "contact";
+    $a11 = "positive";
+    $a12 = "hence";
+    $a13 = "interaction";
+    $a14 = "process";
+    $a15 = "process";
+    $a16 = "process";
+    $a17 = "projects";
+    $a18 = "rely";
+    $a19 = "required";
+    $a20 = "research";
+    $a21 = "role";
+    $a22 = "role";
+    $a23 = "technology";
+    $a24 = "traditional";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -83,6 +109,19 @@
                                 <div class="drag">{{ $a9 }}</div>
                                 <div class="drag">{{ $a10 }}</div>
                                 <div class="drag">{{ $a11 }}</div>
+                                <div class="drag">{{ $a12 }}</div>
+                                <div class="drag">{{ $a13 }}</div>
+                                <div class="drag">{{ $a14 }}</div>
+                                <div class="drag">{{ $a15 }}</div>
+                                <div class="drag">{{ $a16 }}</div>
+                                <div class="drag">{{ $a17 }}</div>
+                                <div class="drag">{{ $a18 }}</div>
+                                <div class="drag">{{ $a19 }}</div>
+                                <div class="drag">{{ $a20 }}</div>
+                                <div class="drag">{{ $a21 }}</div>
+                                <div class="drag">{{ $a22 }}</div>
+                                <div class="drag">{{ $a23 }}</div>
+                                <div class="drag">{{ $a24 }}</div>
                             </div>
                         </div>
                     </div>
@@ -147,6 +186,71 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q13}}
+                            <span class="font-weight-bold">13.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q14}}
+                            <span class="font-weight-bold">14.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q15}}
+                            <span class="font-weight-bold">15.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q16}}
+                            <span class="font-weight-bold">16.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q17}}
+                            <span class="font-weight-bold">17.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q18}}
+                            <span class="font-weight-bold">18.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q19}}
+                            <span class="font-weight-bold">19.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q20}}
+                            <span class="font-weight-bold">20.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q21}}
+                            <span class="font-weight-bold">21.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q22}}
+                            <span class="font-weight-bold">22.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q23}}
+                            <span class="font-weight-bold">23.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q24}}
+                            <span class="font-weight-bold">24.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -167,17 +271,30 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a7 ?>",
-         $q2 = "<?php echo $a1 ?>",
-         $q3 = "<?php echo $a4 ?>",
-         $q4 = "<?php echo $a8 ?>",
-         $q5 = "<?php echo $a6 ?>",
-         $q6 = "<?php echo $a1 ?>",
-         $q7 = "<?php echo $a3 ?>",
-         $q8 = "<?php echo $a11 ?>",
+         $q1 = "<?php echo $a23 ?>",
+         $q2 = "<?php echo $a3 ?>",
+         $q3 = "<?php echo $a18 ?>",
+         $q4 = "<?php echo $a5 ?>",
+         $q5 = "<?php echo $a20 ?>",
+         $q6 = "<?php echo $a17 ?>",
+         $q7 = "<?php echo $a14 ?>",
+         $q8 = "<?php echo $a21 ?>",
          $q9 = "<?php echo $a5 ?>",
-         $q10 = "<?php echo $a9 ?>",
-         $q11 = "<?php echo $a10 ?>",
+         $q10 = "<?php echo $a24 ?>",
+         $q11 = "<?php echo $a4 ?>",
+         $q12 = "<?php echo $a2 ?>",
+         $q13 = "<?php echo $a5 ?>",
+         $q14 = "<?php echo $a10 ?>",
+         $q15 = "<?php echo $a11 ?>",
+         $q16 = "<?php echo $a19 ?>",
+         $q17 = "<?php echo $a14 ?>",
+         $q18 = "<?php echo $a1 ?>",
+         $q19 = "<?php echo $a12 ?>",
+         $q20 = "<?php echo $a8 ?>",
+         $q21 = "<?php echo $a21 ?>",
+         $q22 = "<?php echo $a14 ?>",
+         $q23 = "<?php echo $a13 ?>",
+         $q24 = "<?php echo $a9 ?>",
     ];
 
     console.log(answers);

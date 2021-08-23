@@ -38,106 +38,46 @@
 
 </style>
 @php
-    $q1 = "Education is a very important";
-    $q2 = "around the";
-    $q3 = ". A nation's development";
-    $q4 = "on the government's";
-    $q5 = "in quality education. Effective learning depends to a large extent on the";
-    $q6 = "and teaching";
-    $q7 = "used in schools. Some nations prefer a";
-    $q8 = "learning";
-    $q9 = ", where the teacher plays a central";
-    $q10 = ". In other countries, a student-centred";
-    $q11 = "is preferred. This essay will outline the strengths and weaknesses of both";
-    $q12 = ". There are some advantages of a";
-    $q13 = ", teacher-focused";
-    $q14 = "to learning. In many countries, there is a heavy";
-    $q15 = "on teacher";
-    $q16 = ". A typical classroom";
-    $q17 = "would";
-    $q18 = "the teacher giving a";
-    $q19 = "about the";
-    $q20 = ", with the students copying notes and rote-learning the content for homework. While this";
-    $q21 = "";
-    $q22 = "the students only tangentially since they play a very";
-    $q23 = "";
-    $q24 = "in the learning";
-    $q25 = ", many learners feel comfortable with this";
-    $q26 = "and have developed strengths which suit this";
-    $q27 = "of teaching. They enjoy the heavy";
-    $q28 = "on teacher";
-    $q29 = ". In addition, this";
-    $q30 = "of teaching is relatively easy for the teacher. Lesson planning is simple and";
-    $q31 = ", and the";
-    $q32 = "amount of time can be spent on feeding the learners the information they need to pass the end of year examinations. There are, however, limitations to this";
-    $q33 = "of teaching. In less";
-    $q34 = "classrooms, the";
-    $q35 = "is on learner autonomy. Learners are encouraged to take a more active";
-    $q36 = "in their own learning";
-    $q37 = ". In such a learning";
-    $q38 = ", the end content is not as important as the learning";
-    $q39 = "which";
-    $q40 = "during the lesson. Skills such as the ability to";
-    $q41 = ",";
-    $q42 = "and question are more important than the ability to learn something by heart. Many people who prefer a student-centred";
-    $q43 = "argue that today's society needs people who are able to";
-    $q44 = "self-regulation and the ability to be proactive rather than people whose heads are simply filled with information. To";
-    $q45 = "up, there are both strengths sand weaknesses to both";
-    $q46 = ". Since learners have different preferences regarding learning";
-    $q47 = ", it makes sense to";
-    $q48 = "";
-    $q49 = "of both teaching";
-    $end = "in the classroom, so that all learners can make full use of their learning strengths.";
+    $q1 = "When it comes to children's education, parents are faced with a lot of choices. They can choose to send their children to a government or private school or they can opt to teach their children themselves in their own home. There are advantages and disadvantages of both";
+    $q2 = ", and this essay will outline some of these. There are";
+    $q3 = "advantages of choosing to send your child to a formal school learning";
+    $q4 = ". First of all, the school is staffed by trained specialists who can teach a variety of subjects with a";
+    $q5 = "of educational";
+    $q6 = "";
+    $q7 = ". In addition, schools provide a variety of extra-curricular activities such as sports and clubs which will help children to develop in non-academic fields. Probably the most important";
+    $q8 = "of school-life, however, is the fact that it gives young children the chance to meet other young people and learn how to socialise at an early age. Socialisation at school also helps develop other skills such as team-work skills and group";
+    $q9 = "skills. There are, however, a number of arguments in favour of educating children in the safety and comfort of one's own home. First of all, although school gives the opportunity for children to meet and socialise with other children it also";
+    $q10 = "them to";
+    $q11 = "such as bullying, which can have a long-term detrimental effect on a child's development. In addition, school classes tend to be rather large with up to 50 students in a class. If that case, it is easy for a child with learning difficulties to slip through the system and not receive the special attention he/she needs. Learning at home is also much less";
+    $q12 = "in terms of the competitive nature of schools. Some young learners do not fare well in a competitive learning";
+    $q13 = "and prefer the more";
+    $q14 = "";
+    $q15 = "of the home. From the arguments above, it is";
+    $q16 = "that there are pros and cons of choosing to educate children at school or at home. An important";
+    $q17 = "in reaching such a decision will depend on the nature of the child, and the quality of the schools";
+    $q18 = "for the child in the neighbourhood. At the end of the day, the most important";
+    $q19 = "is how to produce a well-balanced happy";
+    $end = ".";
 
-    $a1 = "analyse";
-    $a2 = "approach";
-    $a3 = "approach";
-    $a4 = "approach";
-    $a5 = "approach";
-    $a6 = "demonstrate";
-    $a7 = "elements";
-    $a8 = "environment";
-    $a9 = "evaluate";
-    $a10 = "focus";
-    $a11 = "focused";
-    $a12 = "globe";
-    $a13 = "incorporate";
-    $a14 = "input";
-    $a15 = "input";
-    $a16 = "investment";
-    $a17 = "involve";
-    $a18 = "involves";
-    $a19 = "issue";
-    $a20 = "lecture";
-    $a21 = "maximum";
-    $a22 = "method";
-    $a23 = "methodologies";
-    $a24 = "methodologies";
-    $a25 = "methodology";
-    $a26 = "occur";
-    $a27 = "passive";
-    $a28 = "process";
-    $a29 = "process";
-    $a30 = "processes";
-    $a31 = "reliance";
-    $a32 = "reliance";
-    $a33 = "relies";
-    $a34 = "role";
-    $a35 = "role";
-    $a36 = "role";
-    $a37 = "traditional";
-    $a38 = "traditional";
-    $a39 = "advantages";
-    $a40 = "scenario";
-    $a41 = "style";
-    $a42 = "style";
-    $a43 = "style";
-    $a44 = "style";
-    $a45 = "styles";
-    $a46 = "styles";
-    $a47 = "styles";
-    $a48 = "sum";
-    $a49 = "topic";
+    $a1 = "approach";
+    $a2 = "aspect";
+    $a3 = "available";
+    $a4 = "available";
+    $a5 = "dynamic";
+    $a6 = "environment";
+    $a7 = "environment";
+    $a8 = "equipment";
+    $a9 = "exposes";
+    $a10 = "factor";
+    $a11 = "factor";
+    $a12 = "individual";
+    $a13 = "issues";
+    $a14 = "obvious";
+    $a15 = "obvious";
+    $a16 = "options";
+    $a17 = "range";
+    $a18 = "relaxed";
+    $a19 = "stressful";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -167,36 +107,6 @@
                                 <div class="drag">{{ $a17 }}</div>
                                 <div class="drag">{{ $a18 }}</div>
                                 <div class="drag">{{ $a19 }}</div>
-                                <div class="drag">{{ $a20 }}</div>
-                                <div class="drag">{{ $a21 }}</div>
-                                <div class="drag">{{ $a22 }}</div>
-                                <div class="drag">{{ $a23 }}</div>
-                                <div class="drag">{{ $a24 }}</div>
-                                <div class="drag">{{ $a25 }}</div>
-                                <div class="drag">{{ $a26 }}</div>
-                                <div class="drag">{{ $a27 }}</div>
-                                <div class="drag">{{ $a28 }}</div>
-                                <div class="drag">{{ $a29 }}</div>
-                                <div class="drag">{{ $a30 }}</div>
-                                <div class="drag">{{ $a31 }}</div>
-                                <div class="drag">{{ $a32 }}</div>
-                                <div class="drag">{{ $a33 }}</div>
-                                <div class="drag">{{ $a34 }}</div>
-                                <div class="drag">{{ $a35 }}</div>
-                                <div class="drag">{{ $a36 }}</div>
-                                <div class="drag">{{ $a37 }}</div>
-                                <div class="drag">{{ $a38 }}</div>
-                                <div class="drag">{{ $a39 }}</div>
-                                <div class="drag">{{ $a40 }}</div>
-                                <div class="drag">{{ $a41 }}</div>
-                                <div class="drag">{{ $a42 }}</div>
-                                <div class="drag">{{ $a43 }}</div>
-                                <div class="drag">{{ $a44 }}</div>
-                                <div class="drag">{{ $a45 }}</div>
-                                <div class="drag">{{ $a46 }}</div>
-                                <div class="drag">{{ $a47 }}</div>
-                                <div class="drag">{{ $a48 }}</div>
-                                <div class="drag">{{ $a49 }}</div>
                             </div>
                         </div>
                     </div>
@@ -301,156 +211,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q20}}
-                            <span class="font-weight-bold">20.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q21}}
-                            <span class="font-weight-bold">21.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q22}}
-                            <span class="font-weight-bold">22.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q23}}
-                            <span class="font-weight-bold">23.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q24}}
-                            <span class="font-weight-bold">24.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q25}}
-                            <span class="font-weight-bold">25.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q26}}
-                            <span class="font-weight-bold">26.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q27}}
-                            <span class="font-weight-bold">27.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q28}}
-                            <span class="font-weight-bold">28.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q29}}
-                            <span class="font-weight-bold">29.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q30}}
-                            <span class="font-weight-bold">30.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q31}}
-                            <span class="font-weight-bold">31.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q32}}
-                            <span class="font-weight-bold">32.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q33}}
-                            <span class="font-weight-bold">33.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q34}}
-                            <span class="font-weight-bold">34.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q35}}
-                            <span class="font-weight-bold">35.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q36}}
-                            <span class="font-weight-bold">36.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q37}}
-                            <span class="font-weight-bold">37.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q38}}
-                            <span class="font-weight-bold">38.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q39}}
-                            <span class="font-weight-bold">39.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q40}}
-                            <span class="font-weight-bold">40.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q41}}
-                            <span class="font-weight-bold">41.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q42}}
-                            <span class="font-weight-bold">42.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q43}}
-                            <span class="font-weight-bold">43.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q44}}
-                            <span class="font-weight-bold">44.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q45}}
-                            <span class="font-weight-bold">45.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q46}}
-                            <span class="font-weight-bold">46.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q47}}
-                            <span class="font-weight-bold">47.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q48}}
-                            <span class="font-weight-bold">48.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q49}}
-                            <span class="font-weight-bold">49.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -471,55 +231,25 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a19 ?>",
-         $q2 = "<?php echo $a12 ?>",
-         $q3 = "<?php echo $a33 ?>",
-         $q4 = "<?php echo $a16 ?>",
-         $q5 = "<?php echo $a25 ?>",
-         $q6 = "<?php echo $a45 ?>",
-         $q7 = "<?php echo $a37 ?>",
-         $q8 = "<?php echo $a41 ?>",
-         $q9 = "<?php echo $a34 ?>",
-         $q10 = "<?php echo $a2 ?>",
-         $q11 = "<?php echo $a23 ?>",
-         $q12 = "<?php echo $a39 ?>",
-         $q13 = "<?php echo $a2 ?>",
-         $q14 = "<?php echo $a31 ?>",
+         $q1 = "<?php echo $a16 ?>",
+         $q2 = "<?php echo $a14 ?>",
+         $q3 = "<?php echo $a6 ?>",
+         $q4 = "<?php echo $a17 ?>",
+         $q5 = "<?php echo $a8 ?>",
+         $q6 = "<?php echo $a3 ?>",
+         $q7 = "<?php echo $a2 ?>",
+         $q8 = "<?php echo $a5 ?>",
+         $q9 = "<?php echo $a9 ?>",
+         $q10 = "<?php echo $a13 ?>",
+         $q11 = "<?php echo $a19 ?>",
+         $q12 = "<?php echo $a6 ?>",
+         $q13 = "<?php echo $a18 ?>",
+         $q14 = "<?php echo $a1 ?>",
          $q15 = "<?php echo $a14 ?>",
-         $q16 = "<?php echo $a40 ?>",
-         $q17 = "<?php echo $a17 ?>",
-         $q18 = "<?php echo $a20 ?>",
-         $q19 = "<?php echo $a49 ?>",
-         $q20 = "<?php echo $a2 ?>",
-         $q21 = "<?php echo $a18 ?>",
-         $q22 = "<?php echo $a27 ?>",
-         $q23 = "<?php echo $a34 ?>",
-         $q24 = "<?php echo $a28 ?>",
-         $q25 = "<?php echo $a22 ?>",
-         $q26 = "<?php echo $a41 ?>",
-         $q27 = "<?php echo $a31 ?>",
-         $q28 = "<?php echo $a14 ?>",
-         $q29 = "<?php echo $a41 ?>",
-         $q30 = "<?php echo $a11 ?>",
-         $q31 = "<?php echo $a21 ?>",
-         $q32 = "<?php echo $a41 ?>",
-         $q33 = "<?php echo $a37 ?>",
-         $q34 = "<?php echo $a10 ?>",
-         $q35 = "<?php echo $a34 ?>",
-         $q36 = "<?php echo $a28 ?>",
-         $q37 = "<?php echo $a8 ?>",
-         $q38 = "<?php echo $a30 ?>",
-         $q39 = "<?php echo $a26 ?>",
-         $q40 = "<?php echo $a1 ?>",
-         $q41 = "<?php echo $a9 ?>",
-         $q42 = "<?php echo $a2 ?>",
-         $q43 = "<?php echo $a6 ?>",
-         $q44 = "<?php echo $a48 ?>",
-         $q45 = "<?php echo $a23 ?>",
-         $q46 = "<?php echo $a45 ?>",
-         $q47 = "<?php echo $a13 ?>",
-         $q48 = "<?php echo $a7 ?>",
-         $q49 = "<?php echo $a45 ?>",
+         $q16 = "<?php echo $a10 ?>",
+         $q17 = "<?php echo $a3 ?>",
+         $q18 = "<?php echo $a10 ?>",
+         $q19 = "<?php echo $a12 ?>",
     ];
 
     console.log(answers);

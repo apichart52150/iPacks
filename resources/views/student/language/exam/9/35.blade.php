@@ -38,54 +38,38 @@
 
 </style>
 @php
-    $q1 = "";
-    $q2 = "is a";
-    $q3 = "of advancement and increase in";
-    $q4 = "between the worlds' countries and people. It";
-    $q5 = "";
-    $q6 = ", knowledge and skills. GlobalIzation is gaining speed over the entire world. It has attracted enough world attention needed from international organizations in";
-    $q7 = "and encouraging human rights and freedom , opportunities for";
-    $q8 = ", social and";
-    $q9 = "rights. However, there are some countries that are missing out on the opportunities that are offered and it's taken as a big problem for their country. They are the poorer countries that are not connected to the people";
-    $q10 = "and their people are unskilled due to the lack of knowledge and";
-    $q11 = ". They are also unable to trade with the other countries which are richer and larger as they are unable to meet the demands";
-    $q12 = "on them. They also will not have the opportunities and the";
-    $q13 = "that are";
+    $q1 = "The linegraph describes the growth of wages in Somecountry from 1993 to 2003. The growth started at two";
+    $q2 = "in 1993, but it did not stay there very long; it rapidly doubled in 1994. Further on, the figure";
+    $q3 = "to three";
+    $q4 = "in 1995, stayed steady for a year, before it";
+    $q5 = "to rise slowly ending up at just under four";
+    $q6 = "in 1997. 1998 was the best year, when the wages peaked at six";
+    $q7 = ". However, after 1998 the wages";
+    $q8 = "nearly every year. Only a year after, the";
+    $q9 = "dropped to well under three";
+    $q10 = ", and stayed there on";
+    $q11 = "three";
+    $q12 = "till 2000. In 2002 the wages reached the trough of just one";
+    $q13 = "growth. Fortunately the growth rose in 2003 to just under two";
     $q14 = ".";
-    $q15 = "has also encouraged crime, like the";
-    $q16 = "trade in drug trafficking around the world by air, sea and land. This has";
-    $q17 = "human smuggling. This has brought about a lot of problems to the country and the family of the drug addicts. This will also lead to other crimes like robbery and violence in the country. Another";
-    $q18 = "side of";
-    $q19 = "is the dumping of the dangerous waste into the river, sea or the ocean. This will Affect the aquatic creatures, contaminate the water and cause harm to the people too. To";
-    $q20 = ",";
-    $q21 = "has played an";
-    $q22 = "part in the world's economics but the international organization should also not forget the poorer countries and the developed countries should also tackle the other";
-    $q23 = "side that";
-    $end = "the world.";
+    $q15 = ", the growth rate in wages in Somecountry";
+    $end = "striking changes through the ten years.";
 
-    $a1 = "affects";
-    $a2 = "challenges";
-    $a3 = "communication";
-    $a4 = "conclude";
-    $a5 = "cultural";
-    $a6 = "economic";
-    $a7 = "enormous";
-    $a8 = "globalization";
-    $a9 = "globalization";
-    $a10 = "globalization";
-    $a11 = "globalization";
-    $a12 = "globally";
-    $a13 = "illegal";
-    $a14 = "imposed";
-    $a15 = "interaction";
-    $a16 = "involved";
-    $a17 = "involves";
-    $a18 = "negative";
-    $a19 = "negative";
-    $a20 = "process";
-    $a21 = "promoting";
-    $a22 = "required";
-    $a23 = "technology";
+    $a1 = "approximately";
+    $a2 = "declined";
+    $a3 = "declined";
+    $a4 = "demonstrated";
+    $a5 = "overall";
+    $a6 = "percent";
+    $a7 = "percent";
+    $a8 = "percent";
+    $a9 = "percent";
+    $a10 = "percent";
+    $a11 = "percent";
+    $a12 = "percent";
+    $a13 = "percent";
+    $a14 = "percentage";
+    $a15 = "proceeded";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -94,6 +78,9 @@
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
+                        <div class="w-100">
+                            <img src="{{asset('public/img_lang/AWL1/AWL1_131.png') }}" class="w-100" alt="">
+                        </div>
                         <div class="drag-container">
                             <div class="d-grid grid-5" id="choices">
                                 <div class="drag">{{ $a1 }}</div>
@@ -111,14 +98,6 @@
                                 <div class="drag">{{ $a13 }}</div>
                                 <div class="drag">{{ $a14 }}</div>
                                 <div class="drag">{{ $a15 }}</div>
-                                <div class="drag">{{ $a16 }}</div>
-                                <div class="drag">{{ $a17 }}</div>
-                                <div class="drag">{{ $a18 }}</div>
-                                <div class="drag">{{ $a19 }}</div>
-                                <div class="drag">{{ $a20 }}</div>
-                                <div class="drag">{{ $a21 }}</div>
-                                <div class="drag">{{ $a22 }}</div>
-                                <div class="drag">{{ $a23 }}</div>
                             </div>
                         </div>
                     </div>
@@ -203,46 +182,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q16}}
-                            <span class="font-weight-bold">16.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q17}}
-                            <span class="font-weight-bold">17.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q18}}
-                            <span class="font-weight-bold">18.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q19}}
-                            <span class="font-weight-bold">19.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q20}}
-                            <span class="font-weight-bold">20.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q21}}
-                            <span class="font-weight-bold">21.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q22}}
-                            <span class="font-weight-bold">22.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q23}}
-                            <span class="font-weight-bold">23.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                     </div>
                 </div>
@@ -263,29 +202,21 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a8 ?>",
-         $q2 = "<?php echo $a20 ?>",
-         $q3 = "<?php echo $a15 ?>",
-         $q4 = "<?php echo $a17 ?>",
-         $q5 = "<?php echo $a3 ?>",
-         $q6 = "<?php echo $a21 ?>",
-         $q7 = "<?php echo $a6 ?>",
-         $q8 = "<?php echo $a5 ?>",
-         $q9 = "<?php echo $a12 ?>",
-         $q10 = "<?php echo $a23 ?>",
-         $q11 = "<?php echo $a14 ?>",
-         $q12 = "<?php echo $a2 ?>",
-         $q13 = "<?php echo $a22 ?>",
-         $q14 = "<?php echo $a8 ?>",
-         $q15 = "<?php echo $a13 ?>",
-         $q16 = "<?php echo $a16 ?>",
-         $q17 = "<?php echo $a18 ?>",
-         $q18 = "<?php echo $a8 ?>",
-         $q19 = "<?php echo $a4 ?>",
-         $q20 = "<?php echo $a8 ?>",
-         $q21 = "<?php echo $a7 ?>",
-         $q22 = "<?php echo $a18 ?>",
-         $q23 = "<?php echo $a1 ?>",
+         $q1 = "<?php echo $a6 ?>",
+         $q2 = "<?php echo $a2 ?>",
+         $q3 = "<?php echo $a6 ?>",
+         $q4 = "<?php echo $a15 ?>",
+         $q5 = "<?php echo $a6 ?>",
+         $q6 = "<?php echo $a6 ?>",
+         $q7 = "<?php echo $a2 ?>",
+         $q8 = "<?php echo $a14 ?>",
+         $q9 = "<?php echo $a6 ?>",
+         $q10 = "<?php echo $a1 ?>",
+         $q11 = "<?php echo $a6 ?>",
+         $q12 = "<?php echo $a6 ?>",
+         $q13 = "<?php echo $a6 ?>",
+         $q14 = "<?php echo $a5 ?>",
+         $q15 = "<?php echo $a4 ?>",
     ];
 
     console.log(answers);
