@@ -24,7 +24,7 @@
         <div class="col-lg-4">
             <div class="card card-body border-top border-{{$data['color']}} border border-1">
                 <h4 class="card-title text-center">{{$sub_menu->sub_menu_name}}</h4>
-                <a href="audio/{{$sub_menu->sub_menu_type}}/{{$sub_menu->name_audio}}" class="btn btn-{{$data['color']}}">Start Listening</a>
+                <a href="listening/{{$sub_menu->sub_menu_type}}/{{$sub_menu->sub_menu_id}}" class="btn btn-{{$data['color']}}">Start Listening</a>
             </div>
         </div>
     @endforeach

@@ -83,7 +83,7 @@
 		Route::prefix('isac')->namespace('student\isac\listeningController')->group(function () {
 			Route::get('listening', 'HomeController@index')->name('listening');
 			Route::post('submenu', 'HomeController@submenu')->name('sub_menu');
-			Route::get('audio/{id?}/{name?}', 'HomeController@audio')->name('audio/{id?}/{name?}');
+			Route::get('listening/{exam_type}/{exam_id}', 'HomeController@exam')->name('listening/{exam_type}/{exam_id}');
 		});
 
 		Route::prefix('language')->namespace('student\isac\languageController')->group(function () {
