@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Payment;
+namespace App\Http\Controllers\payment;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
 
-class PaymentController extends Controller
+class paymentController extends Controller
 {
     public function form_payment(Request $request){
 

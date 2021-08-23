@@ -23,6 +23,10 @@
 			return view('student.isac.speaking.browser_settings');
 		})->name('browser-settings');
 		
+
+		Route::get('payment/{status}', 'payment\paymentController@form_payment')->name('payment');
+		Route::post('confirm_payment', 'payment\paymentController@payment')->name('confirm_payment');
+
 		Route::get('wait', function() {
 			return view('student.wait');
 		})->name('wait');
@@ -31,8 +35,6 @@
 			return view('student.success');
 		})->name('success');
 
-		Route::get('payment/{status}', 'Payment\PaymentController@form_payment')->name('payment');
-		Route::post('confirm_payment', 'Payment\PaymentController@payment')->name('confirm_payment');
 
 		Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
