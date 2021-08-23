@@ -38,84 +38,128 @@
 
 </style>
 @php
-    $q1 = "With budget airlines travelling";
-    $q2 = "has become easier and cheaper than ever before. Visiting foreign destinations, once the dream of many people, has now become reality. The reality of travelling, however, is not always as pleasant as one expects, and the dream sometimes turns into a nightmare. Modern";
-    $q3 = "such as the internet means that we can now";
-    $q4 = "Places";
-    $q5 = ", and even take part in";
-    $q6 = "tours of those places,";
-    $q7 = "us to experience those places without having to actually travel there. This";
-    $q8 = "has its";
+    $q1 = "";
+    $q2 = "";
+    $q3 = "";
+    $q4 = "";
+    $q5 = "";
+    $q6 = "";
+    $q7 = "";
+    $q8 = "";
     $q9 = "";
-    $q10 = "but there are also drawbacks to";
-    $q11 = "tourism. There can be no doubt that travelling to different countries allows us to experience";
+    $q10 = "";
+    $q11 = "";
     $q12 = "";
-    $q13 = "at first-hand. Each country has its own";
-    $q14 = "atmosphere,";
-    $q15 = "by a mixture of smells, tastes, climate and";
-    $q16 = ". In addition, the country's";
-    $q17 = "heritage";
-    $q18 = ", folklore and";
-    $q19 = "provide an";
-    $q20 = "into the nation's history and give an";
-    $q21 = "of the people's character. The language, also, can be heard as it is spoken in its natural";
-    $q22 = ", and continued";
-    $q23 = " to the language is likely to result in some learning of that language. This real-life experience is likely to have a long-lasting effect. However, the effect may not always be a pleasant one as there are many problems which can";
+    $q13 = "";
+    $q14 = "";
+    $q15 = "";
+    $q16 = "";
+    $q17 = "";
+    $q18 = "";
+    $q19 = "";
+    $q20 = "";
+    $q21 = "";
+    $q22 = "";
+    $q23 = "";
     $q24 = "";
-    $q25 = "travel. The practicalities of";
-    $q26 = "visas and other bureaucratic";
-    $q27 = "can take the edge off the trip even before you set off. Travel logistics such as making flight connections, being stranded at airports or docks due to bad weather or strikes also add to the frustration of the reality. In addition,";
-    $q28 = "of '";
-    $q29 = "shock' can seriously reduce the novelty value of being in a foreign country. For example, different food, strange customs, unfamiliar";
-    $q30 = "and homesickness can all make your ideal holiday abroad a nightmare. In";
-    $q31 = ",";
-    $q32 = "travel can give valuable";
-    $q33 = "into alien";
-    $q34 = "but the practicalities";
-    $q35 = "in travelling may not suit everyone. Fortunately, with advanced";
-    $q36 = "it is now possible to experience visits to foreign places in the comfort of";
-    $q37 = "tourism. At the end of the day, it is up to each";
-    $q38 = "to choose the";
-    $end = "which best fits their personality.";
+    $q25 = "";
+    $q26 = "";
+    $q27 = "";
+    $q28 = "";
+    $q29 = "";
+    $q30 = "";
+    $q31 = "";
+    $q32 = "";
+    $q33 = "";
+    $q34 = "";
+    $q35 = "";
+    $q36 = "";
+    $q37 = "";
+    $q38 = "";
+    $q39 = "";
+    $q40 = "";
+    $q41 = "";
+    $q42 = "";
+    $q43 = "";
+    $q44 = "";
+    $q45 = "";
+    $q46 = "";
+    $q47 = "";
+    $q48 = "";
+    $q49 = "";
+    $q50 = "";
+    $q51 = "";
+    $q52 = "";
+    $q53 = "";
+    $q54 = "";
+    $q55 = "";
+    $q56 = "";
+    $q57 = "";
+    $q58 = "";
+    $q59 = "";
+    $q60 = "";
+    $end = "";
 
-    $a1 = "accompany";
-    $a2 = "aspects";
-    $a3 = "aspects";
-    $a4 = "concept";
-    $a5 = "conclusion";
-    $a6 = "context";
-    $a7 = "created";
-    $a8 = "cultural";
-    $a9 = "cultural";
-    $a10 = "culture";
-    $a11 = "culture";
-    $a12 = "cultures";
-    $a13 = "currency";
-    $a14 = "distinct";
-    $a15 = "diversity";
-    $a16 = "documents";
-    $a17 = "enabling";
-    $a18 = "exposure";
-    $a19 = "indication";
-    $a20 = "individual";
-    $a21 = "insight";
-    $a22 = "insights";
-    $a23 = "involved";
-    $a24 = "obtaining";
-    $a25 = "option";
-    $a26 = "overseas";
-    $a27 = "overseas";
-    $a28 = "overseas";
-    $a29 = "overseas";
-    $a30 = "positive";
-    $a31 = "research";
-    $a32 = "sites";
-    $a33 = "technology";
-    $a34 = "technology";
-    $a35 = "traditions";
-    $a36 = "virtual";
-    $a37 = "virtual";
-    $a38 = "virtual";
+    $a1 = "";
+    $a2 = "";
+    $a3 = "";
+    $a4 = "";
+    $a5 = "";
+    $a6 = "";
+    $a7 = "";
+    $a8 = "";
+    $a9 = "";
+    $a10 = "";
+    $a11 = "";
+    $a12 = "";
+    $a13 = "";
+    $a14 = "";
+    $a15 = "";
+    $a16 = "";
+    $a17 = "";
+    $a18 = "";
+    $a19 = "";
+    $a20 = "";
+    $a21 = "";
+    $a22 = "";
+    $a23 = "";
+    $a24 = "";
+    $a25 = "";
+    $a26 = "";
+    $a27 = "";
+    $a28 = "";
+    $a29 = "";
+    $a30 = "";
+    $a31 = "";
+    $a32 = "";
+    $a33 = "";
+    $a34 = "";
+    $a35 = "";
+    $a36 = "";
+    $a37 = "";
+    $a38 = "";
+    $a39 = "";
+    $a40 = "";
+    $a41 = "";
+    $a42 = "";
+    $a43 = "";
+    $a44 = "";
+    $a45 = "";
+    $a46 = "";
+    $a47 = "";
+    $a48 = "";
+    $a49 = "";
+    $a50 = "";
+    $a51 = "";
+    $a52 = "";
+    $a53 = "";
+    $a54 = "";
+    $a55 = "";
+    $a56 = "";
+    $a57 = "";
+    $a58 = "";
+    $a59 = "";
+    $a60 = "";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -164,6 +208,28 @@
                                 <div class="drag">{{ $a36 }}</div>
                                 <div class="drag">{{ $a37 }}</div>
                                 <div class="drag">{{ $a38 }}</div>
+                                <div class="drag">{{ $a39 }}</div>
+                                <div class="drag">{{ $a40 }}</div>
+                                <div class="drag">{{ $a41 }}</div>
+                                <div class="drag">{{ $a42 }}</div>
+                                <div class="drag">{{ $a43 }}</div>
+                                <div class="drag">{{ $a44 }}</div>
+                                <div class="drag">{{ $a45 }}</div>
+                                <div class="drag">{{ $a46 }}</div>
+                                <div class="drag">{{ $a47 }}</div>
+                                <div class="drag">{{ $a48 }}</div>
+                                <div class="drag">{{ $a49 }}</div>
+                                <div class="drag">{{ $a50 }}</div>
+                                <div class="drag">{{ $a51 }}</div>
+                                <div class="drag">{{ $a52 }}</div>
+                                <div class="drag">{{ $a53 }}</div>
+                                <div class="drag">{{ $a54 }}</div>
+                                <div class="drag">{{ $a55 }}</div>
+                                <div class="drag">{{ $a56 }}</div>
+                                <div class="drag">{{ $a57 }}</div>
+                                <div class="drag">{{ $a58 }}</div>
+                                <div class="drag">{{ $a59 }}</div>
+                                <div class="drag">{{ $a60 }}</div>
                             </div>
                         </div>
                     </div>
@@ -363,6 +429,116 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
+                            {{$q39}}
+                            <span class="font-weight-bold">39.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q40}}
+                            <span class="font-weight-bold">40.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q41}}
+                            <span class="font-weight-bold">41.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q42}}
+                            <span class="font-weight-bold">42.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q43}}
+                            <span class="font-weight-bold">43.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q44}}
+                            <span class="font-weight-bold">44.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q45}}
+                            <span class="font-weight-bold">45.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q46}}
+                            <span class="font-weight-bold">46.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q47}}
+                            <span class="font-weight-bold">47.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q48}}
+                            <span class="font-weight-bold">48.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q49}}
+                            <span class="font-weight-bold">49.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q50}}
+                            <span class="font-weight-bold">50.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q51}}
+                            <span class="font-weight-bold">51.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q52}}
+                            <span class="font-weight-bold">52.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q53}}
+                            <span class="font-weight-bold">53.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q54}}
+                            <span class="font-weight-bold">54.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q55}}
+                            <span class="font-weight-bold">55.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q56}}
+                            <span class="font-weight-bold">56.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q57}}
+                            <span class="font-weight-bold">57.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q58}}
+                            <span class="font-weight-bold">58.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q59}}
+                            <span class="font-weight-bold">59.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q60}}
+                            <span class="font-weight-bold">60.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
                             {{$end}}
                         </div>
                     </div>
@@ -384,44 +560,66 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a26 ?>",
-         $q2 = "<?php echo $a33 ?>",
-         $q3 = "<?php echo $a31 ?>",
-         $q4 = "<?php echo $a26 ?>",
-         $q5 = "<?php echo $a36 ?>",
-         $q6 = "<?php echo $a17 ?>",
-         $q7 = "<?php echo $a4 ?>",
-         $q8 = "<?php echo $a30 ?>",
-         $q9 = "<?php echo $a2 ?>",
-         $q10 = "<?php echo $a36 ?>",
-         $q11 = "<?php echo $a8 ?>",
-         $q12 = "<?php echo $a15 ?>",
-         $q13 = "<?php echo $a14 ?>",
-         $q14 = "<?php echo $a7 ?>",
-         $q15 = "<?php echo $a10 ?>",
-         $q16 = "<?php echo $a8 ?>",
-         $q17 = "<?php echo $a32 ?>",
-         $q18 = "<?php echo $a35 ?>",
-         $q19 = "<?php echo $a21 ?>",
-         $q20 = "<?php echo $a19 ?>",
-         $q21 = "<?php echo $a6 ?>",
-         $q22 = "<?php echo $a18 ?>",
-         $q23 = "<?php echo $a1 ?>",
-         $q24 = "<?php echo $a26 ?>",
-         $q25 = "<?php echo $a24 ?>",
-         $q26 = "<?php echo $a16 ?>",
-         $q27 = "<?php echo $a2 ?>",
-         $q28 = "<?php echo $a10 ?>",
-         $q29 = "<?php echo $a13 ?>",
-         $q30 = "<?php echo $a5 ?>",
-         $q31 = "<?php echo $a26 ?>",
-         $q32 = "<?php echo $a22 ?>",
-         $q33 = "<?php echo $a12 ?>",
-         $q34 = "<?php echo $a23 ?>",
-         $q35 = "<?php echo $a33 ?>",
-         $q36 = "<?php echo $a36 ?>",
-         $q37 = "<?php echo $a20 ?>",
-         $q38 = "<?php echo $a25 ?>",
+         $q1 = "<?php echo $a ?>",
+         $q2 = "<?php echo $a ?>",
+         $q3 = "<?php echo $a ?>",
+         $q4 = "<?php echo $a ?>",
+         $q5 = "<?php echo $a ?>",
+         $q6 = "<?php echo $a ?>",
+         $q7 = "<?php echo $a ?>",
+         $q8 = "<?php echo $a ?>",
+         $q9 = "<?php echo $a ?>",
+         $q10 = "<?php echo $a ?>",
+         $q11 = "<?php echo $a ?>",
+         $q12 = "<?php echo $a ?>",
+         $q13 = "<?php echo $a ?>",
+         $q14 = "<?php echo $a ?>",
+         $q15 = "<?php echo $a ?>",
+         $q16 = "<?php echo $a ?>",
+         $q17 = "<?php echo $a ?>",
+         $q18 = "<?php echo $a ?>",
+         $q19 = "<?php echo $a ?>",
+         $q20 = "<?php echo $a ?>",
+         $q21 = "<?php echo $a ?>",
+         $q22 = "<?php echo $a ?>",
+         $q23 = "<?php echo $a ?>",
+         $q24 = "<?php echo $a ?>",
+         $q25 = "<?php echo $a ?>",
+         $q26 = "<?php echo $a ?>",
+         $q27 = "<?php echo $a ?>",
+         $q28 = "<?php echo $a ?>",
+         $q29 = "<?php echo $a ?>",
+         $q30 = "<?php echo $a ?>",
+         $q31 = "<?php echo $a ?>",
+         $q32 = "<?php echo $a ?>",
+         $q33 = "<?php echo $a ?>",
+         $q34 = "<?php echo $a ?>",
+         $q35 = "<?php echo $a ?>",
+         $q36 = "<?php echo $a ?>",
+         $q37 = "<?php echo $a ?>",
+         $q38 = "<?php echo $a ?>",
+         $q39 = "<?php echo $a ?>",
+         $q40 = "<?php echo $a ?>",
+         $q41 = "<?php echo $a ?>",
+         $q42 = "<?php echo $a ?>",
+         $q43 = "<?php echo $a ?>",
+         $q44 = "<?php echo $a ?>",
+         $q45 = "<?php echo $a ?>",
+         $q46 = "<?php echo $a ?>",
+         $q47 = "<?php echo $a ?>",
+         $q48 = "<?php echo $a ?>",
+         $q49 = "<?php echo $a ?>",
+         $q50 = "<?php echo $a ?>",
+         $q51 = "<?php echo $a ?>",
+         $q52 = "<?php echo $a ?>",
+         $q53 = "<?php echo $a ?>",
+         $q54 = "<?php echo $a ?>",
+         $q55 = "<?php echo $a ?>",
+         $q56 = "<?php echo $a ?>",
+         $q57 = "<?php echo $a ?>",
+         $q58 = "<?php echo $a ?>",
+         $q59 = "<?php echo $a ?>",
+         $q60 = "<?php echo $a ?>",
     ];
 
     console.log(answers);

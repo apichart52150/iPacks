@@ -38,38 +38,22 @@
 
 </style>
 @php
-    $q1 = "The World Cup football matches and the Olympics are held worldwide with great national support and expectations. As a fan of those competitions, I agree with the idea that sporting events can help international relations and national unity. In this essay, I will think about the effects of these popular sporting events. First of all, the World Cup, Olympics and other international games work for easing";
-    $q2 = "among different nations. For example, South and North Korea have football games regularly which give two nations a chance to understand each other deeply. In the mid 1990s, hundreds of North Korean supporters came to South Korea with the footballers and they were very excited during the sporting events. Even if it sounds ridiculous, many South Koreans were quite surprised at that moment when North Koreans shouted and cried during the match. We all realized that they were very";
-    $q3 = "sports fans even though they were occasionally very secretive. Through the sports, two divided nations could reduce their political and";
-    $q4 = "";
-    $q5 = "and could feel the patriotic unity. On the other hand, some sports matches can make international relations worse. For";
-    $q6 = ", football or baseball games between Korea and Japan are always big matches in two countries where";
-    $q7 = "overflow. Sometimes, after the matches, the two rivals blame each other and their patriotic emotions explode in an aggressive way. A much worse";
-    $q8 = "is that the troubles caused by losing games";
-    $q9 = "the players directly. As far as I know, a";
-    $q10 = "of Korean players in Japan suffered from";
-    $q11 = "";
-    $q12 = "after the match between the two countries. In";
-    $q13 = ", I think that international sporting occasions can be one of the good ways to ease";
-    $q14 = "or to";
-    $q15 = "patriotism safely. However, I believe that games cannot be the";
-    $end = "way for sound patriotism or peaceful international relations.";
+    $q1 = "The bargraph describes the water usage for every year in Somecountry in millions of cubic meters. The water usage shows two";
+    $q2 = ", ground water and public supply. Fuel and textiles are the ones that uses the least water, with 10 m3 of public supply and 70m3 and 80m3 of ground water. Machinery is just the opposite of these two and has 10m3 of ground water and 100m3 of public supply. Food/drinks, metal, paper and";
+    $q3 = "are all over 100m3 of ground water where";
+    $q4 = "peak dramatically at 430m3. The highest";
+    $q5 = "of water usage of public supplies also belongs to";
+    $q6 = "(240m3). Next on the list is food/drinks with 190m3, the others accounting for under 100m3.";
+    $q7 = ", the";
+    $end = "industry uses a lot more water then the rest of the industries both ground water and public supplies, and in general most industries use far more ground water than public supplies.";
 
-    $a1 = "affect";
-    $a2 = "conclusion";
-    $a3 = "couple";
-    $a4 = "discrimination";
-    $a5 = "fundamental";
-    $a6 = "ideological";
-    $a7 = "instance";
-    $a8 = "invisible";
-    $a9 = "normal";
-    $a10 = "release";
-    $a11 = "scenario";
-    $a12 = "tensions";
-    $a13 = "tensions";
-    $a14 = "tensions";
-    $a15 = "tensions";
+    $a1 = "chemical";
+    $a2 = "chemicals";
+    $a3 = "chemicals";
+    $a4 = "chemicals";
+    $a5 = "overall";
+    $a6 = "trends";
+    $a7 = "volume";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -78,6 +62,9 @@
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
+                        <div class="w-100">
+                            <img src="{{asset('public/img_lang/AWL1/AWL1_132.png') }}" class="w-100" alt="">
+                        </div>
                         <div class="drag-container">
                             <div class="d-grid grid-5" id="choices">
                                 <div class="drag">{{ $a1 }}</div>
@@ -87,14 +74,6 @@
                                 <div class="drag">{{ $a5 }}</div>
                                 <div class="drag">{{ $a6 }}</div>
                                 <div class="drag">{{ $a7 }}</div>
-                                <div class="drag">{{ $a8 }}</div>
-                                <div class="drag">{{ $a9 }}</div>
-                                <div class="drag">{{ $a10 }}</div>
-                                <div class="drag">{{ $a11 }}</div>
-                                <div class="drag">{{ $a12 }}</div>
-                                <div class="drag">{{ $a13 }}</div>
-                                <div class="drag">{{ $a14 }}</div>
-                                <div class="drag">{{ $a15 }}</div>
                             </div>
                         </div>
                     </div>
@@ -139,46 +118,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q8}}
-                            <span class="font-weight-bold">8.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q9}}
-                            <span class="font-weight-bold">9.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q10}}
-                            <span class="font-weight-bold">10.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q12}}
-                            <span class="font-weight-bold">12.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q13}}
-                            <span class="font-weight-bold">13.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q14}}
-                            <span class="font-weight-bold">14.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q15}}
-                            <span class="font-weight-bold">15.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                         </div>
                     </div>
@@ -200,21 +139,13 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a12 ?>",
-         $q2 = "<?php echo $a9 ?>",
-         $q3 = "<?php echo $a6 ?>",
-         $q4 = "<?php echo $a12 ?>",
-         $q5 = "<?php echo $a7 ?>",
-         $q6 = "<?php echo $a12 ?>",
-         $q7 = "<?php echo $a11 ?>",
-         $q8 = "<?php echo $a1 ?>",
-         $q9 = "<?php echo $a3 ?>",
-         $q10 = "<?php echo $a8 ?>",
-         $q11 = "<?php echo $a4 ?>",
-         $q12 = "<?php echo $a2 ?>",
-         $q13 = "<?php echo $a12 ?>",
-         $q14 = "<?php echo $a10 ?>",
-         $q15 = "<?php echo $a5 ?>",
+         $q1 = "<?php echo $a6 ?>",
+         $q2 = "<?php echo $a2 ?>",
+         $q3 = "<?php echo $a2 ?>",
+         $q4 = "<?php echo $a7 ?>",
+         $q5 = "<?php echo $a2 ?>",
+         $q6 = "<?php echo $a5 ?>",
+         $q7 = "<?php echo $a1 ?>",
     ];
 
     console.log(answers);

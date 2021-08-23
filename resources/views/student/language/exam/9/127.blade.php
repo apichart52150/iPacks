@@ -38,52 +38,40 @@
 
 </style>
 @php
-    $q1 = "Almost ten per cent of the earth's surface is covered by tropical rainforests. These forests contain a wide variety of natural";
-    $q2 = ". Many people suggest that these";
-    $q3 = "should be";
-    $q4 = "to make life more comfortable and convenient for humans. Other people, however, are not in favour of such development. This essay will consider arguments from both points of view. The rainforests of the world contain a vast amount of natural";
-    $q5 = "which could be";
-    $q6 = "for the development of mankind. These";
-    $q7 = "include deposits of fossil fuels such as coal, gas and oil, as well as large amounts of valuable minerals such as gold. Since the world is running out of fossil fuels, it seems sensible to make use of these";
-    $q8 = "hidden deep inside the jungle. Getting";
-    $q9 = "to these";
-    $q10 = "would mean cutting down all the trees, which would be very expensive but the cost of this could be";
-    $q11 = "by making use of the forest timber. Clearing the forests would result in a number of";
-    $q12 = ". Firstly, the cleared land could be used to develop";
-    $q13 = "and settlements for people. This could prevent over-crowding in cities. In addition, the dangerous creatures that live in the forests could be eradicated. A further";
-    $q14 = "would be the possibility of planting crops for food and bio-fuel such as palm oil, which has been done in countries such as Malaysia and Indonesia. There are, however, some very strong arguments in favour of preserving the rainforests. First of all, the jungles provide a home for millions of indigenous people who";
-    $q15 = "on the forest for their food and shelter. These people have lived in the rainforests for many millions of years and help";
-    $q16 = "a healthy balance between humans and plants and animals that live there. In addition, many of the plants that grow there are important for their medicinal value or for use in industrial products. Probably the most important argument, however, is the fact that rainforests protect the world from natural disasters as a result of climate change. The forests help";
-    $q17 = "a healthy balance by absorbing carbon dioxide in the atmosphere and by producing oxygen for people to breathe. The trees also hold soil together and prevent soil";
-    $q18 = "which can result in land-slides and flooding. All in all, then, it seems that the conservation of the rainforests is very important for the";
-    $q19 = "future of mankind. Clearing rainforests for short-term";
-    $q20 = "";
-    $q21 = "will lead to the extinction of humans, flora and fauna that live there, and possibly even to the destruction of the";
-    $q22 = "";
-    $end = "itself.";
+    $q1 = "Nowadays, in our competitive world, in order to succeed, knowledge from school and university is not enough. Therefore, the student who";
+    $q2 = "from the school to university gets less";
+    $q3 = "and";
+    $q4 = "less too, than those who gain experience and skills before going to a tertiary";
+    $q5 = ". There are two reasons to prove my opinion. I call the group of people who study from school to university group A and the other group is group B. Firstly, at school and university, what students in group A gain is mostly";
+    $q6 = ". Of course, ";
+    $q7 = "is very necessary; however, you can't do everything with";
+    $q8 = ". You must have practical experience. This is what group A lack very much. After graduating, without experience, group A can't accomplish their work perfectly. On the other hand, it takes them time and money to keep up with other experienced students. Therefore, group A can";
+    $q9 = "less than group B who have the most two important things: skills and experience. Secondly, as group A";
+    $q10 = "less, they surely get less";
+    $q11 = ". Moreover, many companies which employ people in group A have to train them from the beginning. Students in group B have useful experience and skills from the beginning of their employment. As a result, group B give more";
+    $q12 = ". In";
+    $q13 = ", I think student should go to travel or find a";
+    $q14 = "before";
+    $q15 = "to university.";
+    $q16 = ", they will not only have basic knowledge but also skills and experience which are useful for them to get a good";
+    $end = "and a brilliant future.";
 
-    $a1 = "access";
+    $a1 = "benefit";
     $a2 = "benefit";
-    $a3 = "benefits";
-    $a4 = "benefits";
-    $a5 = "communities";
-    $a6 = "economic";
-    $a7 = "environment";
-    $a8 = "erosion";
-    $a9 = "exploited";
-    $a10 = "exploited";
-    $a11 = "global";
-    $a12 = "maintain";
-    $a13 = "maintain";
-    $a14 = "minimized";
-    $a15 = "rely";
-    $a16 = "resources";
-    $a17 = "resources";
-    $a18 = "resources";
-    $a19 = "resources";
-    $a20 = "resources";
-    $a21 = "resources";
-    $a22 = "sustainable";
+    $a3 = "benefit";
+    $a4 = "conclusion";
+    $a5 = "contribute";
+    $a6 = "contribute";
+    $a7 = "contributes";
+    $a8 = "institute";
+    $a9 = "job";
+    $a10 = "job";
+    $a11 = "proceeding";
+    $a12 = "proceeds";
+    $a13 = "theory";
+    $a14 = "theory";
+    $a15 = "theory";
+    $a16 = "thereby";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -110,12 +98,6 @@
                                 <div class="drag">{{ $a14 }}</div>
                                 <div class="drag">{{ $a15 }}</div>
                                 <div class="drag">{{ $a16 }}</div>
-                                <div class="drag">{{ $a17 }}</div>
-                                <div class="drag">{{ $a18 }}</div>
-                                <div class="drag">{{ $a19 }}</div>
-                                <div class="drag">{{ $a20 }}</div>
-                                <div class="drag">{{ $a21 }}</div>
-                                <div class="drag">{{ $a22 }}</div>
                             </div>
                         </div>
                     </div>
@@ -205,36 +187,6 @@
                             <div class="input-con">
                                 <div class="dropbox"></div>
                             </div>
-                            {{$q17}}
-                            <span class="font-weight-bold">17.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q18}}
-                            <span class="font-weight-bold">18.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q19}}
-                            <span class="font-weight-bold">19.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q20}}
-                            <span class="font-weight-bold">20.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q21}}
-                            <span class="font-weight-bold">21.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q22}}
-                            <span class="font-weight-bold">22.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
                             {{$end}}
                         </div>
                     </div>
@@ -256,28 +208,22 @@
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a16 ?>",
-         $q2 = "<?php echo $a16 ?>",
-         $q3 = "<?php echo $a9 ?>",
-         $q4 = "<?php echo $a16 ?>",
-         $q5 = "<?php echo $a9 ?>",
-         $q6 = "<?php echo $a16 ?>",
-         $q7 = "<?php echo $a16 ?>",
-         $q8 = "<?php echo $a1 ?>",
-         $q9 = "<?php echo $a16 ?>",
-         $q10 = "<?php echo $a14 ?>",
-         $q11 = "<?php echo $a3 ?>",
-         $q12 = "<?php echo $a5 ?>",
-         $q13 = "<?php echo $a2 ?>",
-         $q14 = "<?php echo $a15 ?>",
-         $q15 = "<?php echo $a12 ?>",
-         $q16 = "<?php echo $a12 ?>",
-         $q17 = "<?php echo $a8 ?>",
-         $q18 = "<?php echo $a22 ?>",
-         $q19 = "<?php echo $a6 ?>",
-         $q20 = "<?php echo $a3 ?>",
-         $q21 = "<?php echo $a11 ?>",
-         $q22 = "<?php echo $a7 ?>",
+         $q1 = "<?php echo $a12 ?>",
+         $q2 = "<?php echo $a1 ?>",
+         $q3 = "<?php echo $a7 ?>",
+         $q4 = "<?php echo $a8 ?>",
+         $q5 = "<?php echo $a13 ?>",
+         $q6 = "<?php echo $a13 ?>",
+         $q7 = "<?php echo $a13 ?>",
+         $q8 = "<?php echo $a5 ?>",
+         $q9 = "<?php echo $a5 ?>",
+         $q10 = "<?php echo $a1 ?>",
+         $q11 = "<?php echo $a1 ?>",
+         $q12 = "<?php echo $a4 ?>",
+         $q13 = "<?php echo $a9 ?>",
+         $q14 = "<?php echo $a11 ?>",
+         $q15 = "<?php echo $a16 ?>",
+         $q16 = "<?php echo $a9 ?>",
     ];
 
     console.log(answers);
