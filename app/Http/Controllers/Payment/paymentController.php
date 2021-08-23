@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
 
-class paymentController extends Controller
+class PaymentController extends Controller
 {
     public function form_payment(Request $request){
 
