@@ -312,9 +312,9 @@ $caller_4->e6->aw = ["114%","79%"];
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
-                <!-- <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/assets/files/topic1/sounds/act1-intro.mp3') }}" type="audio/mp3">
-                </audio> -->
+                <audio data-sound="sound-intro">
+                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                </audio>
             </div>
         </div>
     </div>
@@ -369,14 +369,14 @@ $caller_4->e6->aw = ["114%","79%"];
     }
 
 
-    // $('#sound-modal').modal({
-    //     'show': true,
-    //     'backdrop': "static",
-    //     'keyboard': false
-    // })
+    $('#sound-modal').modal({
+        'show': true,
+        'backdrop': "static",
+        'keyboard': false
+    })
     $('#sound-intro').on('click', (e) => {
         $('#sound-modal').modal('hide')
-        // const audio = document.querySelector('audio[data-sound="sound-intro"]');
+        const audio = document.querySelector('audio[data-sound="sound-intro"]');
         audio.play()
     })
 </script>
