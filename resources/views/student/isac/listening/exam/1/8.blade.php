@@ -90,7 +90,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                             <td>1.</td>
                             <td colspan="2">You are going to listen to a talk entitled:
                                 <br>
-                              <b>'Problems of Solid Waste Disposal'</b>
+                                <b>'Problems of Solid Waste Disposal'</b>
                             </td>
                         </tr>
                         <tr>
@@ -105,18 +105,17 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                 <div class="col-lg-12">
                     <div class="row justify-content-center mb-2 mt-2">
                         <div class="col-md-12">
-                            <div class="drag-container">
-                                <div class="d-grid grid-5" id="choices">
-                                    @foreach($caller_2_choice as $choice)
-                                    <div class="drag">{{$choice}}</div>
-                                    @endforeach
+                            <div class="border border-dark px-2 text-center">
+                                <div class="drag-container">
+                                    <div class="d-grid grid-5" id="choices">
+                                        @foreach($caller_2_choice as $choice)
+                                        <div class="drag">{{$choice}}</div>
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="line-break"></div>
-
                     <div class="row justify-content-center mb-2">
                         <div class="col-md-12">
                             <table class="w-100 py-2">
@@ -140,8 +139,14 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: directly</b>
                                             <div class="dropbox q ml-2" show-aw="caller_2-1" aw="{{$caller_2->aw1}}"></div>
-                                            <span class="aw caller_2-1 text-danger ml-2">{{$caller_2->aw1}}</span>
                                         </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <span class="aw caller_2-1 text-danger ml-2">{{$caller_2->aw1}}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -151,8 +156,14 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: indirectly</b>
                                             <div class="dropbox q ml-2" show-aw="caller_2-2" aw="{{$caller_2->aw2}}"></div>
-                                            <span class="aw caller_2-2 text-danger ml-2">{{$caller_2->aw2}}</span>
                                         </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <span class="aw caller_2-2 text-danger ml-2">{{$caller_2->aw2}}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -167,13 +178,19 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: </b>
                                             <div class="dropbox q ml-2" show-aw="caller_2-3" aw="{{$caller_2->aw3}}"></div>
-                                            <span class="aw caller_2-3 text-danger ml-2">{{$caller_2->aw3}}</span>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td></td>
-                                        <td>2.3</td>
+                                    <td></td>
+                                    <td>
+                                        <span class="aw caller_2-3 text-danger ml-2">{{$caller_2->aw3}}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>2.3</td>
                                     <td>What volume of solid waste is buried every year in Perth?</td>
                                 </tr>
                                 <tr>
@@ -183,8 +200,14 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: </b>
                                             <div class="dropbox q ml-2" show-aw="caller_2-4" aw="{{$caller_2->aw4}}"></div>
-                                            <span class="aw caller_2-4 text-danger ml-2">{{$caller_2->aw4}}</span>
                                         </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <span class="aw caller_2-4 text-danger ml-2">{{$caller_2->aw4}}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -199,8 +222,14 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: </b>
                                             <div class="dropbox q ml-2" show-aw="caller_2-5" aw="{{$caller_2->aw5}}"></div>
-                                            <span class="aw caller_2-5 text-danger ml-2">{{$caller_2->aw1}}</span>
                                         </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <span class="aw caller_2-5 text-danger ml-2">{{$caller_2->aw1}}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -212,12 +241,17 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td></td>
                                     <td></td>
                                     <td>
-                                        
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: </b>
                                             <div class="dropbox q ml-2" show-aw="caller_2-6" aw="{{$caller_2->aw6}}"></div>
-                                            <span class="aw caller_2-6 text-danger ml-2">{{$caller_2->aw6}}</span>
                                         </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <span class="aw caller_2-6 text-danger ml-2">{{$caller_2->aw6}}</span>
                                     </td>
                                 </tr>
                             </table>
@@ -277,7 +311,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                 </div>
                 <div class="col-lg-12">
                     <table class="w-100">
-                        
+
                     </table>
                 </div>
             </div>
@@ -320,7 +354,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                 '</div>'
             text = text.replace("...", input)
             $(item).html(input)
-            
+
         }
     })
 

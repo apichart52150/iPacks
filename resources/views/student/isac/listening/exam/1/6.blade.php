@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
-    table tr td{
+    table tr td {
         vertical-align: top;
         padding-top: 10px;
     }
+
     .input-con {
         display: inline-block;
         position: relative;
@@ -58,9 +59,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 1</h4>
-                    <div class="card-box box-shadow" id="">
                     <h1>ยังไม่เสร็จ</h1>
-                    </div>
                 </div>
             </div>
         </div>

@@ -80,39 +80,36 @@ $caller_1->e4->aw = "and in the late afternoon.";
             <div class="row">
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 1</h4>
-                    <div class="card-box box-shadow" id="">
-                        <table class="w-100">
-                            <tr>
-                                <td colspan="3">
-                                    <h5>Listen to the following sentences. They are not complete sentences. (How can you tell?) Try to
-                                        predict what the endings might be.</h5>
-                                </td>
-                            </tr>
-                            @foreach($caller_1 as $index => $caller_1)
-                            <tr>
-                                <td>{{$caller_1->n}}.</td>
-                                <td colspan="2">{{$caller_1->q}}</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td style="width: 60px;"><b>Answer: </b></td>
-                                <td>
-                                    <input type="text" class="q-text w-75" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</td>
-                            </tr>
-                            @endforeach
-                        </table>
-                    </div>
+                    <table class="w-100">
+                        <tr>
+                            <td colspan="3">
+                                <h5>Listen to the following sentences. They are not complete sentences. (How can you tell?) Try to
+                                    predict what the endings might be.</h5>
+                            </td>
+                        </tr>
+                        @foreach($caller_1 as $index => $caller_1)
+                        <tr>
+                            <td>{{$caller_1->n}}.</td>
+                            <td colspan="2">{{$caller_1->q}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="width: 60px;"><b>Answer: </b></td>
+                            <td>
+                                <input type="text" class="q-text w-75" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</td>
+                        </tr>
+                        @endforeach
+                    </table>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">

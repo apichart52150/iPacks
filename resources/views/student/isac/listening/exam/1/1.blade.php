@@ -20,7 +20,9 @@
     .input-con {
         display: inline-block;
         position: relative;
-        width: 80px;
+    }
+    .input-con2 {
+        width: 100px;
     }
 
     .input-text {
@@ -30,6 +32,7 @@
         width: 100%;
         height: auto;
         min-width: 80px;
+        min-height: 40px;
     }
 
     .input-container {
@@ -218,9 +221,7 @@ $caller_4->e6->aw = ["114%","79%"];
             <div class="row">
                 <div class="col-lg-6">
                     <h4 class="font-italic">Caller 1</h4>
-                    <div class="card-box box-shadow" id="">
                         @foreach($caller_1 as $caller_1)
-
                         <div class="form-group d-flex align-items-center">
                             <span class="pr-3">{{$caller_1->q}}.</span>
 
@@ -239,13 +240,10 @@ $caller_4->e6->aw = ["114%","79%"];
 
                         </div>
                         @endforeach
-                    </div>
                 </div>
                 <div class="col-lg-6">
                     <h4 class="font-italic">Caller 2</h4>
-                    <div class="card-box box-shadow" id="">
                         @foreach($caller_2 as $caller_2)
-
                         <div class="row">
                             <div class="py-1 col-md-4">
                                 <span class="">{{$caller_2->q}}.</span>
@@ -258,21 +256,15 @@ $caller_4->e6->aw = ["114%","79%"];
                             </div>
                         </div>
                         @endforeach
-                    </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <h4 class="font-italic">Caller 3</h4>
-                    <div class="card-box box-shadow" id="">
                         @foreach($caller_3 as $index => $caller_3)
-
                         <p class="pr-3 q-caller-3 q-caller-3-{{$index}}" q="caller-3-{{$index}}" aw="{{$caller_3->aw}}">{{$caller_3->q}}</p>
-
                         @endforeach
-                    </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <h4 class="font-italic">Caller 4</h4>
-                    <div class="card-box box-shadow" id="">
                         <table>
                             <tr class="text-center">
                                 <td></td>
@@ -283,7 +275,7 @@ $caller_4->e6->aw = ["114%","79%"];
                             </tr>
                             @foreach($caller_4 as $index => $caller_4)
                             <tr>
-                                <td>{{$caller_4->q}}</td>
+                                <td class="pr-3">{{$caller_4->q}}</td>
 
                                 @foreach($caller_4->aw as $index2 => $aw)
                                 <td>
@@ -296,12 +288,10 @@ $caller_4->e6->aw = ["114%","79%"];
                             </tr>
                             @endforeach
                         </table>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
@@ -333,12 +323,10 @@ $caller_4->e6->aw = ["114%","79%"];
         let text = $(item).html()
         let new_text = $(item).html()
         let aw = $(item).attr('aw').split("***")
-        console.log("Q", aw)
         for (let i = 0; i < text.split("...").length - 1; i++) {
-            let input = '<div class="input-con caller_3 pb-1 "><input type="text" class="input-text caller_3" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
-                '<labal class="w-100 aw caller_3-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'
+            let input = '<div class="input-con input-con2 caller_3 pb-1 "><input type="text" class="input-text caller_3" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
+                '<labal class="w-100 px-2 aw caller_3-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'
             new_text = new_text.replace("...", input)
-            console.log(i)
         }
         $('.q-caller-3-e' + (idx + 1)).html(new_text)
     })

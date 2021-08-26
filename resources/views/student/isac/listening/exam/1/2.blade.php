@@ -27,6 +27,7 @@
         width: 100%;
         height: auto;
         min-width: 250px;
+        min-height: 40px;
     }
 
     .dropbox .drag {
@@ -34,7 +35,7 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .aw {
@@ -360,156 +361,151 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                     </div>
                     <div class="col-lg-12">
                         <h4 class="font-italic">Caller 1</h4>
-                        <div class="card-box box-shadow" id="">
-                            <h5>Find out the meaning of these common abbreviations from Latin:</h5>
-                            <div class="row justify-content-center mb-2">
-                                <div class="col-md-12">
-                                    <div class="border border-dark px-2 text-center">
-                                        <div class="drag-container">
-                                            <div class="d-grid grid-5" id="choices">
-                                                @foreach($caller_1_1_choice as $choice)
-                                                <div class="drag">{{$choice}}</div>
-                                                @endforeach
-                                            </div>
+                        <h5>Find out the meaning of these common abbreviations from Latin:</h5>
+                        <div class="row justify-content-center mb-2">
+                            <div class="col-md-12">
+                                <div class="border border-dark px-2 text-center">
+                                    <div class="drag-container">
+                                        <div class="d-grid grid-5" id="choices">
+                                            @foreach($caller_1_1_choice as $choice)
+                                            <div class="drag">{{$choice}}</div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row justify-content-center mb-2">
-                                <div class="col-md-12">
-                                    <table class="w-100 mb-3">
-                                        @foreach($caller_1_1 as $index => $caller_1_1)
-                                        <tr>
-                                            <td class="border border-dark p-2">{{$caller_1_1->q}}</td>
-                                            <td class="border border-dark p-2">
-                                                <div class="input-con">
-                                                    <div class="dropbox q" show-aw="caller_1_1-{{$index}}" aw="{{$caller_1_1->aw}}"></div>
-                                                </div>
-                                            </td>
-                                            <td class="aw caller_1_1-{{$index}} text-danger">
-                                                {{$caller_1_1->aw}}
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                    </table>
-                                </div>
-                            </div>
-                            <h5>Here are some more common abbreviations. What do they mean?</h5>
-                            <div class="row justify-content-center mb-2">
-                                <div class="col-md-12">
-                                    <div class="border border-dark px-2 text-center">
-                                        <div class="drag-container">
-                                            <div class="d-grid grid-5" id="choices">
-                                                @foreach($caller_1_2_choice as $choice)
-                                                <div class="drag">{{$choice}}</div>
-                                                @endforeach
+                        </div>
+                        <div class="row justify-content-center mb-2">
+                            <div class="col-md-12">
+                                <table class="w-100 mb-3">
+                                    @foreach($caller_1_1 as $index => $caller_1_1)
+                                    <tr>
+                                        <td class="border border-dark p-2">{{$caller_1_1->q}}</td>
+                                        <td class="border border-dark p-2">
+                                            <div class="input-con">
+                                                <div class="dropbox q" show-aw="caller_1_1-{{$index}}" aw="{{$caller_1_1->aw}}"></div>
                                             </div>
+                                        </td>
+                                        <td class="aw caller_1_1-{{$index}} text-danger">
+                                            {{$caller_1_1->aw}}
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </table>
+                            </div>
+                        </div>
+                        <h5>Here are some more common abbreviations. What do they mean?</h5>
+                        <div class="row justify-content-center mb-2">
+                            <div class="col-md-12">
+                                <div class="border border-dark px-2 text-center">
+                                    <div class="drag-container">
+                                        <div class="d-grid grid-5" id="choices">
+                                            @foreach($caller_1_2_choice as $choice)
+                                            <div class="drag">{{$choice}}</div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row justify-content-center mb-2">
-                                <div class="col-md-12">
-                                    <table class="w-100 mb-3">
-                                        @foreach($caller_1_2 as $index => $caller_1_2)
-                                        <tr>
-                                            <td class="border border-dark p-2">{{$caller_1_2->q}}</td>
-                                            <td class="border border-dark p-2">
-                                                <div class="input-con">
-                                                    <div class="dropbox q" show-aw="caller_1_2-{{$index}}" aw="{{$caller_1_2->aw}}"></div>
-                                                </div>
-                                            </td>
-                                            <td class="aw caller_1_2-{{$index}} text-danger">
-                                                {{$caller_1_2->aw}}
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                    </table>
-                                </div>
+                        </div>
+                        <div class="row justify-content-center mb-2">
+                            <div class="col-md-12">
+                                <table class="w-100 mb-3">
+                                    @foreach($caller_1_2 as $index => $caller_1_2)
+                                    <tr>
+                                        <td class="border border-dark p-2">{{$caller_1_2->q}}</td>
+                                        <td class="border border-dark p-2">
+                                            <div class="input-con">
+                                                <div class="dropbox q" show-aw="caller_1_2-{{$index}}" aw="{{$caller_1_2->aw}}"></div>
+                                            </div>
+                                        </td>
+                                        <td class="aw caller_1_2-{{$index}} text-danger">
+                                            {{$caller_1_2->aw}}
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </table>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <h4 class="font-italic">Caller 2</h4>
-                        <div class="card-box box-shadow" id="">
-                            <h5>Complete the table of commonly used signs and symbols: </h5>
-                            <div class="row justify-content-center mb-2">
-                                <div class="col-md-12">
-                                    <div class="border border-dark px-2 text-center">
-                                        <div class="drag-container">
-                                            <div class="d-grid grid-5" id="choices">
-                                                @foreach($caller_2_choice as $choice)
-                                                <div class="drag">{{$choice}}</div>
-                                                @endforeach
-                                            </div>
+                        <h5>Complete the table of commonly used signs and symbols: </h5>
+                        <div class="row justify-content-center mb-2">
+                            <div class="col-md-12">
+                                <div class="border border-dark px-2 text-center">
+                                    <div class="drag-container">
+                                        <div class="d-grid grid-5" id="choices">
+                                            @foreach($caller_2_choice as $choice)
+                                            <div class="drag">{{$choice}}</div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row justify-content-center mb-2">
-                                <div class="col-md-12">
-                                    <table class="w-100 mb-3">
-                                        <tr>
-                                            <td class="border border-dark p-2">No.</td>
-                                            <td class="border border-dark p-2">Symbol</td>
-                                            <td class="border border-dark p-2">Meaning</td>
-                                            <td class=""></td>
-                                        </tr>
-                                        @foreach($caller_2 as $index => $caller_2)
-                                        <tr>
-                                            <td class="border border-dark p-2">{{$caller_2->n}}</td>
-                                            <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q}}</td>
-                                            <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q2}}</td>
-                                            <td class="aw caller_2-{{$index}} text-danger">
-                                                {{$caller_2->aw}}
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                    </table>
-                                </div>
+                        </div>
+                        <div class="row justify-content-center mb-2">
+                            <div class="col-md-12">
+                                <table class="w-100 mb-3">
+                                    <tr>
+                                        <td class="border border-dark p-2">No.</td>
+                                        <td class="border border-dark p-2">Symbol</td>
+                                        <td class="border border-dark p-2">Meaning</td>
+                                        <td class=""></td>
+                                    </tr>
+                                    @foreach($caller_2 as $index => $caller_2)
+                                    <tr>
+                                        <td class="border border-dark p-2">{{$caller_2->n}}</td>
+                                        <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q}}</td>
+                                        <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q2}}</td>
+                                        <td class="aw caller_2-{{$index}} text-danger">
+                                            {{$caller_2->aw}}
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </table>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <h4 class="font-italic">Caller 3</h4>
-                        <div class="card-box box-shadow" id="">
-                            <h5>Write the following sentences in note form, using abbreviations, signs, symbols or anything else which will help you. Focus only on the content words. </h5>
-                            <div class="row justify-content-center mb-2">
-                                <div class="col-md-12">
-                                    <div class="border border-dark px-2 text-center">
-                                        <div class="drag-container">
-                                            <div class="d-grid grid-5" id="choices">
-                                                @foreach($caller_3_choice as $choice)
-                                                <div class="drag">{{$choice}}</div>
-                                                @endforeach
-                                            </div>
+                        <h5>Write the following sentences in note form, using abbreviations, signs, symbols or anything else which will help you. Focus only on the content words. </h5>
+                        <div class="row justify-content-center mb-2">
+                            <div class="col-md-12">
+                                <div class="border border-dark px-2 text-center">
+                                    <div class="drag-container">
+                                        <div class="d-grid grid-5" id="choices">
+                                            @foreach($caller_3_choice as $choice)
+                                            <div class="drag">{{$choice}}</div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row justify-content-center mb-2">
-                                <div class="col-md-12">
-                                    <table class="w-100 mb-3">
-                                        @foreach($caller_3 as $index => $caller_3)
-                                        <tr>
-                                            <td class="border-dark p-2">{{$caller_3->q}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="border-dark p-2">
-                                                <b>Answer: </b>
-                                                <div class="input-con w-75">
-                                                    <div class="dropbox w-75 q" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="aw caller_3-{{$index}} text-danger">
-                                                {{$caller_3->aw}}
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                    </table>
-                                </div>
+                        </div>
+                        <div class="row justify-content-center mb-2">
+                            <div class="col-md-12">
+                                <table class="w-100 mb-3">
+                                    @foreach($caller_3 as $index => $caller_3)
+                                    <tr>
+                                        <td colspan="2" class="border-dark p-2">{{$caller_3->q}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 80px;"><b>Answer: </b></td>
+                                        <td class="border-dark p-2">
+                                            <div class="input-con">
+                                                <div class="dropbox q" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="aw caller_3-{{$index}} text-danger">
+                                            {{$caller_3->aw}}
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -530,53 +526,51 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                             morning and 3 in the afternoon. People with fair skin are the most susceptible to the effects of sunburn
                             but everyone, with the exception of Australian Aborigines, are prone to skin cancer. There are a number
                             of things we can do to help prevent skin cancer: wearing a T-shirt, putting on a hat and using sun-cream
-                            are just three ways to protect ourselves from the harmful effects of sun. 
+                            are just three ways to protect ourselves from the harmful effects of sun.
                         </span>
+                        <h3>ยังไม่เสร็จ</h3>
                     </div>
                     <div class="col-lg-12">
                         <h4 class="font-italic">Caller 4</h4>
-                        <div class="card-box box-shadow" id="">
-                            <h5>A. You are going to listen to a short talk about the population of Australia. As you listen, try to find the answers to the following questions:</h5>
-                            <table class="w-100 mb-3">
-                                @foreach($caller_4_A as $index => $caller_4_A)
-                                <tr>
-                                    <td class="border-dark p-2">{{$caller_4_A->q}}</td>
-                                </tr>
-                                <tr>
-                                    <td class="border-dark p-2">
-                                        <b>Answer: </b>
-                                        <div class="input-con w-75">
-                                            <input type="text" class="q-text w-100" show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="aw caller_4_A-{{$index}} text-danger">
-                                        <span class="pl-5">{{$caller_4_A->aw}}</span>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </table>
-                            <h5 class="mt-3">B. Listen to the talk again and take notes using the conventions available to you. </h5>
-                            <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                            <h5 class="mt-3">C. Write a short summary of the talk, using your own words as far as possible. The summary should be between 80 - 100 words. </h5>
-                            <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                            <h5 class="mt-3 aw text-success">D. Summary (possible answer) </h5>
-                            <span class="aw text-success">
-                                The population of Australia is now eighteen million, consisting of over one hundred different
-                                nationalities. In the past most migrants came from English speaking countries but nowadays most
-                                migrants do not have English as their first language. This change of focus has resulted in other changes
-                                in food, traditions and attitudes to learning foreign languages. In the past Australians chose not to learn
-                                a foreign language but nowadays many people are learning foreign languages. The most common
-                                languages in Australia are English, Italian, Greek and Chinese. Each state has a different second
-                                language focus.
-                            </span>
-                        </div>
+                        <h5>A. You are going to listen to a short talk about the population of Australia. As you listen, try to find the answers to the following questions:</h5>
+                        <table class="w-100 mb-3">
+                            @foreach($caller_4_A as $index => $caller_4_A)
+                            <tr>
+                                <td class="border-dark p-2">{{$caller_4_A->q}}</td>
+                            </tr>
+                            <tr>
+                                <td class="border-dark p-2">
+                                    <b>Answer: </b>
+                                    <div class="input-con w-75">
+                                        <input type="text" class="q-text w-100" show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="aw caller_4_A-{{$index}} text-danger">
+                                    <span class="pl-5">{{$caller_4_A->aw}}</span>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </table>
+                        <h5 class="mt-3">B. Listen to the talk again and take notes using the conventions available to you. </h5>
+                        <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                        <h5 class="mt-3">C. Write a short summary of the talk, using your own words as far as possible. The summary should be between 80 - 100 words. </h5>
+                        <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                        <h5 class="mt-3 aw text-success">D. Summary (possible answer) </h5>
+                        <span class="aw text-success">
+                            The population of Australia is now eighteen million, consisting of over one hundred different
+                            nationalities. In the past most migrants came from English speaking countries but nowadays most
+                            migrants do not have English as their first language. This change of focus has resulted in other changes
+                            in food, traditions and attitudes to learning foreign languages. In the past Australians chose not to learn
+                            a foreign language but nowadays many people are learning foreign languages. The most common
+                            languages in Australia are English, Italian, Greek and Chinese. Each state has a different second
+                            language focus.
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">

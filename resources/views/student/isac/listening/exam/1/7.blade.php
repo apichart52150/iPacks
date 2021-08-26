@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
-    table tr td{
+    table tr td {
         vertical-align: top;
         padding-top: 10px;
     }
+
     .input-con {
         display: inline-block;
         position: relative;
@@ -38,7 +39,7 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .aw {
@@ -143,60 +144,58 @@ $caller_4_choice->e14 = "..a strong possibility..";
             <div class="row">
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 4</h4>
-                    <div class="card-box box-shadow" id="">
-                        <h5>Write the following sentences in note form, using abbreviations, signs, symbols or anything else which will help you. Focus only on the content words. </h5>
-                        <div class="row justify-content-center mb-2">
-                            <div class="col-md-12">
-                                <div class="border border-dark px-2 text-center">
-                                    <div class="drag-container">
-                                        <div class="d-grid grid-5" id="choices">
-                                            @foreach($caller_4_choice as $choice)
-                                            <div class="drag">{{$choice}}</div>
-                                            @endforeach
-                                        </div>
+                    <h5>Write the following sentences in note form, using abbreviations, signs, symbols or anything else which will help you. Focus only on the content words. </h5>
+                    <div class="row justify-content-center mb-2">
+                        <div class="col-md-12">
+                            <div class="border border-dark px-2 text-center">
+                                <div class="drag-container">
+                                    <div class="d-grid grid-5" id="choices">
+                                        @foreach($caller_4_choice as $choice)
+                                        <div class="drag">{{$choice}}</div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row justify-content-center mb-2">
-                            <div class="col-md-12">
-                                <table class="w-100">
-                                    <tr>
-                                        <td colspan="2">
-                                            <h5>Prediction</h5>
-                                        </td>
-                                        <td>
-                                            <h5>Probability</h5>
-                                        </td>
-                                        <td class="text-left">
-                                            <h5>Words used</h5>
-                                        </td>
-                                    </tr>
-                                    @foreach($caller_4 as $index => $caller_4)
-                                    <tr>
-                                        <td>{{$caller_4->n}}.</td>
-                                        <td>{{$caller_4->q}}</td>
-                                        <td class="pr-4">
-                                            <select class="form-control q-text" show-aw="caller_4-{{$index}}" aw="{{$caller_4->aw}}">
-                                                <option>certain = 100%</option>
-                                                <option>probable = 75%</option>
-                                                <option>possible = 50%</option>
-                                                <option>improbable = 25%</option>
-                                                <option>or less</option>
-                                            </select>
+                    </div>
+                    <div class="row justify-content-center mb-2">
+                        <div class="col-md-12">
+                            <table class="w-100">
+                                <tr>
+                                    <td colspan="2">
+                                        <h5>Prediction</h5>
+                                    </td>
+                                    <td>
+                                        <h5>Probability</h5>
+                                    </td>
+                                    <td class="text-left">
+                                        <h5>Words used</h5>
+                                    </td>
+                                </tr>
+                                @foreach($caller_4 as $index => $caller_4)
+                                <tr>
+                                    <td>{{$caller_4->n}}.</td>
+                                    <td>{{$caller_4->q}}</td>
+                                    <td class="pr-4">
+                                        <select class="form-control q-text" show-aw="caller_4-{{$index}}" aw="{{$caller_4->aw}}">
+                                            <option>certain = 100%</option>
+                                            <option>probable = 75%</option>
+                                            <option>possible = 50%</option>
+                                            <option>improbable = 25%</option>
+                                            <option>or less</option>
+                                        </select>
                                         <span class="aw caller_4-{{$index}} text-danger">{{$caller_4->aw}}</span>
-                                        </td>
-                                        <td>
-                                            <div class="input-con">
-                                                <div class="dropbox q" show-aw="caller_42-{{$index}}" aw="{{$caller_4->aw2}}"></div>
-                                            </div>
-                                            <br>
+                                    </td>
+                                    <td>
+                                        <div class="input-con">
+                                            <div class="dropbox q" show-aw="caller_42-{{$index}}" aw="{{$caller_4->aw2}}"></div>
+                                        </div>
+                                        <br>
                                         <span class="aw caller_42-{{$index}} text-danger">{{$caller_4->aw2}}</span>
-                                        </td>
-                                    </tr>
-                                    @endforeach
-                                </table>
-                            </div>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </table>
                         </div>
                     </div>
                 </div>
