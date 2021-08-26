@@ -81,7 +81,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                             <td>1.</td>
                             <td colspan="2">You are going to listen to a talk entitled:
                                 <br>
-                              <b>'Problems of Solid Waste Disposal'</b>
+                                <b>'Problems of Solid Waste Disposal'</b>
                             </td>
                         </tr>
                         <tr>
@@ -95,130 +95,130 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                 </div>
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 1</h4>
-                        <div class="row justify-content-center mb-2">
-                            <div class="col-md-12">
-                                <div class="border border-dark px-2 text-center">
-                                    <div class="drag-container">
-                                        <div class="d-grid grid-5" id="choices">
-                                            @foreach($caller_2_choice as $choice)
-                                            <div class="drag">{{$choice}}</div>
-                                            @endforeach
-                                        </div>
+                    <div class="row justify-content-center mb-2">
+                        <div class="col-md-12">
+                            <div class="border border-dark px-2 text-center">
+                                <div class="drag-container">
+                                    <div class="d-grid grid-5" id="choices">
+                                        @foreach($caller_2_choice as $choice)
+                                        <div class="drag">{{$choice}}</div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row justify-content-center mb-2">
-                            <div class="col-md-12">
-                                <table class="w-100 py-2">
-                                    <tr>
-                                        <td>2.</td>
-                                        <td colspan="2">As you listen to the talk for the first time, find answers to the following questions:</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>2.1</td>
-                                        <td>
-                                            Give 2 examples of how we produce solid waste <b>directly</b>.
-                                            <br>
-                                            Give an example of how we produce solid waste <b>indirectly</b>.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <b>Answer: directly</b>
-                                            <div class="input-con w-75">
-                                                <div class="dropbox w-100 q" show-aw="caller_2-1" aw="{{$caller_2->aw1}}"></div>
-                                            </div>
-                                            <br>
-                                            <span class="aw caller_2-1 text-danger">{{$caller_2->aw1}}</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <b>Answer: indirectly</b>
-                                            <div class="input-con w-75">
-                                                <div class="dropbox w-100 q" show-aw="caller_2-2" aw="{{$caller_2->aw2}}"></div>
-                                            </div>
-                                            <br>
-                                            <span class="aw caller_2-2 text-danger">{{$caller_2->aw2}}</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>2.2</td>
-                                        <td>How much does it cost each household a year to dispose of solid waste?</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <b>Answer: </b>
-                                            <div class="input-con w-75">
-                                                <div class="dropbox w-100 q" show-aw="caller_2-3" aw="{{$caller_2->aw3}}"></div>
-                                            </div>
-                                            <br>
-                                            <span class="aw caller_2-3 text-danger">{{$caller_2->aw3}}</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>2.3</td>
-                                        <td>What volume of solid waste is buried every year in Perth?</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <b>Answer: </b>
-                                            <div class="input-con w-75">
-                                                <div class="dropbox w-100 q" show-aw="caller_2-4" aw="{{$caller_2->aw4}}"></div>
-                                            </div>
-                                            <br>
-                                            <span class="aw caller_2-4 text-danger">{{$caller_2->aw4}}</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>2.4</td>
-                                        <td>Give three examples of environmental problems which are strikingly obvious at a landfill site.</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <b>Answer: </b>
-                                            <div class="input-con w-75">
-                                                <div class="dropbox w-100 q" show-aw="caller_2-5" aw="{{$caller_2->aw5}}"></div>
-                                            </div>
-                                            <br>
-                                            <span class="aw caller_2-5 text-danger">{{$caller_2->aw1}}</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>2.5</td>
-                                        <td> In the talk, the speaker mentions 4 ways in which the problems of solid waste disposal can be tackled. What are they?</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <b>Answer: </b>
-                                            <div class="input-con w-75">
-                                                <div class="dropbox w-100 q" show-aw="caller_2-6" aw="{{$caller_2->aw6}}"></div>
-                                            </div>
-                                            <br>
-                                            <span class="aw caller_2-6 text-danger">{{$caller_2->aw6}}</span>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
+                    </div>
+                    <div class="row justify-content-center mb-2">
+                        <div class="col-md-12">
+                            <table class="w-100 py-2">
+                                <tr>
+                                    <td>2.</td>
+                                    <td colspan="2">As you listen to the talk for the first time, find answers to the following questions:</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>2.1</td>
+                                    <td>
+                                        Give 2 examples of how we produce solid waste <b>directly</b>.
+                                        <br>
+                                        Give an example of how we produce solid waste <b>indirectly</b>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <b>Answer: directly</b>
+                                        <div class="input-con w-75">
+                                            <div class="dropbox w-100 q" show-aw="caller_2-1" aw="{{$caller_2->aw1}}"></div>
+                                        </div>
+                                        <br>
+                                        <span class="aw caller_2-1 text-danger">{{$caller_2->aw1}}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <b>Answer: indirectly</b>
+                                        <div class="input-con w-75">
+                                            <div class="dropbox w-100 q" show-aw="caller_2-2" aw="{{$caller_2->aw2}}"></div>
+                                        </div>
+                                        <br>
+                                        <span class="aw caller_2-2 text-danger">{{$caller_2->aw2}}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>2.2</td>
+                                    <td>How much does it cost each household a year to dispose of solid waste?</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <b>Answer: </b>
+                                        <div class="input-con w-75">
+                                            <div class="dropbox w-100 q" show-aw="caller_2-3" aw="{{$caller_2->aw3}}"></div>
+                                        </div>
+                                        <br>
+                                        <span class="aw caller_2-3 text-danger">{{$caller_2->aw3}}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>2.3</td>
+                                    <td>What volume of solid waste is buried every year in Perth?</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <b>Answer: </b>
+                                        <div class="input-con w-75">
+                                            <div class="dropbox w-100 q" show-aw="caller_2-4" aw="{{$caller_2->aw4}}"></div>
+                                        </div>
+                                        <br>
+                                        <span class="aw caller_2-4 text-danger">{{$caller_2->aw4}}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>2.4</td>
+                                    <td>Give three examples of environmental problems which are strikingly obvious at a landfill site.</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <b>Answer: </b>
+                                        <div class="input-con w-75">
+                                            <div class="dropbox w-100 q" show-aw="caller_2-5" aw="{{$caller_2->aw5}}"></div>
+                                        </div>
+                                        <br>
+                                        <span class="aw caller_2-5 text-danger">{{$caller_2->aw1}}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>2.5</td>
+                                    <td> In the talk, the speaker mentions 4 ways in which the problems of solid waste disposal can be tackled. What are they?</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <b>Answer: </b>
+                                        <div class="input-con w-75">
+                                            <div class="dropbox w-100 q" show-aw="caller_2-6" aw="{{$caller_2->aw6}}"></div>
+                                        </div>
+                                        <br>
+                                        <span class="aw caller_2-6 text-danger">{{$caller_2->aw6}}</span>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
+                    </div>
                 </div>
                 <div class="col-lg-12">
                     <table class="w-100 py-2">
@@ -250,39 +250,39 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                 </div>
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 2</h4>
-                        <table class="w-100 py-2">
-                            <tr>
-                                <td>6.</td>
-                                <td colspan="2">
-                                    Write a summary of the talk in about 100 - 150 words.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="2">
-                                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="2">
-                                    <h5 class="mt-3 aw text-success">Problems of Solid Waste Disposal (possible answer)</h5>
-                                    <span class="aw text-success">
-                                        We all produce solid waste of some sort. Getting rid of this waste costs Perth thirty-five million dollars
-                                        each year. Landfill sites are also a waste of space, almost 800,000 cubic metres every year.
-                                        Environmental costs are also high. Immediate problems include rubbish, air pollution and bad smell,
-                                        and pests. Related problems include groundwater pollution and greenhouse gas emission.
-                                        One solution to these problems is recycling materials such as glass, aluminium and paper. In addition,
-                                        people can use fewer plastic bags for shopping. Garden waste can also be used for mulch and compost.
-                                        Education is the key to solving these problems and securing a healthy future.
-                                    </span>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <table class="w-100 py-2">
+                        <tr>
+                            <td>6.</td>
+                            <td colspan="2">
+                                Write a summary of the talk in about 100 - 150 words.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2">
+                                <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2">
+                                <h5 class="mt-3 aw text-success">Problems of Solid Waste Disposal (possible answer)</h5>
+                                <span class="aw text-success">
+                                    We all produce solid waste of some sort. Getting rid of this waste costs Perth thirty-five million dollars
+                                    each year. Landfill sites are also a waste of space, almost 800,000 cubic metres every year.
+                                    Environmental costs are also high. Immediate problems include rubbish, air pollution and bad smell,
+                                    and pests. Related problems include groundwater pollution and greenhouse gas emission.
+                                    One solution to these problems is recycling materials such as glass, aluminium and paper. In addition,
+                                    people can use fewer plastic bags for shopping. Garden waste can also be used for mulch and compost.
+                                    Education is the key to solving these problems and securing a healthy future.
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">

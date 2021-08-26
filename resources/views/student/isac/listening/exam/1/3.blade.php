@@ -78,9 +78,9 @@
                             <td><b>Risks:</b></td>
                             <td>diseases such as .............................................................................
                                 <br>
-                                emotional problems such as........................................................... 
+                                emotional problems such as...........................................................
                                 <br>
-                                financial problems........................................................................... 
+                                financial problems...........................................................................
                                 <br>
                                 accidents..........................................................................................
                                 <br>
@@ -106,27 +106,27 @@
                             <td></td>
                             <td>*</td>
                             <td>you can also take a cassette recorder into the lecture
-(provided the lecturer doesn't mind being recorded).</td>
+                                (provided the lecturer doesn't mind being recorded).</td>
                         </tr>
                     </table>
                 </div>
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 1</h4>
-                        <h5 class="mt-3">Now, listen to the lecture The Risks of Alcohol Abuse. Write a summary of the lecture in approximately 150 words.</h5>
-                        <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                        <h5 class="mt-3 aw text-success">Summary of lecture (possible answer) </h5>
-                        <span class="aw text-success">
-                            A lot of research has been conducted into alcoholism but not much into social drinking since social
-                            drinking is harder to define. There are many physiological, psychological and sociological problems
-                            associated with alcohol abuse. Alcohol affects all parts of the body and its damaging effects are only
-                            partially reversible. A person who drinks large amounts of alcohol in a short time is at greater risk than
-                            someone who drinks the same amount over a longer period of time. There are many serious diseases
-                            which affect the alcoholic. Pregnant women who consume alcohol also put the unborn baby at risk.
-                            Although alcohol can create a sense of happiness, it also causes depression and a loss of self-esteem. It
-                            can lead to family breakdowns and unemployment. It is also a major cause of industrial and road
-                            accidents. Because of all these problems, we should all be concerned. Perhaps greater control is
-                            needed with regard to the availability of alcohol.
-                        </span>
+                    <h5 class="mt-3">Now, listen to the lecture The Risks of Alcohol Abuse. Write a summary of the lecture in approximately 150 words.</h5>
+                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                    <h5 class="mt-3 aw text-success">Summary of lecture (possible answer) </h5>
+                    <span class="aw text-success">
+                        A lot of research has been conducted into alcoholism but not much into social drinking since social
+                        drinking is harder to define. There are many physiological, psychological and sociological problems
+                        associated with alcohol abuse. Alcohol affects all parts of the body and its damaging effects are only
+                        partially reversible. A person who drinks large amounts of alcohol in a short time is at greater risk than
+                        someone who drinks the same amount over a longer period of time. There are many serious diseases
+                        which affect the alcoholic. Pregnant women who consume alcohol also put the unborn baby at risk.
+                        Although alcohol can create a sense of happiness, it also causes depression and a loss of self-esteem. It
+                        can lead to family breakdowns and unemployment. It is also a major cause of industrial and road
+                        accidents. Because of all these problems, we should all be concerned. Perhaps greater control is
+                        needed with regard to the availability of alcohol.
+                    </span>
                 </div>
             </div>
         </div>

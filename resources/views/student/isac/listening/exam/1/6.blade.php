@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
-    table tr td{
+    table tr td {
         vertical-align: top;
         padding-top: 10px;
     }
+
     .input-con {
         display: inline-block;
         position: relative;
