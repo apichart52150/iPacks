@@ -49,16 +49,16 @@
                                         </div>
                                     </div>
                                     
-                                    <p class="text-muted mt-2"> Now your's our mamber. </p>
+                                    <p class="text-muted mt-2"> Now your's our mamber.</p>
 
-                                    <h3>Choose your package</h3>
+                                    <h3>You can choose the package at your level of English skills from two options</h3>
 
                                     <div class="row mt-3">
                                         <div class="col-6">
-                                            <a href="{{ url('payment/'.'standard') }}" type="button" class="btn btn-block btn--md btn-secondary waves-effect waves-light">Standard</a>
+                                            <a href="{{ url('payment/'.'standard') }}" type="button" class="btn btn-block btn--md btn-secondary waves-effect waves-light">The Standard IPACK package</a>
                                         </div>
                                         <div class="col-6">
-                                            <a href="{{ url('payment/'.'premium') }}" type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">Premium</a>
+                                            <a href="{{ url('payment/'.'premium') }}" type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">The Premium IPACK package</a>
                                         </div>
                                     </div>
                                 </div>
