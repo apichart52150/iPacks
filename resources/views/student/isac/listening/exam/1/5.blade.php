@@ -47,6 +47,42 @@
 </style>
 @php
 
+$caller_2 = new stdClass();
+$caller_2->e1 = new stdClass();
+$caller_2->e2 = new stdClass();
+$caller_2->e3 = new stdClass();
+$caller_2->e4 = new stdClass();
+$caller_2->e5 = new stdClass();
+$caller_2->e6 = new stdClass();
+$caller_2->e7 = new stdClass();
+$caller_2->e8 = new stdClass();
+
+$caller_2->e1->n = "1";
+$caller_2->e2->n = "2";
+$caller_2->e3->n = "3";
+$caller_2->e4->n = "4";
+$caller_2->e5->n = "5";
+$caller_2->e6->n = "6";
+$caller_2->e7->n = "7";
+$caller_2->e8->n = "8";
+
+$caller_2->e1->q = "Although significant numbers still come from English-speaking countries";
+$caller_2->e2->q = "The term 'drinking' refers to the consumption of alcoholic drinks such as";
+$caller_2->e3->q = "Excessive alcohol consumption can lead not only to physiological problems";
+$caller_2->e4->q = "There are both financial and environmental costs associated with landfill sites; not only are they a waste of potentially valuable land,";
+$caller_2->e5->q = "In spite of these negative effects on the human body";
+$caller_2->e6->q = "The two most important factors in developing a good study ethos are, first of all, a positive attitude,";
+$caller_2->e7->q = "As attitudes in society change, one would expect language to develop at the same rate; however,";
+$caller_2->e8->q = "He socially constructed gender division of labour restricts the employment possibilities for both men and women; an illustration of this";
+
+$caller_2->e1->aw = "Although significant numbers still come from English-speaking countries, an even larger number come from non-English-speaking countries.";
+$caller_2->e2->aw = "The term 'drinking' refers to the consumption of alcoholic drinks such as beer, wine and spirits.";
+$caller_2->e3->aw = "Excessive alcohol consumption can lead not only to physiological problems, but also to psychological problems.";
+$caller_2->e4->aw = "There are both financial and environmental costs associated with landfill sites; not only are they a waste of potentially valuable land, but they also present pollution problems.";
+$caller_2->e5->aw = "In spite of these negative effects on the human body, there are, however, some beneficial aspects.";
+$caller_2->e6->aw = "The two most important factors in developing a good study ethos are, first of all, a positive attitude, and, second, a healthy life-style.";
+$caller_2->e7->aw = "As attitudes in society change, one would expect language to develop at the same rate; however, it doesn't.";
+$caller_2->e8->aw = "The socially constructed gender division of labour restricts the employment possibilities for both men and women; an illustration of this is the small number of women in executive management positions.";
 
 @endphp
 <div class="row">
@@ -56,55 +92,37 @@
                 {{$pageTitle['sub_menu_name']}}
             </p>
             <div class="row">
-
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 1</h4>
                     <div class="card-box box-shadow" id="">
                         <table class="w-100">
                             <tr>
-                                <td>1.</td>
-                                <td>You are going to hear a talk entitled: 'The Meaning of Development'.
-                                    Make predictions about what you think you might hear. Write down any words which you
-                                    associate with this topic. Make sure you understand the concept: 'development'.</td>
-                            </tr>
-                            <tr>
-                                <td>2.</td>
-                                <td>Brainstorm some of these ideas with a small group of people in your class.</td>
-                            </tr>
-                            <tr>
-                                <td>3.</td>
-                                <td>Now you are ready to listen to the talk. As you listen to the talk, make notes using
-                                    any conventions which will help you.
+                                <td colspan="2">Listen to the sentences.
+                                    <br>
+                                    They are not complete (how do you know this, just by listening?).
+                                    <br>
+                                    Complete the sentences with suitable endings, depending on the speech markers contained in each sentence.
+                                    <br><br>
+                                    e.g. The Silver Spur is heavier than the Silver Ghost. The former weighs two and a half tonnes whereas
+                                    the latter weighs only two tonnes. (or any weight less than two and a half tonnes.)
                                 </td>
                             </tr>
+                            @foreach($caller_2 as $caller_2)
                             <tr>
-                                <td>4.</td>
-                                <td>Listen to the recording twice only.</td>
+                                <td>{{$caller_2->n}}</td>
+                                <td>{{$caller_2->q}}</td>
                             </tr>
                             <tr>
-                                <td>5.</td>
-                                <td> After listening to the recording twice, compare your notes with those of the person sitting next
-                                    to you. Are your notes similar? Did either of you miss out chunks from the recording? If so, help
-                                    each other to complete the notes.</td>
-                            </tr>
-                            <tr>
-                                <td>6.</td>
-                                <td> Now, write a short summary of the talk in about 50 - 80 words.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
+                                <td><b>Answer: </b></td>
                                 <td>
-                                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                                    <h5 class="mt-3 aw text-success">Summary (possible answer)</h5>
-                                    <span class="aw text-success">
-                                        The word 'develop' can mean 'unwrap' or 'uncover'. It also means to allow a picture to show from a
-                                        negative image. In the context of growing vegetables, it means providing an environment which
-                                        allows growth to occur. True development means allowing people to develop in their own way by
-                                        removing obstacles which prevent growth. This means integrating people into their own
-                                        development to make it meaningful.
-                                    </span>
+                                    <input type="text" class="w-100">
                                 </td>
                             </tr>
+                            <tr>
+                                <td class="aw text-success"><b>Possible answers: </b></td>
+                                <td class="aw text-success">{{$caller_2->aw}}</td>
+                            </tr>
+                            @endforeach
                         </table>
                     </div>
                 </div>

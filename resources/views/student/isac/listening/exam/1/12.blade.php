@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
-    table tr td{
+    table tr td {
         vertical-align: top;
         padding-top: 10px;
     }
+
     .input-con {
         display: inline-block;
         position: relative;
@@ -35,6 +36,7 @@
 
     .dropbox .drag {
         margin: 0;
+        vertical-align: middle;
     }
 
     .grid-5 {
@@ -47,7 +49,6 @@
 </style>
 @php
 
-
 @endphp
 <div class="row">
     <div class="col-xl-12 col-md-12">
@@ -56,52 +57,66 @@
                 {{$pageTitle['sub_menu_name']}}
             </p>
             <div class="row">
-
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 1</h4>
                     <div class="card-box box-shadow" id="">
-                        <table class="w-100">
+                        <table>
                             <tr>
                                 <td>1.</td>
-                                <td>You are going to hear a talk entitled: 'The Meaning of Development'.
-                                    Make predictions about what you think you might hear. Write down any words which you
-                                    associate with this topic. Make sure you understand the concept: 'development'.</td>
+                                <td>
+                                    You are going to hear two short talks about <b>two famous Australians</b>: <b>John Curtin</b>.
+                                </td>
                             </tr>
                             <tr>
                                 <td>2.</td>
-                                <td>Brainstorm some of these ideas with a small group of people in your class.</td>
+                                <td>
+                                    What do you know about these two men, if anything?
+                                    <br>
+                                    Brainstorm around the group to find out as much as you can about them before you listen to
+                                    the recordings.
+                                </td>
                             </tr>
                             <tr>
                                 <td>3.</td>
-                                <td>Now you are ready to listen to the talk. As you listen to the talk, make notes using
-                                    any conventions which will help you.
+                                <td>
+                                    As you listen, focus primarily on the important events which happened during their lives.
+                                    (the chronological sequence)
                                 </td>
                             </tr>
                             <tr>
                                 <td>4.</td>
-                                <td>Listen to the recording twice only.</td>
+                                <td>
+                                    Compare your notes with other people in the group.
+                                    <br>
+                                    Complete any gaps in your own notes.
+                                </td>
                             </tr>
                             <tr>
                                 <td>5.</td>
-                                <td> After listening to the recording twice, compare your notes with those of the person sitting next
-                                    to you. Are your notes similar? Did either of you miss out chunks from the recording? If so, help
-                                    each other to complete the notes.</td>
-                            </tr>
-                            <tr>
-                                <td>6.</td>
-                                <td> Now, write a short summary of the talk in about 50 - 80 words.</td>
+                                <td>
+                                    Write a short summary of the main events and achievements of each of the two men
+                                    <b>(roughly 120 - 150 words each)</b>. Use the discourse markers which you learnt earlier
+                                    in this course to give coherence to your summary.
+                                </td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>
                                     <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                                    <h5 class="mt-3 aw text-success">Summary (possible answer)</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <h5 class="mt-3 aw text-success">John Curtin (possible answer)</h5>
                                     <span class="aw text-success">
-                                        The word 'develop' can mean 'unwrap' or 'uncover'. It also means to allow a picture to show from a
-                                        negative image. In the context of growing vegetables, it means providing an environment which
-                                        allows growth to occur. True development means allowing people to develop in their own way by
-                                        removing obstacles which prevent growth. This means integrating people into their own
-                                        development to make it meaningful.
+                                        Born in New Zealand in 1929 to a religious family, Fred Hollows wanted to become a missionary but
+                                        changed his mind and became an eye-specialist. In 1960 he got a job in Australia. In 1965 he became
+                                        the head of the eye-department in a Sydney hospital. Fred was shocked by the number of Aborigines
+                                        with eye problems and in 1970 helped launch a national program to improve this situation. His team
+                                        treated over 30,000 people in three years. By 1980 Fred was helping people with eye problems abroad.
+                                        He helped set up a lens factory in Eritrea. In 1989 Fred found out he was dying of cancer but continued
+                                        his work. In 1993 he died surrounded by friends and family.
                                     </span>
                                 </td>
                             </tr>
@@ -111,7 +126,6 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
@@ -141,16 +155,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    $('.q-caller-2').each((idx, item) => {
-        let text = $(item).html()
-        if (text == "...") {
-            let input = '<div class="input-con">' +
-                '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-                '</div>'
-            text = text.replace("...", input)
-            $(item).html(input)
-        }
-    })
+    // $('.q-caller-2').each((idx, item) => {
+    //     let text = $(item).html()
+    //     if (text == "...") {
+    //         let input = '<div class="input-con">' +
+    //             '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
+    //             '</div>'
+    //         text = text.replace("...", input)
+    //         $(item).html(input)
+    //     }
+    // })
 
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
@@ -158,6 +172,7 @@
                 show_aw($(item).attr('show-aw'))
         })
         $('.q-text').each((idx, item) => {
+            console.log($(item).val().trim().toUpperCase())
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'))
         })

@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
-    table tr td{
+    table tr td {
         vertical-align: top;
         padding-top: 10px;
     }
+
     .input-con {
         display: inline-block;
         position: relative;
@@ -35,6 +36,7 @@
 
     .dropbox .drag {
         margin: 0;
+        vertical-align: middle;
     }
 
     .grid-5 {
@@ -48,6 +50,23 @@
 @php
 
 
+$caller_2 = new stdClass();
+$caller_2->e1 = new stdClass();
+$caller_2->e2 = new stdClass();
+$caller_2->e3 = new stdClass();
+
+$caller_2->e1->n = "1";
+$caller_2->e2->n = "2";
+$caller_2->e3->n = "3";
+
+$caller_2->e1->q = "Why do many homes in Perth face west?";
+$caller_2->e2->q = "Why must people living in the hills be careful when planning landscaping for their blocks?";
+$caller_2->e3->q = "What range of summer temperature reductions is possible by using effective landscaping?";
+
+$caller_2->e1->aw = "To take full advantage of views.";
+$caller_2->e2->aw = "To avoid the risk of fire.";
+$caller_2->e3->aw = "Between 10 and 15 degrees Celsius.";
+
 @endphp
 <div class="row">
     <div class="col-xl-12 col-md-12">
@@ -56,56 +75,56 @@
                 {{$pageTitle['sub_menu_name']}}
             </p>
             <div class="row">
-
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 1</h4>
                     <div class="card-box box-shadow" id="">
                         <table class="w-100">
                             <tr>
-                                <td>1.</td>
-                                <td>You are going to hear a talk entitled: 'The Meaning of Development'.
-                                    Make predictions about what you think you might hear. Write down any words which you
-                                    associate with this topic. Make sure you understand the concept: 'development'.</td>
-                            </tr>
-                            <tr>
-                                <td>2.</td>
-                                <td>Brainstorm some of these ideas with a small group of people in your class.</td>
-                            </tr>
-                            <tr>
-                                <td>3.</td>
-                                <td>Now you are ready to listen to the talk. As you listen to the talk, make notes using
-                                    any conventions which will help you.
+                                <td colspan="3">
+                                    <h5>As you listen to the recording for the first time, find the following information: </h5>
                                 </td>
                             </tr>
+                            @foreach($caller_2 as $index => $caller_2)
                             <tr>
-                                <td>4.</td>
-                                <td>Listen to the recording twice only.</td>
-                            </tr>
-                            <tr>
-                                <td>5.</td>
-                                <td> After listening to the recording twice, compare your notes with those of the person sitting next
-                                    to you. Are your notes similar? Did either of you miss out chunks from the recording? If so, help
-                                    each other to complete the notes.</td>
-                            </tr>
-                            <tr>
-                                <td>6.</td>
-                                <td> Now, write a short summary of the talk in about 50 - 80 words.</td>
+                                <td>{{$caller_2->n}}.</td>
+                                <td colspan="2">{{$caller_2->q}}</td>
                             </tr>
                             <tr>
                                 <td></td>
+                                <td style="width: 60px;"><b>Answer: </b></td>
                                 <td>
-                                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                                    <h5 class="mt-3 aw text-success">Summary (possible answer)</h5>
-                                    <span class="aw text-success">
-                                        The word 'develop' can mean 'unwrap' or 'uncover'. It also means to allow a picture to show from a
-                                        negative image. In the context of growing vegetables, it means providing an environment which
-                                        allows growth to occur. True development means allowing people to develop in their own way by
-                                        removing obstacles which prevent growth. This means integrating people into their own
-                                        development to make it meaningful.
-                                    </span>
+                                    <input type="text" class="q-text w-75" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
                                 </td>
                             </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="aw caller_2-{{$index}} text-danger">{{$caller_2->aw}}</td>
+                            </tr>
+                            @endforeach
                         </table>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <h4 class="font-italic">Caller 2</h4>
+                <div class="card-box box-shadow" id="">
+                    <h5>As you listen to the recording a second time, take notes.
+                        Put your notes away for a while; then write a summary of the lecture in <b>about 150 words</b>.</h5>
+                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                    <h5 class="mt-3 aw text-success">Landscaping for Climatic Conditions (possible answer)</h5>
+                    <span class="aw text-success">
+                        Planting bushes and trees around homes can prevent houses from over-heating.It can also provide
+                        cooler, cleaner air around the home. Hot summer winds are cooled as they pass over the plants in a
+                        process called evapotranspiration. In addition, trees deflect hot winds in summer and cold winds in
+                        winter. Trees and bushes also provide shade in summer.
+                        <br>
+                        Effective landscaping is effective when designing new homes but also has application for existing
+                        homes. Careful planning is necessary to avoid overshading. Trees and shrubs should be chosen
+                        according to their intended use. Factors such as growth rate, size and shape, and amount of foliage
+                        need to be considered. In the hills, care is needed to prevent the risk of fire in the summer months.
+                        Appropriate landscaping is the cheapest, most effective way of controlling climatic conditions around
+                        the home. It is also environmentally friendly.
+                    </span>
                     </div>
                 </div>
             </div>
@@ -141,16 +160,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    $('.q-caller-2').each((idx, item) => {
-        let text = $(item).html()
-        if (text == "...") {
-            let input = '<div class="input-con">' +
-                '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-                '</div>'
-            text = text.replace("...", input)
-            $(item).html(input)
-        }
-    })
+    // $('.q-caller-2').each((idx, item) => {
+    //     let text = $(item).html()
+    //     if (text == "...") {
+    //         let input = '<div class="input-con">' +
+    //             '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
+    //             '</div>'
+    //         text = text.replace("...", input)
+    //         $(item).html(input)
+    //     }
+    // })
 
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
@@ -158,6 +177,7 @@
                 show_aw($(item).attr('show-aw'))
         })
         $('.q-text').each((idx, item) => {
+            console.log($(item).val().trim().toUpperCase())
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'))
         })

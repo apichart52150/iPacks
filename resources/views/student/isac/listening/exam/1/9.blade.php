@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
-    table tr td{
+    table tr td {
         vertical-align: top;
         padding-top: 10px;
     }
+
     .input-con {
         display: inline-block;
         position: relative;
@@ -35,6 +36,7 @@
 
     .dropbox .drag {
         margin: 0;
+        vertical-align: middle;
     }
 
     .grid-5 {
@@ -47,6 +49,26 @@
 </style>
 @php
 
+$caller_1 = new stdClass();
+$caller_1->e1 = new stdClass();
+$caller_1->e2 = new stdClass();
+$caller_1->e3 = new stdClass();
+$caller_1->e4 = new stdClass();
+
+$caller_1->e1->n = "1";
+$caller_1->e2->n = "2";
+$caller_1->e3->n = "3";
+$caller_1->e4->n = "4";
+
+$caller_1->e1->q = "Windbreaks fulfill a useful function not only in the summer months, when the winds can be very hot,";
+$caller_1->e2->q = "Although this holistic approach to designing a house and block is usually most effective in new home construction";
+$caller_1->e3->q = "When the land-use map has been drawn, the next step is to show the directions of the prevailing winds for both summer";
+$caller_1->e4->q = "It is the east and west sides of a house which need shading the most, especially when the angle of the sun is low in the early morning";
+
+$caller_1->e1->aw = "but also in the winter months, when the winds can be very cold.";
+$caller_1->e2->aw = "it is also effective in planning established homes.";
+$caller_1->e3->aw = "and winter.";
+$caller_1->e4->aw = "and in the late afternoon.";
 
 @endphp
 <div class="row">
@@ -56,55 +78,34 @@
                 {{$pageTitle['sub_menu_name']}}
             </p>
             <div class="row">
-
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 1</h4>
                     <div class="card-box box-shadow" id="">
                         <table class="w-100">
                             <tr>
-                                <td>1.</td>
-                                <td>You are going to hear a talk entitled: 'The Meaning of Development'.
-                                    Make predictions about what you think you might hear. Write down any words which you
-                                    associate with this topic. Make sure you understand the concept: 'development'.</td>
-                            </tr>
-                            <tr>
-                                <td>2.</td>
-                                <td>Brainstorm some of these ideas with a small group of people in your class.</td>
-                            </tr>
-                            <tr>
-                                <td>3.</td>
-                                <td>Now you are ready to listen to the talk. As you listen to the talk, make notes using
-                                    any conventions which will help you.
+                                <td colspan="3">
+                                    <h5>Listen to the following sentences. They are not complete sentences. (How can you tell?) Try to
+                                        predict what the endings might be.</h5>
                                 </td>
                             </tr>
+                            @foreach($caller_1 as $index => $caller_1)
                             <tr>
-                                <td>4.</td>
-                                <td>Listen to the recording twice only.</td>
-                            </tr>
-                            <tr>
-                                <td>5.</td>
-                                <td> After listening to the recording twice, compare your notes with those of the person sitting next
-                                    to you. Are your notes similar? Did either of you miss out chunks from the recording? If so, help
-                                    each other to complete the notes.</td>
-                            </tr>
-                            <tr>
-                                <td>6.</td>
-                                <td> Now, write a short summary of the talk in about 50 - 80 words.</td>
+                                <td>{{$caller_1->n}}.</td>
+                                <td colspan="2">{{$caller_1->q}}</td>
                             </tr>
                             <tr>
                                 <td></td>
+                                <td style="width: 60px;"><b>Answer: </b></td>
                                 <td>
-                                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                                    <h5 class="mt-3 aw text-success">Summary (possible answer)</h5>
-                                    <span class="aw text-success">
-                                        The word 'develop' can mean 'unwrap' or 'uncover'. It also means to allow a picture to show from a
-                                        negative image. In the context of growing vegetables, it means providing an environment which
-                                        allows growth to occur. True development means allowing people to develop in their own way by
-                                        removing obstacles which prevent growth. This means integrating people into their own
-                                        development to make it meaningful.
-                                    </span>
+                                    <input type="text" class="q-text w-75" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}">
                                 </td>
                             </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</td>
+                            </tr>
+                            @endforeach
                         </table>
                     </div>
                 </div>
@@ -141,16 +142,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    $('.q-caller-2').each((idx, item) => {
-        let text = $(item).html()
-        if (text == "...") {
-            let input = '<div class="input-con">' +
-                '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-                '</div>'
-            text = text.replace("...", input)
-            $(item).html(input)
-        }
-    })
+    // $('.q-caller-2').each((idx, item) => {
+    //     let text = $(item).html()
+    //     if (text == "...") {
+    //         let input = '<div class="input-con">' +
+    //             '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
+    //             '</div>'
+    //         text = text.replace("...", input)
+    //         $(item).html(input)
+    //     }
+    // })
 
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
@@ -158,6 +159,7 @@
                 show_aw($(item).attr('show-aw'))
         })
         $('.q-text').each((idx, item) => {
+            console.log($(item).val().trim().toUpperCase())
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'))
         })

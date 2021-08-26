@@ -514,10 +514,28 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         </div>
                     </div>
                     <div class="col-lg-12">
+                        <span>Read through the following passage and make notes. </span>
+                        <br>
+                        <h5>Remember, though, that you must be able to understand the notes later. </h5>
+                        <span>
+                            Skin cancer is caused by constant exposure to the sun. In Australia doctors discover 140,000 new cases
+                            of skin cancer every year, approximately one thousand of which result in death. There are three sorts of
+                            skin cancer. The most dangerous skin cancer is melanoma. The other two types are not as serious but
+                            must be treated early to be sure of a complete cure. According to medical research ultra-violet radiation
+                            is responsible for causing skin cancer. There are three types of ultra-violet rays: UVA, UVB and UVC. Of
+                            these three, UVB is the most dangerous and causes the most damage to the skin. UVA has a slower
+                            effect on skin cells and is responsible for the aging process which makes skin wrinkled and leathery. UVC
+                            rays never reach earth and are, therefore, not an issue. The greater the exposure to the sun, the
+                            greater the risk of getting skin cancer. The most dangerous time to sunbathe is between 11 in the
+                            morning and 3 in the afternoon. People with fair skin are the most susceptible to the effects of sunburn
+                            but everyone, with the exception of Australian Aborigines, are prone to skin cancer. There are a number
+                            of things we can do to help prevent skin cancer: wearing a T-shirt, putting on a hat and using sun-cream
+                            are just three ways to protect ourselves from the harmful effects of sun. 
+                        </span>
+                    </div>
+                    <div class="col-lg-12">
                         <h4 class="font-italic">Caller 4</h4>
                         <div class="card-box box-shadow" id="">
-
-                            <!-- ////////////////////////// -->
                             <h5>A. You are going to listen to a short talk about the population of Australia. As you listen, try to find the answers to the following questions:</h5>
                             <table class="w-100 mb-3">
                                 @foreach($caller_4_A as $index => $caller_4_A)
