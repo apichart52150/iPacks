@@ -334,6 +334,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                 show_aw($(item).attr('show-aw'))
         })
         $('.aw').removeClass('aw')
+        $("#check-answer").prop('disabled', true);
     })
 
     function show_aw(aw) {
