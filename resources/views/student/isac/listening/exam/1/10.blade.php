@@ -77,34 +77,37 @@ $caller_2->e3->aw = "Between 10 and 15 degrees Celsius.";
             <div class="row">
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 1</h4>
-                    <table class="w-100">
-                        <tr>
-                            <td colspan="3">
-                                <h5>As you listen to the recording for the first time, find the following information: </h5>
-                            </td>
-                        </tr>
-                        @foreach($caller_2 as $index => $caller_2)
-                        <tr>
-                            <td>{{$caller_2->n}}.</td>
-                            <td colspan="2">{{$caller_2->q}}</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td style="width: 60px;"><b>Answer: </b></td>
-                            <td>
-                                <input type="text" class="q-text w-75" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td class="aw caller_2-{{$index}} text-danger">{{$caller_2->aw}}</td>
-                        </tr>
-                        @endforeach
-                    </table>
+                    <div class="card-box box-shadow" id="">
+                        <table class="w-100">
+                            <tr>
+                                <td colspan="3">
+                                    <h5>As you listen to the recording for the first time, find the following information: </h5>
+                                </td>
+                            </tr>
+                            @foreach($caller_2 as $index => $caller_2)
+                            <tr>
+                                <td>{{$caller_2->n}}.</td>
+                                <td colspan="2">{{$caller_2->q}}</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="width: 60px;"><b>Answer: </b></td>
+                                <td>
+                                    <input type="text" class="q-text w-75" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="aw caller_2-{{$index}} text-danger">{{$caller_2->aw}}</td>
+                            </tr>
+                            @endforeach
+                        </table>
+                    </div>
                 </div>
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 2</h4>
+                <div class="card-box box-shadow" id="">
                     <h5>As you listen to the recording a second time, take notes.
                         Put your notes away for a while; then write a summary of the lecture in <b>about 150 words</b>.</h5>
                     <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
@@ -122,10 +125,12 @@ $caller_2->e3->aw = "Between 10 and 15 degrees Celsius.";
                         Appropriate landscaping is the cheapest, most effective way of controlling climatic conditions around
                         the home. It is also environmentally friendly.
                     </span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">

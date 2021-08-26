@@ -218,80 +218,90 @@ $caller_4->e6->aw = ["114%","79%"];
             <div class="row">
                 <div class="col-lg-6">
                     <h4 class="font-italic">Caller 1</h4>
-                    @foreach($caller_1 as $caller_1)
-                    <div class="form-group d-flex align-items-center">
-                        <span class="pr-3">{{$caller_1->q}}.</span>
+                    <div class="card-box box-shadow" id="">
+                        @foreach($caller_1 as $caller_1)
 
-                        @foreach($caller_1->choice as $choice)
-                        <div class="pr-1 input-container">
-                            <input id="walk" class="radio-button caller_1" type="radio" name="radio1-{{$caller_1->q}}" aw="{{$caller_1->aw}}" show-aw="caller_1-{{$caller_1->q}}" value="{{$choice}}" />
-                            <div class="radio-tile">
-                                <div class="icon walk-icon">
-                                    {{$choice}}
+                        <div class="form-group d-flex align-items-center">
+                            <span class="pr-3">{{$caller_1->q}}.</span>
+
+                            @foreach($caller_1->choice as $choice)
+                            <div class="pr-1 input-container">
+                                <input id="walk" class="radio-button caller_1" type="radio" name="radio1-{{$caller_1->q}}" aw="{{$caller_1->aw}}" show-aw="caller_1-{{$caller_1->q}}" value="{{$choice}}" />
+                                <div class="radio-tile">
+                                    <div class="icon walk-icon">
+                                        {{$choice}}
+                                    </div>
                                 </div>
                             </div>
+                            @endforeach
+
+                            <span class="pl-2 aw caller_1-{{$caller_1->q}} text-danger">{{$caller_1->aw}}</span>
+
                         </div>
                         @endforeach
-
-                        <span class="pl-2 aw caller_1-{{$caller_1->q}} text-danger">{{$caller_1->aw}}</span>
-
                     </div>
-                    @endforeach
                 </div>
                 <div class="col-lg-6">
                     <h4 class="font-italic">Caller 2</h4>
-                    @foreach($caller_2 as $caller_2)
+                    <div class="card-box box-shadow" id="">
+                        @foreach($caller_2 as $caller_2)
 
-                    <div class="row">
-                        <div class="py-1 col-md-4">
-                            <span class="">{{$caller_2->q}}.</span>
+                        <div class="row">
+                            <div class="py-1 col-md-4">
+                                <span class="">{{$caller_2->q}}.</span>
+                            </div>
+                            <div class="py-1 col-md-4">
+                                <input type="text" class="form-control caller_2" aw="{{$caller_2->aw}}" show-aw="caller_2-{{$caller_2->q}}" autocomplete="off">
+                            </div>
+                            <div class="py-1 col-md-4">
+                                <span class="pl-2 aw caller_2-{{$caller_2->q}} text-danger">{{$caller_2->aw}}</span>
+                            </div>
                         </div>
-                        <div class="py-1 col-md-4">
-                            <input type="text" class="form-control caller_2" aw="{{$caller_2->aw}}" show-aw="caller_2-{{$caller_2->q}}" autocomplete="off">
-                        </div>
-                        <div class="py-1 col-md-4">
-                            <span class="pl-2 aw caller_2-{{$caller_2->q}} text-danger">{{$caller_2->aw}}</span>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 3</h4>
-                    @foreach($caller_3 as $index => $caller_3)
-
-                    <p class="pr-3 q-caller-3 q-caller-3-{{$index}}" q="caller-3-{{$index}}" aw="{{$caller_3->aw}}">{{$caller_3->q}}</p>
-
-                    @endforeach
-                </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 4</h4>
-                    <table>
-                        <tr class="text-center">
-                            <td></td>
-                            <td>Australia</td>
-                            <td></td>
-                            <td>PNG</td>
-                            <td></td>
-                        </tr>
-                        @foreach($caller_4 as $index => $caller_4)
-                        <tr>
-                            <td>{{$caller_4->q}}</td>
-
-                            @foreach($caller_4->aw as $index2 => $aw)
-                            <td>
-                                <input type="text" class="form-control caller_4" aw="{{$aw}}" show-aw="caller_4-{{$index}}-{{$index2}}" autocomplete="off">
-                            </td>
-                            <td>
-                                <span class="pl-2 px-0 aw caller_4-{{$index}}-{{$index2}} text-danger">{{$aw}}</span>
-                            </td>
-                            @endforeach
-                        </tr>
                         @endforeach
-                    </table>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="font-italic">Caller 3</h4>
+                    <div class="card-box box-shadow" id="">
+                        @foreach($caller_3 as $index => $caller_3)
+
+                        <p class="pr-3 q-caller-3 q-caller-3-{{$index}}" q="caller-3-{{$index}}" aw="{{$caller_3->aw}}">{{$caller_3->q}}</p>
+
+                        @endforeach
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="font-italic">Caller 4</h4>
+                    <div class="card-box box-shadow" id="">
+                        <table>
+                            <tr class="text-center">
+                                <td></td>
+                                <td>Australia</td>
+                                <td></td>
+                                <td>PNG</td>
+                                <td></td>
+                            </tr>
+                            @foreach($caller_4 as $index => $caller_4)
+                            <tr>
+                                <td>{{$caller_4->q}}</td>
+
+                                @foreach($caller_4->aw as $index2 => $aw)
+                                <td>
+                                    <input type="text" class="form-control caller_4" aw="{{$aw}}" show-aw="caller_4-{{$index}}-{{$index2}}" autocomplete="off">
+                                </td>
+                                <td>
+                                    <span class="pl-2 px-0 aw caller_4-{{$index}}-{{$index2}} text-danger">{{$aw}}</span>
+                                </td>
+                                @endforeach
+                            </tr>
+                            @endforeach
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
