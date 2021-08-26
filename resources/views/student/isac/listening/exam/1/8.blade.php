@@ -103,7 +103,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <div class="row justify-content-center mb-2">
+                    <div class="row justify-content-center mb-2 mt-2">
                         <div class="col-md-12">
                             <div class="drag-container">
                                 <div class="d-grid grid-5" id="choices">
