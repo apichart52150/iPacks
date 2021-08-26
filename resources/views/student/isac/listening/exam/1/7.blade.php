@@ -28,9 +28,9 @@
         border: 1px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
-        width: 100%;
-        height: auto;
-        min-width: 250px;
+        width: 200px;
+        height: 100%;
+        min-height: 40px;
     }
 
     .dropbox .drag {
@@ -38,7 +38,7 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .aw {
@@ -203,7 +203,6 @@ $caller_4_choice->e14 = "..a strong possibility..";
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
