@@ -170,7 +170,7 @@ $caller_3->e6->aw = "The fire is believed to have started in the kitchen";
 $caller_3->e7->aw = "The parents of the two children are said to have been visiting relatives";
 $caller_3->e8->aw = "The property is not believed to have been insured";
 $caller_3->e9->aw = "He's expected to be fit for the Third Test starting two weeks on Thursday";
-$caller_3->e10->aw = "The fine weather is expected to continue for the next few days";
+$caller_3->e10->aw = "";
 
 @endphp
 <div class="row">
