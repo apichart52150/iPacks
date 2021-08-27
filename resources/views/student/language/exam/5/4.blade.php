@@ -1,40 +1,39 @@
 <style>
-.mark, mark {
-    padding: .2em;
-    background-color: #ffc107;
+.line-hight{
+    line-height: 3;
 }
 </style>
 @php
     $question = [
-        'q1' => "An",
-        'q2' => "eader should have a combination of skills to cope with a variety of situations which are likely to arise on an everyday basis. Perhaps the most important skill is the ability to deal with the company's",
-        'q3' => "resources: ‘people-skills’. It has often been said that a company’s greatest assets are its workforce. If this is so, then it is important to retain",
-        'q4' => ". A company with a high turnover of staff is not likely to be as successful as one which constantly ‘hires and",
-        'q5' => "’. Continuity is an important part of a firm’s culture. In order to retain staff, a good leader should demonstrate a sense of fairness, honesty and an ability to listen. An ‘open-door’ policy is",
-        'q6' => "to a culture of secrecy. A good leader should provide a role",
-        'q7' => "for the rest of the staff. If the leader wants his staff to work hard, (s)he must set a good",
-        'q8' => "by working hard too. If the leader wants to develop a spirit of team-work and",
-        'q9' => ", then (s)he must behave in ways which promote such a culture. Sharing responsibilities and ideas with other members of the team will lead to positive results. A good leader should not",
-        'q10' => "the authority which accompanies the position. This means not bullying subordinates, not using threats and warnings to achieve goals and targets. Such authoritarian behaviour is likely to have negative",
-        'q11' => ". To",
-        'q12' => "up, a good leader makes full use of the human resources available, without exploiting employees in any way. A sense of justice and understanding are essential qualities. Consensual management techniques are far more effective than relationships based on antiquated",
+        'q1' => "Every year, millions of animals undergo painful suffering or death as a result of",
+        'q2' => "research into the effects of drugs, food additives, cosmetics and other chemical products. While most people think animal testing is  necessary, others are ",
+        'q3' => "by what they see as needless suffering. This essay looks at some of the positive and negative aspects of animal testing. Many medical treatments and procedures have been",
+        'q4' => "from experiments on animals. Since animals share many features with humans,",
+        'q5' => "use animals to test the safety and effectiveness of newly developed drugs before pilot testing on small groups of patients. Medical teams practise new operating",
+        'q6' => " such as transplants on animals. Without animal testing, many procedures or new drugs would be extremely",
+        'q7' => "However, many people are",
+        'q8' => "that animals are suffering unnecessarily and cruelly. They",
+        'q9' => "believe that every new drug needs to be tested on animals, especially with the huge database of knowledge and modern computer models. They are also worried that many animal tests are ineffective, pointing out that many",
+        'q10' => "have had to be withdrawn from the market despite extensive testing. They particularly feel that animal testing should not be used for non-essential ",
+        'q11' => "such as cosmetics, shampoos, soaps, and cleaning products.",
+        'q12' => ", some campaigners would like to see certain tests replaced and more humane methods used. We need to make sure that the millions of animals which are used for",
     ];
 
-    $endQuestion = "principles.";
+    $endQuestion = "new products are treated with the minimum of suffering. Although some animal testing may be unavoidable at present, treating our fellow creatures as mercifully as possible will demonstrate our humanity.";
 
     $choice = [
-        'c1' => "abuse",    
-        'c2' => "authoritarian",  
-        'c3' => "collaboration",     
-        'c4' => "effective", 
-        'c5' => "employees",     
-        'c6' => "example",   
-        'c7' => "fires",   
-        'c8' => "human",     
-        'c9' => "model",     
-        'c10' => "outcomes",      
-        'c11' => "preferable",      
-        'c12' => "sum",
+        'c1' => "concerned",    
+        'c2' => "developed",  
+        'c3' => "don’t",     
+        'c4' => "drugs", 
+        'c5' => "Furthermore",     
+        'c6' => "products",   
+        'c7' => "scientific",   
+        'c8' => "scientists",     
+        'c9' => "techniques",     
+        'c10' => "testing",      
+        'c11' => "unsafe",      
+        'c12' => "upset",
     ];
    
 @endphp
@@ -46,14 +45,15 @@
             </p>
             <div class="mb-2">
                 @for ($i = 1; $i <= count($question); $i++)
-                    {{ $question['q'.$i] }}
-                    <select class="form-control d-inline w-auto mx-2 mb-2">
+                    <div class="line-hight d-inline w-auto mb-2 ">
+                        {{ $question['q'.$i] }}
+                    </div>
+                    <select class="form-control d-inline w-auto mx-2 mb-2 ">
                         <option value="">-Select-</option>
                         @foreach ($choice as $choices)
                             <option value="{{ $choices }}">{{ $choices }}</option>
                         @endforeach
                     </select>
-                
                 @endfor
                 {{ $endQuestion }}
             </div>
@@ -68,18 +68,18 @@
 @section('js')
     <script>
         const answers = [
-            'effective', 
-            'human', 
-            'employees', 
-            'fires', 
-            'preferable', 
-            'model', 
-            'example', 
-            'collaboration',
-            'abuse', 
-            'outcomes',
-            'sum',
-            'authoritarian'
+            "scientific", //1
+            "upset",//2
+            "developed",//3
+            "scientists",//4
+            "techniques",//5
+            "unsafe",//6
+            "concerned",//7
+            "don’t",//8
+            "drugs",//9
+            "products",//10
+            "Furthermore",//11
+            "testing",//12
         ]
 
         let score = 0

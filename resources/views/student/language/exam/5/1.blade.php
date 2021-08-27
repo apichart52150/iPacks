@@ -1,7 +1,6 @@
 <style>
-.mark, mark {
-    padding: .2em;
-    background-color: #ffc107;
+.line-hight{
+    line-height: 3;
 }
 </style>
 @php
@@ -46,14 +45,15 @@
             </p>
             <div class="mb-2">
                 @for ($i = 1; $i <= count($question); $i++)
-                    {{ $question['q'.$i] }}
-                    <select class="form-control d-inline w-auto mx-2 mb-2">
+                    <div class="line-hight d-inline w-auto mb-2 ">
+                        {{ $question['q'.$i] }}
+                    </div>
+                    <select class="form-control d-inline w-auto mx-2 mb-2 ">
                         <option value="">-Select-</option>
                         @foreach ($choice as $choices)
                             <option value="{{ $choices }}">{{ $choices }}</option>
                         @endforeach
                     </select>
-                
                 @endfor
                 {{ $endQuestion }}
             </div>
