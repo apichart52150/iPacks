@@ -554,7 +554,7 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                             @endforeach
                         </table>
                         <h5 class="mt-3">B. Listen to the talk again and take notes using the conventions available to you. </h5>
-                        <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                        <!-- <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea> -->
                         <h5 class="mt-3">C. Write a short summary of the talk, using your own words as far as possible. The summary should be between 80 - 100 words. </h5>
                         <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                         <h5 class="mt-3 aw text-success">D. Summary (possible answer) </h5>
