@@ -528,7 +528,6 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                             of things we can do to help prevent skin cancer: wearing a T-shirt, putting on a hat and using sun-cream
                             are just three ways to protect ourselves from the harmful effects of sun.
                         </span>
-                        <h3>ยังไม่เสร็จ</h3>
                     </div>
                     <div class="col-lg-12">
                         <h4 class="font-italic">Caller 4</h4>
