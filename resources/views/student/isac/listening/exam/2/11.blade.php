@@ -8,6 +8,18 @@
         border: 1px solid black;
     }
 
+    .table2 tr td {
+        padding: 10px;
+    }
+
+    .table2 tr .map {
+        border: 1px solid black;
+    }
+
+    .table2 tr .map-l {
+        border-right: 1px solid black;
+    }
+
     .table tr th {
         border: 1px solid black;
         color: black;
@@ -77,6 +89,16 @@
 </style>
 @php
 
+$caller_choice = new stdClass();
+$caller_choice->ch1 = "financial capacity";
+$caller_choice->ch2 = "communicate";
+$caller_choice->ch3 = "satisfaction";
+$caller_choice->ch4 = "employees";
+$caller_choice->ch5 = "long-term vision";
+$caller_choice->ch6 = "weaknesses";
+$caller_choice->ch7 = "objectives";
+$caller_choice->ch8 = "use";
+
 @endphp
 <div class="row">
     <div class="col-xl-12 col-md-12">
@@ -94,17 +116,176 @@
                         </tr>
                         <tr>
                             <td colspan="2" class="py-1">
-                            As you listen to the talk entitled <b>Issues in Marketing</b> for the first time, complete the flow chart below:
+                                As you listen to the talk entitled <b>Issues in Marketing</b> for the first time, complete the flow chart below:
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2">
-                                ยังไม่เสร็จ
+                            <td colspan="2" class="px-5">
+                                <table class="table2">
+                                    <tr>
+                                        <td colspan="5">
+                                        <div class="border border-dark px-2 text-center">
+                                            <div class="drag-container">
+                                                <div class="d-grid grid-5" id="choices">
+                                                    @foreach($caller_choice as $choice)
+                                                    <div class="drag">{{$choice}}</div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="map text-center">Market Orientation</td>
+                                        <td class="px-5"></td>
+                                        <td class="map text-center" colspan="2" style="width: 100px;">2 major ideas</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-l"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="map text-center">customers</td>
+                                        <td class="map">
+                                            <div class="input-con">
+                                                <div class="dropbox q" show-aw="caller_1_1-2" aw="employees"></div>
+                                            </div>
+                                            <br>
+                                            <span class=" aw text-danger caller_1_1-2">employees</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map" colspan="2">characteristics</td>
+                                        <td></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-l"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map" colspan="2">
+                                            information:
+                                            <br>
+                                            <span>* gather</span>
+                                            <br>
+                                            <span>* </span>
+                                            <div class="input-con">
+                                                <div class="dropbox q" show-aw="caller_1_2-1" aw="communicate"></div>
+                                            </div>
+                                            <br>
+                                            <span class=" aw text-danger caller_1_2-1">communicate</span>
+                                            <br>
+                                            <span>* </span>
+                                            <div class="input-con">
+                                                <div class="dropbox q" show-aw="caller_1_2-2" aw="use"></div>
+                                            </div>
+                                            <br>
+                                            <span class=" aw text-danger caller_1_2-2">use</span>
+                                        </td>
+                                        <td></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-l"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map" colspan="2">
+                                        understand customers
+                                            <br>
+                                            <span>* requirements</span>
+                                            <br>
+                                            <span>* </span>
+                                            <div class="input-con">
+                                                <div class="dropbox q" show-aw="caller_1_2-3" aw="satisfaction"></div>
+                                            </div>
+                                            <br>
+                                            <span class=" aw text-danger caller_1_2-3">satisfaction</span>
+                                          </td>
+                                        <td></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-l"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map" colspan="2">
+                                        understand competitors
+                                            <br>
+                                            <span>*  strengths</span>
+                                            <br>
+                                            <span>* </span>
+                                            <div class="input-con">
+                                                <div class="dropbox q" show-aw="caller_1_2-4" aw="weaknesses"></div>
+                                            </div>
+                                            <br>
+                                            <span class=" aw text-danger caller_1_2-4">weaknesses</span>
+                                          </td>
+                                        <td></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-l"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map" colspan="2">
+                                        understand constraints
+                                            <br>
+                                            <span>* staffing</span>
+                                            <br>
+                                            <span>* </span>
+                                            <div class="input-con">
+                                                <div class="dropbox q" show-aw="caller_1_2-5" aw="financial capacity"></div>
+                                            </div>
+                                            <br>
+                                            <span class=" aw text-danger caller_1_2-5">financial capacity</span>
+                                          </td>
+                                        <td></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map-l"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="map" colspan="2">
+                                        forward planning
+                                            <br>
+                                            <span>* </span>
+                                            <div class="input-con">
+                                                <div class="dropbox q" show-aw="caller_1_2-6" aw="long-term vision"></div>
+                                            </div>
+                                            <br>
+                                            <span class=" aw text-danger caller_1_2-6">long-term vision</span>
+                                            <br>
+                                            <span>* </span>
+                                            <div class="input-con">
+                                                <div class="dropbox q" show-aw="caller_1_2-7" aw="objectives"></div>
+                                            </div>
+                                            <br>
+                                            <span class=" aw text-danger caller_1_2-7">objectives</span>
+                                          </td>
+                                        <td></td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                </table>
                             </td>
                         </tr>
                         <tr>
-                            <td>1.</td>
-                            <td>
+                            <td class="pt-3">1.</td>
+                            <td class="pt-3">
                                 Write a short summary of <b>about 120 words</b> describing the characteristics of a good marketing
                                 orientated organization. You can use information in the flow chart above to help you.
                             </td>
