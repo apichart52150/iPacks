@@ -19,12 +19,24 @@
         'q11' => ". To",
         'q12' => "up, a good leader makes full use of the human resources available, without exploiting employees in any way. A sense of justice and understanding are essential qualities. Consensual management techniques are far more effective than relationships based on antiquated",
     ];
+
+    $endQuestion = "principles.";
+
     $choice = [
-        ''abuse      
-        ''authoritarian      
-        ''collaboration      effective      employees      example      fires      human      model      outcomes      preferable      sum
+        'c1' => "abuse",    
+        'c2' => "authoritarian",  
+        'c3' => "collaboration",     
+        'c4' => "effective", 
+        'c5' => "employees",     
+        'c6' => "example",   
+        'c7' => "fires",   
+        'c8' => "human",     
+        'c9' => "model",     
+        'c10' => "outcomes",      
+        'c11' => "preferable",      
+        'c12' => "sum",
     ];
-    $end = "principles.";
+   
 @endphp
 <div class="row">
     <div class="col-xl-12 col-md-12">
@@ -33,20 +45,17 @@
                 {{$pageTitle['topic']}}
             </p>
             <div class="mb-2">
-
-
-
                 @for ($i = 1; $i <= count($question); $i++)
                     {{ $question['q'.$i] }}
-
                     <select class="form-control d-inline w-auto mx-2 mb-2">
                         <option value="">-Select-</option>
+                        @foreach ($choice as $choices)
+                            <option value="{{ $choices }}">{{ $choices }}</option>
+                        @endforeach
                     </select>
                 
                 @endfor
-
-                {{ $end }}
-                
+                {{ $endQuestion }}
             </div>
         </div>
     </div>
@@ -57,63 +66,46 @@
 @endsection
 
 @section('js')
-<script>
-     const answers = [
-        'have been', 
-        'there are', 
-        'has', 
-        'were', 
-        'be', 
-        'expected', 
-        'fell', 
-        'has decreased',
-        'show', 
-        'had been'
-    ];
-    let score = 0;
-    $("#show-answer").hide(true);
+    <script>
+        const answers = [
+            'effective', 
+            'human', 
+            'employees', 
+            'fires', 
+            'preferable', 
+            'model', 
+            'example', 
+            'collaboration',
+            'abuse', 
+            'outcomes',
+            'sum',
+            'authoritarian'
+        ]
 
-    $('#check-answer').on('click', function() {
-        
-        $('select').each((idx, item) => {
-            if($(item).val() == answers[idx]) {
-                $(item).addClass('border border-success');
-                $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
-                score++;
-            } else {
-                $(item).addClass('border border-danger');
-                $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
+        let score = 0
+
+        $("#show-answer").hide(true)
+
+        $('#check-answer').on('click', function() {
+            
+            $('select').each((idx, item) => {
+                if($(item).val() == answers[idx]) {
+                    $(item).addClass('border border-success')
+                    $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item))
+                    score++
+                } else {
+                    $(item).addClass('border border-danger')
+                    $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item))
+                }
+            })
+
+            if(score == answers.length){
+                alert("you're awesome")
+            }else{
+                alert('Your score is ' + score + '/' + answers.length)
             }
+
+            $("#check-answer").prop('disabled','true')
         })
-
-        $('a u').each((idx, item) => {
-            if($(item).val() == answers[idx]) {
-                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
-            } else {
-                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
-            }
-        })
-
-        if(score == 10){
-            alert("you're awesome");
-        }else{
-            alert('Your score is ' + score + '/10');
-        }
-
-        $("#show-answer").show(true);
-        $("#check-answer").hide(true);
-    });
-
-    $('#show-answer').on('click', function() {
-        var x = document.getElementById("ans");
-        if (x.style.display == "none") {
-            $("#show-answer").text('close');
-            x.style.display = "block";
-        }else {
-            $("#show-answer").text('Show Answer');
-            x.style.display = "none";
-        }
-    });
-   
-</script>
+    </script>
 @stop
