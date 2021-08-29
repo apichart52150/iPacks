@@ -229,6 +229,41 @@ $caller_4->e5->choice->a = "illiterate people without a job.";
 $caller_4->e5->choice->b = "volunteer staff.";
 $caller_4->e5->choice->c = "people who consider themselves to be stupid.";
 
+$caller_5_a = new stdClass();
+$caller_5_a->e1 = new stdClass();
+$caller_5_a->e2 = new stdClass();
+$caller_5_a->e3 = new stdClass();
+$caller_5_a->e4 = new stdClass();
+
+$caller_5_a->e1->q = "'This is a time when Australia needs";
+$caller_5_a->e2->q = "labour force; a labour force that is";
+$caller_5_a->e3->q = ", not held back in low-paid,";
+$caller_5_a->e4->q = "- but which can take advantage of";
+
+$caller_5_a->e1->aw = "the most flexible, skilled, productive and educated";
+$caller_5_a->e2->aw = "literate in the full sense of that term";
+$caller_5_a->e3->aw = "unsatisfying employment - or unemployment";
+$caller_5_a->e4->aw = "the opportunities that are there";
+
+$caller_5_b = new stdClass();
+$caller_5_b->e1 = new stdClass();
+$caller_5_b->e2 = new stdClass();
+$caller_5_b->e3 = new stdClass();
+$caller_5_b->e4 = new stdClass();
+$caller_5_b->e5 = new stdClass();
+
+$caller_5_b->e1->q = "'Attitudes have changed. You can see";
+$caller_5_b->e2->q = ". They're less";
+$caller_5_b->e3->q = "about";
+$caller_5_b->e4->q = ". They react";
+$caller_5_b->e5->q = "Some of them have been able";
+
+$caller_5_b->e1->aw = "they're more relaxed";
+$caller_5_b->e2->aw = "nervous";
+$caller_5_b->e3->aw = "communicating";
+$caller_5_b->e4->aw = "more quickly to problems";
+$caller_5_b->e5->aw = "to find better positions";
+
 @endphp
 <div class="row">
     <div class="col-xl-12 col-md-12">
@@ -360,6 +395,37 @@ $caller_4->e5->choice->c = "people who consider themselves to be stupid.";
                         @endforeach
                     </table>
                 </div>
+                <div class="col-lg-12">
+                    <h4 class="font-italic m-0 pt-3">Caller 5</h4>
+                    <h5>Complete the following quotations </h5>
+                    <br>
+                    <b>a. Bill Hayden said:</b>
+                    <br>
+                    <span>
+                        @foreach($caller_5_a as $index => $caller_5_a)
+                        {{$caller_5_a->q}}
+                        <div class="input-con pb-1">
+                            <input type="text" class="q-text" show-aw="caller_4-a-{{$index}}" aw="{{$caller_5_a->aw}}">
+                        </div>
+                        <span class="aw text-danger px-3 caller_4-a-{{$index}}">{{$caller_5_a->aw}}</span>
+                        @endforeach
+                        .'
+                    </span>
+                    <br>
+                    <br>
+                    <b>b. The manager of a major company said:</b>
+                    <br>
+                    <span>
+                        @foreach($caller_5_b as $index => $caller_5_b)
+                        {{$caller_5_b->q}}
+                        <div class="input-con pb-1">
+                            <input type="text" class="q-text" show-aw="caller_4-a-{{$index}}" aw="{{$caller_5_b->aw}}">
+                        </div>
+                        <span class="aw text-danger px-3 caller_4-a-{{$index}}">{{$caller_5_b->aw}}</span>
+                        @endforeach
+                        .'
+                    </span>
+                </div>
             </div>
         </div>
     </div>
@@ -418,7 +484,7 @@ $caller_4->e5->choice->c = "people who consider themselves to be stupid.";
         $('.q-check:checked').each((idx, item) => {
             let aw = ""
             if ($(item).val() == "False")
-                aw = $(item).val() + ": " + $('.'+$(item).attr('text')).val()
+                aw = $(item).val() + ": " + $('.' + $(item).attr('text')).val()
             else
                 aw = $(item).val()
             if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
