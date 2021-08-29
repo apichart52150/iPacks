@@ -53,7 +53,7 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .aw {
@@ -78,93 +78,39 @@
 @php
 
 
+
 $caller_1 = new stdClass();
-$caller_1_choice = new stdClass();
 $caller_1->e1 = new stdClass();
+$caller_1->e1->q = "1. This means that one in seven workers lack literacy skills ... for our technologically ... society. ";
+$caller_1->e1->aw = "adequate***sophisticated";
 $caller_1->e2 = new stdClass();
+$caller_1->e2->q = "2. They can't read training and safety ... and they can't fill out simple forms.";
+$caller_1->e2->aw = "manuals";
 $caller_1->e3 = new stdClass();
+$caller_1->e3->q = "3. When a person has literacy problems, it's harder to get ... .";
+$caller_1->e3->aw = "promotion";
 $caller_1->e4 = new stdClass();
+$caller_1->e4->q = "4. People are willing to ... in a number of directions. ";
+$caller_1->e4->aw = "point the finger";
 $caller_1->e5 = new stdClass();
+$caller_1->e5->q = "5. some with literacy problems missed large ... of schooling due to poor health or sight or hearing problems.";
+$caller_1->e5->aw = "chunks";
 $caller_1->e6 = new stdClass();
+$caller_1->e6->q = "6. And most importantly, courses are run on a ... basis.";
+$caller_1->e6->aw = "voluntary";
 $caller_1->e7 = new stdClass();
-$caller_1->e8 = new stdClass();
-$caller_1->e9 = new stdClass();
-$caller_1->e10 = new stdClass();
-$caller_1->e11 = new stdClass();
-$caller_1->e12 = new stdClass();
-$caller_1->e13 = new stdClass();
-$caller_1->e14 = new stdClass();
-$caller_1->e15 = new stdClass();
-$caller_1->e16 = new stdClass();
-$caller_1->e17 = new stdClass();
-$caller_1->e18 = new stdClass();
-$caller_1->e19 = new stdClass();
-$caller_1->e20 = new stdClass();
+$caller_1->e7->q = "7. The Government has also ... a sum of money to fund courses for unemployed adults who need to up-grade their literacy skills.";
+$caller_1->e7->aw = "allocated";
 
-$caller_1->e1->q = "attitudes";
-$caller_1->e2->q = "discrepancy";
-$caller_1->e3->q = "status";
-$caller_1->e4->q = "emancipation";
-$caller_1->e5->q = "eradicating";
-$caller_1->e6->q = "belittle";
-$caller_1->e7->q = "reviewed";
-$caller_1->e8->q = "to skid";
-$caller_1->e9->q = "assumption";
-$caller_1->e10->q = "anecdote";
-$caller_1->e11->q = "to denote";
-$caller_1->e12->q = "insults";
-$caller_1->e13->q = "connotations";
-$caller_1->e14->q = "counterparts";
-$caller_1->e15->q = "the former";
-$caller_1->e16->q = "the latter";
-$caller_1->e17->q = "newly-coined";
-$caller_1->e18->q = "omission";
-$caller_1->e19->q = "prolonged";
-$caller_1->e20->q = "intention";
-
-$caller_1->e1->aw = "position, standing";
-$caller_1->e2->aw = "reconsidered, changed";
-$caller_1->e3->aw = "short story, often humorous";
-$caller_1->e4->aw = "make someone look small and unimportant";
-$caller_1->e5->aw = "ways in which people think; beliefs";
-$caller_1->e6->aw = "leaving out; not included";
-$caller_1->e7->aw = "the thing mentioned first";
-$caller_1->e8->aw = "the thing mentioned last";
-$caller_1->e9->aw = "to show";
-$caller_1->e10->aw = "equivalents";
-$caller_1->e11->aw = "aim, purpose to do something";
-$caller_1->e12->aw = "difference";
-$caller_1->e13->aw = "getting rid of";
-$caller_1->e14->aw = "to slide out of control, usually in a vehicle";
-$caller_1->e15->aw = "freedom from restrictive bonds";
-$caller_1->e16->aw = "recently invented (words, phrases)";
-$caller_1->e17->aw = "extended, over a longer period";
-$caller_1->e18->aw = "additional meanings";
-$caller_1->e19->aw = "language used to hurt someone's feelings";
-$caller_1->e20->aw = "something which is accepted as true without proof";
-
-$caller_1_choice->ch1 = "ways in which people think; beliefs";
-$caller_1_choice->ch2 = "make someone look small and unimportant";
-$caller_1_choice->ch3 = "aim, purpose to do something";
-$caller_1_choice->ch4 = "equivalents";
-$caller_1_choice->ch5 = "short story, often humorous";
-$caller_1_choice->ch6 = "freedom from restrictive bonds";
-$caller_1_choice->ch7 = "difference";
-$caller_1_choice->ch8 = "leaving out; not included";
-$caller_1_choice->ch9 = "extended, over a longer period";
-$caller_1_choice->ch10 = "getting rid of";
-$caller_1_choice->ch11 = "position, standing";
-$caller_1_choice->ch12 = "to slide out of control, usually in a vehicle";
-$caller_1_choice->ch13 = "additional meanings";
-$caller_1_choice->ch14 = "reconsidered, changed";
-$caller_1_choice->ch15 = "something which is accepted as true without proof";
-$caller_1_choice->ch16 = "the thing mentioned last";
-$caller_1_choice->ch17 = "to show";
-$caller_1_choice->ch18 = "language used to hurt someone's feelings";
-$caller_1_choice->ch19 = "recently invented (words, phrases)";
-$caller_1_choice->ch20 = "the thing mentioned first";
-
-
+$caller_1_choice = new stdClass();
+$caller_1_choice->ch1 = "manuals";
+$caller_1_choice->ch2 = "adequate";
+$caller_1_choice->ch3 = "voluntary";
+$caller_1_choice->ch4 = "chunks";
+$caller_1_choice->ch5 = "sophisticated";
+$caller_1_choice->ch6 = "allocated";
+$caller_1_choice->ch7 = "point the finger";
+$caller_1_choice->ch8 = "promotion";
 
 
 $caller_2 = new stdClass();
@@ -177,8 +123,6 @@ $caller_2->e5 = new stdClass();
 $caller_2->e6 = new stdClass();
 $caller_2->e7 = new stdClass();
 $caller_2->e8 = new stdClass();
-$caller_2->e9 = new stdClass();
-$caller_2->e10 = new stdClass();
 
 $caller_2->e1->n = "1";
 $caller_2->e2->n = "2";
@@ -188,44 +132,54 @@ $caller_2->e5->n = "5";
 $caller_2->e6->n = "6";
 $caller_2->e7->n = "7";
 $caller_2->e8->n = "8";
-$caller_2->e9->n = "9";
-$caller_2->e10->n = "10";
 
-$caller_2->e1->q = "In language, slang has a lower ... than academic language.";
-$caller_2->e2->q = "The speaker began his speech with a short ...";
-$caller_2->e3->q = "The man was a real bully and was always trying to ... his wife's achievements";
-$caller_2->e4->q = "I hate both jogging and sprinting; the ... is too slow, and the ... is too fast.";
-$caller_2->e5->q = "There are a number of ... words and phrases in the English language; many of them have their origins in other languages.";
-$caller_2->e6->q = "John couldn't balance the books; there was a ... in the figures.";
-$caller_2->e7->q = "Sally was very disappointed she wasn't selected to play for her netball team; her ... from the team was a great shock for the rest of the players.";
-$caller_2->e8->q = "Initially I was given a six-month visa to remain in Australia but the visa was ... by three months so that I could spend some time up north.";
-$caller_2->e9->q = "The World Health Organization has been trying to ... malaria for a long time.";
-$caller_2->e10->q = "Wayne's motorcycle ... on the muddy road and he ended up in a ditch.";
+$caller_2->e1->q = "pieces";
+$caller_2->e2->q = "freely, willing, not forced";
+$caller_2->e3->q = "show where the blame lies";
+$caller_2->e4->q = "given";
+$caller_2->e5->q = "a better position or job";
+$caller_2->e6->q = "enough, sufficient";
+$caller_2->e7->q = "instruction booklets";
+$caller_2->e8->q = "complex and modern";
 
-$caller_2->e1->aw = "status";
-$caller_2->e2->aw = "anecdote";
-$caller_2->e3->aw = "belittle";
-$caller_2->e4->aw = "former***latter";
-$caller_2->e5->aw = "newly-coined";
-$caller_2->e6->aw = "discrepancy";
-$caller_2->e7->aw = "omission";
-$caller_2->e8->aw = "prolonged";
-$caller_2->e9->aw = "eradicate";
-$caller_2->e10->aw = "skidded";
+$caller_2->e1->aw = "chunks";
+$caller_2->e2->aw = "voluntary";
+$caller_2->e3->aw = "point the finger";
+$caller_2->e4->aw = "allocated";
+$caller_2->e5->aw = "promotion";
+$caller_2->e6->aw = "adequate";
+$caller_2->e7->aw = "manuals";
+$caller_2->e8->aw = "sophisticated";
 
+
+$caller_3 = new stdClass();
+$caller_3->e1 = new stdClass();
+$caller_3->e2 = new stdClass();
+$caller_3->e3 = new stdClass();
+$caller_3->e4 = new stdClass();
+$caller_3->e5 = new stdClass();
+
+$caller_3->e1->n = "1";
+$caller_3->e2->n = "2";
+$caller_3->e3->n = "3";
+$caller_3->e4->n = "4";
+$caller_3->e5->n = "5";
+
+$caller_3->e1->q = "Illiteracy is only a migrant problem.";
+$caller_3->e2->q = "Most of the employers who were surveyed said they would not give a job to a person with poor literacy skills.";
+$caller_3->e3->q = "Most employees do exactly the same job for the whole of their working lives.";
+$caller_3->e4->q = "There are a variety of reasons why this literacy problem exists.";
+$caller_3->e5->q = "Improved literacy skills usually lead to increased confidence.";
+
+$caller_3->e1->aw = "False: Lack of literacy is not just a migrant problem";
+$caller_3->e2->aw = "False: 40 % of them";
+$caller_3->e3->aw = "False: workers could expect 50% of their current workforce tasks to be out-of-date in three to five years";
+$caller_3->e4->aw = "True";
+$caller_3->e5->aw = "True";
 
 $caller_3_choice = new stdClass();
-
-$caller_3_choice->ch1 = "a. 'Man'";
-$caller_3_choice->ch2 = "b. Everyone should be aware of his rights.";
-$caller_3_choice->ch3 = "Female forms to denote sexual difference";
-$caller_3_choice->ch4 = "b. People should be aware of their rights.";
-$caller_3_choice->ch5 = "b. Mr and Mrs Smith";
-$caller_3_choice->ch6 = "- author, usher, waiter";
-$caller_3_choice->ch7 = "Females are referred to in terms relating to males";
-$caller_3_choice->ch8 = "a. Humans";
-$caller_3_choice->ch9 = "- doctor, librarian";
-$caller_3_choice->ch10 = "Female forms for insults and abuse";
+$caller_3_choice->a = "True";
+$caller_3_choice->b = "False";
 
 
 $caller_4 = new stdClass();
@@ -241,17 +195,17 @@ $caller_4->e3->n = "3";
 $caller_4->e4->n = "4";
 $caller_4->e5->n = "5";
 
-$caller_4->e1->q = "Although it has been said that language reflects the society that creates it ,";
-$caller_4->e2->q = "The aim of the short story is";
-$caller_4->e3->q = "Which of the following is NOT an example of sexist language?";
-$caller_4->e4->q = "The speaker believes";
-$caller_4->e5->q = "The speaker does NOT believe that the prolonged use of sexist language";
+$caller_4->e1->q = "Which of the following would not be a problem for a person with low literacy?";
+$caller_4->e2->q = "The $3 billion in lost productivity for industry includes";
+$caller_4->e3->q = "Which of the following can lead to literacy problems?";
+$caller_4->e4->q = "Which of the following statements about the literacy courses run by industry is not correct?";
+$caller_4->e5->q = "The Government has allocated money for literacy courses to help";
 
-$caller_4->e1->aw = "c. changes in language tend to develop more slowly than attitudes.";
-$caller_4->e2->aw = "c. to show that society makes assumptions based on role stereotypes.";
-$caller_4->e3->aw = "a. human.";
-$caller_4->e4->aw = "b. it would not be possible to get rid of all examples of sexist language.";
-$caller_4->e5->aw = "d. requires a certain degree of conscious effort.";
+$caller_4->e1->aw = "b. watching a television programme.";
+$caller_4->e2->aw = "c. time lost through poor communication.";
+$caller_4->e3->aw = "a. sight or hearing problems.";
+$caller_4->e4->aw = "b. They are conducted during overtime periods.";
+$caller_4->e5->aw = "a. illiterate people without a job.";
 
 $caller_4->e1->choice = new stdClass();
 $caller_4->e2->choice = new stdClass();
@@ -259,90 +213,21 @@ $caller_4->e3->choice = new stdClass();
 $caller_4->e4->choice = new stdClass();
 $caller_4->e5->choice = new stdClass();
 
-$caller_4->e1->choice->a = "it betrays the attitudes of those who use the language.";
-$caller_4->e1->choice->b = "language develops at the same rate as attitudes.";
-$caller_4->e1->choice->c = "changes in language tend to develop more slowly than attitudes.";
-$caller_4->e1->choice->d = "language changes more quickly than attitudes.";
-$caller_4->e2->choice->a = "to show that not all surgeons are men.";
-$caller_4->e2->choice->b = "to show that all surgeons are women.";
-$caller_4->e2->choice->c = "to show that society makes assumptions based on role stereotypes.";
-$caller_4->e2->choice->d = "to show that open-minded people are not puzzled by the story.";
-$caller_4->e3->choice->a = "human.";
-$caller_4->e3->choice->b = "mankind";
-$caller_4->e3->choice->c = "male-nurse";
-$caller_4->e3->choice->d = "policewoman";
-$caller_4->e4->choice->a = "nothing can be done to eradicate sexist language.";
-$caller_4->e4->choice->b = "it would not be possible to get rid of all examples of sexist language.";
-$caller_4->e4->choice->c = "sexist language will soon be a thing of the past.";
-$caller_4->e4->choice->d = "nothing has been done to change sexist language";
-$caller_4->e5->choice->a = "is largely the result of laziness.";
-$caller_4->e5->choice->b = "is largely the result of ignorance.";
-$caller_4->e5->choice->c = "will have a harmful effect on the status of women.";
-$caller_4->e5->choice->d = "requires a certain degree of conscious effort.";
-
-
-$caller_5 = new stdClass();
-$caller_5->a = new stdClass();
-$caller_5_a_choice = new stdClass();
-$caller_5->a->e1 = new stdClass();
-$caller_5->a->e2 = new stdClass();
-$caller_5->a->e3 = new stdClass();
-$caller_5->a->e4 = new stdClass();
-$caller_5->a->e5 = new stdClass();
-
-$caller_5->a->e1->q = "spinster";
-$caller_5->a->e2->q = "to man a ship";
-$caller_5->a->e3->q = "to man the reception desk";
-$caller_5->a->e4->q = "a one-man operation";
-$caller_5->a->e5->q = "mankind";
-
-$caller_5->a->e1->aw = "woman / person who is not married";
-$caller_5->a->e2->aw = "to crew a ship";
-$caller_5->a->e3->aw = "to staff the reception desk";
-$caller_5->a->e4->aw = "a one-person operation";
-$caller_5->a->e5->aw = "human beings / humans";
-
-$caller_5_a_choice->aw1 = "to crew a ship";
-$caller_5_a_choice->aw2 = "a one-person operation";
-$caller_5_a_choice->aw3 = "woman / person who is not married";
-$caller_5_a_choice->aw4 = "human beings / humans";
-$caller_5_a_choice->aw5 = "to staff the reception desk";
-
-$caller_5->b = new stdClass();
-$caller_5_b_choice = new stdClass();
-$caller_5->b->e1 = new stdClass();
-$caller_5->b->e2 = new stdClass();
-$caller_5->b->e3 = new stdClass();
-
-$caller_5->b->e1->q = "'Man and his World'";
-$caller_5->b->e2->q = "'Man Management'";
-$caller_5->b->e3->q = "'Man's Condition'";
-
-$caller_5->b->e1->aw = "'The Human World'";
-$caller_5->b->e2->aw = "'Human Resource Management'";
-$caller_5->b->e3->aw = "'The Human Condition'";
-
-$caller_5_b_choice->aw1 = "'Human Resource Management'";
-$caller_5_b_choice->aw2 = "'The Human World'";
-$caller_5_b_choice->aw3 = "'The Human Condition'";
-
-$caller_5->c = new stdClass();
-$caller_5_c_choice = new stdClass();
-$caller_5->c->e1 = new stdClass();
-$caller_5->c->e2 = new stdClass();
-$caller_5->c->e3 = new stdClass();
-
-$caller_5->c->e1->n = "1";
-$caller_5->c->e2->n = "2";
-$caller_5->c->e3->n = "3";
-
-$caller_5->c->e1->q = "The lecturer can effectively assess his students' learning.";
-$caller_5->c->e2->q = "Many students have wives and children to support.";
-$caller_5->c->e3->q = "The tenant is responsible for the security of his own apartment.";
-
-$caller_5->c->e1->aw = "Lecturers can effectively assess their students' learning.";
-$caller_5->c->e2->aw = "Many students have families to support.";
-$caller_5->c->e3->aw = "The tenant is responsible for the security of the apartment.";
+$caller_4->e1->choice->a = "understanding the label on a medicine bottle.";
+$caller_4->e1->choice->b = "watching a television programme.";
+$caller_4->e1->choice->c = "finding a cinema programme in the newspaper.";
+$caller_4->e2->choice->a = "losses through accidents.";
+$caller_4->e2->choice->b = "high staff turnover.";
+$caller_4->e2->choice->c = "time lost through poor communication.";
+$caller_4->e3->choice->a = "sight or hearing problems.";
+$caller_4->e3->choice->b = "school holidays";
+$caller_4->e3->choice->c = "all of the above";
+$caller_4->e4->choice->a = "Attendance is voluntary.";
+$caller_4->e4->choice->b = "They are conducted during overtime periods.";
+$caller_4->e4->choice->c = "They cost money to run.";
+$caller_4->e5->choice->a = "illiterate people without a job.";
+$caller_4->e5->choice->b = "volunteer staff.";
+$caller_4->e5->choice->c = "people who consider themselves to be stupid.";
 
 @endphp
 <div class="row">
@@ -355,9 +240,8 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                 <div class="col-lg-12">
                     <h4 class="font-italic m-0 pt-3">Caller 1</h4>
                     <span>
-                        In the lecture you will hear the words in List A.
-                        <b>Before you listen to the lecture</b>, match the words in List A with their meanings in List B.
-                        Then do Exercise 2.
+                        The words in the box below appear in the listening script. As you listen to the script for the first
+                        time, complete the sentences (taken from the script) with these words:
                     </span>
                     <div class="row justify-content-center mb-2">
                         <div class="col-md-12">
@@ -374,43 +258,28 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                     </div>
                     <div class="row justify-content-center mb-2">
                         <div class="col-md-12">
-                            <table class="table w-50 mb-3">
-                                <tr>
-                                    <th class="py-2">List A</th>
-                                    <td class="py-2"></td>
-                                    <th class="py-2">List B</th>
-                                </tr>
-                                @foreach($caller_1 as $index => $caller_1)
-                                <tr>
-                                    <td class="pl-4" style="width: 200px;">{{$caller_1->q}}</td>
-                                    <td>=</td>
-                                    <td>
-                                        <div class="input-con">
-                                            <div class="dropbox q" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}"></div>
-                                        </div>
-                                        <br>
-                                        <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </table>
+                            @foreach($caller_1 as $index => $caller_1)
+                            <p class="w-100 pr-3 q-caller-1 q-caller-1-{{$index}}" q="caller-1-{{$index}}" aw="{{$caller_1->aw}}">{{$caller_1->q}}</p>
+                            @endforeach
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <h4 class="font-italic m-0 pt-3">Caller 2</h4>
-                    <table class="w-100">
-                        <tr>
-                            <td colspan="2">
-                                <h5>Complete the following sentences using some of the words from List A. You may need to change the
-                                    form of some of the words</h5>
-                            </td>
-                        </tr>
+                    <span>
+                        Now match the words in the box with their correct meaning:
+                    </span>
+                    <table>
                         @foreach($caller_2 as $index => $caller_2)
                         <tr>
-                            <td style="vertical-align: middle;">{{$caller_2->n}}.</td>
-                            <td style="vertical-align: middle;">
-                                <span class="pr-2 q-caller-2 q-caller-2-{{$index}}" q="caller-2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q}}</span>
+                            <td style="width: 20px;">{{$caller_2->n}}.</td>
+                            <td>{{$caller_2->q}}</td>
+                            <td class="px-4">=</td>
+                            <td>
+                                <div class="input-con">
+                                    <input type="text" class="input-text q-text w-100" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
+                                </div>
+                                <span class="pl-4 aw text-danger caller_2-{{$index}}">{{$caller_2->aw}}</span>
                             </td>
                         </tr>
                         @endforeach
@@ -418,134 +287,46 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                 </div>
                 <div class="col-lg-12">
                     <h4 class="font-italic m-0 pt-3">Caller 3</h4>
-                    <table id="caller-3">
+                    <table class="w-100">
                         <tr>
                             <td colspan="4">
-                                <div class="border border-dark px-2 text-center">
-                                    <div class="drag-container">
-                                        <div class="d-grid grid-5" id="choices">
-                                            @foreach($caller_3_choice as $choice)
-                                            <div class="drag">{{$choice}}</div>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                </div>
+                                <h5>
+                                    Decide which of the following statements are true and which are false.
+                                    <br>
+                                    If a sentence is false, say why it is false.
+                                </h5>
                             </td>
                         </tr>
+                        @foreach($caller_3 as $index => $caller_3)
                         <tr>
-                            <th></th>
-                            <th class="pt-4">Problem</th>
-                            <th class="pt-4">Examples</th>
-                            <th class="pt-4">Remedy</th>
+                            <td style="width: 25px;">{{$caller_3->n}}.</td>
+                            <td colspan="3">{{$caller_3->q}}</td>
                         </tr>
+
+                        @foreach($caller_3_choice as $index2 => $choice)
                         <tr>
-                            <td>1.</td>
-                            <td class="col-3-500">It assumes that a particular role or job is exclusively male or female.</td>
-                            <td class="col-3-500">
-                                a. postman, fireman, chairman
-                                <br>
-                                b. to mother, to father fatherly / motherly advice
+                            <td></td>
+                            <td style="width: 1px;">
+                                <div class="form-check">
+                                    <input class="form-check-input position-static q-check caller_3-{{$index}}-{{$index2}}" text="caller_3-input-{{$index}}-{{$index2}}" type="radio" name="caller_3-{{$index}}" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}" value="{{$choice}}">
+                                </div>
                             </td>
-                            <td class="col-3-500">
-                                a. postperson, fireperson, chairperson
-                                <br>
-                                none given
+                            <td style="width: 100px;" onclick="checkRadio('caller_3-{{$index}}-{{$index2}}')">
+                                {{$index2}}. {{$choice}}
+                            </td>
+                            <td>
+                                @if($choice == "False")
+                                <input type="text" class="caller_3-input-{{$index}}-{{$index2}}">
+                                @endif
                             </td>
                         </tr>
-                        <tr>
-                            <td>2.</td>
-                            <td class="col-3-500">Phrases which are male by nature but which include both males and females.</td>
-                            <td class="col-3-500">
-                                <div class="input-con">
-                                    <div class="dropbox q" show-aw="caller_3-2-2-1" aw="a. 'Man'"></div>
-                                </div>
-                                <br>
-                                <span class="aw caller_3-2-2-1 text-danger">a. 'Man'</span>
-                                <br>
-                                <div class="input-con">
-                                    <div class="dropbox q" show-aw="caller_3-2-2-2" aw="b. Everyone should be aware of his rights."></div>
-                                </div>
-                                <br>
-                                <span class="aw caller_3-2-2-2 text-danger">b. Everyone should be aware of his rights.</span>
-                            </td>
-                            <td class="col-3-500">
-                                <div class="input-con">
-                                    <div class="dropbox q" show-aw="caller_3-2-3-1" aw="a. Humans"></div>
-                                </div>
-                                <br>
-                                <span class="aw caller_3-2-3-1 text-danger">a. Humans</span>
-                                <br>
-                                <div class="input-con">
-                                    <div class="dropbox q" show-aw="caller_3-2-3-2" aw="b. People should be aware of their rights."></div>
-                                </div>
-                                <br>
-                                <span class="aw caller_3-2-3-2 text-danger">b. People should be aware of their rights.</span>
-                            </td>
+                        @endforeach
+
+                        <tr class="aw">
+                            <td></td>
+                            <td colspan="3" class=" caller_3-{{$index}} text-danger">{{$caller_3->aw}}</td>
                         </tr>
-                        <tr>
-                            <td>3.</td>
-                            <td class="col-3-500">
-                                <div class="input-con">
-                                    <div class="dropbox q" show-aw="caller_3-1-3" aw="Female forms to denote sexual difference"></div>
-                                </div>
-                                <br>
-                                <span class="aw caller_3-1-3 text-danger">Female forms to denote sexual difference</span>
-                            </td>
-                            <td class="col-3-500">
-                                authoress, usherette, waitress
-                                <br>
-                                lady-doctor; female-librarian
-                            </td>
-                            <td class="col-3-500">
-                                <div class="input-con">
-                                    <div class="dropbox q" show-aw="caller_3-3-3-1" aw="- author, usher, waiter"></div>
-                                </div>
-                                <br>
-                                <span class="aw caller_3-3-3-1 text-danger">- author, usher, waiter</span>
-                                <br>
-                                <div class="input-con">
-                                    <div class="dropbox q" show-aw="caller_3-3-3-2" aw="- doctor, librarian"></div>
-                                </div>
-                                <br>
-                                <span class="aw caller_3-3-3-2 text-danger">- doctor, librarian</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4.</td>
-                            <td class="col-3-500">
-                                <div class="input-con">
-                                    <div class="dropbox q" show-aw="caller_3-1-4" aw="Females are referred to in terms relating to males"></div>
-                                </div>
-                                <br>
-                                <span class="aw caller_3-1-4 text-danger">Females are referred to in terms relating to males</span>
-                            </td>
-                            <td class="col-3-500">
-                                a. man and wife
-                                <br>
-                                b. John Smith and his wife
-                            </td>
-                            <td class="col-3-500">
-                                a. none given
-                                <br>
-                                <div class="input-con">
-                                    <div class="dropbox q" show-aw="caller_3-3-4-2" aw="b. Mr and Mrs Smith"></div>
-                                </div>
-                                <br>
-                                <span class="aw caller_3-3-4-2 text-danger">b. Mr and Mrs Smith</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5.</td>
-                            <td class="col-3-500">
-                                <div class="input-con">
-                                    <div class="dropbox q" show-aw="caller_3-1-5" aw="Female forms for insults and abuse"></div>
-                                </div>
-                                <br>
-                                <span class="aw caller_3-1-5 text-danger">Female forms for insults and abuse</span>
-                            </td>
-                            <td class="col-3-500">bitch, vixen</td>
-                            <td class="col-3-500">none given</td>
-                        </tr>
+                        @endforeach
                     </table>
                 </div>
                 <div class="col-lg-12">
@@ -553,7 +334,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                     <table class="w-100">
                         <tr>
                             <td colspan="3">
-                                <h5>Listen to the lecture again. Choose the correct answer from the choices given for each question.</h5>
+                                <h5>Choose the best answer for each question from the alternatives given: a. b. or c. </h5>
                             </td>
                         </tr>
                         @foreach($caller_4 as $index => $caller_4_1)
@@ -577,123 +358,6 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             <td colspan="2" class="aw caller_4-{{$index}} text-danger">{{$caller_4_1->aw}}</td>
                         </tr>
                         @endforeach
-                    </table>
-                </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 5</h4>
-                    <table class="w-100">
-                        <tr>
-                            <td colspan="4">
-                                <h5>
-                                    Below are some examples of sexist language
-                                    <br>
-                                    Find ways of changing the words and phrases to make them less sexist.
-                                </h5>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <div class="border border-dark px-2 text-center">
-                                    <div class="drag-container">
-                                        <div class="d-grid grid-5" id="choices">
-                                            @foreach($caller_5_a_choice as $choice)
-                                            <div class="drag">{{$choice}}</div>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 20px;"><b>a.</b></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        @foreach($caller_5->a as $index => $a)
-                        <tr>
-                            <td></td>
-                            <td style="width: 250px;">{{$a->q}}</td>
-                            <td>=</td>
-                            <td>
-                                <div class="input-con">
-                                    <div class="dropbox q" show-aw="caller_5_a-{{$index}}" aw="{{$a->aw}}"></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="aw caller_5_a-{{$index}} text-danger">{{$a->aw}}</td>
-                        </tr>
-                        @endforeach
-                        <tr>
-                            <td class="pt-3" colspan="4">
-                                <div class="border border-dark px-2 text-center">
-                                    <div class="drag-container">
-                                        <div class="d-grid grid-5" id="choices">
-                                            @foreach($caller_5_b_choice as $choice)
-                                            <div class="drag">{{$choice}}</div>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 20px;"><b>b.</b></td>
-                            <td colspan="3"><b>Consider alternative titles for the following books:</b></td>
-                        </tr>
-                        @foreach($caller_5->b as $index => $b)
-                        <tr>
-                            <td></td>
-                            <td style="width: 250px;">{{$b->q}}</td>
-                            <td>=</td>
-                            <td>
-                                <div class="input-con">
-                                    <div class="dropbox q" show-aw="caller_5_b-{{$index}}" aw="{{$b->aw}}"></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="aw caller_5_b-{{$index}} text-danger">{{$b->aw}}</td>
-                        </tr>
-                        @endforeach
-                        <tr>
-                            <td style="width: 20px;" class="pt-3"><b>c.</b></td>
-                            <td colspan="3" class="pt-3"><b>Rewrite the following sentences to get rid of any sexist language:</b></td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <table class="w-100 m-0 p-0">
-                                    @foreach($caller_5->c as $index => $c)
-                                    <tr>
-                                        <td></td>
-                                        <td style="width: 20px;">{{$c->n}}.</td>
-                                        <td colspan="2">{{$c->q}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width: 20px;"></td>
-                                        <td colspan="2"></td>
-                                        <td>
-                                            <b>Answer: </b>
-                                            <input type="text" class="input-text q-text w-75" show-aw="caller_5_c-{{$index}}" aw="{{$c->aw}}">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width: 20px;"></td>
-                                        <td style="width: 20px;"></td>
-                                        <td style="width: 20px;"></td>
-                                        <td class="aw caller_5_c-{{$index}} text-danger">{{$c->aw}}</td>
-                                    </tr>
-                                    @endforeach
-                                </table>
-                            </td>
-                        </tr>
                     </table>
                 </div>
             </div>
@@ -728,18 +392,18 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    $('.q-caller-2').each((idx, item) => {
+    $('.q-caller-1').each((idx, item) => {
         let text = $(item).html()
         let new_text = $(item).html()
         let aw = $(item).attr('aw').split("***")
-        console.log("text", text)
-        console.log("aw", aw)
         for (let i = 0; i < text.split("...").length - 1; i++) {
-            let input = '<div class="input-con input-con2 caller_3 pb-1 "><input type="text" class="input-text caller_3" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
-                '<labal class="w-100 px-2 aw caller_3-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'
+            let input = '<div class=" input-con caller_1 pb-1 m-0 ">' +
+                '<div class="dropbox q" class="caller_1" aw="' + aw[i] + '" show-aw="caller_1-' + idx + '-' + i + '"></div>' +
+                '</div>' +
+                '<labal class=" px-2 aw caller_1-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'
             new_text = new_text.replace("...", input)
         }
-        $('.q-caller-2-e' + (idx + 1)).html(new_text)
+        $('.q-caller-1-e' + (idx + 1)).html(new_text)
     })
 
     $('#check-answer').on('click', () => {
@@ -752,14 +416,18 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                 show_aw($(item).attr('show-aw'))
         })
         $('.q-check:checked').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+            let aw = ""
+            if ($(item).val() == "False")
+                aw = $(item).val() + ": " + $('.'+$(item).attr('text')).val()
+            else
+                aw = $(item).val()
+            if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'))
         })
         $('.aw').removeClass('aw')
     })
 
     function show_aw(aw) {
-        console.log("aw", aw)
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
     }
