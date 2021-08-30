@@ -113,19 +113,19 @@
 
 @section('js')
 <script>
-
-    const answer0 = ['decreased', 'fell', 'dropped', 'reduced'];
-    const answer1 = ['increased', 'rose', 'grew'];
-    const answer2 = ['beginning', 'start'];
-    const answer3 = ['decrease', 'fall', 'drop', 'reduction'];
-    const answer4 = ['increased', 'rose', 'grew'];
-    const answer5 = ['dramatic', 'substantial', 'considerable', 'big', 'large'];
-    const answer6 = ['at'];
-    const answer7 = ['increased', 'rose', 'grew'];
-    const answer8 = ['decreased', 'fell', 'dropped', 'reduced'];
-    const answer9 = ['at'];
-    const answer10 = ['while', 'whereas', 'but'];
-    const answer11 = ['number'];
+    const answers = []
+    answers[0] = ['decreased', 'fell', 'dropped', 'reduced'];
+    answers[1] = ['increased', 'rose', 'grew'];
+    answers[2] = ['beginning', 'start'];
+    answers[3] = ['decrease', 'fall', 'drop', 'reduction'];
+    answers[4] = ['increased', 'rose', 'grew'];
+    answers[5] = ['dramatic', 'substantial', 'considerable', 'big', 'large'];
+    answers[6] = ['at'];
+    answers[7] = ['increased', 'rose', 'grew'];
+    answers[8] = ['decreased', 'fell', 'dropped', 'reduced'];
+    answers[9] = ['at'];
+    answers[10] = ['while', 'whereas', 'but'];
+    answers[11] = ['number'];
 
     let score = 0;
 
@@ -134,103 +134,12 @@
     function checkAnswers() {
         let icon;
         $(':text').each((idx, item) => {
-            switch(idx) {
-                case 0:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer0) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 1:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer1) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 2:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer2) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 3:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer3) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 4:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer4) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 5:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer5) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 6:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer6) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 7:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer7) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 8:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer8) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 9:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer9) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 10:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer10) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 11:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
+            
+            if(jQuery.inArray($(item).val().toLowerCase(),  answers[idx]) != -1) {
+                icon = '<i class="fas fa-check text-success"></i>';
+                score++
+            } else {
+                icon = '<i class="fas fa-times text-danger"></i>';
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -241,11 +150,7 @@
             `)
         })
 
-        if(score == 12){
-            alert("you're awesome");
-        }else{
-            alert('Your score is ' + score);
-        }
+        alert('Your score is ' + score);
     }
 </script>
 @stop
