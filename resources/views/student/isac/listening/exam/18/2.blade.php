@@ -57,9 +57,7 @@
     <div class="col-md-12">
 
         <div class="card-box text-dark font-16">
-            <p class="lead">
-                {{$pageTitle['sub_menu_name']}}
-            </p>
+            <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a href="#exercise1" data-toggle="tab" aria-expanded="true" class="nav-link active">

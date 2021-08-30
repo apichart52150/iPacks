@@ -198,9 +198,7 @@ $caller_1->e16->aw->i = "The people most affected by relocation of factories fro
 <div class="row">
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
-            <p class="lead">
-                {{$pageTitle['sub_menu_name']}}
-            </p>
+            <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
             <div class="row">
                 <div class="col-lg-12">
                     <h4 class="font-italic m-0 pt-3">Caller 1</h4>
