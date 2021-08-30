@@ -140,7 +140,6 @@ $caller_2->e9->aw = "2.98";
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <h5>Listen to the information and complete the following chart about acid rain in Europe: </h5>
                         @foreach($caller_2 as $caller_2)
                         <div class="row">

@@ -143,7 +143,6 @@ $caller_4_choice->e14 = "..a strong possibility..";
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 4</h4>
                     <h5>Write the following sentences in note form, using abbreviations, signs, symbols or anything else which will help you. Focus only on the content words. </h5>
                     <div class="row justify-content-center mb-2">
                         <div class="col-md-12">

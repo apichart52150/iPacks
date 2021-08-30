@@ -148,7 +148,6 @@ $caller_3->e10->aw = "The fine weather is expected to continue for the next few 
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <h5>As you listen, find answers to these questions:</h5>
                     <div class="row justify-content-center mb-2">
                         <div class="col-md-12">
@@ -193,7 +192,6 @@ $caller_3->e10->aw = "The fine weather is expected to continue for the next few 
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 2</h4>
                     <table class="w-100">
                         <tr>
                             <td colspan="2">
@@ -222,7 +220,6 @@ $caller_3->e10->aw = "The fine weather is expected to continue for the next few 
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 3</h4>
                     <h5>As you listen again, make notes and write a short report about one of the news items.</h5>
                     <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                 </div>

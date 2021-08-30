@@ -143,7 +143,6 @@ $caller_4_choice->e14 = "..a strong possibility..";
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <h5>Listen to the interview about the forthcoming Federal Budget. As you listen, decide on the
 degree of probability expressed by the person being interviewed. You can use the words or give
 the percentages to express this degree of probability: </h5>

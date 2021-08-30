@@ -353,52 +353,38 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
                     <span>
                         In the lecture you will hear the words in List A.
                         <b>Before you listen to the lecture</b>, match the words in List A with their meanings in List B.
                         Then do Exercise 2.
                     </span>
-                    <div class="row justify-content-center mb-2">
-                        <div class="col-md-12">
-                            <div class="border border-dark px-2 text-center">
-                                <div class="drag-container">
-                                    <div class="d-grid grid-5" id="choices">
+                    <div class="w-100 d-flex justify-content-center">
+                        <table class="w-50 mb-3">
+                            <tr>
+                                <th class="py-2">List A</th>
+                                <td class="py-2"></td>
+                                <th class="py-2">List B</th>
+                            </tr>
+                            @foreach($caller_1 as $index => $caller_1)
+                            <tr>
+                                <td class="pl-4" style="width: 200px;">{{$caller_1->q}}</td>
+                                <td>=</td>
+                                <td>
+                                    <select class="form-select q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}" aria-label="Default select example">
+                                        <option value="...">...</option>
                                         @foreach($caller_1_choice as $choice)
-                                        <div class="drag">{{$choice}}</div>
+                                        <option value="{{$choice}}">{{$choice}}</option>
                                         @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center mb-2">
-                        <div class="col-md-12">
-                            <table class="table w-50 mb-3">
-                                <tr>
-                                    <th class="py-2">List A</th>
-                                    <td class="py-2"></td>
-                                    <th class="py-2">List B</th>
-                                </tr>
-                                @foreach($caller_1 as $index => $caller_1)
-                                <tr>
-                                    <td class="pl-4" style="width: 200px;">{{$caller_1->q}}</td>
-                                    <td>=</td>
-                                    <td>
-                                        <div class="input-con">
-                                            <div class="dropbox q" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}"></div>
-                                        </div>
-                                        <br>
-                                        <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </table>
-                        </div>
+                                    </select>
+                                    <br>
+                                    <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </table>
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 2</h4>
                     <table class="w-100">
                         <tr>
                             <td colspan="2">
@@ -417,7 +403,6 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 3</h4>
                     <table id="caller-3">
                         <tr>
                             <td colspan="4">
@@ -549,7 +534,6 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 4</h4>
                     <table class="w-100">
                         <tr>
                             <td colspan="3">
@@ -580,7 +564,6 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 5</h4>
                     <table class="w-100">
                         <tr>
                             <td colspan="4">

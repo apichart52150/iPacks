@@ -58,7 +58,6 @@
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <table>
                         <tr>
                             <td>1.</td>

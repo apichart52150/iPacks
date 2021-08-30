@@ -360,7 +360,6 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         </table>
                     </div>
                     <div class="col-lg-12">
-                        <h4 class="font-italic">Caller 1</h4>
                         <h5>Find out the meaning of these common abbreviations from Latin:</h5>
                         <div class="row justify-content-center mb-2">
                             <div class="col-md-12">
@@ -429,7 +428,6 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <h4 class="font-italic">Caller 2</h4>
                         <h5>Complete the table of commonly used signs and symbols: </h5>
                         <div class="row justify-content-center mb-2">
                             <div class="col-md-12">
@@ -468,7 +466,6 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <h4 class="font-italic">Caller 3</h4>
                         <h5>Write the following sentences in note form, using abbreviations, signs, symbols or anything else which will help you. Focus only on the content words. </h5>
                         <div class="row justify-content-center mb-2">
                             <div class="col-md-12">
@@ -530,7 +527,6 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         </span>
                     </div>
                     <div class="col-lg-12">
-                        <h4 class="font-italic">Caller 4</h4>
                         <h5>A. You are going to listen to a short talk about the population of Australia. As you listen, try to find the answers to the following questions:</h5>
                         <table class="w-100 mb-3">
                             @foreach($caller_4_A as $index => $caller_4_A)

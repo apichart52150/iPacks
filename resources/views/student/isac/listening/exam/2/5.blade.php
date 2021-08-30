@@ -72,7 +72,6 @@ $caller_4_A->e5->aw = "Aboriginal";
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 4</h4>
                     <h5>A. You are going to listen to a short talk about the population of Australia. As you listen, try to find the answers to the following questions:</h5>
                     <table class="w-100 mb-3">
                         @foreach($caller_4_A as $index => $caller_4_A)

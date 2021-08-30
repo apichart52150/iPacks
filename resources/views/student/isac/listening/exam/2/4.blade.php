@@ -129,7 +129,6 @@ $caller_4->e6->aw = ["114%","79%"];
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <h5>Listen to the tape and then complete the table below: </h5>
                         <table>
                             <tr class="text-center">

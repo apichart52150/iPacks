@@ -229,7 +229,6 @@ $caller_2_5_choice->ch8 = "minor parts";
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
                     <table class="w-100">
                         @foreach($caller_2 as $index => $caller_2)
                         <tr>

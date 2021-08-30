@@ -52,7 +52,6 @@
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic pt-3">Caller 1</h4>
                     <span>
                         3.4 Now, write a short summary of the talk in <b>about 50 - 80 words</b>.
                     </span>

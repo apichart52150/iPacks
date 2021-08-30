@@ -1,13 +1,25 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
     table tr td {
-        vertical-align: top;
-        padding-top: 10px;
+        vertical-align: middle;
+    }
+
+    .table tr td {
+        vertical-align: middle;
+        border: 1px solid black;
+    }
+
+    .table tr th {
+        border: 1px solid black;
     }
 
     .input-con {
         display: inline-block;
         position: relative;
+    }
+
+    .input-con2 {
+        width: 100px;
     }
 
     .drag-container {
@@ -32,6 +44,7 @@
         width: 100%;
         height: auto;
         min-width: 250px;
+        min-height: 40px;
     }
 
     .dropbox .drag {
@@ -40,11 +53,26 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .aw {
         display: none;
+    }
+
+    .input-text {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 3px;
+        width: 100%;
+        height: auto;
+        min-width: 80px;
+        min-height: 40px;
+    }
+
+    #caller-3 tr .col-3-500 {
+        width: 500px;
+        padding-left: 10px;
     }
 </style>
 @php
@@ -54,21 +82,13 @@ $caller_1->e1 = new stdClass();
 $caller_1->e2 = new stdClass();
 $caller_1->e3 = new stdClass();
 $caller_1->e4 = new stdClass();
+$caller_1->e5 = new stdClass();
 
-$caller_1->e1->n = "1";
-$caller_1->e2->n = "2";
-$caller_1->e3->n = "3";
-$caller_1->e4->n = "4";
-
-$caller_1->e1->q = "Windbreaks fulfill a useful function not only in the summer months, when the winds can be very hot,";
-$caller_1->e2->q = "Although this holistic approach to designing a house and block is usually most effective in new home construction";
-$caller_1->e3->q = "When the land-use map has been drawn, the next step is to show the directions of the prevailing winds for both summer";
-$caller_1->e4->q = "It is the east and west sides of a house which need shading the most, especially when the angle of the sun is low in the early morning";
-
-$caller_1->e1->aw = "but also in the winter months, when the winds can be very cold.";
-$caller_1->e2->aw = "it is also effective in planning established homes.";
-$caller_1->e3->aw = "and winter.";
-$caller_1->e4->aw = "and in the late afternoon.";
+$caller_1->e1->aw = "4 years";
+$caller_1->e2->aw = "Wife’s boyfriend";
+$caller_1->e3->aw = "1";
+$caller_1->e4->aw = "George";
+$caller_1->e5->aw = "Get married";
 
 @endphp
 <div class="row">
@@ -79,31 +99,26 @@ $caller_1->e4->aw = "and in the late afternoon.";
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <table class="w-100">
+                    <h5>Listen to the audio. You will hear four people talking about their recent divorces. As you
+                        listen to the audio, complete the information table below: </h5>
+                    <table class="w-100 table">
                         <tr>
-                            <td colspan="3">
-                                <h5>Listen to the following sentences. They are not complete sentences. (How can you tell?) Try to
-                                    predict what the endings might be.</h5>
-                            </td>
+                            <th>NAME</th>
+                            <th>How long married?</th>
+                            <th>Reasons for divorce</th>
+                            <th>No. of children</th>
+                            <th>Custody of children</th>
+                            <th>Plans for future</th>
                         </tr>
-                        @foreach($caller_1 as $index => $caller_1)
                         <tr>
-                            <td>{{$caller_1->n}}.</td>
-                            <td colspan="2">{{$caller_1->q}}</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td style="width: 60px;"><b>Answer: </b></td>
+                            <td>George</td>
+                            @foreach($caller_1 as $index => $caller_1)
                             <td>
-                                <input type="text" class="q-text w-75" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}">
+                                <input type="text" class="w-100 form-control q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}">
+                                <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
                             </td>
+                            @endforeach
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</td>
-                        </tr>
-                        @endforeach
                     </table>
                 </div>
             </div>
@@ -138,16 +153,19 @@ $caller_1->e4->aw = "and in the late afternoon.";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    // $('.q-caller-2').each((idx, item) => {
-    //     let text = $(item).html()
-    //     if (text == "...") {
-    //         let input = '<div class="input-con">' +
-    //             '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-    //             '</div>'
-    //         text = text.replace("...", input)
-    //         $(item).html(input)
-    //     }
-    // })
+    $('.q-caller-2').each((idx, item) => {
+        let text = $(item).html()
+        let new_text = $(item).html()
+        let aw = $(item).attr('aw').split("***")
+        console.log("text", text)
+        console.log("aw", aw)
+        for (let i = 0; i < text.split("...").length - 1; i++) {
+            let input = '<div class="input-con input-con2 caller_3 pb-1 "><input type="text" class="input-text caller_3" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
+                '<labal class="w-100 px-2 aw caller_3-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'
+            new_text = new_text.replace("...", input)
+        }
+        $('.q-caller-2-e' + (idx + 1)).html(new_text)
+    })
 
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
@@ -155,7 +173,10 @@ $caller_1->e4->aw = "and in the late afternoon.";
                 show_aw($(item).attr('show-aw'))
         })
         $('.q-text').each((idx, item) => {
-            console.log($(item).val().trim().toUpperCase())
+            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+                show_aw($(item).attr('show-aw'))
+        })
+        $('.q-check:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'))
         })
@@ -163,8 +184,13 @@ $caller_1->e4->aw = "and in the late afternoon.";
     })
 
     function show_aw(aw) {
+        console.log("aw", aw)
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function checkRadio(x) {
+        $('.' + x).prop("checked", true);
     }
 
 

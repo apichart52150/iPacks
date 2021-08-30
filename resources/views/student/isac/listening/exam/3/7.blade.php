@@ -43,7 +43,7 @@
         padding: 3px;
         width: 100%;
         height: auto;
-        min-width: 250px;
+        min-width: 80px;
         min-height: 40px;
     }
 
@@ -57,7 +57,7 @@
     }
 
     .grid-5-2 {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .aw {
@@ -502,46 +502,31 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
                 {{$pageTitle['sub_menu_name']}}
             </p>
             <div class="row">
+
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
                     <span>
                         Do this exercise before you listen to the tape. Match the following words with their meanings:
                     </span>
-                    <div class="row justify-content-center mb-2">
-                        <div class="col-md-12">
-                            <div class="border border-dark px-2 text-center">
-                                <div class="drag-container">
-                                    <div class="d-grid grid-5" id="choices">
-                                        @foreach($caller_1_choice as $choice)
-                                        <div class="drag">{{$choice}}</div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center mb-2">
-                        <div class="col-md-12">
-                            <table class=" w-50 mb-3">
-                                @foreach($caller_1 as $index => $caller_1)
-                                <tr>
-                                    <td class="pl-5" style="width: 200px;">{{$caller_1->n}}. {{$caller_1->q}}</td>
-                                    <td>=</td>
-                                    <td>
-                                        <div class="input-con">
-                                            <div class="dropbox q" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}"></div>
-                                        </div>
-                                        <br>
-                                        <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </table>
-                        </div>
-                    </div>
+                    <table class="w-100 mb-3">
+                        @foreach($caller_1 as $index => $caller_1)
+                        <tr>
+                            <td class="">{{$caller_1->n}}. {{$caller_1->q}}</td>
+                            <td class="px-4">=</td>
+                            <td>
+                                <select class="form-select q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}" aria-label="Default select example">
+                                    <option value="...">...</option>
+                                    @foreach($caller_1_choice as $choice)
+                                    <option value="{{$choice}}">{{$choice}}</option>
+                                    @endforeach
+                                </select>
+                                <br>
+                                <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 2</h4>
                     <div class="row justify-content-center mb-2">
                         <div class="col-md-12">
                             <div class="border border-dark px-2 text-center">
@@ -581,7 +566,6 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 3</h4>
                     <table class="w-100">
                         <tr>
                             <td colspan="4">
@@ -625,8 +609,7 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
                     </table>
                 </div>
                 <div class="col-lg-12">
-                <h4 class="font-italic m-0 pt-3">Caller 4</h4>
-                <table class="w-100">
+                    <table class="w-100">
                         <tr>
                             <td colspan="3">
                                 <h5>Choose the best answer from the given options.</h5>
@@ -688,8 +671,8 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
 
 <script>
     $('.q-caller_2').each((idx, item) => {
-        let input = '<div class="input-con py-1">' +
-            '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
+        let input = '<div class="input-con w-100 py-1">' +
+            '<div class="dropbox q w-100" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
             '</div><br>' +
             '<span class="aw ' + $(item).attr('show-aw') + ' text-danger">' + $(item).attr('aw') + '</span>'
         $(item).html(input)

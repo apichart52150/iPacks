@@ -203,7 +203,6 @@ $caller_1->e16->aw->i = "The people most affected by relocation of factories fro
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
                     <table class="w-100">
                         @foreach($caller_1 as $index => $caller_1)
                         <tr>

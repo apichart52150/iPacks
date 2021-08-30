@@ -118,7 +118,6 @@
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic pt-3">Caller 1</h4>
                     <span>
                         6. Write a summary of the lecture in <b>approximately 150 words</b>
                     </span>

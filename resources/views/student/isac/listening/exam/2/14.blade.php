@@ -176,7 +176,6 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
                     <table class="w-100">
                         <tr>
                             <td>1.</td>
@@ -208,8 +207,8 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
                                             <tr>
                                                 <td>{{$caller_1_1->q}}</td>
                                                 <td>
-                                                    <div class="input-con">
-                                                        <div class="dropbox q" show-aw="caller_1_1-{{$index}}" aw="{{$caller_1_1->aw}}"></div>
+                                                    <div class="input-con w-100">
+                                                        <div class="dropbox w-75 q" show-aw="caller_1_1-{{$index}}" aw="{{$caller_1_1->aw}}"></div>
                                                     </div>
                                                     <br>
                                                     <span class=" aw text-danger caller_1_1-{{$index}}">{{$caller_1_1->aw}}</span>

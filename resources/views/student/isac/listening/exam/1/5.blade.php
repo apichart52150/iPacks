@@ -86,15 +86,14 @@ $caller_2->e7->aw = "As attitudes in society change, one would expect language t
 $caller_2->e8->aw = "The socially constructed gender division of labour restricts the employment possibilities for both men and women; an illustration of this is the small number of women in executive management positions.";
 
 @endphp
-<div class="row">
+<div class="row card-box">
     <div class="col-xl-12 col-md-12">
-        <div class="card-box text-dark font-16">
+        <div class=" text-dark font-16">
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <table class="w-100">
                         <tr>
                             <td colspan="2">Listen to the sentences.

@@ -272,8 +272,8 @@ $caller_5_b->e5->aw = "to find better positions";
                 {{$pageTitle['sub_menu_name']}}
             </p>
             <div class="row">
+
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
                     <span>
                         The words in the box below appear in the listening script. As you listen to the script for the first
                         time, complete the sentences (taken from the script) with these words:
@@ -300,7 +300,6 @@ $caller_5_b->e5->aw = "to find better positions";
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 2</h4>
                     <span>
                         Now match the words in the box with their correct meaning:
                     </span>
@@ -321,7 +320,6 @@ $caller_5_b->e5->aw = "to find better positions";
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 3</h4>
                     <table class="w-100">
                         <tr>
                             <td colspan="4">
@@ -343,10 +341,10 @@ $caller_5_b->e5->aw = "to find better positions";
                             <td></td>
                             <td style="width: 1px;">
                                 <div class="form-check">
-                                    <input class="form-check-input position-static q-check caller_3-{{$index}}-{{$index2}}" text="caller_3-input-{{$index}}-{{$index2}}" type="radio" name="caller_3-{{$index}}" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}" value="{{$choice}}">
+                                    <input onclick="show_input('caller_3-input-{{$index}}-{{$index2}}','{{$choice}}');" class="form-check-input position-static q-check caller_3-{{$index}}-{{$index2}}" text="caller_3-input-{{$index}}-{{$index2}}" type="radio" name="caller_3-{{$index}}" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}" value="{{$choice}}">
                                 </div>
                             </td>
-                            <td style="width: 100px;" onclick="checkRadio('caller_3-{{$index}}-{{$index2}}')">
+                            <td style="width: 100px;" onclick="checkRadio('caller_3-{{$index}}-{{$index2}}','caller_3-input-{{$index}}-{{$index2}}','{{$choice}}')">
                                 {{$index2}}. {{$choice}}
                             </td>
                             <td>
@@ -365,7 +363,6 @@ $caller_5_b->e5->aw = "to find better positions";
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 4</h4>
                     <table class="w-100">
                         <tr>
                             <td colspan="3">
@@ -396,7 +393,6 @@ $caller_5_b->e5->aw = "to find better positions";
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 5</h4>
                     <h5>Complete the following quotations </h5>
                     <br>
                     <b>a. Bill Hayden said:</b>
@@ -498,7 +494,7 @@ $caller_5_b->e5->aw = "to find better positions";
         $('.' + aw).removeClass('text-danger')
     }
 
-    function checkRadio(x) {
+    function checkRadio(x, input, value) {
         $('.' + x).prop("checked", true);
     }
 

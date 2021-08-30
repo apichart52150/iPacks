@@ -76,7 +76,6 @@ $caller_2->e3->aw = "Between 10 and 15 degrees Celsius.";
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <table class="w-100">
                         <tr>
                             <td colspan="3">
@@ -104,7 +103,6 @@ $caller_2->e3->aw = "Between 10 and 15 degrees Celsius.";
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 2</h4>
                     <h5>As you listen to the recording a second time, take notes.
                         Put your notes away for a while; then write a summary of the lecture in <b>about 150 words</b>.</h5>
                     <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>

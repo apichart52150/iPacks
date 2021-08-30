@@ -154,7 +154,6 @@ $caller_1->j->choice = ["18.8","80.8"];
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <h5>Circle the numbers you hear: </h5>
                     <div class="row">
                         @foreach($caller_1 as $caller_1)
