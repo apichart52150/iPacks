@@ -1,111 +1,127 @@
 <style>
-.mark, mark {
-    padding: .2em;
-    background-color: #ffc107;
-}
-</style>
-@php
-    $question = [
-        'q1' => "An",
-        'q2' => "eader should have a combination of skills to cope with a variety of situations which are likely to arise on an everyday basis. Perhaps the most important skill is the ability to deal with the company's",
-        'q3' => "resources: ‘people-skills’. It has often been said that a company’s greatest assets are its workforce. If this is so, then it is important to retain",
-        'q4' => ". A company with a high turnover of staff is not likely to be as successful as one which constantly ‘hires and",
-        'q5' => "’. Continuity is an important part of a firm’s culture. In order to retain staff, a good leader should demonstrate a sense of fairness, honesty and an ability to listen. An ‘open-door’ policy is",
-        'q6' => "to a culture of secrecy. A good leader should provide a role",
-        'q7' => "for the rest of the staff. If the leader wants his staff to work hard, (s)he must set a good",
-        'q8' => "by working hard too. If the leader wants to develop a spirit of team-work and",
-        'q9' => ", then (s)he must behave in ways which promote such a culture. Sharing responsibilities and ideas with other members of the team will lead to positive results. A good leader should not",
-        'q10' => "the authority which accompanies the position. This means not bullying subordinates, not using threats and warnings to achieve goals and targets. Such authoritarian behaviour is likely to have negative",
-        'q11' => ". To",
-        'q12' => "up, a good leader makes full use of the human resources available, without exploiting employees in any way. A sense of justice and understanding are essential qualities. Consensual management techniques are far more effective than relationships based on antiquated",
-    ];
-
-    $endQuestion = "principles.";
-
-    $choice = [
-        'c1' => "abuse",    
-        'c2' => "authoritarian",  
-        'c3' => "collaboration",     
-        'c4' => "effective", 
-        'c5' => "employees",     
-        'c6' => "example",   
-        'c7' => "fires",   
-        'c8' => "human",     
-        'c9' => "model",     
-        'c10' => "outcomes",      
-        'c11' => "preferable",      
-        'c12' => "sum",
-    ];
-   
-@endphp
-<div class="row">
-    <div class="col-xl-12 col-md-12">
-        <div class="card-box text-dark font-16">
-            <p class="lead">
-                {{$pageTitle['topic']}}
-            </p>
-            <div class="mb-2">
-                @for ($i = 1; $i <= count($question); $i++)
-                    {{ $question['q'.$i] }}
-                    <select class="form-control d-inline w-auto mx-2 mb-2">
-                        <option value="">-Select-</option>
-                        @foreach ($choice as $choices)
-                            <option value="{{ $choices }}">{{ $choices }}</option>
-                        @endforeach
-                    </select>
-                
-                @endfor
-                {{ $endQuestion }}
+    .line-hight{
+        line-height: 3;
+    }
+    </style>
+    @php
+        $question = [
+            'q1' => "Society nowadays is getting fatter.",
+            'q2' => "is becoming one of the most dangerous consequences of our modern, sedentary life-style. This trend is particularly disturbing since it affects a large",
+            'q3' => "of the younger generation. This essay will examine the reasons for this trend and suggest ways in which society can",
+            'q4' => "this problem. There are a number of reasons why people are putting on",
+            'q5' => "weight. The first reason is, of course,",
+            'q6' => ". We are what we eat, and the simple fact is that people are eating the wrong sort of food.",
+            'q7' => "food outlets have sprung up in every major city, even in the developing",
+            'q8' => ". MacDonalds and KFC are in evidence in all major cities as their popularity continues to increase. Fast food is sometimes referred to as ‘junk food’ since it offers little",
+            'q9' => " value. It is largely oily and high in carbo-hydrates, which can impact badly",
+            'q10' => "health. It is certainly a major cause of obesity.",
+            'q11' => "fast food is popular mostly with young people, they are the ones at the greatest risk. Another contributing factor to excessive weight is the lack of",
+            'q12' => ". Research has shown that there has been a shift in hobbies and pastimes over the last few ",
+            'q13' => ". While exercise and outdoor pursuits used to be the most popular form of leisure activity, nowadays the internet and computer games have taken over the number one spot, especially with the younger ",
+            'q14' => ". So what can be done to address this issue? First of all, there needs to be greater awareness of the impact of fast food",
+            'q15' => ". This can be done at school level as well as in the media. If this method does not succeed, then the",
+            'q16' => "should seriously consider restricting the number of fast food outlets, or at least to pass legislation regarding the quality of the food served at these outlets. Secondly, people need to be encouraged to take part in physical activity, especially",
+            'q17' => ". Local governments could provide better access to free sports facilities and schools should implement a compulsory physical education programme. To",
+        ];
+    
+        $endQuestion = "up, obesity is a serious problem and action needs to be taken sooner rather than later if the consequences of excessive weight are to be prevented.";
+    
+        $choice = [
+            'c1' => "adolescents",    
+            'c2' => "consumption",  
+            'c3' => "decades",     
+            'c4' => "diet", 
+            'c5' => "excessive",     
+            'c6' => "exercise",   
+            'c7' => "Fast",   
+            'c8' => "generation",     
+            'c9' => "government",     
+            'c10' => "nations",      
+            'c11' => "nutritional",      
+            'c12' => "Obesity",      
+            'c13' => "on",      
+            'c14' => "percentage",      
+            'c15' => "Since",    
+            'c16' => "sum",
+            'c17' => "tackle",  
+        ];
+       
+    @endphp
+    <div class="row">
+        <div class="col-xl-12 col-md-12">
+            <div class="card-box text-dark font-16">
+                <p class="lead">
+                    {{$pageTitle['topic']}}
+                </p>
+                <div class="mb-2">
+                    @for ($i = 1; $i <= count($question); $i++)
+                        <div class="line-hight d-inline w-auto mb-2 ">
+                            {{ $question['q'.$i] }}
+                        </div>
+                        <select class="form-control d-inline w-auto mx-2 mb-2 ">
+                            <option value="">-Select-</option>
+                            @foreach ($choice as $choices)
+                                <option value="{{ $choices }}">{{ $choices }}</option>
+                            @endforeach
+                        </select>
+                    @endfor
+                    {{ $endQuestion }}
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-@section('button-control')
-    <button id="check-answer" class="btn btn-info">Check Answers</button>
-@endsection
-
-@section('js')
-    <script>
-        const answers = [
-            'effective', 
-            'human', 
-            'employees', 
-            'fires', 
-            'preferable', 
-            'model', 
-            'example', 
-            'collaboration',
-            'abuse', 
-            'outcomes',
-            'sum',
-            'authoritarian'
-        ]
-
-        let score = 0
-
-        $("#show-answer").hide(true)
-
-        $('#check-answer').on('click', function() {
+    
+    @section('button-control')
+        <button id="check-answer" class="btn btn-info">Check Answers</button>
+    @endsection
+    
+    @section('js')
+        <script>
+            const answers = [
+                "Obesity", //1
+                "percentage",//2
+                "tackle",//3
+                "excessive",//4
+                "diet",//5
+                "Fast",//6
+                "nations",//7
+                "nutritional",//8
+                "on",//9
+                "Since",//10
+                "exercise",//11
+                "decades",//12
+                "generation",//13
+                "consumption",//14
+                "government",//15
+                "adolescents",//16
+                "sum",//17
+            ]
             
-            $('select').each((idx, item) => {
-                if($(item).val() == answers[idx]) {
-                    $(item).addClass('border border-success')
-                    $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item))
-                    score++
-                } else {
-                    $(item).addClass('border border-danger')
-                    $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item))
+    
+            let score = 0
+    
+            $("#show-answer").hide(true)
+    
+            $('#check-answer').on('click', function() {
+                
+                $('select').each((idx, item) => {
+                    if($(item).val().trim() == answers[idx].trim()) {
+                        $(item).addClass('border border-success')
+                        $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item))
+                        score++
+                    } else {
+                        $(item).addClass('border border-danger')
+                        $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item))
+                    }
+                })
+    
+                if(score == answers.length){
+                    alert("you're awesome")
+                }else{
+                    alert('Your score is ' + score + '/' + answers.length)
                 }
+    
+                $("#check-answer").prop('disabled','true')
             })
-
-            if(score == answers.length){
-                alert("you're awesome")
-            }else{
-                alert('Your score is ' + score + '/' + answers.length)
-            }
-
-            $("#check-answer").prop('disabled','true')
-        })
-    </script>
-@stop
+        </script>
+    @stop

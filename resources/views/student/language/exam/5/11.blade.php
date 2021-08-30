@@ -1,111 +1,124 @@
 <style>
-.mark, mark {
-    padding: .2em;
-    background-color: #ffc107;
-}
-</style>
-@php
-    $question = [
-        'q1' => "An",
-        'q2' => "eader should have a combination of skills to cope with a variety of situations which are likely to arise on an everyday basis. Perhaps the most important skill is the ability to deal with the company's",
-        'q3' => "resources: ‘people-skills’. It has often been said that a company’s greatest assets are its workforce. If this is so, then it is important to retain",
-        'q4' => ". A company with a high turnover of staff is not likely to be as successful as one which constantly ‘hires and",
-        'q5' => "’. Continuity is an important part of a firm’s culture. In order to retain staff, a good leader should demonstrate a sense of fairness, honesty and an ability to listen. An ‘open-door’ policy is",
-        'q6' => "to a culture of secrecy. A good leader should provide a role",
-        'q7' => "for the rest of the staff. If the leader wants his staff to work hard, (s)he must set a good",
-        'q8' => "by working hard too. If the leader wants to develop a spirit of team-work and",
-        'q9' => ", then (s)he must behave in ways which promote such a culture. Sharing responsibilities and ideas with other members of the team will lead to positive results. A good leader should not",
-        'q10' => "the authority which accompanies the position. This means not bullying subordinates, not using threats and warnings to achieve goals and targets. Such authoritarian behaviour is likely to have negative",
-        'q11' => ". To",
-        'q12' => "up, a good leader makes full use of the human resources available, without exploiting employees in any way. A sense of justice and understanding are essential qualities. Consensual management techniques are far more effective than relationships based on antiquated",
-    ];
-
-    $endQuestion = "principles.";
-
-    $choice = [
-        'c1' => "abuse",    
-        'c2' => "authoritarian",  
-        'c3' => "collaboration",     
-        'c4' => "effective", 
-        'c5' => "employees",     
-        'c6' => "example",   
-        'c7' => "fires",   
-        'c8' => "human",     
-        'c9' => "model",     
-        'c10' => "outcomes",      
-        'c11' => "preferable",      
-        'c12' => "sum",
-    ];
-   
-@endphp
-<div class="row">
-    <div class="col-xl-12 col-md-12">
-        <div class="card-box text-dark font-16">
-            <p class="lead">
-                {{$pageTitle['topic']}}
-            </p>
-            <div class="mb-2">
-                @for ($i = 1; $i <= count($question); $i++)
-                    {{ $question['q'.$i] }}
-                    <select class="form-control d-inline w-auto mx-2 mb-2">
-                        <option value="">-Select-</option>
-                        @foreach ($choice as $choices)
-                            <option value="{{ $choices }}">{{ $choices }}</option>
-                        @endforeach
-                    </select>
-                
-                @endfor
-                {{ $endQuestion }}
+    .line-hight{
+        line-height: 3;
+    }
+    </style>
+    @php
+        $question = [
+            'q1' => "It has been said that ‘knowledge is power’. This is particularly true in today’s world of advanced technology and globalization. If this is the case, then it is the",
+            'q2' => "duty to ‘empower’ each individual by providing free education until they reach",
+            'q3' => ", i.e. the age of eighteen. If young people have access to free education, there will definitely be positive effects on society. ",
+            'q4' => ", I believe that such a blanket policy is effective only part of the time, and this essay will ",
+            'q5' => "some of the arguments for and against this proposal. Providing a good education to young people is a solid investment for any society. An",
+            'q6' => "society suffers fewer problems in terms of health and general well-being. It is through education that people become aware of hygiene issues and correct bahaviour to protect them from illness and injury. What’s",
+            'q7' => ", education is also a good investment for future",
+            'q8' => "prospects. Someone who finishes",
+            'q9' => "school is much more likely to find a good job than a person who drops out after primary level. A lack of education is one of the reasons why people in",
+            'q10' => "nations find it hard to escape the mantle of poverty. It is important,",
+            'q11' => ", to consider the kind of education which is appropriate for the individual and for society. Knowledge for the sake of knowledge may not be enough to equip individuals with the ",
+            'q12' => "they need. If the individual is focused on finding employment, then vocational skills would seem appropriate. In addition, it is important to identify the kinds of skills which help the",
+            'q13' => "to play a meaningful role in developing society.",
+            'q14' => ", setting goals and creating a framework for development are necessary factors in planning an education system. In some nations where free education is provided for all young people, the results of that education can be described as less than effective. For ",
+            'q15' => ", in Europe and the USA, many young people rebel against the education they receive There are frequent confrontations as teachers try to force the education on the ",
+            'q16' => "Perhaps they  do not appreciate the benefits to be gained by their free education. Perhaps the notion of '",
+        ];
+    
+        $endQuestion = "' devalues the concept of education. Perhaps if they had to pay for their education, they would value it more highly. All in all, then, while providing free education to all young people can have positive effects on individuals and on society, it is important to consider the content and relevance of what is being taught.";
+    
+        $choice = [
+            'c1' => "adolescents",    
+            'c2' => "adulthood",  
+            'c3' => "developing",     
+            'c4' => "educated", 
+            'c5' => "employment",     
+            'c6' => "example",   
+            'c7' => "free",   
+            'c8' => "government’s",     
+            'c9' => "high",     
+            'c10' => "However",      
+            'c11' => "however",      
+            'c12' => "individual",      
+            'c13' => "more",      
+            'c14' => "outline",      
+            'c15' => "skills",      
+            'c16' => "Therefore",      
+        ];
+       
+    @endphp
+    <div class="row">
+        <div class="col-xl-12 col-md-12">
+            <div class="card-box text-dark font-16">
+                <p class="lead">
+                    {{$pageTitle['topic']}}
+                </p>
+                <div class="mb-2">
+                    @for ($i = 1; $i <= count($question); $i++)
+                        <div class="line-hight d-inline w-auto mb-2 ">
+                            {{ $question['q'.$i] }}
+                        </div>
+                        <select class="form-control d-inline w-auto mx-2 mb-2 ">
+                            <option value="">-Select-</option>
+                            @foreach ($choice as $choices)
+                                <option value="{{ $choices }}">{{ $choices }}</option>
+                            @endforeach
+                        </select>
+                    @endfor
+                    {{ $endQuestion }}
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-@section('button-control')
-    <button id="check-answer" class="btn btn-info">Check Answers</button>
-@endsection
-
-@section('js')
-    <script>
-        const answers = [
-            'effective', 
-            'human', 
-            'employees', 
-            'fires', 
-            'preferable', 
-            'model', 
-            'example', 
-            'collaboration',
-            'abuse', 
-            'outcomes',
-            'sum',
-            'authoritarian'
-        ]
-
-        let score = 0
-
-        $("#show-answer").hide(true)
-
-        $('#check-answer').on('click', function() {
+    
+    @section('button-control')
+        <button id="check-answer" class="btn btn-info">Check Answers</button>
+    @endsection
+    
+    @section('js')
+        <script>
+            const answers = [
+                "government’s", //1
+                "adulthood",//2
+                "However",//3
+                "outline",//4
+                "educated",//5
+                "more",//6
+                "employment",//7
+                "high ",//8
+                "developing",//9
+                "however",//10
+                "skills",//11
+                "individual",//12
+                "Therefore",//13
+                "example",//14
+                "adolescents",//15
+                "free",//16
+            ]
             
-            $('select').each((idx, item) => {
-                if($(item).val() == answers[idx]) {
-                    $(item).addClass('border border-success')
-                    $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item))
-                    score++
-                } else {
-                    $(item).addClass('border border-danger')
-                    $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item))
+    
+            let score = 0
+    
+            $("#show-answer").hide(true)
+    
+            $('#check-answer').on('click', function() {
+                
+                $('select').each((idx, item) => {
+                    if($(item).val().trim() == answers[idx].trim()) {
+                        $(item).addClass('border border-success')
+                        $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item))
+                        score++
+                    } else {
+                        $(item).addClass('border border-danger')
+                        $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item))
+                    }
+                })
+    
+                if(score == answers.length){
+                    alert("you're awesome")
+                }else{
+                    alert('Your score is ' + score + '/' + answers.length)
                 }
+    
+                $("#check-answer").prop('disabled','true')
             })
-
-            if(score == answers.length){
-                alert("you're awesome")
-            }else{
-                alert('Your score is ' + score + '/' + answers.length)
-            }
-
-            $("#check-answer").prop('disabled','true')
-        })
-    </script>
-@stop
+        </script>
+    @stop

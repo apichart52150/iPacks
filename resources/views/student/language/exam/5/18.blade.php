@@ -1,111 +1,121 @@
 <style>
-.mark, mark {
-    padding: .2em;
-    background-color: #ffc107;
-}
-</style>
-@php
-    $question = [
-        'q1' => "An",
-        'q2' => "eader should have a combination of skills to cope with a variety of situations which are likely to arise on an everyday basis. Perhaps the most important skill is the ability to deal with the company's",
-        'q3' => "resources: ‘people-skills’. It has often been said that a company’s greatest assets are its workforce. If this is so, then it is important to retain",
-        'q4' => ". A company with a high turnover of staff is not likely to be as successful as one which constantly ‘hires and",
-        'q5' => "’. Continuity is an important part of a firm’s culture. In order to retain staff, a good leader should demonstrate a sense of fairness, honesty and an ability to listen. An ‘open-door’ policy is",
-        'q6' => "to a culture of secrecy. A good leader should provide a role",
-        'q7' => "for the rest of the staff. If the leader wants his staff to work hard, (s)he must set a good",
-        'q8' => "by working hard too. If the leader wants to develop a spirit of team-work and",
-        'q9' => ", then (s)he must behave in ways which promote such a culture. Sharing responsibilities and ideas with other members of the team will lead to positive results. A good leader should not",
-        'q10' => "the authority which accompanies the position. This means not bullying subordinates, not using threats and warnings to achieve goals and targets. Such authoritarian behaviour is likely to have negative",
-        'q11' => ". To",
-        'q12' => "up, a good leader makes full use of the human resources available, without exploiting employees in any way. A sense of justice and understanding are essential qualities. Consensual management techniques are far more effective than relationships based on antiquated",
-    ];
-
-    $endQuestion = "principles.";
-
-    $choice = [
-        'c1' => "abuse",    
-        'c2' => "authoritarian",  
-        'c3' => "collaboration",     
-        'c4' => "effective", 
-        'c5' => "employees",     
-        'c6' => "example",   
-        'c7' => "fires",   
-        'c8' => "human",     
-        'c9' => "model",     
-        'c10' => "outcomes",      
-        'c11' => "preferable",      
-        'c12' => "sum",
-    ];
-   
-@endphp
-<div class="row">
-    <div class="col-xl-12 col-md-12">
-        <div class="card-box text-dark font-16">
-            <p class="lead">
-                {{$pageTitle['topic']}}
-            </p>
-            <div class="mb-2">
-                @for ($i = 1; $i <= count($question); $i++)
-                    {{ $question['q'.$i] }}
-                    <select class="form-control d-inline w-auto mx-2 mb-2">
-                        <option value="">-Select-</option>
-                        @foreach ($choice as $choices)
-                            <option value="{{ $choices }}">{{ $choices }}</option>
-                        @endforeach
-                    </select>
-                
-                @endfor
-                {{ $endQuestion }}
+    .line-hight{
+        line-height: 3;
+    }
+    </style>
+    @php
+        $question = [
+            'q1' => "Recent developments in technology have had a positive effect on human lifestyles in the last few",
+            'q2' => ". These improvements have occurred in a number of fields, including industry, medicine, transportation and telecommunications. This essay will ",
+            'q3' => "some of these achievements. Technological innovation has",
+            'q4' => "the need for human employees to do boring manual work. For example, ",
+            'q5' => "now carry out many of the tasks once done by humans. Apart from reducing the amount of boring work, these robots generally produce more quickly and effectively than their human counterpart. There are improvements in",
+            'q6' => "as well. One example is in surgery, where computer technology has resulted in the development of a new surgical procedure called key-hole surgery. This new technique involves less danger and damage to the patient’s body. A",
+            'q7' => "example involves the use of computers to give access to medical treatment to people who live in",
+            'q8' => "areas. They can contact doctors who live thousands of miles away via computer screen. ",
+            'q9' => ", this same technique is useful for education so that students who live away from cities can gain access to the cyber-classroom.",
+            'q10' => "has also improved. One illustration is the development of supersonic flight, which considerably reduces the time needed to cross the globe. A further example is the invention of ‘bullet train’ which saves ",
+            'q11' => "time as they travel from home to their place of work. Perhaps the greatest",
+            'q12' => ", though, have been seen in the field of tele-communications. Mobile phones and the",
+            'q13' => " have resulted in easier and more convenient means of communicating with people anywhere in the world. These media have also changed the way in which people conduct",
+            'q14' => ", and this has had a beneficial impact in the workplace. In ",
+            'q15' => ", the list of improvements brought about by technological innovation is long and far-reaching. It seems likely that future developments will be accompanied by further benefits to all people around the",
+        ];
+    
+        $endQuestion = ".";
+    
+        $choice = [
+            'c1' => "benefits",    
+            'c2' => "business",  
+            'c3' => "commuters",     
+            'c4' => "conclusion", 
+            'c5' => "decades",     
+            'c6' => "further",   
+            'c7' => "globe",   
+            'c8' => "Internet",     
+            'c9' => "medicine",     
+            'c10' => "outline",      
+            'c11' => "reduced",      
+            'c12' => "remote",      
+            'c13' => "robots",      
+            'c14' => "Similarly",      
+            'c15' => "Transportation",      
+        ];
+       
+    @endphp
+    <div class="row">
+        <div class="col-xl-12 col-md-12">
+            <div class="card-box text-dark font-16">
+                <p class="lead">
+                    {{$pageTitle['topic']}}
+                </p>
+                <div class="mb-2">
+                    @for ($i = 1; $i <= count($question); $i++)
+                        <div class="line-hight d-inline w-auto mb-2 ">
+                            {{ $question['q'.$i] }}
+                        </div>
+                        <select class="form-control d-inline w-auto mx-2 mb-2 ">
+                            <option value="">-Select-</option>
+                            @foreach ($choice as $choices)
+                                <option value="{{ $choices }}">{{ $choices }}</option>
+                            @endforeach
+                        </select>
+                    @endfor
+                    {{ $endQuestion }}
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-@section('button-control')
-    <button id="check-answer" class="btn btn-info">Check Answers</button>
-@endsection
-
-@section('js')
-    <script>
-        const answers = [
-            'effective', 
-            'human', 
-            'employees', 
-            'fires', 
-            'preferable', 
-            'model', 
-            'example', 
-            'collaboration',
-            'abuse', 
-            'outcomes',
-            'sum',
-            'authoritarian'
-        ]
-
-        let score = 0
-
-        $("#show-answer").hide(true)
-
-        $('#check-answer').on('click', function() {
+    
+    @section('button-control')
+        <button id="check-answer" class="btn btn-info">Check Answers</button>
+    @endsection
+    
+    @section('js')
+        <script>
+            const answers = [
+                "decades", //1
+                "outline",//2
+                "reduced",//3
+                "robots",//4
+                "medicine",//5
+                "further",//6
+                "remote",//7
+                "Similarly",//8
+                "Transportation",//9
+                "commuters",//10
+                "benefits",//11
+                "Internet",//12
+                "business",//13
+                "conclusion",//14
+                "globe",//15
+            ]
             
-            $('select').each((idx, item) => {
-                if($(item).val() == answers[idx]) {
-                    $(item).addClass('border border-success')
-                    $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item))
-                    score++
-                } else {
-                    $(item).addClass('border border-danger')
-                    $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item))
+    
+            let score = 0
+    
+            $("#show-answer").hide(true)
+    
+            $('#check-answer').on('click', function() {
+                
+                $('select').each((idx, item) => {
+                    if($(item).val().trim() == answers[idx].trim()) {
+                        $(item).addClass('border border-success')
+                        $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item))
+                        score++
+                    } else {
+                        $(item).addClass('border border-danger')
+                        $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item))
+                    }
+                })
+    
+                if(score == answers.length){
+                    alert("you're awesome")
+                }else{
+                    alert('Your score is ' + score + '/' + answers.length)
                 }
+    
+                $("#check-answer").prop('disabled','true')
             })
-
-            if(score == answers.length){
-                alert("you're awesome")
-            }else{
-                alert('Your score is ' + score + '/' + answers.length)
-            }
-
-            $("#check-answer").prop('disabled','true')
-        })
-    </script>
-@stop
+        </script>
+    @stop
