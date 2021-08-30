@@ -20,77 +20,85 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2>Planning for a Lecture </h2>
-                    <span>If your listening skills are not as well-developed as you might wish, and you have difficulty
+                    <span>If your listening skills are not as well-developed as you might wish and you have difficulty
                         understanding lectures and taking notes, there are one or two things you can do to prepare for a
                         listening activity. </span>
                     <table class="w-100 py-2">
                         <tr>
                             <td>1.</td>
-                            <td colspan="2">Assuming you know the title or topic of the lecture, you can predict the sort of vocabulary
-                                which you might expect to hear in the lecture.
+                            <td colspan="2">Assuming you know the title or topic of the lecture, you can predict the sort of
+                                vocabulary which you might expect to hear in the lecture.
                                 For example, imagine you are going to hear a talk entitled:
-                                <b>'Alcohol Abuse'</b>
-                                - the first thing you can do is <b>brainstorm</b> the topic. Write down how much you already know
-                                about the topic.
                             </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2" class="py-2"><b>'Tips for Business Travellers'</b></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2" class="py-2">- the first thing you can do is <b>brainstorm</b> the topic. Write down how much you already know
+                                about the topic.</td>
                         </tr>
                         <tr>
                             <td>2.</td>
-                            <td colspan="2">Take a piece of paper and write down the <b>content words</b> from the title: </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td colspan="2" class="text-center">
-                                <b>risks - alcohol - abuse</b>
+                            <td colspan="2">
+                                Take a piece of paper and write down the <b>content words</b> from the title:
+                                <br>
+                                <b>tips - business - travellers</b>
                             </td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td colspan="2">Now, write a list of words or phrases which you associate with these words.
+                            <td colspan="2" class="py-2">
+                                Now, write a list of words or phrases which you associate with these words.
                                 You could write synonyms
                                 <br>
-                                e.g. <b>risks</b> = dangers, hazards....
-                                <br>
+                                e.g. <b>tips:</b> advice...recommendations...suggestions............
                             </td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td colspan="2">You could write words which naturally concern the topic: </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>e.g.</td>
-                            <td><b>alcohol:</b> drink, consume, consumption, intake.....
+                            <td colspan="2" class="py-2">
+                                You could write words which naturally concern the topic:
                                 <br>
-                                <b>abuse:</b> misuse, excess, drunkenness,............
+                                e.g. <b>travellers:</b> trip...hotel...restaurant...accommodation..............
                             </td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td colspan="2"> Look at the whole title and try to predict the kind of information associated with the topic:</td>
+                            <td>3.</td>
+                            <td colspan="2">
+                                Look at the whole title and try to predict the kind of information associated with the topic:
+                            </td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td colspan="2" class="text-center"><b>The Risks of Alcohol Abuse</b></td>
+                            <td class="text-center py-2" colspan="2">
+                                <b>Tips for Business Travellers </b>
+                            </td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><b>Risks:</b></td>
-                            <td>diseases such as .............................................................................
+                            <td class="py-2">
+                                <b>Tips: </b>
+                            </td>
+                            <td>
+                                immunisation against.........................................
                                 <br>
-                                emotional problems such as...........................................................
+                                travel insurance..................................................
                                 <br>
-                                financial problems...........................................................................
+                                emergency contact numbers..............................
                                 <br>
-                                accidents..........................................................................................
+                                prophylactic drugs such as.................................
                                 <br>
-                                and so on……………………………………………………………………………………..
-                                <br>
+                                and so on……………………………………………………......
                             </td>
                         </tr>
                         <tr>
                             <td>4.</td>
-                            <td colspan="2"> When you've done this there are other things you can do if you wish:</td>
+                            <td colspan="2">
+                                When you've done this there are other things you can do if you wish:
+                            </td>
                         </tr>
                         <tr>
                             <td></td>
@@ -105,27 +113,31 @@
                         <tr>
                             <td></td>
                             <td>*</td>
-                            <td>you can also take a cassette recorder into the lecture
-                                (provided the lecturer doesn't mind being recorded).</td>
+                            <td> you can also take a cassette recorder into the lecture (provided the lecturer doesn't mind being recorded). </td>
                         </tr>
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
-                    <h5 class="mt-3">Now, listen to the lecture The Risks of Alcohol Abuse. Write a summary of the lecture in approximately 150 words.</h5>
+                    <h4 class="font-italic pt-3">Caller 1</h4>
+                    <span>
+                        6. Write a summary of the lecture in <b>approximately 150 words</b>
+                    </span>
                     <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                    <h5 class="mt-3 aw text-success">Summary of lecture (possible answer) </h5>
+                    <h5 class="mt-3 aw text-success">Summary of Lecture (possible answer) </h5>
                     <span class="aw text-success">
-                        A lot of research has been conducted into alcoholism but not much into social drinking since social
-                        drinking is harder to define. There are many physiological, psychological and sociological problems
-                        associated with alcohol abuse. Alcohol affects all parts of the body and its damaging effects are only
-                        partially reversible. A person who drinks large amounts of alcohol in a short time is at greater risk than
-                        someone who drinks the same amount over a longer period of time. There are many serious diseases
-                        which affect the alcoholic. Pregnant women who consume alcohol also put the unborn baby at risk.
-                        Although alcohol can create a sense of happiness, it also causes depression and a loss of self-esteem. It
-                        can lead to family breakdowns and unemployment. It is also a major cause of industrial and road
-                        accidents. Because of all these problems, we should all be concerned. Perhaps greater control is
-                        needed with regard to the availability of alcohol.
+                        There are a number of risks facing the business traveller but these risks can be minimised by careful
+                        planning. Although most people believe that hotel food is clean and safe, health experts believe the
+                        food available at market stalls may be safer. Business travellers should always avoid local water
+                        since many diseases are carried by water. Cholera is endemic in Asia. It is advisable not to travel to
+                        areas affected by cholera.
+                        <br>
+                        Dengue fever and malaria are spread by mosquitos. Preventive measures are necessary even for
+                        short stays. Hepatitis A is widespread. Travellers should avoid local water and raw food. Hepatitis B
+                        is spread by body fluids. Vaccination is recommended for both. There is no vaccine available for the
+                        AIDS virus. Strict precautions are necessary. Hookworm, a parasite, can be avoided by wearing shoes
+                        on grass or soil.
+                        <br>
+                        Despite all the risks, travelling can be fun, especially if travellers follow some basic rules.
                     </span>
                 </div>
             </div>

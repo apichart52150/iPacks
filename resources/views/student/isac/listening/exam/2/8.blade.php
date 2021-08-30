@@ -59,7 +59,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 1</h4>
-                    <h1>ยังไม่เสร็จ</h1>
+                    <h1>ยังไม่เสร็จ copy 1-6</h1>
                 </div>
             </div>
         </div>

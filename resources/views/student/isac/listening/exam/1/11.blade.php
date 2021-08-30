@@ -59,69 +59,67 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h4 class="font-italic">Caller 1</h4>
-                    <div class="card-box box-shadow" id="">
-                        <table>
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    You are going to hear two short talks about <b>two famous Australians</b>: <b>Fred Hollows</b>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2.</td>
-                                <td>
-                                    What do you know about these two men, if anything?
-                                    <br>
-                                    Brainstorm around the group to find out as much as you can about them before you listen to
-                                    the recordings.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3.</td>
-                                <td>
-                                    As you listen, focus primarily on the important events which happened during their lives.
-                                    (the chronological sequence)
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4.</td>
-                                <td>
-                                    Compare your notes with other people in the group.
-                                    <br>
-                                    Complete any gaps in your own notes.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5.</td>
-                                <td>
-                                    Write a short summary of the main events and achievements of each of the two men
-                                    <b>(roughly 120 - 150 words each)</b>. Use the discourse markers which you learnt earlier
-                                    in this course to give coherence to your summary.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>
-                                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>
-                                    <h5 class="mt-3 aw text-success">Fred Hollows (possible answer)</h5>
-                                    <span class="aw text-success">
-                                        Born in New Zealand in 1929 to a religious family, Fred Hollows wanted to become a missionary but
-                                        changed his mind and became an eye-specialist. In 1960 he got a job in Australia. In 1965 he became
-                                        the head of the eye-department in a Sydney hospital. Fred was shocked by the number of Aborigines
-                                        with eye problems and in 1970 helped launch a national program to improve this situation. His team
-                                        treated over 30,000 people in three years. By 1980 Fred was helping people with eye problems abroad.
-                                        He helped set up a lens factory in Eritrea. In 1989 Fred found out he was dying of cancer but continued
-                                        his work. In 1993 he died surrounded by friends and family.
-                                    </span>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <table>
+                        <tr>
+                            <td>1.</td>
+                            <td>
+                                You are going to hear two short talks about <b>two famous Australians</b>: <b>Fred Hollows</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>
+                                What do you know about these two men, if anything?
+                                <br>
+                                Brainstorm around the group to find out as much as you can about them before you listen to
+                                the recordings.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>
+                                As you listen, focus primarily on the important events which happened during their lives.
+                                (the chronological sequence)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>
+                                Compare your notes with other people in the group.
+                                <br>
+                                Complete any gaps in your own notes.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td>
+                                Write a short summary of the main events and achievements of each of the two men
+                                <b>(roughly 120 - 150 words each)</b>. Use the discourse markers which you learnt earlier
+                                in this course to give coherence to your summary.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <h5 class="mt-3 aw text-success">Fred Hollows (possible answer)</h5>
+                                <span class="aw text-success">
+                                    Born in New Zealand in 1929 to a religious family, Fred Hollows wanted to become a missionary but
+                                    changed his mind and became an eye-specialist. In 1960 he got a job in Australia. In 1965 he became
+                                    the head of the eye-department in a Sydney hospital. Fred was shocked by the number of Aborigines
+                                    with eye problems and in 1970 helped launch a national program to improve this situation. His team
+                                    treated over 30,000 people in three years. By 1980 Fred was helping people with eye problems abroad.
+                                    He helped set up a lens factory in Eritrea. In 1989 Fred found out he was dying of cancer but continued
+                                    his work. In 1993 he died surrounded by friends and family.
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>

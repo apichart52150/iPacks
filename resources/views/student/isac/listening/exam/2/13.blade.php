@@ -2,12 +2,24 @@
 <style>
     table tr td {
         vertical-align: top;
-        padding-top: 10px;
+    }
+
+    .table tr td {
+        border: 1px solid black;
+    }
+
+    .table tr th {
+        border: 1px solid black;
+        color: black;
     }
 
     .input-con {
         display: inline-block;
         position: relative;
+    }
+
+    .input-con2 {
+        width: 100px;
     }
 
     .drag-container {
@@ -32,58 +44,38 @@
         width: 100%;
         height: auto;
         min-width: 250px;
+        min-height: 40px;
     }
 
     .dropbox .drag {
         margin: 0;
+        vertical-align: middle;
     }
 
     .grid-5 {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .aw {
         display: none;
     }
+
+    .input-text {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 3px;
+        width: 100%;
+        height: auto;
+        min-width: 80px;
+        min-height: 40px;
+    }
+
+    #caller-3 tr .col-3-500 {
+        width: 500px;
+        padding-left: 10px;
+    }
 </style>
 @php
-
-$caller_2 = new stdClass();
-$caller_2->e1 = new stdClass();
-$caller_2->e2 = new stdClass();
-$caller_2->e3 = new stdClass();
-$caller_2->e4 = new stdClass();
-$caller_2->e5 = new stdClass();
-$caller_2->e6 = new stdClass();
-$caller_2->e7 = new stdClass();
-$caller_2->e8 = new stdClass();
-
-$caller_2->e1->n = "1";
-$caller_2->e2->n = "2";
-$caller_2->e3->n = "3";
-$caller_2->e4->n = "4";
-$caller_2->e5->n = "5";
-$caller_2->e6->n = "6";
-$caller_2->e7->n = "7";
-$caller_2->e8->n = "8";
-
-$caller_2->e1->q = "Although significant numbers still come from English-speaking countries";
-$caller_2->e2->q = "The term 'drinking' refers to the consumption of alcoholic drinks such as";
-$caller_2->e3->q = "Excessive alcohol consumption can lead not only to physiological problems";
-$caller_2->e4->q = "There are both financial and environmental costs associated with landfill sites; not only are they a waste of potentially valuable land,";
-$caller_2->e5->q = "In spite of these negative effects on the human body";
-$caller_2->e6->q = "The two most important factors in developing a good study ethos are, first of all, a positive attitude,";
-$caller_2->e7->q = "As attitudes in society change, one would expect language to develop at the same rate; however,";
-$caller_2->e8->q = "He socially constructed gender division of labour restricts the employment possibilities for both men and women; an illustration of this";
-
-$caller_2->e1->aw = "Although significant numbers still come from English-speaking countries, an even larger number come from non-English-speaking countries.";
-$caller_2->e2->aw = "The term 'drinking' refers to the consumption of alcoholic drinks such as beer, wine and spirits.";
-$caller_2->e3->aw = "Excessive alcohol consumption can lead not only to physiological problems, but also to psychological problems.";
-$caller_2->e4->aw = "There are both financial and environmental costs associated with landfill sites; not only are they a waste of potentially valuable land, but they also present pollution problems.";
-$caller_2->e5->aw = "In spite of these negative effects on the human body, there are, however, some beneficial aspects.";
-$caller_2->e6->aw = "The two most important factors in developing a good study ethos are, first of all, a positive attitude, and, second, a healthy life-style.";
-$caller_2->e7->aw = "As attitudes in society change, one would expect language to develop at the same rate; however, it doesn't.";
-$caller_2->e8->aw = "The socially constructed gender division of labour restricts the employment possibilities for both men and women; an illustration of this is the small number of women in executive management positions.";
 
 @endphp
 <div class="row">
@@ -94,35 +86,50 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <table class="w-100">
                         <tr>
-                            <td colspan="2">Listen to the sentences.
+                            <td class="py-2">1.</td>
+                            <td class="py-2" colspan="2">
+                                You are going to hear two short talks about two famous Australians:
                                 <br>
-                                They are not complete (how do you know this, just by listening?).
-                                <br>
-                                Complete the sentences with suitable endings, depending on the speech markers contained in each sentence.
-                                <br><br>
-                                e.g. The Silver Spur is heavier than the Silver Ghost. The former weighs two and a half tonnes whereas
-                                the latter weighs only two tonnes. (or any weight less than two and a half tonnes.)
-                            </td>
-                        </tr>
-                        @foreach($caller_2 as $caller_2)
-                        <tr>
-                            <td>{{$caller_2->n}}</td>
-                            <td>{{$caller_2->q}}</td>
-                        </tr>
-                        <tr>
-                            <td><b>Answer: </b></td>
-                            <td>
-                                <input type="text" class="w-100">
+                                <b>Part 2:</b> Kerry Packer.
                             </td>
                         </tr>
                         <tr>
-                            <td class="aw text-success"><b>Possible answers: </b></td>
-                            <td class="aw text-success">{{$caller_2->aw}}</td>
+                            <td class="py-2">2.</td>
+                            <td class="py-2" colspan="2">
+                                As you listen, focus primarily on the important events which happened during their
+                                lives.(the chronological sequence)
+                            </td>
                         </tr>
-                        @endforeach
+                        <tr>
+                            <td>3.</td>
+                            <td colspan="2">
+                                Write a short summary of the main events and achievements of each of the two people
+                                <b>(roughly 150 words each)</b>. Use the discourse markers which you learnt earlier in this course to
+                                give coherence to your summary.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-2"></td>
+                            <td class="py-2" colspan="2">
+                                <h5>Part 2 Kerry Packer </h5>
+                                <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                                <h5 class="mt-3 aw text-success">Summaries (possible answer)</h5>
+                                <span class="aw text-success">
+                                    Kerry Packer is Australia's richest person. His money comes from media interests. He inherited the
+                                    media empire from his father, who had established the successful magazine Women's Weekly in 1933.
+                                    In 1979, Kerry admitted that his father had been strict with him. Kerry's childhood was difficult. At the
+                                    age of five he went to boarding school and a year later he caught poliomyelitis and spent nine months
+                                    in an iron lung. He returned to school at the age of nine and focussed his energy on sport. At nineteen
+                                    Kerry left school and worked for his father's newspapers. When Sir Frank died in 1974 Kerry took
+                                    control of the business. In 1977 he started World Series Cricket. In 1979 he won the TV cricket rights.
+                                    In 1978 he sold two TV stations for one billion dollars before buying them back three years later for
+                                    two hundred and fifty million . In 1991 he failed to increase his media empire because parliament
+                                    thought he already controlled too much. In 1990 he had a heart attack and almost died but survived.
+                                </span>
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -147,6 +154,7 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
 </div>
 
 
+
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answersss</button>
 <!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
@@ -157,15 +165,24 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    $('.q-caller-2').each((idx, item) => {
+    $('.q-dot:contains("...")').each((idx, item) => {
         let text = $(item).html()
-        if (text == "...") {
-            let input = '<div class="input-con">' +
-                '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-                '</div>'
-            text = text.replace("...", input)
-            $(item).html(input)
-        }
+        console.log(text)
+        let input = '<div class="input-con w-50">' +
+            '<input type="text" class="w-100 q-text" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
+            '</div>'
+        text = text.replace("...", input)
+        $(item).html(text)
+    })
+
+    $('.q-dot-choice:contains("...")').each((idx, item) => {
+        let text = $(item).html()
+        console.log(text)
+        let input = '<div class="input-con w-100">' +
+            '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
+            '</div>'
+        text = text.replace("...", input)
+        $(item).html(text)
     })
 
     $('#check-answer').on('click', () => {
@@ -181,8 +198,13 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
     })
 
     function show_aw(aw) {
+        console.log("aw", aw)
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function checkRadio(x) {
+        $('.' + x).prop("checked", true);
     }
 
 

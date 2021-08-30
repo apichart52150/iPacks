@@ -1,10 +1,5 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
-    table tr td {
-        vertical-align: top;
-        padding-top: 10px;
-    }
-
     .input-con {
         display: inline-block;
         position: relative;
@@ -32,6 +27,7 @@
         width: 100%;
         height: auto;
         min-width: 250px;
+        min-height: 40px;
     }
 
     .dropbox .drag {
@@ -39,7 +35,7 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .aw {
@@ -48,6 +44,24 @@
 </style>
 @php
 
+$caller_4_A = new stdClass();
+$caller_4_A->e1 = new stdClass();
+$caller_4_A->e2 = new stdClass();
+$caller_4_A->e3 = new stdClass();
+$caller_4_A->e4 = new stdClass();
+$caller_4_A->e5 = new stdClass();
+
+$caller_4_A->e1->q = "1. What is the current population of Australia?";
+$caller_4_A->e2->q = "2. How many different nationalities live in Australia?";
+$caller_4_A->e3->q = "3. Do the majority of migrants today speak English as their native language?";
+$caller_4_A->e4->q = "4. What are the four most common languages spoken in Australia?";
+$caller_4_A->e5->q = "5. What is the dominant second language in the Northern Territory?";
+
+$caller_4_A->e1->aw = "18 million";
+$caller_4_A->e2->aw = "over 100";
+$caller_4_A->e3->aw = "No";
+$caller_4_A->e4->aw = "English, Italian, Greek + Chinese";
+$caller_4_A->e5->aw = "Aboriginal";
 
 @endphp
 <div class="row">
@@ -58,13 +72,46 @@
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
-                    <h1>ยังไม่เสร็จ</h1>
+                    <h4 class="font-italic">Caller 4</h4>
+                    <h5>A. You are going to listen to a short talk about the population of Australia. As you listen, try to find the answers to the following questions:</h5>
+                    <table class="w-100 mb-3">
+                        @foreach($caller_4_A as $index => $caller_4_A)
+                        <tr>
+                            <td class="border-dark p-2">{{$caller_4_A->q}}</td>
+                        </tr>
+                        <tr>
+                            <td class="border-dark p-2">
+                                <b>Answer: </b>
+                                <div class="input-con w-75">
+                                    <input type="text" class="q-text w-100" show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="aw caller_4_A-{{$index}} text-danger">
+                                <span class="pl-5">{{$caller_4_A->aw}}</span>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </table>
+                    <h5 class="mt-3">B. Listen to the talk again and take notes using the conventions available to you. </h5>
+                    <!-- <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea> -->
+                    <h5 class="mt-3">C. Write a short summary of the talk, using your own words as far as possible. The summary should be between 80 - 100 words. </h5>
+                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                    <h5 class="mt-3 aw text-success">D. Summary (possible answer) </h5>
+                    <span class="aw text-success">
+                        The population of Australia is now eighteen million, consisting of over one hundred different
+                        nationalities. In the past most migrants came from English speaking countries but nowadays most
+                        migrants do not have English as their first language. This change of focus has resulted in other changes
+                        in food, traditions and attitudes to learning foreign languages. In the past Australians chose not to learn
+                        a foreign language but nowadays many people are learning foreign languages. The most common
+                        languages in Australia are English, Italian, Greek and Chinese. Each state has a different second
+                        language focus.
+                    </span>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
