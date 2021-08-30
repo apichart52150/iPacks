@@ -53,7 +53,7 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .aw {
