@@ -5,35 +5,43 @@
     </style>
     @php
         $question = [
-            'q1' => "Life in large cities can put the",
-            'q2' => ". Their citizens believe that the death",
-            'q3' => "is not a suitable punishment for a free, democratic nation. Some nations,",
-            'q4' => ", persist in its use for serious crimes such as murder, rape and hi-jacking, regarding it as a necessary deterrent to serious crime.",
-            'q5' => " I agree strongly that there is no place for capital punishment in a modern-day society and will outline reasons for this below. The Biblical saying, ‘an eye for an eye’, has been quoted for centuries as justification for the execution of criminals who",
-            'q6' => " serious crimes. However, the belief that the person who commits a crime should receive a similar fate to that of the victim, can also be regarded as little more than a case of government approved murder, or an act of vengeance to satisfy the family of the",
-            'q7' => ". Instead of exacting revenge for the crime, the government should find out the reason why the crime was committed and take measures to eradicate causes of serious crime. As they say, '",
-            'q8' => "is better than the cure'. In a perfect world, with a flawless judicial system, there may be grounds for carrying out the death penalty for ",
-            'q9' => "crimes. However, the fact is that the world is not perfect and we all make ",
-            'q10' => "in judgement. Often our judgement is impaired by emotions, especially prejudice and bias. What happens then in the case when someone is",
-            'q11' => ", only to be proved innocent at some later date? After the sentence has been carried out, it is irreversible. What form of compensation can possibly be adequate for such a miscarriage of justice? For all the above",
-            'q12' => " the death penalty is not an appropriate punishment in today’s flawed society. Many serious crimes such as murder, rape and political events such as hi-jacking tend to arouse strong ",
+            'q1' => "Life in large cities can put the ",
+            'q2' => "under a great deal of pressure. Much of this stress is caused by so many people living together in one ",
+            'q3' => "space. In addition, this pressure is also increased by modern lifestyles. This essay will identify some of the",
+            'q4' => "of stress in Bangkok, and suggest some measures to help people relieve the stress. With a",
+            'q5' => "of more than ten million people, Bangkok can be described as overcrowded. This overcrowding is apparent when we observe everyday life in the city. ",
+            'q6' => "congestion is just one example of this. At rush ",
+            'q7' => ", movement of cars, trucks and buses is reduced almost to a ",
+            'q8' => "As people hurry to work or place of study, a large amount of pressure is applied to the city’s infrastructure, almost to the point of bursting. The noise and air ",
+            'q9' => "created by traffic congestion only adds to the pressure which builds up. In the workplace and place of study, competition to do well increases stress. Achieving target outputs in industry and obtaining satisfactory ",
+            'q10' => "in examinations can bring the pressure to a peak. Under all this pressure, people need to find outlets to let off ",
+            'q11' => "and to relax so that the body and mind can recuperate. Physical exercise and outdoor ",
+            'q12' => "can help reduce stress levels. Cycling and walking are ideal ways to reduce stress. If more people were willing to do such physical exercise, it may even help decrease traffic ",
+            'q13' => ". People also need to take their minds ",
+            'q14' => "work and study. Regular visits to the ",
+            'q15' => "centre may be beneficial. For those people who are not inclined to take part in physical exercise, then other pursuits ",
+            'q16' => "as watching movies, reading books for pleasure and listening to music all help to reduce stress levels. In",
         ];
     
-        $endQuestion = "which prevent clear vision, and compromise the sense of justice.";
+        $endQuestion = ", a variety of leisure activities will help release the pressure of modern, urban lifestyles. It is important to find an activity which suits you, and to participate regularly.";
     
         $choice = [
-            'c1' => "abolished",    
-            'c2' => "committed",  
-            'c3' => "emotions",     
-            'c4' => "executed", 
-            'c5' => "however",     
-            'c6' => "mistakes",   
-            'c7' => "penalty",   
-            'c8' => "Personally",     
-            'c9' => "prevention",     
-            'c10' => "reasons",      
-            'c10' => "serious",      
-            'c10' => "victim",      
+            'c1' => "causes",    
+            'c2' => "conclusion",  
+            'c3' => "confined",     
+            'c4' => "congestion", 
+            'c5' => "fitness",     
+            'c6' => "hours",   
+            'c7' => "inhabitants",   
+            'c8' => "off",
+            'c9' => "pollution      ", 
+            'c10' => "population",     
+            'c11' => "pursuits",      
+            'c12' => "results",      
+            'c13' => "standstill",      
+            'c14' => "steam",      
+            'c15' => "such",      
+            'c16' => "Traffic",      
         ];
        
     @endphp
@@ -68,18 +76,22 @@
     @section('js')
         <script>
             const answers = [
-                "abolished", //1
-                "penalty",//2
-                "however",//3
-                "Personally",//4
-                "committed",//5
-                "victim",//6
-                "prevention",//7
-                "serious",//8
-                "mistakes",//9
-                "executed",//10
-                "reasons",//11
-                "emotions",//12
+                "inhabitants", //1
+                "confined",//2
+                "causes",//3
+                "population",//4
+                "Traffic",//5
+                "hours",//6
+                "standstill",//7
+                "pollution",//8
+                "results",//9
+                "steam",//10
+                "pursuits",//11
+                "congestion",//12
+                "off",//13
+                "fitness",//14
+                "such",//15
+                "conclusion",//16
             ]
             
     

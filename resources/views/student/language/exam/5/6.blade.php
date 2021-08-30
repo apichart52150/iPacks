@@ -32,8 +32,8 @@
             'c8' => "Personally",     
             'c9' => "prevention",     
             'c10' => "reasons",      
-            'c10' => "serious",      
-            'c10' => "victim",      
+            'c11' => "serious",      
+            'c12' => "victim",      
         ];
        
     @endphp
