@@ -16,7 +16,6 @@
     .input-con {
         display: inline-block;
         position: relative;
-        width: 100%;
     }
 
     .input-con2 {
@@ -175,121 +174,122 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card-box text-dark font-16">
-            <table class="w-100">
-                <tr>
-                    <td>1.</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <div class="row justify-content-center mb-2">
-                            <div class="col-md-12">
-                                <div class="border border-dark px-2 text-center">
-                                    <div class="drag-container">
-                                        <div class="d-grid grid-5" id="choices">
-                                            @foreach($caller_1_choice as $choice)
-                                            <div class="drag">{{$choice}}</div>
-                                            @endforeach
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
+                    <table class="w-100">
+                        <tr>
+                            <td>1.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="row justify-content-center mb-2">
+                                    <div class="col-md-12">
+                                        <div class="border border-dark px-2 text-center">
+                                            <div class="drag-container">
+                                                <div class="d-grid grid-5" id="choices">
+                                                    @foreach($caller_1_choice as $choice)
+                                                    <div class="drag">{{$choice}}</div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center mb-2">
-                            <div class="col-md-12">
-                                <table class="w-100 mb-3 table">
-                                    <tr>
-                                        <th class="text-center">COUNTRY</th>
-                                        <th class="text-center">CURRENCY</th>
-                                    </tr>
-                                    @foreach($caller_1_1 as $index => $caller_1_1)
-                                    <tr>
-                                        <td>{{$caller_1_1->q}}</td>
-                                        <td>
-                                            <div class="input-con">
-                                                <div class="dropbox q w-100" show-aw="caller_1_1-{{$index}}" aw="{{$caller_1_1->aw}}"></div>
-                                            </div>
-                                            <br>
-                                            <span class=" aw text-danger caller_1_1-{{$index}}">{{$caller_1_1->aw}}</span>
-                                        </td>
-                                    </tr>
-                                    @endforeach
-                                    <tr>
-                                        <td colspan="2" class="py-3"></td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-center">COUNTRY</th>
-                                        <th class="text-center">SHARE MARKET INDEX</th>
-                                    </tr>
-                                    @foreach($caller_1_2 as $index => $caller_1_2)
-                                    <tr>
-                                        <td>{{$caller_1_2->q}}</td>
-                                        <td>
-                                            <div class="input-con">
-                                                <div class="dropbox q" show-aw="caller_1_2-{{$index}}" aw="{{$caller_1_2->aw}}"></div>
-                                            </div>
-                                            <br>
-                                            <span class="aw text-danger caller_1_2-{{$index}}">{{$caller_1_2->aw}}</span>
-                                        </td>
-                                    </tr>
-                                    @endforeach
-                                </table>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2.</td>
-                    <td>As you listen to the report again, identify sentences using the <b>Passive + Infinitive</b> construction.
-                        <br>
-                        e.g. These falls are believed to have been caused by massive selling.....
-                    </td>
-                </tr>
-                @foreach($caller_2 as $index => $caller_2)
-                <tr>
-                    <td></td>
-                    <td>
-                        <span>{{$caller_2->n}}.</span>
-                        <input type="text" class="w-75" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
-                    </td>
-                </tr>
-                @endforeach
-                <tr>
-                    <td class="pt-3">3. </td>
-                    <td class="pt-3">As you listen again to the news, take notes and write a summary of about 150 words about the
-                        Asian currency crisis and its impact on share markets. </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <h5 class="mt-3 aw text-success">Summary (possible answer) </h5>
-                        <span class="aw text-success">
-                            Most Asian currencies fell again. The Indonesian Rupiah, the Thai Baht, The Malaysian Ringgit and the
-                            Singapore dollar all ended significantly lower. Malaysia's Prime Minister blamed overseas speculators
-                            and threatened to take action to prevent future currency manipulation.
-                            <br>
-                            The Korean Won, on the other hand, was stronger, believed to be the result of a stronger economy
-                            triggered by automobile exports.
-                            <br>
-                            Although most currencies ended lower, share markets performed well. The Nikkei and Hang Seng were
-                            stronger due to gains by the Dow Jones and FT-100, caused by speculated interest rate cuts. This
-                            region's share markets are also expected to make gains because of the IMF's rescue packages.
-                            CHALLENGES LISTENING: BUSINESS
-                            In Australia, rises in resource prices boosted the All-Ordinaries and the economy is expected to remain
-                            buoyant in spite of the Asian crisis. In addition, employment figures are encouraging with the creation
-                            of new jobs.
-                        </span>
-                    </td>
-                </tr>
-            </table>
+                                <div class="row justify-content-center mb-2">
+                                    <div class="col-md-12">
+                                        <table class="w-100 mb-3 table">
+                                            <tr>
+                                                <th class="text-center">COUNTRY</th>
+                                                <th class="text-center">CURRENCY</th>
+                                            </tr>
+                                            @foreach($caller_1_1 as $index => $caller_1_1)
+                                            <tr>
+                                                <td>{{$caller_1_1->q}}</td>
+                                                <td>
+                                                    <div class="input-con">
+                                                        <div class="dropbox q" show-aw="caller_1_1-{{$index}}" aw="{{$caller_1_1->aw}}"></div>
+                                                    </div>
+                                                    <br>
+                                                    <span class=" aw text-danger caller_1_1-{{$index}}">{{$caller_1_1->aw}}</span>
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                            <tr>
+                                                <td colspan="2" class="py-3"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-center">COUNTRY</th>
+                                                <th class="text-center">SHARE MARKET INDEX</th>
+                                            </tr>
+                                            @foreach($caller_1_2 as $index => $caller_1_2)
+                                            <tr>
+                                                <td>{{$caller_1_2->q}}</td>
+                                                <td>
+                                                    <div class="input-con">
+                                                        <div class="dropbox q" show-aw="caller_1_2-{{$index}}" aw="{{$caller_1_2->aw}}"></div>
+                                                    </div>
+                                                    <br>
+                                                    <span class="aw text-danger caller_1_2-{{$index}}">{{$caller_1_2->aw}}</span>
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                        </table>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>As you listen to the report again, identify sentences using the <b>Passive + Infinitive</b> construction.
+                                <br>
+                                e.g. These falls are believed to have been caused by massive selling.....
+                            </td>
+                        </tr>
+                        @foreach($caller_2 as $index => $caller_2)
+                        <tr>
+                            <td></td>
+                            <td>
+                                <span>{{$caller_2->n}}.</span>
+                                <input type="text" class="w-75" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
+                            </td>
+                        </tr>
+                        @endforeach
+                        <tr>
+                            <td class="pt-3">3. </td>
+                            <td class="pt-3">As you listen again to the news, take notes and write a summary of about 150 words about the
+                                Asian currency crisis and its impact on share markets. </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <h5 class="mt-3 aw text-success">Summary (possible answer) </h5>
+                                <span class="aw text-success">
+                                    Most Asian currencies fell again. The Indonesian Rupiah, the Thai Baht, The Malaysian Ringgit and the
+                                    Singapore dollar all ended significantly lower. Malaysia's Prime Minister blamed overseas speculators
+                                    and threatened to take action to prevent future currency manipulation.
+                                    <br>
+                                    The Korean Won, on the other hand, was stronger, believed to be the result of a stronger economy
+                                    triggered by automobile exports.
+                                    <br>
+                                    Although most currencies ended lower, share markets performed well. The Nikkei and Hang Seng were
+                                    stronger due to gains by the Dow Jones and FT-100, caused by speculated interest rate cuts. This
+                                    region's share markets are also expected to make gains because of the IMF's rescue packages.
+                                    CHALLENGES LISTENING: BUSINESS
+                                    In Australia, rises in resource prices boosted the All-Ordinaries and the economy is expected to remain
+                                    buoyant in spite of the Asian crisis. In addition, employment figures are encouraging with the creation
+                                    of new jobs.
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>

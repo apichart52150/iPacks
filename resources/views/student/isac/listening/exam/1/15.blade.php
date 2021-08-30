@@ -201,10 +201,9 @@ $caller_1->e16->aw->i = "The people most affected by relocation of factories fro
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-        </div>
-    </div>
+            <div class="row">
                 <div class="col-lg-12">
-        <div class="card-box text-dark font-16">
+                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
                     <table class="w-100">
                         @foreach($caller_1 as $index => $caller_1)
                         <tr>
@@ -235,7 +234,9 @@ $caller_1->e16->aw->i = "The people most affected by relocation of factories fro
                         @endforeach
                     </table>
                 </div>
-                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">

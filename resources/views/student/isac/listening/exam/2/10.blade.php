@@ -53,7 +53,7 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .aw {
@@ -227,100 +227,101 @@ $caller_2_5_choice->ch8 = "minor parts";
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card-box text-dark font-16">
-            <table class="w-100">
-                @foreach($caller_2 as $index => $caller_2)
-                <tr>
-                    <td style="width: 30px;" class="pt-3">{{$caller_2->n}}.</td>
-                    <td class="pt-3">
-                        {{$caller_2->q}}
-                    </td>
-                </tr>
-                @foreach($caller_2->aw as $index2 => $aw)
-                <tr>
-                    <td></td>
-                    <td class="q-dot" show-aw="caller_2-{{$index}}-{{$index2}}" aw="{{$aw->aw}}">{{$aw->q}}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="text-danger caller_2-{{$index}}-{{$index2}} aw" show-aw="" aw="">{{$aw->aw}}</td>
-                </tr>
-                @endforeach
-                @endforeach
-                <tr>
-                    <td>2.5</td>
-                    <td>Complete the following table giving a more detailed description of this chain:</td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <div class="row justify-content-center mb-2">
-                            <div class="col-md-12">
-                                <div class="border border-dark px-2 text-center">
-                                    <div class="drag-container">
-                                        <div class="d-grid grid-5" id="choices">
-                                            @foreach($caller_2_5_choice as $choice)
-                                            <div class="drag">{{$choice}}</div>
-                                            @endforeach
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
+                    <table class="w-100">
+                        @foreach($caller_2 as $index => $caller_2)
+                        <tr>
+                            <td style="width: 30px;" class="pt-3">{{$caller_2->n}}.</td>
+                            <td class="pt-3">
+                                {{$caller_2->q}}
+                            </td>
+                        </tr>
+                        @foreach($caller_2->aw as $index2 => $aw)
+                        <tr>
+                            <td></td>
+                            <td class="q-dot" show-aw="caller_2-{{$index}}-{{$index2}}" aw="{{$aw->aw}}">{{$aw->q}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-danger caller_2-{{$index}}-{{$index2}} aw" show-aw="" aw="">{{$aw->aw}}</td>
+                        </tr>
+                        @endforeach
+                        @endforeach
+                        <tr>
+                            <td>2.5</td>
+                            <td>Complete the following table giving a more detailed description of this chain:</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="row justify-content-center mb-2">
+                                    <div class="col-md-12">
+                                        <div class="border border-dark px-2 text-center">
+                                            <div class="drag-container">
+                                                <div class="d-grid grid-5" id="choices">
+                                                    @foreach($caller_2_5_choice as $choice)
+                                                    <div class="drag">{{$choice}}</div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center mb-2">
-                            <div class="col-md-12">
-                                <table class="w-100 mb-3 table">
-                                    <tr>
-                                        <th class="text-center">Basic element </th>
-                                        <th class="text-center">Example</th>
-                                        <th class="text-center">Produced by...</th>
-                                    </tr>
-                                    @foreach($caller_2_5 as $index => $caller_2_5)
-                                    <tr>
-                                        @foreach($caller_2_5->c as $index2 => $c)
-                                        <td class="q-dot-choice" show-aw="caller_2_5-{{$index}}-{{$index2}}" aw="{{$c->aw}}">
-                                            {{$c->q}}
-                                            <br>
-                                            <span class=" aw text-danger caller_2_5-{{$index}}-{{$index2}}">{{$c->aw}}</span>
-                                        </td>
-                                        @endforeach
-                                    </tr>
-                                    @endforeach
-                                </table>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2.6</td>
-                    <td>Write a summary of the talk in <b>about 100 - 150 words</b>.</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <h5 class="mt-3 aw text-success">Summary (possible answer) </h5>
-                        <span class="aw text-success">
-                            As a response to global economic problems, the new international division of labour relocated
-                            manufacturing industries from high-wage sites in developed countries to low-wage sites in the
-                            Third World. The international car industry provides an example of this shift. Because of its size
-                            and importance, the car industry has been the prime mover in industrial reorganisation. The
-                            industry is highly complex, consisting of a number of manufacturing processes requiring coordination between major assemblers, suppliers, distributors and financing sources.
-                            <br>
-                            Since the 1970s, major changes have been effected, impacting not only on other industries
-                            involved in car production but also on whole communities and even national economies. The
-                            global reorganisation of the auto industry is a key concern for all parties and effective
-                            management of these changes has become a very important issue for many national
-                            governments.
-                        </span>
-                    </td>
-                </tr>
-            </table>
+                                <div class="row justify-content-center mb-2">
+                                    <div class="col-md-12">
+                                        <table class="w-100 mb-3 table">
+                                            <tr>
+                                                <th class="text-center">Basic element </th>
+                                                <th class="text-center">Example</th>
+                                                <th class="text-center">Produced by...</th>
+                                            </tr>
+                                            @foreach($caller_2_5 as $index => $caller_2_5)
+                                            <tr>
+                                                @foreach($caller_2_5->c as $index2 => $c)
+                                                <td class="q-dot-choice" show-aw="caller_2_5-{{$index}}-{{$index2}}" aw="{{$c->aw}}">
+                                                    {{$c->q}}
+                                                    <br>
+                                                    <span class=" aw text-danger caller_2_5-{{$index}}-{{$index2}}">{{$c->aw}}</span>
+                                                </td>
+                                                @endforeach
+                                            </tr>
+                                            @endforeach
+                                        </table>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.6</td>
+                            <td>Write a summary of the talk in <b>about 100 - 150 words</b>.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <h5 class="mt-3 aw text-success">Summary (possible answer) </h5>
+                                <span class="aw text-success">
+                                    As a response to global economic problems, the new international division of labour relocated
+                                    manufacturing industries from high-wage sites in developed countries to low-wage sites in the
+                                    Third World. The international car industry provides an example of this shift. Because of its size
+                                    and importance, the car industry has been the prime mover in industrial reorganisation. The
+                                    industry is highly complex, consisting of a number of manufacturing processes requiring coordination between major assemblers, suppliers, distributors and financing sources.
+                                    <br>
+                                    Since the 1970s, major changes have been effected, impacting not only on other industries
+                                    involved in car production but also on whole communities and even national economies. The
+                                    global reorganisation of the auto industry is a key concern for all parties and effective
+                                    management of these changes has become a very important issue for many national
+                                    governments.
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>

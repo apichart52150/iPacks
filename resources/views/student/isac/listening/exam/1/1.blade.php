@@ -20,9 +20,7 @@
     .input-con {
         display: inline-block;
         position: relative;
-        width: 100%;
     }
-
     .input-con2 {
         width: 100px;
     }
@@ -220,85 +218,83 @@ $caller_4->e6->aw = ["114%","79%"];
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-        </div>
-    </div>
-    <div class="col-lg-6 col-md-6">
-        <div class="card-box text-dark font-16">
-        <h5>Circle the numbers you hear: </h5>
-        @foreach($caller_1 as $caller_1)
-        <div class="form-group d-flex align-items-center">
-            <span class="pr-3">{{$caller_1->q}}.</span>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4 class="font-italic">Caller 1</h4>
+                    <h5>Circle the numbers you hear: </h5>
+                        @foreach($caller_1 as $caller_1)
+                        <div class="form-group d-flex align-items-center">
+                            <span class="pr-3">{{$caller_1->q}}.</span>
 
-            @foreach($caller_1->choice as $choice)
-            <div class="pr-1 input-container">
-                <input id="walk" class="radio-button caller_1" type="radio" name="radio1-{{$caller_1->q}}" aw="{{$caller_1->aw}}" show-aw="caller_1-{{$caller_1->q}}" value="{{$choice}}" />
-                <div class="radio-tile">
-                    <div class="icon walk-icon">
-                        {{$choice}}
-                    </div>
+                            @foreach($caller_1->choice as $choice)
+                            <div class="pr-1 input-container">
+                                <input id="walk" class="radio-button caller_1" type="radio" name="radio1-{{$caller_1->q}}" aw="{{$caller_1->aw}}" show-aw="caller_1-{{$caller_1->q}}" value="{{$choice}}" />
+                                <div class="radio-tile">
+                                    <div class="icon walk-icon">
+                                        {{$choice}}
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+
+                            <span class="pl-2 aw caller_1-{{$caller_1->q}} text-danger">{{$caller_1->aw}}</span>
+
+                        </div>
+                        @endforeach
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="font-italic">Caller 2</h4>
+                    <h5>Listen to the information and complete the following chart about acid rain in Europe: </h5>
+                        @foreach($caller_2 as $caller_2)
+                        <div class="row">
+                            <div class="py-1 col-md-4">
+                                <span class="">{{$caller_2->q}}.</span>
+                            </div>
+                            <div class="py-1 col-md-4">
+                                <input type="text" class="form-control caller_2" aw="{{$caller_2->aw}}" show-aw="caller_2-{{$caller_2->q}}" autocomplete="off">
+                            </div>
+                            <div class="py-1 col-md-4">
+                                <span class="pl-2 aw caller_2-{{$caller_2->q}} text-danger">{{$caller_2->aw}}</span>
+                            </div>
+                        </div>
+                        @endforeach
+                </div>
+                <div class="col-lg-12">
+                    <h4 class="font-italic pt-4">Caller 3</h4>
+                    <h5>Listen to the tape and complete the following sentences: </h5>
+                        @foreach($caller_3 as $index => $caller_3)
+                        <p class="pr-3 q-caller-3 q-caller-3-{{$index}}" q="caller-3-{{$index}}" aw="{{$caller_3->aw}}">{{$caller_3->q}}</p>
+                        @endforeach
+                </div>
+                <div class="col-lg-12">
+                    <h4 class="font-italic">Caller 4</h4>
+                    <h5>Listen to the tape and then complete the table below: </h5>
+                        <table>
+                            <tr class="text-center">
+                                <td></td>
+                                <td>Australia</td>
+                                <td></td>
+                                <td>PNG</td>
+                                <td></td>
+                            </tr>
+                            @foreach($caller_4 as $index => $caller_4)
+                            <tr>
+                                <td class="pr-3">{{$caller_4->q}}</td>
+
+                                @foreach($caller_4->aw as $index2 => $aw)
+                                <td>
+                                    <input type="text" class="form-control caller_4" aw="{{$aw}}" show-aw="caller_4-{{$index}}-{{$index2}}" autocomplete="off">
+                                </td>
+                                <td>
+                                    <span class="pl-2 px-0 aw caller_4-{{$index}}-{{$index2}} text-danger">{{$aw}}</span>
+                                </td>
+                                @endforeach
+                            </tr>
+                            @endforeach
+                        </table>
                 </div>
             </div>
-            @endforeach
-
-            <span class="pl-2 aw caller_1-{{$caller_1->q}} text-danger">{{$caller_1->aw}}</span>
-
         </div>
-        @endforeach
-    </div>
-    </div>
-    <div class="col-lg-6 col-md-6">
-        <div class="card-box text-dark font-16">
-        <h5>Listen to the information and complete the following chart about acid rain in Europe: </h5>
-        @foreach($caller_2 as $caller_2)
-        <div class="row">
-            <div class="py-1 col-md-4">
-                <span class="">{{$caller_2->q}}.</span>
-            </div>
-            <div class="py-1 col-md-4">
-                <input type="text" class="form-control caller_2" aw="{{$caller_2->aw}}" show-aw="caller_2-{{$caller_2->q}}" autocomplete="off">
-            </div>
-            <div class="py-1 col-md-4">
-                <span class="pl-2 aw caller_2-{{$caller_2->q}} text-danger">{{$caller_2->aw}}</span>
-            </div>
-        </div>
-        @endforeach
-    </div>
-    </div>
-    <div class="col-lg-12 col-md-12">
-        <div class="card-box text-dark font-16">
-        <h5>Listen to the tape and complete the following sentences: </h5>
-        @foreach($caller_3 as $index => $caller_3)
-        <p class="pr-3 q-caller-3 q-caller-3-{{$index}}" q="caller-3-{{$index}}" aw="{{$caller_3->aw}}">{{$caller_3->q}}</p>
-        @endforeach
-    </div>
-    </div>
-    <div class="col-lg-12 col-md-12">
-        <div class="card-box text-dark font-16">
-        <h5>Listen to the tape and then complete the table below: </h5>
-        <table>
-            <tr class="text-center">
-                <td></td>
-                <td>Australia</td>
-                <td></td>
-                <td>PNG</td>
-                <td></td>
-            </tr>
-            @foreach($caller_4 as $index => $caller_4)
-            <tr>
-                <td class="pr-3">{{$caller_4->q}}</td>
-
-                @foreach($caller_4->aw as $index2 => $aw)
-                <td>
-                    <input type="text" class="form-control caller_4" aw="{{$aw}}" show-aw="caller_4-{{$index}}-{{$index2}}" autocomplete="off">
-                </td>
-                <td>
-                    <span class="pl-2 px-0 aw caller_4-{{$index}}-{{$index2}} text-danger">{{$aw}}</span>
-                </td>
-                @endforeach
-            </tr>
-            @endforeach
-        </table>
-    </div>
     </div>
 </div>
 

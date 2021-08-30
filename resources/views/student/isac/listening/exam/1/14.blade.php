@@ -53,7 +53,7 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .aw {
@@ -351,343 +351,352 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card-box text-dark font-16">
-            <span>
-                In the lecture you will hear the words in List A.
-                <b>Before you listen to the lecture</b>, match the words in List A with their meanings in List B.
-                Then do Exercise 2.
-            </span>
-            <div class="w-100 d-flex justify-content-center">
-                <table class="table w-50 mb-3">
-                    <tr>
-                        <th class="py-2">List A</th>
-                        <td class="py-2"></td>
-                        <th class="py-2">List B</th>
-                    </tr>
-                    @foreach($caller_1 as $index => $caller_1)
-                    <tr>
-                        <td class="pl-4" style="width: 200px;">{{$caller_1->q}}</td>
-                        <td>=</td>
-                        <td>
-                            <select class="form-select q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}" aria-label="Default select example">
-                                <option value="...">...</option>
-                                @foreach($caller_1_choice as $choice)
-                                <option value="{{$choice}}">{{$choice}}</option>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
+                    <span>
+                        In the lecture you will hear the words in List A.
+                        <b>Before you listen to the lecture</b>, match the words in List A with their meanings in List B.
+                        Then do Exercise 2.
+                    </span>
+                    <div class="row justify-content-center mb-2">
+                        <div class="col-md-12">
+                            <div class="border border-dark px-2 text-center">
+                                <div class="drag-container">
+                                    <div class="d-grid grid-5" id="choices">
+                                        @foreach($caller_1_choice as $choice)
+                                        <div class="drag">{{$choice}}</div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mb-2">
+                        <div class="col-md-12">
+                            <table class="table w-50 mb-3">
+                                <tr>
+                                    <th class="py-2">List A</th>
+                                    <td class="py-2"></td>
+                                    <th class="py-2">List B</th>
+                                </tr>
+                                @foreach($caller_1 as $index => $caller_1)
+                                <tr>
+                                    <td class="pl-4" style="width: 200px;">{{$caller_1->q}}</td>
+                                    <td>=</td>
+                                    <td>
+                                        <div class="input-con">
+                                            <div class="dropbox q" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}"></div>
+                                        </div>
+                                        <br>
+                                        <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
+                                    </td>
+                                </tr>
                                 @endforeach
-                            </select>
-                            <br>
-                            <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
-                        </td>
-                    </tr>
-                    @endforeach
-                </table>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <h4 class="font-italic m-0 pt-3">Caller 2</h4>
+                    <table class="w-100">
+                        <tr>
+                            <td colspan="2">
+                                <h5>Complete the following sentences using some of the words from List A. You may need to change the
+                                    form of some of the words</h5>
+                            </td>
+                        </tr>
+                        @foreach($caller_2 as $index => $caller_2)
+                        <tr>
+                            <td style="vertical-align: middle;">{{$caller_2->n}}.</td>
+                            <td style="vertical-align: middle;">
+                                <span class="pr-2 q-caller-2 q-caller-2-{{$index}}" q="caller-2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q}}</span>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </table>
+                </div>
+                <div class="col-lg-12">
+                    <h4 class="font-italic m-0 pt-3">Caller 3</h4>
+                    <table id="caller-3">
+                        <tr>
+                            <td colspan="4">
+                                <div class="border border-dark px-2 text-center">
+                                    <div class="drag-container">
+                                        <div class="d-grid grid-5" id="choices">
+                                            @foreach($caller_3_choice as $choice)
+                                            <div class="drag">{{$choice}}</div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="pt-4">Problem</th>
+                            <th class="pt-4">Examples</th>
+                            <th class="pt-4">Remedy</th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td class="col-3-500">It assumes that a particular role or job is exclusively male or female.</td>
+                            <td class="col-3-500">
+                                a. postman, fireman, chairman
+                                <br>
+                                b. to mother, to father fatherly / motherly advice
+                            </td>
+                            <td class="col-3-500">
+                                a. postperson, fireperson, chairperson
+                                <br>
+                                none given
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td class="col-3-500">Phrases which are male by nature but which include both males and females.</td>
+                            <td class="col-3-500">
+                                <div class="input-con">
+                                    <div class="dropbox q" show-aw="caller_3-2-2-1" aw="a. 'Man'"></div>
+                                </div>
+                                <br>
+                                <span class="aw caller_3-2-2-1 text-danger">a. 'Man'</span>
+                                <br>
+                                <div class="input-con">
+                                    <div class="dropbox q" show-aw="caller_3-2-2-2" aw="b. Everyone should be aware of his rights."></div>
+                                </div>
+                                <br>
+                                <span class="aw caller_3-2-2-2 text-danger">b. Everyone should be aware of his rights.</span>
+                            </td>
+                            <td class="col-3-500">
+                                <div class="input-con">
+                                    <div class="dropbox q" show-aw="caller_3-2-3-1" aw="a. Humans"></div>
+                                </div>
+                                <br>
+                                <span class="aw caller_3-2-3-1 text-danger">a. Humans</span>
+                                <br>
+                                <div class="input-con">
+                                    <div class="dropbox q" show-aw="caller_3-2-3-2" aw="b. People should be aware of their rights."></div>
+                                </div>
+                                <br>
+                                <span class="aw caller_3-2-3-2 text-danger">b. People should be aware of their rights.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td class="col-3-500">
+                                <div class="input-con">
+                                    <div class="dropbox q" show-aw="caller_3-1-3" aw="Female forms to denote sexual difference"></div>
+                                </div>
+                                <br>
+                                <span class="aw caller_3-1-3 text-danger">Female forms to denote sexual difference</span>
+                            </td>
+                            <td class="col-3-500">
+                                authoress, usherette, waitress
+                                <br>
+                                lady-doctor; female-librarian
+                            </td>
+                            <td class="col-3-500">
+                                <div class="input-con">
+                                    <div class="dropbox q" show-aw="caller_3-3-3-1" aw="- author, usher, waiter"></div>
+                                </div>
+                                <br>
+                                <span class="aw caller_3-3-3-1 text-danger">- author, usher, waiter</span>
+                                <br>
+                                <div class="input-con">
+                                    <div class="dropbox q" show-aw="caller_3-3-3-2" aw="- doctor, librarian"></div>
+                                </div>
+                                <br>
+                                <span class="aw caller_3-3-3-2 text-danger">- doctor, librarian</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td class="col-3-500">
+                                <div class="input-con">
+                                    <div class="dropbox q" show-aw="caller_3-1-4" aw="Females are referred to in terms relating to males"></div>
+                                </div>
+                                <br>
+                                <span class="aw caller_3-1-4 text-danger">Females are referred to in terms relating to males</span>
+                            </td>
+                            <td class="col-3-500">
+                                a. man and wife
+                                <br>
+                                b. John Smith and his wife
+                            </td>
+                            <td class="col-3-500">
+                                a. none given
+                                <br>
+                                <div class="input-con">
+                                    <div class="dropbox q" show-aw="caller_3-3-4-2" aw="b. Mr and Mrs Smith"></div>
+                                </div>
+                                <br>
+                                <span class="aw caller_3-3-4-2 text-danger">b. Mr and Mrs Smith</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td class="col-3-500">
+                                <div class="input-con">
+                                    <div class="dropbox q" show-aw="caller_3-1-5" aw="Female forms for insults and abuse"></div>
+                                </div>
+                                <br>
+                                <span class="aw caller_3-1-5 text-danger">Female forms for insults and abuse</span>
+                            </td>
+                            <td class="col-3-500">bitch, vixen</td>
+                            <td class="col-3-500">none given</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-lg-12">
+                    <h4 class="font-italic m-0 pt-3">Caller 4</h4>
+                    <table class="w-100">
+                        <tr>
+                            <td colspan="3">
+                                <h5>Listen to the lecture again. Choose the correct answer from the choices given for each question.</h5>
+                            </td>
+                        </tr>
+                        @foreach($caller_4 as $index => $caller_4_1)
+                        <tr>
+                            <td>{{$caller_4_1->n}}.</td>
+                            <td colspan="2">{{$caller_4_1->q}}</td>
+                        </tr>
+                        @foreach($caller_4_1->choice as $index2 => $caller_4_2)
+                        <tr>
+                            <td></td>
+                            <td style="width: 20px;">
+                                <div class="form-check">
+                                    <input class="form-check-input position-static q-check caller_4-{{$index}}-{{$index2}}" type="radio" name="caller_4-{{$index}}" show-aw="caller_4-{{$index}}" aw="{{$caller_4_1->aw}}" value="{{$index2}}. {{$caller_4_2}}">
+                                </div>
+                            </td>
+                            <td onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$index2}}. {{$caller_4_2}}</td>
+                        </tr>
+                        @endforeach
+                        <tr class="aw">
+                            <td></td>
+                            <td colspan="2" class="aw caller_4-{{$index}} text-danger">{{$caller_4_1->aw}}</td>
+                        </tr>
+                        @endforeach
+                    </table>
+                </div>
+                <div class="col-lg-12">
+                    <h4 class="font-italic m-0 pt-3">Caller 5</h4>
+                    <table class="w-100">
+                        <tr>
+                            <td colspan="4">
+                                <h5>
+                                    Below are some examples of sexist language
+                                    <br>
+                                    Find ways of changing the words and phrases to make them less sexist.
+                                </h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="border border-dark px-2 text-center">
+                                    <div class="drag-container">
+                                        <div class="d-grid grid-5" id="choices">
+                                            @foreach($caller_5_a_choice as $choice)
+                                            <div class="drag">{{$choice}}</div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20px;"><b>a.</b></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        @foreach($caller_5->a as $index => $a)
+                        <tr>
+                            <td></td>
+                            <td style="width: 250px;">{{$a->q}}</td>
+                            <td>=</td>
+                            <td>
+                                <div class="input-con">
+                                    <div class="dropbox q" show-aw="caller_5_a-{{$index}}" aw="{{$a->aw}}"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="aw caller_5_a-{{$index}} text-danger">{{$a->aw}}</td>
+                        </tr>
+                        @endforeach
+                        <tr>
+                            <td class="pt-3" colspan="4">
+                                <div class="border border-dark px-2 text-center">
+                                    <div class="drag-container">
+                                        <div class="d-grid grid-5" id="choices">
+                                            @foreach($caller_5_b_choice as $choice)
+                                            <div class="drag">{{$choice}}</div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20px;"><b>b.</b></td>
+                            <td colspan="3"><b>Consider alternative titles for the following books:</b></td>
+                        </tr>
+                        @foreach($caller_5->b as $index => $b)
+                        <tr>
+                            <td></td>
+                            <td style="width: 250px;">{{$b->q}}</td>
+                            <td>=</td>
+                            <td>
+                                <div class="input-con">
+                                    <div class="dropbox q" show-aw="caller_5_b-{{$index}}" aw="{{$b->aw}}"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="aw caller_5_b-{{$index}} text-danger">{{$b->aw}}</td>
+                        </tr>
+                        @endforeach
+                        <tr>
+                            <td style="width: 20px;" class="pt-3"><b>c.</b></td>
+                            <td colspan="3" class="pt-3"><b>Rewrite the following sentences to get rid of any sexist language:</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <table class="w-100 m-0 p-0">
+                                    @foreach($caller_5->c as $index => $c)
+                                    <tr>
+                                        <td></td>
+                                        <td style="width: 20px;">{{$c->n}}.</td>
+                                        <td colspan="2">{{$c->q}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 20px;"></td>
+                                        <td colspan="2"></td>
+                                        <td>
+                                            <b>Answer: </b>
+                                            <input type="text" class="input-text q-text w-75" show-aw="caller_5_c-{{$index}}" aw="{{$c->aw}}">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 20px;"></td>
+                                        <td style="width: 20px;"></td>
+                                        <td style="width: 20px;"></td>
+                                        <td class="aw caller_5_c-{{$index}} text-danger">{{$c->aw}}</td>
+                                    </tr>
+                                    @endforeach
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card-box text-dark font-16">
-            <table class="w-100">
-                <tr>
-                    <td colspan="2">
-                        <h5>Complete the following sentences using some of the words from List A. You may need to change the
-                            form of some of the words</h5>
-                    </td>
-                </tr>
-                @foreach($caller_2 as $index => $caller_2)
-                <tr>
-                    <td style="vertical-align: middle;">{{$caller_2->n}}.</td>
-                    <td style="vertical-align: middle;">
-                        <span class="pr-2 q-caller-2 q-caller-2-{{$index}}" q="caller-2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q}}</span>
-                    </td>
-                </tr>
-                @endforeach
-            </table>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card-box text-dark font-16">
-            <table id="caller-3">
-                <tr>
-                    <td colspan="4">
-                        <div class="border border-dark px-2 text-center">
-                            <div class="drag-container">
-                                <div class="d-grid grid-5" id="choices">
-                                    @foreach($caller_3_choice as $choice)
-                                    <div class="drag">{{$choice}}</div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th class="pt-4">Problem</th>
-                    <th class="pt-4">Examples</th>
-                    <th class="pt-4">Remedy</th>
-                </tr>
-                <tr>
-                    <td>1.</td>
-                    <td class="col-3-500">It assumes that a particular role or job is exclusively male or female.</td>
-                    <td class="col-3-500">
-                        a. postman, fireman, chairman
-                        <br>
-                        b. to mother, to father fatherly / motherly advice
-                    </td>
-                    <td class="col-3-500">
-                        a. postperson, fireperson, chairperson
-                        <br>
-                        none given
-                    </td>
-                </tr>
-                <tr>
-                    <td>2.</td>
-                    <td class="col-3-500">Phrases which are male by nature but which include both males and females.</td>
-                    <td class="col-3-500">
-                        <div class="input-con">
-                            <div class="dropbox q" show-aw="caller_3-2-2-1" aw="a. 'Man'"></div>
-                        </div>
-                        <br>
-                        <span class="aw caller_3-2-2-1 text-danger">a. 'Man'</span>
-                        <br>
-                        <div class="input-con">
-                            <div class="dropbox q" show-aw="caller_3-2-2-2" aw="b. Everyone should be aware of his rights."></div>
-                        </div>
-                        <br>
-                        <span class="aw caller_3-2-2-2 text-danger">b. Everyone should be aware of his rights.</span>
-                    </td>
-                    <td class="col-3-500">
-                        <div class="input-con">
-                            <div class="dropbox q" show-aw="caller_3-2-3-1" aw="a. Humans"></div>
-                        </div>
-                        <br>
-                        <span class="aw caller_3-2-3-1 text-danger">a. Humans</span>
-                        <br>
-                        <div class="input-con">
-                            <div class="dropbox q" show-aw="caller_3-2-3-2" aw="b. People should be aware of their rights."></div>
-                        </div>
-                        <br>
-                        <span class="aw caller_3-2-3-2 text-danger">b. People should be aware of their rights.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3.</td>
-                    <td class="col-3-500">
-                        <div class="input-con">
-                            <div class="dropbox q" show-aw="caller_3-1-3" aw="Female forms to denote sexual difference"></div>
-                        </div>
-                        <br>
-                        <span class="aw caller_3-1-3 text-danger">Female forms to denote sexual difference</span>
-                    </td>
-                    <td class="col-3-500">
-                        authoress, usherette, waitress
-                        <br>
-                        lady-doctor; female-librarian
-                    </td>
-                    <td class="col-3-500">
-                        <div class="input-con">
-                            <div class="dropbox q" show-aw="caller_3-3-3-1" aw="- author, usher, waiter"></div>
-                        </div>
-                        <br>
-                        <span class="aw caller_3-3-3-1 text-danger">- author, usher, waiter</span>
-                        <br>
-                        <div class="input-con">
-                            <div class="dropbox q" show-aw="caller_3-3-3-2" aw="- doctor, librarian"></div>
-                        </div>
-                        <br>
-                        <span class="aw caller_3-3-3-2 text-danger">- doctor, librarian</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4.</td>
-                    <td class="col-3-500">
-                        <div class="input-con">
-                            <div class="dropbox q" show-aw="caller_3-1-4" aw="Females are referred to in terms relating to males"></div>
-                        </div>
-                        <br>
-                        <span class="aw caller_3-1-4 text-danger">Females are referred to in terms relating to males</span>
-                    </td>
-                    <td class="col-3-500">
-                        a. man and wife
-                        <br>
-                        b. John Smith and his wife
-                    </td>
-                    <td class="col-3-500">
-                        a. none given
-                        <br>
-                        <div class="input-con">
-                            <div class="dropbox q" show-aw="caller_3-3-4-2" aw="b. Mr and Mrs Smith"></div>
-                        </div>
-                        <br>
-                        <span class="aw caller_3-3-4-2 text-danger">b. Mr and Mrs Smith</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5.</td>
-                    <td class="col-3-500">
-                        <div class="input-con">
-                            <div class="dropbox q" show-aw="caller_3-1-5" aw="Female forms for insults and abuse"></div>
-                        </div>
-                        <br>
-                        <span class="aw caller_3-1-5 text-danger">Female forms for insults and abuse</span>
-                    </td>
-                    <td class="col-3-500">bitch, vixen</td>
-                    <td class="col-3-500">none given</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card-box text-dark font-16">
-            <table class="w-100">
-                <tr>
-                    <td colspan="3">
-                        <h5>Listen to the lecture again. Choose the correct answer from the choices given for each question.</h5>
-                    </td>
-                </tr>
-                @foreach($caller_4 as $index => $caller_4_1)
-                <tr>
-                    <td>{{$caller_4_1->n}}.</td>
-                    <td colspan="2">{{$caller_4_1->q}}</td>
-                </tr>
-                @foreach($caller_4_1->choice as $index2 => $caller_4_2)
-                <tr>
-                    <td></td>
-                    <td style="width: 20px;">
-                        <div class="form-check">
-                            <input class="form-check-input position-static q-check caller_4-{{$index}}-{{$index2}}" type="radio" name="caller_4-{{$index}}" show-aw="caller_4-{{$index}}" aw="{{$caller_4_1->aw}}" value="{{$index2}}. {{$caller_4_2}}">
-                        </div>
-                    </td>
-                    <td onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$index2}}. {{$caller_4_2}}</td>
-                </tr>
-                @endforeach
-                <tr class="aw">
-                    <td></td>
-                    <td colspan="2" class="aw caller_4-{{$index}} text-danger">{{$caller_4_1->aw}}</td>
-                </tr>
-                @endforeach
-            </table>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card-box text-dark font-16">
-            <table class="w-100">
-                <tr>
-                    <td colspan="4">
-                        <h5>
-                            Below are some examples of sexist language
-                            <br>
-                            Find ways of changing the words and phrases to make them less sexist.
-                        </h5>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="4">
-                        <div class="border border-dark px-2 text-center">
-                            <div class="drag-container">
-                                <div class="d-grid grid-5" id="choices">
-                                    @foreach($caller_5_a_choice as $choice)
-                                    <div class="drag">{{$choice}}</div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 20px;"><b>a.</b></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                @foreach($caller_5->a as $index => $a)
-                <tr>
-                    <td></td>
-                    <td style="width: 250px;">{{$a->q}}</td>
-                    <td>=</td>
-                    <td>
-                        <div class="input-con">
-                            <div class="dropbox q" show-aw="caller_5_a-{{$index}}" aw="{{$a->aw}}"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="aw caller_5_a-{{$index}} text-danger">{{$a->aw}}</td>
-                </tr>
-                @endforeach
-                <tr>
-                    <td class="pt-3" colspan="4">
-                        <div class="border border-dark px-2 text-center">
-                            <div class="drag-container">
-                                <div class="d-grid grid-5" id="choices">
-                                    @foreach($caller_5_b_choice as $choice)
-                                    <div class="drag">{{$choice}}</div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 20px;"><b>b.</b></td>
-                    <td colspan="3"><b>Consider alternative titles for the following books:</b></td>
-                </tr>
-                @foreach($caller_5->b as $index => $b)
-                <tr>
-                    <td></td>
-                    <td style="width: 250px;">{{$b->q}}</td>
-                    <td>=</td>
-                    <td>
-                        <div class="input-con">
-                            <div class="dropbox q" show-aw="caller_5_b-{{$index}}" aw="{{$b->aw}}"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="aw caller_5_b-{{$index}} text-danger">{{$b->aw}}</td>
-                </tr>
-                @endforeach
-                <tr>
-                    <td style="width: 20px;" class="pt-3"><b>c.</b></td>
-                    <td colspan="3" class="pt-3"><b>Rewrite the following sentences to get rid of any sexist language:</b></td>
-                </tr>
-                <tr>
-                    <td colspan="4">
-                        <table class="w-100 m-0 p-0">
-                            @foreach($caller_5->c as $index => $c)
-                            <tr>
-                                <td></td>
-                                <td style="width: 20px;">{{$c->n}}.</td>
-                                <td colspan="2">{{$c->q}}</td>
-                            </tr>
-                            <tr>
-                                <td style="width: 20px;"></td>
-                                <td colspan="2"></td>
-                                <td>
-                                    <b>Answer: </b>
-                                    <input type="text" class="input-text q-text w-75" show-aw="caller_5_c-{{$index}}" aw="{{$c->aw}}">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width: 20px;"></td>
-                                <td style="width: 20px;"></td>
-                                <td style="width: 20px;"></td>
-                                <td class="aw caller_5_c-{{$index}} text-danger">{{$c->aw}}</td>
-                            </tr>
-                            @endforeach
-                        </table>
-                    </td>
-                </tr>
-            </table>
         </div>
     </div>
 </div>

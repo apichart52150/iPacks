@@ -8,7 +8,6 @@
     .input-con {
         display: inline-block;
         position: relative;
-        width: 100%;
     }
 
     .drag-container {
@@ -147,88 +146,87 @@ $caller_3->e10->aw = "The fine weather is expected to continue for the next few 
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card-box text-dark font-16">
-            <h5>As you listen, find answers to these questions:</h5>
-            <div class="row justify-content-center mb-2">
-                <div class="col-md-12">
-                    <div class="border border-dark px-2 text-center">
-                        <div class="drag-container">
-                            <div class="d-grid grid-5" id="choices">
-                                @foreach($caller_2_choice as $choice)
-                                <div class="drag">{{$choice}}</div>
-                                @endforeach
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="font-italic">Caller 1</h4>
+                    <h5>As you listen, find answers to these questions:</h5>
+                    <div class="row justify-content-center mb-2">
+                        <div class="col-md-12">
+                            <div class="border border-dark px-2 text-center">
+                                <div class="drag-container">
+                                    <div class="d-grid grid-5" id="choices">
+                                        @foreach($caller_2_choice as $choice)
+                                        <div class="drag">{{$choice}}</div>
+                                        @endforeach
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="row justify-content-center mb-2">
+                        <div class="col-md-12">
+                            <table class="w-100 mb-3">
+                                @foreach($caller_2 as $index => $caller_2)
+                                <tr>
+                                    <td style="width: 20px;">{{$caller_2->n}}.</td>
+                                    <td colspan="2" class="border-dark">{{$caller_2->q}}</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td style="width: 80px;"><b>Answer: </b></td>
+                                    <td class="border-dark">
+                                        <div class="input-con">
+                                            <div class="dropbox q" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="aw pt-0 caller_2-{{$index}} text-danger">
+                                        {{$caller_2->aw}}
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </table>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-center mb-2">
-                <div class="col-md-12">
-                    <table class="w-100 mb-3">
-                        @foreach($caller_2 as $index => $caller_2)
+                <div class="col-lg-12">
+                    <h4 class="font-italic">Caller 2</h4>
+                    <table class="w-100">
                         <tr>
-                            <td style="width: 20px;">{{$caller_2->n}}.</td>
-                            <td colspan="2" class="border-dark">{{$caller_2->q}}</td>
+                            <td colspan="2">
+                                <h5>As you listen to the report again, identify sentences using the <b>Passive + Infinitive</b> construction.
+                                    (There are about 10 in the report)</h5>
+                            </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
-                            <td class="border-dark">
-                                <div class="input-con">
-                                    <div class="dropbox q w-100" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}"></div>
-                                </div>
+                            <td>e.g.</td>
+                            <td>
+                                None of the buildings in the small town is believed to have survived.........
+                            </td>
+                        </tr>
+                        @foreach($caller_3 as $index => $caller_3)
+                        <tr>
+                            <td>{{$caller_3->n}}.</td>
+                            <td>
+                                <input type="text" class="q-text w-75" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}">
                             </td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td></td>
-                            <td class="aw pt-0 caller_2-{{$index}} text-danger">
-                                {{$caller_2->aw}}
-                            </td>
+                            <td class="aw caller_3-{{$index}} text-danger">{{$caller_3->aw}}</td>
                         </tr>
                         @endforeach
                     </table>
                 </div>
+                <div class="col-lg-12">
+                    <h4 class="font-italic">Caller 3</h4>
+                    <h5>As you listen again, make notes and write a short report about one of the news items.</h5>
+                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card-box text-dark font-16">
-            <table class="w-100">
-                <tr>
-                    <td colspan="2">
-                        <h5>As you listen to the report again, identify sentences using the <b>Passive + Infinitive</b> construction.
-                            (There are about 10 in the report)</h5>
-                    </td>
-                </tr>
-                <tr>
-                    <td>e.g.</td>
-                    <td>
-                        None of the buildings in the small town is believed to have survived.........
-                    </td>
-                </tr>
-                @foreach($caller_3 as $index => $caller_3)
-                <tr>
-                    <td>{{$caller_3->n}}.</td>
-                    <td>
-                        <input type="text" class="q-text w-75" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}">
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="aw caller_3-{{$index}} text-danger">{{$caller_3->aw}}</td>
-                </tr>
-                @endforeach
-            </table>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card-box text-dark font-16">
-            <h5>As you listen again, make notes and write a short report about one of the news items.</h5>
-            <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
         </div>
     </div>
 </div>
