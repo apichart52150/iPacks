@@ -1,13 +1,9 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
     .drag-container {
-        margin: 0 auto 25px;
-        max-width: 700px;
+        margin-bottom: 25px;
     }
 
-    .answers-container {
-        margin: 10px 0;
-    }
 
     .answers-container .dropbox {
         display: inline-block;
@@ -126,25 +122,25 @@
 <script>
 
     const answers = [
-         $q1 = "<?php echo $choice['c4'] ?>",
-         $q2 = "<?php echo $choice['c12'] ?>",
-         $q3 = "<?php echo $choice['c9'] ?>",
-         $q4 = "<?php echo $choice['c9'] ?>",
-         $q5 = "<?php echo $choice['c9'] ?>",
-         $q6 = "<?php echo $choice['c18'] ?>",
-         $q7 = "<?php echo $choice['c16'] ?>",
-         $q8 = "<?php echo $choice['c3'] ?>",
-         $q9 = "<?php echo $choice['c6'] ?>",
-         $q10 = "<?php echo $choice['c5'] ?>",
-         $q11 = "<?php echo $choice['c8'] ?>",
-         $q12 = "<?php echo $choice['c1'] ?>",
-         $q13 = "<?php echo $choice['c13'] ?>",
-         $q14 = "<?php echo $choice['c15'] ?>",
-         $q15 = "<?php echo $choice['c1'] ?>",
-         $q16 = "<?php echo $choice['c7'] ?>",
-         $q17 = "<?php echo $choice['c17'] ?>",
-         $q18 = "<?php echo $choice['c14'] ?>",
-         $q19 = "<?php echo $choice['c19'] ?>",
+         $q1 = "BENEFITS",
+         $q2 = "CONTROVERSIAL",
+         $q3 = "CONTRIBUTIONS",
+         $q4 = "CONTRIBUTIONS",
+         $q5 = "CONTRIBUTIONS",
+         $q6 = "TRADITIONS",
+         $q7 = "RANGE",
+         $q8 = "ASPECT",
+         $q9 = "COMMUNICATION",
+         $q10 = "COMMUNICATE",
+         $q11 = "CONTRIBUTION",
+         $q12 = "ACHIEVEMENTS",
+         $q13 = "DEVICES",
+         $q14 = "FINALLY",
+         $q15 = "ACHIEVEMENTS",
+         $q16 = "COMPUTERS",
+         $q17 = "TECHNOLOGY",
+         $q18 = "ELIMINATE",
+         $q19 = "UNDERESTIMATE",
     ];
 
     let score = 0
@@ -187,7 +183,7 @@
         let droppables = $(".dropbox");
 
         droppables.each((idx, item) => {
-            if($(item).children().text().trim() == answers[idx]) {
+            if($(item).children().text().trim() == answers[idx].toLowerCase()) {
                 checkAnswer($(item).children(), 'correct');
                 score++
             } else {
@@ -199,7 +195,7 @@
             disabled: true,
         });
 
-        alert("Your score is" + score)
+        alert("Your score is " + score)
         $("#check-answer").prop("disabled", true);
     });
 
