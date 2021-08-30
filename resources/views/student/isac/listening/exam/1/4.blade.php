@@ -56,58 +56,56 @@
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-            <div class="row">
-
-                <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
-                    <table class="w-100">
-                        <tr>
-                            <td>1.</td>
-                            <td>You are going to hear a talk entitled: 'The Meaning of Development'.
-                                Make predictions about what you think you might hear. Write down any words which you
-                                associate with this topic. Make sure you understand the concept: 'development'.</td>
-                        </tr>
-                        <tr>
-                            <td>2.</td>
-                            <td>Brainstorm some of these ideas with a small group of people in your class.</td>
-                        </tr>
-                        <tr>
-                            <td>3.</td>
-                            <td>Now you are ready to listen to the talk. As you listen to the talk, make notes using
-                                any conventions which will help you.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4.</td>
-                            <td>Listen to the recording twice only.</td>
-                        </tr>
-                        <tr>
-                            <td>5.</td>
-                            <td> After listening to the recording twice, compare your notes with those of the person sitting next
-                                to you. Are your notes similar? Did either of you miss out chunks from the recording? If so, help
-                                each other to complete the notes.</td>
-                        </tr>
-                        <tr>
-                            <td>6.</td>
-                            <td> Now, write a short summary of the talk in about 50 - 80 words.</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                                <h5 class="mt-3 aw text-success">Summary (possible answer)</h5>
-                                <span class="aw text-success">
-                                    The word 'develop' can mean 'unwrap' or 'uncover'. It also means to allow a picture to show from a
-                                    negative image. In the context of growing vegetables, it means providing an environment which
-                                    allows growth to occur. True development means allowing people to develop in their own way by
-                                    removing obstacles which prevent growth. This means integrating people into their own
-                                    development to make it meaningful.
-                                </span>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card-box text-dark font-16">
+            <table class="w-100">
+                <tr>
+                    <td>1.</td>
+                    <td>You are going to hear a talk entitled: 'The Meaning of Development'.
+                        Make predictions about what you think you might hear. Write down any words which you
+                        associate with this topic. Make sure you understand the concept: 'development'.</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Brainstorm some of these ideas with a small group of people in your class.</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Now you are ready to listen to the talk. As you listen to the talk, make notes using
+                        any conventions which will help you.
+                    </td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Listen to the recording twice only.</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td> After listening to the recording twice, compare your notes with those of the person sitting next
+                        to you. Are your notes similar? Did either of you miss out chunks from the recording? If so, help
+                        each other to complete the notes.</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td> Now, write a short summary of the talk in about 50 - 80 words.</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                        <h5 class="mt-3 aw text-success">Summary (possible answer)</h5>
+                        <span class="aw text-success">
+                            The word 'develop' can mean 'unwrap' or 'uncover'. It also means to allow a picture to show from a
+                            negative image. In the context of growing vegetables, it means providing an environment which
+                            allows growth to occur. True development means allowing people to develop in their own way by
+                            removing obstacles which prevent growth. This means integrating people into their own
+                            development to make it meaningful.
+                        </span>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>

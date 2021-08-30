@@ -74,56 +74,56 @@ $caller_2->e3->aw = "Between 10 and 15 degrees Celsius.";
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
-                    <table class="w-100">
-                        <tr>
-                            <td colspan="3">
-                                <h5>As you listen to the recording for the first time, find the following information: </h5>
-                            </td>
-                        </tr>
-                        @foreach($caller_2 as $index => $caller_2)
-                        <tr>
-                            <td>{{$caller_2->n}}.</td>
-                            <td colspan="2">{{$caller_2->q}}</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td style="width: 60px;"><b>Answer: </b></td>
-                            <td>
-                                <input type="text" class="q-text w-75" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td class="aw caller_2-{{$index}} text-danger">{{$caller_2->aw}}</td>
-                        </tr>
-                        @endforeach
-                    </table>
-                </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 2</h4>
-                    <h5>As you listen to the recording a second time, take notes.
-                        Put your notes away for a while; then write a summary of the lecture in <b>about 150 words</b>.</h5>
-                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                    <h5 class="mt-3 aw text-success">Landscaping for Climatic Conditions (possible answer)</h5>
-                    <span class="aw text-success">
-                        Planting bushes and trees around homes can prevent houses from over-heating.It can also provide
-                        cooler, cleaner air around the home. Hot summer winds are cooled as they pass over the plants in a
-                        process called evapotranspiration. In addition, trees deflect hot winds in summer and cold winds in
-                        winter. Trees and bushes also provide shade in summer.
-                        <br>
-                        Effective landscaping is effective when designing new homes but also has application for existing
-                        homes. Careful planning is necessary to avoid overshading. Trees and shrubs should be chosen
-                        according to their intended use. Factors such as growth rate, size and shape, and amount of foliage
-                        need to be considered. In the hills, care is needed to prevent the risk of fire in the summer months.
-                        Appropriate landscaping is the cheapest, most effective way of controlling climatic conditions around
-                        the home. It is also environmentally friendly.
-                    </span>
-                </div>
-            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card-box text-dark font-16">
+            <table class="w-100">
+                <tr>
+                    <td colspan="3">
+                        <h5>As you listen to the recording for the first time, find the following information: </h5>
+                    </td>
+                </tr>
+                @foreach($caller_2 as $index => $caller_2)
+                <tr>
+                    <td>{{$caller_2->n}}.</td>
+                    <td colspan="2">{{$caller_2->q}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="width: 60px;"><b>Answer: </b></td>
+                    <td>
+                        <input type="text" class="q-text w-75" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="aw caller_2-{{$index}} text-danger">{{$caller_2->aw}}</td>
+                </tr>
+                @endforeach
+            </table>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card-box text-dark font-16">
+            <h5>As you listen to the recording a second time, take notes.
+                Put your notes away for a while; then write a summary of the lecture in <b>about 150 words</b>.</h5>
+            <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+            <h5 class="mt-3 aw text-success">Landscaping for Climatic Conditions (possible answer)</h5>
+            <span class="aw text-success">
+                Planting bushes and trees around homes can prevent houses from over-heating.It can also provide
+                cooler, cleaner air around the home. Hot summer winds are cooled as they pass over the plants in a
+                process called evapotranspiration. In addition, trees deflect hot winds in summer and cold winds in
+                winter. Trees and bushes also provide shade in summer.
+                <br>
+                Effective landscaping is effective when designing new homes but also has application for existing
+                homes. Careful planning is necessary to avoid overshading. Trees and shrubs should be chosen
+                according to their intended use. Factors such as growth rate, size and shape, and amount of foliage
+                need to be considered. In the hills, care is needed to prevent the risk of fire in the summer months.
+                Appropriate landscaping is the cheapest, most effective way of controlling climatic conditions around
+                the home. It is also environmentally friendly.
+            </span>
         </div>
     </div>
 </div>

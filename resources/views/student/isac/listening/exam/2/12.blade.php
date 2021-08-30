@@ -84,53 +84,53 @@
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-            <div class="row">
-                <div class="col-lg-12">
-                    <table class="w-100">
-                        <tr>
-                            <td class="py-2">1.</td>
-                            <td class="py-2" colspan="2">
-                                You are going to hear two short talks about two famous Australians:
-                                <br>
-                                <b>Part 1:</b> Janet Holmes-a-Court.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-2">2.</td>
-                            <td class="py-2" colspan="2">
-                                As you listen, focus primarily on the important events which happened during their
-                                lives.(the chronological sequence)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3.</td>
-                            <td colspan="2">
-                                Write a short summary of the main events and achievements of each of the two people
-                                <b>(roughly 150 words each)</b>. Use the discourse markers which you learnt earlier in this course to
-                                give coherence to your summary.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-2"></td>
-                            <td class="py-2" colspan="2">
-                                <h5>Part 1 Janet Holmes-a-Court </h5>
-                                <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                                <h5 class="mt-3 aw text-success">Summaries (possible answer)</h5>
-                                <span class="aw text-success">
-                                    She was born in 1943 and lived in Perth with her parents who were both active in politics. In 1956 she
-                                    won a scholarship to Perth Modern School. She studied Organic Chemistry at the University of Western
-                                    Australia before becoming a teacher. At university she met Robert Holmes-a-Court, whom she married
-                                    in 1966. They had four children. Janet had many outside interests in life. Her husband died in 1990 and
-                                    Janet inherited the company with debts of three hundred and fifty million dollars. She restructured the
-                                    company and made it profitable by changing its focus and direction. Seven thousand people now work
-                                    for the company. Janet also has a large art collection which she lends to galleries around Australia. In
-                                    1995 she was awarded the Order of Australia.
-                                </span>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card-box text-dark font-16">
+            <table class="w-100">
+                <tr>
+                    <td class="py-2">1.</td>
+                    <td class="py-2" colspan="2">
+                        You are going to hear two short talks about two famous Australians:
+                        <br>
+                        <b>Part 1:</b> Janet Holmes-a-Court.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="py-2">2.</td>
+                    <td class="py-2" colspan="2">
+                        As you listen, focus primarily on the important events which happened during their
+                        lives.(the chronological sequence)
+                    </td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td colspan="2">
+                        Write a short summary of the main events and achievements of each of the two people
+                        <b>(roughly 150 words each)</b>. Use the discourse markers which you learnt earlier in this course to
+                        give coherence to your summary.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="py-2"></td>
+                    <td class="py-2" colspan="2">
+                        <h5>Part 1 Janet Holmes-a-Court </h5>
+                        <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                        <h5 class="mt-3 aw text-success">Summaries (possible answer)</h5>
+                        <span class="aw text-success">
+                            She was born in 1943 and lived in Perth with her parents who were both active in politics. In 1956 she
+                            won a scholarship to Perth Modern School. She studied Organic Chemistry at the University of Western
+                            Australia before becoming a teacher. At university she met Robert Holmes-a-Court, whom she married
+                            in 1966. They had four children. Janet had many outside interests in life. Her husband died in 1990 and
+                            Janet inherited the company with debts of three hundred and fifty million dollars. She restructured the
+                            company and made it profitable by changing its focus and direction. Seven thousand people now work
+                            for the company. Janet also has a large art collection which she lends to galleries around Australia. In
+                            1995 she was awarded the Order of Australia.
+                        </span>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>

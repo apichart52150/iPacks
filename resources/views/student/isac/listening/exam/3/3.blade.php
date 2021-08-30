@@ -1,13 +1,25 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
     table tr td {
-        vertical-align: top;
-        padding-top: 10px;
+        vertical-align: middle;
+    }
+
+    .table tr td {
+        vertical-align: middle;
+        border: 1px solid black;
+    }
+
+    .table tr th {
+        border: 1px solid black;
     }
 
     .input-con {
         display: inline-block;
         position: relative;
+    }
+
+    .input-con2 {
+        width: 100px;
     }
 
     .drag-container {
@@ -32,6 +44,7 @@
         width: 100%;
         height: auto;
         min-width: 250px;
+        min-height: 40px;
     }
 
     .dropbox .drag {
@@ -40,14 +53,42 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .aw {
         display: none;
     }
+
+    .input-text {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 3px;
+        width: 100%;
+        height: auto;
+        min-width: 80px;
+        min-height: 40px;
+    }
+
+    #caller-3 tr .col-3-500 {
+        width: 500px;
+        padding-left: 10px;
+    }
 </style>
 @php
+
+$caller_1 = new stdClass();
+$caller_1->e1 = new stdClass();
+$caller_1->e2 = new stdClass();
+$caller_1->e3 = new stdClass();
+$caller_1->e4 = new stdClass();
+$caller_1->e5 = new stdClass();
+
+$caller_1->e1->aw = "25 years";
+$caller_1->e2->aw = "Boring husband";
+$caller_1->e3->aw = "3";
+$caller_1->e4->aw = "Children grown-up";
+$caller_1->e5->aw = "Trave";
 
 @endphp
 <div class="row">
@@ -60,65 +101,25 @@
     </div>
     <div class="col-lg-12">
         <div class="card-box text-dark font-16">
-            <table>
+            <h5>Listen to the audio. You will hear four people talking about their recent divorces. As you
+                listen to the audio, complete the information table below: </h5>
+            <table class="w-100 table">
                 <tr>
-                    <td>1.</td>
-                    <td>
-                        You are going to hear two short talks about <b>two famous Australians</b>: <b>John Curtin</b>.
-                    </td>
+                    <th>NAME</th>
+                    <th>How long married?</th>
+                    <th>Reasons for divorce</th>
+                    <th>No. of children</th>
+                    <th>Custody of children</th>
+                    <th>Plans for future</th>
                 </tr>
                 <tr>
-                    <td>2.</td>
+                    <td>Lisa</td>
+                    @foreach($caller_1 as $index => $caller_1)
                     <td>
-                        What do you know about these two men, if anything?
-                        <br>
-                        Brainstorm around the group to find out as much as you can about them before you listen to
-                        the recordings.
+                        <input type="text" class="w-100 form-control q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}">
+                        <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
                     </td>
-                </tr>
-                <tr>
-                    <td>3.</td>
-                    <td>
-                        As you listen, focus primarily on the important events which happened during their lives.
-                        (the chronological sequence)
-                    </td>
-                </tr>
-                <tr>
-                    <td>4.</td>
-                    <td>
-                        Compare your notes with other people in the group.
-                        <br>
-                        Complete any gaps in your own notes.
-                    </td>
-                </tr>
-                <tr>
-                    <td>5.</td>
-                    <td>
-                        Write a short summary of the main events and achievements of each of the two men
-                        <b>(roughly 120 - 150 words each)</b>. Use the discourse markers which you learnt earlier
-                        in this course to give coherence to your summary.
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <h5 class="mt-3 aw text-success">John Curtin (possible answer)</h5>
-                        <span class="aw text-success">
-                            Born in New Zealand in 1929 to a religious family, Fred Hollows wanted to become a missionary but
-                            changed his mind and became an eye-specialist. In 1960 he got a job in Australia. In 1965 he became
-                            the head of the eye-department in a Sydney hospital. Fred was shocked by the number of Aborigines
-                            with eye problems and in 1970 helped launch a national program to improve this situation. His team
-                            treated over 30,000 people in three years. By 1980 Fred was helping people with eye problems abroad.
-                            He helped set up a lens factory in Eritrea. In 1989 Fred found out he was dying of cancer but continued
-                            his work. In 1993 he died surrounded by friends and family.
-                        </span>
-                    </td>
+                    @endforeach
                 </tr>
             </table>
         </div>
@@ -152,16 +153,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    // $('.q-caller-2').each((idx, item) => {
-    //     let text = $(item).html()
-    //     if (text == "...") {
-    //         let input = '<div class="input-con">' +
-    //             '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-    //             '</div>'
-    //         text = text.replace("...", input)
-    //         $(item).html(input)
-    //     }
-    // })
+    $('.q-caller-2').each((idx, item) => {
+        let text = $(item).html()
+        let new_text = $(item).html()
+        let aw = $(item).attr('aw').split("***")
+        console.log("text", text)
+        console.log("aw", aw)
+        for (let i = 0; i < text.split("...").length - 1; i++) {
+            let input = '<div class="input-con input-con2 caller_3 pb-1 "><input type="text" class="input-text caller_3" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
+                '<labal class="w-100 px-2 aw caller_3-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'
+            new_text = new_text.replace("...", input)
+        }
+        $('.q-caller-2-e' + (idx + 1)).html(new_text)
+    })
 
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
@@ -169,7 +173,10 @@
                 show_aw($(item).attr('show-aw'))
         })
         $('.q-text').each((idx, item) => {
-            console.log($(item).val().trim().toUpperCase())
+            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+                show_aw($(item).attr('show-aw'))
+        })
+        $('.q-check:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'))
         })
@@ -177,8 +184,13 @@
     })
 
     function show_aw(aw) {
+        console.log("aw", aw)
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function checkRadio(x) {
+        $('.' + x).prop("checked", true);
     }
 
 

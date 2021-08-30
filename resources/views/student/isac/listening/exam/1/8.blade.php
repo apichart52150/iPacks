@@ -8,6 +8,7 @@
     .input-con {
         display: inline-block;
         position: relative;
+        width: 100%;
     }
 
     .drag-container {
@@ -138,7 +139,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: directly</b>
-                                            <div class="dropbox q ml-2" show-aw="caller_2-1" aw="{{$caller_2->aw1}}"></div>
+                                            <div class="dropbox q ml-2 w-75" show-aw="caller_2-1" aw="{{$caller_2->aw1}}"></div>
                                         </div>
                                     </td>
                                 </tr>
@@ -155,7 +156,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: indirectly</b>
-                                            <div class="dropbox q ml-2" show-aw="caller_2-2" aw="{{$caller_2->aw2}}"></div>
+                                            <div class="dropbox q ml-2 w-75" show-aw="caller_2-2" aw="{{$caller_2->aw2}}"></div>
                                         </div>
                                     </td>
                                 </tr>
@@ -177,7 +178,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: </b>
-                                            <div class="dropbox q ml-2" show-aw="caller_2-3" aw="{{$caller_2->aw3}}"></div>
+                                            <div class="dropbox q ml-2 w-75" show-aw="caller_2-3" aw="{{$caller_2->aw3}}"></div>
                                         </div>
                                     </td>
                                 </tr>
@@ -199,7 +200,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: </b>
-                                            <div class="dropbox q ml-2" show-aw="caller_2-4" aw="{{$caller_2->aw4}}"></div>
+                                            <div class="dropbox q ml-2 w-75" show-aw="caller_2-4" aw="{{$caller_2->aw4}}"></div>
                                         </div>
                                     </td>
                                 </tr>
@@ -221,7 +222,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: </b>
-                                            <div class="dropbox q ml-2" show-aw="caller_2-5" aw="{{$caller_2->aw5}}"></div>
+                                            <div class="dropbox q ml-2 w-75" show-aw="caller_2-5" aw="{{$caller_2->aw5}}"></div>
                                         </div>
                                     </td>
                                 </tr>
@@ -243,7 +244,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: </b>
-                                            <div class="dropbox q ml-2" show-aw="caller_2-6" aw="{{$caller_2->aw6}}"></div>
+                                            <div class="dropbox q ml-2 w-75" show-aw="caller_2-6" aw="{{$caller_2->aw6}}"></div>
                                         </div>
                                     </td>
                                 </tr>

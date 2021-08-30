@@ -21,6 +21,7 @@
         display: inline-block;
         position: relative;
     }
+
     .input-con2 {
         width: 100px;
     }
@@ -138,25 +139,24 @@ $caller_2->e9->aw = "2.98";
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card-box text-dark font-16">
+            <h5>Listen to the information and complete the following chart about acid rain in Europe: </h5>
+            @foreach($caller_2 as $caller_2)
             <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
-                    <h5>Listen to the information and complete the following chart about acid rain in Europe: </h5>
-                        @foreach($caller_2 as $caller_2)
-                        <div class="row">
-                            <div class="py-1 col-md-4">
-                                <span class="pl-4">{{$caller_2->q}}.</span>
-                            </div>
-                            <div class="py-1 col-md-4">
-                                <input type="text" class="form-control caller_2" aw="{{$caller_2->aw}}" show-aw="caller_2-{{$caller_2->q}}" autocomplete="off">
-                            </div>
-                            <div class="py-1 col-md-4">
-                                <span class="pl-2 aw caller_2-{{$caller_2->q}} text-danger">{{$caller_2->aw}}</span>
-                            </div>
-                        </div>
-                        @endforeach
+                <div class="py-1 col-md-4">
+                    <span class="pl-4">{{$caller_2->q}}.</span>
+                </div>
+                <div class="py-1 col-md-4">
+                    <input type="text" class="form-control caller_2" aw="{{$caller_2->aw}}" show-aw="caller_2-{{$caller_2->q}}" autocomplete="off">
+                </div>
+                <div class="py-1 col-md-4">
+                    <span class="pl-2 aw caller_2-{{$caller_2->q}} text-danger">{{$caller_2->aw}}</span>
                 </div>
             </div>
+            @endforeach
         </div>
     </div>
 </div>

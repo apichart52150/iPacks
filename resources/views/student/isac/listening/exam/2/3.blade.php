@@ -21,6 +21,7 @@
         display: inline-block;
         position: relative;
     }
+
     .input-con2 {
         width: 100px;
     }
@@ -124,15 +125,15 @@ $caller_3->e5->aw = "28;***90%;***12;***50%;***three-quarters;***$80";
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
-                    <h5>Listen to the tape and complete the following sentences: </h5>
-                        @foreach($caller_3 as $index => $caller_3)
-                        <p class="pr-3 q-caller-3 q-caller-3-{{$index}}" q="caller-3-{{$index}}" aw="{{$caller_3->aw}}">{{$caller_3->q}}</p>
-                        @endforeach
-                </div>
-            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card-box text-dark font-16">
+            <h5>Listen to the tape and complete the following sentences: </h5>
+            @foreach($caller_3 as $index => $caller_3)
+            <p class="pr-3 q-caller-3 q-caller-3-{{$index}}" q="caller-3-{{$index}}" aw="{{$caller_3->aw}}">{{$caller_3->q}}</p>
+            @endforeach
         </div>
     </div>
 </div>

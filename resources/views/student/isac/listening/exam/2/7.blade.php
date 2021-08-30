@@ -141,9 +141,10 @@ $caller_4_choice->e14 = "..a strong possibility..";
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-            <div class="row">
+        </div>
+    </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
+        <div class="card-box text-dark font-16">
                     <h5>Listen to the interview about the forthcoming Federal Budget. As you listen, decide on the
 degree of probability expressed by the person being interviewed. You can use the words or give
 the percentages to express this degree of probability: </h5>
@@ -215,9 +216,7 @@ the percentages to express this degree of probability: </h5>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+                </div>
 </div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">

@@ -21,6 +21,7 @@
         display: inline-block;
         position: relative;
     }
+
     .input-con2 {
         width: 100px;
     }
@@ -127,35 +128,34 @@ $caller_4->e6->aw = ["114%","79%"];
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
-                    <h5>Listen to the tape and then complete the table below: </h5>
-                        <table>
-                            <tr class="text-center">
-                                <td></td>
-                                <td>Australia</td>
-                                <td></td>
-                                <td>PNG</td>
-                                <td></td>
-                            </tr>
-                            @foreach($caller_4 as $index => $caller_4)
-                            <tr>
-                                <td class="pr-3">{{$caller_4->q}}</td>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card-box text-dark font-16">
+            <h5>Listen to the tape and then complete the table below: </h5>
+            <table>
+                <tr class="text-center">
+                    <td></td>
+                    <td>Australia</td>
+                    <td></td>
+                    <td>PNG</td>
+                    <td></td>
+                </tr>
+                @foreach($caller_4 as $index => $caller_4)
+                <tr>
+                    <td class="pr-3">{{$caller_4->q}}</td>
 
-                                @foreach($caller_4->aw as $index2 => $aw)
-                                <td>
-                                    <input type="text" class="form-control caller_4" aw="{{$aw}}" show-aw="caller_4-{{$index}}-{{$index2}}" autocomplete="off">
-                                </td>
-                                <td>
-                                    <span class="pl-2 px-0 aw caller_4-{{$index}}-{{$index2}} text-danger">{{$aw}}</span>
-                                </td>
-                                @endforeach
-                            </tr>
-                            @endforeach
-                        </table>
-                </div>
-            </div>
+                    @foreach($caller_4->aw as $index2 => $aw)
+                    <td>
+                        <input type="text" class="form-control caller_4" aw="{{$aw}}" show-aw="caller_4-{{$index}}-{{$index2}}" autocomplete="off">
+                    </td>
+                    <td>
+                        <span class="pl-2 px-0 aw caller_4-{{$index}}-{{$index2}} text-danger">{{$aw}}</span>
+                    </td>
+                    @endforeach
+                </tr>
+                @endforeach
+            </table>
         </div>
     </div>
 </div>

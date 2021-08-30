@@ -92,40 +92,39 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
-                    <table class="w-100">
-                        <tr>
-                            <td colspan="2">Listen to the sentences.
-                                <br>
-                                They are not complete (how do you know this, just by listening?).
-                                <br>
-                                Complete the sentences with suitable endings, depending on the speech markers contained in each sentence.
-                                <br><br>
-                                e.g. The Silver Spur is heavier than the Silver Ghost. The former weighs two and a half tonnes whereas
-                                the latter weighs only two tonnes. (or any weight less than two and a half tonnes.)
-                            </td>
-                        </tr>
-                        @foreach($caller_2 as $caller_2)
-                        <tr>
-                            <td>{{$caller_2->n}}</td>
-                            <td>{{$caller_2->q}}</td>
-                        </tr>
-                        <tr>
-                            <td><b>Answer: </b></td>
-                            <td>
-                                <input type="text" class="w-100">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="aw text-success"><b>Possible answers: </b></td>
-                            <td class="aw text-success">{{$caller_2->aw}}</td>
-                        </tr>
-                        @endforeach
-                    </table>
-                </div>
-            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card-box text-dark font-16">
+            <table class="w-100">
+                <tr>
+                    <td colspan="2">Listen to the sentences.
+                        <br>
+                        They are not complete (how do you know this, just by listening?).
+                        <br>
+                        Complete the sentences with suitable endings, depending on the speech markers contained in each sentence.
+                        <br><br>
+                        e.g. The Silver Spur is heavier than the Silver Ghost. The former weighs two and a half tonnes whereas
+                        the latter weighs only two tonnes. (or any weight less than two and a half tonnes.)
+                    </td>
+                </tr>
+                @foreach($caller_2 as $caller_2)
+                <tr>
+                    <td>{{$caller_2->n}}</td>
+                    <td>{{$caller_2->q}}</td>
+                </tr>
+                <tr>
+                    <td><b>Answer: </b></td>
+                    <td>
+                        <input type="text" class="w-100">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="aw text-success"><b>Possible answers: </b></td>
+                    <td class="aw text-success">{{$caller_2->aw}}</td>
+                </tr>
+                @endforeach
+            </table>
         </div>
     </div>
 </div>

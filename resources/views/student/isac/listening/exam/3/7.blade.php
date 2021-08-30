@@ -43,7 +43,7 @@
         padding: 3px;
         width: 100%;
         height: auto;
-        min-width: 250px;
+        min-width: 80px;
         min-height: 40px;
     }
 
@@ -57,7 +57,7 @@
     }
 
     .grid-5-2 {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .aw {
@@ -501,161 +501,149 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
-                    <span>
-                        Do this exercise before you listen to the tape. Match the following words with their meanings:
-                    </span>
-                    <div class="row justify-content-center mb-2">
-                        <div class="col-md-12">
-                            <div class="border border-dark px-2 text-center">
-                                <div class="drag-container">
-                                    <div class="d-grid grid-5" id="choices">
-                                        @foreach($caller_1_choice as $choice)
-                                        <div class="drag">{{$choice}}</div>
-                                        @endforeach
-                                    </div>
-                                </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card-box text-dark font-16">
+            <span>
+                Do this exercise before you listen to the tape. Match the following words with their meanings:
+            </span>
+            <table class="w-100 mb-3">
+                @foreach($caller_1 as $index => $caller_1)
+                <tr>
+                    <td class="">{{$caller_1->n}}. {{$caller_1->q}}</td>
+                    <td class="px-4">=</td>
+                    <td>
+                        <select class="form-select q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}" aria-label="Default select example">
+                            <option value="...">...</option>
+                            @foreach($caller_1_choice as $choice)
+                            <option value="{{$choice}}">{{$choice}}</option>
+                            @endforeach
+                        </select>
+                        <br>
+                        <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
+                    </td>
+                </tr>
+                @endforeach
+            </table>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card-box text-dark font-16">
+            <div class="row justify-content-center mb-2">
+                <div class="col-md-12">
+                    <div class="border border-dark px-2 text-center">
+                        <div class="drag-container">
+                            <div class="d-grid grid-5-2" id="choices">
+                                @foreach($caller_2_choice as $choice)
+                                <div class="drag">{{$choice}}</div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-center mb-2">
-                        <div class="col-md-12">
-                            <table class=" w-50 mb-3">
-                                @foreach($caller_1 as $index => $caller_1)
-                                <tr>
-                                    <td class="pl-5" style="width: 200px;">{{$caller_1->n}}. {{$caller_1->q}}</td>
-                                    <td>=</td>
-                                    <td>
-                                        <div class="input-con">
-                                            <div class="dropbox q" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}"></div>
-                                        </div>
-                                        <br>
-                                        <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </table>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 2</h4>
-                    <div class="row justify-content-center mb-2">
-                        <div class="col-md-12">
-                            <div class="border border-dark px-2 text-center">
-                                <div class="drag-container">
-                                    <div class="d-grid grid-5-2" id="choices">
-                                        @foreach($caller_2_choice as $choice)
-                                        <div class="drag">{{$choice}}</div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center mb-2">
-                        <div class="col-md-12">
-                            <table class="table w-100 mb-3">
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Nationality</th>
-                                    <th>Crime</th>
-                                    <th>Punishment</th>
-                                    <th>Died</th>
-                                </tr>
-                                @foreach($caller_2 as $index => $caller_2)
-                                <tr>
-                                    @foreach($caller_2->col as $index2 => $col)
-                                    @if($col->q == "...")
-                                    <td class="q-caller_2 q-caller_2-{{$index}}-{{$index2}}" replece="q-caller_2-{{$index}}-{{$index2}}" show-aw="caller_2-{{$index}}-{{$index2}}" aw="{{$col->aw}}">{{$col->q}}</td>
-                                    @else
-                                    <td>{{$col->q}}</td>
-                                    @endif
-                                    @endforeach
-                                </tr>
-                                @endforeach
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 3</h4>
-                    <table class="w-100">
+            </div>
+            <div class="row justify-content-center mb-2">
+                <div class="col-md-12">
+                    <table class="table w-100 mb-3">
                         <tr>
-                            <td colspan="4">
-                                <h5>
-                                    True or False?
-                                    <br>
-                                    If a sentence is false, say why it is false.
-                                </h5>
-                            </td>
+                            <th>Name</th>
+                            <th>Nationality</th>
+                            <th>Crime</th>
+                            <th>Punishment</th>
+                            <th>Died</th>
                         </tr>
-                        @foreach($caller_3 as $index => $caller_3)
+                        @foreach($caller_2 as $index => $caller_2)
                         <tr>
-                            <td style="width: 25px;">{{$caller_3->n}}.</td>
-                            <td colspan="3">{{$caller_3->q}}</td>
-                        </tr>
-
-                        @foreach($caller_3_choice as $index2 => $choice)
-                        <tr>
-                            <td></td>
-                            <td style="width: 1px;">
-                                <div class="form-check">
-                                    <input class="form-check-input position-static q-check-input caller_3-{{$index}}-{{$index2}}" text="caller_3-input-{{$index}}-{{$index2}}" type="radio" name="caller_3-{{$index}}" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}" value="{{$choice}}">
-                                </div>
-                            </td>
-                            <td style="width: 100px;" onclick="checkRadio('caller_3-{{$index}}-{{$index2}}')">
-                                {{$index2}}. {{$choice}}
-                            </td>
-                            <td>
-                                @if($choice == "False")
-                                <input type="text" class="caller_3-input-{{$index}}-{{$index2}}">
-                                @endif
-                            </td>
-                        </tr>
-                        @endforeach
-
-                        <tr class="aw">
-                            <td></td>
-                            <td colspan="3" class=" caller_3-{{$index}} text-danger">{{$caller_3->aw}}</td>
-                        </tr>
-                        @endforeach
-                    </table>
-                </div>
-                <div class="col-lg-12">
-                <h4 class="font-italic m-0 pt-3">Caller 4</h4>
-                <table class="w-100">
-                        <tr>
-                            <td colspan="3">
-                                <h5>Choose the best answer from the given options.</h5>
-                            </td>
-                        </tr>
-                        @foreach($caller_4 as $index => $caller_4_1)
-                        <tr>
-                            <td style="width: 25px;">{{$caller_4_1->n}}.</td>
-                            <td colspan="2">{{$caller_4_1->q}}</td>
-                        </tr>
-                        @foreach($caller_4_1->choice as $index2 => $caller_4_2)
-                        <tr>
-                            <td></td>
-                            <td style="width: 20px;">
-                                <div class="form-check">
-                                    <input class="form-check-input position-static q-check caller_4-{{$index}}-{{$index2}}" type="radio" name="caller_4-{{$index}}" show-aw="caller_4-{{$index}}" aw="{{$caller_4_1->aw}}" value="{{$caller_4_2}}">
-                                </div>
-                            </td>
-                            <td onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$caller_4_2}}</td>
-                        </tr>
-                        @endforeach
-                        <tr class="aw">
-                            <td></td>
-                            <td colspan="2" class="aw caller_4-{{$index}} text-danger">{{$caller_4_1->aw}}</td>
+                            @foreach($caller_2->col as $index2 => $col)
+                            @if($col->q == "...")
+                            <td class="q-caller_2 q-caller_2-{{$index}}-{{$index2}}" replece="q-caller_2-{{$index}}-{{$index2}}" show-aw="caller_2-{{$index}}-{{$index2}}" aw="{{$col->aw}}">{{$col->q}}</td>
+                            @else
+                            <td>{{$col->q}}</td>
+                            @endif
+                            @endforeach
                         </tr>
                         @endforeach
                     </table>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card-box text-dark font-16">
+            <table class="w-100">
+                <tr>
+                    <td colspan="4">
+                        <h5>
+                            True or False?
+                            <br>
+                            If a sentence is false, say why it is false.
+                        </h5>
+                    </td>
+                </tr>
+                @foreach($caller_3 as $index => $caller_3)
+                <tr>
+                    <td style="width: 25px;">{{$caller_3->n}}.</td>
+                    <td colspan="3">{{$caller_3->q}}</td>
+                </tr>
+
+                @foreach($caller_3_choice as $index2 => $choice)
+                <tr>
+                    <td></td>
+                    <td style="width: 1px;">
+                        <div class="form-check">
+                            <input class="form-check-input position-static q-check-input caller_3-{{$index}}-{{$index2}}" text="caller_3-input-{{$index}}-{{$index2}}" type="radio" name="caller_3-{{$index}}" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}" value="{{$choice}}">
+                        </div>
+                    </td>
+                    <td style="width: 100px;" onclick="checkRadio('caller_3-{{$index}}-{{$index2}}')">
+                        {{$index2}}. {{$choice}}
+                    </td>
+                    <td>
+                        @if($choice == "False")
+                        <input type="text" class="caller_3-input-{{$index}}-{{$index2}}">
+                        @endif
+                    </td>
+                </tr>
+                @endforeach
+
+                <tr class="aw">
+                    <td></td>
+                    <td colspan="3" class=" caller_3-{{$index}} text-danger">{{$caller_3->aw}}</td>
+                </tr>
+                @endforeach
+            </table>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card-box text-dark font-16">
+            <table class="w-100">
+                <tr>
+                    <td colspan="3">
+                        <h5>Choose the best answer from the given options.</h5>
+                    </td>
+                </tr>
+                @foreach($caller_4 as $index => $caller_4_1)
+                <tr>
+                    <td style="width: 25px;">{{$caller_4_1->n}}.</td>
+                    <td colspan="2">{{$caller_4_1->q}}</td>
+                </tr>
+                @foreach($caller_4_1->choice as $index2 => $caller_4_2)
+                <tr>
+                    <td></td>
+                    <td style="width: 20px;">
+                        <div class="form-check">
+                            <input class="form-check-input position-static q-check caller_4-{{$index}}-{{$index2}}" type="radio" name="caller_4-{{$index}}" show-aw="caller_4-{{$index}}" aw="{{$caller_4_1->aw}}" value="{{$caller_4_2}}">
+                        </div>
+                    </td>
+                    <td onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$caller_4_2}}</td>
+                </tr>
+                @endforeach
+                <tr class="aw">
+                    <td></td>
+                    <td colspan="2" class="aw caller_4-{{$index}} text-danger">{{$caller_4_1->aw}}</td>
+                </tr>
+                @endforeach
+            </table>
         </div>
     </div>
 </div>
@@ -688,8 +676,8 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
 
 <script>
     $('.q-caller_2').each((idx, item) => {
-        let input = '<div class="input-con py-1">' +
-            '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
+        let input = '<div class="input-con w-100 py-1">' +
+            '<div class="dropbox q w-100" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
             '</div><br>' +
             '<span class="aw ' + $(item).attr('show-aw') + ' text-danger">' + $(item).attr('aw') + '</span>'
         $(item).html(input)

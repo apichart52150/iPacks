@@ -70,46 +70,45 @@ $caller_4_A->e5->aw = "Aboriginal";
             <p class="lead">
                 {{$pageTitle['sub_menu_name']}}
             </p>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 4</h4>
-                    <h5>A. You are going to listen to a short talk about the population of Australia. As you listen, try to find the answers to the following questions:</h5>
-                    <table class="w-100 mb-3">
-                        @foreach($caller_4_A as $index => $caller_4_A)
-                        <tr>
-                            <td class="border-dark p-2">{{$caller_4_A->q}}</td>
-                        </tr>
-                        <tr>
-                            <td class="border-dark p-2">
-                                <b>Answer: </b>
-                                <div class="input-con w-75">
-                                    <input type="text" class="q-text w-100" show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="aw caller_4_A-{{$index}} text-danger">
-                                <span class="pl-5">{{$caller_4_A->aw}}</span>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </table>
-                    <h5 class="mt-3">B. Listen to the talk again and take notes using the conventions available to you. </h5>
-                    <!-- <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea> -->
-                    <h5 class="mt-3">C. Write a short summary of the talk, using your own words as far as possible. The summary should be between 80 - 100 words. </h5>
-                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
-                    <h5 class="mt-3 aw text-success">D. Summary (possible answer) </h5>
-                    <span class="aw text-success">
-                        The population of Australia is now eighteen million, consisting of over one hundred different
-                        nationalities. In the past most migrants came from English speaking countries but nowadays most
-                        migrants do not have English as their first language. This change of focus has resulted in other changes
-                        in food, traditions and attitudes to learning foreign languages. In the past Australians chose not to learn
-                        a foreign language but nowadays many people are learning foreign languages. The most common
-                        languages in Australia are English, Italian, Greek and Chinese. Each state has a different second
-                        language focus.
-                    </span>
-                </div>
-            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="card-box text-dark font-16">
+            <h5>A. You are going to listen to a short talk about the population of Australia. As you listen, try to find the answers to the following questions:</h5>
+            <table class="w-100 mb-3">
+                @foreach($caller_4_A as $index => $caller_4_A)
+                <tr>
+                    <td class="border-dark p-2">{{$caller_4_A->q}}</td>
+                </tr>
+                <tr>
+                    <td class="border-dark p-2">
+                        <b>Answer: </b>
+                        <div class="input-con w-75">
+                            <input type="text" class="q-text w-100" show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="aw caller_4_A-{{$index}} text-danger">
+                        <span class="pl-5">{{$caller_4_A->aw}}</span>
+                    </td>
+                </tr>
+                @endforeach
+            </table>
+            <h5 class="mt-3">B. Listen to the talk again and take notes using the conventions available to you. </h5>
+            <!-- <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea> -->
+            <h5 class="mt-3">C. Write a short summary of the talk, using your own words as far as possible. The summary should be between 80 - 100 words. </h5>
+            <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+            <h5 class="mt-3 aw text-success">D. Summary (possible answer) </h5>
+            <span class="aw text-success">
+                The population of Australia is now eighteen million, consisting of over one hundred different
+                nationalities. In the past most migrants came from English speaking countries but nowadays most
+                migrants do not have English as their first language. This change of focus has resulted in other changes
+                in food, traditions and attitudes to learning foreign languages. In the past Australians chose not to learn
+                a foreign language but nowadays many people are learning foreign languages. The most common
+                languages in Australia are English, Italian, Greek and Chinese. Each state has a different second
+                language focus.
+            </span>
         </div>
     </div>
 </div>
