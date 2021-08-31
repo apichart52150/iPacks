@@ -513,15 +513,18 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
                             <td class="">{{$caller_1->n}}. {{$caller_1->q}}</td>
                             <td class="px-4">=</td>
                             <td>
-                                <select class="form-select q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}" aria-label="Default select example">
+                                <select class="form-select form-control q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}" aria-label="Default select example">
                                     <option value="...">...</option>
                                     @foreach($caller_1_choice as $choice)
                                     <option value="{{$choice}}">{{$choice}}</option>
                                     @endforeach
                                 </select>
-                                <br>
-                                <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
                             </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span></td>
                         </tr>
                         @endforeach
                     </table>
@@ -661,8 +664,8 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')

@@ -281,7 +281,7 @@
     </div>
     
     @section('button-control')
-        <button id="check-answer" class="btn btn-info">Check Answersss</button>
+        <button id="check-answer" class="btn btn-info">Check Answers</button>
     @endsection
     
     @section('js')

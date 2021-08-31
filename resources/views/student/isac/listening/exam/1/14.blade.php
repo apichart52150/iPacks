@@ -360,7 +360,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                     </span>
                     <div class="w-100 d-flex justify-content-center">
                         <table class="w-50 mb-3">
-                            <tr>
+                            <tr class="text-center">
                                 <th class="py-2">List A</th>
                                 <td class="py-2"></td>
                                 <th class="py-2">List B</th>
@@ -368,9 +368,9 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             @foreach($caller_1 as $index => $caller_1)
                             <tr>
                                 <td class="pl-4" style="width: 200px;">{{$caller_1->q}}</td>
-                                <td>=</td>
+                                <td class="px-3">=</td>
                                 <td>
-                                    <select class="form-select q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}" aria-label="Default select example">
+                                    <select class="form-select form-control q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}" aria-label="Default select example">
                                         <option value="...">...</option>
                                         @foreach($caller_1_choice as $choice)
                                         <option value="{{$choice}}">{{$choice}}</option>
@@ -702,8 +702,8 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
