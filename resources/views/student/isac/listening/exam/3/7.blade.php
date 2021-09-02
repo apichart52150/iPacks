@@ -78,6 +78,9 @@
         width: 500px;
         padding-left: 10px;
     }
+    .event-click {
+        cursor: pointer;
+    }
 </style>
 @php
 
@@ -590,15 +593,15 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
                             <td></td>
                             <td style="width: 1px;">
                                 <div class="form-check">
-                                    <input class="form-check-input position-static q-check-input caller_3-{{$index}}-{{$index2}}" text="caller_3-input-{{$index}}-{{$index2}}" type="radio" name="caller_3-{{$index}}" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}" value="{{$choice}}">
+                                    <input class="form-check-input event-click position-static q-check-input caller_3-{{$index}}-{{$index2}}" text="caller_3-input-{{$index}}-{{$index2}}" type="radio" name="caller_3-{{$index}}" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}" value="{{$choice}}">
                                 </div>
                             </td>
-                            <td style="width: 100px;" onclick="checkRadio('caller_3-{{$index}}-{{$index2}}')">
-                                {{$index2}}. {{$choice}}
+                            <td style="width: 100px;">
+                                <span class="event-click" onclick="checkRadio('caller_3-{{$index}}-{{$index2}}')">{{$index2}}. {{$choice}}</span>
                             </td>
                             <td>
                                 @if($choice == "False")
-                                <input type="text" class="caller_3-input-{{$index}}-{{$index2}}">
+                                <input type="text" class="form-control w-75 caller_3-input-{{$index}}-{{$index2}}">
                                 @endif
                             </td>
                         </tr>
@@ -611,7 +614,7 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
                         @endforeach
                     </table>
                 </div>
-                <div class="col-lg-12">
+                <div class="mt-4 col-lg-12">
                     <table class="w-100">
                         <tr>
                             <td colspan="3">
@@ -628,10 +631,12 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
                             <td></td>
                             <td style="width: 20px;">
                                 <div class="form-check">
-                                    <input class="form-check-input position-static q-check caller_4-{{$index}}-{{$index2}}" type="radio" name="caller_4-{{$index}}" show-aw="caller_4-{{$index}}" aw="{{$caller_4_1->aw}}" value="{{$caller_4_2}}">
+                                    <input class="form-check-input event-click position-static q-check caller_4-{{$index}}-{{$index2}}" type="radio" name="caller_4-{{$index}}" show-aw="caller_4-{{$index}}" aw="{{$caller_4_1->aw}}" value="{{$caller_4_2}}">
                                 </div>
                             </td>
-                            <td onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$caller_4_2}}</td>
+                            <td>
+                                <span  class="event-click" onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$caller_4_2}}</span>
+                            </td>
                         </tr>
                         @endforeach
                         <tr class="aw">
@@ -684,15 +689,21 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check-input:checked').each((idx, item) => {
             let aw = ""
@@ -701,15 +712,21 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
             else
                 aw = $(item).val()
             if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
-        console.log("aw", aw)
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

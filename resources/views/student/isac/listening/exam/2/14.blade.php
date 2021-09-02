@@ -157,15 +157,15 @@ $caller_2->e12->n = "12";
 $caller_2->e1->aw = "This is thought to be the result of brighter prospects for the Korean economy as a whole";
 $caller_2->e2->aw = "Share market confidence is believed to have been fuelled by Wall Street's massive gains";
 $caller_2->e3->aw = "The Bank of England is believed to be considering dropping its prime lending rate";
-$caller_2->e4->aw = "and the U.S. is expected to announce a one-percent cut in rates later this week.";
+$caller_2->e4->aw = "and the U.S. is expected to announce a one-percent cut in rates later this week";
 $caller_2->e5->aw = "The region's share markets are also expected to follow suit";
 $caller_2->e6->aw = "The global resurgence of gold is expected to continue";
 $caller_2->e7->aw = "This trend is expected to continue with the creation of jobs";
 $caller_2->e8->aw = "Work on the submarines is expected to get under way later this month";
-$caller_2->e9->aw = "However, criminal charges are not expected to be made against the trader.";
-$caller_2->e10->aw = "the new version is expected to cost around $16,000.";
-$caller_2->e11->aw = "And the cold spell....is expected to continue for the next few days.";
-$caller_2->e12->aw = "and two people are believed to have been drowned by the worst weather in over a decade.";
+$caller_2->e9->aw = "However, criminal charges are not expected to be made against the trader";
+$caller_2->e10->aw = "the new version is expected to cost around $16,000";
+$caller_2->e11->aw = "And the cold spell....is expected to continue for the next few days";
+$caller_2->e12->aw = "and two people are believed to have been drowned by the worst weather in over a decade";
 
 @endphp
 <div class="row">
@@ -207,8 +207,8 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
                                             <tr>
                                                 <td>{{$caller_1_1->q}}</td>
                                                 <td>
-                                                    <div class="input-con w-100">
-                                                        <div class="dropbox w-75 q" show-aw="caller_1_1-{{$index}}" aw="{{$caller_1_1->aw}}"></div>
+                                                    <div class="input-con w-75">
+                                                        <div class="dropbox w-100 q" show-aw="caller_1_1-{{$index}}" aw="{{$caller_1_1->aw}}"></div>
                                                     </div>
                                                     <br>
                                                     <span class=" aw text-danger caller_1_1-{{$index}}">{{$caller_1_1->aw}}</span>
@@ -226,8 +226,8 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
                                             <tr>
                                                 <td>{{$caller_1_2->q}}</td>
                                                 <td>
-                                                    <div class="input-con">
-                                                        <div class="dropbox q" show-aw="caller_1_2-{{$index}}" aw="{{$caller_1_2->aw}}"></div>
+                                                    <div class="input-con w-75">
+                                                        <div class="dropbox q w-100" show-aw="caller_1_2-{{$index}}" aw="{{$caller_1_2->aw}}"></div>
                                                     </div>
                                                     <br>
                                                     <span class="aw text-danger caller_1_2-{{$index}}">{{$caller_1_2->aw}}</span>
@@ -251,7 +251,15 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
                             <td></td>
                             <td>
                                 <span>{{$caller_2->n}}.</span>
-                                <input type="text" class="w-75" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
+                                <div class="input-con w-75">
+                                    <input type="text" class="w-100 form-control q-text" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <span class="aw text-danger caller_2-{{$index}}">{{$caller_2->aw}}</span>
                             </td>
                         </tr>
                         @endforeach
@@ -262,7 +270,7 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
                         </tr>
                         <tr>
                             <td></td>
-                            <td><textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
+                            <td><textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -344,19 +352,27 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
-        console.log("aw", aw)
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

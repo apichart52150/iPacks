@@ -96,7 +96,7 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
                 <div class="col-lg-12">
                     <table class="w-100">
                         <tr>
-                            <td colspan="2">Listen to the sentences.
+                            <td colspan="3">Listen to the sentences.
                                 <br>
                                 They are not complete (how do you know this, just by listening?).
                                 <br>
@@ -108,18 +108,19 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
                         </tr>
                         @foreach($caller_2 as $caller_2)
                         <tr>
-                            <td>{{$caller_2->n}}</td>
-                            <td>{{$caller_2->q}}</td>
+                            <td style="width: 20px;">{{$caller_2->n}}</td>
+                            <td colspan="2">{{$caller_2->q}}</td>
                         </tr>
                         <tr>
-                            <td><b>Answer: </b></td>
+                            <td></td>
+                            <td style="width: 80px;"><b>Answer: </b></td>
                             <td>
-                                <input type="text" class="w-100">
+                                <input type="text" class="form-control w-75">
                             </td>
                         </tr>
                         <tr>
-                            <td class="aw text-success"><b>Possible answers: </b></td>
-                            <td class="aw text-success">{{$caller_2->aw}}</td>
+                            <td></td>
+                            <td colspan="2" class="aw text-success"><b>Possible answers:</b> {{$caller_2->aw}}</td>
                         </tr>
                         @endforeach
                     </table>
@@ -170,18 +171,27 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
 

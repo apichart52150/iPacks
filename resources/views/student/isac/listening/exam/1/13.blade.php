@@ -174,8 +174,8 @@ $caller_3->e10->aw = "The fine weather is expected to continue for the next few 
                                     <td></td>
                                     <td style="width: 80px;"><b>Answer: </b></td>
                                     <td class="border-dark">
-                                        <div class="input-con">
-                                            <div class="dropbox q" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}"></div>
+                                        <div class="input-con w-75">
+                                            <div class="dropbox q w-100" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}"></div>
                                         </div>
                                     </td>
                                 </tr>
@@ -209,7 +209,7 @@ $caller_3->e10->aw = "The fine weather is expected to continue for the next few 
                         <tr>
                             <td>{{$caller_3->n}}.</td>
                             <td>
-                                <input type="text" class="q-text w-75" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}">
+                                <input type="text" class="form-control q-text w-75" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}">
                             </td>
                         </tr>
                         <tr>
@@ -221,7 +221,7 @@ $caller_3->e10->aw = "The fine weather is expected to continue for the next few 
                 </div>
                 <div class="col-lg-12">
                     <h5>As you listen again, make notes and write a short report about one of the news items.</h5>
-                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                    <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                 </div>
             </div>
         </div>
@@ -258,19 +258,28 @@ $caller_3->e10->aw = "The fine weather is expected to continue for the next few 
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             console.log($(item).val().trim().toUpperCase())
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
 

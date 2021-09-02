@@ -96,17 +96,17 @@ $E1_1_5->e3->n = "3";
 $E1_1_5->e4->n = "4";
 $E1_1_5->e5->n = "5";
 
-$E1_1_5->e1->q = "";
-$E1_1_5->e2->q = "";
-$E1_1_5->e3->q = "";
-$E1_1_5->e4->q = "";
-$E1_1_5->e5->q = "";
+$E1_1_5->e1->q = "Who lives in a large house?";
+$E1_1_5->e2->q = "Who doesn’t go to school?";
+$E1_1_5->e3->q = "Who works at the weekend?";
+$E1_1_5->e4->q = "Who doesn’t help their father at work?";
+$E1_1_5->e5->q = "Who has a younger brother?";
 
-$E1_1_5->e1->aw = "";
-$E1_1_5->e2->aw = "";
-$E1_1_5->e3->aw = "";
-$E1_1_5->e4->aw = "";
-$E1_1_5->e5->aw = "";
+$E1_1_5->e1->aw = "C. Victoria";
+$E1_1_5->e2->aw = "C. Victoria";
+$E1_1_5->e3->aw = "B. Yoshi";
+$E1_1_5->e4->aw = "A. Kah Wai";
+$E1_1_5->e5->aw = "B. Yoshi";
 
 $E1_1_5->e1->choice = new stdClass();
 $E1_1_5->e2->choice = new stdClass();
@@ -114,21 +114,21 @@ $E1_1_5->e3->choice = new stdClass();
 $E1_1_5->e4->choice = new stdClass();
 $E1_1_5->e5->choice = new stdClass();
 
-$E1_1_5->e1->choice->a = "A. ";
-$E1_1_5->e1->choice->b = "B. ";
-$E1_1_5->e1->choice->c = "C. ";
-$E1_1_5->e2->choice->a = "A. ";
-$E1_1_5->e2->choice->b = "B. ";
-$E1_1_5->e2->choice->c = "C. ";
-$E1_1_5->e3->choice->a = "A. ";
-$E1_1_5->e3->choice->b = "B. ";
-$E1_1_5->e3->choice->c = "C. ";
-$E1_1_5->e4->choice->a = "A. ";
-$E1_1_5->e4->choice->b = "B. ";
-$E1_1_5->e4->choice->c = "C. ";
-$E1_1_5->e5->choice->a = "A. ";
-$E1_1_5->e5->choice->b = "B. ";
-$E1_1_5->e5->choice->c = "C. ";
+$E1_1_5->e1->choice->a = "A. Kah Wai";
+$E1_1_5->e1->choice->b = "B. Yoshi";
+$E1_1_5->e1->choice->c = "C. Victoria";
+$E1_1_5->e2->choice->a = "A. Kah Wai";
+$E1_1_5->e2->choice->b = "B. Yoshi";
+$E1_1_5->e2->choice->c = "C. Victoria";
+$E1_1_5->e3->choice->a = "A. Kah Wai";
+$E1_1_5->e3->choice->b = "B. Yoshi";
+$E1_1_5->e3->choice->c = "C. Victoria";
+$E1_1_5->e4->choice->a = "A. Kah Wai";
+$E1_1_5->e4->choice->b = "B. Yoshi";
+$E1_1_5->e4->choice->c = "C. Victoria";
+$E1_1_5->e5->choice->a = "A. Kah Wai";
+$E1_1_5->e5->choice->b = "B. Yoshi";
+$E1_1_5->e5->choice->c = "C. Victoria";
 
 $E2_1_5 = new stdClass();
 $E2_1_5->e1 = new stdClass();
@@ -143,17 +143,17 @@ $E2_1_5->e3->n = "3";
 $E2_1_5->e4->n = "4";
 $E2_1_5->e5->n = "5";
 
-$E2_1_5->e1->q = "";
-$E2_1_5->e2->q = "";
-$E2_1_5->e3->q = "";
-$E2_1_5->e4->q = "";
-$E2_1_5->e5->q = "";
+$E2_1_5->e1->q = "How many people live in Kah Wai’s apartment?";
+$E2_1_5->e2->q = "What is Kah Wai’s hobby?";
+$E2_1_5->e3->q = "What does Yoshi want to do when he leaves school?";
+$E2_1_5->e4->q = "Who helps Victoria with her studies?";
+$E2_1_5->e5->q = "How does Victoria travel around the farm?";
 
-$E2_1_5->e1->aw = "";
-$E2_1_5->e2->aw = "";
-$E2_1_5->e3->aw = "";
-$E2_1_5->e4->aw = "";
-$E2_1_5->e5->aw = "";
+$E2_1_5->e1->aw = "seven";
+$E2_1_5->e2->aw = "basketball";
+$E2_1_5->e3->aw = "go to university / become a businessman";
+$E2_1_5->e4->aw = "her mother";
+$E2_1_5->e5->aw = "by horse";
 
 @endphp
 <div class="row">
@@ -205,7 +205,11 @@ $E2_1_5->e5->aw = "";
                                 <td>
                                     <b>Answer: </b>
                                     <div class="input-con w-75">
-                                        <input type="text" class="q-val form-control w-100" show-aw="E2_1_5-{{$index}}" aw="{{$E2_1_5->aw}}"></div>
+                                        @if($E2_1_5->n == "3")
+                                        <input type="text" class="q-val2 form-control w-100" show-aw="E2_1_5-{{$index}}" aw="{{$E2_1_5->aw}}">
+                                        @else
+                                        <input type="text" class="q-val form-control w-100" show-aw="E2_1_5-{{$index}}" aw="{{$E2_1_5->aw}}">
+                                        @endif
                                     </div>
                                 </td>
                             </tr>
@@ -249,15 +253,34 @@ $E2_1_5->e5->aw = "";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-
     $('#check-answer').on('click', () => {
+        $('.q-val2').each((idx, item) => {
+            let aw = $(item).attr('aw').split("/")
+            let aw2 = $(item).val().split("/")
+            let count_aw = 0
+            for (let i = 0; i < aw2.length; i++) {
+                var results = aw.filter(function(elem) {
+                    return elem.trim().toUpperCase() == aw2[i].trim().toUpperCase();
+                })
+                if (results.length > 0)
+                    count_aw++
+            }
+            if (count_aw >= 1)
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
+        })
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check-input:checked').each((idx, item) => {
             let aw = ""
@@ -266,14 +289,21 @@ $E2_1_5->e5->aw = "";
             else
                 aw = $(item).val()
             if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

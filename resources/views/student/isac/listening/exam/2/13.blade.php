@@ -114,7 +114,7 @@
                             <td class="py-2"></td>
                             <td class="py-2" colspan="2">
                                 <h5>Part 2 Kerry Packer </h5>
-                                <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                                <textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea>
                                 <h5 class="mt-3 aw text-success">Summaries (possible answer)</h5>
                                 <span class="aw text-success">
                                     Kerry Packer is Australia's richest person. His money comes from media interests. He inherited the
@@ -188,19 +188,27 @@
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
-        console.log("aw", aw)
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

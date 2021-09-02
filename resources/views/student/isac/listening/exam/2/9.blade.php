@@ -55,7 +55,7 @@
                     <span>
                         3.4 Now, write a short summary of the talk in <b>about 50 - 80 words</b>.
                     </span>
-                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                    <textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea>
                     <h5 class="mt-3 aw text-success">Summary (possible answer)</h5>
                     <span class="aw text-success">
                         The word 'develop' can mean 'unwrap' or 'uncover'. It also means to allow a picture to show from

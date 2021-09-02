@@ -219,9 +219,9 @@ $Q27_30->e4->choice->c = "C. Not so good";
                     </div>
                 </div>
                 <div class="mt-4 col-lg-12">
-                Match the parts of the project proposal with the tutor’s comments, <b>A-C</b>, in the box below.
-                <br>
-                Write a letter <b>A</b>, <b>B</b> or <b>C</b>.
+                    Match the parts of the project proposal with the tutor’s comments, <b>A-C</b>, in the box below.
+                    <br>
+                    Write a letter <b>A</b>, <b>B</b> or <b>C</b>.
                     <div class="w-100 d-flex justify-content-center">
                         <table class="w-100">
                             @foreach($Q27_30 as $index => $Q27_30)
@@ -280,15 +280,18 @@ $Q27_30->e4->choice->c = "C. Not so good";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-
     $('#check-answer').on('click', () => {
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check-input:checked').each((idx, item) => {
             let aw = ""
@@ -297,14 +300,32 @@ $Q27_30->e4->choice->c = "C. Not so good";
             else
                 aw = $(item).val()
             if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
+    }
+
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
+        $('.' + aw).addClass('text-success')
+        $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

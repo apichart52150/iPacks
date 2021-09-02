@@ -3,9 +3,12 @@
     table tr td {
         vertical-align: top;
     }
+    table tr th {
+        vertical-align: top;
+    }
 
     .table tr td {
-        vertical-align: middle;
+        vertical-align: top;
         border: 1px solid black;
     }
 
@@ -83,16 +86,16 @@
 
 $aw = new stdClass();
 
-$aw->e21 = "wildlife";
-$aw->e22 = "evaporate";
-$aw->e23 = "windbreaks";
-$aw->e24 = "shrubs";
-$aw->e25 = "integrated landscape";
-$aw->e26 = "prevailing";
-$aw->e27 = "east and west";
-$aw->e28 = "fire";
-$aw->e29 = "15 degrees C";
-$aw->e30 = "perfume";
+$aw->e21 = "Spanish";
+$aw->e22 = "West Africa";
+$aw->e23 = "November 2010";
+$aw->e24 = "under 8s";
+$aw->e25 = "Poetry";
+$aw->e26 = "English Club";
+$aw->e27 = "South America";
+$aw->e28 = "dormitory";
+$aw->e29 = "end of April";
+$aw->e30 = "by ship";
 
 @endphp
 <div class="row">
@@ -281,11 +284,15 @@ $aw->e30 = "perfume";
     $('#check-answer').on('click', () => {
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check-input:checked').each((idx, item) => {
             let aw = ""
@@ -294,14 +301,21 @@ $aw->e30 = "perfume";
             else
                 aw = $(item).val()
             if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

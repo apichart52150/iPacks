@@ -246,9 +246,9 @@ $Q38_40->e3->aw = "mountaineers";
 <script>
     $('.Q38_40').each((idx, item) => {
         let text = $(item).html()
-        let input =  '<div class="input-con">'+
-        '<input type="text" class="form-control w-100 q-val" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
-        '</div>'+
+        let input = '<div class="input-con">' +
+            '<input type="text" class="form-control w-100 q-val" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
+            '</div>' +
             '<span class="aw text-danger ' + $(item).attr('show-aw') + ' px-2">' + $(item).attr('aw') + '</span>'
         text = text.replace("___", input)
         $('.' + $(item).attr('replace')).html(text)
@@ -257,11 +257,15 @@ $Q38_40->e3->aw = "mountaineers";
     $('#check-answer').on('click', () => {
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check-input:checked').each((idx, item) => {
             let aw = ""
@@ -270,14 +274,21 @@ $Q38_40->e3->aw = "mountaineers";
             else
                 aw = $(item).val()
             if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

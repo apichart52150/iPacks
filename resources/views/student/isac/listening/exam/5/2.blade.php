@@ -187,6 +187,10 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                                     <div class="input-con w-75">
                                         <div class="dropbox q w-100" show-aw="q-11" aw="{{$aw->e11}}"></div>
                                     </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <span class="aw text-danger q-11 px-2">{{$aw->e11}}</span>
                                 </td>
                             </tr>
@@ -196,6 +200,10 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                                     <div class="input-con w-75">
                                         <div class="dropbox q w-100" show-aw="q-12" aw="{{$aw->e12}}"></div>
                                     </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <span class="aw text-danger q-12 px-2">{{$aw->e12}}</span>
                                 </td>
                             </tr>
@@ -205,6 +213,10 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                                     <div class="input-con w-75">
                                         <div class="dropbox q w-100" show-aw="q-13" aw="{{$aw->e13}}"></div>
                                     </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <span class="aw text-danger q-13 px-2">{{$aw->e13}}</span>
                                 </td>
                             </tr>
@@ -214,6 +226,10 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                                     <div class="input-con w-75">
                                         <div class="dropbox q w-100" show-aw="q-14" aw="{{$aw->e14}}"></div>
                                     </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <span class="aw text-danger q-14 px-2">{{$aw->e14}}</span>
                                 </td>
                             </tr>
@@ -223,6 +239,10 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                                     <div class="input-con w-75">
                                         <div class="dropbox q w-100" show-aw="q-15" aw="{{$aw->e15}}"></div>
                                     </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <span class="aw text-danger q-15 px-2">{{$aw->e15}}</span>
                                 </td>
                             </tr>
@@ -296,15 +316,21 @@ $Q16_20->e5->choice->c = "C Free catalogues";
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check-input:checked').each((idx, item) => {
             let aw = ""
@@ -313,14 +339,21 @@ $Q16_20->e5->choice->c = "C Free catalogues";
             else
                 aw = $(item).val()
             if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

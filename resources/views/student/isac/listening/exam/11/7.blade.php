@@ -320,7 +320,7 @@ $E3_1_5_choice->ch5 = "exercise";
         let input = '<div class="input-con w-25 input-con2">' +
             '<div class="dropbox q w-100" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
             '</div>' +
-            '<span class="aw ' + $(item).attr('show-aw') + ' text-danger">' + $(item).attr('aw') + '</span>'
+            '<span class="aw px-2 ' + $(item).attr('show-aw') + ' text-danger">' + $(item).attr('aw') + '</span>'
         text = text.replace("___", input)
         $(item).html(text)
     })
@@ -328,11 +328,15 @@ $E3_1_5_choice->ch5 = "exercise";
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
 
         $('.q-val2').each((idx, item) => {
@@ -343,17 +347,19 @@ $E3_1_5_choice->ch5 = "exercise";
                 var results = aw.filter(function(elem) {
                     return elem.trim().toUpperCase() == aw2[i].trim().toUpperCase();
                 })
-                console.log("----->",results.length)
-                console.log("----->",results)
                 if (results.length > 0)
                     count_aw++
             }
             if (count_aw >= 2)
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check-input:checked').each((idx, item) => {
             let aw = ""
@@ -362,14 +368,21 @@ $E3_1_5_choice->ch5 = "exercise";
             else
                 aw = $(item).val()
             if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

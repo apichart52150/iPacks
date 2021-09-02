@@ -223,27 +223,22 @@ $caller_1->j->choice = ["18.8","80.8"];
 
     $('#check-answer').on('click', () => {
         $('.caller_1:checked').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
-        $('.caller_2').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
-        $('.caller_3').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
-        $('.caller_4').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw').toUpperCase())
-                show_aw($(item).attr('show-aw'))
+            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
 

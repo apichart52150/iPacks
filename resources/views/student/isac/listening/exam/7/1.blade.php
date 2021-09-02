@@ -251,11 +251,15 @@ $Q31_40->e10->choice->d = "D. the Lapps are able to keep large herds of domestic
     $('#check-answer').on('click', () => {
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check-input:checked').each((idx, item) => {
             let aw = ""
@@ -264,15 +268,22 @@ $Q31_40->e10->choice->d = "D. the Lapps are able to keep large herds of domestic
             else
                 aw = $(item).val()
             if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
-        $('.' + aw).addClass('text-success')
-        $('.' + aw).removeClass('text-danger')
-    }
+function show_aw(aw, item) {
+    $(item).addClass('border border-success')
+    $('.' + aw).addClass('text-success')
+    $('.' + aw).removeClass('text-danger')
+}
+
+function show_error(item) {
+    $(item).addClass('border border-danger')
+}
 
     function checkRadio(x) {
         $('.' + x).prop("checked", true);

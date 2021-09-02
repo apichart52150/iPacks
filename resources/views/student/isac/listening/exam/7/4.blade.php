@@ -121,7 +121,7 @@ $Q1_10->e3->q2 = "(2) ___";
 $Q1_10->e4->q2 = "9.30 pm";
 $Q1_10->e5->q2 = "(3) ___";
 $Q1_10->e6->q2 = "2 pax";
-$Q1_10->e7->q2 = "(4) ___  56K";
+$Q1_10->e7->q2 = "(4) ___ 56K";
 $Q1_10->e8->q2 = "(5) ___ food";
 $Q1_10->e9->q2 = "YES";
 $Q1_10->e10->q2 = "(6) ___";
@@ -226,18 +226,22 @@ $Q1_10->e16->aw = "1 hour";
         let input = '<div class="input-con py-1">' +
             '<input class="q-val form-control" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
             '</div>'
-            text = text.replace("___",input)
+        text = text.replace("___", input)
         $(item).html(text)
     })
 
     $('#check-answer').on('click', () => {
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check-input:checked').each((idx, item) => {
             let aw = ""
@@ -246,14 +250,21 @@ $Q1_10->e16->aw = "1 hour";
             else
                 aw = $(item).val()
             if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

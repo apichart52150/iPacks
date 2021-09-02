@@ -39,7 +39,7 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .aw {
@@ -144,8 +144,8 @@ $caller_4_choice->e14 = "..a strong possibility..";
             <div class="row">
                 <div class="col-lg-12">
                     <h5>Listen to the interview about the forthcoming Federal Budget. As you listen, decide on the
-degree of probability expressed by the person being interviewed. You can use the words or give
-the percentages to express this degree of probability: </h5>
+                        degree of probability expressed by the person being interviewed. You can use the words or give
+                        the percentages to express this degree of probability: </h5>
                     <div class="row justify-content-center mb-2">
                         <div class="col-md-12">
                             <div class="border border-dark px-2 text-center">
@@ -260,18 +260,27 @@ the percentages to express this degree of probability: </h5>
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
 

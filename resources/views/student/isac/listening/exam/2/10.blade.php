@@ -53,7 +53,7 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .aw {
@@ -136,7 +136,7 @@ $caller_2->e3->aw->i->aw = "industrial production";
 $caller_2->e3->aw->ii->q= "from ...";
 $caller_2->e3->aw->ii->aw = " high-wage sites in wealthier nations";
 $caller_2->e3->aw->iii->q= "to ...";
-$caller_2->e3->aw->iii->aw = "low-wage sites in poorer ones.";
+$caller_2->e3->aw->iii->aw = "low-wage sites in poorer ones";
 $caller_2->e4->aw->i->q= "i. raw materials";
 $caller_2->e4->aw->i->aw = "";
 $caller_2->e4->aw->ii->q= "ii. ... (15,000 in all)";
@@ -297,7 +297,7 @@ $caller_2_5_choice->ch8 = "minor parts";
                         </tr>
                         <tr>
                             <td></td>
-                            <td><textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
+                            <td><textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -356,8 +356,8 @@ $caller_2_5_choice->ch8 = "minor parts";
     $('.q-dot:contains("...")').each((idx, item) => {
         let text = $(item).html()
         console.log(text)
-        let input = '<div class="input-con w-50">' +
-            '<input type="text" class="w-100 q-text" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
+        let input = '<div class="input-con w-75">' +
+            '<input type="text" class="w-100 form-control q-text" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
             '</div>'
         text = text.replace("...", input)
         $(item).html(text)
@@ -376,19 +376,27 @@ $caller_2_5_choice->ch8 = "minor parts";
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
-        console.log("aw", aw)
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {
