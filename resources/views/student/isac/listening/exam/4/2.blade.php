@@ -64,6 +64,10 @@
         display: none;
     }
 
+    .event-click {
+        cursor: pointer;
+    }
+
     .input-text {
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -136,16 +140,16 @@ $Q17_20->e4->aw = "False";
                                             <tr>
                                                 <td>
                                                     (11)
-                                                    <div class="input-con">
-                                                        <input type="text" class="q-val form-control" show-aw="q-11" aw="{{$aw->e11}}">
+                                                    <div class="input-con w-50">
+                                                        <input type="text" class="q-val w-100 form-control" show-aw="q-11" aw="{{$aw->e11}}">
                                                     </div>
                                                     <span class="aw text-danger q-11 px-2">{{$aw->e11}}</span>
                                                 </td>
                                                 <td class="pl-2 pr-4">Main Library </td>
                                                 <td>
                                                     (12)
-                                                    <div class="input-con">
-                                                        <input type="text" class="q-val form-control" show-aw="q-12" aw="{{$aw->e12}}">
+                                                    <div class="input-con w-50">
+                                                        <input type="text" class="q-val w-100 form-control" show-aw="q-12" aw="{{$aw->e12}}">
                                                     </div>
                                                     <span class="aw text-danger q-12 px-2">{{$aw->e12}}</span>
                                                 </td>
@@ -154,16 +158,16 @@ $Q17_20->e4->aw = "False";
                                             <tr>
                                                 <td>
                                                     (13)
-                                                    <div class="input-con">
-                                                        <input type="text" class="q-val form-control" show-aw="q-13" aw="{{$aw->e13}}">
+                                                    <div class="input-con w-50">
+                                                        <input type="text" class="q-val w-100 form-control" show-aw="q-13" aw="{{$aw->e13}}">
                                                     </div>
                                                     <span class="aw text-danger q-13 px-2">{{$aw->e13}}</span>
                                                 </td>
                                                 <td class="pl-2 pr-4">Main Library </td>
                                                 <td>
                                                     (14)
-                                                    <div class="input-con">
-                                                        <input type="text" class="q-val form-control" show-aw="q-14" aw="{{$aw->e14}}">
+                                                    <div class="input-con w-50">
+                                                        <input type="text" class="q-val w-100 form-control" show-aw="q-14" aw="{{$aw->e14}}">
                                                     </div>
                                                     <span class="aw text-danger q-14 px-2">{{$aw->e14}}</span>
                                                 </td>
@@ -172,16 +176,16 @@ $Q17_20->e4->aw = "False";
                                             <tr>
                                                 <td>
                                                     (15)
-                                                    <div class="input-con">
-                                                        <input type="text" class="q-val form-control" show-aw="q-15" aw="{{$aw->e15}}">
+                                                    <div class="input-con w-50">
+                                                        <input type="text" class="q-val w-100 form-control" show-aw="q-15" aw="{{$aw->e15}}">
                                                     </div>
                                                     <span class="aw text-danger q-15 px-2">{{$aw->e15}}</span>
                                                 </td>
                                                 <td class="pl-2 pr-4">Main Library </td>
                                                 <td>
                                                     (16)
-                                                    <div class="input-con">
-                                                        <input type="text" class="q-val form-control" show-aw="q-16" aw="{{$aw->e16}}">
+                                                    <div class="input-con w-50">
+                                                        <input type="text" class="q-val w-100 form-control" show-aw="q-16" aw="{{$aw->e16}}">
                                                     </div>
                                                     <span class="aw text-danger q-16 px-2">{{$aw->e16}}</span>
                                                 </td>
@@ -209,19 +213,23 @@ $Q17_20->e4->aw = "False";
                                         <td></td>
                                         <td style="width: 20px;">
                                             <div class="form-check">
-                                                <input class="form-check-input position-static q-check Q17_20-{{$index}}-1" type="radio" name="Q17_20-{{$index}}" show-aw="Q17_20-{{$index}}" aw="{{$Q17_20->aw}}" value="True">
+                                                <input class="form-check-input event-click position-static q-check Q17_20-{{$index}}-1" type="radio" name="Q17_20-{{$index}}" show-aw="Q17_20-{{$index}}" aw="{{$Q17_20->aw}}" value="True">
                                             </div>
                                         </td>
-                                        <td onclick="checkRadio('Q17_20-{{$index}}-1')">True</td>
+                                        <td>
+                                            <span class="event-click" onclick="checkRadio('Q17_20-{{$index}}-1')">True</span>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td style="width: 20px;">
                                             <div class="form-check">
-                                                <input class="form-check-input position-static q-check Q17_20-{{$index}}-2" type="radio" name="Q17_20-{{$index}}" show-aw="Q17_20-{{$index}}" aw="{{$Q17_20->aw}}" value="False">
+                                                <input class="form-check-input event-click position-static q-check Q17_20-{{$index}}-2" type="radio" name="Q17_20-{{$index}}" show-aw="Q17_20-{{$index}}" aw="{{$Q17_20->aw}}" value="False">
                                             </div>
                                         </td>
-                                        <td onclick="checkRadio('Q17_20-{{$index}}-2')">False</td>
+                                        <td>
+                                            <span class="event-click" onclick="checkRadio('Q17_20-{{$index}}-2')">False</span>
+                                        </td>
                                     </tr>
                                     <tr class="aw">
                                         <td></td>

@@ -89,7 +89,7 @@ $aw = new stdClass();
 $aw->e21 = "Spanish";
 $aw->e22 = "West Africa";
 $aw->e23 = "November 2010";
-$aw->e24 = "under 8s";
+$aw->e24 = "under eights";
 $aw->e25 = "Poetry";
 $aw->e26 = "English Club";
 $aw->e27 = "South America";
@@ -197,9 +197,9 @@ $aw->e30 = "by ship";
                                                         <br>
                                                         (26)
                                                         <div class="input-con">
-                                                            <input type="text" class="q-val form-control" show-aw="q-23" aw="{{$aw->e23}}">
+                                                            <input type="text" class="q-val form-control" show-aw="q-26" aw="{{$aw->e26}}">
                                                         </div>
-                                                        <span class="aw text-danger q-23 px-2">{{$aw->e23}}</span>
+                                                        <span class="aw text-danger q-26 px-2">{{$aw->e26}}</span>
                                                     </td>
                                                 </tr>
                                                 <tr>

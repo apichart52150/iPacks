@@ -78,6 +78,10 @@
         width: 500px;
         padding-left: 10px;
     }
+
+    .event-click {
+        cursor: pointer;
+    }
 </style>
 @php
 
@@ -177,10 +181,12 @@ $E2_1_5->e5->aw = "mobile phones and fashionable clothes";
                                 <td></td>
                                 <td style="width: 20px;">
                                     <div class="form-check">
-                                        <input class="form-check-input position-static q-check E1_1_5-{{$index}}-1" type="radio" name="E1_1_5-{{$index}}" show-aw="E1_1_5-{{$index}}" aw="{{$E1_1_5->aw}}" value="{{$choice}}">
+                                        <input class="form-check-input event-click position-static q-check E1_1_5-{{$index}}-{{$index2}}" type="radio" name="E1_1_5-{{$index}}" show-aw="E1_1_5-{{$index}}" aw="{{$E1_1_5->aw}}" value="{{$choice}}">
                                     </div>
                                 </td>
-                                <td onclick="checkRadio('E1_1_5-{{$index}}-1')">{{$choice}}</td>
+                                <td>
+                                    <span class="event-click" onclick="checkRadio('E1_1_5-{{$index}}-{{$index2}}')">{{$choice}}</span>
+                                </td>
                             </tr>
                             @endforeach
                             <tr class="aw">
@@ -207,20 +213,19 @@ $E2_1_5->e5->aw = "mobile phones and fashionable clothes";
                                     <div class="input-con w-75">
                                         <input type="text" class="q-val form-control w-100" show-aw="E2_1_5-{{$index}}" aw="{{$E2_1_5->aw}}">
                                     </div>
+                                </td>
+                            </tr>
+                            <tr class="aw">
+                                <td></td>
+                                <td class="aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
+                            </tr>
+                            @endforeach
+                        </table>
                     </div>
-                    </td>
-                    </tr>
-                    <tr class="aw">
-                        <td></td>
-                        <td class="aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
-                    </tr>
-                    @endforeach
-                    </table>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">

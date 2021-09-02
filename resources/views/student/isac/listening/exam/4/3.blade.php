@@ -78,6 +78,10 @@
         width: 500px;
         padding-left: 10px;
     }
+
+    .event-click {
+        cursor: pointer;
+    }
 </style>
 @php
 
@@ -124,7 +128,7 @@ $Q26_30->e5->aw = "A Peter";
             <div class="row">
                 <div class="col-lg-12">
                     Write <b>NO MORE THAN TWO WORDS OR A NUMBER</b>.
-                    <table class="w-75">
+                    <table class="w-100">
                         <tr>
                             <td>
                                 21. The restaurant canteen closes at
@@ -189,28 +193,34 @@ $Q26_30->e5->aw = "A Peter";
                                         <td></td>
                                         <td style="width: 20px;">
                                             <div class="form-check">
-                                                <input class="form-check-input position-static q-check Q26_30-{{$index}}-1" type="radio" name="Q26_30-{{$index}}" show-aw="Q26_30-{{$index}}" aw="{{$Q26_30->aw}}" value="A Peter">
+                                                <input class="form-check-input event-click position-static q-check Q26_30-{{$index}}-1" type="radio" name="Q26_30-{{$index}}" show-aw="Q26_30-{{$index}}" aw="{{$Q26_30->aw}}" value="A Peter">
                                             </div>
                                         </td>
-                                        <td onclick="checkRadio('Q26_30-{{$index}}-1')">A Peter</td>
+                                        <td>
+                                            <span class="event-click" onclick="checkRadio('Q26_30-{{$index}}-1')">A Peter</span>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td style="width: 20px;">
                                             <div class="form-check">
-                                                <input class="form-check-input position-static q-check Q26_30-{{$index}}-2" type="radio" name="Q26_30-{{$index}}" show-aw="Q26_30-{{$index}}" aw="{{$Q26_30->aw}}" value="B Jane">
+                                                <input class="form-check-input event-click position-static q-check Q26_30-{{$index}}-2" type="radio" name="Q26_30-{{$index}}" show-aw="Q26_30-{{$index}}" aw="{{$Q26_30->aw}}" value="B Jane">
                                             </div>
                                         </td>
-                                        <td onclick="checkRadio('Q26_30-{{$index}}-2')">B Jane</td>
+                                        <td>
+                                            <span class="event-click" onclick="checkRadio('Q26_30-{{$index}}-2')">B Jane</span>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td style="width: 20px;">
                                             <div class="form-check">
-                                                <input class="form-check-input position-static q-check Q26_30-{{$index}}-3" type="radio" name="Q26_30-{{$index}}" show-aw="Q26_30-{{$index}}" aw="{{$Q26_30->aw}}" value="C Peter and Jane together">
+                                                <input class="form-check-input event-click position-static q-check Q26_30-{{$index}}-3" type="radio" name="Q26_30-{{$index}}" show-aw="Q26_30-{{$index}}" aw="{{$Q26_30->aw}}" value="C Peter and Jane together">
                                             </div>
                                         </td>
-                                        <td onclick="checkRadio('Q26_30-{{$index}}-3')">C Peter and Jane together </td>
+                                        <td>
+                                            <span class="event-click" onclick="checkRadio('Q26_30-{{$index}}-3')">C Peter and Jane together</span>
+                                        </td>
                                     </tr>
                                     <tr class="aw">
                                         <td></td>

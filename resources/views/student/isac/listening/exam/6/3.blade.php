@@ -78,6 +78,10 @@
         width: 500px;
         padding-left: 10px;
     }
+
+    .event-click {
+        cursor: pointer;
+    }
 </style>
 @php
 
@@ -176,10 +180,12 @@ $Q26_30->e6->aw = "C. Both Paula and Richard";
                                         <td></td>
                                         <td style="width: 20px;">
                                             <div class="form-check">
-                                                <input class="form-check-input position-static Q21_24-{{$index}}-{{$index2}} q-check" type="radio" name="Q21_24-{{$index}}" show-aw="Q21_24-{{$index}}" aw="{{$Q21_24->aw}}" value="{{$choice}}">
+                                                <input class="form-check-input event-click position-static Q21_24-{{$index}}-{{$index2}} q-check" type="radio" name="Q21_24-{{$index}}" show-aw="Q21_24-{{$index}}" aw="{{$Q21_24->aw}}" value="{{$choice}}">
                                             </div>
                                         </td>
-                                        <td onclick="checkRadio('Q21_24-{{$index}}-{{$index2}}')">{{$choice}}</td>
+                                        <td>
+                                            <span class="event-click" onclick="checkRadio('Q21_24-{{$index}}-{{$index2}}')">{{$choice}}</span>
+                                        </td>
                                     </tr>
                                     @endforeach
                                     <tr class="aw">
@@ -211,28 +217,34 @@ $Q26_30->e6->aw = "C. Both Paula and Richard";
                                         <td></td>
                                         <td style="width: 20px;">
                                             <div class="form-check">
-                                                <input class="form-check-input position-static q-check Q26_30-{{$index}}-1" type="radio" name="Q26_30-{{$index}}" show-aw="Q26_30-{{$index}}" aw="{{$Q26_30->aw}}" value="A. Paula">
+                                                <input class="form-check-input event-click position-static q-check Q26_30-{{$index}}-1" type="radio" name="Q26_30-{{$index}}" show-aw="Q26_30-{{$index}}" aw="{{$Q26_30->aw}}" value="A. Paula">
                                             </div>
                                         </td>
-                                        <td onclick="checkRadio('Q26_30-{{$index}}-1')">A. Paula</td>
+                                        <td>
+                                            <span class="event-click" onclick="checkRadio('Q26_30-{{$index}}-1')">A. Paula</span>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td style="width: 20px;">
                                             <div class="form-check">
-                                                <input class="form-check-input position-static q-check Q26_30-{{$index}}-2" type="radio" name="Q26_30-{{$index}}" show-aw="Q26_30-{{$index}}" aw="{{$Q26_30->aw}}" value="B. Richard">
+                                                <input class="form-check-input event-click position-static q-check Q26_30-{{$index}}-2" type="radio" name="Q26_30-{{$index}}" show-aw="Q26_30-{{$index}}" aw="{{$Q26_30->aw}}" value="B. Richard">
                                             </div>
                                         </td>
-                                        <td onclick="checkRadio('Q26_30-{{$index}}-2')">B. Richard</td>
+                                        <td>
+                                            <span class="event-click" onclick="checkRadio('Q26_30-{{$index}}-2')">B. Richard</span>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td style="width: 20px;">
                                             <div class="form-check">
-                                                <input class="form-check-input position-static q-check Q26_30-{{$index}}-3" type="radio" name="Q26_30-{{$index}}" show-aw="Q26_30-{{$index}}" aw="{{$Q26_30->aw}}" value="C. Both Paula and Richard">
+                                                <input class="form-check-input event-click position-static q-check Q26_30-{{$index}}-3" type="radio" name="Q26_30-{{$index}}" show-aw="Q26_30-{{$index}}" aw="{{$Q26_30->aw}}" value="C. Both Paula and Richard">
                                             </div>
                                         </td>
-                                        <td onclick="checkRadio('Q26_30-{{$index}}-3')">C. Both Paula and Richard</td>
+                                        <td>
+                                            <span class="event-click" onclick="checkRadio('Q26_30-{{$index}}-3')">C. Both Paula and Richard</span>
+                                        </td>
                                     </tr>
                                     <tr class="aw">
                                         <td></td>

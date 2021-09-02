@@ -78,6 +78,9 @@
         width: 500px;
         padding-left: 10px;
     }
+    .event-click{
+        cursor: pointer;
+    }
 </style>
 @php
 
@@ -209,10 +212,12 @@ $E3_1_5_choice->ch5 = "disappear";
                                 <td></td>
                                 <td style="width: 20px;">
                                     <div class="form-check">
-                                        <input class="form-check-input position-static q-check E1_1_5-{{$index}}-1" type="radio" name="E1_1_5-{{$index}}" show-aw="E1_1_5-{{$index}}" aw="{{$E1_1_5->aw}}" value="{{$choice}}">
+                                        <input class="form-check-input event-click position-static q-check E1_1_5-{{$index}}-{{$index2}}" type="radio" name="E1_1_5-{{$index}}" show-aw="E1_1_5-{{$index}}" aw="{{$E1_1_5->aw}}" value="{{$choice}}">
                                     </div>
                                 </td>
-                                <td onclick="checkRadio('E1_1_5-{{$index}}-1')">{{$choice}}</td>
+                                <td>
+                                    <span class="event-click" onclick="checkRadio('E1_1_5-{{$index}}-{{$index2}}')">{{$choice}}</span>
+                                </td>
                             </tr>
                             @endforeach
                             <tr class="aw">
@@ -239,50 +244,49 @@ $E3_1_5_choice->ch5 = "disappear";
                                     <div class="input-con w-75">
                                         <input type="text" class="q-val form-control w-100" show-aw="E2_1_5-{{$index}}" aw="{{$E2_1_5->aw}}">
                                     </div>
+                                </td>
+                            </tr>
+                            <tr class="aw">
+                                <td></td>
+                                <td class="aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
+                            </tr>
+                            @endforeach
+                        </table>
                     </div>
-                    </td>
-                    </tr>
-                    <tr class="aw">
-                        <td></td>
-                        <td class="aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
-                    </tr>
-                    @endforeach
-                    </table>
-                </div>
-                <div class="mt-4 col-lg-12">
-                    <h5>Vocabulary</h5>
-                    <div class="row justify-content-center mb-2">
-                        <div class="col-md-12">
-                            <div class="border border-dark px-2 text-center">
-                                <div class="drag-container">
-                                    <div class="d-grid grid-5" id="choices">
-                                        @foreach($E3_1_5_choice as $choice)
-                                        <div class="drag">{{$choice}}</div>
-                                        @endforeach
+                    <div class="mt-4 col-lg-12">
+                        <h5>Vocabulary</h5>
+                        <div class="row justify-content-center mb-2">
+                            <div class="col-md-12">
+                                <div class="border border-dark px-2 text-center">
+                                    <div class="drag-container">
+                                        <div class="d-grid grid-5" id="choices">
+                                            @foreach($E3_1_5_choice as $choice)
+                                            <div class="drag">{{$choice}}</div>
+                                            @endforeach
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="w-100 d-flex justify-content-center">
-                        <table class="w-100">
-                            @foreach($E3_1_5 as $index => $E3_1_5)
-                            <tr>
-                                <td style="width: 20px;">{{$E3_1_5->n}}. </td>
-                                <td>
-                                    <span class="q-replace" style="height: 40px;" show-aw="E3_1_5-{{$index}}" aw="{{$E3_1_5->aw}}">
-                                        {{$E3_1_5->q}}
-                                    </span>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </table>
+                        <div class="w-100 d-flex justify-content-center">
+                            <table class="w-100">
+                                @foreach($E3_1_5 as $index => $E3_1_5)
+                                <tr>
+                                    <td style="width: 20px;">{{$E3_1_5->n}}. </td>
+                                    <td>
+                                        <span class="q-replace" style="height: 40px;" show-aw="E3_1_5-{{$index}}" aw="{{$E3_1_5->aw}}">
+                                            {{$E3_1_5->q}}
+                                        </span>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">

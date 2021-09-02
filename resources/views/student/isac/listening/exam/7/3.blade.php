@@ -78,6 +78,9 @@
         width: 500px;
         padding-left: 10px;
     }
+    .event-click{
+        cursor: pointer;
+    }
 </style>
 @php
 
@@ -214,10 +217,12 @@ $Q18_20->e3->choice->d = "D. 800";
                                 <td></td>
                                 <td style="width: 20px;">
                                     <div class="form-check">
-                                        <input class="form-check-input position-static q-check Q18_20-{{$index}}-1" type="radio" name="Q18_20-{{$index}}" show-aw="Q18_20-{{$index}}" aw="{{$Q18_20->aw}}" value="{{$choice}}">
+                                        <input class="form-check-input event-click position-static q-check Q18_20-{{$index}}-{{$index2}}" type="radio" name="Q18_20-{{$index}}" show-aw="Q18_20-{{$index}}" aw="{{$Q18_20->aw}}" value="{{$choice}}">
                                     </div>
                                 </td>
-                                <td onclick="checkRadio('Q18_20-{{$index}}-1')">{{$choice}}</td>
+                                <td>
+                            <span class="event-click" onclick="checkRadio('Q18_20-{{$index}}-{{$index2}}')">{{$choice}}</span>
+                            </td>
                             </tr>
                             @endforeach
                             <tr class="aw">

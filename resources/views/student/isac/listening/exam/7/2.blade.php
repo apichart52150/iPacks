@@ -78,6 +78,10 @@
         width: 500px;
         padding-left: 10px;
     }
+
+    .event-click {
+        cursor: pointer;
+    }
 </style>
 @php
 
@@ -204,10 +208,12 @@ $Q27_30->e4->choice->c = "C. Not so good";
                                 <td></td>
                                 <td style="width: 20px;">
                                     <div class="form-check">
-                                        <input class="form-check-input position-static q-check Q21_26-{{$index}}-1" type="radio" name="Q21_26-{{$index}}" show-aw="Q21_26-{{$index}}" aw="{{$Q21_26->aw}}" value="{{$choice}}">
+                                        <input class="form-check-input event-click position-static q-check Q21_26-{{$index}}-{{$index2}}" type="radio" name="Q21_26-{{$index}}" show-aw="Q21_26-{{$index}}" aw="{{$Q21_26->aw}}" value="{{$choice}}">
                                     </div>
                                 </td>
-                                <td onclick="checkRadio('Q21_26-{{$index}}-1')">{{$choice}}</td>
+                                <td>
+                                    <span class="event-click" onclick="checkRadio('Q21_26-{{$index}}-{{$index2}}')">{{$choice}}</span>
+                                </td>
                             </tr>
                             @endforeach
                             <tr class="aw">
@@ -234,10 +240,12 @@ $Q27_30->e4->choice->c = "C. Not so good";
                                 <td></td>
                                 <td style="width: 20px;">
                                     <div class="form-check">
-                                        <input class="form-check-input position-static q-check Q27_30-{{$index}}-1" type="radio" name="Q27_30-{{$index}}" show-aw="Q27_30-{{$index}}" aw="{{$Q27_30->aw}}" value="{{$choice}}">
+                                        <input class="form-check-input event-click position-static q-check Q27_30-{{$index}}-{{$index2}}" type="radio" name="Q27_30-{{$index}}" show-aw="Q27_30-{{$index}}" aw="{{$Q27_30->aw}}" value="{{$choice}}">
                                     </div>
                                 </td>
-                                <td onclick="checkRadio('Q27_30-{{$index}}-1')">{{$choice}}</td>
+                                <td>
+                                    <span class="event-click" onclick="checkRadio('Q27_30-{{$index}}-{{$index2}}')">{{$choice}}</span>
+                                </td>
                             </tr>
                             @endforeach
                             <tr class="aw">

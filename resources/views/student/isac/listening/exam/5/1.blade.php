@@ -129,8 +129,8 @@ $aw->e10 = "Cash";
                                                                 <td>- small fridge</td>
                                                                 <td>
                                                                     (1)
-                                                                    <div class="input-con">
-                                                                        <input type="text" class="q-val form-control" show-aw="q-1" aw="{{$aw->e1}}">
+                                                                    <div class="input-con w-50">
+                                                                        <input type="text" class="q-val w-100 form-control" show-aw="q-1" aw="{{$aw->e1}}">
                                                                     </div>
                                                                     <span class="aw text-danger q-1 px-2">{{$aw->e1}}</span>
                                                                     a day
@@ -140,8 +140,8 @@ $aw->e10 = "Cash";
                                                                 <td>Discovery</td>
                                                                 <td>
                                                                     (2)
-                                                                    <div class="input-con">
-                                                                        <input type="text" class="q-val form-control" show-aw="q-2" aw="{{$aw->e2}}">
+                                                                    <div class="input-con w-50">
+                                                                        <input type="text" class="q-val w-100 form-control" show-aw="q-2" aw="{{$aw->e2}}">
                                                                     </div>
                                                                     <span class="aw text-danger q-2 px-2">{{$aw->e2}}</span>
                                                                 </td>
@@ -149,8 +149,8 @@ $aw->e10 = "Cash";
                                                                     - small fridge
                                                                     <br>
                                                                     - built-in (3)
-                                                                    <div class="input-con">
-                                                                        <input type="text" class="q-val form-control" show-aw="q-3" aw="{{$aw->e3}}">
+                                                                    <div class="input-con w-50">
+                                                                        <input type="text" class="q-val w-100 form-control" show-aw="q-3" aw="{{$aw->e3}}">
                                                                     </div>
                                                                     <span class="aw text-danger q-3 px-2">{{$aw->e3}}</span>
                                                                 </td>
@@ -160,8 +160,8 @@ $aw->e10 = "Cash";
                                                                 <td>Luxor</td>
                                                                 <td>
                                                                     (4)
-                                                                    <div class="input-con">
-                                                                        <input type="text" class="q-val form-control" show-aw="q-4" aw="{{$aw->e4}}">
+                                                                    <div class="input-con w-50">
+                                                                        <input type="text" class="q-val w-100 form-control" show-aw="q-4" aw="{{$aw->e4}}">
                                                                     </div>
                                                                     <span class="aw text-danger q-4 px-2">{{$aw->e4}}</span>
                                                                 </td>
@@ -172,8 +172,8 @@ $aw->e10 = "Cash";
                                                                 </td>
                                                                 <td>
                                                                     (5)
-                                                                    <div class="input-con">
-                                                                        <input type="text" class="q-val form-control" show-aw="q-5" aw="{{$aw->e5}}">
+                                                                    <div class="input-con w-50">
+                                                                        <input type="text" class="q-val w-100 form-control" show-aw="q-5" aw="{{$aw->e5}}">
                                                                     </div>
                                                                     <span class="aw text-danger q-5 px-2">{{$aw->e5}}</span>
                                                                     a day

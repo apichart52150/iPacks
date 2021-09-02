@@ -90,6 +90,9 @@
     .table2 tr .map {
         border: 1px solid black;
     }
+    .event-click{
+        cursor: pointer;
+    }
 </style>
 @php
 
@@ -108,7 +111,7 @@ $choice_16_20->e4 = "D Curriculum vitae";
 $choice_16_20->e5 = "E Copies";
 $choice_16_20->e6 = "F Interview";
 $choice_16_20->e7 = "G Originals";
-$choice_16_20->e7 = "H Salary range";
+$choice_16_20->e8 = "H Salary range";
 
 $Q11_15 = new stdClass();
 $Q11_15->e1 = new stdClass();
@@ -183,10 +186,12 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                         <td></td>
                                         <td style="width: 20px;">
                                             <div class="form-check">
-                                                <input class="form-check-input position-static q-check Q11_15-{{$index}}-1" type="radio" name="Q11_15-{{$index}}" show-aw="Q11_15-{{$index}}" aw="{{$Q11_15->aw}}" value="{{$choice}}">
+                                                <input class="form-check-input event-click position-static q-check Q11_15-{{$index}}-{{$index2}}" type="radio" name="Q11_15-{{$index}}" show-aw="Q11_15-{{$index}}" aw="{{$Q11_15->aw}}" value="{{$choice}}">
                                             </div>
                                         </td>
-                                        <td onclick="checkRadio('Q11_15-{{$index}}-1')">{{$choice}}</td>
+                                        <td>
+                                    <span class="event-click" onclick="checkRadio('Q11_15-{{$index}}-{{$index2}}')">{{$choice}}</span>
+                                </td>
                                     </tr>
                                     @endforeach
                                     <tr class="aw">

@@ -78,6 +78,9 @@
         width: 500px;
         padding-left: 10px;
     }
+    .event-click{
+        cursor: pointer;
+    }
 </style>
 @php
 
@@ -151,7 +154,7 @@ $E2_1_5->e5->q = "Give TWO examples of how women take better care of themselves 
 
 $E2_1_5->e1->aw = "85 years";
 $E2_1_5->e2->aw = "79 years";
-$E2_1_5->e3->aw = "No, but doctors believe it has something to do with life-style.";
+$E2_1_5->e3->aw = "No, but doctors believe it has something to do with life-style";
 $E2_1_5->e4->aw = "beer and whisky";
 $E2_1_5->e5->aw = "They visit the doctor more often / they do more exercise / they drink less alcohol; / they smoke fewer cigarettes / they don’t drive so fast";
 
@@ -209,10 +212,12 @@ $E3_1_5_choice->ch5 = "exercise";
                                 <td></td>
                                 <td style="width: 20px;">
                                     <div class="form-check">
-                                        <input class="form-check-input position-static q-check E1_1_5-{{$index}}-1" type="radio" name="E1_1_5-{{$index}}" show-aw="E1_1_5-{{$index}}" aw="{{$E1_1_5->aw}}" value="{{$choice}}">
+                                        <input class="form-check-input event-click position-static q-check E1_1_5-{{$index}}-{{$index2}}" type="radio" name="E1_1_5-{{$index}}" show-aw="E1_1_5-{{$index}}" aw="{{$E1_1_5->aw}}" value="{{$choice}}">
                                     </div>
                                 </td>
-                                <td onclick="checkRadio('E1_1_5-{{$index}}-1')">{{$choice}}</td>
+                                <td>
+                                    <span class="event-click" onclick="checkRadio('E1_1_5-{{$index}}-{{$index2}}')">{{$choice}}</span>
+                                </td>
                             </tr>
                             @endforeach
                             <tr class="aw">

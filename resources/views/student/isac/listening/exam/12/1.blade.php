@@ -78,6 +78,9 @@
         width: 500px;
         padding-left: 10px;
     }
+    .event-click{
+        cursor: pointer;
+    }
 </style>
 @php
 
@@ -153,7 +156,7 @@ $E2_1_5->e1->aw = "off the coast of Africa";
 $E2_1_5->e2->aw = "fruit";
 $E2_1_5->e3->aw = "it makes sound";
 $E2_1_5->e4->aw = "thirty to sixty";
-$E2_1_5->e5->aw = "It is interesting; it is easy to take care of; it seems to enjoy living with people.";
+$E2_1_5->e5->aw = "It is interesting; it is easy to take care of; it seems to enjoy living with people";
 
 @endphp
 <div class="row">
@@ -177,10 +180,12 @@ $E2_1_5->e5->aw = "It is interesting; it is easy to take care of; it seems to en
                                 <td></td>
                                 <td style="width: 20px;">
                                     <div class="form-check">
-                                        <input class="form-check-input position-static q-check E1_1_5-{{$index}}-1" type="radio" name="E1_1_5-{{$index}}" show-aw="E1_1_5-{{$index}}" aw="{{$E1_1_5->aw}}" value="{{$choice}}">
+                                        <input class="form-check-input event-click position-static q-check E1_1_5-{{$index}}-{{$index2}}" type="radio" name="E1_1_5-{{$index}}" show-aw="E1_1_5-{{$index}}" aw="{{$E1_1_5->aw}}" value="{{$choice}}">
                                     </div>
                                 </td>
-                                <td onclick="checkRadio('E1_1_5-{{$index}}-1')">{{$choice}}</td>
+                                <td>
+                                    <span class="event-click" onclick="checkRadio('E1_1_5-{{$index}}-{{$index2}}')">{{$choice}}</span>
+                                </td>
                             </tr>
                             @endforeach
                             <tr class="aw">
@@ -207,20 +212,19 @@ $E2_1_5->e5->aw = "It is interesting; it is easy to take care of; it seems to en
                                     <div class="input-con w-75">
                                         <input type="text" class="q-val form-control w-100" show-aw="E2_1_5-{{$index}}" aw="{{$E2_1_5->aw}}">
                                     </div>
+                                </td>
+                            </tr>
+                            <tr class="aw">
+                                <td></td>
+                                <td class="aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
+                            </tr>
+                            @endforeach
+                        </table>
                     </div>
-                    </td>
-                    </tr>
-                    <tr class="aw">
-                        <td></td>
-                        <td class="aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
-                    </tr>
-                    @endforeach
-                    </table>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
