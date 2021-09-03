@@ -510,12 +510,12 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
                     <span>
                         Do this exercise before you listen to the tape. Match the following words with their meanings:
                     </span>
-                    <table class="w-100 mb-3">
+                    <table class="mt-1 w-100 mb-3">
                         @foreach($caller_1 as $index => $caller_1)
                         <tr>
                             <td class="">{{$caller_1->n}}. {{$caller_1->q}}</td>
                             <td class="px-4">=</td>
-                            <td>
+                            <td class="py-1">
                                 <select class="form-select form-control q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}" aria-label="Default select example">
                                     <option value="...">...</option>
                                     @foreach($caller_1_choice as $choice)
@@ -599,7 +599,7 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
                             <td style="width: 100px;">
                                 <span class="event-click" onclick="checkRadio('caller_3-{{$index}}-{{$index2}}')">{{$index2}}. {{$choice}}</span>
                             </td>
-                            <td>
+                            <td class="py-1">
                                 @if($choice == "False")
                                 <input type="text" class="form-control w-75 caller_3-input-{{$index}}-{{$index2}}">
                                 @endif

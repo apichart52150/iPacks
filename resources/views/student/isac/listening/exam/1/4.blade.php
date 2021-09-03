@@ -88,7 +88,7 @@
                         </tr>
                         <tr>
                             <td>6.</td>
-                            <td> Now, write a short summary of the talk in about 50 - 80 words.</td>
+                            <td class="pb-2"> Now, write a short summary of the talk in about 50 - 80 words.</td>
                         </tr>
                         <tr>
                             <td></td>

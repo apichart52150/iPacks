@@ -167,7 +167,7 @@ $caller_3->e5->aw = "28***90%***12***50%***three-quarters***$80";
         let new_text = $(item).html()
         let aw = $(item).attr('aw').split("***")
         for (let i = 0; i < text.split("...").length - 1; i++) {
-            let input = '<div class="input-con input-con2 pb-1 "><input type="text" class="input-text caller_3" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
+            let input = '<div class="input-con input-con2 py-1 "><input type="text" class="input-text caller_3" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
                 '<labal class="w-100 px-2 aw caller_3-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'
             new_text = new_text.replace("...", input)
         }

@@ -175,7 +175,7 @@ $caller_choice->ch8 = "use";
                                             <span>* gather</span>
                                             <br>
                                             <span>* </span>
-                                            <div class="input-con w-75">
+                                            <div class="input-con w-75 pt-2">
                                                 <div class="dropbox q w-100" show-aw="caller_1_2-1" aw="communicate"></div>
                                             </div>
                                             <br>
@@ -204,7 +204,7 @@ $caller_choice->ch8 = "use";
                                             <span>* requirements</span>
                                             <br>
                                             <span>* </span>
-                                            <div class="input-con w-75">
+                                            <div class="input-con w-75 py-2">
                                                 <div class="dropbox q w-100" show-aw="caller_1_2-3" aw="satisfaction"></div>
                                             </div>
                                             <br>
@@ -226,7 +226,7 @@ $caller_choice->ch8 = "use";
                                             <span>* strengths</span>
                                             <br>
                                             <span>* </span>
-                                            <div class="input-con w-75">
+                                            <div class="input-con w-75 pt-2">
                                                 <div class="dropbox q w-100" show-aw="caller_1_2-4" aw="weaknesses"></div>
                                             </div>
                                             <br>
@@ -248,7 +248,7 @@ $caller_choice->ch8 = "use";
                                             <span>* staffing</span>
                                             <br>
                                             <span>* </span>
-                                            <div class="input-con w-75">
+                                            <div class="input-con w-75 pt-2">
                                                 <div class="dropbox w-100 q" show-aw="caller_1_2-5" aw="financial capacity"></div>
                                             </div>
                                             <br>
@@ -268,7 +268,7 @@ $caller_choice->ch8 = "use";
                                             forward planning
                                             <br>
                                             <span>* </span>
-                                            <div class="input-con w-75">
+                                            <div class="input-con w-75 pt-2">
                                                 <div class="dropbox w-100 q" show-aw="caller_1_2-6" aw="long-term vision"></div>
                                             </div>
                                             <br>
@@ -289,7 +289,7 @@ $caller_choice->ch8 = "use";
                         </tr>
                         <tr>
                             <td class="pt-3">1.</td>
-                            <td class="pt-3">
+                            <td class="pt-3 pb-2">
                                 Write a short summary of <b>about 120 words</b> describing the characteristics of a good marketing
                                 orientated organization. You can use information in the flow chart above to help you.
                             </td>
@@ -314,8 +314,8 @@ $caller_choice->ch8 = "use";
                             </td>
                         </tr>
                         <tr>
-                            <td>2.</td>
-                            <td>
+                            <td class="pt-3">2.</td>
+                            <td class="pt-3 pb-2">
                                 Write a short summary of <b>about 100 words</b> describing the characteristics of good management
                                 practices in a marketing orientated organization.
                             </td>

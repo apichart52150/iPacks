@@ -147,12 +147,12 @@ $caller_2->row1->col->col4->aw = "A married couple + 4 children; police; psychic
                     <span>
                         Before you listen to the tape, match the words and phrases in List A with their meanings in List B.
                     </span>
-                    <table class="w-100 mb-3">
+                    <table class="mt-1 w-100 mb-3">
                         @foreach($caller_1 as $index => $caller_1)
                         <tr>
                             <td class="">{{$caller_1->q}}</td>
                             <td class="px-4">=</td>
-                            <td>
+                            <td class="py-1">
                                 <select class="form-select form-control q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}" aria-label="Default select example">
                                     <option value="...">...</option>
                                     @foreach($caller_1_choice as $choice)

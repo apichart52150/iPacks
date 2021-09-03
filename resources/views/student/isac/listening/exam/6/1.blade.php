@@ -148,7 +148,7 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                     <th class="pr-2">Contact number:</th>
                                                     <td>
                                                         (1)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="form-control q-val" show-aw="q-1" aw="{{$aw->e1}}">
                                                         </div>
                                                     </td>
@@ -161,7 +161,7 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                     <th class="pr-2">Type of accommodation: </th>
                                                     <td>
                                                         (2)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-2" aw="{{$aw->e2}}">
                                                         </div>
                                                     </td>
@@ -186,7 +186,7 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                     <th class="pr-2"></th>
                                                     <td>
                                                         (3)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-3" aw="{{$aw->e3}}">
                                                         </div>
                                                     </td>
@@ -199,7 +199,7 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                     <td class="pr-2"></td>
                                                     <td>
                                                         (4)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-4" aw="{{$aw->e4}}">
                                                         </div>
                                                     </td>
@@ -218,7 +218,7 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                     <th class="pr-2">Day: </th>
                                                     <td>
                                                         (5)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-5" aw="{{$aw->e5}}">
                                                         </div>
                                                     </td>
@@ -237,7 +237,7 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                     <th class="pr-2">Rent: </th>
                                                     <td>
                                                         (6)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-6" aw="{{$aw->e6}}">
                                                         </div>
                                                     </td>
@@ -280,9 +280,9 @@ $choice_7_10->ch9 = "I. Bedrooms";
                     <table class="w-100">
                         @foreach($Q7_10 as $index => $Q7_10)
                         <tr>
-                            <td style="width: 25px;">{{$Q7_10->n}}.</td>
+                            <td style="width: 25px; vertical-align: middle;">{{$Q7_10->n}}.</td>
                             <td>
-                                <div class="input-con w-75">
+                                <div class="input-con w-75 py-1">
                                     <div class="dropbox q w-100" show-aw="Q7_10-{{$index}}" aw="{{$Q7_10->aw}}"></div>
                                 </div>
                             </td>

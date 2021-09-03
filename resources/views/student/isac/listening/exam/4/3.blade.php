@@ -132,7 +132,7 @@ $Q26_30->e5->aw = "A Peter";
                         <tr>
                             <td>
                                 21. The restaurant canteen closes at
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <input type="text" class="q-val form-control" show-aw="q-21" aw="{{$aw->e21}}">
                                 </div>
                                 <span class="aw text-danger q-21 px-2">{{$aw->e21}}</span>
@@ -141,7 +141,7 @@ $Q26_30->e5->aw = "A Peter";
                         <tr>
                             <td>
                                 22 The university has recently been conducting a
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <input type="text" class="q-val form-control" show-aw="q-22" aw="{{$aw->e22}}">
                                 </div>
                                 <span class="aw text-danger q-22 px-2">{{$aw->e22}}</span>
@@ -151,7 +151,7 @@ $Q26_30->e5->aw = "A Peter";
                         <tr>
                             <td>
                                 23. Peter and Jane decide to conduct a survey using a
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <input type="text" class="q-val form-control" show-aw="q-23" aw="{{$aw->e23}}">
                                 </div>
                                 <span class="aw text-danger q-23 px-2">{{$aw->e23}}</span>
@@ -160,7 +160,7 @@ $Q26_30->e5->aw = "A Peter";
                         <tr>
                             <td>
                                 24. Jane suggests following this up with a few
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <input type="text" class="q-val form-control" show-aw="q-24" aw="{{$aw->e24}}">
                                 </div>
                                 <span class="aw text-danger q-24 px-2">{{$aw->e24}}</span>
@@ -169,7 +169,7 @@ $Q26_30->e5->aw = "A Peter";
                         <tr>
                             <td>
                                 25. They decide to interview no more than
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <input type="text" class="q-val form-control" show-aw="q-25" aw="{{$aw->e25}}">
                                 </div>
                                 <span class="aw text-danger q-25 px-2">{{$aw->e25}}</span>

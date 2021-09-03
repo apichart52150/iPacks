@@ -138,7 +138,7 @@ $aw->e40 = "perfume";
                                                     <td>*</td>
                                                     <td>
                                                         Provide shelter for (31)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-31" aw="{{$aw->e31}}">
                                                         </div>
                                                         <span class="aw text-danger q-31 px-2">{{$aw->e31}}</span>
@@ -155,7 +155,7 @@ $aw->e40 = "perfume";
                                                     <td>*</td>
                                                     <td>
                                                         Allows summer breezes to be co oled as they pass over plants and (32)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-32" aw="{{$aw->e32}}">
                                                         </div>
                                                         <span class="aw text-danger q-32 px-2">{{$aw->e32}}</span>
@@ -167,7 +167,7 @@ $aw->e40 = "perfume";
                                                     <td>*</td>
                                                     <td>
                                                         Well-placed (33)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-33" aw="{{$aw->e33}}">
                                                         </div>
                                                         <span class="aw text-danger q-33 px-2">{{$aw->e33}}</span>
@@ -179,13 +179,13 @@ $aw->e40 = "perfume";
                                                     <td>*</td>
                                                     <td>
                                                         Trees and (34)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-34" aw="{{$aw->e34}}">
                                                         </div>
                                                         <span class="aw text-danger q-34 px-2">{{$aw->e34}}</span>
                                                         can provide shade from the direct sun in the hot summer months. This is sometimes referred to as
                                                         (35)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-35" aw="{{$aw->e35}}">
                                                         </div>
                                                         <span class="aw px-2 text-danger q-35">{{$aw->e35}}, </span>
@@ -212,7 +212,7 @@ $aw->e40 = "perfume";
                                                     </td>
                                                     <td>
                                                         Show direction of (36)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-36" aw="{{$aw->e36}}">
                                                         </div>
                                                         <span class="aw text-danger q-36 px-2">{{$aw->e36}}</span>
@@ -226,7 +226,7 @@ $aw->e40 = "perfume";
                                                     </td>
                                                     <td>
                                                         Plant shade trees and bushes on sides facing both (37)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-37" aw="{{$aw->e37}}">
                                                         </div>
                                                         <span class="aw text-danger q-37 px-2">{{$aw->e37}}</span>
@@ -242,7 +242,7 @@ $aw->e40 = "perfume";
                                                     <td>*</td>
                                                     <td>
                                                         In the hill areas, need to take into account the risk of (38)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-38" aw="{{$aw->e38}}">
                                                         </div>
                                                         <span class="aw text-danger q-38 px-2">{{$aw->e38}}</span>
@@ -258,7 +258,7 @@ $aw->e40 = "perfume";
                                                     <td>*</td>
                                                     <td>
                                                         Can reduce temperatures by as much as (39)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-39" aw="{{$aw->e39}}">
                                                         </div>
                                                         <span class="aw text-danger q-39 px-2">{{$aw->e39}}</span>
@@ -276,7 +276,7 @@ $aw->e40 = "perfume";
                                                     <td>*</td>
                                                     <td>
                                                         Add beauty and (40)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-40" aw="{{$aw->e40}}">
                                                         </div>
                                                         <span class="aw text-danger q-40 px-2">{{$aw->e40}}</span>

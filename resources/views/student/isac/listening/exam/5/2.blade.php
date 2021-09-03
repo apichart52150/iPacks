@@ -186,9 +186,9 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td style="vertical-align: middle;">
                                     <span>11. </span>
-                                    <div class="input-con w-75">
+                                    <div class="input-con w-75 py-1">
                                         <div class="dropbox q w-100" show-aw="q-11" aw="{{$aw->e11}}"></div>
                                     </div>
                                 </td>
@@ -201,7 +201,7 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                             <tr>
                                 <td>
                                     <span>12. </span>
-                                    <div class="input-con w-75">
+                                    <div class="input-con w-75 py-1">
                                         <div class="dropbox q w-100" show-aw="q-12" aw="{{$aw->e12}}"></div>
                                     </div>
                                 </td>
@@ -214,7 +214,7 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                             <tr>
                                 <td>
                                     <span>13. </span>
-                                    <div class="input-con w-75">
+                                    <div class="input-con w-75 py-1">
                                         <div class="dropbox q w-100" show-aw="q-13" aw="{{$aw->e13}}"></div>
                                     </div>
                                 </td>
@@ -227,7 +227,7 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                             <tr>
                                 <td>
                                     <span>14. </span>
-                                    <div class="input-con w-75">
+                                    <div class="input-con w-75 py-1">
                                         <div class="dropbox q w-100" show-aw="q-14" aw="{{$aw->e14}}"></div>
                                     </div>
                                 </td>
@@ -240,7 +240,7 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                             <tr>
                                 <td>
                                     <span>15. </span>
-                                    <div class="input-con w-75">
+                                    <div class="input-con w-75 py-1">
                                         <div class="dropbox q w-100" show-aw="q-15" aw="{{$aw->e15}}"></div>
                                     </div>
                                 </td>

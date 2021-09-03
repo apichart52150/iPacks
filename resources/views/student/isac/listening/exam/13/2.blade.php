@@ -99,17 +99,17 @@ $E1_1_5->e3->n = "3";
 $E1_1_5->e4->n = "4";
 $E1_1_5->e5->n = "5";
 
-$E1_1_5->e1->q = "What do we know about the boy, Kaldi?";
-$E1_1_5->e2->q = "Which of the following are not main coffee-growing areas?";
-$E1_1_5->e3->q = "Where does the tree grow best?";
-$E1_1_5->e4->q = "When does the tree get its first flowers?";
-$E1_1_5->e5->q = "Why was instant coffee produced?";
+$E1_1_5->e1->q = "Who were the first people to eat chilies?";
+$E1_1_5->e2->q = "Which of the following is TRUE?";
+$E1_1_5->e3->q = "Which of the following do NOT eat chilies?";
+$E1_1_5->e4->q = "By eating the chili fruits, birds…";
+$E1_1_5->e5->q = "Why are chilies useful for farmers?";
 
-$E1_1_5->e1->aw = "B. He was taking care of some goats in the hills of Yemen.";
-$E1_1_5->e2->aw = "B. North America";
-$E1_1_5->e3->aw = "C. In warm countries which don’t have a cold winter";
-$E1_1_5->e4->aw = "A. After five years";
-$E1_1_5->e5->aw = "B. It has a longer life.";
+$E1_1_5->e1->aw = "A. people in Mexico";
+$E1_1_5->e2->aw = "C. People now know what makes chilies taste hot.";
+$E1_1_5->e3->aw = "B. animals";
+$E1_1_5->e4->aw = "A. are helping to keep the chillie plant alive.";
+$E1_1_5->e5->aw = "C. They are helping farmers to protect their plants.";
 
 $E1_1_5->e1->choice = new stdClass();
 $E1_1_5->e2->choice = new stdClass();
@@ -117,21 +117,21 @@ $E1_1_5->e3->choice = new stdClass();
 $E1_1_5->e4->choice = new stdClass();
 $E1_1_5->e5->choice = new stdClass();
 
-$E1_1_5->e1->choice->a = "A. He ate some of the red fruit which he found.";
-$E1_1_5->e1->choice->b = "B. He was taking care of some goats in the hills of Yemen.";
-$E1_1_5->e1->choice->c = "C. He boiled the fruits and drank the liquid.";
-$E1_1_5->e2->choice->a = "A. Indonesia";
-$E1_1_5->e2->choice->b = "B. North America";
-$E1_1_5->e2->choice->c = "C. Africa";
-$E1_1_5->e3->choice->a = "A. In hot, dry countries";
-$E1_1_5->e3->choice->b = "B. In places with a hot summer and cold winter";
-$E1_1_5->e3->choice->c = "C. In warm countries which don’t have a cold winter";
-$E1_1_5->e4->choice->a = "A. After five years";
-$E1_1_5->e4->choice->b = "B. After twenty-five years";
-$E1_1_5->e4->choice->c = "C. After forty years";
-$E1_1_5->e5->choice->a = "A. It tastes better than normal coffee.";
-$E1_1_5->e5->choice->b = "B. It has a longer life.";
-$E1_1_5->e5->choice->c = "C. People wanted to find a new way of drinking it.";
+$E1_1_5->e1->choice->a = "A. people in Mexico";
+$E1_1_5->e1->choice->b = "B. people in Spain";
+$E1_1_5->e1->choice->c = "C. people in Portugal";
+$E1_1_5->e2->choice->a = "A. People are trying to discover what gives chilies their hot taste.";
+$E1_1_5->e2->choice->b = "B. Nobody knows what gives chilies their hot taste.";
+$E1_1_5->e2->choice->c = "C. People now know what makes chilies taste hot.";
+$E1_1_5->e3->choice->a = "A. people";
+$E1_1_5->e3->choice->b = "B. animals";
+$E1_1_5->e3->choice->c = "C. birds";
+$E1_1_5->e4->choice->a = "A. are helping to keep the chillie plant alive.";
+$E1_1_5->e4->choice->b = "B. might drop from the sky and die.";
+$E1_1_5->e4->choice->c = "C. are in danger of killing the chilli plants.";
+$E1_1_5->e5->choice->a = "A. Small animals eat the chilies and leave the farmer’s plants alone.";
+$E1_1_5->e5->choice->b = "B. The fact that birds drop chili seeds all over the country";
+$E1_1_5->e5->choice->c = "C. They are helping farmers to protect their plants.";
 
 $E2_1_5 = new stdClass();
 $E2_1_5->e1 = new stdClass();
@@ -146,17 +146,17 @@ $E2_1_5->e3->n = "3";
 $E2_1_5->e4->n = "4";
 $E2_1_5->e5->n = "5";
 
-$E2_1_5->e1->q = "Why was Kaldi surprised that night?";
-$E2_1_5->e2->q = "Are we sure this is how coffee was first discovered?";
-$E2_1_5->e3->q = "When did coffee first appear in Europe?";
-$E2_1_5->e4->q = "Which sentence shows that coffee was popular in Europe?";
-$E2_1_5->e5->q = "How tall does the plant grow in the wild?";
+$E2_1_5->e1->q = "How long have people been eating chilies?";
+$E2_1_5->e2->q = "When did chilies arrive in other parts of the world?";
+$E2_1_5->e3->q = "When people eat chilies, what feeling do they get?";
+$E2_1_5->e4->q = "Why don’t animals eat chilies?";
+$E2_1_5->e5->q = "Which part of the chilies do birds drop far away?";
 
-$E2_1_5->e1->aw = "The goats didn’t sleep at all";
-$E2_1_5->e2->aw = "No: ‘if we believe the story’";
-$E2_1_5->e3->aw = "at the end of the sixteenth century";
-$E2_1_5->e4->aw = "famous people of the day used to spend much of their time at coffee houses";
-$E2_1_5->e5->aw = "from two to ten metres or taller";
+$E2_1_5->e1->aw = "nine thousand years";
+$E2_1_5->e2->aw = "around five hundred years ago";
+$E2_1_5->e3->aw = "hot and burning";
+$E2_1_5->e4->aw = "They don’t like the hot and burning feeling";
+$E2_1_5->e5->aw = "the seeds";
 
 @endphp
 <div class="row">
@@ -207,16 +207,16 @@ $E2_1_5->e5->aw = "from two to ten metres or taller";
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>
+                                <td class="pt-2">
                                     <b>Answer: </b>
                                     <div class="input-con w-75">
                                         <input type="text" class="q-val form-control w-100" show-aw="E2_1_5-{{$index}}" aw="{{$E2_1_5->aw}}">
                                     </div>
                                 </td>
                             </tr>
-                            <tr class="aw">
-                                <td></td>
-                                <td class="aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
+                            <tr class="">
+                                <td class="pb-2"></td>
+                                <td class="pb-2 aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
                             </tr>
                             @endforeach
                         </table>

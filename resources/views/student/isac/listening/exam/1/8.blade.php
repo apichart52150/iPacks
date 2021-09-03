@@ -283,7 +283,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                         </tr>
                         <tr>
                             <td>6.</td>
-                            <td colspan="2">
+                            <td class="pb-2" colspan="2">
                                 Write a summary of the talk in about 100 - 150 words.
                             </td>
                         </tr>

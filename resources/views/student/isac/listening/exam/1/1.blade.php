@@ -279,10 +279,10 @@ $caller_4->e6->aw = ["114%","79%"];
                             <td class="pr-3">{{$caller_4->q}}</td>
 
                             @foreach($caller_4->aw as $index2 => $aw)
-                            <td>
+                            <td class="pb-2 px-1">
                                 <input type="text" class="form-control caller_4" aw="{{$aw}}" show-aw="caller_4-{{$index}}-{{$index2}}" autocomplete="off">
                             </td>
-                            <td>
+                            <td class="pb-2 px-1">
                                 <span class="pl-2 px-0 aw caller_4-{{$index}}-{{$index2}} text-danger">{{$aw}}</span>
                             </td>
                             @endforeach
@@ -325,7 +325,7 @@ $caller_4->e6->aw = ["114%","79%"];
         let new_text = $(item).html()
         let aw = $(item).attr('aw').split("***")
         for (let i = 0; i < text.split("...").length - 1; i++) {
-            let input = '<div class="input-con input-con2 pb-1 "><input type="text" class="input-text caller_3" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
+            let input = '<div class="input-con input-con2 pb-2 "><input type="text" class="input-text caller_3" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
                 '<labal class="w-100 px-2 aw caller_3-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'
             new_text = new_text.replace("...", input)
         }

@@ -314,7 +314,7 @@ $caller_5_b->e5->aw = "to find better positions";
                             <td>{{$caller_2->q}}</td>
                             <td class="px-4">=</td>
                             <td>
-                                <div class="input-con w-75">
+                                <div class="input-con w-75 py-1">
                                     <input type="text" class="input-text q-text w-100" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
                                 </div>
                             </td>
@@ -360,7 +360,7 @@ $caller_5_b->e5->aw = "to find better positions";
                                     {{$index2}}. {{$choice}}
                                 </span>
                             </td>
-                            <td>
+                            <td class="pb-2">
                                 @if($choice == "False")
                                 <input type="text" class="form-control w-75 caller_3-input-{{$index}}-{{$index2}}">
                                 @endif
@@ -415,7 +415,7 @@ $caller_5_b->e5->aw = "to find better positions";
                     <span>
                         @foreach($caller_5_a as $index => $caller_5_a)
                         {{$caller_5_a->q}}
-                        <div class="input-con pb-1">
+                        <div class="input-con py-1">
                             <input type="text" class="form-control q-text" show-aw="caller_4-a-{{$index}}" aw="{{$caller_5_a->aw}}">
                         </div>
                         <span class="aw text-danger px-3 caller_4-a-{{$index}}">{{$caller_5_a->aw}}</span>
@@ -429,7 +429,7 @@ $caller_5_b->e5->aw = "to find better positions";
                     <span>
                         @foreach($caller_5_b as $index => $caller_5_b)
                         {{$caller_5_b->q}}
-                        <div class="input-con pb-1">
+                        <div class="input-con py-1">
                             <input type="text" class="form-control q-text" show-aw="caller_4-a-{{$index}}" aw="{{$caller_5_b->aw}}">
                         </div>
                         <span class="aw text-danger px-3 caller_4-a-{{$index}}">{{$caller_5_b->aw}}</span>
@@ -474,7 +474,7 @@ $caller_5_b->e5->aw = "to find better positions";
         let new_text = $(item).html()
         let aw = $(item).attr('aw').split("***")
         for (let i = 0; i < text.split("...").length - 1; i++) {
-            let input = '<div class=" input-con caller_1 pb-1 m-0 ">' +
+            let input = '<div class=" input-con caller_1 py-2 m-0 ">' +
                 '<div class="dropbox q" class="caller_1" aw="' + aw[i] + '" show-aw="caller_1-' + idx + '-' + i + '"></div>' +
                 '</div>' +
                 '<labal class=" px-2 aw caller_1-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'

@@ -230,7 +230,7 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 </td>
                             </tr>
                             <tr>
-                                <td class="map">
+                                <td class="map px-2">
                                     Register interest on-line
                                 </td>
                             </tr>
@@ -240,9 +240,9 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 </td>
                             </tr>
                             <tr>
-                                <td class="map">
+                                <td class="map px-2">
                                     Receive personal registration code and agree to (16)
-                                    <div class="input-con">
+                                    <div class="input-con py-2">
                                         <div class="dropbox q" show-aw="q-16" aw="{{$aw->e16}}"></div>
                                     </div>
                                     <span class="aw text-danger q-16 px-2">{{$aw->e16}}</span>
@@ -264,9 +264,9 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 </td>
                             </tr>
                             <tr>
-                                <td class="map">
+                                <td class="map px-2">
                                     Submit completed form and attach (17)
-                                    <div class="input-con">
+                                    <div class="input-con py-2">
                                         <div class="dropbox q" show-aw="q-17" aw="{{$aw->e17}}"></div>
                                     </div>
                                     <span class="aw text-danger q-17 px-2">{{$aw->e17}}</span>
@@ -278,9 +278,9 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 </td>
                             </tr>
                             <tr>
-                                <td class="map">
+                                <td class="map px-2">
                                     Receive confirmation and invitation to attend (18)
-                                    <div class="input-con">
+                                    <div class="input-con py-2">
                                         <div class="dropbox q" show-aw="q-18" aw="{{$aw->e18}}"></div>
                                     </div>
                                     <span class="aw text-danger q-18 px-2">{{$aw->e18}}</span>
@@ -292,9 +292,9 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 </td>
                             </tr>
                             <tr>
-                                <td class="map">
+                                <td class="map px-2">
                                     Bring (19)
-                                    <div class="input-con">
+                                    <div class="input-con py-2">
                                         <div class="dropbox q" show-aw="q-19" aw="{{$aw->e19}}"></div>
                                     </div>
                                     <span class="aw text-danger q-19 px-2">{{$aw->e19}}</span>
@@ -307,9 +307,9 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 </td>
                             </tr>
                             <tr>
-                                <td class="map">
+                                <td class="map px-2">
                                     Attend (20)
-                                    <div class="input-con">
+                                    <div class="input-con py-2">
                                         <div class="dropbox q" show-aw="q-20" aw="{{$aw->e20}}"></div>
                                     </div>
                                     <span class="aw text-danger q-20 px-2">{{$aw->e20}}</span>

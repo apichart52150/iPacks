@@ -103,7 +103,7 @@ $caller_2->e3->aw = "Between 10 and 15 degrees Celsius";
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h5>As you listen to the recording a second time, take notes.
+                    <h5 class="pb-2">As you listen to the recording a second time, take notes.
                         Put your notes away for a while; then write a summary of the lecture in <b>about 150 words</b>.</h5>
                     <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                     <h5 class="mt-3 aw text-success">Landscaping for Climatic Conditions (possible answer)</h5>

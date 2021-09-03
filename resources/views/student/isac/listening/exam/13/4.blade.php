@@ -99,17 +99,17 @@ $E1_1_5->e3->n = "3";
 $E1_1_5->e4->n = "4";
 $E1_1_5->e5->n = "5";
 
-$E1_1_5->e1->q = "Which one is famous for its beer?";
-$E1_1_5->e2->q = "Which country is the writer’s favorite food from?";
-$E1_1_5->e3->q = "Which one is famous for its fruit?";
-$E1_1_5->e4->q = "Where did spaghetti first come from?";
-$E1_1_5->e5->q = "What is Switzerland famous for?";
+$E1_1_5->e1->q = "Which of these can you usually NOT find in kimchi?";
+$E1_1_5->e2->q = "Why did people start to cover the vegetables in salt?";
+$E1_1_5->e3->q = "What was kimchi made of in the fourteenth century?";
+$E1_1_5->e4->q = "Why is kimchi becoming so popular?";
+$E1_1_5->e5->q = "Which of these sentences is TRUE?";
 
-$E1_1_5->e1->aw = "A. Germany";
-$E1_1_5->e2->aw = "A. Italy";
-$E1_1_5->e3->aw = "B. Spain";
-$E1_1_5->e4->aw = "C. China";
-$E1_1_5->e5->aw = "A. Cheese and hot chocolate";
+$E1_1_5->e1->aw = "B. fruit";
+$E1_1_5->e2->aw = "A. To stop them from going bad";
+$E1_1_5->e3->aw = "B. Vegetables and things like onions";
+$E1_1_5->e4->aw = "C. It tastes very good.";
+$E1_1_5->e5->aw = "C. Kimchi is becoming popular in many countries outside of Korea.";
 
 $E1_1_5->e1->choice = new stdClass();
 $E1_1_5->e2->choice = new stdClass();
@@ -117,21 +117,21 @@ $E1_1_5->e3->choice = new stdClass();
 $E1_1_5->e4->choice = new stdClass();
 $E1_1_5->e5->choice = new stdClass();
 
-$E1_1_5->e1->choice->a = "A. Germany";
-$E1_1_5->e1->choice->b = "B. England";
-$E1_1_5->e1->choice->c = "C. Spain";
-$E1_1_5->e2->choice->a = "A. Italy";
-$E1_1_5->e2->choice->b = "B. Spain";
-$E1_1_5->e2->choice->c = "C. England";
-$E1_1_5->e3->choice->a = "A. Germany";
-$E1_1_5->e3->choice->b = "B. Spain";
-$E1_1_5->e3->choice->c = "C. Italy";
-$E1_1_5->e4->choice->a = "A. Italy";
-$E1_1_5->e4->choice->b = "B. England";
-$E1_1_5->e4->choice->c = "C. China";
-$E1_1_5->e5->choice->a = "A. Cheese and hot chocolate";
-$E1_1_5->e5->choice->b = "B. Wine";
-$E1_1_5->e5->choice->c = "C. Snails and frogs' legs";
+$E1_1_5->e1->choice->a = "A. fish sauce";
+$E1_1_5->e1->choice->b = "B. fruit";
+$E1_1_5->e1->choice->c = "C. vegetables";
+$E1_1_5->e2->choice->a = "A. To stop them from going bad";
+$E1_1_5->e2->choice->b = "B. Because the ground was hard";
+$E1_1_5->e2->choice->c = "C. Because salt is healthy";
+$E1_1_5->e3->choice->a = "A. Cabbage and chillies";
+$E1_1_5->e3->choice->b = "B. Vegetables and things like onions";
+$E1_1_5->e3->choice->c = "C. Vegetables and chillies";
+$E1_1_5->e4->choice->a = "A. There’s nothing to show this.";
+$E1_1_5->e4->choice->b = "B. Doctors are sure it keeps you healthy.";
+$E1_1_5->e4->choice->c = "C. It tastes very good.";
+$E1_1_5->e5->choice->a = "A. Kimchi is eaten in Korea only.";
+$E1_1_5->e5->choice->b = "B. People in many countries have been eating kimchi since the seventh century.";
+$E1_1_5->e5->choice->c = "C. Kimchi is becoming popular in many countries outside of Korea.";
 
 $E2_1_5 = new stdClass();
 $E2_1_5->e1 = new stdClass();
@@ -146,17 +146,17 @@ $E2_1_5->e3->n = "3";
 $E2_1_5->e4->n = "4";
 $E2_1_5->e5->n = "5";
 
-$E2_1_5->e1->q = "What do frogs’ legs taste like?";
-$E2_1_5->e2->q = "Who first brought spaghetti to Italy?";
-$E2_1_5->e3->q = "How long have they been eating spaghetti in Italy?";
-$E2_1_5->e4->q = "Which drink is popular in England?";
-$E2_1_5->e5->q = "What is Spain famous for?";
+$E2_1_5->e1->q = "Why was it difficult to grow vegetables in winter?";
+$E2_1_5->e2->q = "When did people start covering vegetables with salt?";
+$E2_1_5->e3->q = "When did people start to add other things to the vegetables?";
+$E2_1_5->e4->q = "When did people add chillies?";
+$E2_1_5->e5->q = "When did cabbage become the main part of kimchi?";
 
-$E2_1_5->e1->aw = "chicken";
-$E2_1_5->e2->aw = "Marco Polo";
-$E2_1_5->e3->aw = "more than seven hundred years";
-$E2_1_5->e4->aw = "hot tea";
-$E2_1_5->e5->aw = "juicy oranges";
+$E2_1_5->e1->aw = "The ground was so hard";
+$E2_1_5->e2->aw = "in the 7 century, almost 1400 years ago";
+$E2_1_5->e3->aw = "in the twelfth century";
+$E2_1_5->e4->aw = "only in the eighteenth century";
+$E2_1_5->e5->aw = "less than two hundred years ago";
 
 @endphp
 <div class="row">
@@ -207,16 +207,16 @@ $E2_1_5->e5->aw = "juicy oranges";
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>
+                                <td class="pt-2">
                                     <b>Answer: </b>
                                     <div class="input-con w-75">
                                         <input type="text" class="q-val form-control w-100" show-aw="E2_1_5-{{$index}}" aw="{{$E2_1_5->aw}}">
                                     </div>
                                 </td>
                             </tr>
-                            <tr class="aw">
-                                <td></td>
-                                <td class="aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
+                            <tr class="">
+                                <td class="pb-2"></td>
+                                <td class="pb-2 aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
                             </tr>
                             @endforeach
                         </table>

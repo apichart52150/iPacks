@@ -239,20 +239,16 @@ $E3_1_5_choice->ch5 = "exercise";
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>
+                                <td class="pt-2">
                                     <b>Answer: </b>
                                     <div class="input-con w-75">
-                                        @if($E2_1_5->n == "5")
-                                        <input type="text" class="q-val2 form-control w-100" show-aw="E2_1_5-{{$index}}" aw="{{$E2_1_5->aw}}">
-                                        @else
                                         <input type="text" class="q-val form-control w-100" show-aw="E2_1_5-{{$index}}" aw="{{$E2_1_5->aw}}">
-                                        @endif
                                     </div>
                                 </td>
                             </tr>
-                            <tr class="aw">
-                                <td></td>
-                                <td class="aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
+                            <tr class="">
+                                <td class="pb-2"></td>
+                                <td class="pb-2 aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
                             </tr>
                             @endforeach
                         </table>
@@ -322,7 +318,7 @@ $E3_1_5_choice->ch5 = "exercise";
 <script>
     $('.q-replace').each((idx, item) => {
         let text = $(item).html()
-        let input = '<div class="input-con w-25 input-con2">' +
+        let input = '<div class="input-con w-25 py-1 input-con2">' +
             '<div class="dropbox q w-100" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
             '</div>' +
             '<span class="aw px-2 ' + $(item).attr('show-aw') + ' text-danger">' + $(item).attr('aw') + '</span>'

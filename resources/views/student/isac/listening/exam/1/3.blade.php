@@ -111,7 +111,7 @@
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h5 class="mt-3">Now, listen to the lecture The Risks of Alcohol Abuse. Write a summary of the lecture in approximately 150 words.</h5>
+                    <h5 class="mt-3 pb-2">Now, listen to the lecture The Risks of Alcohol Abuse. Write a summary of the lecture in approximately 150 words.</h5>
                     <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                     <h5 class="mt-3 aw text-success">Summary of lecture (possible answer) </h5>
                     <span class="aw text-success">

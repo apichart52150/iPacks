@@ -251,7 +251,7 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
                             <td></td>
                             <td>
                                 <span>{{$caller_2->n}}.</span>
-                                <div class="input-con w-75">
+                                <div class="input-con w-75 py-1">
                                     <input type="text" class="w-100 form-control q-text" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
                                 </div>
                             </td>
@@ -265,7 +265,7 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
                         @endforeach
                         <tr>
                             <td class="pt-3">3. </td>
-                            <td class="pt-3">As you listen again to the news, take notes and write a summary of about 150 words about the
+                            <td class="pt-3 pb-2">As you listen again to the news, take notes and write a summary of about 150 words about the
                                 Asian currency crisis and its impact on share markets. </td>
                         </tr>
                         <tr>

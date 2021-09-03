@@ -207,16 +207,16 @@ $E2_1_5->e5->aw = "The ‘spirit’ of the food";
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>
+                                <td class="pt-2">
                                     <b>Answer: </b>
                                     <div class="input-con w-75">
                                         <input type="text" class="q-val form-control w-100" show-aw="E2_1_5-{{$index}}" aw="{{$E2_1_5->aw}}">
                                     </div>
                                 </td>
                             </tr>
-                            <tr class="aw">
-                                <td></td>
-                                <td class="aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
+                            <tr class="">
+                                <td class="pb-2"></td>
+                                <td class="pb-2 aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
                             </tr>
                             @endforeach
                         </table>

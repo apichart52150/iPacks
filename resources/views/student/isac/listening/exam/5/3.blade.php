@@ -132,7 +132,7 @@ $aw->e30 = "by ship";
                                                     <th>Degree:</th>
                                                     <td>
                                                         Major: Linguistics Minor: (21)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-21" aw="{{$aw->e21}}">
                                                         </div>
                                                         <span class="aw text-danger q-21 px-2">{{$aw->e21}}</span>
@@ -148,7 +148,7 @@ $aw->e30 = "by ship";
                                                     <th>Location: </th>
                                                     <td>
                                                         (22)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-22" aw="{{$aw->e22}}">
                                                         </div>
                                                         <span class="aw text-danger q-22 px-2">{{$aw->e22}}</span>
@@ -158,7 +158,7 @@ $aw->e30 = "by ship";
                                                     <th>Dates: </th>
                                                     <td>
                                                         January 2009 - (23)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-23" aw="{{$aw->e23}}">
                                                         </div>
                                                         <span class="aw text-danger q-23 px-2">{{$aw->e23}}</span>
@@ -174,7 +174,7 @@ $aw->e30 = "by ship";
                                                     <th>Ages taught: </th>
                                                     <td>
                                                         (24)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-24" aw="{{$aw->e24}}">
                                                         </div>
                                                         <span class="aw text-danger q-24 px-2">{{$aw->e24}}</span>
@@ -184,7 +184,7 @@ $aw->e30 = "by ship";
                                                     <th>Subjects taught: </th>
                                                     <td>
                                                         Music and (25)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-25" aw="{{$aw->e25}}">
                                                         </div>
                                                         <span class="aw text-danger q-25 px-2">{{$aw->e25}}</span>
@@ -196,7 +196,7 @@ $aw->e30 = "by ship";
                                                         In charge of school choir
                                                         <br>
                                                         (26)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-26" aw="{{$aw->e26}}">
                                                         </div>
                                                         <span class="aw text-danger q-26 px-2">{{$aw->e26}}</span>
@@ -208,25 +208,25 @@ $aw->e30 = "by ship";
                                                         Secondary School
                                                         <br>
                                                         (27)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-27" aw="{{$aw->e27}}">
                                                         </div>
                                                         <span class="aw text-danger q-27 px-2">{{$aw->e27}}</span>
                                                         <br>
                                                         Shared accommodation or (28)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-28" aw="{{$aw->e28}}">
                                                         </div>
                                                         <span class="aw text-danger q-28 px-2">{{$aw->e28}}</span>
                                                         <br>
                                                         Departure date: (29)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-29" aw="{{$aw->e29}}">
                                                         </div>
                                                         <span class="aw text-danger q-29 px-2">{{$aw->e29}}</span>
                                                         <br>
                                                         Travel preference: (30)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-30" aw="{{$aw->e30}}">
                                                         </div>
                                                         <span class="aw text-danger q-30 px-2">{{$aw->e30}}</span>

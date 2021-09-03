@@ -118,9 +118,9 @@
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <span>
+                    <p class="pb-2">
                         6. Write a summary of the lecture in <b>approximately 150 words</b>
-                    </span>
+                                </p>
                     <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                     <h5 class="mt-3 aw text-success">Summary of Lecture (possible answer) </h5>
                     <span class="aw text-success">

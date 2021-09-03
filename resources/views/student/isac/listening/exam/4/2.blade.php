@@ -138,58 +138,58 @@ $Q17_20->e4->aw = "False";
                                     <div class="w-100 d-flex justify-content-center">
                                         <table>
                                             <tr>
-                                                <td>
+                                                <td class="pb-2">
                                                     (11)
                                                     <div class="input-con w-50">
                                                         <input type="text" class="q-val w-100 form-control" show-aw="q-11" aw="{{$aw->e11}}">
                                                     </div>
                                                     <span class="aw text-danger q-11 px-2">{{$aw->e11}}</span>
                                                 </td>
-                                                <td class="pl-2 pr-4">Main Library </td>
-                                                <td>
+                                                <td style="vertical-align: middle;" class="pl-2 pr-4">Main Library </td>
+                                                <td class="pb-2">
                                                     (12)
                                                     <div class="input-con w-50">
                                                         <input type="text" class="q-val w-100 form-control" show-aw="q-12" aw="{{$aw->e12}}">
                                                     </div>
                                                     <span class="aw text-danger q-12 px-2">{{$aw->e12}}</span>
                                                 </td>
-                                                <td class="pl-2 pr-4">Faculty of Medicine</td>
+                                                <td style="vertical-align: middle;" class="pl-2 pr-4">Faculty of Medicine</td>
                                             </tr>
                                             <tr>
-                                                <td>
+                                                <td class="pb-2">
                                                     (13)
                                                     <div class="input-con w-50">
                                                         <input type="text" class="q-val w-100 form-control" show-aw="q-13" aw="{{$aw->e13}}">
                                                     </div>
                                                     <span class="aw text-danger q-13 px-2">{{$aw->e13}}</span>
                                                 </td>
-                                                <td class="pl-2 pr-4">Main Library </td>
-                                                <td>
+                                                <td style="vertical-align: middle;" class="pl-2 pr-4">Church </td>
+                                                <td class="pb-2">
                                                     (14)
                                                     <div class="input-con w-50">
                                                         <input type="text" class="q-val w-100 form-control" show-aw="q-14" aw="{{$aw->e14}}">
                                                     </div>
                                                     <span class="aw text-danger q-14 px-2">{{$aw->e14}}</span>
                                                 </td>
-                                                <td class="pl-2 pr-4">Faculty of Medicine</td>
+                                                <td style="vertical-align: middle;" class="pl-2 pr-4">Sports Ground</td>
                                             </tr>
                                             <tr>
-                                                <td>
+                                                <td class="pb-2">
                                                     (15)
                                                     <div class="input-con w-50">
                                                         <input type="text" class="q-val w-100 form-control" show-aw="q-15" aw="{{$aw->e15}}">
                                                     </div>
                                                     <span class="aw text-danger q-15 px-2">{{$aw->e15}}</span>
                                                 </td>
-                                                <td class="pl-2 pr-4">Main Library </td>
-                                                <td>
+                                                <td style="vertical-align: middle;" class="pl-2 pr-4">Concert Hall</td>
+                                                <td class="pb-2">
                                                     (16)
                                                     <div class="input-con w-50">
                                                         <input type="text" class="q-val w-100 form-control" show-aw="q-16" aw="{{$aw->e16}}">
                                                     </div>
                                                     <span class="aw text-danger q-16 px-2">{{$aw->e16}}</span>
                                                 </td>
-                                                <td class="pl-2 pr-4">Faculty of Medicine</td>
+                                                <td style="vertical-align: middle;" class="pl-2 pr-4">Student Union</td>
                                             </tr>
                                         </table>
                                     </div>

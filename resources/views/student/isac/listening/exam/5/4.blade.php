@@ -266,7 +266,7 @@ $Q36_40->e5->aw = "5 dollar";
 <script>
     $('.Q36_40').each((idx, item) => {
         let text = $(item).html()
-        let input = '<div class="input-con">' +
+        let input = '<div class="input-con py-1">' +
             '<input type="text" class="q-val form-control" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
             '</div>' +
             '<span class="aw text-danger ' + $(item).attr('show-aw') + ' px-2">' + $(item).attr('aw') + '</span>'

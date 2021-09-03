@@ -91,7 +91,7 @@
                         </tr>
                         <tr>
                             <td>5.</td>
-                            <td>
+                            <td class="pb-2">
                                 Write a short summary of the main events and achievements of each of the two men
                                 <b>(roughly 120 - 150 words each)</b>. Use the discourse markers which you learnt earlier
                                 in this course to give coherence to your summary.

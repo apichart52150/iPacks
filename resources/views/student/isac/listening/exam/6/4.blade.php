@@ -251,7 +251,7 @@ $Q38_40->e3->aw = "mountaineers";
 <script>
     $('.Q38_40').each((idx, item) => {
         let text = $(item).html()
-        let input = '<div class="input-con">' +
+        let input = '<div class="input-con py-1">' +
             '<input type="text" class="form-control w-100 q-val" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
             '</div>' +
             '<span class="aw text-danger ' + $(item).attr('show-aw') + ' px-2">' + $(item).attr('aw') + '</span>'

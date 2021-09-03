@@ -217,8 +217,8 @@ $caller_1->e16->aw->i = "The people most affected by relocation of factories fro
                         @foreach($caller_1->aw as $index3 => $aw)
                         <tr>
                             <td></td>
-                            <td style="width: 65px;"><b>Answer: </b></td>
-                            <td>
+                            <td style="width: 65px; vertical-align: middle;"><b>Answer: </b></td>
+                            <td class="py-1">
                                 <input type="text" class="w-75 form-control q-text" index="{{$index}}" show-aw="caller_1-{{$index}}-{{$index3}}" aw="{{$aw}}">
                             </td>
                         </tr>
