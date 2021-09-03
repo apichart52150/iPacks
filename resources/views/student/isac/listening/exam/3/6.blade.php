@@ -74,6 +74,10 @@
         width: 500px;
         padding-left: 10px;
     }
+
+    .event-click {
+        cursor: pointer;
+    }
 </style>
 @php
 
@@ -270,8 +274,8 @@ $caller_5_b->e5->aw = "to find better positions";
         <div class="card-box text-dark font-16">
             <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
             <div class="row">
+
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
                     <span>
                         The words in the box below appear in the listening script. As you listen to the script for the first
                         time, complete the sentences (taken from the script) with these words:
@@ -297,29 +301,34 @@ $caller_5_b->e5->aw = "to find better positions";
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 2</h4>
+                <div class="mt-4 col-lg-12">
                     <span>
                         Now match the words in the box with their correct meaning:
                     </span>
-                    <table>
+                    <table class="w-100">
                         @foreach($caller_2 as $index => $caller_2)
                         <tr>
                             <td style="width: 20px;">{{$caller_2->n}}.</td>
                             <td>{{$caller_2->q}}</td>
                             <td class="px-4">=</td>
                             <td>
-                                <div class="input-con">
+                                <div class="input-con w-75">
                                     <input type="text" class="input-text q-text w-100" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
                                 </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
                                 <span class="pl-4 aw text-danger caller_2-{{$index}}">{{$caller_2->aw}}</span>
                             </td>
                         </tr>
                         @endforeach
                     </table>
                 </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 3</h4>
+                <div class="mt-4 col-lg-12">
                     <table class="w-100">
                         <tr>
                             <td colspan="4">
@@ -341,15 +350,17 @@ $caller_5_b->e5->aw = "to find better positions";
                             <td></td>
                             <td style="width: 1px;">
                                 <div class="form-check">
-                                    <input class="form-check-input position-static q-check caller_3-{{$index}}-{{$index2}}" text="caller_3-input-{{$index}}-{{$index2}}" type="radio" name="caller_3-{{$index}}" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}" value="{{$choice}}">
+                                    <input onclick="show_input('caller_3-input-{{$index}}-{{$index2}}','{{$choice}}');" class="form-check-input event-click position-static q-check caller_3-{{$index}}-{{$index2}}" text="caller_3-input-{{$index}}-{{$index2}}" type="radio" name="caller_3-{{$index}}" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}" value="{{$choice}}">
                                 </div>
                             </td>
-                            <td style="width: 100px;" onclick="checkRadio('caller_3-{{$index}}-{{$index2}}')">
-                                {{$index2}}. {{$choice}}
+                            <td style="width: 100px;">
+                                <span class="event-click" onclick="checkRadio('caller_3-{{$index}}-{{$index2}}','caller_3-input-{{$index}}-{{$index2}}','{{$choice}}')">
+                                    {{$index2}}. {{$choice}}
+                                </span>
                             </td>
                             <td>
                                 @if($choice == "False")
-                                <input type="text" class="caller_3-input-{{$index}}-{{$index2}}">
+                                <input type="text" class="form-control w-75 caller_3-input-{{$index}}-{{$index2}}">
                                 @endif
                             </td>
                         </tr>
@@ -362,8 +373,7 @@ $caller_5_b->e5->aw = "to find better positions";
                         @endforeach
                     </table>
                 </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 4</h4>
+                <div class="mt-4 col-lg-12">
                     <table class="w-100">
                         <tr>
                             <td colspan="3">
@@ -380,10 +390,12 @@ $caller_5_b->e5->aw = "to find better positions";
                             <td></td>
                             <td style="width: 20px;">
                                 <div class="form-check">
-                                    <input class="form-check-input position-static q-check caller_4-{{$index}}-{{$index2}}" type="radio" name="caller_4-{{$index}}" show-aw="caller_4-{{$index}}" aw="{{$caller_4_1->aw}}" value="{{$index2}}. {{$caller_4_2}}">
+                                    <input class="form-check-input event-click position-static q-check caller_4-{{$index}}-{{$index2}}" type="radio" name="caller_4-{{$index}}" show-aw="caller_4-{{$index}}" aw="{{$caller_4_1->aw}}" value="{{$index2}}. {{$caller_4_2}}">
                                 </div>
                             </td>
-                            <td onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$index2}}. {{$caller_4_2}}</td>
+                            <td>
+                                <span class="event-click" onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$index2}}. {{$caller_4_2}}</span>
+                            </td>
                         </tr>
                         @endforeach
                         <tr class="aw">
@@ -393,8 +405,7 @@ $caller_5_b->e5->aw = "to find better positions";
                         @endforeach
                     </table>
                 </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 5</h4>
+                <div class="mt-4 col-lg-12">
                     <h5>Complete the following quotations </h5>
                     <br>
                     <b>a. Bill Hayden said:</b>
@@ -403,7 +414,7 @@ $caller_5_b->e5->aw = "to find better positions";
                         @foreach($caller_5_a as $index => $caller_5_a)
                         {{$caller_5_a->q}}
                         <div class="input-con pb-1">
-                            <input type="text" class="q-text" show-aw="caller_4-a-{{$index}}" aw="{{$caller_5_a->aw}}">
+                            <input type="text" class="form-control q-text" show-aw="caller_4-a-{{$index}}" aw="{{$caller_5_a->aw}}">
                         </div>
                         <span class="aw text-danger px-3 caller_4-a-{{$index}}">{{$caller_5_a->aw}}</span>
                         @endforeach
@@ -417,7 +428,7 @@ $caller_5_b->e5->aw = "to find better positions";
                         @foreach($caller_5_b as $index => $caller_5_b)
                         {{$caller_5_b->q}}
                         <div class="input-con pb-1">
-                            <input type="text" class="q-text" show-aw="caller_4-a-{{$index}}" aw="{{$caller_5_b->aw}}">
+                            <input type="text" class="form-control q-text" show-aw="caller_4-a-{{$index}}" aw="{{$caller_5_b->aw}}">
                         </div>
                         <span class="aw text-danger px-3 caller_4-a-{{$index}}">{{$caller_5_b->aw}}</span>
                         @endforeach
@@ -447,8 +458,8 @@ $caller_5_b->e5->aw = "to find better positions";
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -473,11 +484,15 @@ $caller_5_b->e5->aw = "to find better positions";
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check:checked').each((idx, item) => {
             let aw = ""
@@ -486,17 +501,24 @@ $caller_5_b->e5->aw = "to find better positions";
             else
                 aw = $(item).val()
             if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
     }
 
-    function checkRadio(x) {
+    function show_error(item) {
+        $(item).addClass('border border-danger')
+    }
+
+    function checkRadio(x, input, value) {
         $('.' + x).prop("checked", true);
     }
 

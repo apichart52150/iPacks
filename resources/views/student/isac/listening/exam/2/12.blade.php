@@ -112,7 +112,7 @@
                             <td class="py-2"></td>
                             <td class="py-2" colspan="2">
                                 <h5>Part 1 Janet Holmes-a-Court </h5>
-                                <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                                <textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea>
                                 <h5 class="mt-3 aw text-success">Summaries (possible answer)</h5>
                                 <span class="aw text-success">
                                     She was born in 1943 and lived in Perth with her parents who were both active in politics. In 1956 she
@@ -152,8 +152,8 @@
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -184,19 +184,27 @@
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
-        console.log("aw", aw)
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

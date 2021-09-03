@@ -65,9 +65,9 @@ $caller_1->e2->q = "Although this holistic approach to designing a house and blo
 $caller_1->e3->q = "When the land-use map has been drawn, the next step is to show the directions of the prevailing winds for both summer";
 $caller_1->e4->q = "It is the east and west sides of a house which need shading the most, especially when the angle of the sun is low in the early morning";
 
-$caller_1->e1->aw = "but also in the winter months, when the winds can be very cold.";
-$caller_1->e2->aw = "it is also effective in planning established homes.";
-$caller_1->e3->aw = "and winter.";
+$caller_1->e1->aw = "To take full advantage of views";
+$caller_1->e2->aw = "To avoid the risk of fire";
+$caller_1->e3->aw = "Between 10 and 15 degrees Celsius";
 $caller_1->e4->aw = "and in the late afternoon.";
 
 @endphp
@@ -77,7 +77,6 @@ $caller_1->e4->aw = "and in the late afternoon.";
             <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <table class="w-100">
                         <tr>
                             <td colspan="3">
@@ -94,7 +93,7 @@ $caller_1->e4->aw = "and in the late afternoon.";
                             <td></td>
                             <td style="width: 60px;"><b>Answer: </b></td>
                             <td>
-                                <input type="text" class="q-text w-75" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}">
+                                <input type="text" class="form-control q-text w-75" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}">
                             </td>
                         </tr>
                         <tr>
@@ -128,8 +127,8 @@ $caller_1->e4->aw = "and in the late afternoon.";
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -137,33 +136,31 @@ $caller_1->e4->aw = "and in the late afternoon.";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    // $('.q-caller-2').each((idx, item) => {
-    //     let text = $(item).html()
-    //     if (text == "...") {
-    //         let input = '<div class="input-con">' +
-    //             '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-    //             '</div>'
-    //         text = text.replace("...", input)
-    //         $(item).html(input)
-    //     }
-    // })
-
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             console.log($(item).val().trim().toUpperCase())
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
 

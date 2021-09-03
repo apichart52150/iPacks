@@ -152,7 +152,6 @@ $caller_1->j->choice = ["18.8","80.8"];
             <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <h5>Circle the numbers you hear: </h5>
                     <div class="row">
                         @foreach($caller_1 as $caller_1)
@@ -201,8 +200,8 @@ $caller_1->j->choice = ["18.8","80.8"];
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -222,27 +221,22 @@ $caller_1->j->choice = ["18.8","80.8"];
 
     $('#check-answer').on('click', () => {
         $('.caller_1:checked').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
-        $('.caller_2').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
-        $('.caller_3').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
-        $('.caller_4').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw').toUpperCase())
-                show_aw($(item).attr('show-aw'))
+            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
 

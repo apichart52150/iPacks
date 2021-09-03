@@ -53,7 +53,7 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .aw {
@@ -122,26 +122,26 @@ $caller_1->e18->q = "omission";
 $caller_1->e19->q = "prolonged";
 $caller_1->e20->q = "intention";
 
-$caller_1->e1->aw = "position, standing";
-$caller_1->e2->aw = "reconsidered, changed";
-$caller_1->e3->aw = "short story, often humorous";
-$caller_1->e4->aw = "make someone look small and unimportant";
-$caller_1->e5->aw = "ways in which people think; beliefs";
-$caller_1->e6->aw = "leaving out; not included";
-$caller_1->e7->aw = "the thing mentioned first";
-$caller_1->e8->aw = "the thing mentioned last";
-$caller_1->e9->aw = "to show";
-$caller_1->e10->aw = "equivalents";
-$caller_1->e11->aw = "aim, purpose to do something";
-$caller_1->e12->aw = "difference";
-$caller_1->e13->aw = "getting rid of";
-$caller_1->e14->aw = "to slide out of control, usually in a vehicle";
-$caller_1->e15->aw = "freedom from restrictive bonds";
-$caller_1->e16->aw = "recently invented (words, phrases)";
-$caller_1->e17->aw = "extended, over a longer period";
-$caller_1->e18->aw = "additional meanings";
-$caller_1->e19->aw = "language used to hurt someone's feelings";
-$caller_1->e20->aw = "something which is accepted as true without proof";
+$caller_1->e1->aw = "ways in which people think; beliefs";
+$caller_1->e2->aw = "difference";
+$caller_1->e3->aw = "position, standing";
+$caller_1->e4->aw = "freedom from restrictive bonds";
+$caller_1->e5->aw = "getting rid of";
+$caller_1->e6->aw = "make someone look small and unimportant";
+$caller_1->e7->aw = "reconsidered, changed";
+$caller_1->e8->aw = "to slide out of control, usually in a vehicle";
+$caller_1->e9->aw = "something which is accepted as true without proof";
+$caller_1->e10->aw = "short story, often humorous";
+$caller_1->e11->aw = "to show";
+$caller_1->e12->aw = "language used to hurt someone's feelings";
+$caller_1->e13->aw = "additional meanings";
+$caller_1->e14->aw = "equivalents";
+$caller_1->e15->aw = "the thing mentioned first";
+$caller_1->e16->aw = "the thing mentioned last";
+$caller_1->e17->aw = "recently invented (words, phrases)";
+$caller_1->e18->aw = "leaving out; not included";
+$caller_1->e19->aw = "extended, over a longer period";
+$caller_1->e20->aw = "aim, purpose to do something";
 
 $caller_1_choice->ch1 = "ways in which people think; beliefs";
 $caller_1_choice->ch2 = "make someone look small and unimportant";
@@ -340,9 +340,9 @@ $caller_5->c->e1->q = "The lecturer can effectively assess his students' learnin
 $caller_5->c->e2->q = "Many students have wives and children to support.";
 $caller_5->c->e3->q = "The tenant is responsible for the security of his own apartment.";
 
-$caller_5->c->e1->aw = "Lecturers can effectively assess their students' learning.";
-$caller_5->c->e2->aw = "Many students have families to support.";
-$caller_5->c->e3->aw = "The tenant is responsible for the security of the apartment.";
+$caller_5->c->e1->aw = "Lecturers can effectively assess their students' learning";
+$caller_5->c->e2->aw = "Many students have families to support";
+$caller_5->c->e3->aw = "The tenant is responsible for the security of the apartment";
 
 @endphp
 <div class="row">
@@ -351,52 +351,43 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
             <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
                     <span>
                         In the lecture you will hear the words in List A.
                         <b>Before you listen to the lecture</b>, match the words in List A with their meanings in List B.
                         Then do Exercise 2.
                     </span>
-                    <div class="row justify-content-center mb-2">
-                        <div class="col-md-12">
-                            <div class="border border-dark px-2 text-center">
-                                <div class="drag-container">
-                                    <div class="d-grid grid-5" id="choices">
+                    <div class="w-100 d-flex justify-content-center">
+                        <table class="w-50 mb-3">
+                            <tr class="text-center">
+                                <th class="py-2">List A</th>
+                                <td class="py-2"></td>
+                                <th class="py-2">List B</th>
+                            </tr>
+                            @foreach($caller_1 as $index => $caller_1)
+                            <tr>
+                                <td class="pl-4" style="width: 200px;">{{$caller_1->q}}</td>
+                                <td class="px-3">=</td>
+                                <td>
+                                    <select class="form-select form-control q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}" aria-label="Default select example">
+                                        <option value="...">...</option>
                                         @foreach($caller_1_choice as $choice)
-                                        <div class="drag">{{$choice}}</div>
+                                        <option value="{{$choice}}">{{$choice}}</option>
                                         @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center mb-2">
-                        <div class="col-md-12">
-                            <table class="table w-50 mb-3">
-                                <tr>
-                                    <th class="py-2">List A</th>
-                                    <td class="py-2"></td>
-                                    <th class="py-2">List B</th>
-                                </tr>
-                                @foreach($caller_1 as $index => $caller_1)
-                                <tr>
-                                    <td class="pl-4" style="width: 200px;">{{$caller_1->q}}</td>
-                                    <td>=</td>
-                                    <td>
-                                        <div class="input-con">
-                                            <div class="dropbox q" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}"></div>
-                                        </div>
-                                        <br>
-                                        <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </table>
-                        </div>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </table>
                     </div>
                 </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 2</h4>
+                <div class="mt-4 col-lg-12">
                     <table class="w-100">
                         <tr>
                             <td colspan="2">
@@ -414,8 +405,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         @endforeach
                     </table>
                 </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 3</h4>
+                <div class="mt-4 col-lg-12">
                     <table id="caller-3">
                         <tr>
                             <td colspan="4">
@@ -546,8 +536,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         </tr>
                     </table>
                 </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 4</h4>
+                <div class="mt-4 col-lg-12">
                     <table class="w-100">
                         <tr>
                             <td colspan="3">
@@ -577,8 +566,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         @endforeach
                     </table>
                 </div>
-                <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 5</h4>
+                <div class="mt-4 col-lg-12">
                     <table class="w-100">
                         <tr>
                             <td colspan="4">
@@ -717,8 +705,8 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -733,8 +721,8 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
         console.log("text", text)
         console.log("aw", aw)
         for (let i = 0; i < text.split("...").length - 1; i++) {
-            let input = '<div class="input-con input-con2 caller_3 pb-1 "><input type="text" class="input-text caller_3" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
-                '<labal class="w-100 px-2 aw caller_3-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'
+            let input = '<div class="input-con input-con2 caller_3 pb-1 "><input type="text" class="input-text caller_3 q-text" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
+                '<span class="w-100 px-2 aw caller_3-' + idx + '-' + i + ' text-danger">' + aw[i] + '</span>'
             new_text = new_text.replace("...", input)
         }
         $('.q-caller-2-e' + (idx + 1)).html(new_text)
@@ -743,23 +731,33 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-check:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
-        console.log("aw", aw)
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

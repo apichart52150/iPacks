@@ -109,9 +109,8 @@
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <h5 class="mt-3">Now, listen to the lecture The Risks of Alcohol Abuse. Write a summary of the lecture in approximately 150 words.</h5>
-                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                    <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                     <h5 class="mt-3 aw text-success">Summary of lecture (possible answer) </h5>
                     <span class="aw text-success">
                         A lot of research has been conducted into alcoholism but not much into social drinking since social
@@ -149,8 +148,8 @@
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')

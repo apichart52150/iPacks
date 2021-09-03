@@ -21,6 +21,7 @@
         display: inline-block;
         position: relative;
     }
+
     .input-con2 {
         width: 100px;
     }
@@ -138,21 +139,20 @@ $caller_2->e9->aw = "2.98";
             <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <h5>Listen to the information and complete the following chart about acid rain in Europe: </h5>
-                        @foreach($caller_2 as $caller_2)
-                        <div class="row">
-                            <div class="py-1 col-md-4">
-                                <span class="pl-4">{{$caller_2->q}}.</span>
-                            </div>
-                            <div class="py-1 col-md-4">
-                                <input type="text" class="form-control caller_2" aw="{{$caller_2->aw}}" show-aw="caller_2-{{$caller_2->q}}" autocomplete="off">
-                            </div>
-                            <div class="py-1 col-md-4">
-                                <span class="pl-2 aw caller_2-{{$caller_2->q}} text-danger">{{$caller_2->aw}}</span>
-                            </div>
+                    @foreach($caller_2 as $caller_2)
+                    <div class="row">
+                        <div class="py-1 col-md-4">
+                            <span class="pl-4">{{$caller_2->q}}.</span>
                         </div>
-                        @endforeach
+                        <div class="py-1 col-md-4">
+                            <input type="text" class="form-control caller_2" aw="{{$caller_2->aw}}" show-aw="caller_2-{{$caller_2->q}}" autocomplete="off">
+                        </div>
+                        <div class="py-1 col-md-4">
+                            <span class="pl-2 aw caller_2-{{$caller_2->q}} text-danger">{{$caller_2->aw}}</span>
+                        </div>
+                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -177,8 +177,8 @@ $caller_2->e9->aw = "2.98";
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -197,28 +197,23 @@ $caller_2->e9->aw = "2.98";
     })
 
     $('#check-answer').on('click', () => {
-        $('.caller_1:checked').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
         $('.caller_2').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
-        $('.caller_3').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
-        $('.caller_4').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw').toUpperCase())
-                show_aw($(item).attr('show-aw'))
+            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
 

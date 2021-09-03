@@ -70,7 +70,6 @@ $caller_4_A->e5->aw = "Aboriginal";
             <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 4</h4>
                     <h5>A. You are going to listen to a short talk about the population of Australia. As you listen, try to find the answers to the following questions:</h5>
                     <table class="w-100 mb-3">
                         @foreach($caller_4_A as $index => $caller_4_A)
@@ -81,7 +80,7 @@ $caller_4_A->e5->aw = "Aboriginal";
                             <td class="border-dark p-2">
                                 <b>Answer: </b>
                                 <div class="input-con w-75">
-                                    <input type="text" class="q-text w-100" show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
+                                    <input type="text" class="form-control q-text w-100" show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
                                 </div>
                             </td>
                         </tr>
@@ -95,7 +94,7 @@ $caller_4_A->e5->aw = "Aboriginal";
                     <h5 class="mt-3">B. Listen to the talk again and take notes using the conventions available to you. </h5>
                     <!-- <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea> -->
                     <h5 class="mt-3">C. Write a short summary of the talk, using your own words as far as possible. The summary should be between 80 - 100 words. </h5>
-                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                    <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                     <h5 class="mt-3 aw text-success">D. Summary (possible answer) </h5>
                     <span class="aw text-success">
                         The population of Australia is now eighteen million, consisting of over one hundred different
@@ -130,8 +129,8 @@ $caller_4_A->e5->aw = "Aboriginal";
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -153,18 +152,27 @@ $caller_4_A->e5->aw = "Aboriginal";
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
 

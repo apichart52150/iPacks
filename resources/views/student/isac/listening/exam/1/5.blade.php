@@ -86,16 +86,17 @@ $caller_2->e7->aw = "As attitudes in society change, one would expect language t
 $caller_2->e8->aw = "The socially constructed gender division of labour restricts the employment possibilities for both men and women; an illustration of this is the small number of women in executive management positions.";
 
 @endphp
-<div class="row">
+<div class="row card-box">
     <div class="col-xl-12 col-md-12">
-        <div class="card-box text-dark font-16">
-            <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
+        <div class=" text-dark font-16">
+            <p class="lead">
+                {{$pageTitle['sub_menu_name']}}
+            </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <table class="w-100">
                         <tr>
-                            <td colspan="2">Listen to the sentences.
+                            <td colspan="3">Listen to the sentences.
                                 <br>
                                 They are not complete (how do you know this, just by listening?).
                                 <br>
@@ -107,18 +108,19 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
                         </tr>
                         @foreach($caller_2 as $caller_2)
                         <tr>
-                            <td>{{$caller_2->n}}</td>
-                            <td>{{$caller_2->q}}</td>
+                            <td style="width: 20px;">{{$caller_2->n}}</td>
+                            <td colspan="2">{{$caller_2->q}}</td>
                         </tr>
                         <tr>
-                            <td><b>Answer: </b></td>
+                            <td></td>
+                            <td style="width: 80px;"><b>Answer: </b></td>
                             <td>
-                                <input type="text" class="w-100">
+                                <input type="text" class="form-control w-75">
                             </td>
                         </tr>
                         <tr>
-                            <td class="aw text-success"><b>Possible answers: </b></td>
-                            <td class="aw text-success">{{$caller_2->aw}}</td>
+                            <td></td>
+                            <td colspan="2" class="aw text-success"><b>Possible answers:</b> {{$caller_2->aw}}</td>
                         </tr>
                         @endforeach
                     </table>
@@ -146,8 +148,8 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -169,18 +171,27 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
 

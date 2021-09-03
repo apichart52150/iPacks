@@ -12,6 +12,10 @@
         padding: 10px;
     }
 
+    .table2 tr td {
+        vertical-align: middle;
+    }
+
     .table2 tr .map {
         border: 1px solid black;
     }
@@ -122,15 +126,15 @@ $caller_choice->ch8 = "use";
                                 <table class="table2">
                                     <tr>
                                         <td colspan="5">
-                                        <div class="border border-dark px-2 text-center">
-                                            <div class="drag-container">
-                                                <div class="d-grid grid-5" id="choices">
-                                                    @foreach($caller_choice as $choice)
-                                                    <div class="drag">{{$choice}}</div>
-                                                    @endforeach
+                                            <div class="border border-dark px-2 text-center">
+                                                <div class="drag-container">
+                                                    <div class="d-grid grid-5" id="choices">
+                                                        @foreach($caller_choice as $choice)
+                                                        <div class="drag">{{$choice}}</div>
+                                                        @endforeach
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -144,8 +148,8 @@ $caller_choice->ch8 = "use";
                                         <td></td>
                                         <td class="map text-center">customers</td>
                                         <td class="map">
-                                            <div class="input-con">
-                                                <div class="dropbox q" show-aw="caller_1_1-2" aw="employees"></div>
+                                            <div class="input-con w-75">
+                                                <div class="dropbox q w-100" show-aw="caller_1_1-2" aw="employees"></div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_1-2">employees</span>
@@ -169,15 +173,15 @@ $caller_choice->ch8 = "use";
                                             <span>* gather</span>
                                             <br>
                                             <span>* </span>
-                                            <div class="input-con">
-                                                <div class="dropbox q" show-aw="caller_1_2-1" aw="communicate"></div>
+                                            <div class="input-con w-75">
+                                                <div class="dropbox q w-100" show-aw="caller_1_2-1" aw="communicate"></div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-1">communicate</span>
                                             <br>
                                             <span>* </span>
-                                            <div class="input-con">
-                                                <div class="dropbox q" show-aw="caller_1_2-2" aw="use"></div>
+                                            <div class="input-con w-75">
+                                                <div class="dropbox q w-100" show-aw="caller_1_2-2" aw="use"></div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-2">use</span>
@@ -193,17 +197,17 @@ $caller_choice->ch8 = "use";
                                     </tr>
                                     <tr>
                                         <td class="map" colspan="2">
-                                        understand customers
+                                            understand customers
                                             <br>
                                             <span>* requirements</span>
                                             <br>
                                             <span>* </span>
-                                            <div class="input-con">
-                                                <div class="dropbox q" show-aw="caller_1_2-3" aw="satisfaction"></div>
+                                            <div class="input-con w-75">
+                                                <div class="dropbox q w-100" show-aw="caller_1_2-3" aw="satisfaction"></div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-3">satisfaction</span>
-                                          </td>
+                                        </td>
                                         <td></td>
                                         <td colspan="2"></td>
                                     </tr>
@@ -215,17 +219,17 @@ $caller_choice->ch8 = "use";
                                     </tr>
                                     <tr>
                                         <td class="map" colspan="2">
-                                        understand competitors
+                                            understand competitors
                                             <br>
-                                            <span>*  strengths</span>
+                                            <span>* strengths</span>
                                             <br>
                                             <span>* </span>
-                                            <div class="input-con">
-                                                <div class="dropbox q" show-aw="caller_1_2-4" aw="weaknesses"></div>
+                                            <div class="input-con w-75">
+                                                <div class="dropbox q w-100" show-aw="caller_1_2-4" aw="weaknesses"></div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-4">weaknesses</span>
-                                          </td>
+                                        </td>
                                         <td></td>
                                         <td colspan="2"></td>
                                     </tr>
@@ -237,17 +241,17 @@ $caller_choice->ch8 = "use";
                                     </tr>
                                     <tr>
                                         <td class="map" colspan="2">
-                                        understand constraints
+                                            understand constraints
                                             <br>
                                             <span>* staffing</span>
                                             <br>
                                             <span>* </span>
-                                            <div class="input-con">
-                                                <div class="dropbox q" show-aw="caller_1_2-5" aw="financial capacity"></div>
+                                            <div class="input-con w-75">
+                                                <div class="dropbox w-100 q" show-aw="caller_1_2-5" aw="financial capacity"></div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-5">financial capacity</span>
-                                          </td>
+                                        </td>
                                         <td></td>
                                         <td colspan="2"></td>
                                     </tr>
@@ -259,22 +263,22 @@ $caller_choice->ch8 = "use";
                                     </tr>
                                     <tr>
                                         <td class="map" colspan="2">
-                                        forward planning
+                                            forward planning
                                             <br>
                                             <span>* </span>
-                                            <div class="input-con">
-                                                <div class="dropbox q" show-aw="caller_1_2-6" aw="long-term vision"></div>
+                                            <div class="input-con w-75">
+                                                <div class="dropbox w-100 q" show-aw="caller_1_2-6" aw="long-term vision"></div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-6">long-term vision</span>
                                             <br>
                                             <span>* </span>
-                                            <div class="input-con">
-                                                <div class="dropbox q" show-aw="caller_1_2-7" aw="objectives"></div>
+                                            <div class="input-con w-75">
+                                                <div class="dropbox q w-100" show-aw="caller_1_2-7" aw="objectives"></div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-7">objectives</span>
-                                          </td>
+                                        </td>
                                         <td></td>
                                         <td colspan="2"></td>
                                     </tr>
@@ -290,7 +294,7 @@ $caller_choice->ch8 = "use";
                         </tr>
                         <tr>
                             <td></td>
-                            <td><textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
+                            <td><textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -316,7 +320,7 @@ $caller_choice->ch8 = "use";
                         </tr>
                         <tr>
                             <td></td>
-                            <td><textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
+                            <td><textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -359,8 +363,8 @@ $caller_choice->ch8 = "use";
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -368,16 +372,6 @@ $caller_choice->ch8 = "use";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    $('.q-dot:contains("...")').each((idx, item) => {
-        let text = $(item).html()
-        console.log(text)
-        let input = '<div class="input-con w-50">' +
-            '<input type="text" class="w-100 q-text" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
-            '</div>'
-        text = text.replace("...", input)
-        $(item).html(text)
-    })
-
     $('.q-dot-choice:contains("...")').each((idx, item) => {
         let text = $(item).html()
         console.log(text)
@@ -391,19 +385,27 @@ $caller_choice->ch8 = "use";
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
-        console.log("aw", aw)
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

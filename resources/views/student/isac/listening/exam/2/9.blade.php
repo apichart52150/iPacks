@@ -50,11 +50,10 @@
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic pt-3">Caller 1</h4>
                     <span>
                         3.4 Now, write a short summary of the talk in <b>about 50 - 80 words</b>.
                     </span>
-                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                    <textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea>
                     <h5 class="mt-3 aw text-success">Summary (possible answer)</h5>
                     <span class="aw text-success">
                         The word 'develop' can mean 'unwrap' or 'uncover'. It also means to allow a picture to show from
@@ -87,8 +86,8 @@
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
