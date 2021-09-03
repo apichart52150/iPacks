@@ -50,8 +50,6 @@ class HomeController extends Controller
         ->where('sub_menu_type','=', $request->input('main_menu'))
         ->get();
 
-
-
         if($request->input('type') == '1'){
             $data = array(
                 'color' => "info", 
@@ -104,12 +102,23 @@ class HomeController extends Controller
             "name_audio" => $sub_menu_listening[0]->name_audio,
         ];
 
+        // dd($exam_id);
+
         $pagination = [
             'prev' => "isac/listening/".($exam_type)."/".($exam_id-1),
             'current' => $exam_id,
             'next' => "isac/listening/".($exam_type)."/".($exam_id+1),
             'textBtn' => $exam_id == count($navigation_count) ? 'Finish' : 'Next'
         ];
+
+        if ($pagination['textBtn'] == 'Finish') {
+            $pagination = [
+                'prev' => "isac/listening/".($exam_type)."/".($exam_id-1),
+                'current' => $exam_id,
+                'next' => "isac/listening/",
+                'textBtn' => $exam_id == count($navigation_count) ? 'Finish' : 'Next'
+            ];
+        }
 
         // dd($pageTitle);
 

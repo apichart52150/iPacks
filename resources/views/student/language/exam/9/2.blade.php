@@ -9,17 +9,6 @@
         margin-bottom: 25px;
     }
 
-    .answers-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 10px 0;
-    }
-
-    .answers-container p {
-        font-size: 16px;
-    }
-
     .dropbox {
         border: 1px dashed #ccc;
         border-radius: 5px;

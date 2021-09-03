@@ -320,6 +320,9 @@
                 window.location.href = "{{ route('user_logout')}}";
             } 
 
+            document.oncontextmenu = function() { return false; }
+            document.onselectstart = function() { return false; }
+
         </script>
 
         @yield('js')
