@@ -78,6 +78,9 @@
     .event-click {
         cursor: pointer;
     }
+    .why:disabled{
+        background: #dddddd;
+    }
 </style>
 @php
 
@@ -352,17 +355,17 @@ $caller_5_b->e5->aw = "to find better positions";
                             <td></td>
                             <td style="width: 1px;">
                                 <div class="form-check">
-                                    <input onclick="show_input('caller_3-input-{{$index}}-{{$index2}}','{{$choice}}');" class="form-check-input event-click position-static q-check caller_3-{{$index}}-{{$index2}}" text="caller_3-input-{{$index}}-{{$index2}}" type="radio" name="caller_3-{{$index}}" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}" value="{{$choice}}">
+                                    <input onclick="show_input('caller_3-input-{{$index}}','{{$choice}}');" class="form-check-input event-click position-static q-check caller_3-{{$index}}-{{$index2}}" text="caller_3-input-{{$index}}-{{$index2}}" type="radio" name="caller_3-{{$index}}" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}" value="{{$choice}}">
                                 </div>
                             </td>
                             <td style="width: 100px;">
-                                <span class="event-click" onclick="checkRadio('caller_3-{{$index}}-{{$index2}}','caller_3-input-{{$index}}-{{$index2}}','{{$choice}}')">
+                                <span class="event-click" onclick="checkRadio('caller_3-{{$index}}-{{$index2}}','caller_3-input-{{$index}}','{{$choice}}')">
                                     {{$index2}}. {{$choice}}
                                 </span>
                             </td>
                             <td class="pb-2">
                                 @if($choice == "False")
-                                <input type="text" class="form-control w-75 caller_3-input-{{$index}}-{{$index2}}">
+                                <input type="text" disabled placeholder="Why?" class="why form-control w-75 caller_3-input-{{$index}}">
                                 @endif
                             </td>
                         </tr>
@@ -451,7 +454,7 @@ $caller_5_b->e5->aw = "to find better positions";
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -520,8 +523,16 @@ $caller_5_b->e5->aw = "to find better positions";
         $(item).addClass('border border-danger')
     }
 
-    function checkRadio(x, input, value) {
-        $('.' + x).prop("checked", true);
+    function show_input(input, choice) {
+        if (choice == "False")
+            $('.' + input).prop('disabled', false)
+        else
+            $('.' + input).prop('disabled', true)
+    }
+
+    function checkRadio(x, input, choice) {
+        $('.' + x).prop("checked", true)
+        show_input(input, choice)
     }
 
 
