@@ -10,6 +10,12 @@
     table thead tr th:nth-child(2) {
         width: 15%;
     }
+
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        color: #ffffff;
+        background-color: #e74856;
+        border-color: #dee2e6 #dee2e6 #fff;
+    }
 </style>
 @stop
 @php
@@ -34,30 +40,22 @@
                
                 <table class="table table-sm table-bordered nowrap text-dark mt-3">
                     <thead>
+                        <p><u>Listen to the example:</u></p>
+                            
+                        <strong>e.g. 1 </strong>Give me five more books
+                        <p><strong>Answer: </strong>Give me <u>another</u> five books.</p>
+
+                        <strong>e.g. 2 </strong>This pencil's broken; give me a different one, please.
+                        <p><strong>Answer: </strong>Give me <u>another</u> pencil, please.</p>
+
+                        <p><u>Now you do it: </u></p>
+
                         <tr>
                             <th class="font-weight-bold">QUESTION</th>
                             <th class="font-weight-bold">ANSWER</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><strong>e.g.</strong> 1 Give me five more books.</td>
-                            <td>
-                                <div class="position-relative">
-                                    <input type="email" class="form-control" value="Give me another five books." disabled>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><strong>e.g.</strong> 2 This pencil's broken; give me a different one, please.</td>
-                            <td>
-                                <div class="position-relative">
-                                    <input type="email" class="form-control" value="Give me another pencil, please." disabled>
-                                </div>
-                            </td>
-                        </tr>
-
                         @for ($i = 1; $i <= count($question); $i++)
                             <tr>
                                 <td>{{ $question['q'.$i] }}</td>
