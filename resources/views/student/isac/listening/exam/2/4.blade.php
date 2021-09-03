@@ -142,7 +142,7 @@ $caller_4->e6->aw = ["114%","79%"];
                             <td class="pr-3">{{$caller_4->q}}</td>
 
                             @foreach($caller_4->aw as $index2 => $aw)
-                            <td>
+                            <td class="px-1 pb-2">
                                 <input type="text" class="form-control caller_4" aw="{{$aw}}" show-aw="caller_4-{{$index}}-{{$index2}}" autocomplete="off">
                             </td>
                             <td>

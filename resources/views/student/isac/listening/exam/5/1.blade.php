@@ -129,7 +129,7 @@ $aw->e10 = "Cash";
                                                                 <td>- small fridge</td>
                                                                 <td>
                                                                     (1)
-                                                                    <div class="input-con w-50">
+                                                                    <div class="input-con w-50 py-1">
                                                                         <input type="text" class="q-val w-100 form-control" show-aw="q-1" aw="{{$aw->e1}}">
                                                                     </div>
                                                                     <span class="aw text-danger q-1 px-2">{{$aw->e1}}</span>
@@ -140,7 +140,7 @@ $aw->e10 = "Cash";
                                                                 <td>Discovery</td>
                                                                 <td>
                                                                     (2)
-                                                                    <div class="input-con w-50">
+                                                                    <div class="input-con w-50 py-1">
                                                                         <input type="text" class="q-val w-100 form-control" show-aw="q-2" aw="{{$aw->e2}}">
                                                                     </div>
                                                                     <span class="aw text-danger q-2 px-2">{{$aw->e2}}</span>
@@ -149,7 +149,7 @@ $aw->e10 = "Cash";
                                                                     - small fridge
                                                                     <br>
                                                                     - built-in (3)
-                                                                    <div class="input-con w-50">
+                                                                    <div class="input-con w-50 py-1">
                                                                         <input type="text" class="q-val w-100 form-control" show-aw="q-3" aw="{{$aw->e3}}">
                                                                     </div>
                                                                     <span class="aw text-danger q-3 px-2">{{$aw->e3}}</span>
@@ -160,7 +160,7 @@ $aw->e10 = "Cash";
                                                                 <td>Luxor</td>
                                                                 <td>
                                                                     (4)
-                                                                    <div class="input-con w-50">
+                                                                    <div class="input-con w-50 py-1">
                                                                         <input type="text" class="q-val w-100 form-control" show-aw="q-4" aw="{{$aw->e4}}">
                                                                     </div>
                                                                     <span class="aw text-danger q-4 px-2">{{$aw->e4}}</span>
@@ -172,7 +172,7 @@ $aw->e10 = "Cash";
                                                                 </td>
                                                                 <td>
                                                                     (5)
-                                                                    <div class="input-con w-50">
+                                                                    <div class="input-con w-50 py-1">
                                                                         <input type="text" class="q-val w-100 form-control" show-aw="q-5" aw="{{$aw->e5}}">
                                                                     </div>
                                                                     <span class="aw text-danger q-5 px-2">{{$aw->e5}}</span>
@@ -186,7 +186,7 @@ $aw->e10 = "Cash";
                                                     <td>
                                                         <b>Preferred vehicle: </b>
                                                         (6)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-6" aw="{{$aw->e6}}">
                                                         </div>
                                                         <span class="aw text-danger q-6 px-2">{{$aw->e6}}</span>
@@ -201,7 +201,7 @@ $aw->e10 = "Cash";
                                                     <td>
                                                         <b>Name:</b>
                                                         Richard John (7)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-7" aw="{{$aw->e7}}">
                                                         </div>
                                                         <span class="aw text-danger q-7 px-2">{{$aw->e7}}</span>
@@ -216,7 +216,7 @@ $aw->e10 = "Cash";
                                                     <td>
                                                         <b>Contact number: </b>
                                                         (8)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-8" aw="{{$aw->e8}}">
                                                         </div>
                                                         <span class="aw text-danger q-8 px-2">{{$aw->e8}}</span>
@@ -228,7 +228,7 @@ $aw->e10 = "Cash";
                                                         Self + wife
                                                         <b> Age of youngest driver: </b>
                                                         (9)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-9" aw="{{$aw->e9}}">
                                                         </div>
                                                         <span class="aw text-danger q-9 px-2">{{$aw->e9}}</span>
@@ -238,7 +238,7 @@ $aw->e10 = "Cash";
                                                     <td>
                                                         <b>Payment details: </b>
                                                         (10)
-                                                        <div class="input-con">
+                                                        <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-10" aw="{{$aw->e10}}">
                                                         </div>
                                                         <span class="aw text-danger q-10 px-2">{{$aw->e10}}</span>
@@ -266,7 +266,7 @@ $aw->e10 = "Cash";
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>

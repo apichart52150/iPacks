@@ -99,17 +99,17 @@ $E1_1_5->e3->n = "3";
 $E1_1_5->e4->n = "4";
 $E1_1_5->e5->n = "5";
 
-$E1_1_5->e1->q = "Who were the first people to eat chilies?";
-$E1_1_5->e2->q = "Which of the following is TRUE?";
-$E1_1_5->e3->q = "Which of the following do NOT eat chilies?";
-$E1_1_5->e4->q = "By eating the chili fruits, birds…";
-$E1_1_5->e5->q = "Why are chilies useful for farmers?";
+$E1_1_5->e1->q = "Which one is famous for its beer?";
+$E1_1_5->e2->q = "Which country is the writer’s favorite food from?";
+$E1_1_5->e3->q = "Which one is famous for its fruit?";
+$E1_1_5->e4->q = "Where did spaghetti first come from?";
+$E1_1_5->e5->q = "What is Switzerland famous for?";
 
-$E1_1_5->e1->aw = "A. people in Mexico";
-$E1_1_5->e2->aw = "C. People now know what makes chilies taste hot.";
-$E1_1_5->e3->aw = "B. animals";
-$E1_1_5->e4->aw = "A. are helping to keep the chillie plant alive.";
-$E1_1_5->e5->aw = "C. They are helping farmers to protect their plants.";
+$E1_1_5->e1->aw = "A. Germany";
+$E1_1_5->e2->aw = "A. Italy";
+$E1_1_5->e3->aw = "B. Spain";
+$E1_1_5->e4->aw = "C. China";
+$E1_1_5->e5->aw = "A. Cheese and hot chocolate";
 
 $E1_1_5->e1->choice = new stdClass();
 $E1_1_5->e2->choice = new stdClass();
@@ -117,21 +117,21 @@ $E1_1_5->e3->choice = new stdClass();
 $E1_1_5->e4->choice = new stdClass();
 $E1_1_5->e5->choice = new stdClass();
 
-$E1_1_5->e1->choice->a = "A. people in Mexico";
-$E1_1_5->e1->choice->b = "B. people in Spain";
-$E1_1_5->e1->choice->c = "C. people in Portugal";
-$E1_1_5->e2->choice->a = "A. People are trying to discover what gives chilies their hot taste.";
-$E1_1_5->e2->choice->b = "B. Nobody knows what gives chilies their hot taste.";
-$E1_1_5->e2->choice->c = "C. People now know what makes chilies taste hot.";
-$E1_1_5->e3->choice->a = "A. people";
-$E1_1_5->e3->choice->b = "B. animals";
-$E1_1_5->e3->choice->c = "C. birds";
-$E1_1_5->e4->choice->a = "A. are helping to keep the chillie plant alive.";
-$E1_1_5->e4->choice->b = "B. might drop from the sky and die.";
-$E1_1_5->e4->choice->c = "C. are in danger of killing the chilli plants.";
-$E1_1_5->e5->choice->a = "A. Small animals eat the chilies and leave the farmer’s plants alone.";
-$E1_1_5->e5->choice->b = "B. The fact that birds drop chili seeds all over the country";
-$E1_1_5->e5->choice->c = "C. They are helping farmers to protect their plants.";
+$E1_1_5->e1->choice->a = "A. Germany";
+$E1_1_5->e1->choice->b = "B. England";
+$E1_1_5->e1->choice->c = "C. Spain";
+$E1_1_5->e2->choice->a = "A. Italy";
+$E1_1_5->e2->choice->b = "B. Spain";
+$E1_1_5->e2->choice->c = "C. England";
+$E1_1_5->e3->choice->a = "A. Germany";
+$E1_1_5->e3->choice->b = "B. Spain";
+$E1_1_5->e3->choice->c = "C. Italy";
+$E1_1_5->e4->choice->a = "A. Italy";
+$E1_1_5->e4->choice->b = "B. England";
+$E1_1_5->e4->choice->c = "C. China";
+$E1_1_5->e5->choice->a = "A. Cheese and hot chocolate";
+$E1_1_5->e5->choice->b = "B. Wine";
+$E1_1_5->e5->choice->c = "C. Snails and frogs' legs";
 
 $E2_1_5 = new stdClass();
 $E2_1_5->e1 = new stdClass();
@@ -146,17 +146,17 @@ $E2_1_5->e3->n = "3";
 $E2_1_5->e4->n = "4";
 $E2_1_5->e5->n = "5";
 
-$E2_1_5->e1->q = "How long have people been eating chilies?";
-$E2_1_5->e2->q = "When did chilies arrive in other parts of the world?";
-$E2_1_5->e3->q = "When people eat chilies, what feeling do they get?";
-$E2_1_5->e4->q = "Why don’t animals eat chilies?";
-$E2_1_5->e5->q = "Which part of the chilies do birds drop far away?";
+$E2_1_5->e1->q = "What do frogs’ legs taste like?";
+$E2_1_5->e2->q = "Who first brought spaghetti to Italy?";
+$E2_1_5->e3->q = "How long have they been eating spaghetti in Italy?";
+$E2_1_5->e4->q = "Which drink is popular in England?";
+$E2_1_5->e5->q = "What is Spain famous for?";
 
-$E2_1_5->e1->aw = "nine thousand years";
-$E2_1_5->e2->aw = "around five hundred years ago";
-$E2_1_5->e3->aw = "hot and burning";
-$E2_1_5->e4->aw = "They don’t like the hot and burning feeling";
-$E2_1_5->e5->aw = "the seeds";
+$E2_1_5->e1->aw = "chicken";
+$E2_1_5->e2->aw = "Marco Polo";
+$E2_1_5->e3->aw = "more than seven hundred years";
+$E2_1_5->e4->aw = "hot tea";
+$E2_1_5->e5->aw = "juicy oranges";
 
 @endphp
 <div class="row">
@@ -207,16 +207,16 @@ $E2_1_5->e5->aw = "the seeds";
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>
+                                <td class="pt-2">
                                     <b>Answer: </b>
                                     <div class="input-con w-75">
                                         <input type="text" class="q-val form-control w-100" show-aw="E2_1_5-{{$index}}" aw="{{$E2_1_5->aw}}">
                                     </div>
                                 </td>
                             </tr>
-                            <tr class="aw">
-                                <td></td>
-                                <td class="aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
+                            <tr class="">
+                                <td class="pb-2"></td>
+                                <td class="pb-2 aw E2_1_5-{{$index}} E2_1_5-{{$index}} text-danger">{{$E2_1_5->aw}}</td>
                             </tr>
                             @endforeach
                         </table>
@@ -236,7 +236,7 @@ $E2_1_5->e5->aw = "the seeds";
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>

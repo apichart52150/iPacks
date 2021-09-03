@@ -291,7 +291,7 @@ $caller_2_5_choice->ch8 = "minor parts";
                         </tr>
                         <tr>
                             <td>2.6</td>
-                            <td>Write a summary of the talk in <b>about 100 - 150 words</b>.</td>
+                            <td class="pb-3">Write a summary of the talk in <b>about 100 - 150 words</b>.</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -332,7 +332,7 @@ $caller_2_5_choice->ch8 = "minor parts";
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -354,7 +354,7 @@ $caller_2_5_choice->ch8 = "minor parts";
     $('.q-dot:contains("...")').each((idx, item) => {
         let text = $(item).html()
         console.log(text)
-        let input = '<div class="input-con w-75">' +
+        let input = '<div class="input-con py-1 w-75">' +
             '<input type="text" class="w-100 form-control q-text" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
             '</div>'
         text = text.replace("...", input)

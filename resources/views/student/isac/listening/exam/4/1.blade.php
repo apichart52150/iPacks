@@ -110,7 +110,7 @@ $aw->e10 = "PIN";
                             <tr>
                                 <td style="border: 1px solid black;">
                                     <div class="p-3">
-                                        <div class="w-100 text-center">
+                                        <div class="w-100 pb-2 text-center">
                                             <b>BARCLAYS BANK</b>
                                             <br>
                                             <b>STUDENT ACCOUNT APPLICATION FORM</b>
@@ -118,34 +118,34 @@ $aw->e10 = "PIN";
                                         <div class="w-100 d-flex justify-content-center">
                                             <table>
                                                 <tr>
-                                                    <td class="pr-2">Account holder:</td>
+                                                    <td style="vertical-align: middle;" class="pr-2">Account holder:</td>
                                                     <td>
                                                         Sofia (1)
-                                                        <div class="input-con">
+                                                        <div class="input-con pt-2">
                                                             <input type="text" class="q-val form-control" show-aw="q-1" aw="{{$aw->e1}}">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td><span class="aw text-danger q-1">{{$aw->e1}}</span></td>
+                                                    <td class="pb-2"><span class="aw text-danger q-1">{{$aw->e1}}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2">University:</td>
                                                     <td>Oxford University</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="pr-2">Date of Birth:</td>
+                                                    <td style="vertical-align: middle;" class="pr-2">Date of Birth:</td>
                                                     <td>
                                                         (2)
-                                                        <div class="input-con">
+                                                        <div class="input-con pt-2">
                                                             <input type="text" class="q-val form-control" show-aw="q-2" aw="{{$aw->e2}}">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td><span class="aw text-danger q-2">{{$aw->e2}}</span></td>
+                                                    <td class="pb-2"><span class="aw text-danger q-2">{{$aw->e2}}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2">Address:</td>
@@ -155,44 +155,44 @@ $aw->e10 = "PIN";
                                                     <td class="pr-2"></td>
                                                     <td>
                                                         (3)
-                                                        <div class="input-con">
+                                                        <div class="input-con pt-2">
                                                             <input type="text" class="q-val form-control" show-aw="q-3" aw="{{$aw->e3}}">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td><span class="aw text-danger q-3">{{$aw->e3}}</span></td>
+                                                    <td class="pb-2"><span class="aw text-danger q-3">{{$aw->e3}}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
                                                     <td>Near Bristol, Avon. </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="pr-2">Contact No:</td>
+                                                    <td style="vertical-align: middle;" class="pr-2">Contact No:</td>
                                                     <td>
                                                         (4)
-                                                        <div class="input-con">
+                                                        <div class="input-con pt-2">
                                                             <input type="text" class="q-val form-control" show-aw="q-4" aw="{{$aw->e4}}">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td><span class="aw text-danger q-4">{{$aw->e4}}</span></td>
+                                                    <td class="pb-2"><span class="aw text-danger q-4">{{$aw->e4}}</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="pr-2">Student Number:</td>
+                                                    <td style="vertical-align: middle;" class="pr-2">Student Number:</td>
                                                     <td>
                                                         (5)
-                                                        <div class="input-con">
+                                                        <div class="input-con pt-2">
                                                             <input type="text" class="q-val form-control" show-aw="q-5" aw="{{$aw->e5}}">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td><span class="aw text-danger q-5">{{$aw->e5}}</span></td>
+                                                    <td class="pb-2"><span class="aw text-danger q-5">{{$aw->e5}}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2">Passport Number:</td>
@@ -203,17 +203,17 @@ $aw->e10 = "PIN";
                                                     <td>21 – 09 – 1999</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="pr-2">Expiry date: </td>
+                                                    <td style="vertical-align: middle;" class="pr-2">Expiry date: </td>
                                                     <td>
                                                         (6)
-                                                        <div class="input-con">
+                                                        <div class="input-con pt-2">
                                                             <input type="text" class="q-val form-control" show-aw="q-6" aw="{{$aw->e6}}">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td><span class="aw text-danger q-6">{{$aw->e6}}</span></td>
+                                                    <td class="pb-2"><span class="aw text-danger q-6">{{$aw->e6}}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2" colspan="2">Do you hold an account at another bank? YES </td>
@@ -223,30 +223,30 @@ $aw->e10 = "PIN";
                                                     <td>HSBC </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="pr-2">Amount deposited: </td>
+                                                    <td style="vertical-align: middle;" class="pr-2">Amount deposited: </td>
                                                     <td>
                                                         (7)
-                                                        <div class="input-con">
+                                                        <div class="input-con pt-2">
                                                             <input type="text" class="q-val form-control" show-aw="q-7" aw="{{$aw->e7}}">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td><span class="aw text-danger q-7">{{$aw->e7}}</span></td>
+                                                    <td class="pb-2"><span class="aw text-danger q-7">{{$aw->e7}}</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="pr-2">Account number:</td>
+                                                    <td style="vertical-align: middle;" class="pr-2">Account number:</td>
                                                     <td>
                                                         (8)
-                                                        <div class="input-con">
+                                                        <div class="input-con pt-2">
                                                             <input type="text" class="q-val form-control" show-aw="q-8" aw="{{$aw->e8}}">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td><span class="aw text-danger q-8">{{$aw->e8}}</span></td>
+                                                    <td class="pb-2"><span class="aw text-danger q-8">{{$aw->e8}}</span></td>
                                                 </tr>
                                             </table>
                                         </div>
@@ -256,7 +256,7 @@ $aw->e10 = "PIN";
                             <tr>
                                 <td class="pt-4">
                                     The bank clerk says the ATM card will be sent (9)
-                                    <div class="input-con">
+                                    <div class="input-con py-2">
                                         <input type="text" class="q-val form-control" show-aw="q-9" aw="{{$aw->e9}}">
                                     </div>
                                     <span class="aw text-danger q-9 px-2">{{$aw->e9}}</span>
@@ -288,7 +288,7 @@ $aw->e10 = "PIN";
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>

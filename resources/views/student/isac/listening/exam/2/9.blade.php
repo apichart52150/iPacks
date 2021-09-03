@@ -50,9 +50,9 @@
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <span>
+                    <p class="pb-2">
                         3.4 Now, write a short summary of the talk in <b>about 50 - 80 words</b>.
-                    </span>
+</p>
                     <textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea>
                     <h5 class="mt-3 aw text-success">Summary (possible answer)</h5>
                     <span class="aw text-success">
@@ -77,7 +77,7 @@
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>

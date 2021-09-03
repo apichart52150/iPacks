@@ -111,7 +111,7 @@
                         <tr>
                             <td class="py-2"></td>
                             <td class="py-2" colspan="2">
-                                <h5>Part 2 Kerry Packer </h5>
+                                <h5 class="pb-2">Part 2 Kerry Packer </h5>
                                 <textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea>
                                 <h5 class="mt-3 aw text-success">Summaries (possible answer)</h5>
                                 <span class="aw text-success">
@@ -144,7 +144,7 @@
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>

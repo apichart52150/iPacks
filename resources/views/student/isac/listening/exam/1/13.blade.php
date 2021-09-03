@@ -218,7 +218,7 @@ $caller_3->e10->aw = "The fine weather is expected to continue for the next few 
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h5>As you listen again, make notes and write a short report about one of the news items.</h5>
+                    <h5 class="pb-2">As you listen again, make notes and write a short report about one of the news items.</h5>
                     <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                 </div>
             </div>
@@ -235,7 +235,7 @@ $caller_3->e10->aw = "The fine weather is expected to continue for the next few 
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>

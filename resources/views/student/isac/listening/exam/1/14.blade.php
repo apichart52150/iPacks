@@ -379,7 +379,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             <tr>
                                 <td></td>
                                 <td></td>
-                                <td>
+                                <td class="pb-2">
                                     <span class="aw caller_1-{{$index}} text-danger">{{$caller_1->aw}}</span>
                                 </td>
                             </tr>
@@ -398,7 +398,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         @foreach($caller_2 as $index => $caller_2)
                         <tr>
                             <td style="vertical-align: middle;">{{$caller_2->n}}.</td>
-                            <td style="vertical-align: middle;">
+                            <td style="vertical-align: middle;" class="pb-2">
                                 <span class="pr-2 q-caller-2 q-caller-2-{{$index}}" q="caller-2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q}}</span>
                             </td>
                         </tr>
@@ -444,26 +444,26 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             <td>2.</td>
                             <td class="col-3-500">Phrases which are male by nature but which include both males and females.</td>
                             <td class="col-3-500">
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <div class="dropbox q" show-aw="caller_3-2-2-1" aw="a. 'Man'"></div>
                                 </div>
                                 <br>
                                 <span class="aw caller_3-2-2-1 text-danger">a. 'Man'</span>
                                 <br>
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <div class="dropbox q" show-aw="caller_3-2-2-2" aw="b. Everyone should be aware of his rights."></div>
                                 </div>
                                 <br>
                                 <span class="aw caller_3-2-2-2 text-danger">b. Everyone should be aware of his rights.</span>
                             </td>
                             <td class="col-3-500">
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <div class="dropbox q" show-aw="caller_3-2-3-1" aw="a. Humans"></div>
                                 </div>
                                 <br>
                                 <span class="aw caller_3-2-3-1 text-danger">a. Humans</span>
                                 <br>
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <div class="dropbox q" show-aw="caller_3-2-3-2" aw="b. People should be aware of their rights."></div>
                                 </div>
                                 <br>
@@ -473,7 +473,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         <tr>
                             <td>3.</td>
                             <td class="col-3-500">
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <div class="dropbox q" show-aw="caller_3-1-3" aw="Female forms to denote sexual difference"></div>
                                 </div>
                                 <br>
@@ -485,13 +485,13 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                 lady-doctor; female-librarian
                             </td>
                             <td class="col-3-500">
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <div class="dropbox q" show-aw="caller_3-3-3-1" aw="- author, usher, waiter"></div>
                                 </div>
                                 <br>
                                 <span class="aw caller_3-3-3-1 text-danger">- author, usher, waiter</span>
                                 <br>
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <div class="dropbox q" show-aw="caller_3-3-3-2" aw="- doctor, librarian"></div>
                                 </div>
                                 <br>
@@ -501,7 +501,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         <tr>
                             <td>4.</td>
                             <td class="col-3-500">
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <div class="dropbox q" show-aw="caller_3-1-4" aw="Females are referred to in terms relating to males"></div>
                                 </div>
                                 <br>
@@ -515,7 +515,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             <td class="col-3-500">
                                 a. none given
                                 <br>
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <div class="dropbox q" show-aw="caller_3-3-4-2" aw="b. Mr and Mrs Smith"></div>
                                 </div>
                                 <br>
@@ -525,7 +525,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         <tr>
                             <td>5.</td>
                             <td class="col-3-500">
-                                <div class="input-con">
+                                <div class="input-con py-1">
                                     <div class="dropbox q" show-aw="caller_3-1-5" aw="Female forms for insults and abuse"></div>
                                 </div>
                                 <br>
@@ -602,7 +602,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             <td style="width: 250px;">{{$a->q}}</td>
                             <td>=</td>
                             <td>
-                                <div class="input-con">
+                                <div class="input-con pb-1">
                                     <div class="dropbox q" show-aw="caller_5_a-{{$index}}" aw="{{$a->aw}}"></div>
                                 </div>
                             </td>
@@ -637,7 +637,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             <td style="width: 250px;">{{$b->q}}</td>
                             <td>=</td>
                             <td>
-                                <div class="input-con">
+                                <div class="input-con pb-1">
                                     <div class="dropbox q" show-aw="caller_5_b-{{$index}}" aw="{{$b->aw}}"></div>
                                 </div>
                             </td>
@@ -665,7 +665,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                     <tr>
                                         <td style="width: 20px;"></td>
                                         <td colspan="2"></td>
-                                        <td>
+                                        <td class="py-1">
                                             <b>Answer: </b>
                                             <input type="text" class="input-text q-text w-75" show-aw="caller_5_c-{{$index}}" aw="{{$c->aw}}">
                                         </td>
@@ -696,7 +696,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>

@@ -215,8 +215,8 @@ $caller_1->e16->aw->i = "The people most affected by relocation of factories fro
                         @foreach($caller_1->aw as $index3 => $aw)
                         <tr>
                             <td></td>
-                            <td style="width: 65px;"><b>Answer: </b></td>
-                            <td>
+                            <td style="width: 65px; vertical-align: middle;"><b>Answer: </b></td>
+                            <td class="py-1">
                                 <input type="text" class="w-75 form-control q-text" index="{{$index}}" show-aw="caller_1-{{$index}}-{{$index3}}" aw="{{$aw}}">
                             </td>
                         </tr>
@@ -245,7 +245,7 @@ $caller_1->e16->aw->i = "The people most affected by relocation of factories fro
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>

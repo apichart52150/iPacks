@@ -43,7 +43,7 @@
         padding: 3px;
         width: 100%;
         height: auto;
-        min-width: 200px;
+        min-width: 250px;
         min-height: 40px;
     }
 
@@ -78,109 +78,76 @@
         width: 500px;
         padding-left: 10px;
     }
-    .event-click{
-        cursor: pointer;
-    }
 </style>
 @php
 
+$Q1_10 = new stdClass();
+$Q1_10->e1 = new stdClass();
+$Q1_10->e2 = new stdClass();
+$Q1_10->e3 = new stdClass();
+$Q1_10->e4 = new stdClass();
+$Q1_10->e5 = new stdClass();
+$Q1_10->e6 = new stdClass();
+$Q1_10->e7 = new stdClass();
+$Q1_10->e8 = new stdClass();
+$Q1_10->e9 = new stdClass();
+$Q1_10->e10 = new stdClass();
+$Q1_10->e11 = new stdClass();
+$Q1_10->e12 = new stdClass();
+$Q1_10->e13 = new stdClass();
+$Q1_10->e14 = new stdClass();
+$Q1_10->e15 = new stdClass();
+$Q1_10->e16 = new stdClass();
+$Q1_10->e1->q = "Departing: ";
+$Q1_10->e2->q = "Destination:";
+$Q1_10->e3->q = "Date of travel:";
+$Q1_10->e4->q = "Departure time:";
+$Q1_10->e5->q = "Arrival Time:";
+$Q1_10->e6->q = "Number of people travelling: ";
+$Q1_10->e7->q = "Seat no.: ";
+$Q1_10->e8->q = "Special requirements:";
+$Q1_10->e9->q = "Travel insurance: ";
+$Q1_10->e10->q = "Total cost:";
+$Q1_10->e11->q = "Payment method: ";
+$Q1_10->e12->q = "Baggage allowance:";
+$Q1_10->e13->q = "Hand baggage: ";
+$Q1_10->e14->q = "Visa:";
+$Q1_10->e15->q = "Check-in:";
+$Q1_10->e16->q = "On-line check-in:";
 
-$Q31_40 = new stdClass();
-$Q31_40->e1 = new stdClass();
-$Q31_40->e2 = new stdClass();
-$Q31_40->e3 = new stdClass();
-$Q31_40->e4 = new stdClass();
-$Q31_40->e5 = new stdClass();
-$Q31_40->e6 = new stdClass();
-$Q31_40->e7 = new stdClass();
-$Q31_40->e8 = new stdClass();
-$Q31_40->e9 = new stdClass();
-$Q31_40->e10 = new stdClass();
+$Q1_10->e1->q2 = "Bangkok";
+$Q1_10->e2->q2 = "(1) ___";
+$Q1_10->e3->q2 = "(2) ___";
+$Q1_10->e4->q2 = "9.30 pm";
+$Q1_10->e5->q2 = "(3) ___";
+$Q1_10->e6->q2 = "2 pax";
+$Q1_10->e7->q2 = "(4) ___ 56K";
+$Q1_10->e8->q2 = "(5) ___ food";
+$Q1_10->e9->q2 = "YES";
+$Q1_10->e10->q2 = "(6) ___";
+$Q1_10->e11->q2 = "(7) ___";
+$Q1_10->e12->q2 = "20 kgs";
+$Q1_10->e13->q2 = "(8) ___";
+$Q1_10->e14->q2 = "Visa on arrival";
+$Q1_10->e15->q2 = "(9) ___";
+$Q1_10->e16->q2 = "(10) ___";
 
-$Q31_40->e1->n = "31";
-$Q31_40->e2->n = "32";
-$Q31_40->e3->n = "33";
-$Q31_40->e4->n = "34";
-$Q31_40->e5->n = "35";
-$Q31_40->e6->n = "36";
-$Q31_40->e7->n = "37";
-$Q31_40->e8->n = "38";
-$Q31_40->e9->n = "39";
-$Q31_40->e10->n = "40";
-
-$Q31_40->e1->q = "Which creature had to adapt in order to fit into a warmer environment?";
-$Q31_40->e2->q = "The humans who first appeared on the earth";
-$Q31_40->e3->q = "What happened 12,000 years ago?";
-$Q31_40->e4->q = "Which statement best describes the initial relationship between the human hunters and the wolves?";
-$Q31_40->e5->q = "The alliance between humans and wolves probably began when";
-$Q31_40->e6->q = "What do we know about the wild sheep which humans and wolves hunted?";
-$Q31_40->e7->q = "Why do the reindeer move from place to place?";
-$Q31_40->e8->q = "Which of the following essentials do the Lapps NOT get from the reindeer?";
-$Q31_40->e9->q = "What do we know about young male reindeer?";
-$Q31_40->e10->q = "The result of the Lapps' selective breeding is that";
-
-$Q31_40->e1->aw = "B. the wolf";
-$Q31_40->e2->aw = "A. were able to change their appearance to suit their environment.";
-$Q31_40->e3->aw = "D. Humans began to adapt their living environments.";
-$Q31_40->e4->aw = "B. They competed for food but sometimes shared their prey.";
-$Q31_40->e5->aw = "B. humans took baby wolves to live with them.";
-$Q31_40->e6->aw = "B. They were small and had long legs.";
-$Q31_40->e7->aw = "A. They move around looking for food.";
-$Q31_40->e8->aw = "B. Cooking utensils";
-$Q31_40->e9->aw = "A. They are born in spring.";
-$Q31_40->e10->aw = "D. the Lapps are able to keep large herds of domestic reindeer.";
-
-$Q31_40->e1->choice = new stdClass();
-$Q31_40->e2->choice = new stdClass();
-$Q31_40->e3->choice = new stdClass();
-$Q31_40->e4->choice = new stdClass();
-$Q31_40->e5->choice = new stdClass();
-$Q31_40->e6->choice = new stdClass();
-$Q31_40->e7->choice = new stdClass();
-$Q31_40->e8->choice = new stdClass();
-$Q31_40->e9->choice = new stdClass();
-$Q31_40->e10->choice = new stdClass();
-
-$Q31_40->e1->choice->a = "A. the owl";
-$Q31_40->e1->choice->b = "B. the wolf";
-$Q31_40->e1->choice->c = "C. the antelope";
-$Q31_40->e1->choice->d = "D. humans";
-$Q31_40->e2->choice->a = "A. were able to change their appearance to suit their environment.";
-$Q31_40->e2->choice->b = "B. had to move around to find an environment which suited their bodies.";
-$Q31_40->e2->choice->c = "C. had to find places where the sun was neither too hot nor too cool.";
-$Q31_40->e2->choice->d = "D. copied the behaviour of the animals which they hunted.";
-$Q31_40->e3->choice->a = "A. The surroundings in which humans lived became harsh.";
-$Q31_40->e3->choice->b = "B. The human anatomy stopped changing.";
-$Q31_40->e3->choice->c = "C. The human anatomy started chaning more rapidly.";
-$Q31_40->e3->choice->d = "D. Humans began to adapt their living environments.";
-$Q31_40->e4->choice->a = "A. They hunted together for food and shared their prey.";
-$Q31_40->e4->choice->b = "B. They competed for food but sometimes shared their prey.";
-$Q31_40->e4->choice->c = "C. They had little contact and hunted separately.";
-$Q31_40->e4->choice->d = "D. They took turns to hunt for food.";
-$Q31_40->e5->choice->a = "A. humans used them to guard their camps against enemies.";
-$Q31_40->e5->choice->b = "B. humans took baby wolves to live with them.";
-$Q31_40->e5->choice->c = "C. humans realised that the wolves' social organisation was similar to their own.";
-$Q31_40->e5->choice->d = "D. baby wolves were left by their parents for humans to take care of.";
-$Q31_40->e6->choice->a = "A. They had a woolly undercoat all year round.";
-$Q31_40->e6->choice->b = "B. They were small and had long legs.";
-$Q31_40->e6->choice->c = "C. They developed a relationship with humans in the same way as the wolves had done.";
-$Q31_40->e6->choice->d = "D. They depended on humans to protect them from the wolves.";
-$Q31_40->e7->choice->a = "A. They move around looking for food.";
-$Q31_40->e7->choice->b = "B. They move around because the Lapps are hunting them.";
-$Q31_40->e7->choice->c = "C. They migrated about 1000 years ago.";
-$Q31_40->e7->choice->d = "D. They move because the Lapps are nomadic.";
-$Q31_40->e8->choice->a = "A. Food and drink";
-$Q31_40->e8->choice->b = "B. Cooking utensils";
-$Q31_40->e8->choice->c = "C. Materials for building homes";
-$Q31_40->e8->choice->d = "D. Material for making clothes";
-$Q31_40->e9->choice->a = "A. They are born in spring.";
-$Q31_40->e9->choice->b = "B. They are castrated by the dominant males.";
-$Q31_40->e9->choice->c = "C. When they have been castrated they establish their own groups.";
-$Q31_40->e9->choice->d = "D. They force the dominant males to leave the group.";
-$Q31_40->e10->choice->a = "A. all male reindeer are castrated.";
-$Q31_40->e10->choice->b = "B. the reindeer now have relations in North America.";
-$Q31_40->e10->choice->c = "C. it has been taking place for many hundreds of years.";
-$Q31_40->e10->choice->d = "D. the Lapps are able to keep large herds of domestic reindeer.";
+$Q1_10->e1->aw = "";
+$Q1_10->e2->aw = "Hong Kong";
+$Q1_10->e3->aw = "25 August";
+$Q1_10->e4->aw = "";
+$Q1_10->e5->aw = "11.45 pm";
+$Q1_10->e6->aw = "";
+$Q1_10->e7->aw = "56J";
+$Q1_10->e8->aw = "Vegetarian";
+$Q1_10->e9->aw = "";
+$Q1_10->e10->aw = "520 dollars";
+$Q1_10->e11->aw = "bank transfer";
+$Q1_10->e12->aw = "";
+$Q1_10->e13->aw = "8 kg";
+$Q1_10->e14->aw = "";
+$Q1_10->e15->aw = "3 hours";
+$Q1_10->e16->aw = "1 hour";
 
 @endphp
 <div class="row">
@@ -191,32 +158,34 @@ $Q31_40->e10->choice->d = "D. the Lapps are able to keep large herds of domestic
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <h5>(Questions 31–40)</h5>
+                    Write <b>NO MORE THAN TWO WORDS AND/OR A DATE OR A NUMBER</b>.
                     <div class="w-100 d-flex justify-content-center">
-                        <table class="w-100">
-                            @foreach($Q31_40 as $index => $Q31_40)
+                        <table class="w-75">
                             <tr>
-                                <td style="width: 20px;">{{$Q31_40->n}}. </td>
-                                <td colspan="2">{{$Q31_40->q}}</td>
-                            </tr>
-                            @foreach($Q31_40->choice as $index2 => $choice)
-                            <tr>
-                                <td></td>
-                                <td style="width: 20px;">
-                                    <div class="form-check">
-                                        <input class="form-check-input event-click position-static q-check Q31_40-{{$index}}-{{$index2}}" type="radio" name="Q31_40-{{$index}}" show-aw="Q31_40-{{$index}}" aw="{{$Q31_40->aw}}" value="{{$choice}}">
+                                <td style="border: 1px solid black;">
+                                    <div class="p-3">
+                                        <div class="w-100 text-center">
+                                            <b>Booking Form</b>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-center">
+                                            <table>
+                                                @foreach($Q1_10 as $index => $Q1_10)
+                                                <tr>
+                                                    <td class="pr-2">{{$Q1_10->q}}</td>
+                                                    <td class="Q1_10-{{$index}} q1_10" show-aw="show_aw_Q1_10-{{$index}}" aw="{{$Q1_10->aw}}" replace="Q1_10-{{$index}}">{{$Q1_10->q2}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
+                                                        <span class="aw text-danger show_aw_Q1_10-{{$index}}">{{$Q1_10->aw}}</span>
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                            </table>
+                                        </div>
                                     </div>
                                 </td>
-                                <td>
-                            <span class="event-click" onclick="checkRadio('Q31_40-{{$index}}-{{$index2}}')">{{$choice}}</span>
-                            </td>
                             </tr>
-                            @endforeach
-                            <tr class="aw">
-                                <td></td>
-                                <td colspan="2" class="aw Q31_40-{{$index}} text-danger">{{$Q31_40->aw}}</td>
-                            </tr>
-                            @endforeach
                         </table>
                     </div>
                 </div>
@@ -234,7 +203,7 @@ $Q31_40->e10->choice->d = "D. the Lapps are able to keep large herds of domestic
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -252,6 +221,14 @@ $Q31_40->e10->choice->d = "D. the Lapps are able to keep large herds of domestic
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
+    $('.q1_10').each((idx, item) => {
+        let text = $(item).html()
+        let input = '<div class="input-con py-1">' +
+            '<input class="q-val form-control" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
+            '</div>'
+        text = text.replace("___", input)
+        $(item).html(text)
+    })
 
     $('#check-answer').on('click', () => {
         $('.q-val').each((idx, item) => {
@@ -280,15 +257,15 @@ $Q31_40->e10->choice->d = "D. the Lapps are able to keep large herds of domestic
         $('.aw').removeClass('aw')
     })
 
-function show_aw(aw, item) {
-    $(item).addClass('border border-success')
-    $('.' + aw).addClass('text-success')
-    $('.' + aw).removeClass('text-danger')
-}
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
+        $('.' + aw).addClass('text-success')
+        $('.' + aw).removeClass('text-danger')
+    }
 
-function show_error(item) {
-    $(item).addClass('border border-danger')
-}
+    function show_error(item) {
+        $(item).addClass('border border-danger')
+    }
 
     function checkRadio(x) {
         $('.' + x).prop("checked", true);

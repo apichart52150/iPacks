@@ -78,113 +78,101 @@
         width: 500px;
         padding-left: 10px;
     }
-
-    .event-click {
+    .event-click{
         cursor: pointer;
     }
 </style>
 @php
 
-$Q21_26 = new stdClass();
-$Q21_26->e1 = new stdClass();
-$Q21_26->e2 = new stdClass();
-$Q21_26->e3 = new stdClass();
-$Q21_26->e4 = new stdClass();
-$Q21_26->e5 = new stdClass();
-$Q21_26->e6 = new stdClass();
+$Q11_17 = new stdClass();
+$Q11_17->e1 = new stdClass();
+$Q11_17->e2 = new stdClass();
+$Q11_17->e3 = new stdClass();
+$Q11_17->e4 = new stdClass();
+$Q11_17->e5 = new stdClass();
 
-$Q21_26->e1->n = "21";
-$Q21_26->e2->n = "22";
-$Q21_26->e3->n = "23";
-$Q21_26->e4->n = "24";
-$Q21_26->e5->n = "25";
-$Q21_26->e6->n = "26";
+$Q11_17->e1->q = "(11) ___";
+$Q11_17->e2->q = "Late 1990s";
+$Q11_17->e3->q = "(14) ___";
+$Q11_17->e4->q = "2010";
+$Q11_17->e5->q = "Today";
 
-$Q21_26->e1->q = "What was the main reason for Steve and Gitta’s choice of project topic?";
-$Q21_26->e2->q = "What has been one reason for the growth in housing estates?";
-$Q21_26->e3->q = "What changes have been made to public transportation?";
-$Q21_26->e4->q = "What impact has the five pounds inner city road tax had?";
-$Q21_26->e5->q = "Which facility has the council recently opened?";
-$Q21_26->e6->q = "What will be the main focus of Steve and Gitta’s project?";
+$Q11_17->e1->q2 = "6";
+$Q11_17->e2->q2 = "(13) ___";
+$Q11_17->e3->q2 = "Over 50";
+$Q11_17->e4->q2 = "100";
+$Q11_17->e5->q2 = "(17) ___";
 
-$Q21_26->e1->aw = "C. There is a strong sense of community in the estates.";
-$Q21_26->e2->aw = "B. People have left other areas to set up home there.";
-$Q21_26->e3->aw = "B. An underground rail system has been developed.";
-$Q21_26->e4->aw = "A. Fewer cars now enter the city centre.";
-$Q21_26->e5->aw = "D. A sports centre in the centre of town";
-$Q21_26->e6->aw = "C. The link between improved facilities and a reduction in crime";
+$Q11_17->e1->q3 = "Huddersfield";
+$Q11_17->e2->q3 = "North of England";
+$Q11_17->e3->q3 = "Scotland";
+$Q11_17->e4->q3 = "(16) ___";
+$Q11_17->e5->q3 = "UK and EU";
 
-$Q21_26->e1->choice = new stdClass;
-$Q21_26->e2->choice = new stdClass;
-$Q21_26->e3->choice = new stdClass;
-$Q21_26->e4->choice = new stdClass;
-$Q21_26->e5->choice = new stdClass;
-$Q21_26->e6->choice = new stdClass;
+$Q11_17->e1->q4 = "(12) ___";
+$Q11_17->e2->q4 = "Ladies’ fashion garments";
+$Q11_17->e3->q4 = "Ladies’ fashion garments and (15) ___";
+$Q11_17->e4->q4 = "Smart phones";
+$Q11_17->e5->q4 = "Mobile phones and accessories";
 
-$Q21_26->e1->choice->a = "A. They both live in housing estates.";
-$Q21_26->e1->choice->b = "B. There have been a lot of changes in the housiNg estates recently.";
-$Q21_26->e1->choice->c = "C. There is a strong sense of community in the estates.";
-$Q21_26->e1->choice->d = "D. There has been a reduction in community activitIies in recent years.";
-$Q21_26->e2->choice->a = "A. Urban migration from the city to the estates has increased.";
-$Q21_26->e2->choice->b = "B. People have left other areas to set up home there.";
-$Q21_26->e2->choice->c = "C. People have chosen to live in inner city areas rather than on the estates.";
-$Q21_26->e2->choice->d = "D. The council has made improvements in infrastructure.";
-$Q21_26->e3->choice->a = "A. There are more buses now than there used to be.";
-$Q21_26->e3->choice->b = "B. An underground rail system has been developed.";
-$Q21_26->e3->choice->c = "C. A mono-rail link links part of the inner city.";
-$Q21_26->e3->choice->d = "D. There are more cars on the road now.";
-$Q21_26->e4->choice->a = "A. Fewer cars now enter the city centre.";
-$Q21_26->e4->choice->b = "B. More people use the pedestrian precincts.";
-$Q21_26->e4->choice->c = "C. There is now more money available for infrastructure development.";
-$Q21_26->e4->choice->d = "D. People tend to leave their cars at home.";
-$Q21_26->e5->choice->a = "A. Areas to play football and badminton in the parks";
-$Q21_26->e5->choice->b = "B. Multi-purpose sports hall in the suburbs";
-$Q21_26->e5->choice->c = "C. Community education centres";
-$Q21_26->e5->choice->d = "D. A sports centre in the centre of town";
-$Q21_26->e6->choice->a = "A. The incidence of crime in other parts of the country";
-$Q21_26->e6->choice->b = "B. The correlation between crime in the city and crime in the housing estates";
-$Q21_26->e6->choice->c = "C. The link between improved facilities and a reduction in crime";
-$Q21_26->e6->choice->d = "D. The impact of juvenile crime on housing estates";
+$Q11_17->e1->aw = "1973";
+$Q11_17->e2->aw = "";
+$Q11_17->e3->aw = "2001";
+$Q11_17->e4->aw = "";
+$Q11_17->e5->aw = "";
+
+$Q11_17->e1->aw2 = "";
+$Q11_17->e2->aw2 = "22";
+$Q11_17->e3->aw2 = "";
+$Q11_17->e4->aw2 = "";
+$Q11_17->e5->aw2 = "almost 200";
+
+$Q11_17->e1->aw3 = "";
+$Q11_17->e2->aw3 = "";
+$Q11_17->e3->aw3 = "";
+$Q11_17->e4->aw3 = "Germany";
+$Q11_17->e5->aw3 = "";
+
+$Q11_17->e1->aw4 = "Textiles";
+$Q11_17->e2->aw4 = "";
+$Q11_17->e3->aw4 = "Perfumes";
+$Q11_17->e4->aw4 = "";
+$Q11_17->e5->aw4 = "";
 
 
-$Q27_30 = new stdClass();
-$Q27_30->e1 = new stdClass();
-$Q27_30->e2 = new stdClass();
-$Q27_30->e3 = new stdClass();
-$Q27_30->e4 = new stdClass();
+$Q18_20 = new stdClass();
+$Q18_20->e1 = new stdClass();
+$Q18_20->e2 = new stdClass();
+$Q18_20->e3 = new stdClass();
 
-$Q27_30->e1->n = "27";
-$Q27_30->e2->n = "28";
-$Q27_30->e3->n = "29";
-$Q27_30->e4->n = "30";
+$Q18_20->e1->n = "18";
+$Q18_20->e2->n = "19";
+$Q18_20->e3->n = "20";
 
-$Q27_30->e1->q = "Review of the literature";
-$Q27_30->e2->q = "Questionnaire";
-$Q27_30->e3->q = "Follow-up action: case study proposals";
-$Q27_30->e4->q = "Presentation methodology";
+$Q18_20->e1->q = "Where does the company hope to develop its business operations?";
+$Q18_20->e2->q = "What is the reason for the decision to invest there?";
+$Q18_20->e3->q = "How many people does the company currently employ?";
 
-$Q27_30->e1->aw = "B. Satisfactory";
-$Q27_30->e2->aw = "C. Not so good";
-$Q27_30->e3->aw = "A. Good";
-$Q27_30->e4->aw = "B. Satisfactory";
+$Q18_20->e1->aw = "D. South-East Asia";
+$Q18_20->e2->aw = "D. Because many people now have money to buy luxury items";
+$Q18_20->e3->aw = "C. 400";
 
-$Q27_30->e1->choice = new stdClass;
-$Q27_30->e2->choice = new stdClass;
-$Q27_30->e3->choice = new stdClass;
-$Q27_30->e4->choice = new stdClass;
+$Q18_20->e1->choice = new stdClass;
+$Q18_20->e2->choice = new stdClass;
+$Q18_20->e3->choice = new stdClass;
 
-$Q27_30->e1->choice->a = "A. Good";
-$Q27_30->e1->choice->b = "B. Satisfactory";
-$Q27_30->e1->choice->c = "C. Not so good";
-$Q27_30->e2->choice->a = "A. Good";
-$Q27_30->e2->choice->b = "B. Satisfactory";
-$Q27_30->e2->choice->c = "C. Not so good";
-$Q27_30->e3->choice->a = "A. Good";
-$Q27_30->e3->choice->b = "B. Satisfactory";
-$Q27_30->e3->choice->c = "C. Not so good";
-$Q27_30->e4->choice->a = "A. Good";
-$Q27_30->e4->choice->b = "B. Satisfactory";
-$Q27_30->e4->choice->c = "C. Not so good";
+$Q18_20->e1->choice->a = "A. North Asia";
+$Q18_20->e1->choice->b = "B. Japan";
+$Q18_20->e1->choice->c = "C. Korea";
+$Q18_20->e1->choice->d = "D. South-East Asia";
+$Q18_20->e2->choice->a = "A. Because competition is fierce there";
+$Q18_20->e2->choice->b = "B. Because the population is increasing there";
+$Q18_20->e2->choice->c = "C. Because there are plenty of mineral resources available";
+$Q18_20->e2->choice->d = "D. Because many people now have money to buy luxury items";
+$Q18_20->e3->choice->a = "A. 150";
+$Q18_20->e3->choice->b = "B. 250";
+$Q18_20->e3->choice->c = "C. 400";
+$Q18_20->e3->choice->d = "D. 800";
 
 @endphp
 <div class="row">
@@ -195,62 +183,51 @@ $Q27_30->e4->choice->c = "C. Not so good";
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    Choose the best answer from the given options. Write <b>A</b>, <b>B</b>, <b>C</b> or <b>D</b>.
+                    Write <b>NO MORE THAN TWO WORDS AND/OR A DATE OR A NUMBER</b> for each answer..
                     <div class="w-100 d-flex justify-content-center">
-                        <table class="w-100">
-                            @foreach($Q21_26 as $index => $Q21_26)
+                        <table class="text-center table w-100">
                             <tr>
-                                <td style="width: 20px;">{{$Q21_26->n}}. </td>
-                                <td colspan="2">{{$Q21_26->q}}</td>
+                                <th>Date</th>
+                                <th>No. of Outlets</th>
+                                <th>Where?</th>
+                                <th>Specialised in</th>
                             </tr>
-                            @foreach($Q21_26->choice as $index2 => $choice)
+                            @foreach($Q11_17 as $index => $Q11_17)
                             <tr>
-                                <td></td>
-                                <td style="width: 20px;">
-                                    <div class="form-check">
-                                        <input class="form-check-input event-click position-static q-check Q21_26-{{$index}}-{{$index2}}" type="radio" name="Q21_26-{{$index}}" show-aw="Q21_26-{{$index}}" aw="{{$Q21_26->aw}}" value="{{$choice}}">
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="event-click" onclick="checkRadio('Q21_26-{{$index}}-{{$index2}}')">{{$choice}}</span>
-                                </td>
-                            </tr>
-                            @endforeach
-                            <tr class="aw">
-                                <td></td>
-                                <td colspan="2" class="aw Q21_26-{{$index}} text-danger">{{$Q21_26->aw}}</td>
+                                <td class="Q11_17-{{$index}}-1 Q11_17" show-aw="show_aw_Q11_17-{{$index}}-1" aw="{{$Q11_17->aw}}" replace="Q11_17-{{$index}}-1">{{$Q11_17->q}}</td>
+                                <td class="Q11_17-{{$index}}-2 Q11_17" show-aw="show_aw_Q11_17-{{$index}}-2" aw="{{$Q11_17->aw2}}" replace="Q11_17-{{$index}}-2">{{$Q11_17->q2}}</td>
+                                <td class="Q11_17-{{$index}}-3 Q11_17" show-aw="show_aw_Q11_17-{{$index}}-3" aw="{{$Q11_17->aw3}}" replace="Q11_17-{{$index}}-3">{{$Q11_17->q3}}</td>
+                                <td class="Q11_17-{{$index}}-4 Q11_17" show-aw="show_aw_Q11_17-{{$index}}-4" aw="{{$Q11_17->aw4}}" replace="Q11_17-{{$index}}-4">{{$Q11_17->q4}}</td>
                             </tr>
                             @endforeach
                         </table>
                     </div>
                 </div>
-                <div class="mt-4 col-lg-12">
-                    Match the parts of the project proposal with the tutor’s comments, <b>A-C</b>, in the box below.
-                    <br>
-                    Write a letter <b>A</b>, <b>B</b> or <b>C</b>.
+                <div class="col-lg-12">
+                    Choose the best answer from the given options. Write <b>A</b>, <b>B</b>, <b>C</b> or <b>D</b> for each answer.
                     <div class="w-100 d-flex justify-content-center">
                         <table class="w-100">
-                            @foreach($Q27_30 as $index => $Q27_30)
+                            @foreach($Q18_20 as $index => $Q18_20)
                             <tr>
-                                <td style="width: 20px;">{{$Q27_30->n}}. </td>
-                                <td colspan="2">{{$Q27_30->q}}</td>
+                                <td style="width: 20px;">{{$Q18_20->n}}. </td>
+                                <td colspan="2">{{$Q18_20->q}}</td>
                             </tr>
-                            @foreach($Q27_30->choice as $index2 => $choice)
+                            @foreach($Q18_20->choice as $index2 => $choice)
                             <tr>
                                 <td></td>
                                 <td style="width: 20px;">
                                     <div class="form-check">
-                                        <input class="form-check-input event-click position-static q-check Q27_30-{{$index}}-{{$index2}}" type="radio" name="Q27_30-{{$index}}" show-aw="Q27_30-{{$index}}" aw="{{$Q27_30->aw}}" value="{{$choice}}">
+                                        <input class="form-check-input event-click position-static q-check Q18_20-{{$index}}-{{$index2}}" type="radio" name="Q18_20-{{$index}}" show-aw="Q18_20-{{$index}}" aw="{{$Q18_20->aw}}" value="{{$choice}}">
                                     </div>
                                 </td>
                                 <td>
-                                    <span class="event-click" onclick="checkRadio('Q27_30-{{$index}}-{{$index2}}')">{{$choice}}</span>
-                                </td>
+                            <span class="event-click" onclick="checkRadio('Q18_20-{{$index}}-{{$index2}}')">{{$choice}}</span>
+                            </td>
                             </tr>
                             @endforeach
                             <tr class="aw">
                                 <td></td>
-                                <td colspan="2" class="aw Q27_30-{{$index}} text-danger">{{$Q27_30->aw}}</td>
+                                <td colspan="2" class="aw Q18_20-{{$index}} text-danger">{{$Q18_20->aw}}</td>
                             </tr>
                             @endforeach
                         </table>
@@ -270,7 +247,7 @@ $Q27_30->e4->choice->c = "C. Not so good";
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -288,6 +265,16 @@ $Q27_30->e4->choice->c = "C. Not so good";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
+    $('.Q11_17').each((idx, item) => {
+        let text = $(item).html()
+        let input = '<div class="input-con input-con2 py-1">' +
+            '<input class="q-val form-control" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
+            '</div>' +
+            '<span class="px-2 aw text-danger ' + $(item).attr('show-aw') + '">' + $(item).attr('aw') + '</span>'
+        text = text.replace("___", input)
+        $(item).html(text)
+    })
+
     $('#check-answer').on('click', () => {
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
@@ -315,16 +302,6 @@ $Q27_30->e4->choice->c = "C. Not so good";
         $('.aw').removeClass('aw')
     })
 
-
-    function show_aw(aw, item) {
-        $(item).addClass('border border-success')
-        $('.' + aw).addClass('text-success')
-        $('.' + aw).removeClass('text-danger')
-    }
-
-    function show_error(item) {
-        $(item).addClass('border border-danger')
-    }
 
     function show_aw(aw, item) {
         $(item).addClass('border border-success')

@@ -530,10 +530,10 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         <table class="w-100 mb-3">
                             @foreach($caller_4_A as $index => $caller_4_A)
                             <tr>
-                                <td class="border-dark p-2">{{$caller_4_A->q}}</td>
+                                <td class="border-dark ">{{$caller_4_A->q}}</td>
                             </tr>
                             <tr>
-                                <td class="border-dark p-2">
+                                <td class="border-dark py-2">
                                     <b>Answer: </b>
                                     <div class="input-con w-75">
                                         <input type="text" class="form-control q-text w-100" show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
@@ -549,7 +549,7 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         </table>
                         <h5 class="mt-3">B. Listen to the talk again and take notes using the conventions available to you. </h5>
                         <!-- <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea> -->
-                        <h5 class="mt-3">C. Write a short summary of the talk, using your own words as far as possible. The summary should be between 80 - 100 words. </h5>
+                        <h5 class="mt-3 pb-2">C. Write a short summary of the talk, using your own words as far as possible. The summary should be between 80 - 100 words. </h5>
                         <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                         <h5 class="mt-3 aw text-success">D. Summary (possible answer) </h5>
                         <span class="aw text-success">
@@ -576,7 +576,7 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                 <div class="modal-body text-center">
                     <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                     <audio data-sound="sound-intro">
-                        <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                        <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                     </audio>
                 </div>
             </div>

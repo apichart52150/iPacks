@@ -231,7 +231,7 @@ $Q38_40->e3->aw = "mountaineers";
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_id'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -251,7 +251,7 @@ $Q38_40->e3->aw = "mountaineers";
 <script>
     $('.Q38_40').each((idx, item) => {
         let text = $(item).html()
-        let input = '<div class="input-con">' +
+        let input = '<div class="input-con py-1">' +
             '<input type="text" class="form-control w-100 q-val" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
             '</div>' +
             '<span class="aw text-danger ' + $(item).attr('show-aw') + ' px-2">' + $(item).attr('aw') + '</span>'
