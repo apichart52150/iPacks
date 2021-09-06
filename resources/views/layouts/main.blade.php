@@ -90,12 +90,12 @@
                     <div class="logo-box">
                         <div class="logo text-center">
                             <span class="logo-lg">
-                                <img src="{{asset('public/assets/images/logo-nc.png') }}" alt="" height="45">
+                                <img src="{{asset('public/assets/images/logo-nc-light.png') }}" alt="" height="45">
                                 <!-- <span class="logo-lg-text-light">Xeria</span> -->
                             </span>
                             <span class="logo-sm">
                                 <!-- <span class="logo-sm-text-dark">X</span> -->
-                                <img src="{{asset('public/assets/images/logo-nc-mini.png') }}"alt="" height="45">
+                                <img src="{{asset('public/assets/images/icob-nc-light.png') }}"alt="" height="45">
                             </span>
                         </div>
                     </div>
@@ -289,13 +289,10 @@
         <!-- App js -->
         <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
 
-          <!-- Plugins Js -->
-        <script src="{{ asset('public/assets/libs/bootstrap-tagsinput/bootstrap-tagsinput.min.js') }}"></script>
+        <!-- Plugins Js -->
         <script src="{{ asset('public/assets/libs/switchery/switchery.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/multiselect/jquery.multi-select.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/jquery-quicksearch/jquery.quicksearch.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/select2/select2.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/bootstrap-select/bootstrap-select.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/jquery-mask-plugin/jquery.mask.min.js') }}"></script>
 

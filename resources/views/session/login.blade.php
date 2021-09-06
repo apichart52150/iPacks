@@ -11,11 +11,11 @@
 						<div class="text-center mb-3">
 	                        <h3 class="font-weight-bold text-primary"><i class="fas fa-info"></i> PACKS <span class="d-none d-sm-inline">|</span> <span class="text-dark">LOGIN</span> </h3>
 	                    </div>
-						<b class="text-muted mb-4 mt-3">Please access the services via <img alt="" src="https://www.newcambridgethailand.com/mocktest/public/assets/images/1024px-Google_Chrome_icon.png" height="30px"> or <img alt="" src="https://www.newcambridgethailand.com/mocktest/public/assets/images/Firefox_Logo.png" height="30px"></b>
+						<p class="text-muted mb-4 mt-3 font-weight-bold">Please access the services via <img alt="" src="https://www.newcambridgethailand.com/mocktest/public/assets/images/1024px-Google_Chrome_icon.png" height="30px"> or <img alt="" src="https://www.newcambridgethailand.com/mocktest/public/assets/images/Firefox_Logo.png" height="30px"></p>
 					</div>
 
 					@if(session()->has('status'))
-					
+
 					<div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show my-2"
 						role="alert">
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -50,12 +50,12 @@
 
 					<br>
 
-					<b class="text-success">
+					<p class="font-weight-bold text-success">
 						<i class=" mdi mdi-monitor-screenshot"></i> Computers, laptops, or iPads are highly recommended.
-					</b>
-					<b class="text-danger">
+					</p>
+					<p class="font-weight-bold text-danger">
 						<i class=" mdi mdi-cellphone-erase"></i>Smartphones should be avoided.
-					</b>
+					</p>
 				</div>
 			</div>
 			<div class="row mt-3">
