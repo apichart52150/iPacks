@@ -8,7 +8,7 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('public/assets/images/newcambridge-logo_bar.png') }}">
+        <link rel="shortcut icon" href="{{asset('public/assets/images/icon-nc-big.png') }}">
 
         <!-- Lightbox css -->
         <link href="{{ asset('public/assets/libs/magnific-popup/magnific-popup.css') }}" rel="stylesheet" type="text/css" />
@@ -90,12 +90,12 @@
                     <div class="logo-box">
                         <div class="logo text-center">
                             <span class="logo-lg">
-                                <img src="{{asset('public/assets/images/logo-nc.png') }}" alt="" height="45">
+                                <img src="{{asset('public/assets/images/logo-nc-light.png') }}" alt="" height="45">
                                 <!-- <span class="logo-lg-text-light">Xeria</span> -->
                             </span>
                             <span class="logo-sm">
                                 <!-- <span class="logo-sm-text-dark">X</span> -->
-                                <img src="{{asset('public/assets/images/logo-nc-mini.png') }}"alt="" height="45">
+                                <img src="{{asset('public/assets/images/icob-nc-light.png') }}"alt="" height="45">
                             </span>
                         </div>
                     </div>
@@ -290,16 +290,13 @@
         <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
 
         <!-- Plugins Js -->
-        <script src="{{ asset('public/assets/libs/bootstrap-tagsinput/bootstrap-tagsinput.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/switchery/switchery.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/multiselect/jquery.multi-select.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/jquery-quicksearch/jquery.quicksearch.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/select2/select2.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/bootstrap-select/bootstrap-select.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/jquery-mask-plugin/jquery.mask.min.js') }}"></script>
 
-        <!-- init js -->
+         <!-- init js -->
         <script src="{{ asset('public/assets/js/pages/form-advanced.init.js') }}"></script>
 
         <script>
@@ -311,6 +308,7 @@
 
             $('#reset').on('click', () => location.reload())
 
+           
             var session_id = "{!! (session('ss_id'))?session('ss_id'):'' !!}";
             var user_id = "{!! (Auth::user())?Auth::user()->session_id:'' !!}";
 
@@ -321,6 +319,7 @@
 
             document.oncontextmenu = function() { return false; }
             document.onselectstart = function() { return false; }
+
         </script>
 
         @yield('js')
