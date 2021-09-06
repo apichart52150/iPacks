@@ -52,127 +52,125 @@
     <div class="col-md-12">
         <div class="card-box text-dark font-16">
             <p class="lead">Choose the best answer for each question from the given options.</p>
-                <label>1. {{ $q1 }}</label>
-                <div class="ml-2">
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="1-1" name="q1" value="a">
-                        <label class="custom-control-label" for="1-1">{{ $q111[0] }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="1-2" name="q1" value="b">
-                        <label class="custom-control-label" for="1-2">{{  $q111[1]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="1-3" name="q1" value="c">
-                        <label class="custom-control-label" for="1-3">{{  $q111[2]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="1-4" name="q1" value="d">
-                        <label class="custom-control-label" for="1-4">{{  $q111[3]  }}</label>
-                    </div>
+            <label>1. {{ $q1 }}</label>
+            <div class="ml-2">
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="1-1" name="q1" value="a">
+                    <label class="custom-control-label" for="1-1">{{ $q111[0] }}</label>
                 </div>
-    
-                <label class="mt-3">2. {{ $q2 }}</label>
-                <div class="ml-2">
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="2-1" name="q2" value="a">
-                        <label class="custom-control-label" for="2-1">{{  $q222[0]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="2-2" name="q2" value="b">
-                        <label class="custom-control-label" for="2-2">{{  $q222[1]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="2-3" name="q2" value="c">
-                        <label class="custom-control-label" for="2-3">{{  $q222[2]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="2-4" name="q2" value="d">
-                        <label class="custom-control-label" for="2-4">{{  $q222[3]  }}</label>
-                    </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="1-2" name="q1" value="b">
+                    <label class="custom-control-label" for="1-2">{{  $q111[1]  }}</label>
                 </div>
-    
-                <label class="mt-3">3. {{ $q3 }}</label>
-                <div class="ml-2">
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="3-1" name="q3" value="a">
-                        <label class="custom-control-label" for="3-1">{{  $q333[0]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="3-2" name="q3" value="b">
-                        <label class="custom-control-label" for="3-2">{{  $q333[1]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="3-3" name="q3" value="c">
-                        <label class="custom-control-label" for="3-3">{{  $q333[2]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="3-4" name="q3" value="d">
-                        <label class="custom-control-label" for="3-4">{{  $q333[3]  }}</label>
-                    </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="1-3" name="q1" value="c">
+                    <label class="custom-control-label" for="1-3">{{  $q111[2]  }}</label>
                 </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="1-4" name="q1" value="d">
+                    <label class="custom-control-label" for="1-4">{{  $q111[3]  }}</label>
+                </div>
+            </div>
+
+            <label class="mt-3">2. {{ $q2 }}</label>
+            <div class="ml-2">
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="2-1" name="q2" value="a">
+                    <label class="custom-control-label" for="2-1">{{  $q222[0]  }}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="2-2" name="q2" value="b">
+                    <label class="custom-control-label" for="2-2">{{  $q222[1]  }}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="2-3" name="q2" value="c">
+                    <label class="custom-control-label" for="2-3">{{  $q222[2]  }}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="2-4" name="q2" value="d">
+                    <label class="custom-control-label" for="2-4">{{  $q222[3]  }}</label>
+                </div>
+            </div>
+
+            <label class="mt-3">3. {{ $q3 }}</label>
+            <div class="ml-2">
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="3-1" name="q3" value="a">
+                    <label class="custom-control-label" for="3-1">{{  $q333[0]  }}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="3-2" name="q3" value="b">
+                    <label class="custom-control-label" for="3-2">{{  $q333[1]  }}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="3-3" name="q3" value="c">
+                    <label class="custom-control-label" for="3-3">{{  $q333[2]  }}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="3-4" name="q3" value="d">
+                    <label class="custom-control-label" for="3-4">{{  $q333[3]  }}</label>
+                </div>
+            </div>
 
 
 
-                <label class="mt-3">4. {{ $q4 }}</label>
-                <div class="ml-2">
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="4-1" name="q4" value="a">
-                        <label class="custom-control-label" for="4-1">{{  $q444[0]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="4-2" name="q4" value="b">
-                        <label class="custom-control-label" for="4-2">{{  $q444[1]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="4-3" name="q4" value="c">
-                        <label class="custom-control-label" for="4-3">{{  $q444[2]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="4-4" name="q4" value="d">
-                        <label class="custom-control-label" for="4-4">{{  $q444[3]  }}</label>
-                    </div>
+            <label class="mt-3">4. {{ $q4 }}</label>
+            <div class="ml-2">
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="4-1" name="q4" value="a">
+                    <label class="custom-control-label" for="4-1">{{  $q444[0]  }}</label>
                 </div>
-    
-                <label class="mt-3">5. {{ $q5 }}</label>
-                <div class="ml-2">
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="5-1" name="q5" value="a">
-                        <label class="custom-control-label" for="5-1">{{  $q555[0]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="5-2" name="q5" value="b">
-                        <label class="custom-control-label" for="5-2">{{  $q555[1]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="5-3" name="q5" value="c">
-                        <label class="custom-control-label" for="5-3">{{  $q555[2]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="5-4" name="q5" value="d">
-                        <label class="custom-control-label" for="5-4">{{  $q555[3]  }}</label>
-                    </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="4-2" name="q4" value="b">
+                    <label class="custom-control-label" for="4-2">{{  $q444[1]  }}</label>
                 </div>
-                <label class="mt-3">6. {{ $q6 }}</label>
-                <div class="ml-2">
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="6-1" name="q6" value="a">
-                        <label class="custom-control-label" for="6-1">{{  $q666[0]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="6-2" name="q6" value="b">
-                        <label class="custom-control-label" for="6-2">{{  $q666[1]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="6-3" name="q6" value="c">
-                        <label class="custom-control-label" for="6-3">{{  $q666[2]  }}</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="6-4" name="q6" value="d">
-                        <label class="custom-control-label" for="6-4">{{  $q666[3]  }}</label>
-                    </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="4-3" name="q4" value="c">
+                    <label class="custom-control-label" for="4-3">{{  $q444[2]  }}</label>
                 </div>
-                    
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="4-4" name="q4" value="d">
+                    <label class="custom-control-label" for="4-4">{{  $q444[3]  }}</label>
+                </div>
+            </div>
+
+            <label class="mt-3">5. {{ $q5 }}</label>
+            <div class="ml-2">
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="5-1" name="q5" value="a">
+                    <label class="custom-control-label" for="5-1">{{  $q555[0]  }}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="5-2" name="q5" value="b">
+                    <label class="custom-control-label" for="5-2">{{  $q555[1]  }}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="5-3" name="q5" value="c">
+                    <label class="custom-control-label" for="5-3">{{  $q555[2]  }}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="5-4" name="q5" value="d">
+                    <label class="custom-control-label" for="5-4">{{  $q555[3]  }}</label>
+                </div>
+            </div>
+            <label class="mt-3">6. {{ $q6 }}</label>
+            <div class="ml-2">
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="6-1" name="q6" value="a">
+                    <label class="custom-control-label" for="6-1">{{  $q666[0]  }}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="6-2" name="q6" value="b">
+                    <label class="custom-control-label" for="6-2">{{  $q666[1]  }}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="6-3" name="q6" value="c">
+                    <label class="custom-control-label" for="6-3">{{  $q666[2]  }}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="6-4" name="q6" value="d">
+                    <label class="custom-control-label" for="6-4">{{  $q666[3]  }}</label>
+                </div>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('public/assets/images/newcambridge-logo_bar.png') }}">
+        <link rel="shortcut icon" href="{{asset('public/assets/images/icon-nc-big.png') }}">
 
         <!-- Lightbox css -->
         <link href="{{ asset('public/assets/libs/magnific-popup/magnific-popup.css') }}" rel="stylesheet" type="text/css" />

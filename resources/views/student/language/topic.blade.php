@@ -36,8 +36,12 @@
 
     <div class="row filterable-content">
         @foreach ($topic['submenu'] as $id => $manu_name)
-            <div class="col-sm-6 col-xl-3 mb-3 filter-item {{$topic['topicName']}}">
-                <div class="card-box p-0 d-flex h-100">
+                @if ($manu_name->menu_type == 3 || $manu_name->menu_type == 4)
+                    <div class="col-sm-6 col-xl-6 mb-3 filter-item {{$topic['topicName']}}">
+                @else
+                    <div class="col-sm-6 col-xl-4 mb-3 filter-item {{$topic['topicName']}}">
+                @endif
+                <div class="card-box p-0 d-flex h-100 w-100">
                     <div class="bg-{{$topic['topicColor']}} d-flex justify-content-center align-items-center px-3">
                         <i class="fas fa-list text-white" style="font-size: 3em;"></i>
                     </div>

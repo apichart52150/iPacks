@@ -22,10 +22,6 @@
 		Route::get('browser-settings', function() {
 			return view('student.isac.speaking.browser_settings');
 		})->name('browser-settings');
-		
-
-		Route::get('payment/{status}', 'payment\paymentController@form_payment')->name('payment');
-		Route::post('confirm_payment', 'payment\paymentController@payment')->name('confirm_payment');
 
 		Route::get('wait', function() {
 			return view('student.wait');
@@ -35,6 +31,13 @@
 			return view('student.success');
 		})->name('success');
 
+		Route::get('expire', function() {
+			return view('student.expire');
+		})->name('expire');
+		
+
+		Route::get('payment/{status}', 'payment\paymentController@form_payment')->name('payment');
+		Route::post('confirm_payment', 'payment\paymentController@payment')->name('confirm_payment');
 
 		Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
@@ -83,7 +86,7 @@
 		Route::prefix('isac')->namespace('student\isac\listeningController')->group(function () {
 			Route::get('listening', 'HomeController@index')->name('listening');
 			Route::post('submenu', 'HomeController@submenu')->name('sub_menu');
-			Route::get('audio/{id?}/{name?}', 'HomeController@audio')->name('audio/{id?}/{name?}');
+			Route::get('listening/{exam_type}/{exam_id}', 'HomeController@exam')->name('listening/{exam_type}/{exam_id}');
 		});
 
 		Route::prefix('language')->namespace('student\isac\languageController')->group(function () {

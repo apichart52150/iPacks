@@ -1,608 +1,372 @@
+<link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
-.mark, mark {
-    padding: .2em;
-    background-color: #ffc107;
-}
+    .input-con {
+        display: inline-block;
+        position: relative;
+    }
+
+    .drag-container {
+        margin-bottom: 25px;
+    }
+
+    .answers-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+
+    .answers-container p {
+        font-size: 16px;
+    }
+
+    .dropbox {
+        border: 1px dashed #ccc;
+        border-radius: 5px;
+        padding: 3px;
+        width: 100%;
+        height: auto;
+        min-width: 80px;
+    }
+
+    .dropbox .drag {margin: 0;
+    }
+
+    .grid-5 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
 </style>
 @php
-    $q1 = "I believe schools should teach students how to";
-    $q11 = "children.";
-    $q111 = array(
-        'bring up',
-        'grow up',
-        'take over',
-        'keep on'
-    );
-    $q2 = "Many parents don't know how to";
-    $q22 = "children properly; for example, they let them eat too much fast food.";
-    $q222 = array(
-        'grow up',
-        'drop out',
-        'put forward',
-        'look after'
-    );
-    $q3 = "Married couples sometimes";
-    $q33 = "over who should do the housework. They need to decide on that before they get married.";
-    $q333 = array(
-        'look after',
-        'take over',
-        'fall out',
-        'put forward'
-    );
-    $q4 = "This report";
-    $q44 = "the reasons for the dramatic rise in population.";
-    $q444 = array(
-        'cuts down on',
-        'keeps on',
-        'leaves out',
-        'drops out'
-    );
-    $q5 = "A successful business person";
-    $q55 = "trying even when something seems impossible.";
-    $q555 = array(
-        'looks after',
-        'drops out',
-        'puts forward',
-        'keeps on'
-    );
-    $q6 = "He is behaving so immaturely. He really needs to";
-    $q66 = ".";
-    $q666 = array(
-        'leave out',
-        'grow up',
-        'fall out',
-        'take over'
-    );
-    $q7 = "The course was quite boring and so many students";
-    $q77 = ".";
-    $q777 = array(
-        'fell out',
-        'took over',
-        'dropped out',
-        'put forward'
-    );
-    $q8 = "No one had any ideas on how to solve the problem until the chairperson";
-    $q88 = "this suggestion.";
-    $q888 = array(
-        'put forward',
-        'looked after',
-        'grew up',
-        'fell out'
-    );
-    $q9 = "My cough is getting really bad. I really should";
-    $q99 = "the number of cigarettes each day.";
-    $q999 = array(
-        'look after',
-        'drop out',
-        'leave out',
-        'cut down on'
-    );
-    $q10 = "The hospital has recently been";
-    $q100 = "by an international conglomerate.";
-    $q1000 = array(
-        'taken over',
-        'put forward',
-        'grown up',
-        'cut down on'
-    );
+    $q1 = "";
+    $q2 = "is a";
+    $q3 = "of advancement and increase in";
+    $q4 = "between the worlds' countries and people. It";
+    $q5 = "";
+    $q6 = ", knowledge and skills. GlobalIzation is gaining speed over the entire world. It has attracted enough world attention needed from international organizations in";
+    $q7 = "and encouraging human rights and freedom , opportunities for";
+    $q8 = ", social and";
+    $q9 = "rights. However, there are some countries that are missing out on the opportunities that are offered and it's taken as a big problem for their country. They are the poorer countries that are not connected to the people";
+    $q10 = "and their people are unskilled due to the lack of knowledge and";
+    $q11 = ". They are also unable to trade with the other countries which are richer and larger as they are unable to meet the demands";
+    $q12 = "on them. They also will not have the opportunities and the";
+    $q13 = "that are";
+    $q14 = ".";
+    $q15 = "has also encouraged crime, like the";
+    $q16 = "trade in drug trafficking around the world by air, sea and land. This has";
+    $q17 = "human smuggling. This has brought about a lot of problems to the country and the family of the drug addicts. This will also lead to other crimes like robbery and violence in the country. Another";
+    $q18 = "side of";
+    $q19 = "is the dumping of the dangerous waste into the river, sea or the ocean. This will Affect the aquatic creatures, contaminate the water and cause harm to the people too. To";
+    $q20 = ",";
+    $q21 = "has played an";
+    $q22 = "part in the world's economics but the international organization should also not forget the poorer countries and the developed countries should also tackle the other";
+    $q23 = "side that";
+    $end = "the world.";
+
+    $a1 = "affects";
+    $a2 = "challenges";
+    $a3 = "communication";
+    $a4 = "conclude";
+    $a5 = "cultural";
+    $a6 = "economic";
+    $a7 = "enormous";
+    $a8 = "globalization";
+    $a9 = "globalization";
+    $a10 = "globalization";
+    $a11 = "globalization";
+    $a12 = "globally";
+    $a13 = "illegal";
+    $a14 = "imposed";
+    $a15 = "interaction";
+    $a16 = "involved";
+    $a17 = "involves";
+    $a18 = "negative";
+    $a19 = "negative";
+    $a20 = "process";
+    $a21 = "promoting";
+    $a22 = "required";
+    $a23 = "technology";
 @endphp
 <div class="row">
-    <div class="col-xl-12 col-md-12">
-        <div class="card-box text-dark font-16">
-            <p class="lead">
-                {{$pageTitle['topic']}}
-            </p>
-            
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">1.</span>
-                {{$q1}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q111[0]}}">{{$q111[0]}}</option>
-                    <option value="{{$q111[1]}}">{{$q111[1]}}</option>
-                    <option value="{{$q111[2]}}">{{$q111[2]}}</option>
-                    <option value="{{$q111[3]}}">{{$q111[3]}}</option>
-                </select>
-                {{$q11}}
-            </div>
-            
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">2.</span>
-                {{$q2}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q222[0]}}">{{$q222[0]}}</option>
-                    <option value="{{$q222[1]}}">{{$q222[1]}}</option>
-                    <option value="{{$q222[2]}}">{{$q222[2]}}</option>
-                    <option value="{{$q222[3]}}">{{$q222[3]}}</option>
-                </select>
-                {{$q22}}
-            </div>
-            
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">3.</span>
-                {{$q3}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q333[0]}}">{{$q333[0]}}</option>
-                    <option value="{{$q333[1]}}">{{$q333[1]}}</option>
-                    <option value="{{$q333[2]}}">{{$q333[2]}}</option>
-                    <option value="{{$q333[3]}}">{{$q333[3]}}</option>
-                </select>
-                {{$q33}}
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
+                <div class="col-md-12">
+                    <div class="border border-dark px-2 text-center">
+                        <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
+                        <div class="drag-container">
+                            <div class="d-grid grid-5" id="choices">
+                                <div class="drag">{{ $a1 }}</div>
+                                <div class="drag">{{ $a2 }}</div>
+                                <div class="drag">{{ $a3 }}</div>
+                                <div class="drag">{{ $a4 }}</div>
+                                <div class="drag">{{ $a5 }}</div>
+                                <div class="drag">{{ $a6 }}</div>
+                                <div class="drag">{{ $a7 }}</div>
+                                <div class="drag">{{ $a8 }}</div>
+                                <div class="drag">{{ $a9 }}</div>
+                                <div class="drag">{{ $a10 }}</div>
+                                <div class="drag">{{ $a11 }}</div>
+                                <div class="drag">{{ $a12 }}</div>
+                                <div class="drag">{{ $a13 }}</div>
+                                <div class="drag">{{ $a14 }}</div>
+                                <div class="drag">{{ $a15 }}</div>
+                                <div class="drag">{{ $a16 }}</div>
+                                <div class="drag">{{ $a17 }}</div>
+                                <div class="drag">{{ $a18 }}</div>
+                                <div class="drag">{{ $a19 }}</div>
+                                <div class="drag">{{ $a20 }}</div>
+                                <div class="drag">{{ $a21 }}</div>
+                                <div class="drag">{{ $a22 }}</div>
+                                <div class="drag">{{ $a23 }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">4.</span>
-                {{$q4}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q444[0]}}">{{$q444[0]}}</option>
-                    <option value="{{$q444[1]}}">{{$q444[1]}}</option>
-                    <option value="{{$q444[2]}}">{{$q444[2]}}</option>
-                    <option value="{{$q444[3]}}">{{$q444[3]}}</option>
-                </select>
-                {{$q44}}
-            </div>
-
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">5.</span>
-                {{$q5}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q555[0]}}">{{$q555[0]}}</option>
-                    <option value="{{$q555[1]}}">{{$q555[1]}}</option>
-                    <option value="{{$q555[2]}}">{{$q555[2]}}</option>
-                    <option value="{{$q555[3]}}">{{$q555[3]}}</option>
-                </select>
-                {{$q55}}
-            </div>
-
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">6.</span>
-                {{$q6}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q666[0]}}">{{$q666[0]}}</option>
-                    <option value="{{$q666[1]}}">{{$q666[1]}}</option>
-                    <option value="{{$q666[2]}}">{{$q666[2]}}</option>
-                    <option value="{{$q666[3]}}">{{$q666[3]}}</option>
-                </select>
-                {{$q66}}
-            </div>
-
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">7.</span>
-                {{$q7}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q777[0]}}">{{$q777[0]}}</option>
-                    <option value="{{$q777[1]}}">{{$q777[1]}}</option>
-                    <option value="{{$q777[2]}}">{{$q777[2]}}</option>
-                    <option value="{{$q777[3]}}">{{$q777[3]}}</option>
-                </select>
-                {{$q77}}
-            </div>
-
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">8.</span>
-                {{$q8}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q888[0]}}">{{$q888[0]}}</option>
-                    <option value="{{$q888[1]}}">{{$q888[1]}}</option>
-                    <option value="{{$q888[2]}}">{{$q888[2]}}</option>
-                    <option value="{{$q888[3]}}">{{$q888[3]}}</option>
-                </select>
-                {{$q88}}
-            </div>
-
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">9.</span>
-                {{$q9}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q999[0]}}">{{$q999[0]}}</option>
-                    <option value="{{$q999[1]}}">{{$q999[1]}}</option>
-                    <option value="{{$q999[2]}}">{{$q999[2]}}</option>
-                    <option value="{{$q999[3]}}">{{$q999[3]}}</option>
-                </select>
-                {{$q99}}
-            </div>
-
-            <div class="mb-2">
-                <span class="font-weight-bold mr-2">10.</span>
-                {{$q10}}
-                <select class="form-control d-inline w-auto mx-2">
-                    <option value="">-Select-</option>
-                    <option value="{{$q1000[0]}}">{{$q1000[0]}}</option>
-                    <option value="{{$q1000[1]}}">{{$q1000[1]}}</option>
-                    <option value="{{$q1000[2]}}">{{$q1000[2]}}</option>
-                    <option value="{{$q1000[3]}}">{{$q1000[3]}}</option>
-                </select>
-                {{$q100}}
+            <div class="row justify-content-center mb-2">
+                <div class="col-md-12">
+                    <div class="border border-dark p-2" style="line-height: 35px;">
+                            {{$q1}}
+                            <span class="font-weight-bold">1.</span> 
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q2}}
+                            <span class="font-weight-bold">2.</span> 
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q3}}
+                            <span class="font-weight-bold">3.</span> 
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q4}}
+                            <span class="font-weight-bold">4.</span> 
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q5}}
+                            <span class="font-weight-bold">5.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q6}}
+                            <span class="font-weight-bold">6.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q7}}
+                            <span class="font-weight-bold">7.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q8}}
+                            <span class="font-weight-bold">8.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q9}}
+                            <span class="font-weight-bold">9.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q10}}
+                            <span class="font-weight-bold">10.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q11}}
+                            <span class="font-weight-bold">11.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q13}}
+                            <span class="font-weight-bold">13.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q14}}
+                            <span class="font-weight-bold">14.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q15}}
+                            <span class="font-weight-bold">15.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q16}}
+                            <span class="font-weight-bold">16.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q17}}
+                            <span class="font-weight-bold">17.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q18}}
+                            <span class="font-weight-bold">18.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q19}}
+                            <span class="font-weight-bold">19.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q20}}
+                            <span class="font-weight-bold">20.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q21}}
+                            <span class="font-weight-bold">21.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q22}}
+                            <span class="font-weight-bold">22.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$q23}}
+                            <span class="font-weight-bold">23.</span>
+                            <div class="input-con">
+                                <div class="dropbox"></div>
+                            </div>
+                            {{$end}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="col-xl-12 col-md-12 col-sm-12" id="ans" style="display: none;">
-        <div class="card-box text-dark font-16">
-            <p class="lead">
-                Answers
-            </p>
-            <div class="accordion mb-3" id="accordionExample">
-                <!-- 1 -->
-                    <div class="card mb-1" >
-                        <div class="card-header" id="headingOne">
-                            <h5 class="my-0">
-                                <a class="text-primary" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    1. {{$q1}} <u></u> {{$q11}}
-                                </a>
-                            </h2>
-                        </div>
-                    
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <dl class="row">
-                                        <dt class="col-sm-2"><i class="text-success mr-2">{{$q111[0]}}</i></dt>
-                                        <dd class="col-sm-10">: raise (children)
-                                            <p class="font-weight-bold mark">clues: children</p>
-                                        </dd>
-                                    
-                                        <dt class="col-sm-2">{{$q111[1]}}</dt>
-                                        <dd class="col-sm-10">: become adult</dd>
-
-                                        <dt class="col-sm-2">{{$q111[2]}}</dt>
-                                        <dd class="col-sm-10">: assume control of something e.g. a company</dd>
-
-                                        <dt class="col-sm-2">{{$q111[3]}}</dt>
-                                        <dd class="col-sm-10">: continue</dd>
-                                    </dl>
-                                </div>
-                        </div>
-                    </div>
-                <!-- 1 -->
-                
-                <!-- 2 -->
-                    <div class="card mb-1" >
-                        <div class="card-header" id="headingTwo">
-                            <h5 class="my-0">
-                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    2. {{$q2}} <u></u> {{$q22}}
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q222[3]}}</i></dt>
-                                    <dd class="col-sm-10">: take care of someon
-                                        <p class="font-weight-bold mark">clues: children / too much fast food</p>
-                                    </dd>
-
-                                    <dt class="col-sm-2">{{$q222[0]}}</dt>
-                                    <dd class="col-sm-10">: become adult</dd>
-
-                                    <dt class="col-sm-2">{{$q222[1]}}</dt>
-                                    <dd class="col-sm-10">: stop doing something e.g. leave school</dd>
-
-                                    <dt class="col-sm-2">{{$q222[2]}}</dt>
-                                    <dd class="col-sm-10">: suggest or state a plan of action</dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                <!-- 2 -->
-
-                <!-- 3 -->
-                    <div class="card mb-1" >
-                        <div class="card-header" id="headingThree">
-                            <h5 class="my-0">
-                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    3. {{$q3}} <u></u> {{$q33}}
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q333[2]}}</i></dt>
-                                    <dd class="col-sm-10">: have an argument                               
-                                        <p class="font-weight-bold mark">clues: who should do the housework</p>
-                                    </dd>
-
-                                    <dt class="col-sm-2">{{$q333[0]}}</dt>
-                                    <dd class="col-sm-10">: take care of someone</dd>
-
-                                    <dt class="col-sm-2">{{$q333[1]}}</dt>
-                                    <dd class="col-sm-10">: assume control of something e.g. a company</dd>
-
-                                    <dt class="col-sm-2">{{$q333[3]}}</dt>
-                                    <dd class="col-sm-10">: suggest a plan of action</dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                <!-- 3 -->
-
-                <!-- 4 -->
-                    <div class="card mb-1" >
-                        <div class="card-header" id="headingFour">
-                            <h5 class="my-0">
-                                <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    4.{{$q4}} <u></u> {{$q44}}
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <dl class="row">
-                                    <dt class="col-sm-2"><i class="text-success mr-2">{{$q444[2]}}</i></dt>
-                                    <dd class="col-sm-10">: omits something
-                                        <p class="font-weight-bold mark">clues: the reasons</p>
-                                    </dd>
-
-                                    <dt class="col-sm-2">{{$q444[0]}}</dt>
-                                    <dd class="col-sm-10">: reduces something</dd>
-
-                                    <dt class="col-sm-2">{{$q444[1]}}</dt>
-                                    <dd class="col-sm-10">: continues doing something</dd>
-
-                                    <dt class="col-sm-2">{{$q444[3]}}</dt>
-                                    <dd class="col-sm-10">: stops doing something </dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                <!-- 4 -->
-
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingFive">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                5. {{$q5}} <u></u> {{$q55}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q555[3]}}</i> </dt>
-                                <dd class="col-sm-10">: continues doing something  
-                                <p class="font-weight-bold mark">clues: trying / even / impossible</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q555[0]}}</dt>
-                                <dd class="col-sm-10">: takes care of something</dd>
-
-                                <dt class="col-sm-2">{{$q555[1]}}</dt>
-                                <dd class="col-sm-10">: stops doing something</dd>
-
-                                <dt class="col-sm-2">{{$q555[2]}}</dt>
-                                <dd class="col-sm-10">: suggests a plan of action</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div><!-- 5 -->
-
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingSix">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                6. {{$q6}} <u></u> {{$q66}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q666[1]}}</i></dt>
-                                <dd class="col-sm-10">: become adult
-                                    <p class="font-weight-bold mark">clues: immaturely</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q666[0]}}</dt>
-                                <dd class="col-sm-10">: omit something</dd>
-
-                                <dt class="col-sm-2">{{$q666[2]}}</dt>
-                                <dd class="col-sm-10">: have an argument</dd>
-
-                                <dt class="col-sm-2">{{$q666[3]}}</dt>
-                                <dd class="col-sm-10">: assume control of something</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div><!-- 6 -->
-
-                <div class="card mb-1">
-                    <div class="card-header" id="headingSeven">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                7. {{$q7}} <u></u> {{$q77}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q777[2]}}</i> </dt>
-                                <dd class="col-sm-10">: stopped doing something
-                                    <p class="font-weight-bold mark">clues: boring / so</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q777[0]}}</dt>
-                                <dd class="col-sm-10">: had an argument</dd>
-
-                                <dt class="col-sm-2">{{$q777[1]}}</dt>
-                                <dd class="col-sm-10">: assumed control of something</dd>
-
-                                <dt class="col-sm-2">{{$q777[3]}}</dt>
-                                <dd class="col-sm-10">: suggested a plan of action</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div><!-- 7 -->
-
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingEight">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                8. {{$q8}} <u></u> {{$q88}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q888[0]}}</i> </dt>
-                                <dd class="col-sm-10">: suggested a plan of action
-                                    <p class="font-weight-bold mark">clues: no one / idea / until / the chairperson</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q888[1]}}</dt>
-                                <dd class="col-sm-10">: took care of someone</dd>
-
-                                <dt class="col-sm-2">{{$q888[2]}}</dt>
-                                <dd class="col-sm-10">: became adult</dd>
-
-                                <dt class="col-sm-2">{{$q888[3]}}</dt>
-                                <dd class="col-sm-10">: had an argument</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div><!-- 8 -->
-
-                <div class="card mb-1" >
-                    <div class="card-header" id="headingNine">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                9. {{$q9}} <u></u> {{$q99}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q999[3]}}</i> </dt>
-                                <dd class="col-sm-10">: reduce something 
-                                    <p class="font-weight-bold mark">clues: cough / bad / the number of cigarettes</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q999[0]}}</dt>
-                                <dd class="col-sm-10">: take care of someone</dd>
-
-                                <dt class="col-sm-2">{{$q999[1]}}</dt>
-                                <dd class="col-sm-10">: stop doing something</dd>
-
-                                <dt class="col-sm-2">{{$q999[2]}}</dt>
-                                <dd class="col-sm-10">: omit something </dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div><!-- 9 -->
-
-                <div class="card mb-1" id="ansOne">
-                    <div class="card-header" id="headingTen">
-                        <h5 class="my-0">
-                            <a class="text-primary collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10. {{$q10}} <u></u> {{$q100}}
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <dl class="row">
-                                <dt class="col-sm-2"><i class="text-success mr-2">{{$q1000[0]}}</i></dt>
-                                <dd class="col-sm-10">: assumed control of something 
-                                    <p class="font-weight-bold mark">clues: by an international conglomerate</p>
-                                </dd>
-
-                                <dt class="col-sm-2">{{$q1000[1]}}</dt>
-                                <dd class="col-sm-10">: suggested a plan of action</dd>
-
-                                <dt class="col-sm-2">{{$q1000[2]}}</dt>
-                                <dd class="col-sm-10">: become adult </dd>
-
-                                <dt class="col-sm-2">{{$q1000[3]}}</dt>
-                                <dd class="col-sm-10">: reduced something</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div><!-- 10 -->
-            </div>
-            
-        </div>  
-    </div>
 </div>
+
 
 @section('button-control')
     <button id="check-answer" class="btn btn-info">Check Answers</button>
-    <button id="show-answer" class="btn btn-success">Show Answer</button>
 @endsection
 
 @section('js')
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script>
-     const answers = [
-        'bring up', 
-        'look after', 
-        'fall out', 
-        'leaves out', 
-        'keeps on', 
-        'grow up', 
-        'dropped out', 
-        'put forward',
-        'cut down on', 
-        'taken over'
+    $("#show-answer").prop("disabled", true);
+
+    const answers = [
+         $q1 = "<?php echo $a8 ?>",
+         $q2 = "<?php echo $a20 ?>",
+         $q3 = "<?php echo $a15 ?>",
+         $q4 = "<?php echo $a17 ?>",
+         $q5 = "<?php echo $a3 ?>",
+         $q6 = "<?php echo $a21 ?>",
+         $q7 = "<?php echo $a6 ?>",
+         $q8 = "<?php echo $a5 ?>",
+         $q9 = "<?php echo $a12 ?>",
+         $q10 = "<?php echo $a23 ?>",
+         $q11 = "<?php echo $a14 ?>",
+         $q12 = "<?php echo $a2 ?>",
+         $q13 = "<?php echo $a22 ?>",
+         $q14 = "<?php echo $a8 ?>",
+         $q15 = "<?php echo $a13 ?>",
+         $q16 = "<?php echo $a16 ?>",
+         $q17 = "<?php echo $a18 ?>",
+         $q18 = "<?php echo $a8 ?>",
+         $q19 = "<?php echo $a4 ?>",
+         $q20 = "<?php echo $a8 ?>",
+         $q21 = "<?php echo $a7 ?>",
+         $q22 = "<?php echo $a18 ?>",
+         $q23 = "<?php echo $a1 ?>",
     ];
-    let score = 0;
-    $("#show-answer").hide(true);
 
-    $('#check-answer').on('click', function() {
-        
-        $('select').each((idx, item) => {
-            $(item).parent().find('i').remove();
-            $(item).removeClass('border-success');
-            $(item).removeClass('border-danger');
+    console.log(answers);
 
-            if($(item).val() == answers[idx]) {
-                $(item).addClass('border border-success');
-                $('<i class="fas fa-check text-success mr-2"></i>').insertAfter($(item));
-                score++;
-            } else {
-                $(item).addClass('border border-danger');
-                $(`<i class="fas fa-times text-danger mr-2"></i><span class="text-success mr-2">${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</span>`).insertAfter($(item));
-            }
-        })
-
-        $('a u').each((idx, item) => {
-            if($(item).val() == answers[idx]) {
-                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
-            } else {
-                $(`<span class="text-success"><u>${Array.isArray(answers[idx]) ? answers[idx][1] : answers[idx]}</u></span>`).insertAfter($(item));
-            }
-        })
-
-        if(score == 10){
-            alert("you're awesome");
-        }else{
-            alert('Your score is ' + score + '/10');
-        }
-
-        $("#show-answer").show(true);
-        $("#check-answer").hide(true);
+    $(".drag").draggable({
+        revert: "invalid",
+        cursor: "move",
+        opacity: 0.7,
+        zIndex: 100,
+        containment: ".card-box",
+        stop: function (event, ui) {
+          if ($("#choices").children().length == 0) {
+            $("#check-answer").prop("disabled", false);
+          }
+        },
     });
 
-    $('#show-answer').on('click', function() {
-        var x = document.getElementById("ans");
-        if (x.style.display == "none") {
-            $("#show-answer").text('close');
-            x.style.display = "block";
-        }else {
-            $("#show-answer").text('Show Answer');
-            x.style.display = "none";
-        }
+    $(".dropbox").droppable({
+        accept: ".drag",
+        tolerance: "touch",
+        zIndex: 100,
+        over: function (event, ui) {
+            $(this).css("border-color", "#777");
+        },
+        out: function (event, ui) {
+            $(this).css("border-color", "#ccc");
+        },
+        drop: function (event, ui) {
+            if ($(this).children().length > 0) {
+                var move = $(this).children().detach();
+                $(ui.draggable).css({ top: 0, left: 0 }).parent().append(move);
+            }
+            $(this).css("border-color", "#ccc");
+            $(this).append($(ui.draggable).css({ top: 0, left: 0 }));
+        },
     });
-   
+
+    $("#check-answer").on("click", () => {
+
+        let droppables = $(".dropbox");
+
+        droppables.each((idx, item) => {
+            if($(item).children().text().trim() == answers[idx]) {
+                checkAnswer($(item).children(), 'correct');
+            } else {
+                checkAnswer($(item).children(), 'incorrect');
+            }
+        });
+
+        $(".drag").draggable({
+            disabled: true,
+        });
+
+        $("#check-answer").prop("disabled", true);
+        $("#show-answer").prop("disabled", false);
+    });
+
+    $('#show-answer').on('click', () => {
+
+        $('.dropbox').each((idx, item) => {
+
+            if($(item).children().length == 1) {
+                if($(item).children().hasClass('color-danger')) {
+                    if($(item).children().text(answers[idx])) {
+                        $(item).children().removeClass('color-danger')
+                    }
+                }
+            } else {
+                $(item).append(`<div class="drag">${ answers[idx] }</div>`)
+            }
+
+            $('.drag-container .drag').remove();
+        })
+    });
+
+    function checkAnswer(ele, status) {
+        let bgColor;
+
+        status == 'correct' ? (bgColor = 'color-success') : (bgColor = 'color-danger')
+
+        ele.addClass(bgColor)
+    }
 </script>
 @stop

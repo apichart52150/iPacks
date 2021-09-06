@@ -26,14 +26,12 @@
                         <div class="card bg-pattern">
 
                             <div class="card-body p-4">
-                            
                                 <div class="text-center mt-4">
-                                    <h1 class="text-error">Expire</h1>
-                                    <h3 class="mt-3 mb-2">Internal Server Error</h3>
-                                    <p class="text-muted mb-3">Why not try refreshing your page? or you can contact <a href="" class="text-dark"><b>Support</b></a></p>
+                                    <h3 class="text-primary">Membership expire</h3>
+                                    <p class="mt-3 mb-2">Internal Server Error</p>
 
-                                    <a href="{{ route('user_logout') }}" class="btn btn-success waves-effect waves-light">
-                                        <span>Back to Home</span>
+                                    <a href="{{ route('success') }}" class="btn btn-success waves-effect waves-light">
+                                        <span>Membership renewal</span>
                                     </a>
                                 </div>
 

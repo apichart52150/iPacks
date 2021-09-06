@@ -50,8 +50,6 @@ class HomeController extends Controller
         ->where('sub_menu_type','=', $request->input('main_menu'))
         ->get();
 
-
-
         if($request->input('type') == '1'){
             $data = array(
                 'color' => "info", 
@@ -76,8 +74,57 @@ class HomeController extends Controller
         return view('student.isac.listening.subhome', compact('sub_menu','data','main'));
     }
 
-    public function audio($id, $name){
+    public function exam($exam_type, $exam_id){
+        // dd($exam_type, $exam_id);
+
+        $menu_listening = DB::table('menu_lis')
+        ->select('menu_id', 'menu_name', 'menu_type')
+        ->where('menu_id', '=', $exam_type)
+        ->get();
+
+        $sub_menu_listening = DB::table('sub_menu_lis')
+        ->select('*')
+        ->where('sub_menu_type', '=', $exam_type)
+        ->where('sub_menu_id', '=', $exam_id)
+        ->get();
+
+        $navigation_count =  DB::table('sub_menu_lis')
+        ->where('sub_menu_type','=', $sub_menu_listening[0]->sub_menu_type)
+        ->select('sub_menu_id')
+        ->get();
+
+        $pageTitle = [
+            "menu_name" => $menu_listening[0]->menu_name,
+            "menu_id" => $menu_listening[0]->menu_id,
+            "sub_menu_id" => $sub_menu_listening[0]->sub_menu_id,
+            "sub_menu_name" => $sub_menu_listening[0]->sub_menu_name,
+            "sub_menu_type" => $sub_menu_listening[0]->sub_menu_type,
+            "name_audio" => $sub_menu_listening[0]->name_audio,
+        ];
+
+        // dd($exam_id);
+
+        $pagination = [
+            'prev' => "isac/listening/".($exam_type)."/".($exam_id-1),
+            'current' => $exam_id,
+            'next' => "isac/listening/".($exam_type)."/".($exam_id+1),
+            'textBtn' => $exam_id == count($navigation_count) ? 'Finish' : 'Next'
+        ];
+
+        if ($pagination['textBtn'] == 'Finish') {
+            $pagination = [
+                'prev' => "isac/listening/".($exam_type)."/".($exam_id-1),
+                'current' => $exam_id,
+                'next' => "isac/listening/",
+                'textBtn' => $exam_id == count($navigation_count) ? 'Finish' : 'Next'
+            ];
+        }
+
+        // dd($pageTitle);
+
         
-        return view('student.isac.listening.audio' ,compact('id','name'));
+        $view = "student.isac.listening.exam.$exam_type.$exam_id";
+       
+        return view('student.isac.listening.exam', ['view' => $view , 'pageTitle' => $pageTitle, 'pagination' => $pagination]);
     }
 }
