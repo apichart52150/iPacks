@@ -124,7 +124,7 @@ $Q1_4->e4->q2->ii->aw = "To begin with, Then, and then, Next, after which, befor
                             <td></td>
                             <td></td>
                             <td>
-                                <span class=" text-danger show-aw-Q1_4-{{$index}}-{{$index2}}">{{$list_aw->aw}}</span>
+                                <span class="aw text-danger show-aw-Q1_4-{{$index}}-{{$index2}}">{{$list_aw->aw}}</span>
                             </td>
                         </tr>
                         @endforeach

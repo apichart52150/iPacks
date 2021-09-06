@@ -3,6 +3,11 @@
     table tr td {
         vertical-align: top;
     }
+    #caller-3 tr td {
+        vertical-align: middle;
+        border: 1px solid black;
+        padding: 10px
+    }
 
     .table tr td {
         vertical-align: middle;
@@ -413,7 +418,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                 <div class="mt-4 col-lg-12">
                     <table id="caller-3">
                         <tr>
-                            <td colspan="4">
+                            <th colspan="4">
                                 <div class="border border-dark px-2 text-center">
                                     <div class="drag-container">
                                         <div class="d-grid grid-5" id="choices">
@@ -423,13 +428,13 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                         </div>
                                     </div>
                                 </div>
-                            </td>
+                            </th>
                         </tr>
                         <tr>
-                            <th></th>
-                            <th class="pt-4">Problem</th>
-                            <th class="pt-4">Examples</th>
-                            <th class="pt-4">Remedy</th>
+                            <td></td>
+                            <td class="pt-4 text-center"><b>Problem</b></td>
+                            <td class="pt-4 text-center"><b>Examples</b></td>
+                            <td class="pt-4 text-center"><b>Remedy</b></td>
                         </tr>
                         <tr>
                             <td>1.</td>
@@ -585,7 +590,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="4">
+                            <td colspan="4" class="pb-2">
                                 <div class="border border-dark px-2 text-center">
                                     <div class="drag-container">
                                         <div class="d-grid grid-5" id="choices">
@@ -596,12 +601,6 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                     </div>
                                 </div>
                             </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 20px;" class="pt-3"><b>a.</b></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
                         </tr>
                         @foreach($caller_5->a as $index => $a)
                         <tr>
@@ -622,7 +621,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         </tr>
                         @endforeach
                         <tr>
-                            <td class="pt-3" colspan="4">
+                            <td class="py-3" colspan="4">
                                 <div class="border border-dark px-2 text-center">
                                     <div class="drag-container">
                                         <div class="d-grid grid-5" id="choices">

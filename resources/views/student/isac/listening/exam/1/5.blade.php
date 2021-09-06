@@ -70,20 +70,30 @@ $caller_2->e8->n = "8";
 $caller_2->e1->q = "Although significant numbers still come from English-speaking countries";
 $caller_2->e2->q = "The term 'drinking' refers to the consumption of alcoholic drinks such as";
 $caller_2->e3->q = "Excessive alcohol consumption can lead not only to physiological problems";
-$caller_2->e4->q = "There are both financial and environmental costs associated with landfill sites; not only are they a waste of potentially valuable land,";
+$caller_2->e4->q = "There are both financial and environmental costs associated with landfill sites; not only are they a
+waste of potentially valuable land,";
 $caller_2->e5->q = "In spite of these negative effects on the human body";
-$caller_2->e6->q = "The two most important factors in developing a good study ethos are, first of all, a positive attitude,";
+$caller_2->e6->q = "The two most important factors in developing a good study ethos are, first of all, a positive
+attitude,";
 $caller_2->e7->q = "As attitudes in society change, one would expect language to develop at the same rate; however,";
-$caller_2->e8->q = "He socially constructed gender division of labour restricts the employment possibilities for both men and women; an illustration of this";
+$caller_2->e8->q = "He socially constructed gender division of labour restricts the employment possibilities for both
+men and women; an illustration of this";
 
-$caller_2->e1->aw = "Although significant numbers still come from English-speaking countries, an even larger number come from non-English-speaking countries.";
+$caller_2->e1->aw = "Although significant numbers still come from English-speaking countries, an even larger number come
+from non-English-speaking countries.";
 $caller_2->e2->aw = "The term 'drinking' refers to the consumption of alcoholic drinks such as beer, wine and spirits.";
-$caller_2->e3->aw = "Excessive alcohol consumption can lead not only to physiological problems, but also to psychological problems.";
-$caller_2->e4->aw = "There are both financial and environmental costs associated with landfill sites; not only are they a waste of potentially valuable land, but they also present pollution problems.";
-$caller_2->e5->aw = "In spite of these negative effects on the human body, there are, however, some beneficial aspects.";
-$caller_2->e6->aw = "The two most important factors in developing a good study ethos are, first of all, a positive attitude, and, second, a healthy life-style.";
-$caller_2->e7->aw = "As attitudes in society change, one would expect language to develop at the same rate; however, it doesn't.";
-$caller_2->e8->aw = "The socially constructed gender division of labour restricts the employment possibilities for both men and women; an illustration of this is the small number of women in executive management positions.";
+$caller_2->e3->aw = "Excessive alcohol consumption can lead not only to physiological problems, but also to
+psychological problems.";
+$caller_2->e4->aw = "There are both financial and environmental costs associated with landfill sites; not only are they
+a waste of potentially valuable land, but they also present pollution problems.";
+$caller_2->e5->aw = "In spite of these negative effects on the human body, there are, however, some beneficial
+aspects.";
+$caller_2->e6->aw = "The two most important factors in developing a good study ethos are, first of all, a positive
+attitude, and, second, a healthy life-style.";
+$caller_2->e7->aw = "As attitudes in society change, one would expect language to develop at the same rate; however, it
+doesn't.";
+$caller_2->e8->aw = "The socially constructed gender division of labour restricts the employment possibilities for both
+men and women; an illustration of this is the small number of women in executive management positions.";
 
 @endphp
 <div class="row card-box">
@@ -100,9 +110,11 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
                                 <br>
                                 They are not complete (how do you know this, just by listening?).
                                 <br>
-                                Complete the sentences with suitable endings, depending on the speech markers contained in each sentence.
+                                Complete the sentences with suitable endings, depending on the speech markers contained
+                                in each sentence.
                                 <br><br>
-                                e.g. The Silver Spur is heavier than the Silver Ghost. The former weighs two and a half tonnes whereas
+                                e.g. The Silver Spur is heavier than the Silver Ghost. The former weighs two and a half
+                                tonnes whereas
                                 the latter weighs only two tonnes. (or any weight less than two and a half tonnes.)
                             </td>
                         </tr>
@@ -113,7 +125,7 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td style="vertical-align: middle;width: 80px;"><b>Answer: </b></td>
                             <td>
                                 <input type="text" class="form-control w-75">
                             </td>
@@ -134,13 +146,15 @@ $caller_2->e8->aw = "The socially constructed gender division of labour restrict
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Listening - 
- {{$pageTitle['sub_menu_name'] }}</h4>
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}</h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
+                    <source
+                        src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}"
+                        type="audio/mp3">
                 </audio>
             </div>
         </div>

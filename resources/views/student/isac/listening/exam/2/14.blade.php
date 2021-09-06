@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
     table tr td {
-        vertical-align: top;
+        vertical-align: middle;
     }
 
     .table tr td {
@@ -180,7 +180,7 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
                             <td></td>
                         </tr>
                         <tr>
-                            <td colspan="2">
+                            <td colspan="3">
                                 <div class="row justify-content-center mb-2">
                                     <div class="col-md-12">
                                         <div class="border border-dark px-2 text-center">
@@ -203,7 +203,7 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
                                             </tr>
                                             @foreach($caller_1_1 as $index => $caller_1_1)
                                             <tr>
-                                                <td>{{$caller_1_1->q}}</td>
+                                                <td style="vertical-align: middle;">{{$caller_1_1->q}}</td>
                                                 <td>
                                                     <div class="input-con w-75">
                                                         <div class="dropbox w-100 q" show-aw="caller_1_1-{{$index}}" aw="{{$caller_1_1->aw}}"></div>
@@ -222,7 +222,7 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
                                             </tr>
                                             @foreach($caller_1_2 as $index => $caller_1_2)
                                             <tr>
-                                                <td>{{$caller_1_2->q}}</td>
+                                                <td style="vertical-align: middle;">{{$caller_1_2->q}}</td>
                                                 <td>
                                                     <div class="input-con w-75">
                                                         <div class="dropbox q w-100" show-aw="caller_1_2-{{$index}}" aw="{{$caller_1_2->aw}}"></div>
@@ -238,8 +238,8 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
                             </td>
                         </tr>
                         <tr>
-                            <td>2.</td>
-                            <td>As you listen to the report again, identify sentences using the <b>Passive + Infinitive</b> construction.
+                            <td style="vertical-align: top">2.</td>
+                            <td colspan="2">As you listen to the report again, identify sentences using the <b>Passive + Infinitive</b> construction.
                                 <br>
                                 e.g. These falls are believed to have been caused by massive selling.....
                             </td>
@@ -247,8 +247,8 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
                         @foreach($caller_2 as $index => $caller_2)
                         <tr>
                             <td></td>
+                            <td style="vertical-align: middle;width:20px"><span>{{$caller_2->n}}.</span></td>
                             <td>
-                                <span>{{$caller_2->n}}.</span>
                                 <div class="input-con w-75 py-1">
                                     <input type="text" class="w-100 form-control q-text" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">
                                 </div>
@@ -256,23 +256,24 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
                         </tr>
                         <tr>
                             <td></td>
+                            <td></td>
                             <td>
                                 <span class="aw text-danger caller_2-{{$index}}">{{$caller_2->aw}}</span>
                             </td>
                         </tr>
                         @endforeach
                         <tr>
-                            <td class="pt-3">3. </td>
-                            <td class="pt-3 pb-2">As you listen again to the news, take notes and write a summary of about 150 words about the
+                            <td style="vertical-align: top" class="pt-3">3. </td>
+                            <td colspan="2" class="pt-3 pb-2">As you listen again to the news, take notes and write a summary of about 150 words about the
                                 Asian currency crisis and its impact on share markets. </td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
+                            <td colspan="2"><textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td>
+                            <td colspan="2">
                                 <h5 class="mt-3 aw text-success">Summary (possible answer) </h5>
                                 <span class="aw text-success">
                                     Most Asian currencies fell again. The Indonesian Rupiah, the Thai Baht, The Malaysian Ringgit and the
