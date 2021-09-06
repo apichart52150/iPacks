@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('public/assets/images/newcambridge-logo_bar.png') }}">
+    <link rel="shortcut icon" href="{{ asset('public/assets/images/icon-nc-big.png') }}">
     
     <meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="website" />

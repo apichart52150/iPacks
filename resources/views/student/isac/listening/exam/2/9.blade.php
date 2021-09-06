@@ -14,9 +14,7 @@
 <div class="row">
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
-            <p class="lead">
-                {{$pageTitle['sub_menu_name']}}
-            </p>
+            <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
             <div class="row">
                 <div class="col-lg-12">
                     <h2>(The Meaning of Development)</h2>
@@ -52,11 +50,10 @@
                     </table>
                 </div>
                 <div class="col-lg-12">
-                    <h4 class="font-italic pt-3">Caller 1</h4>
-                    <span>
+                    <p class="pb-2">
                         3.4 Now, write a short summary of the talk in <b>about 50 - 80 words</b>.
-                    </span>
-                    <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+</p>
+                    <textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea>
                     <h5 class="mt-3 aw text-success">Summary (possible answer)</h5>
                     <span class="aw text-success">
                         The word 'develop' can mean 'unwrap' or 'uncover'. It also means to allow a picture to show from
@@ -75,12 +72,13 @@
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Activity 1 - Intro</h4>
+                <h4 class="modal-title text-white mx-auto">Listening - 
+ {{$pageTitle['sub_menu_name'] }}</h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -89,8 +87,8 @@
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')

@@ -37,6 +37,9 @@
     .grid-5 {
         grid-template-columns: repeat(4, 1fr);
     }
+    .grid-5-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .aw {
         display: none;
@@ -240,7 +243,7 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
     $caller_3_choice = new stdClass();
     $caller_3_choice->aw1 = "Slavery (inter al.) --> Am civ. war";
     $caller_3_choice->aw2 = "⬈alc. consumpt. dependce. / addict.";
-    $caller_3_choice->aw3 = "Chem = sc. studies compositn. + reactn. of diff. elem. + subst";
+    $caller_3_choice->aw3 = "Chem = sc. studies compositn. + reactn. of diff. elem. + subst.";
     $caller_3_choice->aw4 = "Einst. - fam. Germ. sc. b. 1879";
     $caller_3_choice->aw5 = "Future: work hours⬊";
 
@@ -269,9 +272,7 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
     <div class="row">
         <div class="col-xl-12 col-md-12">
             <div class="card-box text-dark font-16">
-                <p class="lead">
-                    {{$pageTitle['sub_menu_name']}}
-                </p>
+                <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
                 <div class="row">
                     <div class="col-lg-12">
                         <h2>Part 1 (Note-Taking Conventions) </h2>
@@ -360,7 +361,6 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         </table>
                     </div>
                     <div class="col-lg-12">
-                        <h4 class="font-italic">Caller 1</h4>
                         <h5>Find out the meaning of these common abbreviations from Latin:</h5>
                         <div class="row justify-content-center mb-2">
                             <div class="col-md-12">
@@ -382,12 +382,11 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                     <tr>
                                         <td class="border border-dark p-2">{{$caller_1_1->q}}</td>
                                         <td class="border border-dark p-2">
-                                            <div class="input-con">
-                                                <div class="dropbox q" show-aw="caller_1_1-{{$index}}" aw="{{$caller_1_1->aw}}"></div>
+                                            <div class="input-con w-75">
+                                                <div class="dropbox q w-100" show-aw="caller_1_1-{{$index}}" aw="{{$caller_1_1->aw}}"></div>
                                             </div>
-                                        </td>
-                                        <td class="aw caller_1_1-{{$index}} text-danger">
-                                            {{$caller_1_1->aw}}
+                                            <br>
+                                            <span class="aw caller_1_1-{{$index}} text-danger">{{$caller_1_1->aw}}</span>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -415,12 +414,11 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                     <tr>
                                         <td class="border border-dark p-2">{{$caller_1_2->q}}</td>
                                         <td class="border border-dark p-2">
-                                            <div class="input-con">
-                                                <div class="dropbox q" show-aw="caller_1_2-{{$index}}" aw="{{$caller_1_2->aw}}"></div>
+                                            <div class="input-con w-75">
+                                                <div class="dropbox q w-100" show-aw="caller_1_2-{{$index}}" aw="{{$caller_1_2->aw}}"></div>
                                             </div>
-                                        </td>
-                                        <td class="aw caller_1_2-{{$index}} text-danger">
-                                            {{$caller_1_2->aw}}
+                                            <br>
+                                            <span class="aw caller_1_2-{{$index}} text-danger">{{$caller_1_2->aw}}</span>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -429,7 +427,6 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <h4 class="font-italic">Caller 2</h4>
                         <h5>Complete the table of commonly used signs and symbols: </h5>
                         <div class="row justify-content-center mb-2">
                             <div class="col-md-12">
@@ -458,7 +455,7 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                         <td class="border border-dark p-2">{{$caller_2->n}}</td>
                                         <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q}}</td>
                                         <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q2}}</td>
-                                        <td class="aw caller_2-{{$index}} text-danger">
+                                        <td class="aw caller_2-{{$index}} text-danger pl-2">
                                             {{$caller_2->aw}}
                                         </td>
                                     </tr>
@@ -468,13 +465,12 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <h4 class="font-italic">Caller 3</h4>
                         <h5>Write the following sentences in note form, using abbreviations, signs, symbols or anything else which will help you. Focus only on the content words. </h5>
                         <div class="row justify-content-center mb-2">
                             <div class="col-md-12">
                                 <div class="border border-dark px-2 text-center">
                                     <div class="drag-container">
-                                        <div class="d-grid grid-5" id="choices">
+                                        <div class="d-grid grid-5-2" id="choices">
                                             @foreach($caller_3_choice as $choice)
                                             <div class="drag">{{$choice}}</div>
                                             @endforeach
@@ -493,8 +489,8 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                     <tr>
                                         <td style="width: 80px;"><b>Answer: </b></td>
                                         <td class="border-dark p-2">
-                                            <div class="input-con">
-                                                <div class="dropbox q" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}"></div>
+                                            <div class="input-con w-75">
+                                                <div class="dropbox q w-100" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}"></div>
                                             </div>
                                         </td>
                                     </tr>
@@ -530,18 +526,17 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         </span>
                     </div>
                     <div class="col-lg-12">
-                        <h4 class="font-italic">Caller 4</h4>
                         <h5>A. You are going to listen to a short talk about the population of Australia. As you listen, try to find the answers to the following questions:</h5>
                         <table class="w-100 mb-3">
                             @foreach($caller_4_A as $index => $caller_4_A)
                             <tr>
-                                <td class="border-dark p-2">{{$caller_4_A->q}}</td>
+                                <td class="border-dark ">{{$caller_4_A->q}}</td>
                             </tr>
                             <tr>
-                                <td class="border-dark p-2">
+                                <td class="border-dark py-2">
                                     <b>Answer: </b>
                                     <div class="input-con w-75">
-                                        <input type="text" class="q-text w-100" show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
+                                        <input type="text" class="form-control q-text w-100" show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
                                     </div>
                                 </td>
                             </tr>
@@ -554,8 +549,8 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         </table>
                         <h5 class="mt-3">B. Listen to the talk again and take notes using the conventions available to you. </h5>
                         <!-- <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea> -->
-                        <h5 class="mt-3">C. Write a short summary of the talk, using your own words as far as possible. The summary should be between 80 - 100 words. </h5>
-                        <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                        <h5 class="mt-3 pb-2">C. Write a short summary of the talk, using your own words as far as possible. The summary should be between 80 - 100 words. </h5>
+                        <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                         <h5 class="mt-3 aw text-success">D. Summary (possible answer) </h5>
                         <span class="aw text-success">
                             The population of Australia is now eighteen million, consisting of over one hundred different
@@ -576,12 +571,13 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header bg-primary py-2">
-                    <h4 class="modal-title text-white mx-auto">Activity 1 - Intro</h4>
+                    <h4 class="modal-title text-white mx-auto">Listening - 
+ {{$pageTitle['sub_menu_name'] }}</h4>
                 </div>
                 <div class="modal-body text-center">
                     <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                     <audio data-sound="sound-intro">
-                        <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                        <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                     </audio>
                 </div>
             </div>
@@ -590,8 +586,8 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
 
 
     @section('button-control')
-    <button id="check-answer" class="btn btn-info">Check Answersss</button>
-    <!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+    <button id="check-answer" class="btn btn-info">Check Answers</button>
+    <!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
     @endsection
 
     @section('js')
@@ -602,8 +598,8 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
         $('.q-caller-2').each((idx, item) => {
             let text = $(item).html()
             if (text == "...") {
-                let input = '<div class="input-con">' +
-                    '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
+                let input = '<div class="input-con w-75">' +
+                    '<div class="dropbox q w-100" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
                     '</div>'
                 text = text.replace("...", input)
                 $(item).html(input)
@@ -613,18 +609,27 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
         $('#check-answer').on('click', () => {
             $('.q').each((idx, item) => {
                 if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                    show_aw($(item).attr('show-aw'))
+                    show_aw($(item).attr('show-aw'), item)
+                else
+                    show_error(item)
             })
             $('.q-text').each((idx, item) => {
                 if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                    show_aw($(item).attr('show-aw'))
+                    show_aw($(item).attr('show-aw'), item)
+                else
+                    show_error(item)
             })
             $('.aw').removeClass('aw')
         })
 
-        function show_aw(aw) {
+        function show_aw(aw, item) {
+            $(item).addClass('border border-success')
             $('.' + aw).addClass('text-success')
             $('.' + aw).removeClass('text-danger')
+        }
+
+        function show_error(item) {
+            $(item).addClass('border border-danger')
         }
 
 

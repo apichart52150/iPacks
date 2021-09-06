@@ -175,35 +175,32 @@ $caller_1->e16->q->e1 = "Briefly explain 'the final irony...' referred to toward
 $caller_1->e1->aw->i = "Developing nations";
 $caller_1->e1->aw->ii = "Less developed nations";
 $caller_1->e1->aw->iii = "Under-developed nations";
-$caller_1->e2->aw->i = "Third World supplied raw materials and resources to First World, who processed the raw materials for export.";
-$caller_1->e3->aw->i = "Third World ended up paying more for the imports from First World than the money they received for their own raw materials exports.";
-$caller_1->e4->aw->i = "The relocation of factories from First World to Third World.";
-$caller_1->e5->aw->i = "Costs of processing and manufacturing in developed countries increased. Third World is labour intensive and labour costs are lower.";
-$caller_1->e6->aw->i = "Light industries, e.g. garments and electronics.";
-$caller_1->e7->aw->i = "Large tax-free thresholds and heavily subsidised accommodation.";
-$caller_1->e8->aw->i = "A socially constructed definition of the different roles and responsibilities ascribed to men + women.";
+$caller_1->e2->aw->i = "Third World supplied raw materials and resources to First World, who processed the raw materials for export";
+$caller_1->e3->aw->i = "Third World ended up paying more for the imports from First World than the money they received for their own raw materials exports";
+$caller_1->e4->aw->i = "The relocation of factories from First World to Third World";
+$caller_1->e5->aw->i = "Costs of processing and manufacturing in developed countries increased. Third World is labour intensive and labour costs are lower";
+$caller_1->e6->aw->i = "Light industries, e.g. garments and electronics";
+$caller_1->e7->aw->i = "Large tax-free thresholds and heavily subsidised accommodation";
+$caller_1->e8->aw->i = "A socially constructed definition of the different roles and responsibilities ascribed to men + women";
 $caller_1->e9->aw->i = "Reproductive e.g. childbirth, subsistence crops, taking care of family";
-$caller_1->e9->aw->ii = "Productive e.g. growing cash crops ";
-$caller_1->e9->aw->iii = "Community management e.g. 1.politics, leadership, religion, upholding tradition (men) 2.health care, education, clean water (women) ";
+$caller_1->e9->aw->ii = "Productive e.g. growing cash crops";
+$caller_1->e9->aw->iii = "Community management e.g. 1.politics, leadership, religion, upholding tradition (men) 2.health care, education, clean water (women)";
 $caller_1->e10->aw->i = "Women: reproductive + community management";
 $caller_1->e10->aw->ii = "Men: productive + community management";
-$caller_1->e11->aw->i = "A different perception of the value of the respective work carried out by men and women: men's activities seen as more important. Men's work paid; women's work generally unpaid.";
-$caller_1->e12->aw->i = "Women are pre-skilled in this type of work. They have nimble fingers for delicate work. Such work can be done in the informal sector.";
-$caller_1->e13->aw->i = "Informal sector = tendering out work to be done at home, not requiring, expensive machinery or formal workplace conditions.";
-$caller_1->e14->aw->i = "Women were regarded as 'secondary' income earners i.e. their income supplemented the income earned by the men. So women's wages could be used for luxuries in life e.g. lipstick, rather than the basic necessities.";
-$caller_1->e15->aw->i = "Daughters are not seen as good investments for the future well-being of the parents since they get married and leave home. Sons take care of the parents even after marriage so they need better education than daughters to improve their wage-earning capabilities.";
-$caller_1->e16->aw->i = "The people most affected by relocation of factories from First to Third World are First World women who lose their jobs because of the relocation. These unemployed women then become the target of consumer marketing for products manufactured in the Third World.";
+$caller_1->e11->aw->i = "A different perception of the value of the respective work carried out by men and women: men's activities seen as more important. Men's work paid; women's work generally unpaid";
+$caller_1->e12->aw->i = "Women are pre-skilled in this type of work. They have nimble fingers for delicate work. Such work can be done in the informal sector";
+$caller_1->e13->aw->i = "Informal sector = tendering out work to be done at home, not requiring expensive machinery or formal workplace conditions";
+$caller_1->e14->aw->i = "Women were regarded as 'secondary' income earners i.e. their income supplemented the income earned by the men. So women's wages could be used for luxuries in life e.g. lipstick, rather than the basic necessities";
+$caller_1->e15->aw->i = "Daughters are not seen as good investments for the future well-being of the parents since they get married and leave home. Sons take care of the parents even after marriage so they need better education than daughters to improve their wage-earning capabilities";
+$caller_1->e16->aw->i = "The people most affected by relocation of factories from First to Third World are First World women who lose their jobs because of the relocation. These unemployed women then become the target of consumer marketing for products manufactured in the Third World";
 
 @endphp
 <div class="row">
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
-            <p class="lead">
-                {{$pageTitle['sub_menu_name']}}
-            </p>
+            <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic m-0 pt-3">Caller 1</h4>
                     <table class="w-100">
                         @foreach($caller_1 as $index => $caller_1)
                         <tr>
@@ -218,9 +215,9 @@ $caller_1->e16->aw->i = "The people most affected by relocation of factories fro
                         @foreach($caller_1->aw as $index3 => $aw)
                         <tr>
                             <td></td>
-                            <td style="width: 65px;"><b>Answer: </b></td>
-                            <td>
-                                <input type="text" class="w-75 q-text" index="{{$index}}" show-aw="caller_1-{{$index}}-{{$index3}}" aw="{{$aw}}">
+                            <td style="width: 65px; vertical-align: middle;"><b>Answer: </b></td>
+                            <td class="py-1">
+                                <input type="text" class="w-75 form-control q-text" index="{{$index}}" show-aw="caller_1-{{$index}}-{{$index3}}" aw="{{$aw}}">
                             </td>
                         </tr>
                         <tr>
@@ -243,12 +240,13 @@ $caller_1->e16->aw->i = "The people most affected by relocation of factories fro
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Activity 1 - Intro</h4>
+                <h4 class="modal-title text-white mx-auto">Listening - 
+ {{$pageTitle['sub_menu_name'] }}</h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -257,8 +255,8 @@ $caller_1->e16->aw->i = "The people most affected by relocation of factories fro
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -269,19 +267,23 @@ $caller_1->e16->aw->i = "The people most affected by relocation of factories fro
     $('#check-answer').on('click', () => {
         $('.q-text').each((idx, item) => {
             let aw = $(item).val().split("E.G.")[0]
-            // aw = aw.split("I.E.")[0]
             let aw2 = $(item).attr('aw').split("e.g.")[0]
-            // aw2 = aw2.split("i.e.")[0]
             if (aw.trim().toUpperCase() == aw2.trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
-        console.log("aw", aw)
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
     function checkRadio(x) {

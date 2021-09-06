@@ -21,6 +21,7 @@
         display: inline-block;
         position: relative;
     }
+
     .input-con2 {
         width: 100px;
     }
@@ -103,34 +104,31 @@
 $caller_3 = new stdClass();
 $caller_3->e1 = new stdClass();
 $caller_3->e1->q = "1. In ... the area yielded an average ... tons per acre resulting in an increase of almost ... over the figures for ... .";
-$caller_3->e1->aw = "1989;***1.2***tons;***12%;***1988";
+$caller_3->e1->aw = "1989***1.2 tons***12%***1988";
 $caller_3->e2 = new stdClass();
 $caller_3->e2->q = "2. In ..., ... Australian children were living in households whose income was less than ... per annum.";
-$caller_3->e2->aw = "1986;***552,000;***$12,500***p.a.";
+$caller_3->e2->aw = "1986***552,000***$12,500 p.a.";
 $caller_3->e3 = new stdClass();
 $caller_3->e3->q = "3. A study of ... countries around the world in ... showed that women working in the manufacturing industry earned an average of only ... for every dollar earned by a man.";
-$caller_3->e3->aw = "24;***1982;***73***cents";
+$caller_3->e3->aw = "24***1982***73 cents";
 $caller_3->e4 = new stdClass();
 $caller_3->e4->q = "4. In Bangladesh in ... , ... of the population were living in the cities. By ... , this figure had risen to ..., an average annual increase of ... . ";
-$caller_3->e4->aw = "1960;***5%;***1986;***16%;***7.8%";
+$caller_3->e4->aw = "1960***5%***1986***16%***7.8%";
 $caller_3->e5 = new stdClass();
 $caller_3->e5->q = "5. In a recent survey held in Adelaide among a group of ... schoolchildren, the following figures were noted: ... of the children owned bicycles; the families of ... of the children had boats; more than ... had a TV set in their own room, while ... of them had access to a computer. The average pocket money received by each child was a staggering ... per week.";
-$caller_3->e5->aw = "28;***90%;***12;***50%;***three-quarters;***$80";
+$caller_3->e5->aw = "28***90%***12***50%***three-quarters***$80";
 
 @endphp
 <div class="row">
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
-            <p class="lead">
-                {{$pageTitle['sub_menu_name']}}
-            </p>
+            <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <h5>Listen to the tape and complete the following sentences: </h5>
-                        @foreach($caller_3 as $index => $caller_3)
-                        <p class="pr-3 q-caller-3 q-caller-3-{{$index}}" q="caller-3-{{$index}}" aw="{{$caller_3->aw}}">{{$caller_3->q}}</p>
-                        @endforeach
+                    @foreach($caller_3 as $index => $caller_3)
+                    <p class="pr-3 q-caller-3 q-caller-3-{{$index}}" q="caller-3-{{$index}}" aw="{{$caller_3->aw}}">{{$caller_3->q}}</p>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -141,12 +139,13 @@ $caller_3->e5->aw = "28;***90%;***12;***50%;***three-quarters;***$80";
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Activity 1 - Intro</h4>
+                <h4 class="modal-title text-white mx-auto">Listening - 
+ {{$pageTitle['sub_menu_name'] }}</h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{asset('public/isac_listening/'.$pageTitle['sub_menu_id'].'/'.$pageTitle['name_audio'])}}" type="audio/mp3">
+                    <source src="{{asset('public/isac_listening/'.$pageTitle['sub_menu_type'].'/'.$pageTitle['name_audio'])}}" type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -155,8 +154,8 @@ $caller_3->e5->aw = "28;***90%;***12;***50%;***three-quarters;***$80";
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -167,7 +166,7 @@ $caller_3->e5->aw = "28;***90%;***12;***50%;***three-quarters;***$80";
         let new_text = $(item).html()
         let aw = $(item).attr('aw').split("***")
         for (let i = 0; i < text.split("...").length - 1; i++) {
-            let input = '<div class="input-con input-con2 caller_3 pb-1 "><input type="text" class="input-text caller_3" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
+            let input = '<div class="input-con input-con2 py-1 "><input type="text" class="input-text caller_3" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
                 '<labal class="w-100 px-2 aw caller_3-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'
             new_text = new_text.replace("...", input)
         }
@@ -175,28 +174,23 @@ $caller_3->e5->aw = "28;***90%;***12;***50%;***three-quarters;***$80";
     })
 
     $('#check-answer').on('click', () => {
-        $('.caller_1:checked').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
-        $('.caller_2').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
         $('.caller_3').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
-        $('.caller_4').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw').toUpperCase())
-                show_aw($(item).attr('show-aw'))
+            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
 

@@ -8,6 +8,7 @@
     .input-con {
         display: inline-block;
         position: relative;
+        width: 100%;
     }
 
     .drag-container {
@@ -138,7 +139,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: directly</b>
-                                            <div class="dropbox q ml-2" show-aw="caller_2-1" aw="{{$caller_2->aw1}}"></div>
+                                            <div class="dropbox w-75 q ml-2" show-aw="caller_2-1" aw="{{$caller_2->aw1}}"></div>
                                         </div>
                                     </td>
                                 </tr>
@@ -155,7 +156,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: indirectly</b>
-                                            <div class="dropbox q ml-2" show-aw="caller_2-2" aw="{{$caller_2->aw2}}"></div>
+                                            <div class="dropbox w-75 q ml-2" show-aw="caller_2-2" aw="{{$caller_2->aw2}}"></div>
                                         </div>
                                     </td>
                                 </tr>
@@ -177,7 +178,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: </b>
-                                            <div class="dropbox q ml-2" show-aw="caller_2-3" aw="{{$caller_2->aw3}}"></div>
+                                            <div class="dropbox w-75 q ml-2" show-aw="caller_2-3" aw="{{$caller_2->aw3}}"></div>
                                         </div>
                                     </td>
                                 </tr>
@@ -199,7 +200,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: </b>
-                                            <div class="dropbox q ml-2" show-aw="caller_2-4" aw="{{$caller_2->aw4}}"></div>
+                                            <div class="dropbox w-75 q ml-2" show-aw="caller_2-4" aw="{{$caller_2->aw4}}"></div>
                                         </div>
                                     </td>
                                 </tr>
@@ -221,7 +222,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: </b>
-                                            <div class="dropbox q ml-2" show-aw="caller_2-5" aw="{{$caller_2->aw5}}"></div>
+                                            <div class="dropbox w-75 q ml-2" show-aw="caller_2-5" aw="{{$caller_2->aw5}}"></div>
                                         </div>
                                     </td>
                                 </tr>
@@ -243,7 +244,7 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: </b>
-                                            <div class="dropbox q ml-2" show-aw="caller_2-6" aw="{{$caller_2->aw6}}"></div>
+                                            <div class="dropbox w-75 q ml-2" show-aw="caller_2-6" aw="{{$caller_2->aw6}}"></div>
                                         </div>
                                     </td>
                                 </tr>
@@ -282,14 +283,14 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                         </tr>
                         <tr>
                             <td>6.</td>
-                            <td colspan="2">
+                            <td class="pb-2" colspan="2">
                                 Write a summary of the talk in about 100 - 150 words.
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td colspan="2">
-                                <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                                <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -323,12 +324,13 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Activity 1 - Intro</h4>
+                <h4 class="modal-title text-white mx-auto">Listening - 
+ {{$pageTitle['sub_menu_name'] }}</h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -337,8 +339,8 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -361,19 +363,28 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
         $("#check-answer").prop('disabled', true);
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
 

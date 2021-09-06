@@ -393,7 +393,7 @@
 
 @section('button-control')
     <button id="check-answer" class="btn btn-info">Check Answers</button>
-    <button id="show-answer" class="btn btn-success">Show Answer</button>
+    <button id="show-answer" class="btn btn-success">Show Answers</button>
 @endsection
 
 @section('js')
@@ -435,7 +435,7 @@
             $("#show-answer").text('close');
             x.style.display = "block";
         } else {
-            $("#show-answer").text('Show Answer');
+            $("#show-answer").text('Show Answers');
             x.style.display = "none";
         }
         

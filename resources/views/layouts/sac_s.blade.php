@@ -11,7 +11,7 @@
 	    <meta name="keywords" content="เรียน IELTS, เรียนไอเอล, สอน IELTS, เรียน IELTS ที่ไหน ดี, ติว IELTS, เรียน IELTS ราคาถูก, คอร์สเรียน IELTS, คอร์สเตรียมสอบ IELTS, ที่เรียน IELTS, เรียน IELTS รับรองผล, สอบ IELTS, สอบไอเอล, สอนไอเอล "  />
 
 	    <!-- App favicon -->
-	    <link rel="shortcut icon" href="{{ asset('public/assets/images/newcambridge-logo_bar.png') }}">
+	    <link rel="shortcut icon" href="{{ asset('public/assets/images/icon-nc-big.png') }}">
 
 	    <meta property="og:title" content="iSAC Speaking">
 	    <meta property="og:description" content="คอร์สเรียน IELTS รับรองผล 7.5 สอนสดทุกคลาส โดยเจ้าของภาษา ได้ผลจริง จากสถาบันภาษาคุณภาพ ระดับยอดเยี่ยม 4 ปีซ้อน  เน้นเทคนิคทำข้อสอบ หลักสูตรคุณภาพมาตรฐานสากล">
@@ -112,16 +112,18 @@
 
                     </ul>
 
-                    <!-- LOGO -->
-                    <div class="logo-box">
-                        <a href="{{ route('user_home') }}" class="logo text-center">
+                   <!-- LOGO -->
+                   <div class="logo-box">
+                        <div class="logo text-center">
                             <span class="logo-lg">
-                                <img src="{{ asset('public/assets/images/logo_nc.png') }}" alt="" width="80%">
+                                <img src="{{asset('public/assets/images/logo-nc-color.png') }}" alt="" height="45">
+                                <!-- <span class="logo-lg-text-light">Xeria</span> -->
                             </span>
                             <span class="logo-sm">
-                            	<img src="*" alt="" width="100px">
+                                <!-- <span class="logo-sm-text-dark">X</span> -->
+                                <img src="{{asset('public/assets/images/icon-nc-big.png') }}"alt="" height="45">
                             </span>
-                        </a>
+                        </div>
                     </div>
 
                     <div class="clearfix"></div>
@@ -201,7 +203,7 @@
         <!-- Modal-Effect -->
         <script src="{{ asset('public/assets/libs/custombox/custombox.min.js') }}"></script>
 
-         <!-- Magnific Popup-->
+        <!-- Magnific Popup-->
         <script src="{{ asset('public/assets/libs/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
 
         <!-- Gallery Init-->

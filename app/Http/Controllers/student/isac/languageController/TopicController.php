@@ -26,7 +26,7 @@ class TopicController extends Controller
 
         $menu = DB::table('menu_language')
         ->where('menu_type','=', $id)
-        ->select('menu_name', 'menu_id', 'pdf_file')
+        ->select('menu_name', 'menu_id', 'pdf_file', 'menu_type')
         ->get();
 
         $topicInfo = [

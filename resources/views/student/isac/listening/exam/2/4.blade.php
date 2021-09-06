@@ -21,6 +21,7 @@
         display: inline-block;
         position: relative;
     }
+
     .input-con2 {
         width: 100px;
     }
@@ -124,36 +125,33 @@ $caller_4->e6->aw = ["114%","79%"];
 <div class="row">
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
-            <p class="lead">
-                {{$pageTitle['sub_menu_name']}}
-            </p>
+            <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 1</h4>
                     <h5>Listen to the tape and then complete the table below: </h5>
-                        <table>
-                            <tr class="text-center">
-                                <td></td>
-                                <td>Australia</td>
-                                <td></td>
-                                <td>PNG</td>
-                                <td></td>
-                            </tr>
-                            @foreach($caller_4 as $index => $caller_4)
-                            <tr>
-                                <td class="pr-3">{{$caller_4->q}}</td>
+                    <table>
+                        <tr class="text-center">
+                            <td></td>
+                            <td>Australia</td>
+                            <td></td>
+                            <td>PNG</td>
+                            <td></td>
+                        </tr>
+                        @foreach($caller_4 as $index => $caller_4)
+                        <tr>
+                            <td class="pr-3">{{$caller_4->q}}</td>
 
-                                @foreach($caller_4->aw as $index2 => $aw)
-                                <td>
-                                    <input type="text" class="form-control caller_4" aw="{{$aw}}" show-aw="caller_4-{{$index}}-{{$index2}}" autocomplete="off">
-                                </td>
-                                <td>
-                                    <span class="pl-2 px-0 aw caller_4-{{$index}}-{{$index2}} text-danger">{{$aw}}</span>
-                                </td>
-                                @endforeach
-                            </tr>
+                            @foreach($caller_4->aw as $index2 => $aw)
+                            <td class="px-1 pb-2">
+                                <input type="text" class="form-control caller_4" aw="{{$aw}}" show-aw="caller_4-{{$index}}-{{$index2}}" autocomplete="off">
+                            </td>
+                            <td>
+                                <span class="pl-2 px-0 aw caller_4-{{$index}}-{{$index2}} text-danger">{{$aw}}</span>
+                            </td>
                             @endforeach
-                        </table>
+                        </tr>
+                        @endforeach
+                    </table>
                 </div>
             </div>
         </div>
@@ -164,12 +162,13 @@ $caller_4->e6->aw = ["114%","79%"];
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Activity 1 - Intro</h4>
+                <h4 class="modal-title text-white mx-auto">Listening - 
+ {{$pageTitle['sub_menu_name'] }}</h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{asset('public/isac_listening/'.$pageTitle['sub_menu_id'].'/'.$pageTitle['name_audio'])}}" type="audio/mp3">
+                    <source src="{{asset('public/isac_listening/'.$pageTitle['sub_menu_type'].'/'.$pageTitle['name_audio'])}}" type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -178,8 +177,8 @@ $caller_4->e6->aw = ["114%","79%"];
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -198,28 +197,23 @@ $caller_4->e6->aw = ["114%","79%"];
     })
 
     $('#check-answer').on('click', () => {
-        $('.caller_1:checked').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
-        $('.caller_2').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
-        $('.caller_3').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw'))
-                show_aw($(item).attr('show-aw'))
-        })
         $('.caller_4').each((idx, item) => {
-            if ($(item).val() == $(item).attr('aw').toUpperCase())
-                show_aw($(item).attr('show-aw'))
+            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
 

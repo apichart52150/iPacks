@@ -39,7 +39,7 @@
     }
 
     .grid-5 {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .aw {
@@ -138,12 +138,9 @@ $caller_4_choice->e14 = "..a strong possibility..";
 <div class="row">
     <div class="col-xl-12 col-md-12">
         <div class="card-box text-dark font-16">
-            <p class="lead">
-                {{$pageTitle['sub_menu_name']}}
-            </p>
+            <h4 class="mt-0">{{$pageTitle['sub_menu_name']}}</h4>
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="font-italic">Caller 4</h4>
                     <h5>Write the following sentences in note form, using abbreviations, signs, symbols or anything else which will help you. Focus only on the content words. </h5>
                     <div class="row justify-content-center mb-2">
                         <div class="col-md-12">
@@ -222,12 +219,13 @@ $caller_4_choice->e14 = "..a strong possibility..";
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Activity 1 - Intro</h4>
+                <h4 class="modal-title text-white mx-auto">Listening - 
+ {{$pageTitle['sub_menu_name'] }}</h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/audio/exam/listen/unit-i-nmbers.mp3') }}" type="audio/mp3">
+                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -236,8 +234,8 @@ $caller_4_choice->e14 = "..a strong possibility..";
 
 
 @section('button-control')
-<button id="check-answer" class="btn btn-info">Check Answersss</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answer</button> -->
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
 @endsection
 
 @section('js')
@@ -259,18 +257,27 @@ $caller_4_choice->e14 = "..a strong possibility..";
     $('#check-answer').on('click', () => {
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'))
+                show_aw($(item).attr('show-aw'), item)
+            else
+                show_error(item)
         })
         $('.aw').removeClass('aw')
     })
 
-    function show_aw(aw) {
+    function show_aw(aw, item) {
+        $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')
         $('.' + aw).removeClass('text-danger')
+    }
+
+    function show_error(item) {
+        $(item).addClass('border border-danger')
     }
 
 
