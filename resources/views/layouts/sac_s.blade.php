@@ -112,16 +112,18 @@
 
                     </ul>
 
-                    <!-- LOGO -->
-                    <div class="logo-box">
-                        <a href="{{ route('user_home') }}" class="logo text-center">
+                   <!-- LOGO -->
+                   <div class="logo-box">
+                        <div class="logo text-center">
                             <span class="logo-lg">
-                                <img src="{{ asset('public/assets/images/logo_nc.png') }}" alt="" width="80%">
+                                <img src="{{asset('public/assets/images/logo-nc-color.png') }}" alt="" height="45">
+                                <!-- <span class="logo-lg-text-light">Xeria</span> -->
                             </span>
                             <span class="logo-sm">
-                            	<img src="*" alt="" width="100px">
+                                <!-- <span class="logo-sm-text-dark">X</span> -->
+                                <img src="{{asset('public/assets/images/icon-nc-big.png') }}"alt="" height="45">
                             </span>
-                        </a>
+                        </div>
                     </div>
 
                     <div class="clearfix"></div>
@@ -201,7 +203,7 @@
         <!-- Modal-Effect -->
         <script src="{{ asset('public/assets/libs/custombox/custombox.min.js') }}"></script>
 
-         <!-- Magnific Popup-->
+        <!-- Magnific Popup-->
         <script src="{{ asset('public/assets/libs/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
 
         <!-- Gallery Init-->

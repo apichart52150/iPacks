@@ -21547,7 +21547,6 @@ readers do not read off random characters that represent icons */
  *  Email: erik@helloerik.com
  *  Twitter: http://twitter.com/Erik_UX
  *  ------------------------------------------------------------------------------
- *  Maintained at http://erikflowers.github.io/weather-icons
  *
  *  License
  *  ------------------------------------------------------------------------------
@@ -23317,5 +23316,3 @@ readers do not read off random characters that represent icons */
 
 .wi-owm-night-957:before {
   content: ""; }
-
-/*# sourceMappingURL=weather-icons.css.map */
