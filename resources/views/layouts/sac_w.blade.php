@@ -9,7 +9,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 	    
         <!-- App favicon -->
-	    <link rel="shortcut icon" href="{{ asset('public/assets/images/newcambridge-logo_bar.png') }}">
+	    <link rel="shortcut icon" href="{{ asset('public/assets/images/icon-nc-big.png') }}">
 
         <!-- Custom box css -->
         <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
