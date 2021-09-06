@@ -127,8 +127,9 @@
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Listening - 
- {{$pageTitle['sub_menu_name'] }}</h4>
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}
+                </h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
