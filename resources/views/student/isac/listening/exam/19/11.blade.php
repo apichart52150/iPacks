@@ -258,7 +258,7 @@ $Q_4->e10->aw = "If I were you, I'd eat more slowly";
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val1" show-aw="Q_1-{{$index}}"
                                     aw="{{$Q_1->aw}}">
@@ -296,7 +296,7 @@ $Q_4->e10->aw = "If I were you, I'd eat more slowly";
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val2" show-aw="Q_2-{{$index}}"
                                     aw="{{$Q_2->aw}}">
@@ -332,7 +332,7 @@ $Q_4->e10->aw = "If I were you, I'd eat more slowly";
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val3" show-aw="Q_3-{{$index}}"
                                     aw="{{$Q_3->aw}}">
@@ -365,12 +365,12 @@ $Q_4->e10->aw = "If I were you, I'd eat more slowly";
                         @foreach($Q_4 as $index => $Q_4)
                         <tr>
                             <td style="width: 23px;">{{$Q_4->n}}.</td>
-                            <td colspan="2">{{$Q_4->q}}</td>
+                            <td colspan="2" style="width: 150px;">{{$Q_4->q}}</td>
                             <td><b>{{$Q_4->q2}}</b></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td colspan="2" class="pt-2">
                                 <input type="text" class="form-control w-75 q-val4" show-aw="Q_4-{{$index}}"
                                     aw="{{$Q_4->aw}}">

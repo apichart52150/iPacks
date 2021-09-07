@@ -85,7 +85,7 @@ $Q_1->e8->aw2  = "(calm)";
                 </tr>
                 <tr>
                     <td></td>
-                    <td style="width: 80px;"><b>Answer: </b></td>
+                    <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                     <td class="pt-2">
                         <input type="text" class="form-control w-75 q-val1" show-aw="Q_1-{{$index}}" aw="{{$Q_1->aw}}">
                     </td>

@@ -27,24 +27,21 @@
     }
 
     .answers-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin: 10px 0;
     }
 
-    .answers-container p {
-        font-size: 16px;
+    .answers-container .dropbox {
+        display: inline-block;
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
-        width: 100%;
-        height: auto;
-        min-width: 250px;
+        margin: 5px;
+        min-width: 150px;
         min-height: 40px;
+        vertical-align: middle;
     }
 
     .dropbox .drag {
@@ -186,11 +183,9 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                                 </td>
                             </tr>
                             <tr>
-                                <td style="vertical-align: middle;">
+                                <td class="answers-container py-1">
                                     <span>11. </span>
-                                    <div class="input-con w-75 py-1">
-                                        <div class="dropbox q w-100" show-aw="q-11" aw="{{$aw->e11}}"></div>
-                                    </div>
+                                    <div class="dropbox q w-75" show-aw="q-11" aw="{{$aw->e11}}"></div>
                                 </td>
                             </tr>
                             <tr>
@@ -199,11 +194,9 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="answers-container py-1">
                                     <span>12. </span>
-                                    <div class="input-con w-75 py-1">
-                                        <div class="dropbox q w-100" show-aw="q-12" aw="{{$aw->e12}}"></div>
-                                    </div>
+                                    <div class="dropbox q w-75" show-aw="q-12" aw="{{$aw->e12}}"></div>
                                 </td>
                             </tr>
                             <tr>
@@ -212,11 +205,9 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="answers-container py-1">
                                     <span>13. </span>
-                                    <div class="input-con w-75 py-1">
-                                        <div class="dropbox q w-100" show-aw="q-13" aw="{{$aw->e13}}"></div>
-                                    </div>
+                                    <div class="dropbox q w-75" show-aw="q-13" aw="{{$aw->e13}}"></div>
                                 </td>
                             </tr>
                             <tr>
@@ -225,11 +216,9 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="answers-container py-1">
                                     <span>14. </span>
-                                    <div class="input-con w-75 py-1">
-                                        <div class="dropbox q w-100" show-aw="q-14" aw="{{$aw->e14}}"></div>
-                                    </div>
+                                    <div class="dropbox q w-75" show-aw="q-14" aw="{{$aw->e14}}"></div>
                                 </td>
                             </tr>
                             <tr>
@@ -238,11 +227,9 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="answers-container py-1">
                                     <span>15. </span>
-                                    <div class="input-con w-75 py-1">
-                                        <div class="dropbox q w-100" show-aw="q-15" aw="{{$aw->e15}}"></div>
-                                    </div>
+                                    <div class="dropbox q w-75" show-aw="q-15" aw="{{$aw->e15}}"></div>
                                 </td>
                             </tr>
                             <tr>
@@ -296,8 +283,9 @@ $Q16_20->e5->choice->c = "C Free catalogues";
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Listening - 
- {{$pageTitle['sub_menu_name'] }}</h4>
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}
+                </h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
@@ -321,6 +309,7 @@ $Q16_20->e5->choice->c = "C Free catalogues";
 
 <script>
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

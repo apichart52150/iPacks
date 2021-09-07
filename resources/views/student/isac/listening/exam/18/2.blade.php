@@ -275,6 +275,7 @@
         ];
 
         $('#check-answer1').on('click', () => {
+        $('#check-answer1').prop('disabled',true)
             $('input[type="text1"]').each((index, item) => {
                 if (selectAnswer1[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'
@@ -286,6 +287,7 @@
         });
 
         $('#check-answer2').on('click', () => {
+        $('#check-answer2').prop('disabled',true)
             $('input[type="text2"]').each((index, item) => {
                 if (selectAnswer2[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'
@@ -297,6 +299,7 @@
         });
 
         $('#check-answer3').on('click', () => {
+        $('#check-answer3').prop('disabled',true)
             $('input[type="text3"]').each((index, item) => {
                 if (selectAnswer3[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'

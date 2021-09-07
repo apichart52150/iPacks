@@ -190,7 +190,7 @@ $Q21_30->e10->aw = "Dozens of people, almost all of whom failed to finish, enter
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val1" show-aw="Q1_10-{{$index}}" aw="{{$Q1_10->aw}}">
                             </td>
@@ -234,7 +234,7 @@ $Q21_30->e10->aw = "Dozens of people, almost all of whom failed to finish, enter
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val2" show-aw="Q11_20-{{$index}}" aw="{{$Q11_20->aw}}">
                             </td>
@@ -269,7 +269,7 @@ $Q21_30->e10->aw = "Dozens of people, almost all of whom failed to finish, enter
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val3" show-aw="Q21_30-{{$index}}" aw="{{$Q21_30->aw}}">
                             </td>

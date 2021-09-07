@@ -91,7 +91,7 @@ $caller_1->e4->aw = "and in the late afternoon.";
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 60px;"><b>Answer: </b></td>
+                            <td style="width: 60px;vertical-align:middle;"><b>Answer: </b></td>
                             <td>
                                 <input type="text" class="form-control q-text w-75" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}">
                             </td>
@@ -138,6 +138,7 @@ $caller_1->e4->aw = "and in the late afternoon.";
 
 <script>
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

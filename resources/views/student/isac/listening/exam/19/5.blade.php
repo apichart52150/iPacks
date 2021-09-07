@@ -209,7 +209,7 @@ $Q_3->e10->aw = "Yes, I've already heard the news";
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val1" show-aw="Q_1-{{$index}}"
                                     aw="{{$Q_1->aw}}">
@@ -241,12 +241,12 @@ $Q_3->e10->aw = "Yes, I've already heard the news";
                         @foreach($Q_2 as $index => $Q_2)
                         <tr>
                             <td style="width: 23px;">{{$Q_2->n}}.</td>
-                            <td colspan="2">{{$Q_2->q}}</td>
+                            <td colspan="2" style="width: 150px;">{{$Q_2->q}}</td>
                             <td><b>{{$Q_2->q2}}</b></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td colspan="2" class="pt-2">
                                 <input type="text" class="form-control w-75 q-val2" show-aw="Q_2-{{$index}}"
                                     aw="{{$Q_2->aw}}">
@@ -284,7 +284,7 @@ $Q_3->e10->aw = "Yes, I've already heard the news";
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val3" show-aw="Q_3-{{$index}}"
                                     aw="{{$Q_3->aw}}">

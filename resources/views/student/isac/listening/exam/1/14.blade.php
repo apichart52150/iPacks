@@ -45,7 +45,7 @@
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
         width: 100%;
@@ -364,7 +364,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         Then do Exercise 2.
                     </span>
                     <div class="w-100 d-flex justify-content-center">
-                        <table class="w-50 mb-3">
+                        <table class="w-100 mb-3">
                             <tr class="text-center">
                                 <th class="py-2">List A</th>
                                 <td class="py-2"></td>
@@ -451,26 +451,26 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             <th>2.</th>
                             <td class="col-3-500">Phrases which are male by nature but which include both males and females.</td>
                             <td class="col-3-500">
-                                <div class="input-con py-1">
+                                <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-2-2-1" aw="a. 'Man'"></div>
                                 </div>
                                 <br>
                                 <span class="aw caller_3-2-2-1 text-danger">a. 'Man'</span>
                                 <br>
-                                <div class="input-con py-1">
+                                <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-2-2-2" aw="b. Everyone should be aware of his rights."></div>
                                 </div>
                                 <br>
                                 <span class="aw caller_3-2-2-2 text-danger">b. Everyone should be aware of his rights.</span>
                             </td>
                             <td class="col-3-500">
-                                <div class="input-con py-1">
+                                <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-2-3-1" aw="a. Humans"></div>
                                 </div>
                                 <br>
                                 <span class="aw caller_3-2-3-1 text-danger">a. Humans</span>
                                 <br>
-                                <div class="input-con py-1">
+                                <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-2-3-2" aw="b. People should be aware of their rights."></div>
                                 </div>
                                 <br>
@@ -480,7 +480,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         <tr>
                             <th>3.</th>
                             <td class="col-3-500">
-                                <div class="input-con py-1">
+                                <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-1-3" aw="Female forms to denote sexual difference"></div>
                                 </div>
                                 <br>
@@ -492,13 +492,13 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                 lady-doctor; female-librarian
                             </td>
                             <td class="col-3-500">
-                                <div class="input-con py-1">
+                                <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-3-3-1" aw="- author, usher, waiter"></div>
                                 </div>
                                 <br>
                                 <span class="aw caller_3-3-3-1 text-danger">- author, usher, waiter</span>
                                 <br>
-                                <div class="input-con py-1">
+                                <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-3-3-2" aw="- doctor, librarian"></div>
                                 </div>
                                 <br>
@@ -508,7 +508,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         <tr>
                             <th>4.</th>
                             <td class="col-3-500">
-                                <div class="input-con py-1">
+                                <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-1-4" aw="Females are referred to in terms relating to males"></div>
                                 </div>
                                 <br>
@@ -522,7 +522,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             <td class="col-3-500">
                                 a. none given
                                 <br>
-                                <div class="input-con py-1">
+                                <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-3-4-2" aw="b. Mr and Mrs Smith"></div>
                                 </div>
                                 <br>
@@ -532,7 +532,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         <tr>
                             <th>5.</th>
                             <td class="col-3-500">
-                                <div class="input-con py-1">
+                                <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-1-5" aw="Female forms for insults and abuse"></div>
                                 </div>
                                 <br>
@@ -731,6 +731,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
     })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

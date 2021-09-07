@@ -9,25 +9,23 @@
         margin-bottom: 25px;
     }
 
+
     .answers-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin: 10px 0;
     }
 
-    .answers-container p {
-        font-size: 16px;
+    .answers-container .dropbox {
+        display: inline-block;
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
-        width: 100%;
-        height: auto;
-        min-width: 250px;
+        margin: 5px;
+        min-width: 150px;
         min-height: 40px;
+        vertical-align: middle;
     }
 
     .dropbox .drag {
@@ -387,12 +385,10 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                         <td class="border border-dark p-2">{{$caller_1_1->q}}</td>
                                         <td class="border border-dark p-2">
                                             <div class="input-con w-75">
-                                                <div class="dropbox q w-100" show-aw="caller_1_1-{{$index}}"
-                                                    aw="{{$caller_1_1->aw}}"></div>
+                                                <div class="dropbox q w-100" show-aw="caller_1_1-{{$index}}" aw="{{$caller_1_1->aw}}"></div>
                                             </div>
                                             <br>
-                                            <span
-                                                class="aw caller_1_1-{{$index}} text-danger">{{$caller_1_1->aw}}</span>
+                                            <span class="aw caller_1_1-{{$index}} text-danger">{{$caller_1_1->aw}}</span>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -421,12 +417,10 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                         <td class="border border-dark p-2">{{$caller_1_2->q}}</td>
                                         <td class="border border-dark p-2">
                                             <div class="input-con w-75">
-                                                <div class="dropbox q w-100" show-aw="caller_1_2-{{$index}}"
-                                                    aw="{{$caller_1_2->aw}}"></div>
+                                                <div class="dropbox q w-100" show-aw="caller_1_2-{{$index}}" aw="{{$caller_1_2->aw}}"></div>
                                             </div>
                                             <br>
-                                            <span
-                                                class="aw caller_1_2-{{$index}} text-danger">{{$caller_1_2->aw}}</span>
+                                            <span class="aw caller_1_2-{{$index}} text-danger">{{$caller_1_2->aw}}</span>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -461,10 +455,8 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                     @foreach($caller_2 as $index => $caller_2)
                                     <tr>
                                         <td class="border border-dark p-2">{{$caller_2->n}}</td>
-                                        <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}"
-                                            aw="{{$caller_2->aw}}">{{$caller_2->q}}</td>
-                                        <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}"
-                                            aw="{{$caller_2->aw}}">{{$caller_2->q2}}</td>
+                                        <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q}}</td>
+                                        <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q2}}</td>
                                         <td class="aw caller_2-{{$index}} text-danger pl-2">
                                             {{$caller_2->aw}}
                                         </td>
@@ -502,8 +494,7 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                         <td class="border-dark p-2 d-flex align-items-center">
                                             <b>Answer:&nbsp;&nbsp;</b>
                                             <div class="input-con w-75">
-                                                <div class="dropbox q w-100" show-aw="caller_3-{{$index}}"
-                                                    aw="{{$caller_3->aw}}"></div>
+                                                <div class="dropbox q w-100" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}"></div>
                                             </div>
                                         </td>
                                     </tr>
@@ -562,8 +553,7 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                 <td class="border-dark py-2">
                                     <b>Answer: </b>
                                     <div class="input-con w-75">
-                                        <input type="text" class="form-control q-text w-100"
-                                            show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
+                                        <input type="text" class="form-control q-text w-100" show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
                                     </div>
                                 </td>
                             </tr>
@@ -579,8 +569,7 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         <!-- <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea> -->
                         <h5 class="mt-3 pb-2">C. Write a short summary of the talk, using your own words as far as
                             possible. The summary should be between 80 - 100 words. </h5>
-                        <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30"
-                            rows="10"></textarea>
+                        <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                         <h5 class="mt-3 aw text-success">D. Summary (possible answer) </h5>
                         <span class="aw text-success">
                             The population of Australia is now eighteen million, consisting of over one hundred
@@ -607,14 +596,13 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
             <div class="modal-content">
                 <div class="modal-header bg-primary py-2">
                     <h4 class="modal-title text-white mx-auto">Listening -
-                        {{$pageTitle['sub_menu_name'] }}</h4>
+                        {{$pageTitle['sub_menu_name'] }}
+                    </h4>
                 </div>
                 <div class="modal-body text-center">
                     <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                     <audio data-sound="sound-intro">
-                        <source
-                            src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}"
-                            type="audio/mp3">
+                        <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
                     </audio>
                 </div>
             </div>
@@ -645,6 +633,7 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
         })
 
         $('#check-answer').on('click', () => {
+            $('#check-answer').prop('disabled', true)
             $('.q').each((idx, item) => {
                 if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                     show_aw($(item).attr('show-aw'), item)

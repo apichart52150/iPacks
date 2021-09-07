@@ -26,11 +26,29 @@
         margin-bottom: 25px;
     }
 
+
     .answers-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin: 10px 0;
+    }
+
+    .answers-container .dropbox {
+        display: inline-block;
+    }
+
+    .dropbox {
+        border: 2px dashed #ccc;
+        border-radius: 5px;
+        padding: 3px;
+        margin: 5px;
+        min-width: 150px;
+        min-height: 40px;
+        vertical-align: middle;
+    }
+
+    /* .answers-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .answers-container p {
@@ -45,7 +63,7 @@
         height: auto;
         min-width: 250px;
         min-height: 40px;
-    }
+    } */
 
     .dropbox .drag {
         margin: 0;
@@ -78,7 +96,8 @@
     .event-click {
         cursor: pointer;
     }
-    .why:disabled{
+
+    .why:disabled {
         background: #dddddd;
     }
 </style>
@@ -299,7 +318,7 @@ $caller_5_b->e5->aw = "to find better positions";
                     <div class="row justify-content-center mb-2">
                         <div class="col-md-12">
                             @foreach($caller_1 as $index => $caller_1)
-                            <p class="w-100 pr-3 q-caller-1 q-caller-1-{{$index}}" q="caller-1-{{$index}}" aw="{{$caller_1->aw}}">{{$caller_1->q}}</p>
+                            <div class="answers-container py-1 w-100 pr-3 q-caller-1 q-caller-1-{{$index}}" q="caller-1-{{$index}}" aw="{{$caller_1->aw}}">{{$caller_1->q}}</div>
                             @endforeach
                         </div>
                     </div>
@@ -447,8 +466,9 @@ $caller_5_b->e5->aw = "to find better positions";
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Listening - 
- {{$pageTitle['sub_menu_name'] }}</h4>
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}
+                </h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
@@ -472,13 +492,13 @@ $caller_5_b->e5->aw = "to find better positions";
 
 <script>
     $('.q-caller-1').each((idx, item) => {
-        let text = $(item).html()
+        let text = $(item).html().split("...")
         let new_text = $(item).html()
         let aw = $(item).attr('aw').split("***")
-        for (let i = 0; i < text.split("...").length - 1; i++) {
-            let input = '<div class=" input-con caller_1 py-2 m-0 ">' +
-                '<div class="dropbox q" class="caller_1" aw="' + aw[i] + '" show-aw="caller_1-' + idx + '-' + i + '"></div>' +
-                '</div>' +
+        for (let i = 0; i < text.length - 1; i++) {
+            let input =
+                '<div class="dropbox q caller_1" aw="' + aw[i] + '" show-aw="caller_1-' + idx + '-' + i + '"></div>' +
+
                 '<labal class=" px-2 aw caller_1-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'
             new_text = new_text.replace("...", input)
         }
@@ -486,6 +506,7 @@ $caller_5_b->e5->aw = "to find better positions";
     })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

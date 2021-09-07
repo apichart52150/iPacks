@@ -38,7 +38,7 @@
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
         width: 100%;
@@ -329,27 +329,9 @@ $caller_2->e12->aw = "and two people are believed to have been drowned by the wo
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    $('.q-dot:contains("...")').each((idx, item) => {
-        let text = $(item).html()
-        console.log(text)
-        let input = '<div class="input-con w-50">' +
-            '<input type="text" class="w-100 q-text" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
-            '</div>'
-        text = text.replace("...", input)
-        $(item).html(text)
-    })
-
-    $('.q-dot-choice:contains("...")').each((idx, item) => {
-        let text = $(item).html()
-        console.log(text)
-        let input = '<div class="input-con w-100">' +
-            '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-            '</div>'
-        text = text.replace("...", input)
-        $(item).html(text)
-    })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

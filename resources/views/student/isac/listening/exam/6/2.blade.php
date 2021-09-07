@@ -27,24 +27,21 @@
     }
 
     .answers-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin: 10px 0;
     }
 
-    .answers-container p {
-        font-size: 16px;
+    .answers-container .dropbox {
+        display: inline-block;
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
-        width: 100%;
-        height: auto;
-        min-width: 250px;
+        margin: 5px;
+        min-width: 150px;
         min-height: 40px;
+        vertical-align: middle;
     }
 
     .dropbox .drag {
@@ -90,7 +87,8 @@
     .table2 tr .map {
         border: 1px solid black;
     }
-    .event-click{
+
+    .event-click {
         cursor: pointer;
     }
 </style>
@@ -190,8 +188,8 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                             </div>
                                         </td>
                                         <td>
-                                    <span class="event-click" onclick="checkRadio('Q11_15-{{$index}}-{{$index2}}')">{{$choice}}</span>
-                                </td>
+                                            <span class="event-click" onclick="checkRadio('Q11_15-{{$index}}-{{$index2}}')">{{$choice}}</span>
+                                        </td>
                                     </tr>
                                     @endforeach
                                     <tr class="aw">
@@ -240,11 +238,9 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 </td>
                             </tr>
                             <tr>
-                                <td class="map px-2">
+                                <td class="answers-container map px-2">
                                     Receive personal registration code and agree to (16)
-                                    <div class="input-con py-2">
-                                        <div class="dropbox q" show-aw="q-16" aw="{{$aw->e16}}"></div>
-                                    </div>
+                                    <div class="dropbox q" show-aw="q-16" aw="{{$aw->e16}}"></div>
                                     <span class="aw text-danger q-16 px-2">{{$aw->e16}}</span>
                                 </td>
                             </tr>
@@ -264,11 +260,9 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 </td>
                             </tr>
                             <tr>
-                                <td class="map px-2">
+                                <td class="map px-2 answers-container">
                                     Submit completed form and attach (17)
-                                    <div class="input-con py-2">
-                                        <div class="dropbox q" show-aw="q-17" aw="{{$aw->e17}}"></div>
-                                    </div>
+                                    <div class="dropbox q" show-aw="q-17" aw="{{$aw->e17}}"></div>
                                     <span class="aw text-danger q-17 px-2">{{$aw->e17}}</span>
                                 </td>
                             </tr>
@@ -278,11 +272,9 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 </td>
                             </tr>
                             <tr>
-                                <td class="map px-2">
+                                <td class="answers-container map px-2">
                                     Receive confirmation and invitation to attend (18)
-                                    <div class="input-con py-2">
-                                        <div class="dropbox q" show-aw="q-18" aw="{{$aw->e18}}"></div>
-                                    </div>
+                                    <div class="dropbox q" show-aw="q-18" aw="{{$aw->e18}}"></div>
                                     <span class="aw text-danger q-18 px-2">{{$aw->e18}}</span>
                                 </td>
                             </tr>
@@ -292,11 +284,9 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 </td>
                             </tr>
                             <tr>
-                                <td class="map px-2">
+                                <td class="map px-2 answers-container">
                                     Bring (19)
-                                    <div class="input-con py-2">
-                                        <div class="dropbox q" show-aw="q-19" aw="{{$aw->e19}}"></div>
-                                    </div>
+                                    <div class="dropbox q" show-aw="q-19" aw="{{$aw->e19}}"></div>
                                     <span class="aw text-danger q-19 px-2">{{$aw->e19}}</span>
                                     of certificates to interview
                                 </td>
@@ -307,11 +297,9 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 </td>
                             </tr>
                             <tr>
-                                <td class="map px-2">
+                                <td class="map px-2 answers-container">
                                     Attend (20)
-                                    <div class="input-con py-2">
-                                        <div class="dropbox q" show-aw="q-20" aw="{{$aw->e20}}"></div>
-                                    </div>
+                                    <div class="dropbox q" show-aw="q-20" aw="{{$aw->e20}}"></div>
                                     <span class="aw text-danger q-20 px-2">{{$aw->e20}}</span>
                                     at one of our hotels.
                                 </td>
@@ -328,8 +316,9 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Listening - 
- {{$pageTitle['sub_menu_name'] }}</h4>
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}
+                </h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
@@ -353,6 +342,7 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
 
 <script>
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

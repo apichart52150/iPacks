@@ -133,11 +133,10 @@ $Q_2->e9->aw2 = "";
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="exercise1">
 
+                <h3>What are these people doing?</h3>
                     <p>Listen to the example:</p>
-                    <p class="p-0 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
-                    <p class="pt-2 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
+                    <p class="p-0 m-0"><b>e.g. </b>He is running.</p>
+                    <p class="pt-2 m-0"><b>e.g. </b>She is reading.</p>
                     <p class="pt-2">Now you do it: </p>
 
                     <div class="row">
