@@ -1,35 +1,26 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
-    .input-con {
-        display: inline-block;
-        position: relative;
-    }
-
     .drag-container {
         margin-bottom: 25px;
     }
 
-    .answers-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 10px 0;
-    }
 
-    .answers-container p {
-        font-size: 16px;
+    .answers-container .dropbox {
+        display: inline-block;
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
-        width: 100%;
-        height: auto;
-        min-width: 80px;
+        margin: 5px;
+        min-width: 150px;
+        min-height: 40px;
+        vertical-align: middle;
     }
 
-    .dropbox .drag {margin: 0;
+    .dropbox .drag {
+        margin: 0;
     }
 
     .grid-5 {
@@ -38,52 +29,52 @@
 
 </style>
 @php
-    $q1 = "Many old people work well into their 70s and 80s, running families, countries or";
-    $q2 = ". Other people, however,";
-    $q3 = "being fit and highly talented, are forced to retire in their or even earlier because of company or national";
-    $q4 = ". This essay will examine whether people should be allowed to continue working for as long as they want or whether they should be encouraged to retire at a particular stage. There are several arguments for allowing older people to continue working as long as they are able. First of all, older employees have an immense amount of knowledge and experience which can be lost to a business or organization if they are made to retire. A second point is that older employees are often extremely loyal employees and are more willing to";
-    $q5 = "company";
-    $q6 = "than younger less";
-    $q7 = "staff. However, a more important point is regarding the";
-    $q8 = "in society to old people. To force someone to resign or retire at 60 or 65";
-    $q9 = "that the society does not value the";
-    $q10 = "of these people and that effectively their useful life is over. Allowing older people to work";
-    $q11 = ", however, is not always a good";
-    $q12 = ". Age alone is no";
-    $q13 = "of ability. Many younger employees have more experience or skills than older staff, who may have been stuck in one";
-    $q14 = "or unit for most of their working lives. Having compulsory retirement allows new ideas in an organization. In addition, without age limits, however";
-    $q15 = ", many people would continue to work purely because they did not have any other plans or";
-    $q16 = ". A third point of view is that older people should be rewarded by society for their life's";
-    $q17 = "by being given generous pensions and the freedom to enjoy their leisure. With many young people unemployed or frustrated in low-level positions, there are often calls to compulsorily retire older workers. However, this can";
-    $q18 = "the older";
-    $q19 = "' freedom - and right - to work and can deprive society of valuable experience and";
-    $q20 = ". I feel that giving workers more";
-    $q21 = "and choice over their retirement age will";
-    $q22 = "society and the";
+$Q=["q1" => "Many old people work well into their 70s and 80s, running families, countries or",
+"q2" => ". Other people, however,",
+"q3" => "being fit and highly talented, are forced to retire in their or even earlier because of company or national",
+"q4" => ". This essay will examine whether people should be allowed to continue working for as long as they want or whether they should be encouraged to retire at a particular stage. There are several arguments for allowing older people to continue working as long as they are able. First of all, older employees have an immense amount of knowledge and experience which can be lost to a business or organization if they are made to retire. A second point is that older employees are often extremely loyal employees and are more willing to",
+"q5" => "company",
+"q6" => "than younger less",
+"q7" => "staff. However, a more important point is regarding the",
+"q8" => "in society to old people. To force someone to resign or retire at 60 or 65",
+"q9" => "that the society does not value the",
+"q10" => "of these people and that effectively their useful life is over. Allowing older people to work",
+"q11" => ", however, is not always a good",
+"q12" => ". Age alone is no",
+"q13" => "of ability. Many younger employees have more experience or skills than older staff, who may have been stuck in one",
+"q14" => "or unit for most of their working lives. Having compulsory retirement allows new ideas in an organization. In addition, without age limits, however",
+"q15" => ", many people would continue to work purely because they did not have any other plans or",
+"q16" => ". A third point of view is that older people should be rewarded by society for their life's",
+"q17" => "by being given generous pensions and the freedom to enjoy their leisure. With many young people unemployed or frustrated in low-level positions, there are often calls to compulsorily retire older workers. However, this can",
+"q18" => "the older",
+"q19" => "' freedom - and right - to work and can deprive society of valuable experience and",
+"q20" => ". I feel that giving workers more",
+"q21" => "and choice over their retirement age will",
+"q22" => "society and the",];
     $end = ".";
-
-    $a1 = "affect";
-    $a2 = "arbitrary";
-    $a3 = "area";
-    $a4 = "attitudes";
-    $a5 = "benefit";
-    $a6 = "committed";
-    $a7 = "corporations";
-    $a8 = "despite";
-    $a9 = "flexibility";
-    $a10 = "guarantee";
-    $a11 = "implement";
-    $a12 = "indefinitely";
-    $a13 = "indicates";
-    $a14 = "individual";
-    $a15 = "individuals";
-    $a16 = "input";
-    $a17 = "insights";
-    $a18 = "labor";
-    $a19 = "policies";
-    $a20 = "policy";
-    $a21 = "regulations";
-    $a22 = "roles";
+$A=[
+    "a1" => "affect",
+    "a2" => "arbitrary",
+    "a3" => "area",
+    "a4" => "attitudes",
+    "a5" => "benefit",
+    "a6" => "committed",
+    "a7" => "corporations",
+    "a8" => "despite",
+    "a9" => "flexibility",
+    "a10" => "guarantee",
+    "a11" => "implement",
+    "a12" => "indefinitely",
+    "a13" => "indicates",
+    "a14" => "individual",
+    "a15" => "individuals",
+    "a16" => "input",
+    "a17" => "insights",
+    "a18" => "labor",
+    "a19" => "policies",
+    "a20" => "policy",
+    "a21" => "regulations",
+    "a22" => "roles",];
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -94,28 +85,9 @@
                         <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
                         <div class="drag-container">
                             <div class="d-grid grid-5" id="choices">
-                                <div class="drag">{{ $a1 }}</div>
-                                <div class="drag">{{ $a2 }}</div>
-                                <div class="drag">{{ $a3 }}</div>
-                                <div class="drag">{{ $a4 }}</div>
-                                <div class="drag">{{ $a5 }}</div>
-                                <div class="drag">{{ $a6 }}</div>
-                                <div class="drag">{{ $a7 }}</div>
-                                <div class="drag">{{ $a8 }}</div>
-                                <div class="drag">{{ $a9 }}</div>
-                                <div class="drag">{{ $a10 }}</div>
-                                <div class="drag">{{ $a11 }}</div>
-                                <div class="drag">{{ $a12 }}</div>
-                                <div class="drag">{{ $a13 }}</div>
-                                <div class="drag">{{ $a14 }}</div>
-                                <div class="drag">{{ $a15 }}</div>
-                                <div class="drag">{{ $a16 }}</div>
-                                <div class="drag">{{ $a17 }}</div>
-                                <div class="drag">{{ $a18 }}</div>
-                                <div class="drag">{{ $a19 }}</div>
-                                <div class="drag">{{ $a20 }}</div>
-                                <div class="drag">{{ $a21 }}</div>
-                                <div class="drag">{{ $a22 }}</div>
+                                @foreach ($A as $choices)
+                                <div class="drag">{{ $choices }}</div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -125,117 +97,13 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2" style="line-height: 35px;">
-                            {{$q1}}
-                            <span class="font-weight-bold">1.</span> 
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q2}}
-                            <span class="font-weight-bold">2.</span> 
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q3}}
-                            <span class="font-weight-bold">3.</span> 
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q4}}
-                            <span class="font-weight-bold">4.</span> 
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q5}}
-                            <span class="font-weight-bold">5.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q6}}
-                            <span class="font-weight-bold">6.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q7}}
-                            <span class="font-weight-bold">7.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q8}}
-                            <span class="font-weight-bold">8.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q9}}
-                            <span class="font-weight-bold">9.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q10}}
-                            <span class="font-weight-bold">10.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q12}}
-                            <span class="font-weight-bold">12.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q13}}
-                            <span class="font-weight-bold">13.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q14}}
-                            <span class="font-weight-bold">14.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q15}}
-                            <span class="font-weight-bold">15.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q16}}
-                            <span class="font-weight-bold">16.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q17}}
-                            <span class="font-weight-bold">17.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q18}}
-                            <span class="font-weight-bold">18.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q19}}
-                            <span class="font-weight-bold">19.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q20}}
-                            <span class="font-weight-bold">20.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q21}}
-                            <span class="font-weight-bold">21.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q22}}
-                            <span class="font-weight-bold">22.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$end}}
+                        <div class="answers-container">
+                            @foreach($Q as $q)
+                            {{ $q }}
+                            <div class="dropbox"></div>
+                            @endforeach
+                            {{ $end }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -251,32 +119,34 @@
 @section('js')
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
+<script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
 <script>
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a7 ?>",
-         $q2 = "<?php echo $a8 ?>",
-         $q3 = "<?php echo $a21 ?>",
-         $q4 = "<?php echo $a11 ?>",
-         $q5 = "<?php echo $a19 ?>",
-         $q6 = "<?php echo $a6 ?>",
-         $q7 = "<?php echo $a4 ?>",
-         $q8 = "<?php echo $a13 ?>",
-         $q9 = "<?php echo $a16 ?>",
-         $q10 = "<?php echo $a12 ?>",
-         $q11 = "<?php echo $a20 ?>",
-         $q12 = "<?php echo $a10 ?>",
-         $q13 = "<?php echo $a3 ?>",
-         $q14 = "<?php echo $a2 ?>",
-         $q15 = "<?php echo $a22 ?>",
-         $q16 = "<?php echo $a18 ?>",
-         $q17 = "<?php echo $a1 ?>",
-         $q18 = "<?php echo $a15 ?>",
-         $q19 = "<?php echo $a17 ?>",
-         $q20 = "<?php echo $a9 ?>",
-         $q21 = "<?php echo $a5 ?>",
-         $q22 = "<?php echo $a14 ?>",
+         $q1 = "<?php echo $A['a7'] ?>",
+         $q2 = "<?php echo $A['a8'] ?>",
+         $q3 = "<?php echo $A['a21'] ?>",
+         $q4 = "<?php echo $A['a11'] ?>",
+         $q5 = "<?php echo $A['a19'] ?>",
+         $q6 = "<?php echo $A['a6'] ?>",
+         $q7 = "<?php echo $A['a4'] ?>",
+         $q8 = "<?php echo $A['a13'] ?>",
+         $q9 = "<?php echo $A['a16'] ?>",
+         $q10 = "<?php echo $A['a12'] ?>",
+         $q11 = "<?php echo $A['a20'] ?>",
+         $q12 = "<?php echo $A['a10'] ?>",
+         $q13 = "<?php echo $A['a3'] ?>",
+         $q14 = "<?php echo $A['a2'] ?>",
+         $q15 = "<?php echo $A['a22'] ?>",
+         $q16 = "<?php echo $A['a18'] ?>",
+         $q17 = "<?php echo $A['a1'] ?>",
+         $q18 = "<?php echo $A['a15'] ?>",
+         $q19 = "<?php echo $A['a17'] ?>",
+         $q20 = "<?php echo $A['a9'] ?>",
+         $q21 = "<?php echo $A['a5'] ?>",
+         $q22 = "<?php echo $A['a14'] ?>",
     ];
 
     console.log(answers);
@@ -314,13 +184,16 @@
         },
     });
 
+  
     $("#check-answer").on("click", () => {
+        let score = 0
 
         let droppables = $(".dropbox");
 
         droppables.each((idx, item) => {
-            if($(item).children().text().trim() == answers[idx]) {
+            if ($(item).children().text().trim() == answers[idx]) {
                 checkAnswer($(item).children(), 'correct');
+                score++
             } else {
                 checkAnswer($(item).children(), 'incorrect');
             }
@@ -328,6 +201,16 @@
 
         $(".drag").draggable({
             disabled: true,
+        });
+        Swal.fire({
+            title: "Your score",
+            text: score + "",
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
         });
 
         $("#check-answer").prop("disabled", true);
