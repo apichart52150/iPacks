@@ -458,26 +458,18 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                     <div class="dropbox q" show-aw="caller_3-2-2-1" aw="a. 'Man'"></div>
                                 </div>
                                 <br>
-                                <span class="aw caller_3-2-2-1 text-danger">a. 'Man'</span>
-                                <br>
                                 <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-2-2-2" aw="b. Everyone should be aware of his rights."></div>
                                 </div>
-                                <br>
-                                <span class="aw caller_3-2-2-2 text-danger">b. Everyone should be aware of his rights.</span>
                             </td>
                             <td class="col-3-500">
                                 <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-2-3-1" aw="a. Humans"></div>
                                 </div>
                                 <br>
-                                <span class="aw caller_3-2-3-1 text-danger">a. Humans</span>
-                                <br>
-                                <div class="input-con w-100 py-1">
+                               <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-2-3-2" aw="b. People should be aware of their rights."></div>
                                 </div>
-                                <br>
-                                <span class="aw caller_3-2-3-2 text-danger">b. People should be aware of their rights.</span>
                             </td>
                         </tr>
                         <tr>
@@ -486,8 +478,6 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                 <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-1-3" aw="Female forms to denote sexual difference"></div>
                                 </div>
-                                <br>
-                                <span class="aw caller_3-1-3 text-danger">Female forms to denote sexual difference</span>
                             </td>
                             <td class="col-3-500">
                                 authoress, usherette, waitress
@@ -499,13 +489,9 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                     <div class="dropbox q" show-aw="caller_3-3-3-1" aw="- author, usher, waiter"></div>
                                 </div>
                                 <br>
-                                <span class="aw caller_3-3-3-1 text-danger">- author, usher, waiter</span>
-                                <br>
                                 <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-3-3-2" aw="- doctor, librarian"></div>
                                 </div>
-                                <br>
-                                <span class="aw caller_3-3-3-2 text-danger">- doctor, librarian</span>
                             </td>
                         </tr>
                         <tr>
@@ -514,8 +500,6 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                 <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-1-4" aw="Females are referred to in terms relating to males"></div>
                                 </div>
-                                <br>
-                                <span class="aw caller_3-1-4 text-danger">Females are referred to in terms relating to males</span>
                             </td>
                             <td class="col-3-500">
                                 a. man and wife
@@ -528,8 +512,6 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                 <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-3-4-2" aw="b. Mr and Mrs Smith"></div>
                                 </div>
-                                <br>
-                                <span class="aw caller_3-3-4-2 text-danger">b. Mr and Mrs Smith</span>
                             </td>
                         </tr>
                         <tr>
@@ -538,8 +520,6 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                 <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-1-5" aw="Female forms for insults and abuse"></div>
                                 </div>
-                                <br>
-                                <span class="aw caller_3-1-5 text-danger">Female forms for insults and abuse</span>
                             </td>
                             <td class="col-3-500">bitch, vixen</td>
                             <td class="col-3-500">none given</td>
@@ -613,12 +593,6 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="aw caller_5_a-{{$index}} text-danger">{{$a->aw}}</td>
-                        </tr>
                         @endforeach
                         <tr>
                             <td class="py-3" colspan="4">
@@ -647,12 +621,6 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                     <div class="dropbox q w-100" show-aw="caller_5_b-{{$index}}" aw="{{$b->aw}}"></div>
                                 </div>
                             </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="aw caller_5_b-{{$index}} text-danger">{{$b->aw}}</td>
                         </tr>
                         @endforeach
                         <tr>
@@ -713,7 +681,9 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
+<button id="show-answer" class="d-none btn btn-info">
+    Show Answers
+  </button>
 @endsection
 
 @section('js')
@@ -723,12 +693,19 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
 <script>
 
     $('#check-answer').on('click', () => {
+        $("#show-answer").addClass("d-block");
+$("#show-answer").removeClass("d-none");
+$("#check-answer").addClass("d-none");
         $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
+                    {show_aw($(item).attr('show-aw'), item)
+                $(item).children().addClass('bg-success')
+            }else{
+                    if($(item).text().trim().toUpperCase()!="")
+                        $(item).children().addClass('bg-danger')
+                    show_error(item)
+                }
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
@@ -744,7 +721,24 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
         })
         $('.aw').removeClass('aw')
     })
-
+    $('#show-answer').on('click', function() {
+                    $('check-answer').addClass('d-none')
+                    $('.dropbox').each((idx, item) => {
+                
+                        if($(item).children().length == 1) {
+                            if($(item).children().hasClass('bg-danger')) {
+                                if($(item).children().text($(item).attr('aw'))) {
+                                    $(item).children().removeClass('bg-danger')
+                                }
+                            }
+                        } else {
+                            $(item).append(`<div class="drag">`+$(item).attr('aw')+`</div>`)
+                        }
+                
+                        $('.drag-container .drag').remove();
+                    })
+                    $("#show-answer").hide();
+                });
     function show_aw(aw, item) {
         $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')

@@ -160,15 +160,15 @@ $Q1_10->e16->aw = "1 hour";
                 <div class="col-lg-12">
                     Write <b>NO MORE THAN TWO WORDS AND/OR A DATE OR A NUMBER</b>.
                     <div class="w-100 d-flex justify-content-center">
-                        <table class="w-75">
+                        <table class="w-100">
                             <tr>
                                 <td style="border: 1px solid black;">
                                     <div class="p-3">
-                                        <div class="w-100 text-center">
+                                        <div class="w-100 pb-3 text-center">
                                             <b>Booking Form</b>
                                         </div>
                                         <div class="w-100 d-flex justify-content-center">
-                                            <table>
+                                            <table class="w-auto">
                                                 @foreach($Q1_10 as $index => $Q1_10)
                                                 <tr>
                                                     <td class="pr-2">{{$Q1_10->q}}</td>

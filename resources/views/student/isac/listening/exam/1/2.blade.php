@@ -385,10 +385,9 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                         <td class="border border-dark p-2">{{$caller_1_1->q}}</td>
                                         <td class="border border-dark p-2">
                                             <div class="input-con w-75">
-                                                <div class="dropbox q w-100" show-aw="caller_1_1-{{$index}}" aw="{{$caller_1_1->aw}}"></div>
+                                                <div class="dropbox q w-100" show-aw="caller_1_1-{{$index}}"
+                                                    aw="{{$caller_1_1->aw}}"></div>
                                             </div>
-                                            <br>
-                                            <span class="aw caller_1_1-{{$index}} text-danger">{{$caller_1_1->aw}}</span>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -417,10 +416,9 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                         <td class="border border-dark p-2">{{$caller_1_2->q}}</td>
                                         <td class="border border-dark p-2">
                                             <div class="input-con w-75">
-                                                <div class="dropbox q w-100" show-aw="caller_1_2-{{$index}}" aw="{{$caller_1_2->aw}}"></div>
+                                                <div class="dropbox q w-100" show-aw="caller_1_2-{{$index}}"
+                                                    aw="{{$caller_1_2->aw}}"></div>
                                             </div>
-                                            <br>
-                                            <span class="aw caller_1_2-{{$index}} text-danger">{{$caller_1_2->aw}}</span>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -450,16 +448,14 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                         <td class="border border-dark p-2">No.</td>
                                         <td class="border border-dark p-2">Symbol</td>
                                         <td class="border border-dark p-2">Meaning</td>
-                                        <td class=""></td>
                                     </tr>
                                     @foreach($caller_2 as $index => $caller_2)
                                     <tr>
                                         <td class="border border-dark p-2">{{$caller_2->n}}</td>
-                                        <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q}}</td>
-                                        <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q2}}</td>
-                                        <td class="aw caller_2-{{$index}} text-danger pl-2">
-                                            {{$caller_2->aw}}
-                                        </td>
+                                        <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}"
+                                            aw="{{$caller_2->aw}}">{{$caller_2->q}}</td>
+                                        <td class="border border-dark p-2 q-caller-2" show-aw="caller_2-{{$index}}"
+                                            aw="{{$caller_2->aw}}">{{$caller_2->q2}}</td>
                                     </tr>
                                     @endforeach
                                 </table>
@@ -494,14 +490,9 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                         <td class="border-dark p-2 d-flex align-items-center">
                                             <b>Answer:&nbsp;&nbsp;</b>
                                             <div class="input-con w-75">
-                                                <div class="dropbox q w-100" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}"></div>
+                                                <div class="dropbox q w-100" show-aw="caller_3-{{$index}}"
+                                                    aw="{{$caller_3->aw}}"></div>
                                             </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td class="aw caller_3-{{$index}} text-danger">
-                                            {{$caller_3->aw}}
                                         </td>
                                     </tr>
                                     @endforeach
@@ -553,7 +544,8 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                 <td class="border-dark py-2">
                                     <b>Answer: </b>
                                     <div class="input-con w-75">
-                                        <input type="text" class="form-control q-text w-100" show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
+                                        <input type="text" class="form-control q-text w-100"
+                                            show-aw="caller_4_A-{{$index}}" aw="{{$caller_4_A->aw}}">
                                     </div>
                                 </td>
                             </tr>
@@ -569,7 +561,8 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         <!-- <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea> -->
                         <h5 class="mt-3 pb-2">C. Write a short summary of the talk, using your own words as far as
                             possible. The summary should be between 80 - 100 words. </h5>
-                        <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
+                        <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30"
+                            rows="10"></textarea>
                         <h5 class="mt-3 aw text-success">D. Summary (possible answer) </h5>
                         <span class="aw text-success">
                             The population of Australia is now eighteen million, consisting of over one hundred
@@ -602,7 +595,9 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                 <div class="modal-body text-center">
                     <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                     <audio data-sound="sound-intro">
-                        <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
+                        <source
+                            src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}"
+                            type="audio/mp3">
                     </audio>
                 </div>
             </div>
@@ -612,7 +607,7 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
 
     @section('button-control')
     <button id="check-answer" class="btn btn-info">Check Answers</button>
-    <!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
+    <button id="show-answer" class="d-none btn btn-info">Show Answers</button>
     @endsection
 
     @section('js')
@@ -633,12 +628,19 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
         })
 
         $('#check-answer').on('click', () => {
+$('#show-answer').addClass('d-block')
+$('#show-answer').removeClass('d-none')
+$('#check-answer').addClass('d-none')
             $('#check-answer').prop('disabled', true)
             $('.q').each((idx, item) => {
                 if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                    show_aw($(item).attr('show-aw'), item)
-                else
+                    {show_aw($(item).attr('show-aw'), item)
+                $(item).children().addClass('bg-success')}
+                else{
+                    if($(item).text().trim().toUpperCase()!="")
+                        $(item).children().addClass('bg-danger')
                     show_error(item)
+                }
             })
             $('.q-text').each((idx, item) => {
                 if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
@@ -648,6 +650,24 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
             })
             $('.aw').removeClass('aw')
         })
+$('#show-answer').on('click', function() {
+    $('check-answer').addClass('d-none')
+    $('.dropbox').each((idx, item) => {
+
+        if($(item).children().length == 1) {
+            if($(item).children().hasClass('bg-danger')) {
+                if($(item).children().text($(item).attr('aw'))) {
+                    $(item).children().removeClass('bg-danger')
+                }
+            }
+        } else {
+            $(item).append(`<div class="drag">`+$(item).attr('aw')+`</div>`)
+        }
+
+        $('.drag-container .drag').remove();
+    })
+    $("#show-answer").hide();
+});
 
         function show_aw(aw, item) {
             $(item).addClass('border border-success')

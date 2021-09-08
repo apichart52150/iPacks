@@ -154,12 +154,8 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                         (1)
                                                         <div class="input-con py-1">
                                                             <input type="text" class="form-control q-val" show-aw="q-1" aw="{{$aw->e1}}">
-                                                        </div>
+                                                        </div><span class="aw text-danger pl-2 q-1">{{$aw->e1}}</span>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <th class="pr-2"></th>
-                                                    <td><span class="aw text-danger q-1">{{$aw->e1}}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <th class="pr-2">Type of accommodation: </th>
@@ -167,16 +163,8 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                         (2)
                                                         <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-2" aw="{{$aw->e2}}">
-                                                        </div>
+                                                        </div><span class="aw text-danger pl-2 q-2">{{$aw->e2}}</span>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="py-1"></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <th class="pr-2"></th>
-                                                    <td><span class="aw text-danger q-2">{{$aw->e2}}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <th class="pr-2">Location: </th>
@@ -204,12 +192,8 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                         (3)
                                                         <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-3" aw="{{$aw->e3}}">
-                                                        </div>
+                                                        </div><span class="aw text-danger pl-2 q-3">{{$aw->e3}}</span>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="pr-2"></td>
-                                                    <td><span class="aw text-danger q-3">{{$aw->e3}}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
@@ -217,12 +201,8 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                         (4)
                                                         <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-4" aw="{{$aw->e4}}">
-                                                        </div>
+                                                        </div><span class="aw text-danger pl-2 q-4">{{$aw->e4}}</span>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="pr-2"></td>
-                                                    <td><span class="aw text-danger q-4">{{$aw->e4}}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="py-1"></td>
@@ -244,12 +224,8 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                         (5)
                                                         <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-5" aw="{{$aw->e5}}">
-                                                        </div>
+                                                        </div><span class="aw text-danger pl-2 q-5">{{$aw->e5}}</span>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="pr-2"></td>
-                                                    <td><span class="aw text-danger q-5">{{$aw->e5}}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="py-1"></td>
@@ -272,11 +248,8 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                         <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-6" aw="{{$aw->e6}}">
                                                         </div>
+                                                        <span class="aw text-danger  pl-2 q-6">{{$aw->e6}}</span>
                                                     </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="pr-2"></td>
-                                                    <td><span class="aw text-danger q-6">{{$aw->e6}}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="py-1"></td>
@@ -323,12 +296,6 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <span class="aw text-danger Q7_10-{{$index}} px-2">{{$Q7_10->aw}}</span>
-                            </td>
-                        </tr>
                         @endforeach
                     </table>
                 </div>
@@ -357,7 +324,9 @@ $choice_7_10->ch9 = "I. Bedrooms";
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
+<button id="show-answer" class="d-none btn btn-info">
+    Show Answers
+  </button>
 @endsection
 
 @section('js')
@@ -367,12 +336,19 @@ $choice_7_10->ch9 = "I. Bedrooms";
 <script>
 
     $('#check-answer').on('click', () => {
+        $("#show-answer").addClass("d-block");
+$("#show-answer").removeClass("d-none");
+$("#check-answer").addClass("d-none");
         $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
+                    {show_aw($(item).attr('show-aw'), item)
+                $(item).children().addClass('bg-success')
+            }else{
+                    if($(item).text().trim().toUpperCase()!="")
+                        $(item).children().addClass('bg-danger')
+                    show_error(item)
+                }
         })
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
@@ -380,26 +356,27 @@ $choice_7_10->ch9 = "I. Bedrooms";
             else
                 show_error(item)
         })
-        $('.q-check:checked').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
-        $('.q-check-input:checked').each((idx, item) => {
-            let aw = ""
-            if ($(item).val() == "False")
-                aw = $(item).val() + ": " + $('.' + $(item).attr('text')).val()
-            else
-                aw = $(item).val()
-            if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
         $('.aw').removeClass('aw')
     })
 
+    $('#show-answer').on('click', function() {
+                    $('check-answer').addClass('d-none')
+                    $('.dropbox').each((idx, item) => {
+                
+                        if($(item).children().length == 1) {
+                            if($(item).children().hasClass('bg-danger')) {
+                                if($(item).children().text($(item).attr('aw'))) {
+                                    $(item).children().removeClass('bg-danger')
+                                }
+                            }
+                        } else {
+                            $(item).append(`<div class="drag">`+$(item).attr('aw')+`</div>`)
+                        }
+                
+                        $('.drag-container .drag').remove();
+                    })
+                    $("#show-answer").hide();
+                });
 
     function show_aw(aw, item) {
         $(item).addClass('border border-success')

@@ -483,7 +483,9 @@ $caller_5_b->e5->aw = "to find better positions";
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
+<button id="show-answer" class="d-none btn btn-info">
+    Show Answers
+  </button>
 @endsection
 
 @section('js')
@@ -497,21 +499,26 @@ $caller_5_b->e5->aw = "to find better positions";
         let aw = $(item).attr('aw').split("***")
         for (let i = 0; i < text.length - 1; i++) {
             let input =
-                '<div class="dropbox q caller_1" aw="' + aw[i] + '" show-aw="caller_1-' + idx + '-' + i + '"></div>' +
-
-                '<labal class=" px-2 aw caller_1-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'
+                '<div class="dropbox q caller_1" aw="' + aw[i] + '" show-aw="caller_1-' + idx + '-' + i + '"></div>'
             new_text = new_text.replace("...", input)
         }
         $('.q-caller-1-e' + (idx + 1)).html(new_text)
     })
 
     $('#check-answer').on('click', () => {
+        $("#show-answer").addClass("d-block");
+$("#show-answer").removeClass("d-none");
+$("#check-answer").addClass("d-none");
         $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
+                    {show_aw($(item).attr('show-aw'), item)
+                $(item).children().addClass('bg-success')
+            }else{
+                    if($(item).text().trim().toUpperCase()!="")
+                        $(item).children().addClass('bg-danger')
+                    show_error(item)
+                }
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
@@ -532,7 +539,24 @@ $caller_5_b->e5->aw = "to find better positions";
         })
         $('.aw').removeClass('aw')
     })
-
+    $('#show-answer').on('click', function() {
+                    $('check-answer').addClass('d-none')
+                    $('.dropbox').each((idx, item) => {
+                
+                        if($(item).children().length == 1) {
+                            if($(item).children().hasClass('bg-danger')) {
+                                if($(item).children().text($(item).attr('aw'))) {
+                                    $(item).children().removeClass('bg-danger')
+                                }
+                            }
+                        } else {
+                            $(item).append(`<div class="drag">`+$(item).attr('aw')+`</div>`)
+                        }
+                
+                        $('.drag-container .drag').remove();
+                    })
+                    $("#show-answer").hide();
+                });
     function show_aw(aw, item) {
         $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')

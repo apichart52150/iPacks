@@ -241,7 +241,6 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 <td class="answers-container map px-2">
                                     Receive personal registration code and agree to (16)
                                     <div class="dropbox q" show-aw="q-16" aw="{{$aw->e16}}"></div>
-                                    <span class="aw text-danger q-16 px-2">{{$aw->e16}}</span>
                                 </td>
                             </tr>
                             <tr>
@@ -263,7 +262,6 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 <td class="map px-2 answers-container">
                                     Submit completed form and attach (17)
                                     <div class="dropbox q" show-aw="q-17" aw="{{$aw->e17}}"></div>
-                                    <span class="aw text-danger q-17 px-2">{{$aw->e17}}</span>
                                 </td>
                             </tr>
                             <tr>
@@ -275,7 +273,6 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 <td class="answers-container map px-2">
                                     Receive confirmation and invitation to attend (18)
                                     <div class="dropbox q" show-aw="q-18" aw="{{$aw->e18}}"></div>
-                                    <span class="aw text-danger q-18 px-2">{{$aw->e18}}</span>
                                 </td>
                             </tr>
                             <tr>
@@ -287,7 +284,6 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 <td class="map px-2 answers-container">
                                     Bring (19)
                                     <div class="dropbox q" show-aw="q-19" aw="{{$aw->e19}}"></div>
-                                    <span class="aw text-danger q-19 px-2">{{$aw->e19}}</span>
                                     of certificates to interview
                                 </td>
                             </tr>
@@ -300,7 +296,6 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
                                 <td class="map px-2 answers-container">
                                     Attend (20)
                                     <div class="dropbox q" show-aw="q-20" aw="{{$aw->e20}}"></div>
-                                    <span class="aw text-danger q-20 px-2">{{$aw->e20}}</span>
                                     at one of our hotels.
                                 </td>
                             </tr>
@@ -333,7 +328,9 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
+<button id="show-answer" class="d-none btn btn-info">
+    Show Answers
+  </button>
 @endsection
 
 @section('js')
@@ -342,39 +339,48 @@ $Q11_15->e5->choice->c = "C. Professional qualifications";
 
 <script>
     $('#check-answer').on('click', () => {
+        $("#show-answer").addClass("d-block");
+$("#show-answer").removeClass("d-none");
+$("#check-answer").addClass("d-none");
         $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
+                    {show_aw($(item).attr('show-aw'), item)
+                $(item).children().addClass('bg-success')
+            }else{
+                    if($(item).text().trim().toUpperCase()!="")
+                        $(item).children().addClass('bg-danger')
+                    show_error(item)
+                }
         })
-        $('.q-val').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
+        
         $('.q-check:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)
             else
                 show_error(item)
         })
-        $('.q-check-input:checked').each((idx, item) => {
-            let aw = ""
-            if ($(item).val() == "False")
-                aw = $(item).val() + ": " + $('.' + $(item).attr('text')).val()
-            else
-                aw = $(item).val()
-            if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
+     
         $('.aw').removeClass('aw')
     })
-
+    $('#show-answer').on('click', function() {
+                    $('check-answer').addClass('d-none')
+                    $('.dropbox').each((idx, item) => {
+                
+                        if($(item).children().length == 1) {
+                            if($(item).children().hasClass('bg-danger')) {
+                                if($(item).children().text($(item).attr('aw'))) {
+                                    $(item).children().removeClass('bg-danger')
+                                }
+                            }
+                        } else {
+                            $(item).append(`<div class="drag">`+$(item).attr('aw')+`</div>`)
+                        }
+                
+                        $('.drag-container .drag').remove();
+                    })
+                    $("#show-answer").hide();
+                });
     function show_aw(aw, item) {
         $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')

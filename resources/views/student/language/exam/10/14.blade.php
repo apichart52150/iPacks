@@ -121,8 +121,7 @@ $Q=["q1" => "Almost ten per cent of the earth's surface is covered by tropical r
 @section('js')
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-<script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
-<script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
+
 <script>
     $("#show-answer").prop("disabled", true);
 
