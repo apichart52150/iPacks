@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
     table tr td {
-        vertical-align: top;
+        vertical-align: middle;
     }
 
     .table tr td {
@@ -232,6 +232,7 @@ $Q1_10->e16->aw = "1 hour";
     })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

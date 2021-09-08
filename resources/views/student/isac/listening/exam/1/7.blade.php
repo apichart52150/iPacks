@@ -14,24 +14,23 @@
         margin-bottom: 25px;
     }
 
+
     .answers-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin: 10px 0;
     }
 
-    .answers-container p {
-        font-size: 16px;
+    .answers-container .dropbox {
+        display: inline-block;
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
-        width: 200px;
-        height: 100%;
+        margin: 5px;
+        min-width: 150px;
         min-height: 40px;
+        vertical-align: middle;
     }
 
     .dropbox .drag {
@@ -198,7 +197,7 @@ $caller_4_choice->e14 = "..a strong possibility..";
                                         <span class="aw caller_4-{{$index}} text-danger">{{$caller_4->aw}}</span>
                                     </td>
                                     <td>
-                                        <div class="input-con">
+                                        <div class="input-con w-100">
                                             <div class="dropbox q" show-aw="caller_42-{{$index}}" aw="{{$caller_4->aw2}}"></div>
                                         </div>
                                         <br>
@@ -243,18 +242,9 @@ $caller_4_choice->e14 = "..a strong possibility..";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    $('.q-caller-2').each((idx, item) => {
-        let text = $(item).html()
-        if (text == "...") {
-            let input = '<div class="input-con">' +
-                '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-                '</div>'
-            text = text.replace("...", input)
-            $(item).html(input)
-        }
-    })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

@@ -226,7 +226,7 @@ $Q_3->e10->aw = "Who could have sent the Valentine?";
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td colspan="2" class="pt-2">
                                 <input type="text" class="form-control w-75 q-val1" show-aw="Q_1-{{$index}}" aw="{{$Q_1->aw}}">
                             </td>
@@ -262,7 +262,7 @@ $Q_3->e10->aw = "Who could have sent the Valentine?";
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td colspan="2" class="pt-2">
                                 <input type="text" class="form-control w-75 q-val2" show-aw="Q_2-{{$index}}" aw="{{$Q_2->aw}}">
                             </td>
@@ -295,12 +295,12 @@ $Q_3->e10->aw = "Who could have sent the Valentine?";
                         @foreach($Q_3 as $index => $Q_3)
                         <tr>
                             <td style="width: 23px;">{{$Q_3->n}}.</td>
-                            <td colspan="2">{{$Q_3->q}}</td>
+                            <td colspan="2" style="width: 150px;">{{$Q_3->q}}</td>
                             <td>{{$Q_3->q2}}</td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td colspan="2" class="pt-2">
                                 <input type="text" class="form-control w-75 q-val3" show-aw="Q_3-{{$index}}" aw="{{$Q_3->aw}}">
                             </td>

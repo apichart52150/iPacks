@@ -148,7 +148,7 @@ $Q_2->e10->aw = "Having redecorated the house, they put it on the market";
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val1" show-aw="Q_1-{{$index}}" aw="{{$Q_1->aw}}">
                             </td>
@@ -184,7 +184,7 @@ $Q_2->e10->aw = "Having redecorated the house, they put it on the market";
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val2" show-aw="Q_2-{{$index}}" aw="{{$Q_2->aw}}">
                             </td>
@@ -251,11 +251,11 @@ $Q_2->e10->aw = "Having redecorated the house, they put it on the market";
     }
 
 
-    // $('#sound-modal').modal({
-    //     'show': true,
-    //     'backdrop': "static",
-    //     'keyboard': false
-    // })
+    $('#sound-modal').modal({
+        'show': true,
+        'backdrop': "static",
+        'keyboard': false
+    })
     $('#sound-intro').on('click', (e) => {
         $('#sound-modal').modal('hide')
         const audio = document.querySelector('audio[data-sound="sound-intro"]');

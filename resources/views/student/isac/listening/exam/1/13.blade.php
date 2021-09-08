@@ -26,7 +26,7 @@
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
         width: 100%;
@@ -162,7 +162,7 @@ $caller_3->e10->aw = "The fine weather is expected to continue for the next few 
                     </div>
                     <div class="row justify-content-center mb-2">
                         <div class="col-md-12">
-                            <table class="w-100 mb-3">
+                            <table class="w-100 mb-3 ">
                                 @foreach($caller_2 as $index => $caller_2)
                                 <tr>
                                     <td style="width: 20px;">{{$caller_2->n}}.</td>
@@ -170,7 +170,7 @@ $caller_3->e10->aw = "The fine weather is expected to continue for the next few 
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td style="width: 80px;"><b>Answer: </b></td>
+                                    <td style="vertical-align: middle;width: 80px;"><b>Answer: </b></td>
                                     <td class="border-dark">
                                         <div class="input-con w-75">
                                             <div class="dropbox q w-100" show-aw="caller_2-{{$index}}" aw="{{$caller_2->aw}}"></div>
@@ -255,6 +255,7 @@ $caller_3->e10->aw = "The fine weather is expected to continue for the next few 
 
 <script>
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

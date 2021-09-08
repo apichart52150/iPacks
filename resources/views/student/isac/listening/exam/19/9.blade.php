@@ -5,7 +5,12 @@
     }
 
 
-    .aw1,.aw2,.aw3,.aw4,.aw5,.aw6 {
+    .aw1,
+    .aw2,
+    .aw3,
+    .aw4,
+    .aw5,
+    .aw6 {
         display: none;
     }
 </style>
@@ -35,27 +40,38 @@ $Q_1->e8->n = "8";
 $Q_1->e9->n = "9";
 $Q_1->e10->n = "10";
 
-$Q_1->e1->q = "";
-$Q_1->e2->q = "";
-$Q_1->e3->q = "";
-$Q_1->e4->q = "";
-$Q_1->e5->q = "";
-$Q_1->e6->q = "";
-$Q_1->e7->q = "";
-$Q_1->e8->q = "";
-$Q_1->e9->q = "";
-$Q_1->e10->q = "";
+$Q_1->e1->q = "What would you do if you found a Redback in your bag?";
+$Q_1->e2->q = "What would you do if you saw a swimmer in difficulty?";
+$Q_1->e3->q = "What would you do if you had a headache?";
+$Q_1->e4->q = "What would you do if you felt ill one morning?";
+$Q_1->e5->q = "What would you do if your computer broke down?";
+$Q_1->e6->q = "What would you do if your house caught fire?";
+$Q_1->e7->q = "What would you do if the weather turned hot?";
+$Q_1->e8->q = "What would you do if you found a diamond ring?";
+$Q_1->e9->q = "What would you do if you were offered the job?";
+$Q_1->e10->q = "What would you do if someone stole your car?";
 
-$Q_1->e1->aw = "";
-$Q_1->e2->aw = "";
-$Q_1->e3->aw = "";
-$Q_1->e4->aw = "";
-$Q_1->e5->aw = "";
-$Q_1->e6->aw = "";
-$Q_1->e7->aw = "";
-$Q_1->e8->aw = "";
-$Q_1->e9->aw = "";
-$Q_1->e10->aw = "";
+$Q_1->e1->q2 = "(kill it)";
+$Q_1->e2->q2 = "(tell the surfguard)";
+$Q_1->e3->q2 = "(take a pill)";
+$Q_1->e4->q2 = "(stay in bed)";
+$Q_1->e5->q2 = "(get it fixed)";
+$Q_1->e6->q2 = "(call for help)";
+$Q_1->e7->q2 = "(go for a swim)";
+$Q_1->e8->q2 = "(keep it)";
+$Q_1->e9->q2 = "(accept it)";
+$Q_1->e10->q2 = "(report it)";
+
+$Q_1->e1->aw = "If I found a Redback in my bag, I'd kill it";
+$Q_1->e2->aw = "If I saw a swimmer in difficulty, I'd tell the surfguard";
+$Q_1->e3->aw = "If I had a headache, I'd take a pill";
+$Q_1->e4->aw = "If I felt ill one morning, I'd stay in bed";
+$Q_1->e5->aw = "If my computer broke down, I'd get it fixed";
+$Q_1->e6->aw = "If my house caught fire, I'd call for help";
+$Q_1->e7->aw = "If the weather turned hot, I'd go for a swim";
+$Q_1->e8->aw = "If I found a diamond ring, I'd keep it";
+$Q_1->e9->aw = "If I were offered the job, I'd accept it";
+$Q_1->e10->aw = "If someone stole my car, I'd report it";
 
 $Q_2 = new stdClass();
 $Q_2->e1 = new stdClass();
@@ -80,207 +96,27 @@ $Q_2->e8->n = "8";
 $Q_2->e9->n = "9";
 $Q_2->e10->n = "10";
 
-$Q_2->e1->q = "";
-$Q_2->e2->q = "";
-$Q_2->e3->q = "";
-$Q_2->e4->q = "";
-$Q_2->e5->q = "";
-$Q_2->e6->q = "";
-$Q_2->e7->q = "";
-$Q_2->e8->q = "";
-$Q_2->e9->q = "";
-$Q_2->e10->q = "";
+$Q_2->e1->q = "I never come to visit you because I don't have a car.";
+$Q_2->e2->q = "She never goes to parties because she's very shy.";
+$Q_2->e3->q = "People never understand him because he doesn't speak clearly.";
+$Q_2->e4->q = "They never use the internet because they don't have a computer.";
+$Q_2->e5->q = "He never goes to the pool because he can't swim very well.";
+$Q_2->e6->q = "I never go to the cinema because I'm too busy.";
+$Q_2->e7->q = "Simon doesn't buy a lot of books because he can't read very well.";
+$Q_2->e8->q = "Paula never gets up on time because she doesn't have an alarm clock.";
+$Q_2->e9->q = "I don't drive a Porsche because I'm not rich enough.";
+$Q_2->e10->q = "Richard never passes his exams because he plays around in class all the time.";
 
-$Q_2->e1->aw = "";
-$Q_2->e2->aw = "";
-$Q_2->e3->aw = "";
-$Q_2->e4->aw = "";
-$Q_2->e5->aw = "";
-$Q_2->e6->aw = "";
-$Q_2->e7->aw = "";
-$Q_2->e8->aw = "";
-$Q_2->e9->aw = "";
-$Q_2->e10->aw = "";
-
-$Q_3 = new stdClass();
-$Q_3->e1 = new stdClass();
-$Q_3->e2 = new stdClass();
-$Q_3->e3 = new stdClass();
-$Q_3->e4 = new stdClass();
-$Q_3->e5 = new stdClass();
-$Q_3->e6 = new stdClass();
-$Q_3->e7 = new stdClass();
-$Q_3->e8 = new stdClass();
-$Q_3->e9 = new stdClass();
-$Q_3->e10 = new stdClass();
-
-$Q_3->e1->n = "1";
-$Q_3->e2->n = "2";
-$Q_3->e3->n = "3";
-$Q_3->e4->n = "4";
-$Q_3->e5->n = "5";
-$Q_3->e6->n = "6";
-$Q_3->e7->n = "7";
-$Q_3->e8->n = "8";
-$Q_3->e9->n = "9";
-$Q_3->e10->n = "10";
-
-$Q_3->e1->q = "";
-$Q_3->e2->q = "";
-$Q_3->e3->q = "";
-$Q_3->e4->q = "";
-$Q_3->e5->q = "";
-$Q_3->e6->q = "";
-$Q_3->e7->q = "";
-$Q_3->e8->q = "";
-$Q_3->e9->q = "";
-$Q_3->e10->q = "";
-
-$Q_3->e1->aw = "";
-$Q_3->e2->aw = "";
-$Q_3->e3->aw = "";
-$Q_3->e4->aw = "";
-$Q_3->e5->aw = "";
-$Q_3->e6->aw = "";
-$Q_3->e7->aw = "";
-$Q_3->e8->aw = "";
-$Q_3->e9->aw = "";
-$Q_3->e10->aw = "";
-
-$Q_4 = new stdClass();
-$Q_4->e1 = new stdClass();
-$Q_4->e2 = new stdClass();
-$Q_4->e3 = new stdClass();
-$Q_4->e4 = new stdClass();
-$Q_4->e5 = new stdClass();
-$Q_4->e6 = new stdClass();
-$Q_4->e7 = new stdClass();
-$Q_4->e8 = new stdClass();
-$Q_4->e9 = new stdClass();
-$Q_4->e10 = new stdClass();
-
-$Q_4->e1->n = "1";
-$Q_4->e2->n = "2";
-$Q_4->e3->n = "3";
-$Q_4->e4->n = "4";
-$Q_4->e5->n = "5";
-$Q_4->e6->n = "6";
-$Q_4->e7->n = "7";
-$Q_4->e8->n = "8";
-$Q_4->e9->n = "9";
-$Q_4->e10->n = "10";
-
-$Q_4->e1->q = "";
-$Q_4->e2->q = "";
-$Q_4->e3->q = "";
-$Q_4->e4->q = "";
-$Q_4->e5->q = "";
-$Q_4->e6->q = "";
-$Q_4->e7->q = "";
-$Q_4->e8->q = "";
-$Q_4->e9->q = "";
-$Q_4->e10->q = "";
-
-$Q_4->e1->aw = "";
-$Q_4->e2->aw = "";
-$Q_4->e3->aw = "";
-$Q_4->e4->aw = "";
-$Q_4->e5->aw = "";
-$Q_4->e6->aw = "";
-$Q_4->e7->aw = "";
-$Q_4->e8->aw = "";
-$Q_4->e9->aw = "";
-$Q_4->e10->aw = "";
-
-$Q_5 = new stdClass();
-$Q_5->e1 = new stdClass();
-$Q_5->e2 = new stdClass();
-$Q_5->e3 = new stdClass();
-$Q_5->e4 = new stdClass();
-$Q_5->e5 = new stdClass();
-$Q_5->e6 = new stdClass();
-$Q_5->e7 = new stdClass();
-$Q_5->e8 = new stdClass();
-$Q_5->e9 = new stdClass();
-$Q_5->e10 = new stdClass();
-
-$Q_5->e1->n = "1";
-$Q_5->e2->n = "2";
-$Q_5->e3->n = "3";
-$Q_5->e4->n = "4";
-$Q_5->e5->n = "5";
-$Q_5->e6->n = "6";
-$Q_5->e7->n = "7";
-$Q_5->e8->n = "8";
-$Q_5->e9->n = "9";
-$Q_5->e10->n = "10";
-
-$Q_5->e1->q = "";
-$Q_5->e2->q = "";
-$Q_5->e3->q = "";
-$Q_5->e4->q = "";
-$Q_5->e5->q = "";
-$Q_5->e6->q = "";
-$Q_5->e7->q = "";
-$Q_5->e8->q = "";
-$Q_5->e9->q = "";
-$Q_5->e10->q = "";
-
-$Q_5->e1->aw = "";
-$Q_5->e2->aw = "";
-$Q_5->e3->aw = "";
-$Q_5->e4->aw = "";
-$Q_5->e5->aw = "";
-$Q_5->e6->aw = "";
-$Q_5->e7->aw = "";
-$Q_5->e8->aw = "";
-$Q_5->e9->aw = "";
-$Q_5->e10->aw = "";
-
-$Q_6 = new stdClass();
-$Q_6->e1 = new stdClass();
-$Q_6->e2 = new stdClass();
-$Q_6->e3 = new stdClass();
-$Q_6->e4 = new stdClass();
-$Q_6->e5 = new stdClass();
-$Q_6->e6 = new stdClass();
-$Q_6->e7 = new stdClass();
-$Q_6->e8 = new stdClass();
-$Q_6->e9 = new stdClass();
-$Q_6->e10 = new stdClass();
-
-$Q_6->e1->n = "1";
-$Q_6->e2->n = "2";
-$Q_6->e3->n = "3";
-$Q_6->e4->n = "4";
-$Q_6->e5->n = "5";
-$Q_6->e6->n = "6";
-$Q_6->e7->n = "7";
-$Q_6->e8->n = "8";
-$Q_6->e9->n = "9";
-$Q_6->e10->n = "10";
-
-$Q_6->e1->q = "";
-$Q_6->e2->q = "";
-$Q_6->e3->q = "";
-$Q_6->e4->q = "";
-$Q_6->e5->q = "";
-$Q_6->e6->q = "";
-$Q_6->e7->q = "";
-$Q_6->e8->q = "";
-$Q_6->e9->q = "";
-$Q_6->e10->q = "";
-
-$Q_6->e1->aw = "";
-$Q_6->e2->aw = "";
-$Q_6->e3->aw = "";
-$Q_6->e4->aw = "";
-$Q_6->e5->aw = "";
-$Q_6->e6->aw = "";
-$Q_6->e7->aw = "";
-$Q_6->e8->aw = "";
-$Q_6->e9->aw = "";
-$Q_6->e10->aw = "";
+$Q_2->e1->aw = "But if I had a car, I would come to visit you";
+$Q_2->e2->aw = "But if she weren't very shy, she would go to parties";
+$Q_2->e3->aw = "But if he spoke clearly, people would understand him";
+$Q_2->e4->aw = "But if they had a computer, they would use the internet";
+$Q_2->e5->aw = "But if he could swim very well, he would go to the pool";
+$Q_2->e6->aw = "But if I weren't too busy, I would go to the cinema";
+$Q_2->e7->aw = "But if he could read very well, he would buy a lot of books";
+$Q_2->e8->aw = "But if she had an alarm clock, she would get up on time";
+$Q_2->e9->aw = "But if I were rich enough, I would drive a Porsche";
+$Q_2->e10->aw = "But if he didn't play around in class all the time, he would pass his exams";
 
 @endphp
 
@@ -302,59 +138,35 @@ $Q_6->e10->aw = "";
                         <span class="d-none d-sm-inline-block">Exercise 2</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#exercise3" data-toggle="tab" aria-expanded="false" class="nav-link">
-                        <span class="d-inline-block d-sm-none"><i class="far fa-user"></i></span>
-                        <span class="d-none d-sm-inline-block">Exercise 3</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#exercise4" data-toggle="tab" aria-expanded="false" class="nav-link">
-                        <span class="d-inline-block d-sm-none"><i class="far fa-user"></i></span>
-                        <span class="d-none d-sm-inline-block">Exercise 4</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#exercise5" data-toggle="tab" aria-expanded="false" class="nav-link">
-                        <span class="d-inline-block d-sm-none"><i class="far fa-user"></i></span>
-                        <span class="d-none d-sm-inline-block">Exercise 5</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#exercise6" data-toggle="tab" aria-expanded="false" class="nav-link">
-                        <span class="d-inline-block d-sm-none"><i class="far fa-user"></i></span>
-                        <span class="d-none d-sm-inline-block">Exercise 6</span>
-                    </a>
-                </li>
             </ul>
 
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="exercise1">
 
                     <p>Listen to the example:</p>
-                    <p class="p-0 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
-                    <p class="pt-2 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
+                    <p class="p-0 m-0"><b>e.g. </b><span class="pr-4">What would you do if you found a Redback in your bag?</span><b>(kill it)</b></p>
+                    <p class="p-0 m-0"><b>Answer: </b>If I won Lotto, I'd buy a new car.</p>
                     <p class="pt-2">Now you do it: </p>
 
                     <table class="w-100">
                         @foreach($Q_1 as $index => $Q_1)
                         <tr>
                             <td style="width: 23px;">{{$Q_1->n}}.</td>
-                            <td colspan="2">{{$Q_1->q}}</td>
+                            <td colspan="2" style="width: 150px;">{{$Q_1->q}}</td>
+                            <td><b>{{$Q_1->q2}}</b></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
-                            <td class="pt-2">
-                                <input type="text" class="form-control w-75 q-val1" show-aw="Q_1-{{$index}}" aw="{{$Q_1->aw}}">
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
+                            <td colspan="2" class="pt-2">
+                                <input type="text" class="form-control w-75 q-val1" show-aw="Q_1-{{$index}}"
+                                    aw="{{$Q_1->aw}}">
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td></td>
-                            <td class="pb-2">
+                            <td colspan="2" class="pb-2">
                                 <span class="text-danger Q_1-{{$index}} aw1">{{$Q_1->aw}}</span>
                             </td>
                         </tr>
@@ -369,10 +181,8 @@ $Q_6->e10->aw = "";
                 <div class="tab-pane fade" id="exercise2">
 
                     <p>Listen to the example:</p>
-                    <p class="p-0 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
-                    <p class="pt-2 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
+                    <p class="p-0 m-0"><b>e.g. </b>We never go on holiday because we can't afford it.</p>
+                    <p class="p-0 m-0"><b>Answer: </b>But if we could afford it, we would go on holiday.</p>
                     <p class="pt-2">Now you do it: </p>
 
                     <table class="w-100">
@@ -383,9 +193,10 @@ $Q_6->e10->aw = "";
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
-                                <input type="text" class="form-control w-75 q-val2" show-aw="Q_2-{{$index}}" aw="{{$Q_2->aw}}">
+                                <input type="text" class="form-control w-75 q-val2" show-aw="Q_2-{{$index}}"
+                                    aw="{{$Q_2->aw}}">
                             </td>
                         </tr>
                         <tr>
@@ -403,154 +214,6 @@ $Q_6->e10->aw = "";
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="exercise3">
-
-                    <p>Listen to the example:</p>
-                    <p class="p-0 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
-                    <p class="pt-2 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
-                    <p class="pt-2">Now you do it: </p>
-
-                    <table class="w-100">
-                        @foreach($Q_3 as $index => $Q_3)
-                        <tr>
-                            <td style="width: 23px;">{{$Q_3->n}}.</td>
-                            <td colspan="2">{{$Q_3->q}}</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
-                            <td class="pt-2">
-                                <input type="text" class="form-control w-75 q-val3" show-aw="Q_3-{{$index}}" aw="{{$Q_3->aw}}">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td class="pb-2">
-                                <span class="text-danger Q_3-{{$index}} aw3">{{$Q_3->aw}}</span>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </table>
-
-                    <div class="mt-3 d-flex justify-content-center">
-                        <button id="check-answer3" class="btn btn-info">Check Answers</button>
-                    </div>
-                </div>
-
-                <div class="tab-pane fade" id="exercise4">
-
-                    <p>Listen to the example:</p>
-                    <p class="p-0 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
-                    <p class="pt-2 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
-                    <p class="pt-2">Now you do it: </p>
-
-                    <table class="w-100">
-                        @foreach($Q_4 as $index => $Q_4)
-                        <tr>
-                            <td style="width: 23px;">{{$Q_4->n}}.</td>
-                            <td colspan="2">{{$Q_4->q}}</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
-                            <td class="pt-2">
-                                <input type="text" class="form-control w-75 q-val4" show-aw="Q_4-{{$index}}" aw="{{$Q_4->aw}}">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td class="pb-2">
-                                <span class="text-danger Q_4-{{$index}} aw4">{{$Q_4->aw}}</span>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </table>
-
-                    <div class="mt-3 d-flex justify-content-center">
-                        <button id="check-answer4" class="btn btn-info">Check Answers</button>
-                    </div>
-                </div>
-
-                <div class="tab-pane fade" id="exercise5">
-
-                    <p>Listen to the example:</p>
-                    <p class="p-0 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
-                    <p class="pt-2 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
-                    <p class="pt-2">Now you do it: </p>
-
-                    <table class="w-100">
-                        @foreach($Q_5 as $index => $Q_5)
-                        <tr>
-                            <td style="width: 23px;">{{$Q_5->n}}.</td>
-                            <td colspan="2">{{$Q_5->q}}</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
-                            <td class="pt-2">
-                                <input type="text" class="form-control w-75 q-val5" show-aw="Q_5-{{$index}}" aw="{{$Q_5->aw}}">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td class="pb-2">
-                                <span class="text-danger Q_5-{{$index}} aw5">{{$Q_5->aw}}</span>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </table>
-
-                    <div class="mt-3 d-flex justify-content-center">
-                        <button id="check-answer5" class="btn btn-info">Check Answers</button>
-                    </div>
-                </div>
-
-                <div class="tab-pane fade" id="exercise6">
-
-                    <p>Listen to the example:</p>
-                    <p class="p-0 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
-                    <p class="pt-2 m-0"><b>e.g. </b></p>
-                    <p class="p-0 m-0"><b>Answer: </b></p>
-                    <p class="pt-2">Now you do it: </p>
-
-                    <table class="w-100">
-                        @foreach($Q_6 as $index => $Q_6)
-                        <tr>
-                            <td style="width: 23px;">{{$Q_6->n}}.</td>
-                            <td colspan="2">{{$Q_6->q}}</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
-                            <td class="pt-2">
-                                <input type="text" class="form-control w-75 q-val6" show-aw="Q_6-{{$index}}" aw="{{$Q_6->aw}}">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td class="pb-2">
-                                <span class="text-danger Q_6-{{$index}} aw6">{{$Q_6->aw}}</span>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </table>
-
-                    <div class="mt-3 d-flex justify-content-center">
-                        <button id="check-answer6" class="btn btn-info">Check Answers</button>
-                    </div>
-                </div>
-                
             </div>
         </div>
     </div>
@@ -586,46 +249,6 @@ $Q_6->e10->aw = "";
                 show_error(item)
         })
         $('.aw2').removeClass('aw2')
-    })
-    $('#check-answer3').on('click', () => {
-        $('#check-answer3').prop('disabled', true)
-        $('.q-val3').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
-        $('.aw3').removeClass('aw3')
-    })
-    $('#check-answer4').on('click', () => {
-        $('#check-answer4').prop('disabled', true)
-        $('.q-val4').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
-        $('.aw4').removeClass('aw4')
-    })
-    $('#check-answer5').on('click', () => {
-        $('#check-answer5').prop('disabled', true)
-        $('.q-val5').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
-        $('.aw5').removeClass('aw5')
-    })
-    $('#check-answer6').on('click', () => {
-        $('#check-answer6').prop('disabled', true)
-        $('.q-val6').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
-        $('.aw6').removeClass('aw6')
     })
 
     function show_aw(aw, item) {

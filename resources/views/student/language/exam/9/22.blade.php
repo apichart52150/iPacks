@@ -1,32 +1,26 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
-    .input-con {
-        display: inline-block;
-        position: relative;
-    }
-
     .drag-container {
         margin-bottom: 25px;
     }
 
-    .answers-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 10px 0;
-    }
 
-    .answers-container p {
-        font-size: 16px;
+    .answers-container .dropbox {
+        display: inline-block;
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
-        width: 100%;
-        height: auto;
-        min-width: 80px;
+        margin: 5px;
+        min-width: 150px;
+        min-height: 40px;
+        vertical-align: middle;
+    }
+
+    .dropbox .drag {
+        margin: 0;
     }
 
     .dropbox .drag {margin: 0;
@@ -38,24 +32,27 @@
 
 </style>
 @php
-    $q1 = "As human population is";
-    $q2 = "/";
-    $q3 = "rising every year, people's";
-    $q4 = "are increasing too. We need more food, more machines, more place to live. As a result of this people need more land to satisfy their";
-    $q5 = ". We cultivate and irrigate more and more land to plant vegetables, build new buildings, airports, roads, etc. I think sometimes we forget that we are not alone on this planet. I have to disagree with those people who think that human needs are more important than saving land for endangered animals. I base my opinion on the following points. First of all, as I already mentioned, we are not alone on this planet. A few centuries ago we were the part of wild nature. I think we need to remember this fact and respect all creatures around us. Second of all, I believe that we all need to think of the problem of overpopulation. The human population is";
-    $q6 = "/";
-    $q7 = "increasing and we have to do something about it. From my opinion, every family should have no more than two children. It will help to stop the growth of population, decrease human needs for farmland, housing and industry. In";
-    $q8 = ", I think it is a very";
+$Q=[
+    "q1" => "As human population is",
+    "q2" => "/",
+    "q3" => "rising every year, people's",
+    "q4" => "are increasing too. We need more food, more machines, more place to live. As a result of this people need more land to satisfy their",
+    "q5" => ". We cultivate and irrigate more and more land to plant vegetables, build new buildings, airports, roads, etc. I think sometimes we forget that we are not alone on this planet. I have to disagree with those people who think that human needs are more important than saving land for endangered animals. I base my opinion on the following points. First of all, as I already mentioned, we are not alone on this planet. A few centuries ago we were the part of wild nature. I think we need to remember this fact and respect all creatures around us. Second of all, I believe that we all need to think of the problem of overpopulation. The human population is",
+    "q6" => "/",
+    "q7" => "increasing and we have to do something about it. From my opinion, every family should have no more than two children. It will help to stop the growth of population, decrease human needs for farmland, housing and industry. In",
+    "q8" => ", I think it is a very",
+    ];
     $end = "question nowadays. My point is that all people should answer this question and find the solution.";
-
-    $a1 = "conclusion";
-    $a2 = "dramatically";
-    $a3 = "dramatically";
-    $a4 = "requirements";
-    $a5 = "requirements";
-    $a6 = "significantly";
-    $a7 = "significantly";
-    $a8 = "topical";
+$A=[
+    "a1" => "conclusion",
+    "a2" => "dramatically",
+    "a3" => "dramatically",
+    "a4" => "requirements",
+    "a5" => "requirements",
+    "a6" => "significantly",
+    "a7" => "significantly",
+    "a8" => "topical",
+    ];
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -66,14 +63,9 @@
                         <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
                         <div class="drag-container">
                             <div class="d-grid grid-5" id="choices">
-                                <div class="drag">{{ $a1 }}</div>
-                                <div class="drag">{{ $a2 }}</div>
-                                <div class="drag">{{ $a3 }}</div>
-                                <div class="drag">{{ $a4 }}</div>
-                                <div class="drag">{{ $a5 }}</div>
-                                <div class="drag">{{ $a6 }}</div>
-                                <div class="drag">{{ $a7 }}</div>
-                                <div class="drag">{{ $a8 }}</div>
+                                @foreach ($A as $choices)
+                                <div class="drag">{{ $choices }}</div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -83,47 +75,13 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2" style="line-height: 35px;">
-                            {{$q1}}
-                            <span class="font-weight-bold">1.</span> 
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q2}}
-                            <span class="font-weight-bold">2.</span> 
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q3}}
-                            <span class="font-weight-bold">3.</span> 
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q4}}
-                            <span class="font-weight-bold">4.</span> 
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q5}}
-                            <span class="font-weight-bold">5.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q6}}
-                            <span class="font-weight-bold">6.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q7}}
-                            <span class="font-weight-bold">7.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$q8}}
-                            <span class="font-weight-bold">8.</span>
-                            <div class="input-con">
-                                <div class="dropbox"></div>
-                            </div>
-                            {{$end}}
+                        <div class="answers-container">
+                            @foreach($Q as $q)
+                            {{ $q }}
+                            <div class="dropbox"></div>
+                            @endforeach
+                            {{ $end }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,18 +97,20 @@
 @section('js')
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
+<script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
 <script>
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a6 ?>",
-         $q2 = "<?php echo $a2 ?>",
-         $q3 = "<?php echo $a4 ?>",
-         $q4 = "<?php echo $a4 ?>",
-         $q5 = "<?php echo $a2 ?>",
-         $q6 = "<?php echo $a6 ?>",
-         $q7 = "<?php echo $a1 ?>",
-         $q8 = "<?php echo $a8 ?>",
+         $q1 = "<?php echo $A['a6'] ?>",
+         $q2 = "<?php echo $A['a2'] ?>",
+         $q3 = "<?php echo $A['a4'] ?>",
+         $q4 = "<?php echo $A['a4'] ?>",
+         $q5 = "<?php echo $A['a2'] ?>",
+         $q6 = "<?php echo $A['a6'] ?>",
+         $q7 = "<?php echo $A['a1'] ?>",
+         $q8 = "<?php echo $A['a8'] ?>",
     ];
 
     console.log(answers);
@@ -189,12 +149,13 @@
     });
 
     $("#check-answer").on("click", () => {
-
+let score = 0
         let droppables = $(".dropbox");
 
         droppables.each((idx, item) => {
             if($(item).children().text().trim() == answers[idx]) {
                 checkAnswer($(item).children(), 'correct');
+                score++
             } else {
                 checkAnswer($(item).children(), 'incorrect');
             }
@@ -202,6 +163,16 @@
 
         $(".drag").draggable({
             disabled: true,
+        });
+        Swal.fire({
+            title: "Your score",
+            text: score + "",
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
         });
 
         $("#check-answer").prop("disabled", true);

@@ -1,10 +1,11 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
     table tr td {
-        vertical-align: top;
+        vertical-align: middle;
     }
+
     table tr th {
-        vertical-align: top;
+        vertical-align: middle;
     }
 
     .table tr td {
@@ -108,7 +109,7 @@ $aw->e30 = "by ship";
                 <div class="col-lg-12">
                     Write <b>NO MORE THAN TWO WORDS AND/OR A NUMBER</b>.
                     <div class="w-100 d-flex justify-content-center">
-                        <table class="w-75">
+                        <table class="w-100">
                             <tr>
                                 <td class="pt-4"></td>
                             </tr>
@@ -116,11 +117,15 @@ $aw->e30 = "by ship";
                                 <td style="border: 1px solid black;">
                                     <div class="p-3">
                                         <div class="w-100 d-flex justify-content-center">
-                                            <table class="w-75">
+                                            <table class="w-100">
                                                 <tr>
                                                     <td colspan="2" class="text-center pb-2">
                                                         <h3>Application for the Position of Teacher’s Assistant</h3>
                                                     </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th>Name: </th>
@@ -129,20 +134,32 @@ $aw->e30 = "by ship";
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
                                                     <th>Degree:</th>
                                                     <td>
                                                         Major: Linguistics Minor: (21)
-                                                        <div class="input-con py-1">
+                                                        <div class="input-con">
                                                             <input type="text" class="q-val form-control" show-aw="q-21" aw="{{$aw->e21}}">
                                                         </div>
                                                         <span class="aw text-danger q-21 px-2">{{$aw->e21}}</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
                                                     <th>Teaching experience:</th>
                                                     <td>
                                                         Volunteer teacher
                                                     </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th>Location: </th>
@@ -165,10 +182,18 @@ $aw->e30 = "by ship";
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
                                                     <th>Type of school: </th>
                                                     <td>
                                                         Rural Primary School
                                                     </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th>Ages taught: </th>
@@ -191,10 +216,26 @@ $aw->e30 = "by ship";
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
                                                     <th>Other responsibilities:</th>
                                                     <td>
                                                         In charge of school choir
-                                                        <br>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
                                                         (26)
                                                         <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-26" aw="{{$aw->e26}}">
@@ -203,28 +244,52 @@ $aw->e30 = "by ship";
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
                                                     <th>Preferences: </th>
                                                     <td>
                                                         Secondary School
-                                                        <br>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
                                                         (27)
                                                         <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-27" aw="{{$aw->e27}}">
                                                         </div>
                                                         <span class="aw text-danger q-27 px-2">{{$aw->e27}}</span>
-                                                        <br>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
                                                         Shared accommodation or (28)
                                                         <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-28" aw="{{$aw->e28}}">
                                                         </div>
                                                         <span class="aw text-danger q-28 px-2">{{$aw->e28}}</span>
-                                                        <br>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
                                                         Departure date: (29)
                                                         <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-29" aw="{{$aw->e29}}">
                                                         </div>
                                                         <span class="aw text-danger q-29 px-2">{{$aw->e29}}</span>
-                                                        <br>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>
                                                         Travel preference: (30)
                                                         <div class="input-con py-1">
                                                             <input type="text" class="q-val form-control" show-aw="q-30" aw="{{$aw->e30}}">
@@ -232,7 +297,6 @@ $aw->e30 = "by ship";
                                                         <span class="aw text-danger q-30 px-2">{{$aw->e30}}</span>
                                                     </td>
                                                 </tr>
-
                                             </table>
                                         </div>
                                     </div>
@@ -250,8 +314,9 @@ $aw->e30 = "by ship";
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Listening - 
- {{$pageTitle['sub_menu_name'] }}</h4>
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}
+                </h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
@@ -274,15 +339,9 @@ $aw->e30 = "by ship";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    $('.q-caller_2').each((idx, item) => {
-        let input = '<div class="input-con py-1">' +
-            '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-            '</div><br>' +
-            '<span class="aw ' + $(item).attr('show-aw') + ' text-danger">' + $(item).attr('aw') + '</span>'
-        $(item).html(input)
-    })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

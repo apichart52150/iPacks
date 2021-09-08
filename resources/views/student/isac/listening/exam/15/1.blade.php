@@ -256,6 +256,7 @@ $E2_1_5->e5->aw = "by horse";
 
 <script>
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q-val2').each((idx, item) => {
             let aw = $(item).attr('aw').split("/")
             let aw2 = $(item).val().split("/")

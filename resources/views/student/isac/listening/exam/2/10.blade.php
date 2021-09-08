@@ -38,7 +38,7 @@
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
         width: 100%;
@@ -117,19 +117,19 @@ $caller_2->e4->aw->vi = new stdClass();
 $caller_2->e4->aw->vii = new stdClass();
 $caller_2->e4->aw->viii = new stdClass();
 
-$caller_2->e1->aw->i->q= "i. ...";
+$caller_2->e1->aw->i->q= "...";
 $caller_2->e1->aw->i->aw = "structural unemployment";
-$caller_2->e1->aw->ii->q= "ii. ...";
+$caller_2->e1->aw->ii->q= "...";
 $caller_2->e1->aw->ii->aw = "under-utilized plant capacity";
-$caller_2->e1->aw->iii->q= "iii. ...";
+$caller_2->e1->aw->iii->q= "...";
 $caller_2->e1->aw->iii->aw = "stagnating domestic investment";
-$caller_2->e1->aw->iv->q= "iv. ...";
+$caller_2->e1->aw->iv->q= "...";
 $caller_2->e1->aw->iv->aw = "capital flight abroad";
-$caller_2->e1->aw->v->q= "v. ...";
+$caller_2->e1->aw->v->q= "...";
 $caller_2->e1->aw->v->aw = "fiscal crises of the state";
-$caller_2->e2->aw->i->q= "i. ...";
+$caller_2->e2->aw->i->q= "...";
 $caller_2->e2->aw->i->aw = "worsening rural poverty";
-$caller_2->e2->aw->ii->q= "ii. ...";
+$caller_2->e2->aw->ii->q= "...";
 $caller_2->e2->aw->ii->aw = "expanding urban slums";
 $caller_2->e3->aw->i->q= "the relocation of ...";
 $caller_2->e3->aw->i->aw = "industrial production";
@@ -137,21 +137,21 @@ $caller_2->e3->aw->ii->q= "from ...";
 $caller_2->e3->aw->ii->aw = " high-wage sites in wealthier nations";
 $caller_2->e3->aw->iii->q= "to ...";
 $caller_2->e3->aw->iii->aw = "low-wage sites in poorer ones";
-$caller_2->e4->aw->i->q= "i. raw materials";
+$caller_2->e4->aw->i->q= "raw materials";
 $caller_2->e4->aw->i->aw = "";
-$caller_2->e4->aw->ii->q= "ii. ... (15,000 in all)";
+$caller_2->e4->aw->ii->q= "... (15,000 in all)";
 $caller_2->e4->aw->ii->aw = "production of parts";
-$caller_2->e4->aw->iii->q= "iii. assembly";
+$caller_2->e4->aw->iii->q= "assembly";
 $caller_2->e4->aw->iii->aw = "";
-$caller_2->e4->aw->iv->q= "iv. ...";
+$caller_2->e4->aw->iv->q= "...";
 $caller_2->e4->aw->iv->aw = "distribution";
-$caller_2->e4->aw->v->q= "v. design";
+$caller_2->e4->aw->v->q= "design";
 $caller_2->e4->aw->v->aw = "";
-$caller_2->e4->aw->vi->q= "vi. ...";
+$caller_2->e4->aw->vi->q= "...";
 $caller_2->e4->aw->vi->aw = "engineering";
-$caller_2->e4->aw->vii->q= "vii. ...";
+$caller_2->e4->aw->vii->q= "...";
 $caller_2->e4->aw->vii->aw = "finance";
-$caller_2->e4->aw->viii->q= "viii. control";
+$caller_2->e4->aw->viii->q= "control";
 $caller_2->e4->aw->viii->aw = "";
 
 
@@ -231,27 +231,32 @@ $caller_2_5_choice->ch8 = "minor parts";
                         @foreach($caller_2 as $index => $caller_2)
                         <tr>
                             <td style="width: 30px;" class="pt-3">{{$caller_2->n}}.</td>
-                            <td class="pt-3">
+                            <td colspan="2" class="pt-3">
                                 {{$caller_2->q}}
                             </td>
                         </tr>
                         @foreach($caller_2->aw as $index2 => $aw)
                         <tr>
                             <td></td>
+                            @if($caller_2->n == "2.3")
+                            <td colspan="2" class="q-dot" show-aw="caller_2-{{$index}}-{{$index2}}" aw="{{$aw->aw}}">{{$aw->q}}</td>
+                            @else
+                            <td style="width: 20px;vertical-align:middle;">{{$index2}}.</td>
                             <td class="q-dot" show-aw="caller_2-{{$index}}-{{$index2}}" aw="{{$aw->aw}}">{{$aw->q}}</td>
+                            @endif
                         </tr>
                         <tr>
                             <td></td>
-                            <td class="text-danger caller_2-{{$index}}-{{$index2}} aw" show-aw="" aw="">{{$aw->aw}}</td>
+                            <td colspan="2" class="text-danger caller_2-{{$index}}-{{$index2}} aw" show-aw="" aw="">{{$aw->aw}}</td>
                         </tr>
                         @endforeach
                         @endforeach
                         <tr>
-                            <td>2.5</td>
-                            <td>Complete the following table giving a more detailed description of this chain:</td>
+                            <td class="pt-2">2.5</td>
+                            <td colspan="2" class="pt-2">Complete the following table giving a more detailed description of this chain:</td>
                         </tr>
                         <tr>
-                            <td colspan="2">
+                            <td colspan="3">
                                 <div class="row justify-content-center mb-2">
                                     <div class="col-md-12">
                                         <div class="border border-dark px-2 text-center">
@@ -291,15 +296,15 @@ $caller_2_5_choice->ch8 = "minor parts";
                         </tr>
                         <tr>
                             <td>2.6</td>
-                            <td class="pb-3">Write a summary of the talk in <b>about 100 - 150 words</b>.</td>
+                            <td colspan="2" class="pb-3">Write a summary of the talk in <b>about 100 - 150 words</b>.</td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
+                            <td colspan="2"><textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td>
+                            <td colspan="2">
                                 <h5 class="mt-3 aw text-success">Summary (possible answer) </h5>
                                 <span class="aw text-success">
                                     As a response to global economic problems, the new international division of labour relocated
@@ -373,6 +378,7 @@ $caller_2_5_choice->ch8 = "minor parts";
     })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

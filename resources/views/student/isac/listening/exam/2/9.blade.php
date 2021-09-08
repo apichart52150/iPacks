@@ -97,6 +97,7 @@
 
 <script>
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.aw').removeClass('aw')
     })
 
