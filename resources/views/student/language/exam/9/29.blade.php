@@ -115,6 +115,7 @@ $A=[
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
+<button id="show-answer" class="d-none btn btn-info">Show Answers</button>
 @endsection
 
 @section('js')
@@ -192,7 +193,10 @@ $A=[
         },
     });
 
-    $("#check-answer").on("click", () => {
+        $("#check-answer").on("click", () => {
+$('#show-answer').addClass('d-block')
+$('#show-answer').removeClass('d-none')
+$('#check-answer').addClass('d-none')
 
         let droppables = $(".dropbox");
         let score = 0
@@ -248,5 +252,23 @@ $A=[
 
         ele.addClass(bgColor)
     }
+$('#show-answer').on('click', function() {
+        $('check-answer').addClass('d-none')
+        $('.dropbox').each((idx, item) => {
+
+            if($(item).children().length == 1) {
+                if($(item).children().hasClass('color-danger')) {
+                    if($(item).children().text(answers[idx])) {
+                        $(item).children().removeClass('color-danger')
+                    }
+                }
+            } else {
+                $(item).append(`<div class="drag">${ answers[idx] }</div>`)
+            }
+
+            $('.drag-container .drag').remove();
+        })
+        $("#show-answer").hide();
+    });
 </script>
 @stop

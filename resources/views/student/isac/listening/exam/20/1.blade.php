@@ -147,11 +147,11 @@ $Q1_10->e10->aw = "If his handwriting hadn't been untidy, I could've read the ad
     }
 
 
-    // $('#sound-modal').modal({
-    //     'show': true,
-    //     'backdrop': "static",
-    //     'keyboard': false
-    // })
+    $('#sound-modal').modal({
+        'show': true,
+        'backdrop': "static",
+        'keyboard': false
+    })
     $('#sound-intro').on('click', (e) => {
         $('#sound-modal').modal('hide')
         const audio = document.querySelector('audio[data-sound="sound-intro"]');

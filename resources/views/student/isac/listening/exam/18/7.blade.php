@@ -11,9 +11,11 @@
         width: 20%;
     }
 
-    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active {
         color: #ffffff;
-        background-color: #e74856;
+        background-color:#ec6391;
         border-color: #dee2e6 #dee2e6 #fff;
     }
 </style>
@@ -158,6 +160,24 @@
         </div>
     </div>
 </div>
+<div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}</h4>
+            </div>
+            <div class="modal-body text-center">
+                <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
+                <audio data-sound="sound-intro">
+                    <source
+                        src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}"
+                        type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section('button-control')
    
@@ -215,5 +235,15 @@
             });
             $('#check-answer2').prop('disabled',true)
         });
+$('#sound-modal').modal({
+    'show': true,
+    'backdrop': "static",
+    'keyboard': false
+})
+$('#sound-intro').on('click', (e) => {
+    $('#sound-modal').modal('hide')
+    const audio = document.querySelector('audio[data-sound="sound-intro"]');
+    audio.play()
+})
     </script>
 @stop

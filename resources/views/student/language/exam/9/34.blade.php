@@ -117,38 +117,42 @@ $A=[
 
 @section('button-control')
     <button id="check-answer" class="btn btn-info">Check Answers</button>
+<button id="show-answer" class="d-none btn btn-info">Show Answers</button>
 @endsection
 
 @section('js')
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
+<script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
+<script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
 <script>
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-         $q1 = "<?php echo $a22 ?>",
-         $q2 = "<?php echo $a4 ?>",
-         $q3 = "<?php echo $a14 ?>",
-         $q4 = "<?php echo $a2 ?>",
-         $q5 = "<?php echo $a4 ?>",
-         $q6 = "<?php echo $a4 ?>",
-         $q7 = "<?php echo $a22 ?>",
-         $q8 = "<?php echo $a14 ?>",
-         $q9 = "<?php echo $a3 ?>",
-         $q10 = "<?php echo $a4 ?>",
-         $q11 = "<?php echo $a14 ?>",
-         $q12 = "<?php echo $a4 ?>",
-         $q13 = "<?php echo $a14 ?>",
-         $q14 = "<?php echo $a4 ?>",
-         $q15 = "<?php echo $a14 ?>",
-         $q16 = "<?php echo $a14 ?>",
-         $q17 = "<?php echo $a4 ?>",
-         $q18 = "<?php echo $a14 ?>",
-         $q19 = "<?php echo $a13 ?>",
-         $q20 = "<?php echo $a4 ?>",
-         $q21 = "<?php echo $a1 ?>",
-         $q22 = "<?php echo $a12 ?>",
-         $q23 = "<?php echo $a14 ?>",
+         $q1 = "<?php echo $A['a22'] ?>",
+         $q2 = "<?php echo $A['a4'] ?>",
+         $q3 = "<?php echo $A['a14'] ?>",
+         $q4 = "<?php echo $A['a2'] ?>",
+         $q5 = "<?php echo $A['a4'] ?>",
+         $q6 = "<?php echo $A['a4'] ?>",
+         $q7 = "<?php echo $A['a22'] ?>",
+         $q8 = "<?php echo $A['a14'] ?>",
+         $q9 = "<?php echo $A['a3'] ?>",
+         $q10 = "<?php echo $A['a4'] ?>",
+         $q11 = "<?php echo $A['a14'] ?>",
+         $q12 = "<?php echo $A['a4'] ?>",
+         $q13 = "<?php echo $A['a14'] ?>",
+         $q14 = "<?php echo $A['a4'] ?>",
+         $q15 = "<?php echo $A['a14'] ?>",
+         $q16 = "<?php echo $A['a14'] ?>",
+         $q17 = "<?php echo $A['a4'] ?>",
+         $q18 = "<?php echo $A['a14'] ?>",
+         $q19 = "<?php echo $A['a13'] ?>",
+         $q20 = "<?php echo $A['a4'] ?>",
+         $q21 = "<?php echo $A['a1'] ?>",
+         $q22 = "<?php echo $A['a12'] ?>",
+         $q23 = "<?php echo $A['a14'] ?>",
     ];
 
     console.log(answers);
@@ -186,7 +190,10 @@ $A=[
         },
     });
 
-    $("#check-answer").on("click", () => {
+        $("#check-answer").on("click", () => {
+$('#show-answer').addClass('d-block')
+$('#show-answer').removeClass('d-none')
+$('#check-answer').addClass('d-none')
 
         let droppables = $(".dropbox");
 
@@ -231,5 +238,23 @@ $A=[
 
         ele.addClass(bgColor)
     }
+$('#show-answer').on('click', function() {
+        $('check-answer').addClass('d-none')
+        $('.dropbox').each((idx, item) => {
+
+            if($(item).children().length == 1) {
+                if($(item).children().hasClass('color-danger')) {
+                    if($(item).children().text(answers[idx])) {
+                        $(item).children().removeClass('color-danger')
+                    }
+                }
+            } else {
+                $(item).append(`<div class="drag">${ answers[idx] }</div>`)
+            }
+
+            $('.drag-container .drag').remove();
+        })
+        $("#show-answer").hide();
+    });
 </script>
 @stop
