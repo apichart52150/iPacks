@@ -332,6 +332,7 @@ $caller_4->e6->aw = ["114%","79%"];
     })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.caller_1:checked').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

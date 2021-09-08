@@ -124,7 +124,7 @@ $Q1_4->e4->q2->ii->aw = "To begin with, Then, and then, Next, after which, befor
                             <td></td>
                             <td></td>
                             <td>
-                                <span class=" text-danger show-aw-Q1_4-{{$index}}-{{$index2}}">{{$list_aw->aw}}</span>
+                                <span class="aw text-danger show-aw-Q1_4-{{$index}}-{{$index2}}">{{$list_aw->aw}}</span>
                             </td>
                         </tr>
                         @endforeach
@@ -166,6 +166,7 @@ $Q1_4->e4->q2->ii->aw = "To begin with, Then, and then, Next, after which, befor
 
 <script>
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
             let val = $(item).val().split(',')
             let aw = $(item).attr('aw').split(',')

@@ -54,7 +54,7 @@
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
         width: 100%;
@@ -118,7 +118,8 @@ $caller_choice->ch8 = "use";
                         </tr>
                         <tr>
                             <td colspan="2" class="py-1">
-                                As you listen to the talk entitled <b>Issues in Marketing</b> for the first time, complete the flow chart below:
+                                As you listen to the talk entitled <b>Issues in Marketing</b> for the first time,
+                                complete the flow chart below:
                             </td>
                         </tr>
                         <tr>
@@ -149,7 +150,8 @@ $caller_choice->ch8 = "use";
                                         <td class="map text-center">customers</td>
                                         <td class="map">
                                             <div class="input-con w-75">
-                                                <div class="dropbox q w-100" show-aw="caller_1_1-2" aw="employees"></div>
+                                                <div class="dropbox q w-100" show-aw="caller_1_1-2" aw="employees">
+                                                </div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_1-2">employees</span>
@@ -171,17 +173,21 @@ $caller_choice->ch8 = "use";
                                             information:
                                             <br>
                                             <span>* gather</span>
-                                            <br>
-                                            <span>* </span>
-                                            <div class="input-con w-75 pt-2">
-                                                <div class="dropbox q w-100" show-aw="caller_1_2-1" aw="communicate"></div>
+                                            <div class="d-flex align-items-center pt-2">
+                                                *&nbsp;
+                                                <div class="input-con w-75">
+                                                    <div class="dropbox q w-100" show-aw="caller_1_2-1"
+                                                        aw="communicate"></div>
+                                                </div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-1">communicate</span>
-                                            <br>
-                                            <span>* </span>
-                                            <div class="input-con w-75">
-                                                <div class="dropbox q w-100" show-aw="caller_1_2-2" aw="use"></div>
+
+                                            <div class="d-flex align-items-center pt-2">
+                                                *&nbsp;
+                                                <div class="input-con w-75">
+                                                    <div class="dropbox q w-100" show-aw="caller_1_2-2" aw="use"></div>
+                                                </div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-2">use</span>
@@ -200,10 +206,13 @@ $caller_choice->ch8 = "use";
                                             understand customers
                                             <br>
                                             <span>* requirements</span>
-                                            <br>
-                                            <span>* </span>
-                                            <div class="input-con w-75 py-2">
-                                                <div class="dropbox q w-100" show-aw="caller_1_2-3" aw="satisfaction"></div>
+                                            <div class="d-flex align-items-center pt-2">
+                                                *&nbsp;
+                                                <div class="input-con w-75">
+                                                    <div class="dropbox q w-100" show-aw="caller_1_2-3"
+                                                        aw="satisfaction">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-3">satisfaction</span>
@@ -222,10 +231,12 @@ $caller_choice->ch8 = "use";
                                             understand competitors
                                             <br>
                                             <span>* strengths</span>
-                                            <br>
-                                            <span>* </span>
-                                            <div class="input-con w-75 pt-2">
-                                                <div class="dropbox q w-100" show-aw="caller_1_2-4" aw="weaknesses"></div>
+                                            <div class="d-flex align-items-center pt-2">
+                                                *&nbsp;
+                                                <div class="input-con w-75">
+                                                    <div class="dropbox q w-100" show-aw="caller_1_2-4" aw="weaknesses">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-4">weaknesses</span>
@@ -244,10 +255,12 @@ $caller_choice->ch8 = "use";
                                             understand constraints
                                             <br>
                                             <span>* staffing</span>
-                                            <br>
-                                            <span>* </span>
-                                            <div class="input-con w-75 pt-2">
-                                                <div class="dropbox w-100 q" show-aw="caller_1_2-5" aw="financial capacity"></div>
+                                            <div class="d-flex align-items-center pt-2">
+                                                *&nbsp;
+                                                <div class="input-con w-75">
+                                                    <div class="dropbox w-100 q" show-aw="caller_1_2-5"
+                                                        aw="financial capacity"></div>
+                                                </div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-5">financial capacity</span>
@@ -264,17 +277,21 @@ $caller_choice->ch8 = "use";
                                     <tr>
                                         <td class="map" colspan="2">
                                             forward planning
-                                            <br>
-                                            <span>* </span>
-                                            <div class="input-con w-75 pt-2">
-                                                <div class="dropbox w-100 q" show-aw="caller_1_2-6" aw="long-term vision"></div>
+                                            <div class="d-flex align-items-center pt-2">
+                                                *&nbsp;
+                                                <div class="input-con w-75">
+                                                    <div class="dropbox w-100 q" show-aw="caller_1_2-6"
+                                                        aw="long-term vision"></div>
+                                                </div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-6">long-term vision</span>
-                                            <br>
-                                            <span>* </span>
-                                            <div class="input-con w-75">
-                                                <div class="dropbox q w-100" show-aw="caller_1_2-7" aw="objectives"></div>
+                                            <div class="d-flex align-items-center pt-2">
+                                                *&nbsp;
+                                                <div class="input-con w-75">
+                                                    <div class="dropbox q w-100" show-aw="caller_1_2-7" aw="objectives">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <br>
                                             <span class=" aw text-danger caller_1_2-7">objectives</span>
@@ -288,51 +305,68 @@ $caller_choice->ch8 = "use";
                         <tr>
                             <td class="pt-3">1.</td>
                             <td class="pt-3 pb-2">
-                                Write a short summary of <b>about 120 words</b> describing the characteristics of a good marketing
+                                Write a short summary of <b>about 120 words</b> describing the characteristics of a good
+                                marketing
                                 orientated organization. You can use information in the flow chart above to help you.
                             </td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
+                            <td><textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30"
+                                    rows="10"></textarea></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
                                 <h5 class="mt-3 aw text-success">Summaries (possible answer)</h5>
                                 <span class="aw text-success">
-                                    A good marketing orientated company gathers information, communicates that information to
-                                    all levels of the organisation and uses the information strategically. It also has a thorough
-                                    knowledge of customers in terms of requirments and satisfaction levels. Satisfaction must be
-                                    evaluated and action must be taken regarding adverse feedback. It must also understand the
-                                    strengths and weaknesses of the competition as well as have a clear picture of its own staffing
-                                    and financial constraints. In addition, it has to have a long-term vision which will assist in setting
-                                    objectives. The achievement of these objectives is the desired outcome for the company.
+                                    A good marketing orientated company gathers information, communicates that
+                                    information to
+                                    all levels of the organisation and uses the information strategically. It also has a
+                                    thorough
+                                    knowledge of customers in terms of requirments and satisfaction levels. Satisfaction
+                                    must be
+                                    evaluated and action must be taken regarding adverse feedback. It must also
+                                    understand the
+                                    strengths and weaknesses of the competition as well as have a clear picture of its
+                                    own staffing
+                                    and financial constraints. In addition, it has to have a long-term vision which will
+                                    assist in setting
+                                    objectives. The achievement of these objectives is the desired outcome for the
+                                    company.
                                 </span>
                             </td>
                         </tr>
                         <tr>
                             <td class="pt-3">2.</td>
                             <td class="pt-3 pb-2">
-                                Write a short summary of <b>about 100 words</b> describing the characteristics of good management
+                                Write a short summary of <b>about 100 words</b> describing the characteristics of good
+                                management
                                 practices in a marketing orientated organization.
                             </td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30" rows="10"></textarea></td>
+                            <td><textarea name="" class="w-100 form-control" style="resize: none;" id="" cols="30"
+                                    rows="10"></textarea></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
                                 <h5 class="mt-3 aw text-success">Summaries (possible answer)</h5>
                                 <span class="aw text-success">
-                                    Good managers have detailed knowledge of their competitors, their customers and their own
-                                    staff. They need to take competitors and customers seriously since without customers there is
-                                    no business. They also have to treat their staff as human beings rather than as expendable
-                                    resources. Good managers motivate their staff to achieve good results through praise or
-                                    rewards. Managers should represent the company's culture and, as role models, should not be
-                                    afraid to take risks, even if this results in mistakes. A company which refuses to take risks by
+                                    Good managers have detailed knowledge of their competitors, their customers and
+                                    their own
+                                    staff. They need to take competitors and customers seriously since without customers
+                                    there is
+                                    no business. They also have to treat their staff as human beings rather than as
+                                    expendable
+                                    resources. Good managers motivate their staff to achieve good results through praise
+                                    or
+                                    rewards. Managers should represent the company's culture and, as role models, should
+                                    not be
+                                    afraid to take risks, even if this results in mistakes. A company which refuses to
+                                    take risks by
                                     being innovative is not marketing orientated.
                                 </span>
                             </td>
@@ -348,13 +382,15 @@ $caller_choice->ch8 = "use";
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Listening - 
- {{$pageTitle['sub_menu_name'] }}</h4>
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}</h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
+                    <source
+                        src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}"
+                        type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -384,6 +420,7 @@ $caller_choice->ch8 = "use";
     })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

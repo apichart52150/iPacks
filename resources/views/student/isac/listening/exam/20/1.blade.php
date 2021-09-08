@@ -78,7 +78,7 @@ $Q1_10->e10->aw = "If his handwriting hadn't been untidy, I could've read the ad
                 </tr>
                 <tr>
                     <td></td>
-                    <td style="width: 80px;"><b>Answer: </b></td>
+                    <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                     <td class="pt-2">
                         <input type="text" class="form-control w-75 q-val" show-aw="Q1_10-{{$index}}" aw="{{$Q1_10->aw}}">
                     </td>

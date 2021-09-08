@@ -174,6 +174,7 @@ $caller_3->e5->aw = "28***90%***12***50%***three-quarters***$80";
     })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.caller_3').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

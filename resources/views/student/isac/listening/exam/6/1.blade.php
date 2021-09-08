@@ -38,7 +38,7 @@
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
         width: 100%;
@@ -129,7 +129,7 @@ $choice_7_10->ch9 = "I. Bedrooms";
                 <div class="col-lg-12">
                     Write <b>NO MORE THAN TWO WORDS AND/OR A DATE OR A NUMBER</b>.
                     <div class="w-100 d-flex justify-content-center">
-                        <table class="w-75">
+                        <table class="mt-1 w-100">
                             <tr>
                                 <td style="border: 1px solid black;">
                                     <div class="p-3">
@@ -137,12 +137,16 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                             <h3 class="pb-2">Jones Real Estate</h3>
                                         </div>
                                         <div class="w-100 d-flex justify-content-center">
-                                            <table>
+                                            <table class="w-auto">
                                                 <tr>
                                                     <th class="pr-2">Name: </th>
                                                     <td>
                                                         Janice Jackson
                                                     </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th class="pr-2">Contact number:</th>
@@ -167,6 +171,10 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
                                                     <th class="pr-2"></th>
                                                     <td><span class="aw text-danger q-2">{{$aw->e2}}</span></td>
                                                 </tr>
@@ -177,10 +185,18 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
                                                     <th class="pr-2">Special requirements: </th>
                                                     <td>
                                                         Internet connection
                                                     </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th class="pr-2"></th>
@@ -209,10 +225,18 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                     <td><span class="aw text-danger q-4">{{$aw->e4}}</span></td>
                                                 </tr>
                                                 <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
                                                     <th class="pr-2">Property for viewing: </th>
                                                     <td>
                                                         26 High Street, Henley
                                                     </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th class="pr-2">Day: </th>
@@ -228,10 +252,18 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                     <td><span class="aw text-danger q-5">{{$aw->e5}}</span></td>
                                                 </tr>
                                                 <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
                                                     <th class="pr-2">Time: </th>
                                                     <td>
                                                         7.00 pm
                                                     </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th class="pr-2">Rent: </th>
@@ -245,6 +277,10 @@ $choice_7_10->ch9 = "I. Bedrooms";
                                                 <tr>
                                                     <td class="pr-2"></td>
                                                     <td><span class="aw text-danger q-6">{{$aw->e6}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="py-1"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th class="pr-2">Deposit: </th>
@@ -329,15 +365,9 @@ $choice_7_10->ch9 = "I. Bedrooms";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    $('.q-caller_2').each((idx, item) => {
-        let input = '<div class="input-con py-1">' +
-            '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-            '</div><br>' +
-            '<span class="aw ' + $(item).attr('show-aw') + ' text-danger">' + $(item).attr('aw') + '</span>'
-        $(item).html(input)
-    })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

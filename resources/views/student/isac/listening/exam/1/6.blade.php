@@ -60,8 +60,10 @@ $Q1_4->e3->n = "3";
 $Q1_4->e4->n = "4";
 
 $Q1_4->e1->q = "Giving examples Listen to the short talks and note down ways in which the speakers give examples.";
-$Q1_4->e2->q = "Giving contrasting information Listen to the short talks and note down ways in which the speakers give contrasting information:";
-$Q1_4->e3->q = "Giving additional information Listen to the short talks and note ways in which the speakers give additional information:";
+$Q1_4->e2->q = "Giving contrasting information Listen to the short talks and note down ways in which the speakers give
+contrasting information:";
+$Q1_4->e3->q = "Giving additional information Listen to the short talks and note ways in which the speakers give
+additional information:";
 $Q1_4->e4->q = "Sequencing Listen to the short talks and note ways in which the speakers show correct sequence:";
 
 $Q1_4->e1->q2 = new stdClass();
@@ -90,7 +92,8 @@ $Q1_4->e4->q2->ii->q = "Text 2:";
 $Q1_4->e1->q2->i->aw = "like atropine, An example is";
 $Q1_4->e1->q2->ii->aw = "such as, like";
 $Q1_4->e1->q2->iii->aw = "These include, including, An illustration of this is";
-$Q1_4->e2->q2->i->aw = "Although, a few similarities, however, greater differences, while, less economical, whereas, by contrast";
+$Q1_4->e2->q2->i->aw = "Although, a few similarities, however, greater differences, while, less economical, whereas, by
+contrast";
 $Q1_4->e2->q2->ii->aw = "although, whereas, Ironically";
 $Q1_4->e3->q2->i->aw = "in addition, further problems, Furthermore";
 $Q1_4->e4->q2->i->aw = "First of all, Second, Then, the third problem";
@@ -116,7 +119,10 @@ $Q1_4->e4->q2->ii->aw = "To begin with, Then, and then, Next, after which, befor
                             <td style="width: 50px;vertical-align: middle;">{{$list_aw->q}}</td>
                             <td>
                                 <div class="input-con w-75 {{$index}}-{{$index2}}">
-                                    <input type="text" div="{{$index}}-{{$index2}}" show-aw="show-aw-Q1_4-{{$index}}-{{$index2}}" aw="{{$list_aw->aw}}" class="q-val form-control w-100 Q1_4-{{$index}}-{{$index2}}" data-role="tagsinput">
+                                    <input type="text" div="{{$index}}-{{$index2}}"
+                                        show-aw="show-aw-Q1_4-{{$index}}-{{$index2}}" aw="{{$list_aw->aw}}"
+                                        class="q-val form-control w-100 Q1_4-{{$index}}-{{$index2}}"
+                                        data-role="tagsinput">
                                 </div>
                             </td>
                         </tr>
@@ -135,19 +141,20 @@ $Q1_4->e4->q2->ii->aw = "To begin with, Then, and then, Next, after which, befor
         </div>
     </div>
 </div>
-</div>
 
 <div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Listening - 
- {{$pageTitle['sub_menu_name'] }}</h4>
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}</h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
+                    <source
+                        src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}"
+                        type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -166,6 +173,7 @@ $Q1_4->e4->q2->ii->aw = "To begin with, Then, and then, Next, after which, befor
 
 <script>
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
             let val = $(item).val().split(',')
             let aw = $(item).attr('aw').split(',')

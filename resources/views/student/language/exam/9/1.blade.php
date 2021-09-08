@@ -19,62 +19,62 @@
         vertical-align: middle;
     }
 
-    .dropbox .drag {margin: 0;
+    .dropbox .drag {
+        margin: 0;
     }
 
     .grid-5 {
         grid-template-columns: repeat(6, 1fr);
     }
-
 </style>
 @php
-    $question = [
-        'q1' => "From my everyday experience and observation I think that artists as well as scientists bring many",
-        'q2' => "to society. It is a",
-        'q3' => "question whether the",
-        'q4' => "of artists are more or less than the",
-        'q5' => "of scientists to society. For several reasons, which I will mention below, I think that both types are valuable for every society. The",
-        'q6' => "of artists to the society are very essential. Art can form a person's spiritual sense, their views and personalities. People learn history, the",
-        'q7' => "of their country through art. We also watch movies that entertain and at the same time extend our",
-        'q8' => "of interests. Another important",
-        'q9' => "of this is that art is an ancient means of",
-        'q10' => ". In old times people depicted the herds of wild animals on the walls of their caves. They performed different rituals around the fireplace asking their gods for health, good harvest and weather. Our language is a result of people's need to",
-        'q11' => ". On the other side, the",
-        'q12' => "of scientists could not be exaggerated. All humankind is indebted to the scientists because of their work and",
-        'q13' => ". Scientists make our life easier. We have cars and airplanes to move fast from one place to another. We have microwaves and a host of preprocessed food to make the cooking much easier. We have different ",
-        'q14' => "that simplify all we do.",
-        'q15' => ", scientists are making great",
-        'q16' => "in medicine that make our life longer and happier. Nowadays people have a great opportunity to do many things faster by use of",
-        'q17' => ". To sum up, I believe that artists nourish our souls when scientists and",
-        'q18' => "feed our minds. So we cannot",
-        'q19' => "or",
-    ];
+$question = [
+'q1' => "From my everyday experience and observation I think that artists as well as scientists bring many",
+'q2' => "to society. It is a",
+'q3' => "question whether the",
+'q4' => "of artists are more or less than the",
+'q5' => "of scientists to society. For several reasons, which I will mention below, I think that both types are valuable for every society. The",
+'q6' => "of artists to the society are very essential. Art can form a person's spiritual sense, their views and personalities. People learn history, the",
+'q7' => "of their country through art. We also watch movies that entertain and at the same time extend our",
+'q8' => "of interests. Another important",
+'q9' => "of this is that art is an ancient means of",
+'q10' => ". In old times people depicted the herds of wild animals on the walls of their caves. They performed different rituals around the fireplace asking their gods for health, good harvest and weather. Our language is a result of people's need to",
+'q11' => ". On the other side, the",
+'q12' => "of scientists could not be exaggerated. All humankind is indebted to the scientists because of their work and",
+'q13' => ". Scientists make our life easier. We have cars and airplanes to move fast from one place to another. We have microwaves and a host of preprocessed food to make the cooking much easier. We have different ",
+'q14' => "that simplify all we do.",
+'q15' => ", scientists are making great",
+'q16' => "in medicine that make our life longer and happier. Nowadays people have a great opportunity to do many things faster by use of",
+'q17' => ". To sum up, I believe that artists nourish our souls when scientists and",
+'q18' => "feed our minds. So we cannot",
+'q19' => "or",
+];
 
-    $endQuestion = "one of them.";
+$endQuestion = "one of them.";
 
-    $choice = [
-        'c1' => "achievements",
-        'c2' => "achievements",
-        'c3' => "aspect",
-        'c4' => "benefits",
-        'c5' => "communicate",
-        'c6' => "communication",
-        'c7' => "computers",
-        'c8' => "contribution",
-        'c9' => "contributions",
-        'c10' => "contributions",
-        'c11' => "contributions",
-        'c12' => "controversial",
-        'c13' => "devices",
-        'c14' => "eliminate",
-        'c15' => "finally",
-        'c16' => "range",
-        'c17' => "technology",
-        'c18' => "traditions",
-        'c19' => "underestimate",
-    ];
+$choice = [
+'c1' => "achievements",
+'c2' => "achievements",
+'c3' => "aspect",
+'c4' => "benefits",
+'c5' => "communicate",
+'c6' => "communication",
+'c7' => "computers",
+'c8' => "contribution",
+'c9' => "contributions",
+'c10' => "contributions",
+'c11' => "contributions",
+'c12' => "controversial",
+'c13' => "devices",
+'c14' => "eliminate",
+'c15' => "finally",
+'c16' => "range",
+'c17' => "technology",
+'c18' => "traditions",
+'c19' => "underestimate",
+];
 
-   
+
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -86,7 +86,7 @@
                         <div class="drag-container">
                             <div class="d-grid grid-5" id="choices">
                                 @foreach ($choice as $choices)
-                                    <div class="drag">{{ $choices }}</div>
+                                <div class="drag">{{ $choices }}</div>
                                 @endforeach
                             </div>
                         </div>
@@ -98,10 +98,10 @@
                 <div class="col-md-12">
                     <div class="border border-dark p-2" style="line-height: 35px;">
                         <div class="answers-container">
-                            @for ($i = 1; $i <= count($question); $i++)
-                                {{ $question['q'.$i] }}
-                                <div class="dropbox"></div>
-                            @endfor
+                            @foreach($question as $q)
+                            {{ $q }}
+                            <div class="dropbox"></div>
+                            @endforeach
                             {{ $endQuestion }}
                         </div>
                     </div>
@@ -113,34 +113,35 @@
 
 
 @section('button-control')
-    <button id="check-answer" class="btn btn-info">Check Answers</button>
+<button id="check-answer" class="btn btn-info">Check Answers</button>
 @endsection
 
 @section('js')
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
+<script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
 <script>
-
     const answers = [
-         $q1 = "BENEFITS",
-         $q2 = "CONTROVERSIAL",
-         $q3 = "CONTRIBUTIONS",
-         $q4 = "CONTRIBUTIONS",
-         $q5 = "CONTRIBUTIONS",
-         $q6 = "TRADITIONS",
-         $q7 = "RANGE",
-         $q8 = "ASPECT",
-         $q9 = "COMMUNICATION",
-         $q10 = "COMMUNICATE",
-         $q11 = "CONTRIBUTION",
-         $q12 = "ACHIEVEMENTS",
-         $q13 = "DEVICES",
-         $q14 = "FINALLY",
-         $q15 = "ACHIEVEMENTS",
-         $q16 = "COMPUTERS",
-         $q17 = "TECHNOLOGY",
-         $q18 = "ELIMINATE",
-         $q19 = "UNDERESTIMATE",
+        $q1 = "BENEFITS",
+        $q2 = "CONTROVERSIAL",
+        $q3 = "CONTRIBUTIONS",
+        $q4 = "CONTRIBUTIONS",
+        $q5 = "CONTRIBUTIONS",
+        $q6 = "TRADITIONS",
+        $q7 = "RANGE",
+        $q8 = "ASPECT",
+        $q9 = "COMMUNICATION",
+        $q10 = "COMMUNICATE",
+        $q11 = "CONTRIBUTION",
+        $q12 = "ACHIEVEMENTS",
+        $q13 = "DEVICES",
+        $q14 = "FINALLY",
+        $q15 = "ACHIEVEMENTS",
+        $q16 = "COMPUTERS",
+        $q17 = "TECHNOLOGY",
+        $q18 = "ELIMINATE",
+        $q19 = "UNDERESTIMATE",
     ];
 
     let score = 0
@@ -151,10 +152,10 @@
         opacity: 0.7,
         zIndex: 100,
         containment: ".card-box",
-        stop: function (event, ui) {
-          if ($("#choices").children().length == 0) {
-            $("#check-answer").prop("disabled", false);
-          }
+        stop: function(event, ui) {
+            if ($("#choices").children().length == 0) {
+                $("#check-answer").prop("disabled", false);
+            }
         },
     });
 
@@ -162,19 +163,25 @@
         accept: ".drag",
         tolerance: "touch",
         zIndex: 100,
-        over: function (event, ui) {
+        over: function(event, ui) {
             $(this).css("border-color", "#777");
         },
-        out: function (event, ui) {
+        out: function(event, ui) {
             $(this).css("border-color", "#ccc");
         },
-        drop: function (event, ui) {
+        drop: function(event, ui) {
             if ($(this).children().length > 0) {
                 var move = $(this).children().detach();
-                $(ui.draggable).css({ top: 0, left: 0 }).parent().append(move);
+                $(ui.draggable).css({
+                    top: 0,
+                    left: 0
+                }).parent().append(move);
             }
             $(this).css("border-color", "#ccc");
-            $(this).append($(ui.draggable).css({ top: 0, left: 0 }));
+            $(this).append($(ui.draggable).css({
+                top: 0,
+                left: 0
+            }));
         },
     });
 
@@ -183,7 +190,7 @@
         let droppables = $(".dropbox");
 
         droppables.each((idx, item) => {
-            if($(item).children().text().trim() == answers[idx].toLowerCase()) {
+            if ($(item).children().text().trim() == answers[idx].toLowerCase()) {
                 checkAnswer($(item).children(), 'correct');
                 score++
             } else {
@@ -194,8 +201,16 @@
         $(".drag").draggable({
             disabled: true,
         });
-
-        alert("Your score is " + score)
+        Swal.fire({
+            title: "Your score",
+            text: score + "",
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
+        });
         $("#check-answer").prop("disabled", true);
     });
 

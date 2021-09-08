@@ -277,6 +277,7 @@ $Q18_20->e3->choice->d = "D. 800";
     })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

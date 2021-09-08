@@ -93,6 +93,7 @@
         ];
 
         $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
             $('input[type="text"]').each((index, item) => {
                 if (selectAnswer[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'

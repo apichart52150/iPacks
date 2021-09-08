@@ -26,27 +26,24 @@
         margin-bottom: 25px;
     }
 
+
     .answers-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin: 10px 0;
     }
 
-    .answers-container p {
-        font-size: 16px;
+    .answers-container .dropbox {
+        display: inline-block;
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
-        width: 100%;
-        height: auto;
-        min-width: 200px;
+        margin: 5px;
+        min-width: 150px;
         min-height: 40px;
+        vertical-align: middle;
     }
-
     .dropbox .drag {
         margin: 0;
         vertical-align: middle;
@@ -272,11 +269,9 @@ $E3_1_5_choice->ch5 = "disappear";
                             <table class="w-100">
                                 @foreach($E3_1_5 as $index => $E3_1_5)
                                 <tr>
-                                    <td style="width: 20px;">{{$E3_1_5->n}}. </td>
-                                    <td>
-                                        <span class="q-replace" style="height: 40px;" show-aw="E3_1_5-{{$index}}" aw="{{$E3_1_5->aw}}">
+                                    <td style="width: 20px;vertical-align:middle;">{{$E3_1_5->n}}. </td>
+                                    <td class="q-replace answers-container" style="height: 40px;" show-aw="E3_1_5-{{$index}}" aw="{{$E3_1_5->aw}}">
                                             {{$E3_1_5->q}}
-                                        </span>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -319,14 +314,13 @@ $E3_1_5_choice->ch5 = "disappear";
 <script>
     $('.q-replace').each((idx, item) => {
         let text = $(item).html()
-        let input = '<div class="input-con w-25 input-con2">' +
-            '<div class="dropbox q w-100" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-            '</div>' +
+        let input = '<div class="dropbox q w-25" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
             '<span class="px-2 aw ' + $(item).attr('show-aw') + ' text-danger">' + $(item).attr('aw') + '</span>'
         text = text.replace("___", input)
         $(item).html(text)
     })
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

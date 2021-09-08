@@ -290,6 +290,7 @@ $Q27_30->e4->choice->c = "C. Not so good";
 
 <script>
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

@@ -336,7 +336,7 @@ $Q_6->e10->aw = "Not only will this donation help many poor people but it will a
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val1" show-aw="Q_1-{{$index}}" aw="{{$Q_1->aw}}">
                             </td>
@@ -372,7 +372,7 @@ $Q_6->e10->aw = "Not only will this donation help many poor people but it will a
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val2" show-aw="Q_2-{{$index}}" aw="{{$Q_2->aw}}">
                             </td>
@@ -408,7 +408,7 @@ $Q_6->e10->aw = "Not only will this donation help many poor people but it will a
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val3" show-aw="Q_3-{{$index}}" aw="{{$Q_3->aw}}">
                             </td>
@@ -448,7 +448,7 @@ $Q_6->e10->aw = "Not only will this donation help many poor people but it will a
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val4" show-aw="Q_4-{{$index}}" aw="{{$Q_4->aw}}">
                             </td>
@@ -484,7 +484,7 @@ $Q_6->e10->aw = "Not only will this donation help many poor people but it will a
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val5" show-aw="Q_5-{{$index}}" aw="{{$Q_5->aw}}">
                             </td>
@@ -520,7 +520,7 @@ $Q_6->e10->aw = "Not only will this donation help many poor people but it will a
                         </tr>
                         <tr>
                             <td></td>
-                            <td style="width: 80px;"><b>Answer: </b></td>
+                            <td class="pt-2" style="width: 80px;vertical-align:middle;"><b>Answer: </b></td>
                             <td class="pt-2">
                                 <input type="text" class="form-control w-75 q-val6" show-aw="Q_6-{{$index}}" aw="{{$Q_6->aw}}">
                             </td>

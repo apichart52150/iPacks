@@ -155,21 +155,9 @@ $caller_1->e5->aw = "Travel";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    $('.q-caller-2').each((idx, item) => {
-        let text = $(item).html()
-        let new_text = $(item).html()
-        let aw = $(item).attr('aw').split("***")
-        console.log("text", text)
-        console.log("aw", aw)
-        for (let i = 0; i < text.split("...").length - 1; i++) {
-            let input = '<div class="input-con input-con2 caller_3 pb-1 "><input type="text" class="input-text caller_3" aw="' + aw[i] + '" show-aw="caller_3-' + idx + '-' + i + '" autocomplete="off"></div>' +
-                '<labal class="w-100 px-2 aw caller_3-' + idx + '-' + i + ' text-danger">' + aw[i] + '</labal>'
-            new_text = new_text.replace("...", input)
-        }
-        $('.q-caller-2-e' + (idx + 1)).html(new_text)
-    })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

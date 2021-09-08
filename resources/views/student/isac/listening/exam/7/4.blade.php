@@ -255,6 +255,7 @@ $Q31_40->e10->choice->d = "D. the Lapps are able to keep large herds of domestic
 <script>
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)

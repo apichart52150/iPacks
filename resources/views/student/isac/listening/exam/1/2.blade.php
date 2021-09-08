@@ -9,25 +9,23 @@
         margin-bottom: 25px;
     }
 
+
     .answers-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin: 10px 0;
     }
 
-    .answers-container p {
-        font-size: 16px;
+    .answers-container .dropbox {
+        display: inline-block;
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
-        width: 100%;
-        height: auto;
-        min-width: 250px;
+        margin: 5px;
+        min-width: 150px;
         min-height: 40px;
+        vertical-align: middle;
     }
 
     .dropbox .drag {
@@ -37,6 +35,7 @@
     .grid-5 {
         grid-template-columns: repeat(4, 1fr);
     }
+
     .grid-5-2 {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -231,13 +230,15 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
     $caller_3->e2->q = "2. Einstein was a famous German scientist who was born in 1879.";
     $caller_3->e2->aw = "Einst. - fam. Germ. sc. b. 1879";
     $caller_3->e3 = new stdClass();
-    $caller_3->e3->q = "3. Chemistry may be defined as the branch of science which studies the composition and reaction of different elements and substances.";
+    $caller_3->e3->q = "3. Chemistry may be defined as the branch of science which studies the composition and reaction
+    of different elements and substances.";
     $caller_3->e3->aw = "Chem = sc. studies compositn. + reactn. of diff. elem. + subst.";
     $caller_3->e4 = new stdClass();
     $caller_3->e4->q = "4. It has been forecast that we can look forward to fewer working hours in the future.";
     $caller_3->e4->aw = "Future: work hours⬊";
     $caller_3->e5 = new stdClass();
-    $caller_3->e5->q = "5. The slavery issue was one of the reasons why the northern and southern states fought against each other in the American Civil War.";
+    $caller_3->e5->q = "5. The slavery issue was one of the reasons why the northern and southern states fought against
+    each other in the American Civil War.";
     $caller_3->e5->aw = "Slavery (inter al.) --> Am civ. war";
 
     $caller_3_choice = new stdClass();
@@ -303,7 +304,8 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                     e.g. in a lecture; from textbooks; key words for a presentation. </td>
                             </tr>
                         </table>
-                        <span class="pt-2">Although people usually make notes at speed, it is important to write as clearly as possible so that you
+                        <span class="pt-2">Although people usually make notes at speed, it is important to write as
+                            clearly as possible so that you
                             can read the notes at some time in the future, when you need them again. </span>
                         <h3 class="pt-2">What can you do to save time?</h3>
                         <table class="w-100">
@@ -465,7 +467,8 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <h5>Write the following sentences in note form, using abbreviations, signs, symbols or anything else which will help you. Focus only on the content words. </h5>
+                        <h5>Write the following sentences in note form, using abbreviations, signs, symbols or anything
+                            else which will help you. Focus only on the content words. </h5>
                         <div class="row justify-content-center mb-2">
                             <div class="col-md-12">
                                 <div class="border border-dark px-2 text-center">
@@ -487,8 +490,9 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                                         <td colspan="2" class="border-dark p-2">{{$caller_3->q}}</td>
                                     </tr>
                                     <tr>
-                                        <td style="width: 80px;"><b>Answer: </b></td>
-                                        <td class="border-dark p-2">
+                                        <td style="width: 20px;"></td>
+                                        <td class="border-dark p-2 d-flex align-items-center">
+                                            <b>Answer:&nbsp;&nbsp;</b>
                                             <div class="input-con w-75">
                                                 <div class="dropbox q w-100" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}"></div>
                                             </div>
@@ -510,23 +514,36 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                         <br>
                         <h5>Remember, though, that you must be able to understand the notes later. </h5>
                         <span>
-                            Skin cancer is caused by constant exposure to the sun. In Australia doctors discover 140,000 new cases
-                            of skin cancer every year, approximately one thousand of which result in death. There are three sorts of
-                            skin cancer. The most dangerous skin cancer is melanoma. The other two types are not as serious but
-                            must be treated early to be sure of a complete cure. According to medical research ultra-violet radiation
-                            is responsible for causing skin cancer. There are three types of ultra-violet rays: UVA, UVB and UVC. Of
-                            these three, UVB is the most dangerous and causes the most damage to the skin. UVA has a slower
-                            effect on skin cells and is responsible for the aging process which makes skin wrinkled and leathery. UVC
-                            rays never reach earth and are, therefore, not an issue. The greater the exposure to the sun, the
-                            greater the risk of getting skin cancer. The most dangerous time to sunbathe is between 11 in the
-                            morning and 3 in the afternoon. People with fair skin are the most susceptible to the effects of sunburn
-                            but everyone, with the exception of Australian Aborigines, are prone to skin cancer. There are a number
-                            of things we can do to help prevent skin cancer: wearing a T-shirt, putting on a hat and using sun-cream
+                            Skin cancer is caused by constant exposure to the sun. In Australia doctors discover 140,000
+                            new cases
+                            of skin cancer every year, approximately one thousand of which result in death. There are
+                            three sorts of
+                            skin cancer. The most dangerous skin cancer is melanoma. The other two types are not as
+                            serious but
+                            must be treated early to be sure of a complete cure. According to medical research
+                            ultra-violet radiation
+                            is responsible for causing skin cancer. There are three types of ultra-violet rays: UVA, UVB
+                            and UVC. Of
+                            these three, UVB is the most dangerous and causes the most damage to the skin. UVA has a
+                            slower
+                            effect on skin cells and is responsible for the aging process which makes skin wrinkled and
+                            leathery. UVC
+                            rays never reach earth and are, therefore, not an issue. The greater the exposure to the
+                            sun, the
+                            greater the risk of getting skin cancer. The most dangerous time to sunbathe is between 11
+                            in the
+                            morning and 3 in the afternoon. People with fair skin are the most susceptible to the
+                            effects of sunburn
+                            but everyone, with the exception of Australian Aborigines, are prone to skin cancer. There
+                            are a number
+                            of things we can do to help prevent skin cancer: wearing a T-shirt, putting on a hat and
+                            using sun-cream
                             are just three ways to protect ourselves from the harmful effects of sun.
                         </span>
                     </div>
                     <div class="col-lg-12">
-                        <h5>A. You are going to listen to a short talk about the population of Australia. As you listen, try to find the answers to the following questions:</h5>
+                        <h5>A. You are going to listen to a short talk about the population of Australia. As you listen,
+                            try to find the answers to the following questions:</h5>
                         <table class="w-100 mb-3">
                             @foreach($caller_4_A as $index => $caller_4_A)
                             <tr>
@@ -547,18 +564,25 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
                             </tr>
                             @endforeach
                         </table>
-                        <h5 class="mt-3">B. Listen to the talk again and take notes using the conventions available to you. </h5>
+                        <h5 class="mt-3">B. Listen to the talk again and take notes using the conventions available to
+                            you. </h5>
                         <!-- <textarea name="" class="w-100" style="resize: none;" id="" cols="30" rows="10"></textarea> -->
-                        <h5 class="mt-3 pb-2">C. Write a short summary of the talk, using your own words as far as possible. The summary should be between 80 - 100 words. </h5>
+                        <h5 class="mt-3 pb-2">C. Write a short summary of the talk, using your own words as far as
+                            possible. The summary should be between 80 - 100 words. </h5>
                         <textarea name="" class="form-control w-100" style="resize: none;" id="" cols="30" rows="10"></textarea>
                         <h5 class="mt-3 aw text-success">D. Summary (possible answer) </h5>
                         <span class="aw text-success">
-                            The population of Australia is now eighteen million, consisting of over one hundred different
-                            nationalities. In the past most migrants came from English speaking countries but nowadays most
-                            migrants do not have English as their first language. This change of focus has resulted in other changes
-                            in food, traditions and attitudes to learning foreign languages. In the past Australians chose not to learn
+                            The population of Australia is now eighteen million, consisting of over one hundred
+                            different
+                            nationalities. In the past most migrants came from English speaking countries but nowadays
+                            most
+                            migrants do not have English as their first language. This change of focus has resulted in
+                            other changes
+                            in food, traditions and attitudes to learning foreign languages. In the past Australians
+                            chose not to learn
                             a foreign language but nowadays many people are learning foreign languages. The most common
-                            languages in Australia are English, Italian, Greek and Chinese. Each state has a different second
+                            languages in Australia are English, Italian, Greek and Chinese. Each state has a different
+                            second
                             language focus.
                         </span>
                     </div>
@@ -571,8 +595,9 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header bg-primary py-2">
-                    <h4 class="modal-title text-white mx-auto">Listening - 
- {{$pageTitle['sub_menu_name'] }}</h4>
+                    <h4 class="modal-title text-white mx-auto">Listening -
+                        {{$pageTitle['sub_menu_name'] }}
+                    </h4>
                 </div>
                 <div class="modal-body text-center">
                     <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
@@ -592,7 +617,8 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
 
     @section('js')
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js">
+    </script>
 
     <script>
         $('.q-caller-2').each((idx, item) => {
@@ -607,6 +633,7 @@ $caller_2->e10->q = "<------"; $caller_2->e10->q2 = "...";
         })
 
         $('#check-answer').on('click', () => {
+            $('#check-answer').prop('disabled', true)
             $('.q').each((idx, item) => {
                 if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                     show_aw($(item).attr('show-aw'), item)

@@ -265,6 +265,7 @@ $caller_1->e16->aw->i = "The people most affected by relocation of factories fro
 
 <script>
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q-text').each((idx, item) => {
             let aw = $(item).val().split("E.G.")[0]
             let aw2 = $(item).attr('aw').split("e.g.")[0]

@@ -228,29 +228,29 @@
     <script>
 
         const selectAnswer1 = [
-            "Next Friday she's going to visit her parents.", 
-            "Tomorrow they're going to go for a bike ride.", 
-            "This afternoon I'm going to relax.", 
-            "When he gets home, he's going to have lunch.", 
-            "Tonight they're going to eat out", 
-            "When she leaves school, she's going to study at university.", 
-            "On the weekend I'm going to work in the garden.", 
-            "When he passes the test, he's going to buy a new car", 
-            "When the food runs out, we're going to get very hungry", 
-            "If it rains, they're going to postpone the barbie.",
+            "How many prawns are there on the barbie?", 
+            "How many people are there on the bus?", 
+            "How much coffee is there in the jar?", 
+            "How many elephants are there in the zoo?", 
+            "How much paper is there on the shelf?", 
+            "How many pages are there in the book?", 
+            "How much money is there in the bank?", 
+            "How much milk is there in the bottle?", 
+            "How much chocolate is there in the fridge?", 
+            "How many chocolates are there in the box?",
+            "How many books are there in the bag?",
+            "How much cheese is there in the packet?",
         ];
 
         const selectAnswer2 = [
-            "My driving licence expires next year.", 
-            "The plane takes off at three o'clock.", 
-            "The shops open in half an hour's time.", 
-            "I finish school next December.", 
-            "The library closes in fifteen minutes' time.", 
-            "The programme starts at eight o'clock tonight.", 
-            "Daylight saving begins next week.", 
-            "The Christmas sale starts on Boxing Day.", 
-            "I go on holiday in three days' time.", 
-            "I start my new job next Monday.",
+            "No, there aren't many people at the party at all", 
+            "No, there aren't many eggs in the basket at all", 
+            "No, there isn't much coffee in the jar at all", 
+            "No, there aren't many books to read at all", 
+            "No, there isn't much wood on the fire at all", 
+            "No, there isn't much paper in the printer at all", 
+            "No, there aren't many animals in the zoo at all", 
+            "No, there isn't much petrol in the tank at all", 
         ];
 
         const selectAnswer3 = [
@@ -293,6 +293,7 @@
         ];
 
         $('#check-answer1').on('click', () => {
+        $('#check-answer1').prop('disabled',true)
             $('input[type="text1"]').each((index, item) => {
                 if (selectAnswer1[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'
@@ -304,6 +305,7 @@
         });
 
         $('#check-answer2').on('click', () => {
+        $('#check-answer2').prop('disabled',true)
             $('input[type="text2"]').each((index, item) => {
                 if (selectAnswer2[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'
@@ -315,6 +317,7 @@
         });
 
         $('#check-answer3').on('click', () => {
+        $('#check-answer3').prop('disabled',true)
             $('input[type="text3"]').each((index, item) => {
                 if (selectAnswer3[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'

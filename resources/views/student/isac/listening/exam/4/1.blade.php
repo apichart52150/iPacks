@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
 <style>
     table tr td {
-        vertical-align: top;
+        vertical-align: middle;
     }
 
     .table tr td {
@@ -26,27 +26,24 @@
         margin-bottom: 25px;
     }
 
+
     .answers-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin: 10px 0;
     }
 
-    .answers-container p {
-        font-size: 16px;
+    .answers-container .dropbox {
+        display: inline-block;
     }
 
     .dropbox {
-        border: 1px dashed #ccc;
+        border: 2px dashed #ccc;
         border-radius: 5px;
         padding: 3px;
-        width: 100%;
-        height: auto;
-        min-width: 250px;
+        margin: 5px;
+        min-width: 150px;
         min-height: 40px;
+        vertical-align: middle;
     }
-
     .dropbox .drag {
         margin: 0;
         vertical-align: middle;
@@ -116,12 +113,12 @@ $aw->e10 = "PIN";
                                             <b>STUDENT ACCOUNT APPLICATION FORM</b>
                                         </div>
                                         <div class="w-100 d-flex justify-content-center">
-                                            <table>
+                                            <table class="w-100">
                                                 <tr>
                                                     <td style="vertical-align: middle;" class="pr-2">Account holder:</td>
-                                                    <td>
+                                                    <td style="vertical-align: middle;">
                                                         Sofia (1)
-                                                        <div class="input-con pt-2">
+                                                        <div class="input-con">
                                                             <input type="text" class="q-val form-control" show-aw="q-1" aw="{{$aw->e1}}">
                                                         </div>
                                                     </td>
@@ -134,11 +131,12 @@ $aw->e10 = "PIN";
                                                     <td class="pr-2">University:</td>
                                                     <td>Oxford University</td>
                                                 </tr>
+                                                <tr><td class="py-1"></td><td></td></tr>
                                                 <tr>
                                                     <td style="vertical-align: middle;" class="pr-2">Date of Birth:</td>
                                                     <td>
                                                         (2)
-                                                        <div class="input-con pt-2">
+                                                        <div class="input-con">
                                                             <input type="text" class="q-val form-control" show-aw="q-2" aw="{{$aw->e2}}">
                                                         </div>
                                                     </td>
@@ -151,11 +149,12 @@ $aw->e10 = "PIN";
                                                     <td class="pr-2">Address:</td>
                                                     <td>11 Rosewood Lane </td>
                                                 </tr>
+                                                <tr><td class="py-1"></td><td></td></tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
                                                     <td>
                                                         (3)
-                                                        <div class="input-con pt-2">
+                                                        <div class="input-con">
                                                             <input type="text" class="q-val form-control" show-aw="q-3" aw="{{$aw->e3}}">
                                                         </div>
                                                     </td>
@@ -168,11 +167,12 @@ $aw->e10 = "PIN";
                                                     <td class="pr-2"></td>
                                                     <td>Near Bristol, Avon. </td>
                                                 </tr>
+                                                <tr><td class="py-1"></td><td></td></tr>
                                                 <tr>
                                                     <td style="vertical-align: middle;" class="pr-2">Contact No:</td>
                                                     <td>
                                                         (4)
-                                                        <div class="input-con pt-2">
+                                                        <div class="input-con">
                                                             <input type="text" class="q-val form-control" show-aw="q-4" aw="{{$aw->e4}}">
                                                         </div>
                                                     </td>
@@ -185,7 +185,7 @@ $aw->e10 = "PIN";
                                                     <td style="vertical-align: middle;" class="pr-2">Student Number:</td>
                                                     <td>
                                                         (5)
-                                                        <div class="input-con pt-2">
+                                                        <div class="input-con">
                                                             <input type="text" class="q-val form-control" show-aw="q-5" aw="{{$aw->e5}}">
                                                         </div>
                                                     </td>
@@ -198,15 +198,17 @@ $aw->e10 = "PIN";
                                                     <td class="pr-2">Passport Number:</td>
                                                     <td>NJ 124 356</td>
                                                 </tr>
+                                                <tr><td class="py-1"></td><td></td></tr>
                                                 <tr>
                                                     <td class="pr-2">Issue date:</td>
                                                     <td>21 – 09 – 1999</td>
                                                 </tr>
+                                                <tr><td class="py-1"></td><td></td></tr>
                                                 <tr>
                                                     <td style="vertical-align: middle;" class="pr-2">Expiry date: </td>
                                                     <td>
                                                         (6)
-                                                        <div class="input-con pt-2">
+                                                        <div class="input-con">
                                                             <input type="text" class="q-val form-control" show-aw="q-6" aw="{{$aw->e6}}">
                                                         </div>
                                                     </td>
@@ -222,11 +224,12 @@ $aw->e10 = "PIN";
                                                     <td class="pr-2">Name of bank: </td>
                                                     <td>HSBC </td>
                                                 </tr>
+                                                <tr><td class="py-1"></td><td></td></tr>
                                                 <tr>
                                                     <td style="vertical-align: middle;" class="pr-2">Amount deposited: </td>
                                                     <td>
                                                         (7)
-                                                        <div class="input-con pt-2">
+                                                        <div class="input-con">
                                                             <input type="text" class="q-val form-control" show-aw="q-7" aw="{{$aw->e7}}">
                                                         </div>
                                                     </td>
@@ -239,7 +242,7 @@ $aw->e10 = "PIN";
                                                     <td style="vertical-align: middle;" class="pr-2">Account number:</td>
                                                     <td>
                                                         (8)
-                                                        <div class="input-con pt-2">
+                                                        <div class="input-con">
                                                             <input type="text" class="q-val form-control" show-aw="q-8" aw="{{$aw->e8}}">
                                                         </div>
                                                     </td>
@@ -307,15 +310,9 @@ $aw->e10 = "PIN";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-    $('.q-caller_2').each((idx, item) => {
-        let input = '<div class="input-con py-1">' +
-            '<div class="dropbox q" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-            '</div><br>' +
-            '<span class="aw ' + $(item).attr('show-aw') + ' text-danger">' + $(item).attr('aw') + '</span>'
-        $(item).html(input)
-    })
 
     $('#check-answer').on('click', () => {
+        $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
                 show_aw($(item).attr('show-aw'), item)
