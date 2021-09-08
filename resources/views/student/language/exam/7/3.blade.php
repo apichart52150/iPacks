@@ -8,22 +8,10 @@
         padding: 0 5px;
         margin: 10px 5px;
     }
-
-    ul.questions li {
-        margin: 20px 0;
-        line-height: 2rem;
-    }
-
+    
     .input-con {
         display: inline-block;
         position: relative;
-    }
-
-    .ans-con {
-        position: absolute;
-        top: 50%;
-        right: 5px;
-        transform: translateY(-50%);
     }
 </style>
 @php
@@ -58,7 +46,7 @@
                     </div>
                 </div>
             </div>
-             <div class="row">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
                         @for ($i = 1; $i <= count($question); $i++)

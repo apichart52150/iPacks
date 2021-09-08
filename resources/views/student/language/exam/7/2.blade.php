@@ -13,17 +13,6 @@
         display: inline-block;
         position: relative;
     }
-
-    .ans-con {
-        position: absolute;
-        top: 50%;
-        right: 5px;
-        transform: translateY(-50%);
-    }
-
-    .line-hight{
-        line-height: 3;
-    }
 </style>
 @php
     $startQuestion = "The line-graphs give details of the percentage of adolescents who owned cd players, laptop computers and mobile phones during the period 1980 to 2010. Overall, it can be seen that the popularity of cd players";
