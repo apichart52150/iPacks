@@ -299,6 +299,9 @@
          <!-- init js -->
         <script src="{{ asset('public/assets/js/pages/form-advanced.init.js') }}"></script>
 
+        <script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
+
         <script>
             $('input[type="text"]').attr({
                 'onChange': 'this.value = this.value.toUpperCase()',

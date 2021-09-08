@@ -47,20 +47,22 @@
     <div class="col-md-12">
         <div class="card-box text-dark font-15">
             <div class="row justify-content-center mb-2">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The graph below shows the percentage of teenagers who owned a number of electronic items between 1980 and 2010.</h5>
                         <img src="{{ asset('public/img_lang/gap1/gap1_2.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
-                <div class="col-md-6">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
                     <div class="border border-dark p-2">
                         {{$startQuestion}}
                         @for ($i = 1; $i <= count($question); $i++)
                             <div class="line-hight d-inline w-auto mb-2 ">
                                 {{ $question['q'.$i] }} <!-- question -->
                             </div>
-                            <span class="font-weight-bold">{{ $i }}</span> <!-- number question-->
+                            <span class="font-weight-bold">{{ $i }}.</span> <!-- number question-->
                             <div class="input-con">
                                 <input type="text" class="form-control">
                             </div>
@@ -103,21 +105,20 @@
         let icon;
         $(':text').each((idx, item) => {
 
-            if(jQuery.inArray($(item).val().toLowerCase(),  answers[idx]) != -1) {
-                icon = '<i class="fas fa-check text-success"></i>';
-                score++;
+            $(item).removeClass('border-success');
+            $(item).removeClass('border-danger');
+            
+            if(jQuery.inArray($(item).val().toLowerCase().trim(),  answers[idx]) != -1) {
+                $(item).addClass('border border-success');
+                score++
             } else {
-                icon = '<i class="fas fa-times text-danger"></i>';
+                $(`<span class="text-success"><u>${answers[idx]}</u></span>`).insertAfter($(item));
+                $(item).addClass('border border-danger');
             }
-
-            $(item).parent().find('.ans-con').remove();
-            $(item).parent().append(`
-                <div class="ans-con pr-2">
-                    ${icon}
-                </div>
-            `)
         })
 
+        $('#check-answer').prop('disabled', true);
+        
         alert('Your score is ' + score);
 
     }
