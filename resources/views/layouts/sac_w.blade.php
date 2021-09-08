@@ -7,15 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta name="description" content="คอร์สเรียน IELTS รับรองผล 7.5 สอนสดทุกคลาส โดยเจ้าของภาษา ได้ผลจริง จากสถาบันภาษาคุณภาพ ระดับยอดเยี่ยม 4 ปีซ้อน  เน้นเทคนิคทำข้อสอบ หลักสูตรคุณภาพมาตรฐานสากล" />
-	    <meta name="keywords" content="เรียน IELTS, เรียนไอเอล, สอน IELTS, เรียน IELTS ที่ไหน ดี, ติว IELTS, เรียน IELTS ราคาถูก, คอร์สเรียน IELTS, คอร์สเตรียมสอบ IELTS, ที่เรียน IELTS, เรียน IELTS รับรองผล, สอบ IELTS, สอบไอเอล, สอนไอเอล "  />
-
 	    
         <!-- App favicon -->
-	    <link rel="shortcut icon" href="{{ asset('public/assets/images/newcambridge-logo_bar.png') }}">
-	    <meta property="og:title" content="iSAC Writing">
-	    <meta property="og:description" content="คอร์สเรียน IELTS รับรองผล 7.5 สอนสดทุกคลาส โดยเจ้าของภาษา ได้ผลจริง จากสถาบันภาษาคุณภาพ ระดับยอดเยี่ยม 4 ปีซ้อน  เน้นเทคนิคทำข้อสอบ หลักสูตรคุณภาพมาตรฐานสากล">
-	    <meta property="og:image" content="{{ asset('public/assets/images/logo_nc.png') }}">
+	    <link rel="shortcut icon" href="{{ asset('public/assets/images/icon-nc-big.png') }}">
 
         <!-- Custom box css -->
         <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
@@ -26,8 +20,8 @@
 
         <!-- App css -->
         <link href="{{ asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('public/assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/css/icons.css') }}" rel="stylesheet" type="text/css"/>
 
         <!--venobox lightbox-->
         <link rel="stylesheet" href="{{ asset('public/assets/plugins/magnific-popup/dist/magnific-popup.css') }}"/>
@@ -42,11 +36,6 @@
         <link href="{{ asset('public/assets/libs/datatables/buttons.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('public/assets/libs/datatables/select.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
 
-        
-
-        <!-- App css -->
-        <link href="{{ asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('public/assets/css/icons.css') }}" rel="stylesheet" type="text/css" />
 
         <!-- Global Styles -->
         <style>
@@ -211,7 +200,6 @@
 
         <!-- jQuery  -->
         <script src="{{ asset('public/assets/js/jquery.min.js') }}"></script>
-        <script src="{{ asset('public/assets/js/popper.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/jquery.slimscroll.js') }}"></script>
         <script src="{{ asset('public/assets/js/jquery.scrollTo.min.js') }}"></script>
@@ -225,10 +213,7 @@
         <!-- Gallery Init-->
         <script src="{{ asset('public/assets/js/pages/gallery.init.js') }}"></script>
 
-        <!-- init js -->
-        <script src="{{ asset('public/assets/js/pages/dashboard-1.init.js') }}"></script>
-
-         <!-- Sweet Alert Js  -->
+        <!-- Sweet Alert Js  -->
         <script src="{{ asset('public/assets/plugins/sweet-alert/sweetalert2.min.js') }}"></script>
         
         <script src="{{ asset('public/assets/libs/datatables/jquery.dataTables.min.js') }}"></script>
