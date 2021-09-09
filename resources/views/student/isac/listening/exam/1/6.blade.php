@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="{{ asset('public/css/draggable.css') }}">
+<link rel="stylesheet" href="{{ asset('public/css/bootstrap-tagsinput.css') }}">
 <style>
     table tr td {
         vertical-align: top;
@@ -92,8 +93,7 @@ $Q1_4->e4->q2->ii->q = "Text 2:";
 $Q1_4->e1->q2->i->aw = "like atropine, An example is";
 $Q1_4->e1->q2->ii->aw = "such as, like";
 $Q1_4->e1->q2->iii->aw = "These include, including, An illustration of this is";
-$Q1_4->e2->q2->i->aw = "Although, a few similarities, however, greater differences, while, less economical, whereas, by
-contrast";
+$Q1_4->e2->q2->i->aw = "Although, a few similarities, however, greater differences, while, less economical, whereas, by contrast";
 $Q1_4->e2->q2->ii->aw = "although, whereas, Ironically";
 $Q1_4->e3->q2->i->aw = "in addition, further problems, Furthermore";
 $Q1_4->e4->q2->i->aw = "First of all, Second, Then, the third problem";
@@ -170,7 +170,8 @@ $Q1_4->e4->q2->ii->aw = "To begin with, Then, and then, Next, after which, befor
 @section('js')
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-
+<script src="{{ asset('public/js/bootstrap-tagsinput-angular.js') }}"></script>
+<script src="{{ asset('public/js/bootstrap-tagsinput.min.js') }}"></script>
 <script>
     $('#check-answer').on('click', () => {
         $('#check-answer').prop('disabled',true)

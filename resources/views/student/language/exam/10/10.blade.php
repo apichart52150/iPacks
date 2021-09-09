@@ -209,9 +209,16 @@ $('#check-answer').addClass('d-none')
         $(".drag").draggable({
             disabled: true,
         });
+        let title = ""
+        let text = score + "/" + droppables.length + " points."
+        if (score == droppables.length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
         Swal.fire({
-            title: "Your score",
-            text: score + "",
+            title: title,
+            text: text,
             timer: 5000,
         }).then(() => {
             $(item).css({

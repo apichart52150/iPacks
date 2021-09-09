@@ -185,10 +185,10 @@ $choice = [
         },
     });
 
-        $("#check-answer").on("click", () => {
-$('#show-answer').addClass('d-block')
-$('#show-answer').removeClass('d-none')
-$('#check-answer').addClass('d-none')
+    $("#check-answer").on("click", () => {
+        $('#show-answer').addClass('d-block')
+        $('#show-answer').removeClass('d-none')
+        $('#check-answer').addClass('d-none')
 
         let droppables = $(".dropbox");
 
@@ -204,9 +204,17 @@ $('#check-answer').addClass('d-none')
         $(".drag").draggable({
             disabled: true,
         });
+        console.log('--->', droppables.length)
+        let title = ""
+        let text = score + "/" + droppables.length + " points."
+        if (score == droppables.length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
         Swal.fire({
-            title: "Your score",
-            text: score + "",
+            title: title,
+            text: text,
             timer: 5000,
         }).then(() => {
             $(item).css({
@@ -224,13 +232,13 @@ $('#check-answer').addClass('d-none')
 
         ele.addClass(bgColor)
     }
-$('#show-answer').on('click', function() {
+    $('#show-answer').on('click', function() {
         $('check-answer').addClass('d-none')
         $('.dropbox').each((idx, item) => {
 
-            if($(item).children().length == 1) {
-                if($(item).children().hasClass('color-danger')) {
-                    if($(item).children().text(answers[idx])) {
+            if ($(item).children().length == 1) {
+                if ($(item).children().hasClass('color-danger')) {
+                    if ($(item).children().text(answers[idx])) {
                         $(item).children().removeClass('color-danger')
                     }
                 }

@@ -316,8 +316,10 @@
             $('input[type="text1"]').each((index, item) => {
                 if (selectAnswer1[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'
-                } else {
                     $(`<span class="text-success mt-2">${selectAnswer1[index]}</span>`).insertAfter($(item));
+                } else {
+                    item.className = 'form-control border-danger'
+                    $(`<span class="text-danger mt-2">${selectAnswer1[index]}</span>`).insertAfter($(item));
                 }
             });
             $('#check-answer1').prop('disabled',true)
@@ -328,8 +330,10 @@
             $('input[type="text2"]').each((index, item) => {
                 if (selectAnswer2[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'
-                } else {
                     $(`<span class="text-success mt-2">${selectAnswer2[index]}</span>`).insertAfter($(item));
+                } else {
+                    item.className = 'form-control border-danger'
+                    $(`<span class="text-danger mt-2">${selectAnswer2[index]}</span>`).insertAfter($(item));
                 }
             });
             $('#check-answer2').prop('disabled',true)
@@ -339,9 +343,11 @@
         $('#check-answer3').prop('disabled',true)
             $('input[type="text3"]').each((index, item) => {
                 if (selectAnswer3[index].toLowerCase() == $(item).val().toLowerCase()) {
-                    item.className = 'form-control border-success'
+                    item.className = 'border-success'
+                    $(`<span class="text-success px-2 mt-2">${selectAnswer3[index]}</span>`).insertAfter($(item));
                 } else {
-                    $(`<span class="text-success mt-2">${selectAnswer3[index]}</span>`).insertAfter($(item));
+                    item.className = 'border-danger'
+                    $(`<span class="text-danger px-2 mt-2">${selectAnswer3[index]}</span>`).insertAfter($(item));
                 }
             });
             $('#check-answer3').prop('disabled',true)

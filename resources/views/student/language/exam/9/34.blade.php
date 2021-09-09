@@ -193,12 +193,13 @@ $A=[
 $('#show-answer').addClass('d-block')
 $('#show-answer').removeClass('d-none')
 $('#check-answer').addClass('d-none')
-
+            let score = 0
         let droppables = $(".dropbox");
 
         droppables.each((idx, item) => {
             if($(item).children().text().trim() == answers[idx]) {
                 checkAnswer($(item).children(), 'correct');
+                score++
             } else {
                 checkAnswer($(item).children(), 'incorrect');
             }
@@ -207,7 +208,24 @@ $('#check-answer').addClass('d-none')
         $(".drag").draggable({
             disabled: true,
         });
+        
+        let title = ""
+        let text = score + "/" + droppables.length + " points."
+        if (score == droppables.length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
 
+        Swal.fire({
+            title: title,
+            text: text,
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
+        });
         $("#check-answer").prop("disabled", true);
         $("#show-answer").prop("disabled", false);
     });

@@ -84,6 +84,9 @@
         width: 500px;
         padding-left: 10px;
     }
+    .event-click{
+        cursor: pointer;
+    }
 </style>
 @php
 
@@ -413,10 +416,9 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         </tr>
                         @foreach($caller_2 as $index => $caller_2)
                         <tr>
-                            <td style="vertical-align: middle;">{{$caller_2->n}}.</td>
-                            <td style="vertical-align: middle;" class="pb-2">
+                            <td colspan="2" style="vertical-align: middle;" class="pb-2">
                                 <span class="pr-2 q-caller-2 q-caller-2-{{$index}}" q="caller-2-{{$index}}"
-                                    aw="{{$caller_2->aw}}">{{$caller_2->q}}</span>
+                                    aw="{{$caller_2->aw}}">{{$caller_2->n}}. {{$caller_2->q}}</span>
                             </td>
                         </tr>
                         @endforeach
@@ -559,12 +561,13 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             <td style="width: 20px;">
                                 <div class="form-check">
                                     <input
-                                        class="form-check-input position-static q-check caller_4-{{$index}}-{{$index2}}"
+                                        class="form-check-input event-click position-static q-check caller_4-{{$index}}-{{$index2}}"
                                         type="radio" name="caller_4-{{$index}}" show-aw="caller_4-{{$index}}"
                                         aw="{{$caller_4_1->aw}}" value="{{$index2}}. {{$caller_4_2}}">
                                 </div>
                             </td>
-                            <td onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$index2}}. {{$caller_4_2}}
+                            <td>
+                            <span class="event-click" onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$index2}}. {{$caller_4_2}}</span>
                             </td>
                         </tr>
                         @endforeach

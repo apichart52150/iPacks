@@ -252,42 +252,42 @@ $key3 = [
 @section('js')
 <script>
     const selectAnswer1 = [
-            "Next Friday she's going to visit her parents.", 
-            "Tomorrow they're going to go for a bike ride.", 
-            "This afternoon I'm going to relax.", 
-            "When he gets home, he's going to have lunch.", 
+            "Next Friday she's going to visit her parents", 
+            "Tomorrow they're going to go for a bike ride", 
+            "This afternoon I'm going to relax", 
+            "When he gets home, he's going to have lunch", 
             "Tonight they're going to eat out", 
-            "When she leaves school, she's going to study at university.", 
-            "On the weekend I'm going to work in the garden.", 
+            "When she leaves school, she's going to study at university", 
+            "On the weekend I'm going to work in the garden", 
             "When he passes the test, he's going to buy a new car", 
             "When the food runs out, we're going to get very hungry", 
-            "If it rains, they're going to postpone the barbie.",
+            "If it rains, they're going to postpone the barbie",
         ];
 
         const selectAnswer2 = [
-            "My driving licence expires next year.", 
-            "The plane takes off at three o'clock.", 
-            "The shops open in half an hour's time.", 
-            "I finish school next December.", 
-            "The library closes in fifteen minutes' time.", 
-            "The programme starts at eight o'clock tonight.", 
-            "Daylight saving begins next week.", 
-            "The Christmas sale starts on Boxing Day.", 
-            "I go on holiday in three days' time.", 
-            "I start my new job next Monday.",
+            "My driving licence expires next year", 
+            "The plane takes off at three o'clock", 
+            "The shops open in half an hour's time", 
+            "I finish school next December", 
+            "The library closes in fifteen minutes' time", 
+            "The programme starts at eight o'clock tonight", 
+            "Daylight saving begins next week", 
+            "The Christmas sale starts on Boxing Day", 
+            "I go on holiday in three days' time", 
+            "I start my new job next Monday",
         ];
 
         const selectAnswer3 = [
             "I'm afraid I can't. I'm visiting my aunt next Saturday", 
-            "I'm afraid I can't. I'm going to the theatre this evening.", 
-            "I'm afraid I can't. I'm going out later on.", 
-            "I'm afraid I can't. I'm eating out tomorrow.", 
-            "I'm afraid I can't. I'm attending a course next week.", 
-            "I'm afraid I can't. I'm meeting some friends on Saturday night.", 
-            "I'm afraid I can't. I'm playing footie this afternoon.", 
+            "I'm afraid I can't. I'm going to the theatre this evening", 
+            "I'm afraid I can't. I'm going out later on", 
+            "I'm afraid I can't. I'm eating out tomorrow", 
+            "I'm afraid I can't. I'm attending a course next week", 
+            "I'm afraid I can't. I'm meeting some friends on Saturday night", 
+            "I'm afraid I can't. I'm playing footie this afternoon", 
             "I'm afraid I can't. I'm leaving town when you're on holiday", 
             "I'm afraid I can't. I'm marrying someone else next Sunday", 
-            "I'm afraid I can't. I'm flying to Sydney today.",
+            "I'm afraid I can't. I'm flying to Sydney today",
         ];
 
         $('#check-answer1').on('click', () => {
@@ -295,8 +295,10 @@ $key3 = [
             $('input[type="text1"]').each((index, item) => {
                 if (selectAnswer1[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'
-                } else {
                     $(`<span class="text-success mt-2">${selectAnswer1[index]}</span>`).insertAfter($(item));
+                } else {
+                    item.className = 'form-control border-danger'
+                    $(`<span class="text-danger mt-2">${selectAnswer1[index]}</span>`).insertAfter($(item));
                 }
             });
             $('#check-answer1').prop('disabled',true)
@@ -307,8 +309,10 @@ $key3 = [
             $('input[type="text2"]').each((index, item) => {
                 if (selectAnswer2[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'
-                } else {
                     $(`<span class="text-success mt-2">${selectAnswer2[index]}</span>`).insertAfter($(item));
+                } else {
+                    item.className = 'form-control border-danger'
+                    $(`<span class="text-danger mt-2">${selectAnswer2[index]}</span>`).insertAfter($(item));
                 }
             });
             $('#check-answer2').prop('disabled',true)
@@ -319,8 +323,10 @@ $key3 = [
             $('input[type="text3"]').each((index, item) => {
                 if (selectAnswer3[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'
-                } else {
                     $(`<span class="text-success mt-2">${selectAnswer3[index]}</span>`).insertAfter($(item));
+                } else {
+                    item.className = 'form-control border-danger'
+                    $(`<span class="text-danger mt-2">${selectAnswer3[index]}</span>`).insertAfter($(item));
                 }
             });
             $('#check-answer3').prop('disabled',true)
