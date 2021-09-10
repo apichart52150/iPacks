@@ -196,7 +196,7 @@ $('#check-answer').addClass('d-none')
             disabled: true,
         });
         let title = ""
-        let text = score + "/" + droppables.length + " points."
+        let text = "You got "+score + "/" + droppables.length + " points."
         if (score == droppables.length)
             title = "Congratulations!"
         else

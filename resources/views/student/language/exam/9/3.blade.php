@@ -32,13 +32,22 @@ $Q = [
 "q1" => "Language is the best means of",
 "q2" => ". In the modern",
 "q3" => "era it is not enough to be able to speak one language to",
-"q4" => "with the outside world. I strongly support the idea that children should begin learning a foreign language as soon as they start school. They become familiar with a strange language earlier, improve their hearing ability to understand new words as time goes by and learn new words. In the following",
+"q4" => "with the outside world. I strongly support the idea that children should begin learning a foreign language as
+soon as they start school. They become familiar with a strange language earlier, improve their hearing ability to
+understand new words as time goes by and learn new words. In the following",
 "q5" => "I will list some reasons to support my position. First of all, if one wants to see",
-"q6" => "soon, one must start sooner. So, the earlier children begin to learn a new language the better will be the result. Scientists say that a child does not confuse two different languages but learns them more effectively. Second,",
-"q7" => "are often afraid to make mistakes when they are speaking in a new language. This fear is one of the biggest barriers for a person in his efforts to speak freely. By contrast, children are not afraid of making grammatical mistakes because basically they just repeat words and sentences in the way they hear them. Also, children have a better chance to get rid of an accent. They get used to the right pronunciation more quickly and have a better feel for the rhythm of a language. To",
-"q8" => "up, I think that it is very essential for children to begin learning a foreign language at an early age. It brings many",
+"q6" => "soon, one must start sooner. So, the earlier children begin to learn a new language the better will be the
+result. Scientists say that a child does not confuse two different languages but learns them more effectively. Second,",
+"q7" => "are often afraid to make mistakes when they are speaking in a new language. This fear is one of the biggest
+barriers for a person in his efforts to speak freely. By contrast, children are not afraid of making grammatical
+mistakes because basically they just repeat words and sentences in the way they hear them. Also, children have a better
+chance to get rid of an accent. They get used to the right pronunciation more quickly and have a better feel for the
+rhythm of a language. To",
+"q8" => "up, I think that it is very essential for children to begin learning a foreign language at an early age. It
+brings many",
 ];
-$end = "such as great pronunciation. Also, it helps a child develop and gain more knowledge which is good in the long run.";
+$end = "such as great pronunciation. Also, it helps a child develop and gain more knowledge which is good in the long
+run.";
 
 $A = [
 "a1" => "adults",
@@ -57,7 +66,8 @@ $A = [
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
+                        <h5>The table shows annual budget allocation for defence and education in a number of different
+                            countries.</h5>
                         <div class="drag-container">
                             <div class="d-grid grid-5" id="choices">
                                 @foreach ($A as $choices)
@@ -172,7 +182,7 @@ $('#check-answer').addClass('d-none')
             disabled: true,
         });
         let title = ""
-        let text = score + "/" + droppables.length + " points."
+        let text = "You got "+score + "/" + droppables.length + " points."
         if (score == droppables.length)
             title = "Congratulations!"
         else
