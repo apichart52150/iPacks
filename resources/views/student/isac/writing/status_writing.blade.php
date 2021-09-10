@@ -1,4 +1,4 @@
-@extends('layouts.sac_w')
+@extends('layouts.main')
 
 @section('page-title')
 	<div class="row">
@@ -6,7 +6,7 @@
 			<div class="page-title-box">
 				<div class="page-title-right">
 					<ol class="breadcrumb m-0">
-						<li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('/') }}">Home</a></li>
+						<li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('isac_writing_home') }}">iPACK Writing</a></li>
 						<!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
 						<li class="breadcrumb-item active">Status Writing</li>
 					</ol>

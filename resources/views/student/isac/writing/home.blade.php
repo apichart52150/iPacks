@@ -1,4 +1,4 @@
-@extends('layouts.sac_w')
+@extends('layouts.main')
 
 @section('page-title')
     <div class="row">
@@ -8,10 +8,10 @@
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('/') }}">Home</a></li>
                         <!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
-                        <li class="breadcrumb-item active">iSAC Writing</li>
+                        <li class="breadcrumb-item active">iPACK Writing</li>
                     </ol>
                 </div>
-                <h4 class="page-title">iSAC Writing</h4>
+                <h4 class="page-title">iPACK Writing</h4>
             </div>
         </div>
     </div>     
@@ -34,7 +34,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="card-box border-top border-info border border-1">
-                <h4 class="header-title">iSAC Writing Task 1</h4>
+                <h4 class="header-title">iPACK Writing Task 1</h4>
                 <p class="sub-header mb-4">Each essay will deduct one point from your account</p>
 
                 <ul class="nav nav-tabs nav-bordered">
@@ -53,13 +53,13 @@
                             @foreach($tabValue as $key => $value)
                                 @php 
                                     $imgNo = "1_".$key;
-                                    $header = "iSAC Writing 1-".$key;
+                                    $header = "Writing 1-".$key;
                                     $type = $value['type'];
                                     $task = '1';
                                     
                                     $data = ['task' => $task, 'imgNo' => $imgNo, 'header' => $header, 'type' => $type];
                                 @endphp
-                                <button type="button" class="btn btn-info waves-effect waves-light mt-2 task" data-toggle="modal" data-target="#task1{{$key}}">iSAC Writing {{ $value['number'] }} {!! $value['icon'] !!}</button>
+                                <button type="button" class="btn btn-info waves-effect waves-light mt-2 task" data-toggle="modal" data-target="#task1{{$key}}">Writing {{ $value['number'] }} {!! $value['icon'] !!}</button>
                                 <!-- <button class="btn btn-info waves-effect waves-light mt-2 task" data-info="{{ json_encode($data) }}">iSAC Writing {{ $value['number'] }} {!! $value['icon'] !!}</button> -->
                                 <!-- modal -->
                                 <div id="task1{{$key}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -103,7 +103,7 @@
 
         <div class="col-lg-6">
             <div class="card-box border-top border-info border border-1">
-                <h4 class="header-title">iSAC Writing Task 2</h4>
+                <h4 class="header-title">iPACK Writing Task 2</h4>
                 <p class="sub-header mb-4">Each essay will deduct one point from your account</p>
 
                 <ul class="nav nav-tabs nav-bordered">
@@ -122,7 +122,7 @@
                             @foreach($tabValue as $key => $value)
                                 @php 
                                     $imgNo = "2_".$key;
-                                    $header = "iSAC Writing 2-".$key;
+                                    $header = "Writing 2-".$key;
                                     $type = $value['type'];
                                     $task = '2';
 
@@ -130,7 +130,7 @@
                                 @endphp
 
                                 <!-- button -->
-                                <button type="button"class="btn btn-info btn-rounded width-md waves-effect waves-light mt-2 task" data-toggle="modal" data-target="#task2{{$key}}">iSAC Writing {{ $value['number'] }} {!! $value['icon'] !!}</button>
+                                <button type="button"class="btn btn-info btn-rounded width-md waves-effect waves-light mt-2 task" data-toggle="modal" data-target="#task2{{$key}}">Writing {{ $value['number'] }} {!! $value['icon'] !!}</button>
                                 
                                 <!-- modal -->
                                 <div id="task2{{$key}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

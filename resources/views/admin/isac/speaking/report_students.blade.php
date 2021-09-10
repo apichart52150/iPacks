@@ -45,7 +45,7 @@
 @endphp
 
 @if($route == 'speaking/report/students')
-	@section('javascript')
+	@section('js')
 		<script>
 			$(function () {
 				$('input[name="date_search"]').val('');

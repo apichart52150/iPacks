@@ -53,7 +53,6 @@
                             <div class="line-hight d-inline w-auto mb-2 ">
                                 {{ $question['q'.$i] }} <!-- question -->
                             </div>
-                            <span class="font-weight-bold">{{ $i }}.</span> <!-- number question-->
                             <div class="input-con">
                                 <input type="text" class="form-control">
                             </div>
@@ -88,7 +87,7 @@
     answers[11] = ['shortest','least','worst'];
     answers[12] = ['longer','more'];
     answers[13] = ['wealthy','rich','developed'];
-    answers[14] = ['however','though'];
+    answers[14] = ['hoWever','though'];
 
     let score = 0;
 
@@ -97,6 +96,7 @@
     function checkAnswers() {
         
         $(':text').each((idx, item) => {
+            answers[idx] = answers[idx].toString().trim().toLowerCase().split(",")
 
             $(item).removeClass('border-success');
             $(item).removeClass('border-danger');
@@ -112,7 +112,24 @@
 
         $('#check-answer').prop('disabled', true);
         
-        alert('Your score is ' + score);
+        
+        let title = ""
+        let text = "You got "+score + "/" + $(':text').length + " points."
+        if (score == $(':text').length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
+        Swal.fire({
+            title: title,
+            text: text,
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
+        });
 
     }
 </script>

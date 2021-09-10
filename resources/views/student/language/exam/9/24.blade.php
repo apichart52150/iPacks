@@ -42,7 +42,7 @@ $Q=[
 "q11" => "much of the waste which is sent to at land fills. Companies can also",
 "q12" => "by developing new raw material which is recyclable and will",
 "q13" => "lead to less garbage. One good example of this is that tyre companies develop new tyres for cars which are not made of rubber but of new biodegradable material. As discussed above,",
-"q14" => ", business and the government can share the responsibility to reduce the amount of waste material and to save the earth. I hope that in the future our offspring will be better off with the well-preserved (14)",
+"q14" => ", business and the government can share the responsibility to reduce the amount of waste material and to save the earth. I hope that in the future our offspring will be better off with the well-preserved",
 
 ];
 $end = ".";
@@ -189,7 +189,7 @@ $('#check-answer').addClass('d-none')
             disabled: true,
         });
         let title = ""
-        let text = score + "/" + droppables.length + " points."
+        let text = "You got "+score + "/" + droppables.length + " points."
         if (score == droppables.length)
             title = "Congratulations!"
         else

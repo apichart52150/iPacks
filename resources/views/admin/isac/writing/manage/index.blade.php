@@ -35,7 +35,7 @@
 	$route = Route::current()->uri;
 @endphp
 @if($route == 'admin/god')
-	@section('javascript')
+	@section('js')
 	
 	@stop
 @endif

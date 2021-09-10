@@ -189,7 +189,7 @@ let score = 0
         });
 
         let title = ""
-        let text = score + "/" + droppables.length + " points."
+        let text = "You got "+score + "/" + droppables.length + " points."
         if (score == droppables.length)
             title = "Congratulations!"
         else

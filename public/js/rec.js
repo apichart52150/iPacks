@@ -102,7 +102,6 @@ function createDownloadLink(blob,encoding) {
     let fd = new FormData();
     fd.append('audio_data', blob, queryString[3]);
 
-    console.log(queryString);
 
     loadBtn.addEventListener('click', () => {
         $.ajax({
@@ -161,7 +160,7 @@ function createDownloadLink(blob,encoding) {
 
 // Count Time
 const time = 1;
-let totalTime = time * 10;
+let totalTime = time * 60;
 let timer;
 
 function setTime() {

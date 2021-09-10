@@ -67,7 +67,6 @@ class SpeakingController extends Controller
 
         // Insert Into table speaking
         DB::beginTransaction();
-
         try {
 
             $insertSpeaking = DB::table('speaking')
@@ -80,7 +79,6 @@ class SpeakingController extends Controller
                     'due_date' => $due_date
                 ]
             );
-
 
             DB::commit();
 

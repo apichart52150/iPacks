@@ -40,7 +40,7 @@
 </audio>
 @endsection
 
-@section('javascript')
+@section('js')
 <script src="{{ asset('public/js/timer.js') }}"></script>
 <script>
 	$(document).ready(function() {

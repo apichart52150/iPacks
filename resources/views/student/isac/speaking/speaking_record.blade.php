@@ -16,7 +16,6 @@
 @stop
 
 @section('content')
-<meta name="csrf-token" content="{{ csrf_token() }}">
 <div class="row justify-content-center mt-3" id="app">
     <div class="col-md-6">
         <div class="card">
@@ -48,9 +47,8 @@
                             </button>
                         </div>
                         <!-- <button id="stopBtn" class="btn btn-warning text-white" disabled>Stop</button> -->
-                        {{ csrf_field() }}
+
                         <button id="load" class="btn btn-success d-none">Submit</button>
-                        {{ csrf_field() }}
                         <button id="reset" class="btn btn-dark d-none" onclick="refresh()">Reset</button>
                     </div>
                 </div>
@@ -90,6 +88,7 @@
             </div>
             <div class="modal-body text-center">
                 <span class="text-danger m-auto" id="errPermission">Permission denied. Please allow your microphone</span>
+
                 <button class="btn btn-success btn-sm mt-3" data-dismiss="modal">OK</button>
             </div>
         </div><!-- /.modal-content -->
@@ -102,7 +101,7 @@
 </audio>
 @endsection
 
-@section('javascript')
+@section('js')
 <script src="{{ asset('public/js/WebAudioRecorder.min.js') }}"></script>
 <script src="{{ asset('public/js/rec.js') }}"></script>
 <script>

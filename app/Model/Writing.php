@@ -20,22 +20,4 @@ class Writing extends Model {
         return ($writing);
 
     } 
-
-    public static function decreasePoint() {
-        
-        $decrease_point = DB::table('student')
-        ->select('std_pointsac', 'std_pointspeaking',DB::raw('CASE WHEN std_pointsac != 0 THEN "std_pointsac" WHEN std_pointspeaking != 0 THEN "std_pointspeaking" ELSE "nopoint" END AS current_point'))
-        ->where('std_id', auth('student')->user()->std_id)
-        ->get();
-        
-        if($decrease_point[0]->current_point == 'nopoint') {
-
-            return 0;
-
-        }else {
-
-            DB::table('student')->where('std_id', auth('student')->user()->std_id)->decrement($decrease_point[0]->current_point);
-        }
-
-    }
 }

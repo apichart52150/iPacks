@@ -1,4 +1,4 @@
-@extends('layouts.sac_w')
+@extends('layouts.main')
 
 @section('page-title')
     <div class="row">
@@ -72,23 +72,6 @@
                             <input type="hidden" name="test_type" value="{{ $data['test_type'] }}">
                             <input type="hidden" name="level" value="{{ $data['level'] }}">
                             <input type="hidden" name="btn_status" value="">
-
-                            <div class="form-group">
-                                <label class="col-auto col-form-label mt-2 p-0">Select target band</label>
-                                <div class="col-auto">
-                                    <select name="targetbrand" class="form-control">
-                                        <option value="5">5</option>
-                                        <option value="5.5">5.5</option>
-                                        <option value="6">6</option>
-                                        <option value="6.5">6.5</option>
-                                        <option value="7">7</option>
-                                        <option value="7.5">7.5</option>
-                                        <option value="8">8</option>
-                                        <option value="8.5">8.5</option>
-                                        <option value="9">9</option>
-                                    </select>
-                                </div>
-                            </div>
 
                             <textarea id="elm1" name="text_result"></textarea>
 
