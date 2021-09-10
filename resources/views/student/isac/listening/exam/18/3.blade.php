@@ -10,9 +10,10 @@
     table thead tr th:nth-child(2) {
         width: 20%;
     }
-    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active {
         color: #ffffff;
-        background-color: #e74856;
+        background-color:#ec6391;
         border-color: #dee2e6 #dee2e6 #fff;
     }
 
@@ -220,6 +221,24 @@
     </div>
 </div>
 
+<div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}</h4>
+            </div>
+            <div class="modal-body text-center">
+                <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
+                <audio data-sound="sound-intro">
+                    <source
+                        src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}"
+                        type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+    </div>
+</div>
 @section('button-control')
    
 @endsection
@@ -297,8 +316,10 @@
             $('input[type="text1"]').each((index, item) => {
                 if (selectAnswer1[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'
-                } else {
                     $(`<span class="text-success mt-2">${selectAnswer1[index]}</span>`).insertAfter($(item));
+                } else {
+                    item.className = 'form-control border-danger'
+                    $(`<span class="text-danger mt-2">${selectAnswer1[index]}</span>`).insertAfter($(item));
                 }
             });
             $('#check-answer1').prop('disabled',true)
@@ -309,8 +330,10 @@
             $('input[type="text2"]').each((index, item) => {
                 if (selectAnswer2[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'
-                } else {
                     $(`<span class="text-success mt-2">${selectAnswer2[index]}</span>`).insertAfter($(item));
+                } else {
+                    item.className = 'form-control border-danger'
+                    $(`<span class="text-danger mt-2">${selectAnswer2[index]}</span>`).insertAfter($(item));
                 }
             });
             $('#check-answer2').prop('disabled',true)
@@ -320,12 +343,24 @@
         $('#check-answer3').prop('disabled',true)
             $('input[type="text3"]').each((index, item) => {
                 if (selectAnswer3[index].toLowerCase() == $(item).val().toLowerCase()) {
-                    item.className = 'form-control border-success'
+                    item.className = 'border-success'
+                    $(`<span class="text-success px-2 mt-2">${selectAnswer3[index]}</span>`).insertAfter($(item));
                 } else {
-                    $(`<span class="text-success mt-2">${selectAnswer3[index]}</span>`).insertAfter($(item));
+                    item.className = 'border-danger'
+                    $(`<span class="text-danger px-2 mt-2">${selectAnswer3[index]}</span>`).insertAfter($(item));
                 }
             });
             $('#check-answer3').prop('disabled',true)
         });
+$('#sound-modal').modal({
+    'show': true,
+    'backdrop': "static",
+    'keyboard': false
+})
+$('#sound-intro').on('click', (e) => {
+    $('#sound-modal').modal('hide')
+    const audio = document.querySelector('audio[data-sound="sound-intro"]');
+    audio.play()
+})
     </script>
 @stop

@@ -189,19 +189,9 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <span class="aw text-danger q-11 px-2">{{$aw->e11}}</span>
-                                </td>
-                            </tr>
-                            <tr>
                                 <td class="answers-container py-1">
                                     <span>12. </span>
                                     <div class="dropbox q w-75" show-aw="q-12" aw="{{$aw->e12}}"></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="aw text-danger q-12 px-2">{{$aw->e12}}</span>
                                 </td>
                             </tr>
                             <tr>
@@ -211,30 +201,15 @@ $Q16_20->e5->choice->c = "C Free catalogues";
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <span class="aw text-danger q-13 px-2">{{$aw->e13}}</span>
-                                </td>
-                            </tr>
-                            <tr>
                                 <td class="answers-container py-1">
                                     <span>14. </span>
                                     <div class="dropbox q w-75" show-aw="q-14" aw="{{$aw->e14}}"></div>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <span class="aw text-danger q-14 px-2">{{$aw->e14}}</span>
-                                </td>
-                            </tr>
-                            <tr>
                                 <td class="answers-container py-1">
                                     <span>15. </span>
                                     <div class="dropbox q w-75" show-aw="q-15" aw="{{$aw->e15}}"></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="aw text-danger q-15 px-2">{{$aw->e15}}</span>
                                 </td>
                             </tr>
                         </table>
@@ -300,7 +275,9 @@ $Q16_20->e5->choice->c = "C Free catalogues";
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
+<button id="show-answer" class="d-none btn btn-info">
+    Show Answers
+  </button>
 @endsection
 
 @section('js')
@@ -309,12 +286,19 @@ $Q16_20->e5->choice->c = "C Free catalogues";
 
 <script>
     $('#check-answer').on('click', () => {
+        $("#show-answer").addClass("d-block");
+$("#show-answer").removeClass("d-none");
+$("#check-answer").addClass("d-none");
         $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
+                    {show_aw($(item).attr('show-aw'), item)
+                $(item).children().addClass('bg-success')
+            }else{
+                    if($(item).text().trim().toUpperCase()!="")
+                        $(item).children().addClass('bg-danger')
+                    show_error(item)
+                }
         })
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
@@ -328,19 +312,26 @@ $Q16_20->e5->choice->c = "C Free catalogues";
             else
                 show_error(item)
         })
-        $('.q-check-input:checked').each((idx, item) => {
-            let aw = ""
-            if ($(item).val() == "False")
-                aw = $(item).val() + ": " + $('.' + $(item).attr('text')).val()
-            else
-                aw = $(item).val()
-            if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
         $('.aw').removeClass('aw')
-    })
+    }) 
+    $('#show-answer').on('click', function() {
+                    $('check-answer').addClass('d-none')
+                    $('.dropbox').each((idx, item) => {
+                
+                        if($(item).children().length == 1) {
+                            if($(item).children().hasClass('bg-danger')) {
+                                if($(item).children().text($(item).attr('aw'))) {
+                                    $(item).children().removeClass('bg-danger')
+                                }
+                            }
+                        } else {
+                            $(item).append(`<div class="drag">`+$(item).attr('aw')+`</div>`)
+                        }
+                
+                        $('.drag-container .drag').remove();
+                    })
+                    $("#show-answer").hide();
+                });
 
     function show_aw(aw, item) {
         $(item).addClass('border border-success')

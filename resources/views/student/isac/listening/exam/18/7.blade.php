@@ -11,9 +11,11 @@
         width: 20%;
     }
 
-    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active {
         color: #ffffff;
-        background-color: #e74856;
+        background-color:#ec6391;
         border-color: #dee2e6 #dee2e6 #fff;
     }
 </style>
@@ -158,6 +160,24 @@
         </div>
     </div>
 </div>
+<div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}</h4>
+            </div>
+            <div class="modal-body text-center">
+                <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
+                <audio data-sound="sound-intro">
+                    <source
+                        src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}"
+                        type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section('button-control')
    
@@ -167,29 +187,29 @@
     <script>
 
         const selectAnswer1 = [
-            "If you light the fuse, the bomb will explode.", 
-            "If the car breaks down again, I'll sell it.", 
-            "If the government wins the election, it will raise taxes.", 
-            "If I lose my job, I'll move to Sydney.", 
-            "If the ship hits the rocks, it will sink to the bottom.", 
-            "If the ship sinks, I'll swim to the shore.", 
+            "If you light the fuse, the bomb will explode", 
+            "If the car breaks down again, I'll sell it", 
+            "If the government wins the election, it will raise taxes", 
+            "If I lose my job, I'll move to Sydney", 
+            "If the ship hits the rocks, it will sink to the bottom", 
+            "If the ship sinks, I'll swim to the shore", 
             "If the Eagles win the Flag, I'll celebrate", 
-            "If the mortgage rate goes up, I'll sell the house.", 
-            "If there is a power cut, the lights will go out.", 
-            "If the lights go out, I'll find a candle.",
+            "If the mortgage rate goes up, I'll sell the house", 
+            "If there is a power cut, the lights will go out", 
+            "If the lights go out, I'll find a candle",
         ];
 
         const selectAnswer2 = [
             "We'll call off the barbie unless the weather improves", 
-            "Unless we hear from you, we'll assume the party is cancelled.", 
-            "Unless you turn the music down, you'll never hear the phone.", 
-            "They'll miss the bus unless they get a move on.", 
-            "He won't get the job unless he gets a haircut.", 
-            "I'll finish the work tonight unless there's a power cut.", 
-            "Unless the car breaks down, we'll arrive in Perth by midnight.", 
-            "Unless we get some rain soon, the plants will all die.", 
-            "Unless we set off soon, we'll never arrive on time.", 
-            "I'll never be rich unless I win Lotto.",
+            "Unless we hear from you, we'll assume the party is cancelled", 
+            "Unless you turn the music down, you'll never hear the phone", 
+            "They'll miss the bus unless they get a move on", 
+            "He won't get the job unless he gets a haircut", 
+            "I'll finish the work tonight unless there's a power cut", 
+            "Unless the car breaks down, we'll arrive in Perth by midnight", 
+            "Unless we get some rain soon, the plants will all die", 
+            "Unless we set off soon, we'll never arrive on time", 
+            "I'll never be rich unless I win Lotto",
         ];
 
         $('#check-answer1').on('click', () => {
@@ -197,8 +217,10 @@
             $('input[type="text1"]').each((index, item) => {
                 if (selectAnswer1[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'
-                } else {
                     $(`<span class="text-success mt-2">${selectAnswer1[index]}</span>`).insertAfter($(item));
+                } else {
+                    item.className = 'form-control border-danger'
+                    $(`<span class="text-danger mt-2">${selectAnswer1[index]}</span>`).insertAfter($(item));
                 }
             });
             $('#check-answer1').prop('disabled',true)
@@ -209,11 +231,23 @@
             $('input[type="text2"]').each((index, item) => {
                 if (selectAnswer2[index].toLowerCase() == $(item).val().toLowerCase()) {
                     item.className = 'form-control border-success'
-                } else {
                     $(`<span class="text-success mt-2">${selectAnswer2[index]}</span>`).insertAfter($(item));
+                } else {
+                    item.className = 'form-control border-danger'
+                    $(`<span class="text-danger mt-2">${selectAnswer2[index]}</span>`).insertAfter($(item));
                 }
             });
             $('#check-answer2').prop('disabled',true)
         });
+$('#sound-modal').modal({
+    'show': true,
+    'backdrop': "static",
+    'keyboard': false
+})
+$('#sound-intro').on('click', (e) => {
+    $('#sound-modal').modal('hide')
+    const audio = document.querySelector('audio[data-sound="sound-intro"]');
+    audio.play()
+})
     </script>
 @stop

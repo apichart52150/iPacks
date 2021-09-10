@@ -147,24 +147,10 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                     <td></td>
                                     <td></td>
                                     <td>
-                                        <span class="aw caller_2-1 text-danger ml-2">{{$caller_2->aw1}}</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <b>Answer: indirectly</b>
                                             <div class="dropbox w-75 q ml-2" show-aw="caller_2-2" aw="{{$caller_2->aw2}}"></div>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        <span class="aw caller_2-2 text-danger ml-2">{{$caller_2->aw2}}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -184,13 +170,6 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td></td>
-                                    <td>
-                                        <span class="aw caller_2-3 text-danger ml-2">{{$caller_2->aw3}}</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
                                     <td>2.3</td>
                                     <td>What volume of solid waste is buried every year in Perth?</td>
                                 </tr>
@@ -202,13 +181,6 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                             <b>Answer: </b>
                                             <div class="dropbox w-75 q ml-2" show-aw="caller_2-4" aw="{{$caller_2->aw4}}"></div>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        <span class="aw caller_2-4 text-danger ml-2">{{$caller_2->aw4}}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -228,13 +200,6 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td></td>
-                                    <td>
-                                        <span class="aw caller_2-5 text-danger ml-2">{{$caller_2->aw1}}</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
                                     <td>2.5</td>
                                     <td> In the talk, the speaker mentions 4 ways in which the problems of solid waste disposal can be tackled. What are they?</td>
                                 </tr>
@@ -246,13 +211,6 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
                                             <b>Answer: </b>
                                             <div class="dropbox w-75 q ml-2" show-aw="caller_2-6" aw="{{$caller_2->aw6}}"></div>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        <span class="aw caller_2-6 text-danger ml-2">{{$caller_2->aw6}}</span>
                                     </td>
                                 </tr>
                             </table>
@@ -340,7 +298,9 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
+<button id="show-answer" class="d-none btn btn-info">
+    Show Answers
+  </button>
 @endsection
 
 @section('js')
@@ -350,12 +310,19 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
 <script>
 
     $('#check-answer').on('click', () => {
+        $("#show-answer").addClass("d-block");
+$("#show-answer").removeClass("d-none");
+$("#check-answer").addClass("d-none");
         $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
+                    {show_aw($(item).attr('show-aw'), item)
+                $(item).children().addClass('bg-success')
+            }else{
+                    if($(item).text().trim().toUpperCase()!="")
+                        $(item).children().addClass('bg-danger')
+                    show_error(item)
+                }
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
@@ -366,7 +333,24 @@ $caller_2_choice->e6 = "Recycling; shoppers refusing plastic bags; breaking sown
         $('.aw').removeClass('aw')
         $("#check-answer").prop('disabled', true);
     })
+$('#show-answer').on('click', function() {
+    $('check-answer').addClass('d-none')
+    $('.dropbox').each((idx, item) => {
 
+        if($(item).children().length == 1) {
+            if($(item).children().hasClass('bg-danger')) {
+                if($(item).children().text($(item).attr('aw'))) {
+                    $(item).children().removeClass('bg-danger')
+                }
+            }
+        } else {
+            $(item).append(`<div class="drag">`+$(item).attr('aw')+`</div>`)
+        }
+
+        $('.drag-container .drag').remove();
+    })
+    $("#show-answer").hide();
+});
     function show_aw(aw, item) {
         $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')

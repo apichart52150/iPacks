@@ -299,8 +299,10 @@
          <!-- init js -->
         <script src="{{ asset('public/assets/js/pages/form-advanced.init.js') }}"></script>
 
+         <!-- sweet-alerts -->
         <script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
+
 
         <script>
             $('input[type="text"]').attr({
