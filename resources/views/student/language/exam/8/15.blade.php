@@ -28,17 +28,18 @@
 </style>
 @php
     //$question -> input
-    $q1 = "The flow-chart describes the process of";
-    $q2 = "rice. It can be seen that there are six major";
-    $q3 = "in this process, which take place in the rice fields, the processing plant, and finally the retail shops where the processed rice is";
-    $q4 = "The first stage is the preparation of the fields. In order to prepare the fields, the land must be";
-    $q5 = "This means that the soil is turned to make planting easier. In the";
-    $q6 = "ploughing was usually done using animals such as horses or buffalo, although nowadays ploughing is often done using a ";
-    $q7 = "over the fields and fertilizer is added to help the seeds to grow strong. Once the seeds have formed leaves, the young plants are thinned out and transplanted into rows. After a period of a few months, the mature rice crop is";
-    $q8 = "decade, it increased again to finish at 8,900 transplants in 2010. In Australia, 4,200 transplants";
-    $q9 = "again either manually or by machine. After harvesting, the";
-    $q10 = "are removed in the milling stage. Following this, the rice is";
-    $end = "usually in the sun, and then packed into sacks. Finally the packed rice can be sent to retail outlets, where it is sold.";
+    $Q=["q1" => "The flow-chart describes the process of",
+    "q2" => "rice. It can be seen that there are six major",
+    "q3" => "in this process, which take place in the rice fields, the processing plant, and finally the retail shops where the processed rice is",
+    "q4" => "The first stage is the preparation of the fields. In order to prepare the fields, the land must be",
+    "q5" => "This means that the soil is turned to make planting easier. In the",
+    "q6" => "ploughing was usually done using animals such as horses or buffalo, although nowadays ploughing is often done using a ",
+    "q7" => "over the fields and fertilizer is added to help the seeds to grow strong. Once the seeds have formed leaves, the young plants are thinned out and transplanted into rows. After a period of a few months, the mature rice crop is",
+    "q8" => "decade, it increased again to finish at 8,900 transplants in 2010. In Australia, 4,200 transplants",
+    "q9" => "again either manually or by machine. After harvesting, the",
+    "q10" => "are removed in the milling stage. Following this, the rice is",
+];
+$end = "usually in the sun, and then packed into sacks. Finally the packed rice can be sent to retail outlets, where it is sold.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -51,67 +52,19 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12">
-        <div class="card-box text-dark font-15">
-            <div class="row justify-content-center mb-2">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                            {{$q1}}
-                            <span class="font-weight-bold">1.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q2}}
-                            <span class="font-weight-bold">2.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q3}}
-                            <span class="font-weight-bold">3.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q4}}
-                            <span class="font-weight-bold">4.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q5}}
-                            <span class="font-weight-bold">5.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q6}}
-                            <span class="font-weight-bold">6.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q7}}
-                            <span class="font-weight-bold">7.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q8}}
-                            <span class="font-weight-bold">8.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q9}}
-                            <span class="font-weight-bold">9. </span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q10}}
-                            <span class="font-weight-bold">10.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$end}}
+                        @foreach ($Q as $Q)
+                        <div class="line-hight d-inline w-auto mb-2 ">
+                            {{ $Q }}
+                            <!-- question -->
+                        </div>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        @endforeach
+                        {{$end}}
                     </div>
                 </div>
             </div>
@@ -127,120 +80,59 @@
 @section('js')
 <script>
     // no space answer
-    const answer1 = ['cultivating', 'growing'];
-    const answer2 = ['stages'];
-    const answer3 = ['sold'];
-    const answer4 = ['ploughed'];
-    const answer5 = ['past'];
-    const answer6 = ['tractor'];
-    const answer7 = ['scattered', 'dispersed', 'sown'];
-    const answer8 = ['harvested'];
-    const answer9 = ['husks'];
-    const answer10 = ['dried'];
+    
+    const answers = []
+    answers[0]= ['cultivating', 'growing'];
+    answers[1] = ['stages'];
+    answers[2] = ['sold'];
+    answers[3] = ['ploughed'];
+    answers[4] = ['past'];
+    answers[5] = ['tractor'];
+    answers[6] = ['scattered', 'dispersed', 'sown'];
+    answers[7] = ['harvested'];
+    answers[8] = ['husks'];
+    answers[9] = ['dried'];
 
     let score = 0;
 
     $('#check-answer').click(checkAnswers) 
-
+  
     function checkAnswers() {
         let icon;
         $(':text').each((idx, item) => {
-            switch(idx) {
-                case 0:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer1) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 1:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer2) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 2:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer3) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 3:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer4) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 4:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer5) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 5:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer6) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 6:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer7) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 7:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer8) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 8:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer9) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 9:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer10) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
+            answers[idx] = answers[idx].toString().trim().toLowerCase().split(",")
+            $(item).removeClass('border-success');
+            $(item).removeClass('border-danger');
+            
+            if(jQuery.inArray($(item).val().toLowerCase(),  answers[idx]) != -1) {
+                $(item).addClass('border border-success');
+                score++
+            } else {
+                $(`<span class="text-success"><u>${answers[idx]}</u></span>`).insertAfter($(item));
+                $(item).addClass('border border-danger');
             }
-
-            $(item).parent().find('.ans-con').remove();
-            $(item).parent().append(`
-                <div class="ans-con pr-2">
-                    ${icon}
-                </div>
-            `)
         })
 
-        if(score == 10){
-            alert("you're awesome");
-        }else{
-            alert('Your score is ' + score);
-        }
+        $('#check-answer').prop('disabled', true);
+        
+        let title = ""
+        let text = "You got "+score + "/" + $(':text').length + " points."
+        if (score == $(':text').length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
+        Swal.fire({
+            title: title,
+            text: text,
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
+        });
+
     }
 </script>
 @stop

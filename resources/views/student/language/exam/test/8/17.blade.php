@@ -28,17 +28,18 @@
 </style>
 @php
     //$question -> input
-    $q1 = "The map shows how Biggsville, a village not ";
-    $q2 = "from London, has developed since 1868, when the village was first established. It can be seen that there is a ";
-    $q3 = "between the growth of the village and the development of transportation infrastructure, namely, roads and";
-    $q4 = "access. In its early stages, the village was built between two main roads and it continued to grow along these roads in a";
-    $q5 = "direction. The construction of the railway in 1909 resulted in further growth in this direction. There was also";
-    $q6 = "to the south of the railway and along the main road south of the railway station line";
-    $q7 = "1922 and 1970. This trend continued until 1970 when a motorway was";
-    $q8 = "to the east of the existing village, crossing both the railway line and one of the main roads. Over the next twenty-five years, the village increased in";
-    $q9 = "as further accommodation was built along the motorway, mostly on the eastern side but also some to the west. To";
-    $q10 = "up, the village developed to the south, west and east of the ";
-    $end = "location, in conjunction with the construction of transportation routes.";
+    $Q=["q1" => "The map shows how Biggsville, a village not ",
+    "q2" => "from London, has developed since 1868, when the village was first established. It can be seen that there is a ",
+    "q3" => "between the growth of the village and the development of transportation infrastructure, namely, roads and",
+    "q4" => "access. In its early stages, the village was built between two main roads and it continued to grow along these roads in a",
+    "q5" => "direction. The construction of the railway in 1909 resulted in further growth in this direction. There was also",
+    "q6" => "to the south of the railway and along the main road south of the railway station line",
+    "q7" => "1922 and 1970. This trend continued until 1970 when a motorway was",
+    "q8" => "to the east of the existing village, crossing both the railway line and one of the main roads. Over the next twenty-five years, the village increased in",
+    "q9" => "as further accommodation was built along the motorway, mostly on the eastern side but also some to the west. To",
+    "q10" => "up, the village developed to the south, west and east of the ",
+];
+$end = "location, in conjunction with the construction of transportation routes.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -242,7 +243,24 @@
         if(score == 10){
             alert("you're awesome");
         }else{
-            alert('Your score is ' + score);
+            
+        let title = ""
+        let text = "You got "+score + "/" + $(':text').length + " points."
+        if (score == $(':text').length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
+        Swal.fire({
+            title: title,
+            text: text,
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
+        });
         }
     }
 </script>

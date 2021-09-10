@@ -28,19 +28,20 @@
 </style>
 @php
     //$question -> input
-    $q1 = "The bar-chart gives information about the number of serious crimes such as murder, rape and violent theft, which took";
-    $q2 = " in a four different countries, namely, France, the USA, the UK and Australia, between 1990 and 2005. It can be seen that the USA";
-    $q3 = "the group in";
-    $q4 = "of the frequency of serious crimes in all years, and the trend is";
-    $q5 = "To begin with those countries which";
-    $q6 = "an increasing trend, we can see that the United States started with around 1000 serious crimes at the beginning of the period in 1995. This";
-    $q7 = "grew steadily over the years to end the period at 2,000, a 100% increase. France";
-    $q8 = "experienced an increasing trend,";
-    $q9 = " the period at around 7,000 and increasing steadily until 2000 when it reached 12,000. It remained at this figure in 2005.";
-    $q10 = "to the countries which showed a decreasing trend, we can see that the United Kingdom started the period at 9,000, the";
-    $q11 = "number of all the countries, and this";
-    $q12 = "steadily in stages over the years to finish at 6,000. Australia, similarly, experienced a decrease over the years. It started at 7,000 in 1995 and fell steadily to a";
-    $end = " of 5,000 in 2000. The following year, however, saw a slight rise to end the period at 6,000.";
+    $Q=["q1" => "The bar-chart gives information about the number of serious crimes such as murder, rape and violent theft, which took",
+    "q2" => " in a four different countries, namely, France, the USA, the UK and Australia, between 1990 and 2005. It can be seen that the USA",
+    "q3" => "the group in",
+    "q4" => "of the frequency of serious crimes in all years, and the trend is",
+    "q5" => "To begin with those countries which",
+    "q6" => "an increasing trend, we can see that the United States started with around 1000 serious crimes at the beginning of the period in 1995. This",
+    "q7" => "grew steadily over the years to end the period at 2,000, a 100% increase. France",
+    "q8" => "experienced an increasing trend,",
+    "q9" => " the period at around 7,000 and increasing steadily until 2000 when it reached 12,000. It remained at this figure in 2005.",
+    "q10" => "to the countries which showed a decreasing trend, we can see that the United Kingdom started the period at 9,000, the",
+    "q11" => "number of all the countries, and this",
+    "q12" => "steadily in stages over the years to finish at 6,000. Australia, similarly, experienced a decrease over the years. It started at 7,000 in 1995 and fell steadily to a",
+];
+$end = " of 5,000 in 2000. The following year, however, saw a slight rise to end the period at 6,000.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -54,77 +55,19 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12">
-        <div class="card-box text-dark font-15">
-            <div class="row justify-content-center mb-2">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                            {{$q1}}
-                            <span class="font-weight-bold">1.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q2}}
-                            <span class="font-weight-bold">2.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q3}}
-                            <span class="font-weight-bold">3.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q4}}
-                            <span class="font-weight-bold">4.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q5}}
-                            <span class="font-weight-bold">5.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q6}}
-                            <span class="font-weight-bold">6.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q7}}
-                            <span class="font-weight-bold">7.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q8}}
-                            <span class="font-weight-bold">8.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q9}}
-                            <span class="font-weight-bold">9. </span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q10}}
-                            <span class="font-weight-bold">10.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q12}}
-                            <span class="font-weight-bold">12.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$end}}
+                        @foreach ($Q as $Q)
+                        <div class="line-hight d-inline w-auto mb-2 ">
+                            {{ $Q }}
+                            <!-- question -->
+                        </div>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        @endforeach
+                        {{$end}}
                     </div>
                 </div>
             </div>
@@ -140,138 +83,61 @@
 @section('js')
 <script>
     // no space answer
-    const answer1 = ['place'];
-    const answer2 = ['leads', 'tops'];
-    const answer3 = ['terms'];
-    const answer4 = ['increasing', 'growing'];
-    const answer5 = ['experienced', 'showed'];
-    const answer6 = ['number', 'figure'];
-    const answer7 = ['also'];
-    const answer8 = ['starting'];
-    const answer9 = ['Moving'];
-    const answer10 = ['largest', 'highest', 'biggest'];
-    const answer11 = ['dropped', 'fell', 'decreased'];
-    const answer12 = ['low'];
+    
+    const answers = []
+    answers[0]= ['place'];
+    answers[1] = ['leads', 'tops'];
+    answers[2] = ['terms'];
+    answers[3] = ['increasing', 'growing'];
+    answers[4] = ['experienced', 'showed'];
+    answers[5] = ['number', 'figure'];
+    answers[6] = ['also'];
+    answers[7] = ['starting'];
+    answers[8] = ['Moving'];
+    answers[9] = ['largest', 'highest', 'biggest'];
+    answers[10] = ['dropped', 'fell', 'decreased'];
+    answers[11] = ['low'];
 
     let score = 0;
 
     $('#check-answer').click(checkAnswers) 
-
+ 
     function checkAnswers() {
         let icon;
         $(':text').each((idx, item) => {
-            switch(idx) {
-                case 0:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer1) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 1:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer2) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 2:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer3) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 3:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer4) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 4:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer5) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 5:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer6) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 6:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer7) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 7:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer8) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 8:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer9) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 9:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer10) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 10:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 11:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
+            answers[idx] = answers[idx].toString().trim().toLowerCase().split(",")
+            $(item).removeClass('border-success');
+            $(item).removeClass('border-danger');
+            
+            if(jQuery.inArray($(item).val().toLowerCase(),  answers[idx]) != -1) {
+                $(item).addClass('border border-success');
+                score++
+            } else {
+                $(`<span class="text-success"><u>${answers[idx]}</u></span>`).insertAfter($(item));
+                $(item).addClass('border border-danger');
             }
-
-            $(item).parent().find('.ans-con').remove();
-            $(item).parent().append(`
-                <div class="ans-con pr-2">
-                    ${icon}
-                </div>
-            `)
         })
 
-        if(score == 12){
-            alert("you're awesome");
-        }else{
-            alert('Your score is ' + score);
-        }
+        $('#check-answer').prop('disabled', true);
+        
+        let title = ""
+        let text = "You got "+score + "/" + $(':text').length + " points."
+        if (score == $(':text').length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
+        Swal.fire({
+            title: title,
+            text: text,
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
+        });
+
     }
 </script>
 @stop

@@ -28,17 +28,18 @@
 </style>
 @php
     //$question -> input
-    $q1 = "The map shows how Biggsville, a village not ";
-    $q2 = "from London, has developed since 1868, when the village was first established. It can be seen that there is a ";
-    $q3 = "between the growth of the village and the development of transportation infrastructure, namely, roads and";
-    $q4 = "access. In its early stages, the village was built between two main roads and it continued to grow along these roads in a";
-    $q5 = "direction. The construction of the railway in 1909 resulted in further growth in this direction. There was also";
-    $q6 = "to the south of the railway and along the main road south of the railway station line";
-    $q7 = "1922 and 1970. This trend continued until 1970 when a motorway was";
-    $q8 = "to the east of the existing village, crossing both the railway line and one of the main roads. Over the next twenty-five years, the village increased in";
-    $q9 = "as further accommodation was built along the motorway, mostly on the eastern side but also some to the west. To";
-    $q10 = "up, the village developed to the south, west and east of the ";
-    $end = "location, in conjunction with the construction of transportation routes.";
+    $Q=["q1" => "The map shows how Biggsville, a village not ",
+    "q2" => "from London, has developed since 1868, when the village was first established. It can be seen that there is a ",
+    "q3" => "between the growth of the village and the development of transportation infrastructure, namely, roads and",
+    "q4" => "access. In its early stages, the village was built between two main roads and it continued to grow along these roads in a",
+    "q5" => "direction. The construction of the railway in 1909 resulted in further growth in this direction. There was also",
+    "q6" => "to the south of the railway and along the main road south of the railway station line",
+    "q7" => "1922 and 1970. This trend continued until 1970 when a motorway was",
+    "q8" => "to the east of the existing village, crossing both the railway line and one of the main roads. Over the next twenty-five years, the village increased in",
+    "q9" => "as further accommodation was built along the motorway, mostly on the eastern side but also some to the west. To",
+    "q10" => "up, the village developed to the south, west and east of the ",
+];
+$end = "location, in conjunction with the construction of transportation routes.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -52,67 +53,19 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12">
-        <div class="card-box text-dark font-15">
-            <div class="row justify-content-center mb-2">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                            {{$q1}}
-                            <span class="font-weight-bold">1.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q2}}
-                            <span class="font-weight-bold">2.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q3}}
-                            <span class="font-weight-bold">3.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q4}}
-                            <span class="font-weight-bold">4.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q5}}
-                            <span class="font-weight-bold">5.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q6}}
-                            <span class="font-weight-bold">6.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q7}}
-                            <span class="font-weight-bold">7.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q8}}
-                            <span class="font-weight-bold">8.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q9}}
-                            <span class="font-weight-bold">9. </span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q10}}
-                            <span class="font-weight-bold">10.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$end}}
+                        @foreach ($Q as $Q)
+                        <div class="line-hight d-inline w-auto mb-2 ">
+                            {{ $Q }}
+                            <!-- question -->
+                        </div>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        @endforeach
+                        {{$end}}
                     </div>
                 </div>
             </div>
@@ -128,16 +81,18 @@
 @section('js')
 <script>
     // no space answer
-    const answer1 = ['far'];
-    const answer2 = ['correlation', 'link'];
-    const answer3 = ['railway'];
-    const answer4 = ['south-westerly'];
-    const answer5 = ['expansion', 'development', 'construction'];
-    const answer6 = ['between'];
-    const answer7 = ['built', 'constructed'];
-    const answer8 = ['size'];
-    const answer9 = ['sum'];
-    const answer10 = ['original'];
+    
+    const answers = []
+    answers[0]= ['far'];
+    answers[1] = ['correlation', 'link'];
+    answers[2] = ['railway'];
+    answers[3] = ['south-westerly'];
+    answers[4] = ['expansion', 'development', 'construction'];
+    answers[5] = ['between'];
+    answers[6] = ['built', 'constructed'];
+    answers[7] = ['size'];
+    answers[8] = ['sum'];
+    answers[9] = ['original'];
 
     let score = 0;
 
@@ -146,102 +101,39 @@
     function checkAnswers() {
         let icon;
         $(':text').each((idx, item) => {
-            switch(idx) {
-                case 0:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer1) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 1:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer2) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 2:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer3) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 3:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer4) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 4:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer5) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 5:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer6) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 6:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer7) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 7:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer8) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 8:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer9) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 9:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer10) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
+            answers[idx] = answers[idx].toString().trim().toLowerCase().split(",")
+            $(item).removeClass('border-success');
+            $(item).removeClass('border-danger');
+            
+            if(jQuery.inArray($(item).val().toLowerCase(),  answers[idx]) != -1) {
+                $(item).addClass('border border-success');
+                score++
+            } else {
+                $(`<span class="text-success"><u>${answers[idx]}</u></span>`).insertAfter($(item));
+                $(item).addClass('border border-danger');
             }
-
-            $(item).parent().find('.ans-con').remove();
-            $(item).parent().append(`
-                <div class="ans-con pr-2">
-                    ${icon}
-                </div>
-            `)
         })
 
-        if(score == 10){
-            alert("you're awesome");
-        }else{
-            alert('Your score is ' + score);
-        }
+        $('#check-answer').prop('disabled', true);
+        
+        let title = ""
+        let text = "You got "+score + "/" + $(':text').length + " points."
+        if (score == $(':text').length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
+        Swal.fire({
+            title: title,
+            text: text,
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
+        });
+
     }
 </script>
 @stop
