@@ -100,9 +100,7 @@ function createDownloadLink(blob,encoding) {
     queryString = queryString.split('/');
 
     let fd = new FormData();
-    fd.append('audio_data', blob, queryString[3]);
-
-    console.log(fd);
+    fd.append('audio_data', blob, queryString[3], '');
 
     loadBtn.addEventListener('click', () => {
         $.ajax({
