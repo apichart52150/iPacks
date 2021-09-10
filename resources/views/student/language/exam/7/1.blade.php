@@ -9,34 +9,24 @@
         margin: 10px 5px;
     }
 
-    ul.questions li {
-        margin: 20px 0;
-        line-height: 2rem;
-    }
-
     .input-con {
         display: inline-block;
         position: relative;
-    }
-
-    .ans-con {
-        position: absolute;
-        top: 50%;
-        right: 5px;
-        transform: translateY(-50%);
     }
 </style>
 <div class="row">
     <div class="col-md-12">
         <div class="card-box text-dark font-15">
             <div class="row justify-content-center mb-2">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The graph below shows the number of marriages and divorces in a particular city between 1950 and 2010.</h5>
                         <img src="{{ asset('public/img_lang/gap1/gap1_1.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
-                <div class="col-md-6">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
                     <div class="border border-dark p-2">
                         The line-graphs give details of how many people got married and divorced in one city from 1950 to 2010. Figures are given in thousands. Overall, it can be seen that the number of marriages
                         <span class="font-weight-bold">1.</span> 
@@ -134,23 +124,22 @@
     function checkAnswers() {
         let icon;
         $(':text').each((idx, item) => {
+
+            $(item).removeClass('border-success');
+            $(item).removeClass('border-danger');
             
             if(jQuery.inArray($(item).val().toLowerCase(),  answers[idx]) != -1) {
-                icon = '<i class="fas fa-check text-success"></i>';
+                $(item).addClass('border border-success');
                 score++
             } else {
-                icon = '<i class="fas fa-times text-danger"></i>';
+                $(`<span class="text-success"><u>${answers[idx]}</u></span>`).insertAfter($(item));
+                $(item).addClass('border border-danger');
             }
-
-            $(item).parent().find('.ans-con').remove();
-            $(item).parent().append(`
-                <div class="ans-con pr-2">
-                    ${icon}
-                </div>
-            `)
         })
 
+        $('#check-answer').prop('disabled', true);
         alert('Your score is ' + score);
+
     }
 </script>
 @stop
