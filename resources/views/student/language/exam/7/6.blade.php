@@ -80,13 +80,13 @@ $end = "the Airbus has four, two under each wing.";
 </div>
 
 
-    @section('button-control')
-    <button id="check-answer" class="btn btn-info">Check Answers</button>
-    @endsection
+@section('button-control')
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+@endsection
 
-    @section('js')
-    <script>
-        const answers = []
+@section('js')
+<script>
+    const answers = []
     answers[0]= ['details', 'information'];
     answers[1] = ['long'];
     answers[2] = ['length'];
@@ -121,8 +121,25 @@ $end = "the Airbus has four, two under each wing.";
         })
 
         $('#check-answer').prop('disabled', true);
-        alert('Your score is ' + score);
+        
+        let title = ""
+        let text = "You got "+score + "/" + $(':text').length + " points."
+        if (score == $(':text').length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
+        Swal.fire({
+            title: title,
+            text: text,
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
+        });
 
     }
-    </script>
-    @stop
+</script>
+@stop
