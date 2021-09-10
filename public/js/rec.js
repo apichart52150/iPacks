@@ -102,6 +102,7 @@ function createDownloadLink(blob,encoding) {
     let fd = new FormData();
     fd.append('audio_data', blob, queryString[3]);
 
+    console.log(fd);
 
     loadBtn.addEventListener('click', () => {
         $.ajax({
@@ -139,11 +140,13 @@ function createDownloadLink(blob,encoding) {
                 }, false);
                 return xhr;
             },
+            
             beforeSend: function(evt) {
                 $('#beforesend').removeClass('d-none');
                 message.classList.remove('d-none');
                 loadBtn.disabled = true;
             },
+
             complete: function(data){
                 let msg = JSON.parse(data.responseText);
                 console.log(msg);
@@ -160,7 +163,7 @@ function createDownloadLink(blob,encoding) {
 
 // Count Time
 const time = 1;
-let totalTime = time * 60;
+let totalTime = time * 3;
 let timer;
 
 function setTime() {

@@ -67,6 +67,7 @@ class SpeakingController extends Controller
 
         // Insert Into table speaking
         DB::beginTransaction();
+        
         try {
 
             $insertSpeaking = DB::table('speaking')

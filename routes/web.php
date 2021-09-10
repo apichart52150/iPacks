@@ -60,7 +60,7 @@
 			Route::get('intro/{topic}', 'SpeakingController@intro');
 			Route::get('record/{topic}', 'SpeakingController@record');
 			Route::get('submit/{topic}', 'SpeakingController@submit');
-			Route::post('saveSound', 'SpeakingController@saveSound')->name("saveSound");
+			Route::post('saveSound', 'SpeakingController@saveSound');
 			Route::post('update_score_course', 'SpeakingController@update_score_course')->name('update_score_course');
 
 		});
