@@ -68,7 +68,7 @@
 </div>
 @endsection
 
-@section('javascript')
+@section('js')
 <script>
 	$('#download').on('click', loadToExternal);
 

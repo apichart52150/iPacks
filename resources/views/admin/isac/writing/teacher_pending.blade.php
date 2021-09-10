@@ -50,7 +50,7 @@
 </div>
 @endsection
 
-@section('javascript')
+@section('js')
     <script>
         function reStatus(data, url) {
             if(confirm(`Are you sure you want to ReStatus?\n ${data.test_type} \n ${data.std_name} `)) {

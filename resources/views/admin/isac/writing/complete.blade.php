@@ -31,7 +31,7 @@
     </div>
 @endsection
 
-@section('javascript')
+@section('js')
 <script>
 	$(document).ready(function(){
 		$('#custom-datatable').DataTable({

@@ -101,7 +101,7 @@
 </audio>
 @endsection
 
-@section('javascript')
+@section('js')
 <script src="{{ asset('public/js/WebAudioRecorder.min.js') }}"></script>
 <script src="{{ asset('public/js/rec.js') }}"></script>
 <script>

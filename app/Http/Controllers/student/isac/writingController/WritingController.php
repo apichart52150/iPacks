@@ -35,11 +35,6 @@ class WritingController extends Controller
         // W | TH_S = Pending
         // ST_S = Work in progres
 
-        if(auth('student')->user()->std_pointsac < 1) {
-            session()->flash('message', 'ขออภัยคุณมี Point ไม่เพียงพอสำหรับการใช้งาน');
-            return redirect('user_home');
-        }
-
         $date_now = date('Y-m-d H:i:s');
 
         if($request->btn_status == 'submit' || empty($request->btn_status)) {
@@ -62,7 +57,6 @@ class WritingController extends Controller
                             'mode' => $request->input('mode'),
                             'status' => 'N',
                             'level' => $request->input('level'),
-                            'targetbrand' => $request->input('targetbrand'),
                             'sent_date' => $date_now,
                             'due_date' => $due_date,
                         ]
@@ -102,33 +96,24 @@ class WritingController extends Controller
             try {
 
                 $result = DB::table('text_result')
-                    ->insert(
-                        [
-                            'code_test' => $request->input('code_test'),
-                            'std_id' => auth('student')->user()->std_id,
-                            'test_type' => $request->input('test_type'),
-                            'header_test' => $request->input('header_test'),
-                            'text' => $request->input('text_result'),
-                            'mode' => $request->input('mode'),
-                            'status' => 'ST_S',
-                            'level' => $request->input('level'),
-                            'targetbrand' => $request->input('targetbrand'),
-                            'sent_date' => $date_now
-                        ]
-                    );
-
-                if($result) {
-                    DB::table('log')
-                        ->insert([
-                            'std_id' => auth('student')->user()->std_id,
-                            'content' => 'Save '.$request->input('test_type').' '.$request->input('header_test'),
-                            'tab'=>'SAC Online'
-                        ]);
+                ->insert(
+                    [
+                        'code_test' => $request->input('code_test'),
+                        'std_id' => auth('student')->user()->std_id,
+                        'test_type' => $request->input('test_type'),
+                        'header_test' => $request->input('header_test'),
+                        'text' => $request->input('text_result'),
+                        'mode' => $request->input('mode'),
+                        'status' => 'ST_S',
+                        'level' => $request->input('level'),
+                        'sent_date' => $date_now
+                    ]
+                );
                 
-                    DB::commit();
+                DB::commit();
 
-                    return redirect('status_writing');
-                }
+                return redirect('status_writing');
+                
 
             } catch(Exception $e) {
                 DB::rollback();

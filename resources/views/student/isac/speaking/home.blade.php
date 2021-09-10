@@ -75,6 +75,6 @@
 <!-- end row -->
 @endsection
 
-@section('javascript')
+@section('js')
 <script src="{{ asset('public/js/checkos.js') }}"></script>
 @stop

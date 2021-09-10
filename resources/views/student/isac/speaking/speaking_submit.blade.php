@@ -65,7 +65,7 @@
 </audio>
 @endsection
 
-@section('javascript')
+@section('js')
 <script>
 $(document).ready(function() {
     $('#sound3').on('ended', function() {
