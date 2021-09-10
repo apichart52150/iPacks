@@ -1,4 +1,4 @@
-@extends('layouts.sac_s')
+@extends('layouts.main')
 
 @section('title', 'status')
 

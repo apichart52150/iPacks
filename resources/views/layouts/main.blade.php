@@ -301,6 +301,8 @@
        
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/jquery-knob/jquery.knob.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/peity/jquery.peity.min.js') }}"></script>
 
         <!-- Modal-Effect -->
         <script src="{{ asset('public/assets/libs/custombox/custombox.min.js') }}"></script>
@@ -331,10 +333,15 @@
         <script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
 
+        <!-- Datatables init -->
         <script src="{{ asset('public/assets/libs/datatables/jquery.dataTables.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.js') }}"></script>
         <script src="{{ asset('public/assets/libs/datatables/dataTables.responsive.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/datatables/dataTables.buttons.min.js') }}"></script>
+        <script src="{{ asset('public/assets/js/pages/datatables.init.js') }}"></script>
+
+        <!-- Sparkline charts -->
+        <script src="{{ asset('public/assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
 
         <script>
             $(document).ready(function () {

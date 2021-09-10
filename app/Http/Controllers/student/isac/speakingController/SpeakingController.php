@@ -58,51 +58,44 @@ class SpeakingController extends Controller
             $sound->move($location, $path);
         }
 
-        if(auth('student')->user()->std_pointspeaking > 0) {
+        $due_date = date('Y-m-d H:i:s');
+        $due_date = strtotime($due_date);
+        $due_date = strtotime("+6 day", $due_date);
+        $due_date = date('Y-m-d H:i:s', $due_date);
 
-            $due_date = date('Y-m-d H:i:s');
-            $due_date = strtotime($due_date);
-            $due_date = strtotime("+6 day", $due_date);
-            $due_date = date('Y-m-d H:i:s', $due_date);
+        // Insert Into table speaking
+        DB::beginTransaction();
+        try {
 
-            // Insert Into table speaking
-            DB::beginTransaction();
-            try {
+            $insertSpeaking = DB::table('speaking')
+            ->insertGetId(
+                [
+                    'std_id' => $std_id,
+                    'topic' => $topic,
+                    'path' => $std_id.'/'.$path,
+                    'status' => 'sent',
+                    'due_date' => $due_date
+                ]
+            );
 
-                $insertSpeaking = DB::table('speaking')
-                ->insertGetId(
-                    [
-                        'std_id' => $std_id,
-                        'topic' => $topic,
-                        'path' => $std_id.'/'.$path,
-                        'status' => 'sent',
-                        'due_date' => $due_date
-                    ]
-                );
-
-                Speaking::decreasePoint();
-        
-                $insertLog = DB::table('log')
-                    ->insert([
-                        'std_id' => $std_id,
-                        'content' => "iSAC Speaking : ".$topic,
-                        'tab' => 'iSAC Speaking',
-                        'score' => "-1 Point"
-                    ]);
+            $insertLog = DB::table('log')
+                ->insert([
+                    'std_id' => $std_id,
+                    'content' => "iSAC Speaking : ".$topic,
+                    'tab' => 'iSAC Speaking',
+                    'score' => "-1 Point"
+                ]);
 
 
-                DB::commit();
+            DB::commit();
 
-                return response()->json(['success' => 'Upload success']);
+            return response()->json(['success' => 'Upload success']);
 
-            } catch(Exception $e) {
-                DB::rollback();
-                return response()->json(['fail' => 'Upload failed : '.$e->getMessage()]);
-            }
-
-        } else {
-            return response()->json(['fail' => 'Your dont\'t have point']);
+        } catch(Exception $e) {
+            DB::rollback();
+            return response()->json(['fail' => 'Upload failed : '.$e->getMessage()]);
         }
+
     }
 
     
