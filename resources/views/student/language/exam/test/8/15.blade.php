@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,18 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    //$question -> input
+    $q1 = "The flow-chart describes the process of";
+    $q2 = "rice. It can be seen that there are six major";
+    $q3 = "in this process, which take place in the rice fields, the processing plant, and finally the retail shops where the processed rice is";
+    $q4 = "The first stage is the preparation of the fields. In order to prepare the fields, the land must be";
+    $q5 = "This means that the soil is turned to make planting easier. In the";
+    $q6 = "ploughing was usually done using animals such as horses or buffalo, although nowadays ploughing is often done using a ";
+    $q7 = "over the fields and fertilizer is added to help the seeds to grow strong. Once the seeds have formed leaves, the young plants are thinned out and transplanted into rows. After a period of a few months, the mature rice crop is";
+    $q8 = "decade, it increased again to finish at 8,900 transplants in 2010. In Australia, 4,200 transplants";
+    $q9 = "again either manually or by machine. After harvesting, the";
+    $q10 = "are removed in the milling stage. Following this, the rice is";
+    $end = "usually in the sun, and then packed into sacks. Finally the packed rice can be sent to retail outlets, where it is sold.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,63 +46,72 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The diagram shows how rice is cultivated. Summarize the information by selecting and reporting on the main features.</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_15.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                        {{$q1}}
-                        <span class="font-weight-bold">1.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q2}}
-                        <span class="font-weight-bold">2.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q3}}
-                        <span class="font-weight-bold">3.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q4}}
-                        <span class="font-weight-bold">4.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q5}}
-                        <span class="font-weight-bold">5.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q6}}
-                        <span class="font-weight-bold">6.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q7}}
-                        <span class="font-weight-bold">7.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q8}}
-                        <span class="font-weight-bold">8.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q9}}
-                        <span class="font-weight-bold">9.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q10}}
-                        <span class="font-weight-bold">10.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$end}}
+                            {{$q1}}
+                            <span class="font-weight-bold">1.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q2}}
+                            <span class="font-weight-bold">2.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q3}}
+                            <span class="font-weight-bold">3.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q4}}
+                            <span class="font-weight-bold">4.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q5}}
+                            <span class="font-weight-bold">5.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q6}}
+                            <span class="font-weight-bold">6.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q7}}
+                            <span class="font-weight-bold">7.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q8}}
+                            <span class="font-weight-bold">8.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q9}}
+                            <span class="font-weight-bold">9. </span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q10}}
+                            <span class="font-weight-bold">10.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$end}}
                     </div>
                 </div>
             </div>
@@ -116,17 +126,19 @@
 
 @section('js')
 <script>
-
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    // no space answer
+    
+    const answers = []
+    answers[0]= ['cultivating', 'growing'];
+    answers[1] = ['stages'];
+    answers[2] = ['sold'];
+    answers[3] = ['ploughed'];
+    answers[4] = ['past'];
+    answers[5] = ['tractor'];
+    answers[6] = ['scattered', 'dispersed', 'sown'];
+    answers[7] = ['harvested'];
+    answers[8] = ['husks'];
+    answers[9] = ['dried'];
 
     let score = 0;
 

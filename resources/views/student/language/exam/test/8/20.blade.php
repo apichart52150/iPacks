@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,18 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    //$question -> input
+    $q1 = "The life-cycle of a frog";
+    $q2 = "of around 11 different stages or processes, and the diagrams illustrate the";
+    $q3 = "from egg to tadpole and eventually adult frog. During the first stage of the cycle the female frog lays a large";
+    $q4 = "of eggs, which are called ‘frogspawn’. These are surrounded by a protective gelatinous coating. After between one and three weeks, the embryos start to split and multiply.";
+    $q5 = "as tadpoles, form inside the eggs. The tadpoles then break out of their protective eggs.";
+    $q6 = "broken out of their eggs, the tadpoles attach themselves to long strands of weed for stability, staying there for about one week. After this, the tadpoles start swimming on their";
+    $q7 = "They have oval bodies and long flattened tails, which allow them to swim quite fast. At the";
+    $q8 = "time, tiny teeth develop which the tadpoles use to feed on algae. In the next stage, the hind legs start to emerge from its body at the 6 to 9 weeks mark. These hind legs then grow in length and, at the same time, the tail becomes";
+    $q9 = "During the next stage, at the 9 to 12 weeks mark, the lungs develop and the front legs appear. Approximately three weeks later, when its skin becomes";
+    $q10 = "and skin glands develop the tadpole starts to look ";
+    $end = "an adult frog. By week 16, the tadpole’s metamorphosis into an adult frog is complete, after which the adult frog finds a partner and mates. The cycle is then repeated.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,63 +46,74 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The diagram below shows the life-cycle of a frog. The table explains what happens at each stage.</h5>
+                        <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_20_1.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <img src="{{ asset('public/img_lang/gap2/gap2_20_2.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                        {{$q1}}
-                        <span class="font-weight-bold">1.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q2}}
-                        <span class="font-weight-bold">2.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q3}}
-                        <span class="font-weight-bold">3.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q4}}
-                        <span class="font-weight-bold">4.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q5}}
-                        <span class="font-weight-bold">5.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q6}}
-                        <span class="font-weight-bold">6.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q7}}
-                        <span class="font-weight-bold">7.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q8}}
-                        <span class="font-weight-bold">8.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q9}}
-                        <span class="font-weight-bold">9.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q10}}
-                        <span class="font-weight-bold">10.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$end}}
+                            {{$q1}}
+                            <span class="font-weight-bold">1.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q2}}
+                            <span class="font-weight-bold">2.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q3}}
+                            <span class="font-weight-bold">3.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q4}}
+                            <span class="font-weight-bold">4.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q5}}
+                            <span class="font-weight-bold">5.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q6}}
+                            <span class="font-weight-bold">6.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q7}}
+                            <span class="font-weight-bold">7.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q8}}
+                            <span class="font-weight-bold">8.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q9}}
+                            <span class="font-weight-bold">9. </span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q10}}
+                            <span class="font-weight-bold">10.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$end}}
                     </div>
                 </div>
             </div>
@@ -116,17 +128,19 @@
 
 @section('js')
 <script>
-
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    // no space answer
+    
+    const answers = []
+    answers[0]= ['consists'];
+    answers[1] = ['change', 'metamorphosis', 'development'];
+    answers[2] = ['number'];
+    answers[3] = ['known'];
+    answers[4] = ['Having'];
+    answers[5] = ['own'];
+    answers[6] = ['same'];
+    answers[7] = ['shorter'];
+    answers[8] = ['thicker'];
+    answers[9] = ['like'];
 
     let score = 0;
 

@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,23 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    //$question -> input
+    $q1 = "The bar-chart above shows how many crimes were committed in three countries from 2005 to 2015. It can be seen that the crime";
+    $q2 = "experienced a steady decrease in Country A while Country B showed a";
+    $q3 = "trend with a slight increase in each period. The number of crimes committed in Country C showed an";
+    $q4 = "drop over the period but with a slight increase in 2010 over the figure five years earlier. The pie-charts show the percentage breakdown for different types of crime committed in";
+    $q5 = "Country A and Country B. Country A showed the highes";
+    $q6 = "of theft, while assault was the most";
+    $q7 = "crime in Country B. To start with the number of crimes, it can be seen that,";
+    $q8 = "Country A topped the group consistently throughout the period, the incidence of crime fell from the";
+    $q9 = "point of just under 6,000 crimes committed in 2005 to just over 4,000 crimes ten years later. This decreasing trend is in contrast to";
+    $q10 = "of Country B, which recorded a slight increase from around 2,000 crimes in 2005 to around 2,200 crimes a";
+    $q11 = "later. Country C started out at around 3,800 crimes in 2005,";
+    $q12 = "by a small rise to around 3,900 crimes, before dropping back to approximately 3,700 incidences of crime. When it";
+    $q13 = "to the kinds of crime committed, theft";
+    $q14 = "for 40% of all crimes in Country A, with drug offences and assault taking 10% and 20%";
+    $q15 = " ‘Other’ crimes accounted for the remaining 30%. In Country B, however, assault was the leading crime with 40% of all crimes committed. Thirty per cent of all crimes were drug offences, followed by theft (20%) and ‘other’ (the";
+    $end = "10%).";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,10 +51,20 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The bar-chart below shows the number of crimes committed in 3 different countries between 2005 and 2015. The pie-chart gives a breakdown (in percentages) of the different sorts of crimes committed in 2 of these countries in 2015.</h5>
+                        <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_3.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
                         {{$q1}}
@@ -92,12 +108,37 @@
                             <input type="text" class="form-control">
                         </div>
                         {{$q9}}
-                        <span class="font-weight-bold">9.</span>
+                        <span class="font-weight-bold">9. </span>
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
                         {{$q10}}
                         <span class="font-weight-bold">10.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q11}}
+                        <span class="font-weight-bold">11.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q12}}
+                        <span class="font-weight-bold">12.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q13}}
+                        <span class="font-weight-bold">13.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q14}}
+                        <span class="font-weight-bold">14.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q15}}
+                        <span class="font-weight-bold">15.</span>
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
@@ -116,17 +157,24 @@
 
 @section('js')
 <script>
-
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    // no space answer
+    
+    const answers = []
+    answers[0]= ['rate'];
+    answers[1] = ['reverse', 'different'];
+    answers[2] = ['overall'];
+    answers[3] = ['both'];
+    answers[4] = ['incidence', 'rate'];
+    answers[5] = ['common', 'frequent'];
+    answers[6] = ['although'];
+    answers[7] = ['starting'];
+    answers[8] = ['that'];
+    answers[9] = ['decade'];
+    answers[10] = ['followed'];
+    answers[11] = ['comes'];
+    answers[12] = ['accounted'];
+    answers[13] = ['respectively'];
+    answers[14] = ['final', 'remaining', 'other'];
 
     let score = 0;
 
@@ -216,6 +264,46 @@
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
                     break;
+                case 10:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 11:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 12:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer13) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 13:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer14) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 14:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer15) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -226,7 +314,7 @@
             `)
         })
 
-        if(score == 10){
+        if(score == 15){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

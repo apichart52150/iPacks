@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,18 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    //$question -> input
+    $q1 = "The map shows how Biggsville, a village not ";
+    $q2 = "from London, has developed since 1868, when the village was first established. It can be seen that there is a ";
+    $q3 = "between the growth of the village and the development of transportation infrastructure, namely, roads and";
+    $q4 = "access. In its early stages, the village was built between two main roads and it continued to grow along these roads in a";
+    $q5 = "direction. The construction of the railway in 1909 resulted in further growth in this direction. There was also";
+    $q6 = "to the south of the railway and along the main road south of the railway station line";
+    $q7 = "1922 and 1970. This trend continued until 1970 when a motorway was";
+    $q8 = "to the east of the existing village, crossing both the railway line and one of the main roads. Over the next twenty-five years, the village increased in";
+    $q9 = "as further accommodation was built along the motorway, mostly on the eastern side but also some to the west. To";
+    $q10 = "up, the village developed to the south, west and east of the ";
+    $end = "location, in conjunction with the construction of transportation routes.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,63 +46,73 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>Biggsville is a village near London whose population has increased steadily since the middle of the nineteenth century.</h5>
+                        <h5>The map below shows the development of the village. Write a report to describe how the village developed over the four given periods of time.</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_17.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                        {{$q1}}
-                        <span class="font-weight-bold">1.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q2}}
-                        <span class="font-weight-bold">2.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q3}}
-                        <span class="font-weight-bold">3.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q4}}
-                        <span class="font-weight-bold">4.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q5}}
-                        <span class="font-weight-bold">5.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q6}}
-                        <span class="font-weight-bold">6.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q7}}
-                        <span class="font-weight-bold">7.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q8}}
-                        <span class="font-weight-bold">8.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q9}}
-                        <span class="font-weight-bold">9.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q10}}
-                        <span class="font-weight-bold">10.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$end}}
+                            {{$q1}}
+                            <span class="font-weight-bold">1.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q2}}
+                            <span class="font-weight-bold">2.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q3}}
+                            <span class="font-weight-bold">3.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q4}}
+                            <span class="font-weight-bold">4.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q5}}
+                            <span class="font-weight-bold">5.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q6}}
+                            <span class="font-weight-bold">6.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q7}}
+                            <span class="font-weight-bold">7.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q8}}
+                            <span class="font-weight-bold">8.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q9}}
+                            <span class="font-weight-bold">9. </span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q10}}
+                            <span class="font-weight-bold">10.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$end}}
                     </div>
                 </div>
             </div>
@@ -116,17 +127,19 @@
 
 @section('js')
 <script>
-
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    // no space answer
+    
+    const answers = []
+    answers[0]= ['far'];
+    answers[1] = ['correlation', 'link'];
+    answers[2] = ['railway'];
+    answers[3] = ['south-westerly'];
+    answers[4] = ['expansion', 'development', 'construction'];
+    answers[5] = ['between'];
+    answers[6] = ['built', 'constructed'];
+    answers[7] = ['size'];
+    answers[8] = ['sum'];
+    answers[9] = ['original'];
 
     let score = 0;
 

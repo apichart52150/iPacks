@@ -27,17 +27,22 @@
     }
 </style>
 @php
+    //$question -> input
     $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    $q2 = "rain fell in one city from 2005 until 2011. Figures are given in millimetres. The line-graph shows the average temperature during those years. Overall, it can be";
+    $q3 = "that there is a link between rainfall and temperature: the higher the rainfall, the";
+    $q4 = " the average temperature. To begin with the rainfall, at the";
+    $q5 = "of the period the total rainfall was around 850 mm. The following year, there was a";
+    $q6 = "to around 750 mm. The downward trend continued over the next 2 years, with figures of approximately 600 and 450 mm";
+    $q7 = ". In 2009 the total";
+    $q8 = "to 500 mm. The total in 2010 was";
+    $q9 = "than in the previous year, reaching roughly 800 mm. By the end of the period, 2011, the city received";
+    $q10 = "highest amount of rain, at around 900 mm. With regard to temperature, the figure stood";
+    $q11 = "26 degrees Celsius in both 2005 and 2011. In between those years, the average temperatures were";
+    $q12 = "than this, fluctuating from 27 degrees in 2006 and 2007, up to 29 degrees in 2008, which was the";
+    $q13 = "temperature of all. There was a";
+    $q14 = "of one degree in 2009, followed";
+    $end = "a slight increase to 28.5 degrees in 2010.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,8 +50,8 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The bar-chart shows the rainfall in a particular city over a 6-year period (measured in mm), and the line-graph shows the average temperature over the same period (in degrees Celsius).</h5>
+                        <img src="{{ asset('public/img_lang/gap1/gap1_20.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -101,6 +106,26 @@
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
+                        {{$q11}}
+                        <span class="font-weight-bold">11.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q12}}
+                        <span class="font-weight-bold">12.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q13}}
+                        <span class="font-weight-bold">13.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q14}}
+                        <span class="font-weight-bold">14.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
                         {{$end}}
                     </div>
                 </div>
@@ -116,17 +141,23 @@
 
 @section('js')
 <script>
-
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    // no space answer
+    
+    const answers = []
+    answers[0]= ['much'];
+    answers[1] = ['seen'];
+    answers[2] = ['lower' , 'cooler'];
+    answers[3] = ['beginning'];
+    answers[4] = ['fell', 'drop', 'decrease', 'reduction'];
+    answers[5] = ['respectively'];
+    answers[6] = ['fell', 'dropped', 'decreased'];
+    answers[7] = ['higher', 'greater', 'more', 'bigger'];
+    answers[8] = ['the'];
+    answers[9] = ['at'];
+    answers[10] = ['higher', 'greater', 'more', 'bigger'];
+    answers[11] = ['highest', 'warmest', 'hottest'];
+    answers[12] = ['fall', 'drop', 'decrease', 'reduction'];
+    answers[13] = ['by'];
 
     let score = 0;
 
@@ -216,6 +247,38 @@
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
                     break;
+                case 10:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 11:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 12:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer13) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 13:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer14) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -226,7 +289,7 @@
             `)
         })
 
-        if(score == 10){
+        if(score == 14){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

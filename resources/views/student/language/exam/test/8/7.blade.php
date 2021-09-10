@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,18 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    //$question -> input
+    $q1 = "The pie-chart gives";
+    $q2 = "of a survey in which 100 students were asked to name their favourite subject at school. It can be seen that English was the";
+    $q3 = "popular subject, while history was the";
+    $q4 = "favourite subject. If we divide the subjects into two categories,";
+    $q5 = "the arts and science subjects, we can see that Science, Maths and Computer Studies";
+    $q6 = "for a total of 50%, or half of all students surveyed. Of the science subjects, Science was the most popular with 25%, Maths the ";
+    $q7 = "most popular with 15% and Computer Science the next most popular with 10%. Of the ";
+    $q8 = ".subjects, English was the most popular with 28% of the votes. The next most popular subject was Art, accounting for 12%, and History was the";
+    $q9 = "most popular, taking up just 2% of student preferences: in total a total of 42% for Arts subjects. This shows that arts subjects were actually";
+    $q10 = "popular than the technical subjects, even though English was the single most preferred subject. The final subject which received votes was Physical education, which accounted for 8% of the votes, making it less popular than all the other subjects, with the";
+    $end = "of History.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,10 +46,20 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The chart below shows the results of a survey conducted with 100 students about their favourite school subjects.</h5>
+                        <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_7.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
                         {{$q1}}
@@ -92,7 +103,7 @@
                             <input type="text" class="form-control">
                         </div>
                         {{$q9}}
-                        <span class="font-weight-bold">9.</span>
+                        <span class="font-weight-bold">9. </span>
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
@@ -116,17 +127,19 @@
 
 @section('js')
 <script>
-
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    // no space answer
+    
+    const answers = []
+    answers[0]= ['details'];
+    answers[1] = ['most'];
+    answers[2] = ['Least'];
+    answers[3] = ['namely'];
+    answers[4] = ['accounted'];
+    answers[5] = ['second', 'next'];
+    answers[6] = ['arts'];
+    answers[7] = ['next', 'third'];
+    answers[8] = ['less'];
+    answers[9] = ['exception'];
 
     let score = 0;
 

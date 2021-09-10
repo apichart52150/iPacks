@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,18 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    //$question -> input
+    $q1 = "The table shows the average income each";
+    $q2 = "for a selection of professions in Thailand and Australia in 2012. The professions can be";
+    $q3 = "into graduate and non-graduate occupations. Overall it can be seen that the graduate salaries are consistently higher than the non-graduate salaries, and that salaries";
+    $q4 = "to be higher in Australia than in Thailand, with the";
+    $q5 = "of lawyers. The figures are given in Thai Baht. Both tables show that the average monthly";
+    $q6 = "was much higher in the graduate group than the non-graduate group. In Thailand salaries ranged from 85,000 for accountants";
+    $q7 = "242,000 for lawyers, and in Australia the range was from 125,500 for accountants up to 350,000 for surgeons. On the other hand,nongraduate jobs had much";
+    $q8 = "incomes in both countries. For";
+    $q9 = " , in Thailand salaries started at 3,500 for labourers and went up to 7,000 for bus drivers. Similarly in Australia, the range was from 50,000 for waiters to 75,000 for bus drivers. Salaries were higher in all professions in Australia than in Thailand in";
+    $q10 = " graduate and non-graduate groups. For example, shop assistants and dentists earned 53,500 and 195,000";
+    $end = "in Australia, while, in Thailand they earned 5,500 and 187,000. The exception to this was lawyers, who earned 210,000 in Australia and 242,000 in Thailand.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,63 +46,73 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The tables show average monthly salaries of workers in Thailand and Australia in 2012 (in Thai Baht).</h5>
+                        <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_10.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                        {{$q1}}
-                        <span class="font-weight-bold">1.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q2}}
-                        <span class="font-weight-bold">2.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q3}}
-                        <span class="font-weight-bold">3.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q4}}
-                        <span class="font-weight-bold">4.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q5}}
-                        <span class="font-weight-bold">5.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q6}}
-                        <span class="font-weight-bold">6.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q7}}
-                        <span class="font-weight-bold">7.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q8}}
-                        <span class="font-weight-bold">8.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q9}}
-                        <span class="font-weight-bold">9.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q10}}
-                        <span class="font-weight-bold">10.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$end}}
+                            {{$q1}}
+                            <span class="font-weight-bold">1.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q2}}
+                            <span class="font-weight-bold">2.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q3}}
+                            <span class="font-weight-bold">3.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q4}}
+                            <span class="font-weight-bold">4.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q5}}
+                            <span class="font-weight-bold">5.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q6}}
+                            <span class="font-weight-bold">6.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q7}}
+                            <span class="font-weight-bold">7.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q8}}
+                            <span class="font-weight-bold">8.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q9}}
+                            <span class="font-weight-bold">9. </span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q10}}
+                            <span class="font-weight-bold">10.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$end}}
                     </div>
                 </div>
             </div>
@@ -116,17 +127,19 @@
 
 @section('js')
 <script>
-
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    // no space answer
+    
+    const answers = []
+    answers[0]= ['Month'];
+    answers[1] = ['split', 'categorized', 'divided', 'grouped'];
+    answers[2] = ['tend'];
+    answers[3] = ['exception'];
+    answers[4] = ['salary', 'income', 'wage'];
+    answers[5] = ['to'];
+    answers[6] = ['lower'];
+    answers[7] = ['example', 'instance'];
+    answers[8] = ['both'];
+    answers[9] = ['respectively'];
 
     let score = 0;
 

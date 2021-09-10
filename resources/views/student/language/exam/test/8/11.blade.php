@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -28,21 +28,21 @@
 </style>
 @php
     //$question -> input
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "rain fell in one city from 2005 until 2011. Figures are given in millimetres. The line-graph shows the average temperature during those years. Overall, it can be";
-    $q3 = "that there is a link between rainfall and temperature: the higher the rainfall, the";
-    $q4 = " the average temperature. To begin with the rainfall, at the";
-    $q5 = "of the period the total rainfall was around 850 mm. The following year, there was a";
-    $q6 = "to around 750 mm. The downward trend continued over the next 2 years, with figures of approximately 600 and 450 mm";
-    $q7 = ". In 2009 the total";
-    $q8 = "to 500 mm. The total in 2010 was";
-    $q9 = "than in the previous year, reaching roughly 800 mm. By the end of the period, 2011, the city received";
-    $q10 = "highest amount of rain, at around 900 mm. With regard to temperature, the figure stood";
-    $q11 = "26 degrees Celsius in both 2005 and 2011. In between those years, the average temperatures were";
-    $q12 = "than this, fluctuating from 27 degrees in 2006 and 2007, up to 29 degrees in 2008, which was the";
-    $q13 = "temperature of all. There was a";
-    $q14 = "of one degree in 2009, followed";
-    $end = "a slight increase to 28.5 degrees in 2010.";
+    $q1 = "The charts give information about the use of water";
+    $q2 = "in the year 2012. The pie-chart shows the proportion of total water uses for domestic, industrial and agricultural purposes. The bar-chart gives specific details of this water use in four countries:";
+    $q3 = "Germany, New Zealand, India and China. Overall, it can be seen that the";
+    $q4 = "of water was used for farming purposes, and this is reflected in the water usage in three of the 4 given nations. The ";
+    $q5 = "to this was Germany. Moving on to details, the vast majority of water used globally was for agriculture, accounting for a massive seventy percent of total water";
+    $q6 = "Industrial use accounted for just 20%, with domestic use only half that of industry, with one";
+    $q7 = " of global consumption. An examination of the water use in the four countries";
+    $q8 = "above shows that both India and China used large";
+    $q9 = "for farming, with figures of around 95 and 70 percent";
+    $q10 = "China used just over one fifth for its developing industries, and just under one tenth of all water for household purposes. By";
+    $q11 = "China used just over one fifth for its developing industries, and just under one tenth of all water for household purposes. By";
+    $q12 = "mounts for both farming and domestic use, with figures of around 48% and 45% respectively. The";
+    $q13 = "7% was consumed by industrial activity. Germany seems to be the exception in this group of 4 nations. Four";
+    $q14 = "of all water consumption was taken by industry. Of the remaining";
+    $end = "percent, around twelve percent was used by households, and just eight percent for agriculture.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -50,83 +50,93 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows the rainfall in a particular city over a 6-year period (measured in mm), and the line-graph shows the average temperature over the same period (in degrees Celsius).</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_20.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>‘The pie-chart below shows how water was used in 2012 by three sectors: namely, farming, the manufacturing industry, and for household use. Figures are shown as percentages. The bar-chart shows proportions of water used for the three sectors in 4 different countries.’</h5>
+                        <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_11.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                        {{$q1}}
-                        <span class="font-weight-bold">1.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q2}}
-                        <span class="font-weight-bold">2.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q3}}
-                        <span class="font-weight-bold">3.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q4}}
-                        <span class="font-weight-bold">4.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q5}}
-                        <span class="font-weight-bold">5.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q6}}
-                        <span class="font-weight-bold">6.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q7}}
-                        <span class="font-weight-bold">7.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q8}}
-                        <span class="font-weight-bold">8.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q9}}
-                        <span class="font-weight-bold">9.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q10}}
-                        <span class="font-weight-bold">10.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q11}}
-                        <span class="font-weight-bold">11.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q12}}
-                        <span class="font-weight-bold">12.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q13}}
-                        <span class="font-weight-bold">13.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q14}}
-                        <span class="font-weight-bold">14.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$end}}
+                            {{$q1}}
+                            <span class="font-weight-bold">1.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q2}}
+                            <span class="font-weight-bold">2.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q3}}
+                            <span class="font-weight-bold">3.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q4}}
+                            <span class="font-weight-bold">4.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q5}}
+                            <span class="font-weight-bold">5.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q6}}
+                            <span class="font-weight-bold">6.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q7}}
+                            <span class="font-weight-bold">7.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q8}}
+                            <span class="font-weight-bold">8.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q9}}
+                            <span class="font-weight-bold">9. </span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q10}}
+                            <span class="font-weight-bold">10.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q11}}
+                            <span class="font-weight-bold">11.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q13}}
+                            <span class="font-weight-bold">13.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q14}}
+                            <span class="font-weight-bold">14.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$end}}
                     </div>
                 </div>
             </div>
@@ -142,20 +152,22 @@
 @section('js')
 <script>
     // no space answer
-    const answer1 = ['much'];
-    const answer2 = ['seen'];
-    const answer3 = ['lower' , 'cooler'];
-    const answer4 = ['beginning'];
-    const answer5 = ['fell', 'drop', 'decrease', 'reduction'];
-    const answer6 = ['respectively'];
-    const answer7 = ['fell', 'dropped', 'decreased'];
-    const answer8 = ['higher', 'greater', 'more', 'bigger'];
-    const answer9 = ['the'];
-    const answer10 = ['at'];
-    const answer11 = ['higher', 'greater', 'more', 'bigger'];
-    const answer12 = ['highest', 'warmest', 'hottest'];
-    const answer13 = ['fall', 'drop', 'decrease', 'reduction'];
-    const answer14 = ['by'];
+    
+    const answers = []
+    answers[0]= ['worldwide', 'globally'];
+    answers[1] = ['namely'];
+    answers[2] = ['majority'];
+    answers[3] = ['exception'];
+    answers[4] = ['consumed', 'used'];
+    answers[5] = ['tenth'];
+    answers[6] = ['mentioned', 'given'];
+    answers[7] = ['amounts', 'quantities'];
+    answers[8] = ['respectively'];
+    answers[9] = ['contrast'];
+    answers[10] = ['similar'];
+    answers[11] = ['remaining', 'other'];
+    answers[12] = ['fifths'];
+    answers[13] = ['twenty'];
 
     let score = 0;
 
@@ -264,7 +276,7 @@
                 case 12:
                     if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer13) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
-                            score++;
+                         score++;
                     } else {
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
@@ -272,7 +284,7 @@
                 case 13:
                     if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer14) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
-                            score++;
+                         score++;
                     } else {
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }

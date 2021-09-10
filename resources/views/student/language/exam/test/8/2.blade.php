@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,24 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    //$question -> input
+    $q1 = "The chart above shows";
+    $q2 = "details of 4 countries in terms of distribution in 4 given age-groups:";
+    $q3 = "young people to the age of 20, people aged 21 to 40,those between the ages of 41 and 60, and finally those seniors aged over 60 years. It can be seen that Country A has the largest";
+    $q4 = "of citizens in the 0-20 years group,while Country D has the largest proportion of seniors. Countries B and C both show majorities in the over 40-year-old groups. The pie-charts give details of welfare";
+    $q5 = "in 2 of these countries, namely, Country A and Country D, showing the proportion of money spent in various fields each year. It is evident that Country A spends the highest percentage on";
+    $q6 = "while Country D invests strongly in health-care for its citizens. To begin with the demographics, Country A has 40% of its citizens in the";
+    $q7 = "21 years group, while a mere 10 per cent of its population are over 60 years of age. The";
+    $q8 = "fifty per cent is split equally between the other 2 groups. Country B and Country C have similarly small percentages of young people with 10 per cent each. The large";
+    $q9 = "of people living in Country B";
+    $q10 = "for 70%) fall in the middle aged groups (30% aged 21-40 and 40% in the age group 41-60), with just one";
+    $q11 = " of the population aged over 60. In Country C the";
+    $q12 = " for those 3 groups are 25%, 35% and 30% respectively, showing a majority of 65 % of the population";
+    $q13 = "over 41 years old. As mentioned previously, Country D can be classed as an ‘ageing society’ with a mere 8 per cent of the population below the age of 21. The figure";
+    $q14 = "for each of the subsequent age groups, with 20%, 32% and 40% respectively. The data in the pie-charts regarding welfare expenditure shows that Country A, with its high percentage of young citizens, spends 40% of the annual budget on education. The remaining 60% is split";
+    $q15 = "between health-care, housing and ‘other’. By contrast, almost";
+    $q16 = "of the welfare budget in Country D goes on health-care, a reflection perhaps of the ‘ageing society. Education receives just one";
+    $end = "of the budget while housing and ‘other’ account for 25% and 20% respectively.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,10 +52,20 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The bar-chart below shows details of populations in 3 different countries divided into age groups, expressed as percentages of total populations. The pie-charts show percentages spent on education, health-care and housing allowances from the total annual welfare budget for 2 of these countries.</h5>
+                        <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_2.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
                         {{$q1}}
@@ -92,12 +109,42 @@
                             <input type="text" class="form-control">
                         </div>
                         {{$q9}}
-                        <span class="font-weight-bold">9.</span>
+                        <span class="font-weight-bold">9. </span>(
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
                         {{$q10}}
                         <span class="font-weight-bold">10.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q11}}
+                        <span class="font-weight-bold">11.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q12}}
+                        <span class="font-weight-bold">12.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q13}}
+                        <span class="font-weight-bold">13.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q14}}
+                        <span class="font-weight-bold">14.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q15}}
+                        <span class="font-weight-bold">15.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q16}}
+                        <span class="font-weight-bold">16.</span>
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
@@ -116,17 +163,25 @@
 
 @section('js')
 <script>
-
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    // no space answer
+    
+    const answers = []
+    answers[0]= ['demographic', 'population'];
+    answers[1] = ['namely'];
+    answers[2] = ['percentage' , 'proportion'];
+    answers[3] = ['funding', 'budget', 'budgets'];
+    answers[4] = ['education'];
+    answers[5] = ['below', 'under'];
+    answers[6] = ['remaining'];
+    answers[7] = ['exception'];
+    answers[8] = ['accounting'];
+    answers[9] = ['fifth'];
+    answers[10] = ['figures', 'data', 'numbers'];
+    answers[11] = ['being'];
+    answers[12] = ['increases', 'rises', 'grows'];
+    answers[13] = ['equally'];
+    answers[14] = ['half'];
+    answers[15] = ['tenth'];
 
     let score = 0;
 
@@ -216,6 +271,54 @@
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
                     break;
+                case 10:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 11:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 12:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer13) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 13:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer14) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 14:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer15) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 15:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer16) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -226,7 +329,7 @@
             `)
         })
 
-        if(score == 10){
+        if(score == 16){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

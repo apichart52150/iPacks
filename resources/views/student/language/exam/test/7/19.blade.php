@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 130px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,20 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    //$question -> input
+    $q1 = "The first chart gives details of the different ways students travel to a school every day, and the second chart shows how long the journey takes. Overall, it is clear that travelling by bus is the";
+    $q2 = "popular means of transport and that most students spend more";
+    $q3 = "30 minutes travelling to school. To begin with the travel mode, 40% of students take the bus to school. The next ";
+    $q4 = "popular means of transport is the parents’ car, with 25%. Slightly";
+    $q5 = "popular is the bicycle, with 20%, followed";
+    $q6 = "the taxi, with 10%. The";
+    $q7 = "popular way to get to school is walking, with only 5% of students choosing this option. When it comes to journey time, one";
+    $q8 = "of all students, or twenty-five percent, take less than half an hour to get to school. Thirty percent of students travel";
+    $q9 = "30 and 45 minutes, while a further 5%, (35%), have a journey";
+    $q10 = "45 to 60 minutes. One";
+    $q11 = "of all students travel for";
+    $q12 = "than one hour. To sum";
+    $end = ", only one quarter of all students travel to school using human energy power (bicycle and walking), while the majority of them spend a substantial period of time on getting to school.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,8 +48,8 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The pie-charts show how students travel to school each day, and the length of time it takes to reach school.</h5>
+                        <img src="{{ asset('public/img_lang/gap1/gap1_19.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -101,6 +104,16 @@
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
+                        {{$q11}}
+                        <span class="font-weight-bold">11.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q12}}
+                        <span class="font-weight-bold">12.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
                         {{$end}}
                     </div>
                 </div>
@@ -117,16 +130,20 @@
 @section('js')
 <script>
 
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    
+    const answers = []
+    answers[0]= ['most'];
+    answers[1] = ['than'];
+    answers[2] = ['most'];
+    answers[3] = ['less'];
+    answers[4] = ['by'];
+    answers[5] = ['least'];
+    answers[6] = ['quarter'];
+    answers[7] = ['between'];
+    answers[8] = ['of'];
+    answers[9] = ['tenth'];
+    answers[10] = ['more', 'greater', 'longer'];
+    answers[11] = ['up'];
 
     let score = 0;
 
@@ -216,6 +233,22 @@
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
                     break;
+                case 10:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 11:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -226,7 +259,7 @@
             `)
         })
 
-        if(score == 10){
+        if(score == 12){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

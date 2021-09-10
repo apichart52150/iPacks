@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 130px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,19 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    $q1 = "The chart shows details of the differences";
+    $q2 = "people living in wealthy countries and those in less developed nations. Overall it can be seen that while the South has a";
+    $q3 = "population than the North, the people there use a much";
+    $q4 = " proportion of the resources. With only 25% of the global population, the developed world earns 80% of the world’s";
+    $q5 = "This greater wealth means that they have";
+    $q6 = "opportunities in terms of education. The majority of people in rich countries finish their secondary schooling,";
+    $q7 = "only 50% of people in poor countries receive any formal schooling. More money also means more";
+    $q8 = ", with most people having enough to eat. In the developing nations,";
+    $q9 = ", 20% of the people do not have enough to eat. The North consumes 80% of total global food resources, while people in the South eat just";
+    $q10 = ".The difference also shows in fuel consumption. One quarter of the world’s";
+    $q11 = "who live in the North uses seven-eighths of global fossil fuels, whereas the three-quarters in the South uses just one eighth. As a result of these differences, people in the North can expect to live much";
+    $q12 = "than the people in the south. Life expectancy is around 70 years in developed nations, whereas it is only around 50 years in";
+    $end = "wealthy countries.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,8 +47,8 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The table below gives information about the distribution of resources between people living in the developed world (North) and the developing nations (South).</h5>
+                        <img src="{{ asset('public/img_lang/gap1/gap1_12.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -101,6 +103,16 @@
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
+                        {{$q11}}
+                        <span class="font-weight-bold">11.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q12}}
+                        <span class="font-weight-bold">12.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
                         {{$end}}
                     </div>
                 </div>
@@ -117,16 +129,20 @@
 @section('js')
 <script>
 
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    
+    const answers = []
+    answers[0]= ['between'];
+    answers[1] = ['bigger', 'larger', 'higher'];
+    answers[2] = ['smaller'];
+    answers[3] = ['income', 'money'];
+    answers[4] = ['more', 'better', 'greater'];
+    answers[5] = ['while','whereas', 'but'];
+    answers[6] = ['food','nutrition'];
+    answers[7] = ['however','though'];
+    answers[8] = ['one-fifth', '20%'];
+    answers[9] = ['population'];
+    answers[10] = ['longer'];
+    answers[11] = ['less'];
 
     let score = 0;
 
@@ -216,6 +232,22 @@
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
                     break;
+                case 10:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 11:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -226,7 +258,7 @@
             `)
         })
 
-        if(score == 10){
+        if(score == 12){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

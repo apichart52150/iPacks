@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 130px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,19 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    $q1 = "The bar charts";
+    $q2 = "how many people lived in six different cities in three years:";
+    $q3 = "in1970, in 1990, and predictions for the year 2015.";
+    $q4 = "are given in millions. It is clear that all cities experienced substantial population growth with the";
+    $q5 = "of New York, which showed only moderate increases.";
+    $q6 = "was consistently more heavily-populated than any of the other cities. In 1970 Tokyo had a population";
+    $q7 = "around 16 million. New York was the next largest population with just over 15 million inhabitants. Then came Shanghai followed";
+    $q8 = ". There was a similar pattern in 1990. Tokyo was first with around 24 million people, an";
+    $q9 = ", 20% of the people do not have enough to eat. The North consumes 80% of total global food resources, while people in the South eat just";
+    $q10 = "of around 9 million. New York's growth was less dramatic, at around 2 million but it still retained its second place. Shanghai also showed a modest rise of around 2 million to stand";
+    $q11 = "13 million. Both Bombay and Jakarta recorded quite substantial increases of around 6 million each. In the year 2015, the pattern may change. Tokyo is expected to maintain a healthy growth. The figure is";
+    $q12 = "to reach 29 million. The second most heavily populated city, however, is expected to be Bombay, with a total of 27";
+    $end = "inhabitants. Shanghai is predicted to grow to around 20 million, with Jakarta around 19 million. With an increase of just around 1 million people, New York is expected to complete the group with a total of around 12 million people.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,8 +47,8 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The chart shows the population of 5 cities in three different years.</h5>
+                        <img src="{{ asset('public/img_lang/gap1/gap1_13.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -101,6 +103,16 @@
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
+                        {{$q11}}
+                        <span class="font-weight-bold">11.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q12}}
+                        <span class="font-weight-bold">12.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
                         {{$end}}
                     </div>
                 </div>
@@ -117,16 +129,20 @@
 @section('js')
 <script>
 
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    
+    const answers = []
+    answers[0]= ['show', 'illustrate'];
+    answers[1] = ['namely'];
+    answers[2] = ['figures'];
+    answers[3] = ['exception'];
+    answers[4] = ['Tokyo'];
+    answers[5] = ['of'];
+    answers[6] = ['by'];
+    answers[7] = ['respectively'];
+    answers[8] = ['increase'];
+    answers[9] = ['at'];
+    answers[10] = ['expected', 'projected', 'forecast', 'likely', 'predicted'];
+    answers[11] = ['million'];
 
     let score = 0;
 
@@ -216,6 +232,22 @@
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
                     break;
+                case 10:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 11:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -226,7 +258,7 @@
             `)
         })
 
-        if(score == 10){
+        if(score == 12){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

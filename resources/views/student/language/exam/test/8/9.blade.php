@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 120px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -28,19 +28,19 @@
 </style>
 @php
     //$question -> input
-    $q1 = "The diagrams";
-    $q2 = "two kinds of bicycle, the penny-farthing, which was used around the year 1900, and the modern racing bike, which was used one hundred years later.";
-    $q3 = ", it can be seen that there are a number of differences in appearance and performance between the two bicycles. To start with the physical aspect, the two bicycles are very different in appearance. First of all, the";
-    $q4 = "striking difference is the size of the wheels. The penny-farthing has a very large wheel at the front. The rear wheel is much";
-    $q5 = "than the front one. The wheels on the modern racing bike are both the";
-    $q6 = "size. They are ";
-    $q7 = "than the front wheel of the penny-farthing, but";
-    $q8 = "than its rear wheel. The saddle on the penny-farthing is also quite high. It is located over the front wheel and sits around 2 metres off the ground. By contrast, the saddle on the modern racing bike is located above the";
-    $q9 = "wheel and it is not as high";
-    $q10 = "the saddle on the penny-farthing. With regard to performance features, the modern racing bike, as its name suggests, is designed for speed, whereas the penny-farthing is not. The racing bike has a number of gears connecting the pedals and the rear wheel. This means it can travel at";
-    $q11 = "speeds than the penny-farthing. In terms of safety and comfort, the modern racing bike is much safer and";
-    $q12 = "comfortable than the penny-farthing. The racing bike has brakes to help it stop,";
-    $end = "the penny-farthing does not have brakes. In addition, the rubber wheels of the racing bike give the cyclist a smoother ride, especially over rough roads.";
+    $q1 = "The table shows the number of miles which the average";
+    $q2 = "person covered in 1985 and 2000 using a";
+    $q3 = "of transportation methods. The data can be grouped into those modes of transport which increased in";
+    $q4 = "and those which showed a decrease. Overall, it can be seen that, on";
+    $q5 = "English people tended to travel substantially more in 2000 than in 1985, and cars were the number one choice of travel. To begin with the group which showed a decreasing";
+    $q6 = ", the nonmotorised forms of transport, walking and bicycle,showed";
+    $q7 = "falls. Walking fell from 255 miles in 1985 to 237 miles in 2000. The";
+    $q8 = "covered by bicycle fell from 51 miles to 41 miles. The";
+    $q9 = "form of motor vehicle which showed a similar decrease was the local bus, which fell from 429 miles to 274 miles in 2000. All";
+    $q10 = "forms of motorized vehicles,";
+    $q11 = "car, long distance bus, train and taxi recorded increases. The car was the most popular mode of transport, ";
+    $q12 = "from 3199 to 4806 miles by 2000. The train showed a rise from 289 miles to 366, and the taxi was the least popular form of transport, rising from 13 miles to 42 miles by 2000. The category ‘other modes of transport’ also rose from 450 miles to 585,";
+    $end = "there is no indication exactly which modes of transport are included in this group.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -48,73 +48,83 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5></h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_17.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The table below gives details of the total distance travelled (in miles) by Britons in 2 different years, and the modes of transport used to travel these distances.</h5>
+                        <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_9.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                        {{$q1}}
-                        <span class="font-weight-bold">1.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q2}}
-                        <span class="font-weight-bold">2.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q3}}
-                        <span class="font-weight-bold">3.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q4}}
-                        <span class="font-weight-bold">4.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q5}}
-                        <span class="font-weight-bold">5.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q6}}
-                        <span class="font-weight-bold">6.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q7}}
-                        <span class="font-weight-bold">7.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q8}}
-                        <span class="font-weight-bold">8.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q9}}
-                        <span class="font-weight-bold">9.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q10}}
-                        <span class="font-weight-bold">10.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q11}}
-                        <span class="font-weight-bold">11.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q12}}
-                        <span class="font-weight-bold">12.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$end}}
+                            {{$q1}}
+                            <span class="font-weight-bold">1.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q2}}
+                            <span class="font-weight-bold">2.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q3}}
+                            <span class="font-weight-bold">3.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q4}}
+                            <span class="font-weight-bold">4.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q5}}
+                            <span class="font-weight-bold">5.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q6}}
+                            <span class="font-weight-bold">6.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q7}}
+                            <span class="font-weight-bold">7.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q8}}
+                            <span class="font-weight-bold">8.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q9}}
+                            <span class="font-weight-bold">9. </span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q10}}
+                            <span class="font-weight-bold">10.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q11}}
+                            <span class="font-weight-bold">11.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$end}}
                     </div>
                 </div>
             </div>
@@ -129,19 +139,21 @@
 
 @section('js')
 <script>
-
-    const answer1 = ['show', 'depict', 'illustrate'];
-    const answer2 = ['Overall'];
-    const answer3 = ['most'];
-    const answer4 = ['smaller', 'littler'];
-    const answer5 = ['same'];
-    const answer6 = ['larger', 'bigger'];
-    const answer7 = ['smaller', 'littler'];
-    const answer8 = ['rear', 'back'];
-    const answer9 = ['as'];
-    const answer10 = ['faster', 'higher', 'greater'];
-    const answer11 = ['more'];
-    const answer12 = ['while', 'whereas', 'but'];
+    // no space answer
+    
+    const answers = []
+    answers[0]= ['British'];
+    answers[1] = ['number', 'variety', 'range'];
+    answers[2] = ['popularity', 'frequency', 'choice'];
+    answers[3] = ['average'];
+    answers[4] = ['trend', 'tendency', 'pattern'];
+    answers[5] = ['moderate', 'slight', 'modest'];
+    answers[6] = ['distance'];
+    answers[7] = ['only', 'sole', 'single'];
+    answers[8] = ['other'];
+    answers[9] = ['namely'];
+    answers[10] = ['increasing', 'rising', 'growing'];
+    answers[11] = ['although', 'but'];
 
     let score = 0;
 

@@ -117,16 +117,18 @@
 @section('js')
 <script>
 
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    
+    const answers = []
+    answers[0]= ['much'];
+    answers[1] = ['the'];
+    answers[2] = ['largest', 'greatest', 'biggest'];
+    answers[3] = ['more'];
+    answers[4] = ['twice'];
+    answers[5] = ['less'];
+    answers[6] = ['least'];
+    answers[7] = ['than'];
+    answers[8] = ['less'];
+    answers[9] = ['respectively'];
 
     let score = 0;
 

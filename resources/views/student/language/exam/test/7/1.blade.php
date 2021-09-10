@@ -49,20 +49,20 @@ $end = "of marriages had fallen by around 30,000, while the number of divorces h
             <div class="row">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                        @for ($i = 1; $i <= count($Q); $i++)
-                            <div class="line-hight d-inline w-auto mb-2 ">
-                                {{ $Q['q'.$i] }} <!-- question -->
-                            </div>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                        @endfor
-                        {{$end}}
+                        @for ($i = 1; $i <= count($Q); $i++) <div class="line-hight d-inline w-auto mb-2 ">
+                            {{ $Q['q'.$i] }}
+                            <!-- question -->
                     </div>
+                    <div class="input-con">
+                        <input type="text" class="form-control">
+                    </div>
+                    @endfor
+                    {{$end}}
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 
@@ -89,12 +89,11 @@ $end = "of marriages had fallen by around 30,000, while the number of divorces h
     let score = 0;
 
     $('#check-answer').click(checkAnswers) 
-
+    
     function checkAnswers() {
         let icon;
         $(':text').each((idx, item) => {
             answers[idx] = answers[idx].toString().trim().toLowerCase().split(",")
-
             $(item).removeClass('border-success');
             $(item).removeClass('border-danger');
             

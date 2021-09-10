@@ -4,33 +4,42 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 130px;
         padding: 0 5px;
         margin: 10px 5px;
+    }
+
+    ul.questions li {
+        margin: 20px 0;
+        line-height: 2rem;
     }
 
     .input-con {
         display: inline-block;
         position: relative;
     }
+
+    .ans-con {
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+    }
 </style>
 @php
-    $startQuestion = "The line-graphs give details of the percentage of adolescents who owned cd players, laptop computers and mobile phones during the period 1980 to 2010. Overall, it can be seen that the popularity of cd players";
     $question = [
-        'q1' => "significantly, while ownership of mobile phones",
-        'q2' => "dramatically over the period.",
-        'q3' => "At the",
-        'q4' => "of the period cd players were the",
-        'q5' => "popular of all the three gadgets, with more than 80% ownership. Roughly one half of all teenagers had a laptop computer while only fewer",
-        'q6' => "20% had a mobile phone. Over the next decade, mobile phones and laptops had a steady",
-        'q7' => ", while the popularity of cd players experienced a",
-        'q8' => "This trend continued over the next ten years. By the year 2000, only around 40% of young people owned a cd player, while laptop computers reached a peak to stand",
-        'q9' => "80%. Mobile phones also saw a dramatic",
-        'q10' => "to around 70%. By the end of the period, cd players had reached their",
-        'q11' => "popularity, around 30%. Laptop computers also experienced a",
-        'q12' => "during this decade to finish at around 60%. Mobile phones,",
+        'q1' => "The table gives information about how much money a small restaurant made in one week. Overall, it can be seen that dinner brought in more money than lunch every day and that",
+        'q2' => " was the busiest day of the week. Figures are given in dollars. Lunch-time figures show that Friday was the busiest day with",
+        'q3' => ". This was closely followed by Saturday, with $2650, and Sunday and Wednesday, which had the",
+        'q4' => "total of $2550. This was followed by Tuesday, with $1950 and Monday, the",
+        'q5' => "busy day of the week, with $1400. The totals for dinner were consistently",
+        'q6' => "than the figures for lunch. Friday was the busiest day,",
+        'q7' => "by Saturday, Thursday and Sunday, with figures of $3900, $3800 and $3750",
+        'q8' => ". Next came Wednesday with $3445, and this was followed",
+        'q9' => "Tuesday with $2850. Once again, Monday brought in the",
+        'q10' => " money of all, with $1425, which is only",
     ];
-    $endQuestion = ", continued to rise, with almost 100% ownership by 2010.";
+    $endQuestion = "as much as Tuesday’s total.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -38,15 +47,14 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The graph below shows the percentage of teenagers who owned a number of electronic items between 1980 and 2010.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_2.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The table below shows the sales at a small restaurant.</h5>
+                        <img src="{{ asset('public/img_lang/gap1/gap1_5.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                        {{$startQuestion}}
                         @for ($i = 1; $i <= count($question); $i++)
                             <div class="line-hight d-inline w-auto mb-2 ">
                                 {{ $question['q'.$i] }} <!-- question -->
@@ -70,20 +78,17 @@
 
 @section('js')
 <script>
-
     const answers = []
-    answers[0] = ['decreased', 'fell', 'dropped', 'reduced'];
-    answers[1] = ['increased', 'rose', 'grew'];
-    answers[2] = ['beginning', 'start'];
-    answers[3] = ['most'];
-    answers[4] = ['than'];
-    answers[5] = ['rise','increase'];
-    answers[6] = ['fall','decrease','reduction','drop'];
-    answers[7] = ['at'];
-    answers[8] = ['rise', 'increase'];
-    answers[9] = ['lowest'];
-    answers[10] = ['drop', 'fall', 'decrease'];
-    answers[11] = ['however','though'];
+    answers[0] = ['Friday'];
+    answers[1] = ['$2,700'];
+    answers[2] = ['same'];
+    answers[3] = ['least'];
+    answers[4] = ['higher','greater','larger','bigger'];
+    answers[5] = ['followed'];
+    answers[6] = ['respectively'];
+    answers[7] = ['by'];
+    answers[8] = ['least'];
+    answers[9] = ['half'];
 
     let score = 0;
 
@@ -92,6 +97,7 @@
     function checkAnswers() {
         let icon;
         $(':text').each((idx, item) => {
+            answers[idx] = answers[idx].toString().trim().toLowerCase().split(",")
 
             $(item).removeClass('border-success');
             $(item).removeClass('border-danger');

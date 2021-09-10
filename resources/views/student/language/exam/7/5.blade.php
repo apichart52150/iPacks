@@ -59,7 +59,6 @@
                             <div class="line-hight d-inline w-auto mb-2 ">
                                 {{ $question['q'.$i] }} <!-- question -->
                             </div>
-                            <span class="font-weight-bold">{{ $i }}.</span> <!-- number question-->
                             <div class="input-con">
                                 <input type="text" class="form-control">
                             </div>

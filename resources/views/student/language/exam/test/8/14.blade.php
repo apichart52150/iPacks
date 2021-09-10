@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 120px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -28,19 +28,19 @@
 </style>
 @php
     //$question -> input
-    $q1 = "The diagrams";
-    $q2 = "two kinds of bicycle, the penny-farthing, which was used around the year 1900, and the modern racing bike, which was used one hundred years later.";
-    $q3 = ", it can be seen that there are a number of differences in appearance and performance between the two bicycles. To start with the physical aspect, the two bicycles are very different in appearance. First of all, the";
-    $q4 = "striking difference is the size of the wheels. The penny-farthing has a very large wheel at the front. The rear wheel is much";
-    $q5 = "than the front one. The wheels on the modern racing bike are both the";
-    $q6 = "size. They are ";
-    $q7 = "than the front wheel of the penny-farthing, but";
-    $q8 = "than its rear wheel. The saddle on the penny-farthing is also quite high. It is located over the front wheel and sits around 2 metres off the ground. By contrast, the saddle on the modern racing bike is located above the";
-    $q9 = "wheel and it is not as high";
-    $q10 = "the saddle on the penny-farthing. With regard to performance features, the modern racing bike, as its name suggests, is designed for speed, whereas the penny-farthing is not. The racing bike has a number of gears connecting the pedals and the rear wheel. This means it can travel at";
-    $q11 = "speeds than the penny-farthing. In terms of safety and comfort, the modern racing bike is much safer and";
-    $q12 = "comfortable than the penny-farthing. The racing bike has brakes to help it stop,";
-    $end = "the penny-farthing does not have brakes. In addition, the rubber wheels of the racing bike give the cyclist a smoother ride, especially over rough roads.";
+    $q1 = "The table shows how many organ transplants were";
+    $q2 = "in 3 countries over 3 different years, plus forecasts for 2020. The pie-chart shows the";
+    $q3 = "for 2020, while the second chart illustrates levels of air pollution in the";
+    $q4 = "incidence of organ transplants, and the major organ involved in";
+    $q5 = "was the liver.";
+    $q6 = "we start with the number of organ transplants we can see that both Australia and South Africa showed increasing trends for transplant frequency,";
+    $q7 = "the trend in France was downward. South Africa started the period at just over 8,000 transplants. Although this figure shrank to around 7,000 in the ";
+    $q8 = "decade, it increased again to finish at 8,900 transplants in 2010. In Australia, 4,200 transplants";
+    $q9 = "place in both 1990 and 2000 before";
+    $q10 = "to 5,500 ten years later. France is the only country to record a";
+    $q11 = " in the number of organ transplants over the period. The figure started at 3,200 in 1990 and, although it rose to 3,800 by 2000, the figure then shrank over the next";
+    $q12 = "to stand at 2,800, a reduction of one thousand. Moving on to projected figures, the same trends continue for each country. Australia is expected to experience a growth of five hundred to stand at 6,000 transplants. South Africa is projected to increase";
+    $end = "less than Australia, with a rise of 300 transplants to stand at 9,200. France is likely to experience a fall of 300 transplants to stand at 2,500 operations, the lowest figure of all these three countries.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -48,73 +48,83 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5></h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_17.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The table shows the number of transplants which were carried out in 3 countries over 3 different years, plus projections for the year 2020. The pie-chart shows the proportion of organs used in the transplants in one particular year in Australia.</h5>
+                        <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_14.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                        {{$q1}}
-                        <span class="font-weight-bold">1.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q2}}
-                        <span class="font-weight-bold">2.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q3}}
-                        <span class="font-weight-bold">3.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q4}}
-                        <span class="font-weight-bold">4.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q5}}
-                        <span class="font-weight-bold">5.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q6}}
-                        <span class="font-weight-bold">6.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q7}}
-                        <span class="font-weight-bold">7.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q8}}
-                        <span class="font-weight-bold">8.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q9}}
-                        <span class="font-weight-bold">9.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q10}}
-                        <span class="font-weight-bold">10.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q11}}
-                        <span class="font-weight-bold">11.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q12}}
-                        <span class="font-weight-bold">12.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$end}}
+                            {{$q1}}
+                            <span class="font-weight-bold">1.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q2}}
+                            <span class="font-weight-bold">2.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q3}}
+                            <span class="font-weight-bold">3.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q4}}
+                            <span class="font-weight-bold">4.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q5}}
+                            <span class="font-weight-bold">5.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q6}}
+                            <span class="font-weight-bold">6.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q7}}
+                            <span class="font-weight-bold">7.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q8}}
+                            <span class="font-weight-bold">8.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q9}}
+                            <span class="font-weight-bold">9. </span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q10}}
+                            <span class="font-weight-bold">10.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q11}}
+                            <span class="font-weight-bold">11.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$end}}
                     </div>
                 </div>
             </div>
@@ -129,19 +139,21 @@
 
 @section('js')
 <script>
-
-    const answer1 = ['show', 'depict', 'illustrate'];
-    const answer2 = ['Overall'];
-    const answer3 = ['most'];
-    const answer4 = ['smaller', 'littler'];
-    const answer5 = ['same'];
-    const answer6 = ['larger', 'bigger'];
-    const answer7 = ['smaller', 'littler'];
-    const answer8 = ['rear', 'back'];
-    const answer9 = ['as'];
-    const answer10 = ['faster', 'higher', 'greater'];
-    const answer11 = ['more'];
-    const answer12 = ['while', 'whereas', 'but'];
+    // no space answer
+    
+    const answers = []
+    answers[0]= ['conducted'];
+    answers[1] = ['percentage', 'proportion'];
+    answers[2] = ['highest'];
+    answers[3] = ['transplantation', 'transplants'];
+    answers[4] = ['If'];
+    answers[5] = ['while', 'but', 'although', 'whereas'];
+    answers[6] = ['next', 'following', 'subsequent'];
+    answers[7] = ['took'];
+    answers[8] = ['Increasing', 'rising', 'growing', 'rising'];
+    answers[9] = ['fall', 'decrease', 'reduction'];
+    answers[10] = ['decade'];
+    answers[11] = ['Slightly', 'just', 'moderately'];
 
     let score = 0;
 

@@ -47,13 +47,13 @@
     <div class="col-md-12">
         <div class="card-box text-dark font-15">
             <div class="row justify-content-center mb-2">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The tables show world population between 1950 and 2050 and the distribution of population by region.</h5>
                         <img src="{{ asset('public/img_lang/gap1/gap1_14.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="border border-dark p-2">
                         {{$q1}}
                         <span class="font-weight-bold">1.</span> 

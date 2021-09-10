@@ -15,22 +15,22 @@
     }
 </style>
 @php
-    $startQuestion = "The line-graphs give details of the percentage of adolescents who owned cd players, laptop computers and mobile phones during the period 1980 to 2010. Overall, it can be seen that the popularity of cd players";
     $question = [
-        'q1' => "significantly, while ownership of mobile phones",
-        'q2' => "dramatically over the period.",
-        'q3' => "At the",
-        'q4' => "of the period cd players were the",
-        'q5' => "popular of all the three gadgets, with more than 80% ownership. Roughly one half of all teenagers had a laptop computer while only fewer",
-        'q6' => "20% had a mobile phone. Over the next decade, mobile phones and laptops had a steady",
-        'q7' => ", while the popularity of cd players experienced a",
-        'q8' => "This trend continued over the next ten years. By the year 2000, only around 40% of young people owned a cd player, while laptop computers reached a peak to stand",
-        'q9' => "80%. Mobile phones also saw a dramatic",
-        'q10' => "to around 70%. By the end of the period, cd players had reached their",
-        'q11' => "popularity, around 30%. Laptop computers also experienced a",
-        'q12' => "during this decade to finish at around 60%. Mobile phones,",
+        'q1' => "The table gives",
+        'q2' => "about the amount of money spent each year",
+        'q3' => "defence and education by five different nations. Figures are given in millions of dollars. Overall, it can be seen that all countries, with the",
+        'q4' => "of Japan, allocate more money to defence",
+        'q5' => " to education. Starting with the defence budget, Russia spends the",
+        'q6' => "amount of money on defending its borders. At 7000 million dollars, this is 500 million dollars",
+        'q7' => "than the USA. Russia’s budget for defence is",
+        'q8' => "as high as China’s, which amounts to 3500 million dollars. Australia allocates 4500 million dollars to defence, while Japan spends just 1000 million dollars, the",
+        'q9' => "amount of all the countries. When it comes to education, there is a different trend. Both Australia and Japan spend 4000 million dollars on education,",
+        'q10' => "than any of the other countries in the group. The USA spends 500 million",
+        'q11' => "than this, at 3500 million dollars. Russia and China both allocate sums of 3000 million dollars for education. While most countries spend more money on defence than on education, Japan spends four",
     ];
-    $endQuestion = ", continued to rise, with almost 100% ownership by 2010.";
+
+    $endQuestion = "more money on education than on defence.";
+    
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -38,15 +38,14 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The graph below shows the percentage of teenagers who owned a number of electronic items between 1980 and 2010.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_2.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
+                        <img src="{{ asset('public/img_lang/gap1/gap1_4.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                        {{$startQuestion}}
                         @for ($i = 1; $i <= count($question); $i++)
                             <div class="line-hight d-inline w-auto mb-2 ">
                                 {{ $question['q'.$i] }} <!-- question -->
@@ -70,20 +69,18 @@
 
 @section('js')
 <script>
-
     const answers = []
-    answers[0] = ['decreased', 'fell', 'dropped', 'reduced'];
-    answers[1] = ['increased', 'rose', 'grew'];
-    answers[2] = ['beginning', 'start'];
-    answers[3] = ['most'];
-    answers[4] = ['than'];
-    answers[5] = ['rise','increase'];
-    answers[6] = ['fall','decrease','reduction','drop'];
-    answers[7] = ['at'];
-    answers[8] = ['rise', 'increase'];
-    answers[9] = ['lowest'];
-    answers[10] = ['drop', 'fall', 'decrease'];
-    answers[11] = ['however','though'];
+    answers[0]= ['details', 'information'];
+    answers[1]= ['on'];
+    answers[2]= ['exception'];
+    answers[3]= ['than'];
+    answers[4]= ['highest','greatest','biggest'];
+    answers[5]= ['more','greater','higher'];
+    answers[6]= ['twice'];
+    answers[7]= ['smallest','least'];
+    answers[8]= ['more'];
+    answers[9] = ['less','lower'];
+    answers[10] = ['times'];
 
     let score = 0;
 
@@ -92,6 +89,7 @@
     function checkAnswers() {
         let icon;
         $(':text').each((idx, item) => {
+            answers[idx] = answers[idx].toString().trim().toLowerCase().split(",")
 
             $(item).removeClass('border-success');
             $(item).removeClass('border-danger');

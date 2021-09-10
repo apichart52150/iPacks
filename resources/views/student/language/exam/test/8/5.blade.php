@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,20 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    //$question -> input
+    $q1 = "The bar-chart gives details of the incidence of road accidents in three South- east Asian countries: namely, Malaysia, Thailand and Indonesia, in the first";
+    $q2 = "of this century. There are three obvious trends shown in the bar-chart: an increasing trend";
+    $q3 = "by Thailand, a decreasing trend in Malaysia, and a";
+    $q4 = "pattern in Indonesia. The pie-chart features the four different types of road vehicles involved in accidents in Thailand in 2010. It is clear that motorcyclists were by far the most";
+    $q5 = "of all road-users to be involved in accidents. To begin with the number of individual accidents, it can be seen that just under ten thousand road accidents were";
+    $q6 = "in the three countries in 2010. Of these, Malaysia and Thailand occupied joint first place with 4,000 accidents";
+    $q7 = "Indonesia accounted for the remaining two thousand or so accidents. Five years later, Malaysia had managed to";
+    $q8 = "its number of accidents, standing at just 2,000. However, Thailand’s figure rose 25% to";
+    $q9 = "at around 5,000 recorded accidents. Indonesia’s total remained steady at just under two thousand. By the end of the";
+    $q10 = ", Malaysia was able to sustain its downward trend,";
+    $q11 = "its total by a further 500 or so accidents. Thailand, on the other hand, continued to rise, closing at six thousand accidents by 2010. There was no change in Indonesia’s";
+    $q12 = "figure. Of the 6,000 recorded accident which occurred in Thailand in 2010, a total of 3,600, or 60%, involved motorcycles. Trucks accounted for a further 20% while the remaining 20% was ";
+    $end = "between cars and buses, with 15% and 5% respectively.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,10 +48,20 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The bar-chart below shows the number of road accidents which occurred in three countries between 2000 and 2010.The pie-chart shows the kinds of vehicles which were involved in road accidents in Thailand in 2010.</h5>
+                        <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_5.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
                         {{$q1}}
@@ -92,12 +105,22 @@
                             <input type="text" class="form-control">
                         </div>
                         {{$q9}}
-                        <span class="font-weight-bold">9.</span>
+                        <span class="font-weight-bold">9. </span>
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
                         {{$q10}}
                         <span class="font-weight-bold">10.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q11}}
+                        <span class="font-weight-bold">11.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q12}}
+                        <span class="font-weight-bold">12.</span>
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
@@ -116,17 +139,21 @@
 
 @section('js')
 <script>
-
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    // no space answer
+    
+    const answers = []
+    answers[0]= ['decade'];
+    answers[1] = ['experienced', 'shown'];
+    answers[2] = ['steady', 'stable'];
+    answers[3] = ['likely', 'probable'];
+    answers[4] = ['recorded', 'witnessed', 'seen'];
+    answers[5] = ['each'];
+    answers[6] = ['halve', 'reduce', 'decrease'];
+    answers[7] = ['stand'];
+    answers[8] = ['period'];
+    answers[9] = ['reducing'];
+    answers[10] = ['recorded'];
+    answers[11] = ['split', 'divided', 'shared'];
 
     let score = 0;
 
@@ -216,6 +243,22 @@
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
                     break;
+                case 10:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 11:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -226,7 +269,7 @@
             `)
         })
 
-        if(score == 10){
+        if(score == 12){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

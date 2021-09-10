@@ -28,21 +28,25 @@
 </style>
 @php
     //$question -> input
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "rain fell in one city from 2005 until 2011. Figures are given in millimetres. The line-graph shows the average temperature during those years. Overall, it can be";
-    $q3 = "that there is a link between rainfall and temperature: the higher the rainfall, the";
-    $q4 = " the average temperature. To begin with the rainfall, at the";
-    $q5 = "of the period the total rainfall was around 850 mm. The following year, there was a";
-    $q6 = "to around 750 mm. The downward trend continued over the next 2 years, with figures of approximately 600 and 450 mm";
-    $q7 = ". In 2009 the total";
-    $q8 = "to 500 mm. The total in 2010 was";
-    $q9 = "than in the previous year, reaching roughly 800 mm. By the end of the period, 2011, the city received";
-    $q10 = "highest amount of rain, at around 900 mm. With regard to temperature, the figure stood";
-    $q11 = "26 degrees Celsius in both 2005 and 2011. In between those years, the average temperatures were";
-    $q12 = "than this, fluctuating from 27 degrees in 2006 and 2007, up to 29 degrees in 2008, which was the";
-    $q13 = "temperature of all. There was a";
-    $q14 = "of one degree in 2009, followed";
-    $end = "a slight increase to 28.5 degrees in 2010.";
+    $q1 = "The given bar-chart shows";
+    $q2 = "profits earned by 4 companies between2000 and 2016. The table gives information about what";
+    $q3 = "of these profits was invested in Research and Development in 2000 and 2010. Overall, it can be seen that Company C, while showing the";
+    $q4 = "profit at the start of the period, ended up with by";
+    $q5 = "the largest earnings by 2016. The fact that this company’s";
+    $q6 = "for R&D was far higher than the other three companies may show a";
+    $q7 = "between R&D investment and annual profits. To begin with the data in the bar-chart, it can be seen that all companies experienced a";
+    $q8 = "in annual profits from the start of the period until the end, with the";
+    $q9 = "of Company B, which showed a";
+    $q10 = "fall in earnings in each of the three years. Company A earned just over 20 million dollars profit in 2010,";
+    $q11 = "gradually to around 28 million by 2016. As stated earlier, Company C started the period with around 15 million dollars profit before showing";
+    $q12 = "increases in both 2010 and 2016, with 35 and 65 million dollars respectively. Company D started with 20 million and almost";
+    $q13 = "its profit margin to just under 40 million in 2010 before dipping back";
+    $q14 = "to end the period at around 38 million dollars. By";
+    $q15 = "Company B showed profits of almost 50 million in 2000 before";
+    $q16 = "a steady decline to end at 40 million dollars by 2016. The data seem to give support to the claim that investment in R&D really doespay dividends. As stated previously, Company C was the";
+    $q17 = "one to show real commitment to R&D funding with an increase from 30% to 40% in 2000 and 2010";
+    $q18 = "Company A’s budget for R&D stayed steady at 20% in both years, but experienced a slight rise in profits. Both Company B and Company D";
+    $end = "their R&D budgets, resulting in a steady fall for Company B and a slight decrease in profits for Company D at the end of the period.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -50,10 +54,20 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows the rainfall in a particular city over a 6-year period (measured in mm), and the line-graph shows the average temperature over the same period (in degrees Celsius).</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_20.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The bar-chart below shows the annual profits (in millions of dollars) for 4 different companies in 3 years. The table gives details of Research and Development spending by each company in 2000 and 2010, expressed in terms of percentage of total profits.</h5>
+                        <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_1.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
                         {{$q1}}
@@ -126,6 +140,26 @@
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
+                        {{$q15}}
+                        <span class="font-weight-bold">15.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q16}}
+                        <span class="font-weight-bold">16.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q17}}
+                        <span class="font-weight-bold">17.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q18}}
+                        <span class="font-weight-bold">18.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
                         {{$end}}
                     </div>
                 </div>
@@ -142,20 +176,26 @@
 @section('js')
 <script>
     // no space answer
-    const answer1 = ['much'];
-    const answer2 = ['seen'];
-    const answer3 = ['lower' , 'cooler'];
-    const answer4 = ['beginning'];
-    const answer5 = ['fell', 'drop', 'decrease', 'reduction'];
-    const answer6 = ['respectively'];
-    const answer7 = ['fell', 'dropped', 'decreased'];
-    const answer8 = ['higher', 'greater', 'more', 'bigger'];
-    const answer9 = ['the'];
-    const answer10 = ['at'];
-    const answer11 = ['higher', 'greater', 'more', 'bigger'];
-    const answer12 = ['highest', 'warmest', 'hottest'];
-    const answer13 = ['fall', 'drop', 'decrease', 'reduction'];
-    const answer14 = ['by'];
+    
+    const answers = []
+    answers[0]= ['yearly'];
+    answers[1] = ['proportion'];
+    answers[2] = ['smallest' , 'lowest'];
+    answers[3] = ['far'];
+    answers[4] = ['funding', 'budget'];
+    answers[5] = ['correlation', 'link'];
+    answers[6] = ['rise'];
+    answers[7] = ['exception'];
+    answers[8] = ['steady', 'gradual'];
+    answers[9] = ['rising', 'increasing'];
+    answers[10] = ['substantial', 'dramatic', 'huge', 'large', 'major'];
+    answers[11] = ['doubled'];
+    answers[12] = ['slightly'];
+    answers[13] = ['contrast'];
+    answers[14] = ['experiencing', 'recording'];
+    answers[15] = ['only'];
+    answers[16] = ['respectively'];
+    answers[17] = ['reduced', 'decreased'];
 
     let score = 0;
 
@@ -277,6 +317,38 @@
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
                     break;
+                case 14:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer15) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 15:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer16) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 16:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer17) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 17:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer18) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -287,7 +359,7 @@
             `)
         })
 
-        if(score == 14){
+        if(score == 18){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

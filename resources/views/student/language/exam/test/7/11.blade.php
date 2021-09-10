@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 130px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,19 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    $q1 = "The chart shows the amount of money which a large company spent on advertising in various media formats from 1990 to 2010. Figures are given in millions of dollars.";
+    $q2 = ", it is clear that television is the most popular medium for advertising. In 1990, the company spent 45 million dollars";
+    $q3 = "TV advertising. This was 20 million dollars";
+    $q4 = "than the total for newspapers. In the same year, the advertising budget for the internet was just";
+    $q5 = "million dollars. Ten years later, the";
+    $q6 = "of money for television advertising";
+    $q7 = "by five million dollars to stand at 40 million. There was also a";
+    $q8 = "in the newspaper budget, of ten million dollars. The internet was the only one which saw an";
+    $q9 = ", up to 15 million dollars, the same figure";
+    $q10 = "for newspapers. By 2010, the budget for television had dropped a further ten million dollars to stand";
+    $q11 = "thirty million dollars. The budget for newspapers also continued to";
+    $q12 = ", reaching a low of just ten million dollars. In stark";
+    $end = ", internet spending continued to rise, finishing at 25 million dollars. To sum up, while the television budget remained higher than the other two media forms, it experienced a significant drop in overall spending, while the internet experienced growth throughout the period.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,8 +47,8 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The bar-chart below shows the advertising budget in millions of dollars for a major company during a twenty-year period.</h5>
+                        <img src="{{ asset('public/img_lang/gap1/gap1_11.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -101,6 +103,16 @@
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
+                        {{$q11}}
+                        <span class="font-weight-bold">11.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q12}}
+                        <span class="font-weight-bold">12.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
                         {{$end}}
                     </div>
                 </div>
@@ -117,16 +129,20 @@
 @section('js')
 <script>
 
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    
+    const answers = []
+    answers[0]= ['Overall'];
+    answers[1] = ['on'];
+    answers[2] = ['more', 'greater', 'higher'];
+    answers[3] = ['5', 'five'];
+    answers[4] = ['amount', 'sum'];
+    answers[5] = ['decreased','fell', 'dropped' ,'reduced'];
+    answers[6] = ['fall','drop', 'decrease', 'reduction'];
+    answers[7] = ['increase','improvement'];
+    answers[8] = ['as'];
+    answers[9] = ['at'];
+    answers[10] = ['fall', 'drop', 'decrease', 'reduce'];
+    answers[11] = ['contrast'];
 
     let score = 0;
 
@@ -216,6 +232,22 @@
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
                     break;
+                case 10:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 11:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -226,7 +258,7 @@
             `)
         })
 
-        if(score == 10){
+        if(score == 12){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

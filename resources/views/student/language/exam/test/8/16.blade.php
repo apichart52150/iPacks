@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 120px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -28,19 +28,19 @@
 </style>
 @php
     //$question -> input
-    $q1 = "The diagrams";
-    $q2 = "two kinds of bicycle, the penny-farthing, which was used around the year 1900, and the modern racing bike, which was used one hundred years later.";
-    $q3 = ", it can be seen that there are a number of differences in appearance and performance between the two bicycles. To start with the physical aspect, the two bicycles are very different in appearance. First of all, the";
-    $q4 = "striking difference is the size of the wheels. The penny-farthing has a very large wheel at the front. The rear wheel is much";
-    $q5 = "than the front one. The wheels on the modern racing bike are both the";
-    $q6 = "size. They are ";
-    $q7 = "than the front wheel of the penny-farthing, but";
-    $q8 = "than its rear wheel. The saddle on the penny-farthing is also quite high. It is located over the front wheel and sits around 2 metres off the ground. By contrast, the saddle on the modern racing bike is located above the";
-    $q9 = "wheel and it is not as high";
-    $q10 = "the saddle on the penny-farthing. With regard to performance features, the modern racing bike, as its name suggests, is designed for speed, whereas the penny-farthing is not. The racing bike has a number of gears connecting the pedals and the rear wheel. This means it can travel at";
-    $q11 = "speeds than the penny-farthing. In terms of safety and comfort, the modern racing bike is much safer and";
-    $q12 = "comfortable than the penny-farthing. The racing bike has brakes to help it stop,";
-    $end = "the penny-farthing does not have brakes. In addition, the rubber wheels of the racing bike give the cyclist a smoother ride, especially over rough roads.";
+    $q1 = "The flow-chart shows the";
+    $q2 = "involved in diamond processing, from extracting the ore to producing the diamond concentrate. The process consists of three";
+    $q3 = "stages: crushing, cleaning and separation. Each stage is";
+    $q4 = "out using a number of different machines. The first stage in the process is crushing, which itself";
+    $q5 = "of three main stages. First of all, the iron ore is passed to the primary crusher,";
+    $q6 = "the large rocks are crushed into smaller pieces of roughly 30 centimetres in diameter. These smaller pieces are then fed into the secondary crusher, which, in";
+    $q7 = ", reduces the rocks to an even smaller size: 8 cm in diameter. The";
+    $q8 = "stage in crushing involves the roller crusher, which breaks up the rocks into pieces not";
+    $q9 = "3 centimetres, at the same time releasing the diamonds. During the next stage, cleaning, four machines are used to";
+    $q10 = "various pieces of dirt from the diamond ore. The primary and the secondary scrubber remove dirt particles and reduce the size of the ore further. As their names imply, the de-gritter removes grit and the de-sander gets rid of";
+    $q11 = ". The separation stage consists of three methods. In the first of these, heavy minerals, which surround the diamonds, are separated from the light minerals, and the";
+    $q12 = "are discarded.";
+    $end = "this, magnets remove unwanted magnetic deposits, and finally the pure diamond ore is extracted using a grease table which separates the diamond concentrate from all the remaining pieces.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -48,73 +48,83 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5></h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_17.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The diagram shows the process of diamond mining, from the raw material (ore) to the diamond concentrate. Write a description of the process showing how the ore is transformed into diamond concentrate.</h5>
+                        <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant. </h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_16.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                        {{$q1}}
-                        <span class="font-weight-bold">1.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q2}}
-                        <span class="font-weight-bold">2.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q3}}
-                        <span class="font-weight-bold">3.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q4}}
-                        <span class="font-weight-bold">4.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q5}}
-                        <span class="font-weight-bold">5.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q6}}
-                        <span class="font-weight-bold">6.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q7}}
-                        <span class="font-weight-bold">7.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q8}}
-                        <span class="font-weight-bold">8.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q9}}
-                        <span class="font-weight-bold">9.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q10}}
-                        <span class="font-weight-bold">10.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q11}}
-                        <span class="font-weight-bold">11.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q12}}
-                        <span class="font-weight-bold">12.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$end}}
+                            {{$q1}}
+                            <span class="font-weight-bold">1.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q2}}
+                            <span class="font-weight-bold">2.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q3}}
+                            <span class="font-weight-bold">3.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q4}}
+                            <span class="font-weight-bold">4.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q5}}
+                            <span class="font-weight-bold">5.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q6}}
+                            <span class="font-weight-bold">6.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q7}}
+                            <span class="font-weight-bold">7.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q8}}
+                            <span class="font-weight-bold">8.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q9}}
+                            <span class="font-weight-bold">9. </span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q10}}
+                            <span class="font-weight-bold">10.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q11}}
+                            <span class="font-weight-bold">11.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$end}}
                     </div>
                 </div>
             </div>
@@ -129,19 +139,21 @@
 
 @section('js')
 <script>
-
-    const answer1 = ['show', 'depict', 'illustrate'];
-    const answer2 = ['Overall'];
-    const answer3 = ['most'];
-    const answer4 = ['smaller', 'littler'];
-    const answer5 = ['same'];
-    const answer6 = ['larger', 'bigger'];
-    const answer7 = ['smaller', 'littler'];
-    const answer8 = ['rear', 'back'];
-    const answer9 = ['as'];
-    const answer10 = ['faster', 'higher', 'greater'];
-    const answer11 = ['more'];
-    const answer12 = ['while', 'whereas', 'but'];
+    // no space answer
+    
+    const answers = []
+    answers[0]= ['stages'];
+    answers[1] = ['distinct', 'different'];
+    answers[2] = ['carried'];
+    answers[3] = ['consists'];
+    answers[4] = ['where'];
+    answers[5] = ['turn'];
+    answers[6] = ['final', 'last', 'third', 'next'];
+    answers[7] = ['exceeding'];
+    answers[8] = ['remove', 'clean'];
+    answers[9] = ['sand'];
+    answers[10] = ['latter'];
+    answers[11] = ['following', 'after'];
 
     let score = 0;
 
@@ -257,7 +269,7 @@
             `)
         })
 
-        if(score == 12){
+        if(score == 10){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

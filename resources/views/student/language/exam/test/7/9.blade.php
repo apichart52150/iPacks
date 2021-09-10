@@ -27,17 +27,17 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    $q1 = "The chart shows details of the number of men and women who shop at a department store, and the days they like to shop there. Overall, it is clear that";
+    $q2 = "women than men shop there, and that the busiest days are at the";
+    $q3 = "Not many people shop there at the beginning of the week. On Monday and Tuesday only around six thousand";
+    $q4 = "shop there while the figures for men are one and two thousand";
+    $q5 = ". For men, Wednesday is the same";
+    $q6 = "Tuesday with a total of around 2,000 shoppers, while the";
+    $q7 = "of female shoppers rises to around eight thousand. Thursday tends to be";
+    $q8 = "busy than Wednesday, with around seven thousand women and just one thousand men. On Friday, however, figures show an";
+    $q9 = "with 10,000 and 3,000 for women and men";
+    $q10 = ". Weekends are the";
+    $end = "time of the week. At the weekend, the store is filled with twenty thousand female shoppers and five thousand male shoppers.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,8 +45,8 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The bar-chart below shows a breakdown of customers at a department store in terms of gender and preferred shopping days. Figures are given in thousands of customers.</h5>
+                        <img src="{{ asset('public/img_lang/gap1/gap1_9.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -117,16 +117,18 @@
 @section('js')
 <script>
 
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    
+    const answers = []
+    answers[0]= ['more'];
+    answers[1] = ['weekend', 'weekends'];
+    answers[2] = ['women', 'females'];
+    answers[3] = ['respectively'];
+    answers[4] = ['as'];
+    answers[5] = ['number'];
+    answers[6] = ['less'];
+    answers[7] = ['increase'];
+    answers[8] = ['respectively'];
+    answers[9] = ['busiest'];
 
     let score = 0;
 

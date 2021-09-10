@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 120px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,20 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    //$question -> input
+    $q1 = "The diagrams";
+    $q2 = "two kinds of bicycle, the penny-farthing, which was used around the year 1900, and the modern racing bike, which was used one hundred years later.";
+    $q3 = ", it can be seen that there are a number of differences in appearance and performance between the two bicycles. To start with the physical aspect, the two bicycles are very different in appearance. First of all, the";
+    $q4 = "striking difference is the size of the wheels. The penny-farthing has a very large wheel at the front. The rear wheel is much";
+    $q5 = "than the front one. The wheels on the modern racing bike are both the";
+    $q6 = "size. They are ";
+    $q7 = "than the front wheel of the penny-farthing, but";
+    $q8 = "than its rear wheel. The saddle on the penny-farthing is also quite high. It is located over the front wheel and sits around 2 metres off the ground. By contrast, the saddle on the modern racing bike is located above the";
+    $q9 = "wheel and it is not as high";
+    $q10 = "the saddle on the penny-farthing. With regard to performance features, the modern racing bike, as its name suggests, is designed for speed, whereas the penny-farthing is not. The racing bike has a number of gears connecting the pedals and the rear wheel. This means it can travel at";
+    $q11 = "speeds than the penny-farthing. In terms of safety and comfort, the modern racing bike is much safer and";
+    $q12 = "comfortable than the penny-farthing. The racing bike has brakes to help it stop,";
+    $end = "the penny-farthing does not have brakes. In addition, the rubber wheels of the racing bike give the cyclist a smoother ride, especially over rough roads.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,8 +48,8 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5></h5>
+                        <img src="{{ asset('public/img_lang/gap1/gap1_17.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -101,6 +104,16 @@
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
+                        {{$q11}}
+                        <span class="font-weight-bold">11.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q12}}
+                        <span class="font-weight-bold">12.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
                         {{$end}}
                     </div>
                 </div>
@@ -117,16 +130,20 @@
 @section('js')
 <script>
 
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    
+    const answers = []
+    answers[0]= ['show', 'depict', 'illustrate'];
+    answers[1] = ['Overall'];
+    answers[2] = ['most'];
+    answers[3] = ['smaller', 'littler'];
+    answers[4] = ['same'];
+    answers[5] = ['larger', 'bigger'];
+    answers[6] = ['smaller', 'littler'];
+    answers[7] = ['rear', 'back'];
+    answers[8] = ['as'];
+    answers[9] = ['faster', 'higher', 'greater'];
+    answers[10] = ['more'];
+    answers[11] = ['while', 'whereas', 'but'];
 
     let score = 0;
 
@@ -216,6 +233,22 @@
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
                     break;
+                case 10:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 11:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -226,7 +259,7 @@
             `)
         })
 
-        if(score == 10){
+        if(score == 12){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

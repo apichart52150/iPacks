@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,20 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    //$question -> input
+    $q1 = "The line graph gives details of three fuel sources used by a certain country to";
+    $q2 = "energy from the period 1990 until 2020:";
+    $q3 = ", fossil fuels (coal, gas, oil), nuclear energy, and alternative energy sources (coal, gas, oil),nuclear energy, and alternative energy sources (e.g. solar energy, hydroelectricity,wind power).Overall, it can be seen that although fossil fuels were by far the most";
+    $q4 = "source of energy at the beginning of the period, there has been a steady fall in the use of";
+    $q5 = "fuels, and the future of energy production is";
+    $q6 = "to rely on alternative energy sources. To begin with fossil fuels, these accounted for 70% of total energy";
+    $q7 = "in 1990, while the remaining 30% was taken up by nuclear energy and alternative energy sources, with 20% and 10% respectively. By the";
+    $q8 = "of the century, the dependence on coal, gas and oil had fallen 10";
+    $q9 = "This decrease was absorbed by nuclear energy, which rose by ";
+    $q10 = "the same amount, 10%. There was no change in the use of alternative energy sources at this time. The next fifteen years,";
+    $q11 = "saw a dramatic rise in the use of alternatives for energy production,overtaking both fossil fuels, which";
+    $q12 = "its downward trend, and nuclear power, which plateaued at 30%. Similar trends are projected to occur until 2020, with alternatives";
+    $end = " for one half of all energy generation. Nuclear is expected to remain stable at 30%, while fossil fuels is likely to fall to an all-time low of just 20%.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,10 +48,20 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The line graph below shows one country’s consumption of different fuel sources for its energy needs from 1990 until today, and projected figures until 2020. Figures are given as percentages of total energy produced.</h5>
+                        <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_4.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
                         {{$q1}}
@@ -92,12 +105,22 @@
                             <input type="text" class="form-control">
                         </div>
                         {{$q9}}
-                        <span class="font-weight-bold">9.</span>
+                        <span class="font-weight-bold">9. </span>
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
                         {{$q10}}
                         <span class="font-weight-bold">10.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q11}}
+                        <span class="font-weight-bold">11.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q12}}
+                        <span class="font-weight-bold">12.</span>
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
@@ -116,17 +139,21 @@
 
 @section('js')
 <script>
-
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    // no space answer
+    
+    const answers = []
+    answers[0]= ['generate', 'produce'];
+    answers[1] = ['namely'];
+    answers[2] = ['important'];
+    answers[3] = ['such', 'these'];
+    answers[4] = ['expected', 'likely', 'projected', 'forecast'];
+    answers[5] = ['generation', 'production'];
+    answers[6] = ['turn', 'end'];
+    answers[7] = ['percent'];
+    answers[8] = ['exactly'];
+    answers[9] = ['however' ,'though'];
+    answers[10] = ['continued'];
+    answers[11] = ['accounting'];
 
     let score = 0;
 
@@ -216,6 +243,22 @@
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
                     break;
+                case 10:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 11:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -226,7 +269,7 @@
             `)
         })
 
-        if(score == 10){
+        if(score == 12){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

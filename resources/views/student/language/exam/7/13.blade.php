@@ -45,13 +45,13 @@
     <div class="col-md-12">
         <div class="card-box text-dark font-15">
             <div class="row justify-content-center mb-2">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The chart shows the population of 5 cities in three different years.</h5>
                         <img src="{{ asset('public/img_lang/gap1/gap1_13.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="border border-dark p-2">
                         {{$q1}}
                         <span class="font-weight-bold">1.</span> 

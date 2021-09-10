@@ -27,17 +27,22 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    //$question -> input
+    $q1 = "The graph gives details of how";
+    $q2 = "patients visited a doctor’s surgery on weekdays and weekends. The pie-chart shows how";
+    $q3 = "they felt with the service. Overall, it can be seen that Monday was the";
+    $q4 = "day of the week, and that";
+    $q5 = "people were happy with the service. At the start of the week, a total of 1500 patients went to see the doctor. On Tuesday this figure";
+    $q6 = "by around 300 to stand";
+    $q7 = "1200. The downward";
+    $q8 = "continued on Wednesday with just over 500 patients. The figure";
+    $q9 = "again on Thursday to around one thousand visitors to the surgery. By Friday, the total had";
+    $q10 = "to just 200 people, the";
+    $q11 = "number of the whole week. Weekends experienced a";
+    $q12 = "rise to three hundred patients. In terms of satisfaction levels, fifty percent, or";
+    $q13 = "of all patients surveyed felt satisfied with the service provided. A";
+    $q14 = "30 percent were very satisfied, while only";
+    $end = "percent, or one-fifth of all patients, were not satisfied. Overall, the doctor seems to be providing quality service to most patients.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,8 +50,8 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The line-graph below shows the number of visits to a doctor on each day of the week, and the pie-chart shows the level of patient satisfaction.</h5>
+                        <img src="{{ asset('public/img_lang/gap1/gap1_18.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -101,6 +106,26 @@
                         <div class="input-con">
                             <input type="text" class="form-control">
                         </div>
+                        {{$q11}}
+                        <span class="font-weight-bold">11.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q12}}
+                        <span class="font-weight-bold">12.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q13}}
+                        <span class="font-weight-bold">13.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        {{$q14}}
+                        <span class="font-weight-bold">14.</span>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
                         {{$end}}
                     </div>
                 </div>
@@ -117,16 +142,22 @@
 @section('js')
 <script>
 
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    
+    const answers = []
+    answers[0]= ['many'];
+    answers[1] = ['satisfied', 'happy'];
+    answers[2] = ['busiest' , 'mostpopular'];
+    answers[3] = ['most', 'many'];
+    answers[4] = ['fell', 'dropped', 'decreased', 'reduced'];
+    answers[5] = ['at'];
+    answers[6] = ['trend'];
+    answers[7] = ['grew', 'increased', 'rose'];
+    answers[8] = ['dropped', 'fallen', 'decrease', 'reduced', 'shrunk'];
+    answers[9] = ['lowest', 'smallest'];
+    answers[10] = ['slight', 'marginal', 'small', 'modest'];
+    answers[11] = ['half'];
+    answers[12] = ['further'];
+    answers[13] = ['20', 'twenty'];
 
     let score = 0;
 
@@ -216,6 +247,38 @@
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
                     break;
+                case 10:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 11:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                         score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 12:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer13) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
+                case 13:
+                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer14) != -1) {
+                        icon = '<i class="fas fa-check text-success"></i>';
+                            score++;
+                    } else {
+                        icon = '<i class="fas fa-times text-danger"></i>';
+                    }
+                    break;
             }
 
             $(item).parent().find('.ans-con').remove();
@@ -226,7 +289,7 @@
             `)
         })
 
-        if(score == 10){
+        if(score == 14){
             alert("you're awesome");
         }else{
             alert('Your score is ' + score);

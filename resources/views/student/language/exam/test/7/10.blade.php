@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 130px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,17 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    $q1 = "The chart shows how people of different ages find out about the news. Overall, it can be seen that newspapers are popular with all age groups except the young people aged under 20. For adolescents, the internet is the";
+    $q2 = "popular way of finding out what’s happening in the world. Half of all teenagers use the internet for this. The other fifty percent rely on television and newspapers, with 30% and 20%";
+    $q3 = ". People aged between 20 and 40 use both newspapers and the television equally to access the news, at 40% each. Only (3)";
+    $q4 = "of them use the internet for this.";
+    $q5 = "of the people in the 40 to 60 group prefer to read the news in newspapers while 40% choose to find out news on television. Only";
+    $q6 = "of them use the internet. People in the oldest age group, the over 60s, prefer to watch the news on television. This is ten percent";
+    $q7 = "than those who like to read newspapers. Only 5 per cent of the over 60s choose the internet to access news, the";
+    $q8 = "of all the groups. To sum";
+    $q9 = ", it seems that the";
+    $q10 = "people get, the";
+    $end = "they like to use the internet for getting news.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,8 +45,8 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The bar-chart below shows how four groups of people access the news.</h5>
+                        <img src="{{ asset('public/img_lang/gap1/gap1_10.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -117,16 +117,18 @@
 @section('js')
 <script>
 
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    
+    const answers = []
+    answers[0]= ['most'];
+    answers[1] = ['respectively'];
+    answers[2] = ['20%','one-fifth'];
+    answers[3] = ['Half'];
+    answers[4] = ['10%','one-tenth'];
+    answers[5] = ['more','greater', 'higher'];
+    answers[6] = ['least'];
+    answers[7] = ['up'];
+    answers[8] = ['older'];
+    answers[9] = ['less'];
 
     let score = 0;
 

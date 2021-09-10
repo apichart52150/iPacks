@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 135px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -28,21 +28,21 @@
 </style>
 @php
     //$question -> input
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "rain fell in one city from 2005 until 2011. Figures are given in millimetres. The line-graph shows the average temperature during those years. Overall, it can be";
-    $q3 = "that there is a link between rainfall and temperature: the higher the rainfall, the";
-    $q4 = " the average temperature. To begin with the rainfall, at the";
-    $q5 = "of the period the total rainfall was around 850 mm. The following year, there was a";
-    $q6 = "to around 750 mm. The downward trend continued over the next 2 years, with figures of approximately 600 and 450 mm";
-    $q7 = ". In 2009 the total";
-    $q8 = "to 500 mm. The total in 2010 was";
-    $q9 = "than in the previous year, reaching roughly 800 mm. By the end of the period, 2011, the city received";
-    $q10 = "highest amount of rain, at around 900 mm. With regard to temperature, the figure stood";
-    $q11 = "26 degrees Celsius in both 2005 and 2011. In between those years, the average temperatures were";
-    $q12 = "than this, fluctuating from 27 degrees in 2006 and 2007, up to 29 degrees in 2008, which was the";
-    $q13 = "temperature of all. There was a";
-    $q14 = "of one degree in 2009, followed";
-    $end = "a slight increase to 28.5 degrees in 2010.";
+    $q1 = "The diagrams show how the telephone has developed over the last two centuries since it was";
+    $q2 = "in the nineteenth century. It is quite clear that it has been";
+    $q3 = "quite dramatically in terms of both appearance and performance. If we start with the";
+    $q4 = "appearance we can see that there are differences in size, shape and weight. The old-fashioned telephone is quite tall at thirty centimeters";
+    $q5 = "to the smart phone which";
+    $q6 = "just 12 centimetres in height and five centimetres in ";
+    $q7 = "The shape is also different. The original phone is tall and slim and consists of 2 distinct parts:";
+    $q8 = ", a mouthpiece for speaking into, and the earphone for";
+    $q9 = "to the other person. By contrast, the one-piece smart phone has a flat, rectangular shape which fits into the hand. The";
+    $q10 = " size means that the smart phone is much lighter than the original, oldfashioned phone: the former weighs just 250 grams, while the";
+    $q11 = "has a weight of one kilogram, four times as much as the smart phone.";
+    $q12 = "to performance aspects, the original phone was designed for speaking with people at a distance. In the same way, the smart phone is used for communicating with other people. It does, however, have far more applications than simply as a phone. The smart phone functions as a camera, a music player and can even be used for downloading and watching movies from the internet. In";
+    $q13 = "the touch screen enables people to";
+    $q14 = "numbers quickly, in contrast to the original version, which operated by finger dialing. Finally, the smart phone can send";
+    $end = "to people anywhere in the world, at the touch of a button, with a built-in keyboard for writing the message.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -50,83 +50,93 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows the rainfall in a particular city over a 6-year period (measured in mm), and the line-graph shows the average temperature over the same period (in degrees Celsius).</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_20.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>'The pictures show the development of two telephones: the original phone a short time after its invention in the nineteenth century, and a modern-day state-of-the-art 'smart' phone Write a report to describe this development, making comparisons where necessary. '</h5>
+                        <img src="{{ asset('public/img_lang/gap2/gap2_18.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <img src="{{ asset('public/img_lang/gap2/gap2_18_2.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card-box text-dark font-15">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                        {{$q1}}
-                        <span class="font-weight-bold">1.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q2}}
-                        <span class="font-weight-bold">2.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q3}}
-                        <span class="font-weight-bold">3.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q4}}
-                        <span class="font-weight-bold">4.</span> 
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q5}}
-                        <span class="font-weight-bold">5.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q6}}
-                        <span class="font-weight-bold">6.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q7}}
-                        <span class="font-weight-bold">7.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q8}}
-                        <span class="font-weight-bold">8.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q9}}
-                        <span class="font-weight-bold">9.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q10}}
-                        <span class="font-weight-bold">10.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q11}}
-                        <span class="font-weight-bold">11.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q12}}
-                        <span class="font-weight-bold">12.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q13}}
-                        <span class="font-weight-bold">13.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$q14}}
-                        <span class="font-weight-bold">14.</span>
-                        <div class="input-con">
-                            <input type="text" class="form-control">
-                        </div>
-                        {{$end}}
+                            {{$q1}}
+                            <span class="font-weight-bold">1.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q2}}
+                            <span class="font-weight-bold">2.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q3}}
+                            <span class="font-weight-bold">3.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q4}}
+                            <span class="font-weight-bold">4.</span> 
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q5}}
+                            <span class="font-weight-bold">5.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q6}}
+                            <span class="font-weight-bold">6.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q7}}
+                            <span class="font-weight-bold">7.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q8}}
+                            <span class="font-weight-bold">8.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q9}}
+                            <span class="font-weight-bold">9. </span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q10}}
+                            <span class="font-weight-bold">10.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q11}}
+                            <span class="font-weight-bold">11.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q12}}
+                            <span class="font-weight-bold">12.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q13}}
+                            <span class="font-weight-bold">13.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$q14}}
+                            <span class="font-weight-bold">14.</span>
+                            <div class="input-con">
+                                <input type="text" class="form-control">
+                            </div>
+                            {{$end}}
                     </div>
                 </div>
             </div>
@@ -142,20 +152,22 @@
 @section('js')
 <script>
     // no space answer
-    const answer1 = ['much'];
-    const answer2 = ['seen'];
-    const answer3 = ['lower' , 'cooler'];
-    const answer4 = ['beginning'];
-    const answer5 = ['fell', 'drop', 'decrease', 'reduction'];
-    const answer6 = ['respectively'];
-    const answer7 = ['fell', 'dropped', 'decreased'];
-    const answer8 = ['higher', 'greater', 'more', 'bigger'];
-    const answer9 = ['the'];
-    const answer10 = ['at'];
-    const answer11 = ['higher', 'greater', 'more', 'bigger'];
-    const answer12 = ['highest', 'warmest', 'hottest'];
-    const answer13 = ['fall', 'drop', 'decrease', 'reduction'];
-    const answer14 = ['by'];
+    
+    const answers = []
+    answers[0]= ['invented'];
+    answers[1] = ['transformed', 'developed', 'changed', 'improved'];
+    answers[2] = ['physical'];
+    answers[3] = ['compared'];
+    answers[4] = ['is', 'measures'];
+    answers[5] = ['width'];
+    answers[6] = ['namely'];
+    answers[7] = ['listening'];
+    answers[8] = ['smaller', 'reduced'];
+    answers[9] = ['latter'];
+    answers[10] = ['Turning', 'Moving'];
+    answers[11] = ['addition'];
+    answers[12] = ['dial', 'access', 'reach'];
+    answers[13] = ['emails', 'messages'];
 
     let score = 0;
 
@@ -264,7 +276,7 @@
                 case 12:
                     if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer13) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
-                            score++;
+                         score++;
                     } else {
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }
@@ -272,7 +284,7 @@
                 case 13:
                     if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer14) != -1) {
                         icon = '<i class="fas fa-check text-success"></i>';
-                            score++;
+                         score++;
                     } else {
                         icon = '<i class="fas fa-times text-danger"></i>';
                     }

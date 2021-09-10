@@ -4,7 +4,7 @@
         border-bottom: 1px solid #ccc;
         display: inline-block;
         height: auto;
-        width: 140px;
+        width: 130px;
         padding: 0 5px;
         margin: 10px 5px;
     }
@@ -27,17 +27,17 @@
     }
 </style>
 @php
-    $q1 = "The bar-chart gives details of how";
-    $q2 = "oil was produced and used in 2011 by 5 regions: namely, Africa, the Middle East, Europe, Asia and";
-    $q3 = "United States. Overall, it can be seen that the Middle East produced the";
-    $q4 = "amount of oil, while the USA used";
-    $q5 = "than any other region. To begin with oil production, the Middle East produced 2000 million barrels of oil in 2011. This was more than";
-    $q6 = "as much as any other region. Asia and the USA both produced 900 million barrels with Africa producing slightly";
-    $q7 = "oil at around 750 million barrels. Europe produced the";
-    $q8 = " oil of all the regions with a total of 500 million barrels. Moving on to oil consumption, the USA consumed far more oil";
-    $q9 = "the other regions, at around 1800 million barrels. Next came Europe, with 1500 million barrels. The other three regions all used considerably";
-    $q10 = "than this. Asia used 500 million barrels, while Africa and the Middle East used 300 and 200 million barrels";
-    $end = ". To sum up, it seems that the developed regions use more oil than they produce.";
+    $q1 = "The pictures show how a university developed between the years 2000 and 2010. Overall, it can be seen that there were a number of changes in facilities provided by the university, namely sports facilities, shops and accommodation. To begin";
+    $q2 = "the sports facilities, the large sports field";
+    $q3 = "the right-hand side";
+    $q4 = "the university building has disappeared and a new gymnasium has taken its place. The lake, which was next";
+    $q5 = "the sports field, has also disappeared.";
+    $q6 = "its place there are now some shops for the students to buy things. By 2010 the lecture theatre had not changed. It was exactly the same";
+    $q7 = "it was before. The dormitory,";
+    $q8 = ", was much";
+    $q9 = " than it used to be. This means that many more students could live on the university campus. In order to provide space";
+    $q10 = "the extra sleeping accommodation, the café was moved. It was now located";
+    $end = "the left of the shops.";
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -45,8 +45,8 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The diagrams below show the development of a university over a ten-year period.</h5>
+                        <img src="{{ asset('public/img_lang/gap1/gap1_16.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -117,16 +117,18 @@
 @section('js')
 <script>
 
-    const answer1 = ['much'];
-    const answer2 = ['the'];
-    const answer3 = ['largest', 'greatest', 'biggest'];
-    const answer4 = ['more'];
-    const answer5 = ['twice'];
-    const answer6 = ['less'];
-    const answer7 = ['least'];
-    const answer8 = ['than'];
-    const answer9 = ['less'];
-    const answer10 = ['respectively'];
+    
+    const answers = []
+    answers[0]= ['with'];
+    answers[1] = ['on'];
+    answers[2] = ['of'];
+    answers[3] = ['to'];
+    answers[4] = ['in'];
+    answers[5] = ['as'];
+    answers[6] = ['however', 'though'];
+    answers[7] = ['larger', 'bigger'];
+    answers[8] = ['for'];
+    answers[9] = ['to', 'on'];
 
     let score = 0;
 

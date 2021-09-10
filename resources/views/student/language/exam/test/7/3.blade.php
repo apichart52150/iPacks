@@ -96,6 +96,7 @@
     function checkAnswers() {
         let icon;
         $(':text').each((idx, item) => {
+            answers[idx] = answers[idx].toString().trim().toLowerCase().split(",")
 
             $(item).removeClass('border-success');
             $(item).removeClass('border-danger');
