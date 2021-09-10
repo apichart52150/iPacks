@@ -122,7 +122,7 @@
     $('#check-answer').click(checkAnswers) 
 
     function checkAnswers() {
-        let icon;
+        
         $(':text').each((idx, item) => {
 
             $(item).removeClass('border-success');
