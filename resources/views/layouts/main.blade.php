@@ -35,6 +35,35 @@
         @yield('css')
     </head>
 
+    <style>
+        #topnav {
+            padding: 0;
+        }
+        .border-3 {
+            border-width:10px !important;
+        }
+        @media(max-width: 991px) {
+            .wrapper {
+                padding-top: 140px !important;
+            }
+        }
+        #download {
+            cursor: pointer;
+        }
+        @media(max-width: 500px) {
+            .card-header {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            .card-header h3 {
+                font-size: 16px;
+            }
+            .card-body {
+                padding: 0;
+            }
+        }
+    </style>
+
     <body class="center-menu">
         <!-- Navigation Bar-->
         
@@ -277,6 +306,8 @@
        
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/jquery-knob/jquery.knob.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/peity/jquery.peity.min.js') }}"></script>
 
         <!-- Modal-Effect -->
         <script src="{{ asset('public/assets/libs/custombox/custombox.min.js') }}"></script>
@@ -290,6 +321,9 @@
         <!-- App js -->
         <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
 
+        <!-- Sparkline charts -->
+        <script src="{{ asset('public/assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
+
         <!-- Plugins Js -->
         <script src="{{ asset('public/assets/libs/switchery/switchery.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/multiselect/jquery.multi-select.js') }}"></script>
@@ -299,6 +333,14 @@
 
          <!-- init js -->
         <script src="{{ asset('public/assets/js/pages/form-advanced.init.js') }}"></script>
+
+        <!-- Datatables init -->
+        <script src="{{ asset('public/assets/js/pages/datatables.init.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.responsive.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.buttons.min.js') }}"></script>
+        
 
          <!-- sweet-alerts -->
         <script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>

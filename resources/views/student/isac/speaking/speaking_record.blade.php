@@ -17,7 +17,7 @@
 
 @section('content')
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<div class="row justify-content-center" id="app">
+<div class="row justify-content-center mt-3" id="app">
     <div class="col-md-6">
         <div class="card">
             <div class="card-header bg-success text-center">
