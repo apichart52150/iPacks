@@ -43,6 +43,8 @@ class SpeakingController extends Controller
 
     public function saveSound(Request $request) {
 
+        dd($request->all());
+
         $std_id = auth('student')->user()->std_id;
 
         $sound = $request->file('audio_data');
@@ -77,15 +79,6 @@ class SpeakingController extends Controller
                     'due_date' => $due_date
                 ]
             );
-
-            $insertLog = DB::table('log')
-                ->insert([
-                    'std_id' => $std_id,
-                    'content' => "iSAC Speaking : ".$topic,
-                    'tab' => 'iSAC Speaking',
-                    'score' => "-1 Point"
-                ]);
-
 
             DB::commit();
 
