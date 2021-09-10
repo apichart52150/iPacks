@@ -101,6 +101,7 @@ class HomeController extends Controller
                 $lengthInTab2 = ($lengthInTab2 - 20) + (count($tabT2[$i-1]));
             } 
 
+
             $task2['tab'][$i] = $startT2.'-'.$lengthInTab2;
             $startT2 = $lengthInTab2 + 1;
             $lengthInTab2+=20;
@@ -137,8 +138,9 @@ class HomeController extends Controller
         
             }
             
-            return view('student.isac.writing.home', compact('task1', 'task2'));
         }
+
+        return view('student.isac.writing.home', compact('task1', 'task2'));
 
     }
 

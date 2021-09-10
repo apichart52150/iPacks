@@ -29,9 +29,17 @@
         <!-- Custom box css -->
         <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
 
-         <!-- Sweet Alert-->
-         <link href="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
+        <!-- Sweet Alert-->
+        <link href="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
+
+        <!-- third party css -->
+        <link href="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/libs/datatables/responsive.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/libs/datatables/buttons.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('public/assets/libs/datatables/select.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+
         @yield('css')
+        
     </head>
 
     <body class="center-menu">
@@ -42,6 +50,10 @@
             <div class="navbar-custom">
                 <div class="container-fluid">
                     <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                        <li class="dropdown notification-list mt-3 mr-3">
+                            @yield('test_time')
+                        </li>
 
                         <li class="dropdown notification-list">
                             <!-- Mobile menu toggle-->
@@ -75,6 +87,19 @@
                                 </a>
 
                                 <div class="dropdown-divider"></div>
+
+                                <a href="{{ route('status_writing') }}" class="dropdown-item notify-item text-info">
+                                    <i class="fas fa-pencil-alt"></i>
+                                    <span>Status Writing</span>
+                                </a>
+
+                                <a href="{{ route('status_writing') }}" class="dropdown-item notify-item text-success">
+                                    <i class="fas fa-comment-dots"></i>
+                                    <span>Status Speaking</span>
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
 
                                 <!-- item-->
                                 <a href="{{ route('user_logout') }}" class="dropdown-item notify-item">
@@ -113,7 +138,7 @@
 
                                 <li class="has-submenu">
                                     <a href="#">
-                                        <i class=" mdi mdi-view-dashboard"></i>iSAC<div class="arrow-down"></div>
+                                        <i class=" mdi mdi-view-dashboard"></i>iPACK<div class="arrow-down"></div>
                                     </a>
                                     <ul class="submenu">
                                         <li>
@@ -168,7 +193,7 @@
 
                                 <li class="has-submenu">
                                     <a href="#">
-                                        <i class=" mdi mdi-view-dashboard"></i>iSAC<div class="arrow-down"></div>
+                                        <i class=" mdi mdi-view-dashboard"></i>iPACK<div class="arrow-down"></div>
                                     </a>
                                     <ul class="submenu">
                                         <li>
@@ -280,6 +305,9 @@
         <!-- Modal-Effect -->
         <script src="{{ asset('public/assets/libs/custombox/custombox.min.js') }}"></script>
 
+        <!--form wysiwig-->
+        <script src="{{ asset('public/assets/plugins/tinymce/tinymce.min.js') }}"></script>
+
         <!-- Magnific Popup-->
         <script src="{{ asset('public/assets/libs/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
 
@@ -299,9 +327,43 @@
          <!-- init js -->
         <script src="{{ asset('public/assets/js/pages/form-advanced.init.js') }}"></script>
 
-         <!-- sweet-alerts -->
+        <!-- sweet-alerts -->
         <script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
+
+        <script src="{{ asset('public/assets/libs/datatables/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.responsive.min.js') }}"></script>
+        <script src="{{ asset('public/assets/libs/datatables/dataTables.buttons.min.js') }}"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('.image-popup').magnificPopup({
+                    type: 'image',
+                    closeOnContentClick: true,
+                    mainClass: 'mfp-fade',
+                    gallery: {
+                        enabled: true,
+                        navigateByImgClick: true,
+                        preload: [0,1]
+                    }
+                });
+
+                if($("#elm1").length > 0){
+                    tinymce.init({
+                        selector: "textarea#elm1",
+                        theme: "modern",
+                        height: 300,
+                        menubar: false,
+                        plugins: [
+                            "wordcount",
+                            "textcolor"
+                        ],
+                        contenteditable: false
+                    });
+                }
+            })
+        </script>
 
 
         <script>

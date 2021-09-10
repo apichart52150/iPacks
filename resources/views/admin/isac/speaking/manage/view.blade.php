@@ -72,7 +72,7 @@
 </div>
 @endsection
 
-@section('javascript')
+@section('js')
 <script>
 	function deleteInfo() {
 
