@@ -10,40 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{asset('public/assets/images/icon-nc-big.png') }}">
-
-    <!-- Lightbox css -->
-    <link href="{{ asset('public/assets/libs/magnific-popup/magnific-popup.css') }}" rel="stylesheet" type="text/css" />
-
+    
     <!-- App css -->
     <link href="{{ asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('public/assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
-
-    <!-- Plugins css-->
-    <link href="{{ asset('public/assets/libs/bootstrap-tagsinput/bootstrap-tagsinput.css') }}" rel="stylesheet" />
-    <link href="{{ asset('public/assets/libs/switchery/switchery.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/assets/libs/multiselect/multi-select.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/assets/libs/select2/select2.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/assets/libs/bootstrap-select/bootstrap-select.min.css') }}" rel="stylesheet"
-        type="text/css" />
-    <link href="{{ asset('public/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css') }}"
-        rel="stylesheet" />
-
-    <!-- Custom box css -->
-    <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
-
-    <!-- Sweet Alert-->
-    <link href="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
-
-    <!-- third party css -->
-    <link href="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet"
-        type="text/css" />
-    <link href="{{ asset('public/assets/libs/datatables/responsive.bootstrap4.css') }}" rel="stylesheet"
-        type="text/css" />
-    <link href="{{ asset('public/assets/libs/datatables/buttons.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/assets/libs/datatables/select.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
-
-    @yield('css')
 
 </head>
 
@@ -85,7 +56,7 @@
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
 
                             <!-- item-->
-                            <a href="{{ route('user_logout') }}" class="dropdown-item notify-item">
+                            <a href="{{ route('logout') }}" class="dropdown-item notify-item">
                                 <i class="mdi mdi-logout"></i>
                                 <span>Logout</span>
                             </a>
@@ -95,7 +66,7 @@
                     @else --}}
                     <li class="dropdown notification-list">
                         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light"
-                            href="{{ route('user_login') }}">
+                            href="{{ route('login') }}">
                             <span class="pro-user-name ml-1">
                                 Login
                             </span>
@@ -184,100 +155,12 @@
     <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
     <script src="{{ asset('public/assets/libs/jquery-knob/jquery.knob.min.js') }}"></script>
     <script src="{{ asset('public/assets/libs/peity/jquery.peity.min.js') }}"></script>
-
-    <!-- Modal-Effect -->
-    <script src="{{ asset('public/assets/libs/custombox/custombox.min.js') }}"></script>
-
-    <!--form wysiwig-->
-    <script src="{{ asset('public/assets/plugins/tinymce/tinymce.min.js') }}"></script>
-
-    <!-- Magnific Popup-->
-    <script src="{{ asset('public/assets/libs/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
-
-    <!-- Gallery Init-->
-    <script src="{{ asset('public/assets/js/pages/gallery.init.js') }}"></script>
-
     <!-- App js -->
     <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
 
-    <!-- Plugins Js -->
-    <script src="{{ asset('public/assets/libs/switchery/switchery.min.js') }}"></script>
-    <script src="{{ asset('public/assets/libs/multiselect/jquery.multi-select.js') }}"></script>
-    <script src="{{ asset('public/assets/libs/select2/select2.min.js') }}"></script>
-    <script src="{{ asset('public/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js') }}"></script>
-    <script src="{{ asset('public/assets/libs/jquery-mask-plugin/jquery.mask.min.js') }}"></script>
-
-    <!-- init js -->
-    <script src="{{ asset('public/assets/js/pages/form-advanced.init.js') }}"></script>
-
-    <!-- sweet-alerts -->
-    <script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
-
-    <!-- Datatables init -->
-    <script src="{{ asset('public/assets/libs/datatables/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.js') }}"></script>
-    <script src="{{ asset('public/assets/libs/datatables/dataTables.responsive.min.js') }}"></script>
-    <script src="{{ asset('public/assets/libs/datatables/dataTables.buttons.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/pages/datatables.init.js') }}"></script>
-
-    <!-- Sparkline charts -->
-    <script src="{{ asset('public/assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
-
-    <script>
-        $(document).ready(function () {
-                $('.image-popup').magnificPopup({
-                    type: 'image',
-                    closeOnContentClick: true,
-                    mainClass: 'mfp-fade',
-                    gallery: {
-                        enabled: true,
-                        navigateByImgClick: true,
-                        preload: [0,1]
-                    }
-                });
-
-                if($("#elm1").length > 0){
-                    tinymce.init({
-                        selector: "textarea#elm1",
-                        theme: "modern",
-                        height: 300,
-                        menubar: false,
-                        plugins: [
-                            "wordcount",
-                            "textcolor"
-                        ],
-                        contenteditable: false
-                    });
-                }
-            })
-    </script>
 
 
-    <script>
-        $('input[type="text"]').attr({
-                'onChange': 'this.value = this.value.toUpperCase()',
-                'autocomplete': false,
-                'spellcheck': false
-            })
 
-            $('#reset').on('click', () => location.reload())
-
-           
-            var session_id = "{!! (session('ss_id'))?session('ss_id'):'' !!}";
-            var user_id = "{!! (Auth::user())?Auth::user()->session_id:'' !!}";
-
-            if(user_id !== session_id) {
-                alert('Your account login from another device!!', 'Warning Alert');
-                window.location.href = "{{ route('user_logout')}}";
-            } 
-
-            document.oncontextmenu = function() { return false; }
-            document.onselectstart = function() { return false; }
-
-    </script>
-
-    @yield('js')
 
 </body>
 

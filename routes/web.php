@@ -6,7 +6,7 @@ Route::get('/', function () {
     if (Auth::guard('student')->check()) {
         return redirect('user_home');
     }
-    return redirect('user_login');
+    return redirect('login');
 });
 
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
@@ -119,14 +119,13 @@ Route::group(['middleware' => 'auth:web'], function () {
 
 // ==================== Routes Detail ==================== //
 
-Route::get('detail/standard', function () {
+    Route::get('detail/standard', function () {
+        return view('detail.standard');
+    });
 
-    $user = auth('student')->user();
-    return view('detail.standard', compact('user'));
-});
-Route::get('detail/premium', function () {
-    return view('detail.premium');
-});
+    Route::get('detail/premium', function () {
+        return view('detail.premium');
+    });
 
 // ==================== End Routes Detail ====================== //
 

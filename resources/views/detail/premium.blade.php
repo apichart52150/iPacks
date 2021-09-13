@@ -11,7 +11,7 @@
     </div>
     <div class="col-md-12 mt-3 d-flex justify-content-center">
         <div class="w-50 d-flex justify-content-center">
-            <a class="w-50" href="{{ route('user_register') }}">
+            <a class="w-50" href="{{ route('register') }}">
                 <button class="w-100 btn btn-warning">Purchase</button>
             </a>
         </div>
