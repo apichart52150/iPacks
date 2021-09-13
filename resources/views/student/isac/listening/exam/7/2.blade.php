@@ -122,7 +122,7 @@ $Q11_17->e4->aw = "";
 $Q11_17->e5->aw = "";
 
 $Q11_17->e1->aw2 = "";
-$Q11_17->e2->aw2 = "22";
+$Q11_17->e2->aw2 = "22/twenty-two";
 $Q11_17->e3->aw2 = "";
 $Q11_17->e4->aw2 = "";
 $Q11_17->e5->aw2 = "almost 200";
@@ -279,7 +279,9 @@ $Q18_20->e3->choice->d = "D. 800";
     $('#check-answer').on('click', () => {
         $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+            
+            let aw = $(item).attr('aw').toString().trim().toUpperCase().split("/")
+            if(jQuery.inArray($(item).val().trim().toUpperCase(),  aw) != -1) 
                 show_aw($(item).attr('show-aw'), item)
             else
                 show_error(item)

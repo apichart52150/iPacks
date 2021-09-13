@@ -54,9 +54,10 @@ internet experienced growth throughout the period.";
                     <div class="border border-dark px-2 text-center">
                         <h5>The bar-chart below shows the advertising budget in millions of dollars for a major company
                             during a twenty-year period.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_11.jpg') }}" class="img-fluid mb-2"
-                            alt="Responsive image">
-                    </div>
+                        <a href="{{ asset('public/img_lang/gap1/gap1_11.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                                <img src="{{ asset('public/img_lang/gap1/gap1_11.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                                </a>
+                            </div>
                 </div>
             </div>
             <div class="row">

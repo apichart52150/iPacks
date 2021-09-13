@@ -51,7 +51,9 @@ $end = " for one half of all energy generation. Nuclear is expected to remain st
                     <div class="border border-dark px-2 text-center">
                         <h5>The line graph below shows one country’s consumption of different fuel sources for its energy needs from 1990 until today, and projected figures until 2020. Figures are given as percentages of total energy produced.</h5>
                         <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_4.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_4.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_4.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>

@@ -55,7 +55,9 @@ $end = "of the budget while housing and ‘other’ account for 25% and 20% resp
                     <div class="border border-dark px-2 text-center">
                         <h5>The bar-chart below shows details of populations in 3 different countries divided into age groups, expressed as percentages of total populations. The pie-charts show percentages spent on education, health-care and housing allowances from the total annual welfare budget for 2 of these countries.</h5>
                         <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_2.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_2.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_2.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>

@@ -48,7 +48,9 @@ $end = "usually in the sun, and then packed into sacks. Finally the packed rice 
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The diagram shows how rice is cultivated. Summarize the information by selecting and reporting on the main features.</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_15.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_15.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_15.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>

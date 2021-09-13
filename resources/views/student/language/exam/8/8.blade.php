@@ -51,7 +51,9 @@ $end = " of 5,000 in 2000. The following year, however, saw a slight rise to end
                     <div class="border border-dark px-2 text-center">
                         <h5>The chart below shows how many serious crimes were committed in 4 countries from 1990 to 2005.</h5>
                         <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_8.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_8.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>

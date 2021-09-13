@@ -51,7 +51,9 @@
                     <div class="border border-dark px-2 text-center">
                         <h5>The line-graph below shows the number of cars purchased annually in one particular country between 1995 and 2010, with predicted figures for the year 2020. Figures are given in millions. The bar-chart shows levels of air pollution in the same place during the same time-frame. Figures are given in micrograms per cubic metre.</h5>
                         <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_12.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_12.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_12.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>

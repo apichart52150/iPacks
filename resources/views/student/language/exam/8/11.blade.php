@@ -53,7 +53,9 @@
                     <div class="border border-dark px-2 text-center">
                         <h5>‘The pie-chart below shows how water was used in 2012 by three sectors: namely, farming, the manufacturing industry, and for household use. Figures are shown as percentages. The bar-chart shows proportions of water used for the three sectors in 4 different countries.’</h5>
                         <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_11.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_11.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_11.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>

@@ -134,20 +134,20 @@ $Q1_10->e16->q2 = "(10) ___";
 
 $Q1_10->e1->aw = "";
 $Q1_10->e2->aw = "Hong Kong";
-$Q1_10->e3->aw = "25 August";
+$Q1_10->e3->aw = "25th August/August 25th/25 August/August 25";
 $Q1_10->e4->aw = "";
 $Q1_10->e5->aw = "11.45 pm";
 $Q1_10->e6->aw = "";
 $Q1_10->e7->aw = "56J";
 $Q1_10->e8->aw = "Vegetarian";
 $Q1_10->e9->aw = "";
-$Q1_10->e10->aw = "520 dollars";
+$Q1_10->e10->aw = "520 dollars/$520";
 $Q1_10->e11->aw = "bank transfer";
 $Q1_10->e12->aw = "";
-$Q1_10->e13->aw = "8 kg";
+$Q1_10->e13->aw = "8 kg/eight kg";
 $Q1_10->e14->aw = "";
-$Q1_10->e15->aw = "3 hours";
-$Q1_10->e16->aw = "1 hour";
+$Q1_10->e15->aw = "3 hours/three hour";
+$Q1_10->e16->aw = "1 hour/one hour";
 
 @endphp
 <div class="row">
@@ -234,24 +234,9 @@ $Q1_10->e16->aw = "1 hour";
     $('#check-answer').on('click', () => {
         $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
-        $('.q-check:checked').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
-        $('.q-check-input:checked').each((idx, item) => {
-            let aw = ""
-            if ($(item).val() == "False")
-                aw = $(item).val() + ": " + $('.' + $(item).attr('text')).val()
-            else
-                aw = $(item).val()
-            if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+            
+            let aw = $(item).attr('aw').toString().trim().toUpperCase().split("/")
+            if(jQuery.inArray($(item).val().trim().toUpperCase(),  aw) != -1) 
                 show_aw($(item).attr('show-aw'), item)
             else
                 show_error(item)

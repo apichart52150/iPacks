@@ -49,7 +49,9 @@ $end = "in Australia, while, in Thailand they earned 5,500 and 187,000. The exce
                     <div class="border border-dark px-2 text-center">
                         <h5>The tables show average monthly salaries of workers in Thailand and Australia in 2012 (in Thai Baht).</h5>
                         <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_10.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_10.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_10.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>

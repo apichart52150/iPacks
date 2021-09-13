@@ -90,13 +90,13 @@ $aw = new stdClass();
 $aw->e21 = "Spanish";
 $aw->e22 = "West Africa";
 $aw->e23 = "November 2010";
-$aw->e24 = "under eights";
-$aw->e25 = "Poetry";
-$aw->e26 = "English Club";
-$aw->e27 = "South America";
+$aw->e24 = "under 8’s/under 8s/under eights";
+$aw->e25 = "Poetry/poetry";
+$aw->e26 = "English Club/English club";
+$aw->e27 = "South America/S America";
 $aw->e28 = "dormitory";
-$aw->e29 = "end of April";
-$aw->e30 = "by ship";
+$aw->e29 = "end April/end of April";
+$aw->e30 = "by ship/sea/by sea";
 
 @endphp
 <div class="row">
@@ -343,24 +343,9 @@ $aw->e30 = "by ship";
     $('#check-answer').on('click', () => {
         $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
-        $('.q-check:checked').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
-        $('.q-check-input:checked').each((idx, item) => {
-            let aw = ""
-            if ($(item).val() == "False")
-                aw = $(item).val() + ": " + $('.' + $(item).attr('text')).val()
-            else
-                aw = $(item).val()
-            if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+            
+            let aw = $(item).attr('aw').toString().trim().toUpperCase().split("/")
+            if(jQuery.inArray($(item).val().trim().toUpperCase(),  aw) != -1) 
                 show_aw($(item).attr('show-aw'), item)
             else
                 show_error(item)
