@@ -89,9 +89,9 @@ $aw->e33 = "windbreaks";
 $aw->e34 = "shrubs";
 $aw->e35 = "integrated landscape";
 $aw->e36 = "prevailing";
-$aw->e37 = "east and west";
+$aw->e37 = "east and west/west and east";
 $aw->e38 = "fire";
-$aw->e39 = "15 degrees C";
+$aw->e39 = "15 degrees C/15º Celsius/15º C";
 $aw->e40 = "perfume";
 
 @endphp
@@ -328,8 +328,8 @@ $aw->e40 = "perfume";
     $('#check-answer').on('click', () => {
         $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
-            console.log("AW",$(item).attr('aw').trim().toUpperCase())
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+            let aw = $(item).attr('aw').toString().trim().toUpperCase().split("/")
+            if(jQuery.inArray($(item).val().trim().toUpperCase(),  aw) != -1) 
                 show_aw($(item).attr('show-aw'), item)
             else
                 show_error(item)

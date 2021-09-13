@@ -49,8 +49,12 @@ $end = "an adult frog. By week 16, the tadpole’s metamorphosis into an adult f
                     <div class="border border-dark px-2 text-center">
                         <h5>The diagram below shows the life-cycle of a frog. The table explains what happens at each stage.</h5>
                         <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_20_1.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
-                        <img src="{{ asset('public/img_lang/gap2/gap2_20_2.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_20_1.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_20_1.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
+                        <a href="{{ asset('public/img_lang/gap2/gap2_20_2.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_20_2.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>

@@ -51,7 +51,9 @@ $end = "less than Australia, with a rise of 300 transplants to stand at 9,200. F
                     <div class="border border-dark px-2 text-center">
                         <h5>The table shows the number of transplants which were carried out in 3 countries over 3 different years, plus projections for the year 2020. The pie-chart shows the proportion of organs used in the transplants in one particular year in Australia.</h5>
                         <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_14.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_14.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_14.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>

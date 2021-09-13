@@ -83,13 +83,13 @@
 
 $aw = new stdClass();
 
-$aw->e1 = "50 dollars";
+$aw->e1 = "50/fifty dollars";
 $aw->e2 = "4";
-$aw->e3 = "TV";
+$aw->e3 = "television/TV";
 $aw->e4 = "6";
-$aw->e5 = "75 dollars";
+$aw->e5 = "$75/75 dollars/seventy-five dollars/seventy five dollars";
 $aw->e6 = "Luxor";
-$aw->e7 = "Stokes";
+$aw->e7 = "Stokes/STOKES";
 $aw->e8 = "047698831";
 $aw->e9 = "26";
 $aw->e10 = "Cash";
@@ -289,24 +289,9 @@ $aw->e10 = "Cash";
     $('#check-answer').on('click', () => {
         $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
-        $('.q-check:checked').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
-        $('.q-check-input:checked').each((idx, item) => {
-            let aw = ""
-            if ($(item).val() == "False")
-                aw = $(item).val() + ": " + $('.' + $(item).attr('text')).val()
-            else
-                aw = $(item).val()
-            if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+            
+            let aw = $(item).attr('aw').toString().trim().toUpperCase().split("/")
+            if(jQuery.inArray($(item).val().trim().toUpperCase(),  aw) != -1) 
                 show_aw($(item).attr('show-aw'), item)
             else
                 show_error(item)

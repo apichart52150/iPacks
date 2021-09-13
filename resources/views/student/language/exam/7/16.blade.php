@@ -51,9 +51,10 @@ $end = "the left of the shops.";
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The diagrams below show the development of a university over a ten-year period.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_16.jpg') }}" class="img-fluid mb-2"
-                            alt="Responsive image">
-                    </div>
+                        <a href="{{ asset('public/img_lang/gap1/gap1_16.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                                <img src="{{ asset('public/img_lang/gap1/gap1_16.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                                </a>
+                            </div>
                 </div>
             </div>
             <div class="row">

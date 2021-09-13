@@ -51,7 +51,9 @@ $end = "this, magnets remove unwanted magnetic deposits, and finally the pure di
                     <div class="border border-dark px-2 text-center">
                         <h5>The diagram shows the process of diamond mining, from the raw material (ore) to the diamond concentrate. Write a description of the process showing how the ore is transformed into diamond concentrate.</h5>
                         <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant. </h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_16.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_16.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_16.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>

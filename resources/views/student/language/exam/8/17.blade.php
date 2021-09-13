@@ -49,7 +49,9 @@ $end = "location, in conjunction with the construction of transportation routes.
                     <div class="border border-dark px-2 text-center">
                         <h5>Biggsville is a village near London whose population has increased steadily since the middle of the nineteenth century.</h5>
                         <h5>The map below shows the development of the village. Write a report to describe how the village developed over the four given periods of time.</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_17.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_17.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_17.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>
