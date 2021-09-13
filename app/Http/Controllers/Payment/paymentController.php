@@ -8,10 +8,6 @@ use DB;
 
 class paymentController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('student');
-    }
 
     public function form_payment(Request $request){
         $status = $request->status;
@@ -21,17 +17,17 @@ class paymentController extends Controller
 
     public function payment(Request $request){
 
-        DB::table('student')
-        ->where('std_id', $request->std_id)
+        DB::table('users')
+        ->where('id', $request->id)
         ->update([
-            'std_level' => $request->std_level,
-            'std_status' => $request->std_status,
-            'std_first_name' => $request->std_first_name,
-            'std_last_name' => $request->std_last_name,
-            'std_mobile' => $request->std_mobile,
-            'std_email' => $request->std_email,
+            'level' => $request->level,
+            'status' => $request->status,
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'mobile' => $request->mobile,
+            'email' => $request->email,
         ]);
 
-        return redirect('home');
+        return redirect('user_home');
     }
 }
