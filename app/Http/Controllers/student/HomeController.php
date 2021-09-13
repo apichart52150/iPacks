@@ -14,10 +14,10 @@ class HomeController extends Controller
     
     public function index(){
 
+        // dd(Auth::user());
+
         $currentDate = date('Y-m-d H:i:s');
         $lastDate = "2021-08-20 23:59:59";
-
-        session::put('ss_id', Auth::guard('web')->user()->remember_token);
 
         $status = Auth::guard('web')->user()->status;
 
@@ -52,7 +52,7 @@ class HomeController extends Controller
         if (auth('web')->user()->remember_token == session()->get('ss_id')) {
             return redirect()->to("https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/".auth('web')->user()->id);
         }else {
-            return redirect()->to('user_logout');
+            return redirect()->to('logout');
         }
     }
 		
@@ -60,7 +60,7 @@ class HomeController extends Controller
         if (auth('web')->user()->remember_token == session()->get('ss_id')) {
             return redirect()->to("https://newcambridgethailand.com/strategies-pack/access/RG4gERG9AlIDiwiaWF0IjoxNTE2MjM5MDI/".auth('web')->user()->id);
         }else {
-            return redirect()->to('user_logout');
+            return redirect()->to('logout');
         }
 
     }
@@ -69,7 +69,7 @@ class HomeController extends Controller
         if (auth('web')->user()->remember_token == session()->get('ss_id')) {
             return redirect()->to("https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/".auth('web')->user()->id );
         }else {
-            return redirect()->to('user_logout');
+            return redirect()->to('logout');
         }
 
     }
