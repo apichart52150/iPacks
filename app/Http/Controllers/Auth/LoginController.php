@@ -51,7 +51,7 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
-        $new_sessid = Session::getId(); 
+        $new_sessid = csrf_token(); 
 
         if(auth()->attempt(array('email'=> $input['email'], 'password' => $input['password']))){
             

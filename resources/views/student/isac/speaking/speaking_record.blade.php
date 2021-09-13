@@ -1,22 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header bg-primary py-2">
-                    <h3 class="text-center text-white m-0">Topic {{ $data['topic'] }}</h3>
-                </div>
-                <div class="card-body">
-                    <a href="{{ asset($data['images']) }}" class="image-popup" title="Topic {{ $data['topic'] }}">
-                        <img src="{{ asset($data['images']) }}" class="img-fluid" alt="work-thumbnail">
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-6">
 
+    <div class="row justify-content-center mt-2">
+       <div class="col-md-12">
             <h2 id="timer" class="mt-0 text-primary text-center display-4">02:00</h2>
             <div class="progress progress-xl mb-2 d-none">
                 <div class="progress-bar bg-success" role="progressbar"></div>
@@ -33,8 +20,8 @@
                     Recording...
                 </button>
                 <button id="play" class="btn btn-primary btn-sm width-lg"><i class="fas fa-microphone"></i> Record</button>
-                <button id="finish" class="btn btn-success btn-sm d-none"><i class="fas fa-upload"></i> Finish</button>
-                <button id="reset" class="btn btn-warning btn-sm d-none"><i class="fas fa-undo"></i> Reset</button>
+                <button id="finish" class="btn btn-success btn-sm d-none mt-2"><i class="fas fa-upload"></i> Finish</button>
+                <button id="reset" class="btn btn-warning btn-sm d-none mt-2"><i class="fas fa-undo"></i> Reset</button>
             </div>
 
             <div class="font-16 text-center d-none" id="encode-process">
@@ -44,43 +31,56 @@
 
         </div>
     </div>
+
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-primary py-2">
+                    <h3 class="text-center text-white m-0">Topic {{ $data['topic'] }}</h3>
+                </div>
+                <div class="card-body">
+                    <a href="{{ asset('public/topics/'.$data['images']) }}.jpg" class="image-popup" title="Topic {{ $data['topic'] }}">
+                        <img src="{{ asset('public/topics/'.$data['images']) }}.jpg" class="img-fluid" alt="work-thumbnail">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="soundModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary p-2">
+                    <h4 class="modal-title text-white" id="mySmallModalLabel">{{ $data['topic'] }}</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="font-16 text-dark">
+                        <p class="mb-0">When recording, make sure to <span class="font-italic font-weight-bold">speak clearly</span></p>
+                        <p>into your microphone <img src="{{ asset('public/assets/images/speak_icon.jpg') }}" alt="" width="40"></p>
+                    </div>
+                    <button class="btn btn-primary" id="btnPlaySound">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio src="{{ asset('public/audio/audio_02.m4a') }}" id="audio"></audio>
+
 @endsection
 
-@component('components.audio')
-    @slot('title')
-        Record
-    @endslot
-
-    @slot('content')
-        <div class="font-16 text-dark">
-            <p class="mb-0">When recording, make sure to <span class="font-italic font-weight-bold">speak clearly</span></p>
-            <p>into your microphone <img src="{{ asset('public/assets/images/speak_icon.jpg') }}" alt="" width="40"></p>
-        </div>
-    @endslot
-
-    @slot('textBtn')
-        Continue
-    @endslot
-
-    @slot('path')
-         {{ $data['sound_record'] }}
-    @endslot
-@endcomponent
 
 @section('js')
 <script src="{{ asset('public/js/WebAudioRecorder.min.js') }}"></script>
-<script src="{{ asset('public/js/recordP2.js') }}"></script>
+<script src="{{ asset('public/js/rec.js') }}"></script>
 <script>
-    let timeCount = 120
+    let timeCount = 10
     totalTime = timeCount;
 
     function createDownloadLink(blob) { 
         
         let url = URL.createObjectURL(blob);
         
-        audioContainer.innerHTML = `
-        <audio src="${url}" controls controlsList="nodownload" class="w-100"></audio>
-        `; 
+        audioContainer.innerHTML = `<audio src="${url}" controls controlsList="nodownload" class="w-100"></audio>`; 
 
         audioContainer.parentElement.classList.remove('d-none');
         
@@ -111,7 +111,7 @@
                     }, false);
                     return xhr;
                 },
-                url: "{{ route('part2.upload') }}",
+                url: "{{ route('saveSound') }}",
                 type: 'POST',
                 data: form_data,
                 processData: false,

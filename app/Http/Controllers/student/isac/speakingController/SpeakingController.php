@@ -4,6 +4,7 @@ namespace App\Http\Controllers\student\isac\speakingController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
+use Session;
 use App\Model\Speaking;
 
 class SpeakingController extends Controller
@@ -11,22 +12,24 @@ class SpeakingController extends Controller
 
     public function intro($topic) {
 
-        $topics = [
-            'title' => substr($topic, 0, 5) .' '. substr($topic, 5, 7),
-            'img' => $topic
+        $data = [
+            'topic' => substr($topic, 0, 5) .' '. substr($topic, 5, 7),
+            'images' => $topic
         ];
         
-        return view('student.isac.speaking.speaking_intro', compact('topics'));
+        return view('student.isac.speaking.speaking_intro', compact('data'));
     }
 
     public function record($topic) {
 
-        $topics = [
-            'title' => substr($topic, 0, 5) .' '. substr($topic, 5, 7),
-            'img' => $topic
+        $data = [
+            'topic' => substr($topic, 0, 5) .' '. substr($topic, 5, 7),
+            'images' => $topic
         ];
+
+        // dd(Session::get('ss_id'));
         
-        return view('student.isac.speaking.speaking_record', compact('topics'));
+        return view('student.isac.speaking.speaking_record', compact('data'));
     }
 
     public function submit($topic) {
@@ -35,13 +38,13 @@ class SpeakingController extends Controller
             'title' => substr($topic, 0, 5) .' '. substr($topic, 5, 7)
         ];
 
-        $courses = Speaking::getCourse();
-
-        return view('student.isac.speaking.speaking_submit', compact('courses','topics'));
+        return view('student.isac.speaking.speaking_submit', compact('topics'));
     }
 
 
-    public function saveSound(Request $request) {
+    public function store(Request $request) {
+
+        dd($request->all());
 
         $std_id = auth('web')->user()->id;
 

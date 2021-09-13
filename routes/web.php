@@ -52,8 +52,8 @@ Route::group(['middleware' => 'auth:web'], function () {
         // Route Speaking test
         Route::get('intro/{topic}', 'SpeakingController@intro');
         Route::get('record/{topic}', 'SpeakingController@record');
+        Route::post('saveSound', 'SpeakingController@store')->name("saveSound");
         Route::get('submit/{topic}', 'SpeakingController@submit');
-        Route::post('saveSound', 'SpeakingController@saveSound')->name("saveSound");
         Route::post('update_score_course', 'SpeakingController@update_score_course')->name('update_score_course');
 
     });

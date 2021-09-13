@@ -5,20 +5,17 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header bg-success text-center py-2">
-                <h3 class="text-white p-0 m-0">{{ $topics['title'] }}</h3>
+                <h3 class="text-white p-0 m-0">Topic {{ $data['topic'] }}</h3>
             </div>
             <div class="card-body">
-                <a href="{{ asset('public/topics/'.$topics['img']) }}.jpg" class="image-popup" title="{{ $topics['title'] }}">
-                    <img src="{{ asset('public/topics/'.$topics['img']) }}.jpg" class="img-fluid" alt="work-thumbnail">
+                <a href="{{ asset('public/topics/'.$data['images']) }}.jpg" class="image-popup" title="{{ $data['topic'] }}">
+                    <img src="{{ asset('public/topics/'.$data['images']) }}.jpg" class="img-fluid" alt="work-thumbnail">
                 </a>    
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-12 m-auto">
-                <div class="p-2 bg-success text-white d-inline rounded" id="counter">01:20</div>
-            </div>
-        </div>
+        <h1 id="timer" class="text-center display-4 font-weight-bold text-primary">01:20</h1>
+
     </div>
 </div>
 
@@ -28,7 +25,7 @@
             <div class="modal-body text-center">
                 <h4 class="text-center">Click to start</h4>
 
-                <button class="btn btn-success btn-sm mt-3" id="play">START</button>
+                <button class="btn btn-success btn-sm mt-3" id="btnPlaySound">START</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -41,10 +38,41 @@
 @endsection
 
 @section('js')
-<script src="{{ asset('public/js/timer.js') }}"></script>
 <script>
+    let totalTime = 10; //80
+    function setTime() {
+        totalTime--
+
+        let minutes = Math.floor(totalTime / 60)
+        let seconds = totalTime % 60
+
+        let min = minutes < 10 ? '0' + minutes : minutes
+        let sec = seconds < 10 ? '0' + seconds : seconds
+
+        if(totalTime <= 10) {
+            $('#timer').addClass('text-danger').removeClass('text-primary')
+        }
+
+        $('#timer').text(min + ':' + sec)
+
+        if (totalTime === 0) {
+            let queryString = location.pathname;
+            queryString = queryString.split('/');
+
+            let url = `${location.origin}/${queryString[1]}/record/${queryString[3]}`;
+            location.href = url;
+        }
+    }
+
+    function startTime() {
+        timer = setInterval(setTime, 1000)
+    }
+
+    function stopTime() {
+        clearInterval(timer)
+    }
+    
 	$(document).ready(function() {
-		
         $('#modal').modal({
             backdrop: 'static',
             keyboard: false
@@ -52,13 +80,13 @@
         $('#modal').modal('show');
 
     });
-    
-	document.getElementById('play').addEventListener('click', () => {
+
+    $('#btnPlaySound').on('click', () => {
         let audio = document.getElementById('audio1');
         audio.play();
         $('#modal').modal('hide');
-        begintimer();
-    });
+        startTime()
+    })
 
 </script>
 @stop

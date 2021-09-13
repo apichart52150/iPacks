@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <title>iPACK - All</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="csrf-token" content="{{ Auth::user()->remember_token }}">
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
         
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{asset('public/assets/images/icon-nc-big.png') }}">
@@ -16,12 +16,6 @@
 
         <!-- Lightbox css -->
         <link href="{{ asset('public/assets/libs/magnific-popup/magnific-popup.css') }}" rel="stylesheet" type="text/css" />
-
-        <!-- Plugins css-->
-        <link href="{{ asset('public/assets/libs/bootstrap-tagsinput/bootstrap-tagsinput.css') }}" rel="stylesheet" />
-        <link href="{{ asset('public/assets/libs/switchery/switchery.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('public/assets/libs/bootstrap-select/bootstrap-select.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('public/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css') }}" rel="stylesheet" />
 
         <!-- Custom box css -->
         <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
@@ -302,15 +296,11 @@
        
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
-
-        <script src="{{ asset('public/assets/libs/jquery-knob/jquery.knob.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/peity/jquery.peity.min.js') }}"></script>
 
         <!-- Sparkline charts -->
         <script src="{{ asset('public/assets/libs/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
 
-        <!-- init js -->
-        <script src="{{ asset('public/assets/js/pages/dashboard-1.init.js') }}"></script>
 
         <!-- Modal-Effect -->
         <script src="{{ asset('public/assets/libs/custombox/custombox.min.js') }}"></script>
@@ -324,10 +314,6 @@
         <!-- Gallery Init-->
         <script src="{{ asset('public/assets/js/pages/gallery.init.js') }}"></script>
       
-        <!-- Plugins Js -->
-        <script src="{{ asset('public/assets/libs/switchery/switchery.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js') }}"></script>
-        <script src="{{ asset('public/assets/libs/jquery-mask-plugin/jquery.mask.min.js') }}"></script>
 
         <!-- sweet-alerts -->
         <script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
@@ -339,6 +325,10 @@
         <script src="{{ asset('public/assets/libs/datatables/dataTables.responsive.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/datatables/dataTables.buttons.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/pages/datatables.init.js') }}"></script>
+
+        <script src="{{ asset('public/assets/libs/jquery-knob/jquery.knob.min.js') }}"></script>
+
+        @yield('js')
 
         <!-- App js -->
         <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
@@ -396,8 +386,7 @@
 
         </script>
 
-        @yield('js')
-        @yield('javascript')
+        
         
     </body>
 </html>
