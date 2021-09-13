@@ -96,8 +96,8 @@
                     <li class="dropdown notification-list">
                         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light"
                             href="{{ route('user_login') }}">
-                            <span class="pro-user-name ml-1">
-                                Login
+                            <span class="pro-user-name ml-1 text-white">
+                                <i class="fas fa-sign-in-alt pr-1"></i>Login
                             </span>
                         </a>
                     </li>
