@@ -31,6 +31,8 @@ Route::group(['middleware' => 'auth:web'], function () {
 
     Route::get('payment/{status}', 'payment\paymentController@form_payment')->name('payment');
     Route::post('confirm_payment', 'payment\paymentController@payment')->name('confirm_payment');
+    Route::get('check_data_payment', 'payment\paymentController@check_data_payment')->name('check_data_payment');
+    Route::post('send_email_payment', 'payment\paymentController@send_email_payment')->name('send_email_payment');
 
     Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
