@@ -1,6 +1,7 @@
 <?php
 
 // ==================== Routes User ====================== //
+Auth::routes();
 Route::get('/', function () {
     if (Auth::guard('student')->check()) {
         return redirect('user_home');
@@ -8,15 +9,9 @@ Route::get('/', function () {
     return redirect('user_login');
 });
 
-Route::get('user_login', 'Session\LoginStdController@login')->name('user_login');
-Route::post('fn_login', 'Session\LoginStdController@fn_login')->name('fn_login');
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('user_register', 'Session\LoginStdController@register')->name('user_register');
-Route::post('fn_register', 'Session\LoginStdController@fn_register')->name('fn_register');
-
-Route::get('user_logout', 'Session\LoginStdController@user_logout')->name('user_logout');
-
-Route::group(['middleware' => 'auth:student'], function () {
+Route::group(['middleware' => 'auth:web'], function () {
 
     Route::get('browser-settings', function () {
         return view('student.isac.speaking.browser_settings');
@@ -121,10 +116,24 @@ Route::group(['middleware' => 'auth:student'], function () {
     });
 });
 
+
+// ==================== Routes Detail ==================== //
+
+Route::get('detail/standard', function () {
+
+    $user = auth('student')->user();
+    return view('detail.standard', compact('user'));
+});
+Route::get('detail/premium', function () {
+    return view('detail.premium');
+});
+
+// ==================== End Routes Detail ====================== //
+
+
 // ==================== End Rou tes User ====================== //
 
 // ==================== Routes Admin ==================== //
-Auth::routes();
 Route::get('admin', function () {
     if (Auth::guard('web')->check()) {
         return redirect('admin_home');
@@ -217,16 +226,3 @@ Route::middleware(['auth:web'])->group(function () {
 });
 
 // ==================== End Routes Admin ====================== //
-
-// ==================== Routes Detail ==================== //
-
-Route::get('detail/standard', function () {
-
-    $user = auth('student')->user();
-    return view('detail.standard', compact('user'));
-});
-Route::get('detail/premium', function () {
-    return view('detail.premium');
-});
-
-// ==================== End Routes Detail ====================== //
