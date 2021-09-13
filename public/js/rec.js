@@ -97,6 +97,9 @@ function createDownloadLink(blob,encoding) {
     resetBtn.classList.remove('d-none');
 
 	let queryString = location.pathname;
+
+    console.log(location.pathname);
+    
     queryString = queryString.split('/');
 
     let fd = new FormData();

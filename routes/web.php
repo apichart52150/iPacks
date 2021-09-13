@@ -37,14 +37,14 @@
 		Route::get('payment/{status}', 'payment\paymentController@form_payment')->name('payment');
 		Route::post('confirm_payment', 'payment\paymentController@payment')->name('confirm_payment');
 
-		Route::get('isac_reading', 'student\HomeController@isac_reading')->name('isac_reading');
+		Route::get('reading_home', 'student\HomeController@isac_reading')->name('isac_reading');
 		Route::get('strategies_pack', 'student\HomeController@strategies_pack')->name('strategies_pack');
 		Route::get('topic_pack', 'student\HomeController@topic_pack')->name('topic_pack');
 		
 		// sac speaking
 		Route::prefix('')->namespace('student\isac\speakingController')->group(function () {
 
-			Route::get('isac_speaking_home', 'HomeController@index')->name('isac_speaking_home');
+			Route::get('speaking_home', 'HomeController@index')->name('isac_speaking_home');
 
 			// student status
 			Route::get('status_speaking', 'HomeController@status_speaking')->name('status_speaking');
@@ -56,7 +56,7 @@
 			Route::get('intro/{topic}', 'SpeakingController@intro');
 			Route::get('record/{topic}', 'SpeakingController@record');
 			Route::get('submit/{topic}', 'SpeakingController@submit');
-			Route::post('saveSound', 'SpeakingController@saveSound');
+			Route::post('saveSound', 'SpeakingController@saveSound')->name('saveSound');
 			Route::post('update_score_course', 'SpeakingController@update_score_course')->name('update_score_course');
 
 		});
@@ -64,7 +64,7 @@
 		// sac writing
 		Route::prefix('')->namespace('student\isac\writingController')->group(function () {
 
-			Route::get('isac_writing_home', 'HomeController@index')->name('isac_writing_home');
+			Route::get('writing_home', 'HomeController@index')->name('isac_writing_home');
 		
 			Route::post('writing_test', 'WritingController@index')->name('writing_test');
 			Route::post('store_sac', 'WritingController@store_sac')->name('store.sac');
