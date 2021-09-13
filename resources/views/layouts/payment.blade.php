@@ -74,7 +74,7 @@
                                 <div class="dropdown-divider"></div>
 
                                 <!-- item-->
-                                <a href="{{ route('user_logout') }}" class="dropdown-item notify-item">
+                                <a href="{{ route('logout') }}" class="dropdown-item notify-item">
                                     <i class="mdi mdi-logout"></i>
                                     <span>Logout</span>
                                 </a>
@@ -148,9 +148,7 @@
         <!-- End Footer -->    
 
         @include('student.profile')
-
-        
-       
+ 
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
 
@@ -185,7 +183,7 @@
 
             if(user_id !== session_id) {
                 alert('Your account login from another device!!', 'Warning Alert');
-                window.location.href = "{{ route('user_logout')}}";
+                window.location.href = "{{ route('logout')}}";
             } 
 
         </script>
