@@ -105,7 +105,7 @@ $aw->e40 = "perfume";
                 <div class="col-lg-12">
                     <h5>Write NO MORE THAN THREE WORDS.</h5>
                     <div class="w-100 d-flex justify-content-center">
-                        <table class="w-75">
+                        <table class="w-100">
                             <tr>
                                 <td class="pt-4"></td>
                             </tr>
@@ -113,7 +113,7 @@ $aw->e40 = "perfume";
                                 <td style="border: 1px solid black;">
                                     <div class="p-3">
                                         <div class="w-100 d-flex justify-content-center">
-                                            <table class="w-75">
+                                            <table class="w-100">
                                                 <tr>
                                                     <td colspan="3">
                                                         <b>Importance of correct landscaping:</b>

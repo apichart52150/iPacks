@@ -304,7 +304,9 @@ $E3_1_5_choice->ch5 = "disappear";
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
+<button id="show-answer" class="d-none btn btn-info">
+    Show Answers
+  </button>
 @endsection
 
 @section('js')
@@ -314,18 +316,25 @@ $E3_1_5_choice->ch5 = "disappear";
 <script>
     $('.q-replace').each((idx, item) => {
         let text = $(item).html()
-        let input = '<div class="dropbox q w-25" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-            '<span class="px-2 aw ' + $(item).attr('show-aw') + ' text-danger">' + $(item).attr('aw') + '</span>'
+        let input = '<div class="dropbox q w-25" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>'
+           
         text = text.replace("___", input)
         $(item).html(text)
     })
     $('#check-answer').on('click', () => {
+$("#show-answer").addClass("d-block");
+$("#show-answer").removeClass("d-none");
+$("#check-answer").addClass("d-none");
         $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
+                    {show_aw($(item).attr('show-aw'), item)
+                $(item).children().addClass('bg-success')
+            }else{
+                    if($(item).text().trim().toUpperCase()!="")
+                        $(item).children().addClass('bg-danger')
+                    show_error(item)
+                }
         })
         $('.q-val').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
@@ -339,20 +348,27 @@ $E3_1_5_choice->ch5 = "disappear";
             else
                 show_error(item)
         })
-        $('.q-check-input:checked').each((idx, item) => {
-            let aw = ""
-            if ($(item).val() == "False")
-                aw = $(item).val() + ": " + $('.' + $(item).attr('text')).val()
-            else
-                aw = $(item).val()
-            if (aw.trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
-        })
+       
         $('.aw').removeClass('aw')
     })
-
+    $('#show-answer').on('click', function() {
+                    $('check-answer').addClass('d-none')
+                    $('.dropbox').each((idx, item) => {
+                
+                        if($(item).children().length == 1) {
+                            if($(item).children().hasClass('bg-danger')) {
+                                if($(item).children().text($(item).attr('aw'))) {
+                                    $(item).children().removeClass('bg-danger')
+                                }
+                            }
+                        } else {
+                            $(item).append(`<div class="drag">`+$(item).attr('aw')+`</div>`)
+                        }
+                
+                        $('.drag-container .drag').remove();
+                    })
+                    $("#show-answer").hide();
+                });
     function show_aw(aw, item) {
         $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')

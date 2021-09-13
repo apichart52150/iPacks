@@ -104,6 +104,24 @@ $Q_1->e8->aw2  = "(calm)";
         </div>
     </div>
 </div>
+<div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}</h4>
+            </div>
+            <div class="modal-body text-center">
+                <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
+                <audio data-sound="sound-intro">
+                    <source
+                        src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}"
+                        type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section('button-control')
 
@@ -139,11 +157,11 @@ $Q_1->e8->aw2  = "(calm)";
     }
 
 
-    // $('#sound-modal').modal({
-    //     'show': true,
-    //     'backdrop': "static",
-    //     'keyboard': false
-    // })
+    $('#sound-modal').modal({
+        'show': true,
+        'backdrop': "static",
+        'keyboard': false
+    })
     $('#sound-intro').on('click', (e) => {
         $('#sound-modal').modal('hide')
         const audio = document.querySelector('audio[data-sound="sound-intro"]');
@@ -152,43 +170,6 @@ $Q_1->e8->aw2  = "(calm)";
 
 
 
-    $(".drag").draggable({
-        revert: "invalid",
-        cursor: "move",
-        opacity: 0.7,
-        zIndex: 100,
-        containment: ".card-box",
-        stop: function(event, ui) {
-            if ($("#choices").children().length == 0) {
-                $("#check-answer").prop("disabled", false);
-            }
-        },
-    })
-
-    $(".dropbox").droppable({
-        accept: ".drag",
-        tolerance: "touch",
-        zIndex: 100,
-        over: function(event, ui) {
-            $(this).css("border-color", "#777");
-        },
-        out: function(event, ui) {
-            $(this).css("border-color", "#ccc");
-        },
-        drop: function(event, ui) {
-            if ($(this).children().length > 0) {
-                var move = $(this).children().detach();
-                $(ui.draggable).css({
-                    top: 0,
-                    left: 0
-                }).parent().append(move);
-            }
-            $(this).css("border-color", "#ccc");
-            $(this).append($(ui.draggable).css({
-                top: 0,
-                left: 0
-            }));
-        },
-    })
+    
 </script>
 @stop

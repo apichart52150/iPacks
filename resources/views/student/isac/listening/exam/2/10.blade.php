@@ -283,8 +283,6 @@ $caller_2_5_choice->ch8 = "minor parts";
                                                 @foreach($caller_2_5->c as $index2 => $c)
                                                 <td class="q-dot-choice" show-aw="caller_2_5-{{$index}}-{{$index2}}" aw="{{$c->aw}}">
                                                     {{$c->q}}
-                                                    <br>
-                                                    <span class=" aw text-danger caller_2_5-{{$index}}-{{$index2}}">{{$c->aw}}</span>
                                                 </td>
                                                 @endforeach
                                             </tr>
@@ -349,7 +347,9 @@ $caller_2_5_choice->ch8 = "minor parts";
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
+<button id="show-answer" class="d-none btn btn-info">
+    Show Answers
+  </button>
 @endsection
 
 @section('js')
@@ -378,12 +378,19 @@ $caller_2_5_choice->ch8 = "minor parts";
     })
 
     $('#check-answer').on('click', () => {
+        $("#show-answer").addClass("d-block");
+$("#show-answer").removeClass("d-none");
+$("#check-answer").addClass("d-none");
         $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
+                    {show_aw($(item).attr('show-aw'), item)
+                $(item).children().addClass('bg-success')
+            }else{
+                    if($(item).text().trim().toUpperCase()!="")
+                        $(item).children().addClass('bg-danger')
+                    show_error(item)
+                }
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
@@ -393,7 +400,24 @@ $caller_2_5_choice->ch8 = "minor parts";
         })
         $('.aw').removeClass('aw')
     })
-
+    $('#show-answer').on('click', function() {
+                    $('check-answer').addClass('d-none')
+                    $('.dropbox').each((idx, item) => {
+                
+                        if($(item).children().length == 1) {
+                            if($(item).children().hasClass('bg-danger')) {
+                                if($(item).children().text($(item).attr('aw'))) {
+                                    $(item).children().removeClass('bg-danger')
+                                }
+                            }
+                        } else {
+                            $(item).append(`<div class="drag">`+$(item).attr('aw')+`</div>`)
+                        }
+                
+                        $('.drag-container .drag').remove();
+                    })
+                    $("#show-answer").hide();
+                });
     function show_aw(aw, item) {
         $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')

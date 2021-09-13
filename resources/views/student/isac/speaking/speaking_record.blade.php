@@ -1,4 +1,4 @@
-@extends('layouts.sac_s')
+@extends('layouts.main')
 
 @section('css')
 <style>
@@ -16,7 +16,7 @@
 @stop
 
 @section('content')
-<div class="row justify-content-center" id="app">
+<div class="row justify-content-center mt-3" id="app">
     <div class="col-md-6">
         <div class="card">
             <div class="card-header bg-success text-center">
@@ -101,7 +101,7 @@
 </audio>
 @endsection
 
-@section('javascript')
+@section('js')
 <script src="{{ asset('public/js/WebAudioRecorder.min.js') }}"></script>
 <script src="{{ asset('public/js/rec.js') }}"></script>
 <script>

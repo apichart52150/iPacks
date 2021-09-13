@@ -26,26 +26,34 @@
     .grid-5 {
         grid-template-columns: repeat(6, 1fr);
     }
-
 </style>
 @php
-    
-    $end = "instability worldwide. So it is clear that a global currency would indeed cause some serious problems. So, in conclusion I see a global currency as a future ideal but it will not happen in my lifetime. It would make trade and travel much easier but the problems it would cause nowadays would be insurmountable.";
-$Q=["q1" => "It is clear to me that the idea of a single global currency is an excellent ideal to work towards. There can be no doubt that trade and travel would be vastly easier. On the other hand I believe that it would cause problems today. The",
-    "q2" => "of a single currency can be seen with the use in Europe of the Euro. Whenever you are travelling between countries using the Euro, the problems of currency changing and exchange rates are history.",
-    "q3" => ", business between countries using the Euros is so much easier; no more worrying about exchange rate risk and pricing. Everyone&%238219;s money is the same. The same thing is true with the US dollar. Most countries do not use the US dollar but it is accepted in many places. There are many countries that you can travel to and just take US dollars to use. At present, though, a global currency would be impossible. Firstly most countries would not accept the idea. Secondly all countries are in different",
-    "q4" => "states. Some are",
-    "q5" => "very strong and some are in a state of collapse with inflation ruining the",
-    "q6" => ". Such countries could not be brought into a world currency as it would cause massive",
-    ];
-    $A=[
-    "a1" => "benefits";
-    "a2" => "economic";
-    "a3" => "economically";
-    "a4" => "economy";
-    "a5" => "financial";
-    "a6" => "similarly";
-    ];
+
+$end = "instability worldwide. So it is clear that a global currency would indeed cause some serious problems. So, in
+conclusion I see a global currency as a future ideal but it will not happen in my lifetime. It would make trade and
+travel much easier but the problems it would cause nowadays would be insurmountable.";
+$Q=["q1" => "It is clear to me that the idea of a single global currency is an excellent ideal to work towards. There
+can be no doubt that trade and travel would be vastly easier. On the other hand I believe that it would cause problems
+today. The",
+"q2" => "of a single currency can be seen with the use in Europe of the Euro. Whenever you are travelling between
+countries using the Euro, the problems of currency changing and exchange rates are history.",
+"q3" => ", business between countries using the Euros is so much easier; no more worrying about exchange rate risk and
+pricing. Everyone&%238219;s money is the same. The same thing is true with the US dollar. Most countries do not use the
+US dollar but it is accepted in many places. There are many countries that you can travel to and just take US dollars to
+use. At present, though, a global currency would be impossible. Firstly most countries would not accept the idea.
+Secondly all countries are in different",
+"q4" => "states. Some are",
+"q5" => "very strong and some are in a state of collapse with inflation ruining the",
+"q6" => ". Such countries could not be brought into a world currency as it would cause massive",
+];
+$A=[
+"a1" => "benefits",
+"a2" => "economic",
+"a3" => "economically",
+"a4" => "economy",
+"a5" => "financial",
+"a6" => "similarly",
+];
 @endphp
 <div class="row">
     <div class="col-md-12">
@@ -53,7 +61,8 @@ $Q=["q1" => "It is clear to me that the idea of a single global currency is an e
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
+                        <h5>The table shows annual budget allocation for defence and education in a number of different
+                            countries.</h5>
                         <div class="drag-container">
                             <div class="d-grid grid-5" id="choices">
                                 @foreach ($A as $choices)
@@ -84,14 +93,14 @@ $Q=["q1" => "It is clear to me that the idea of a single global currency is an e
 
 
 @section('button-control')
-    <button id="check-answer" class="btn btn-info">Check Answers</button>
+<button id="check-answer" class="btn btn-info">Check Answers</button>
+<button id="show-answer" class="d-none btn btn-info">Show Answers</button>
 @endsection
 
 @section('js')
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-<script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
-<script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
+
 <script>
     $("#show-answer").prop("disabled", true);
 
@@ -139,7 +148,10 @@ $Q=["q1" => "It is clear to me that the idea of a single global currency is an e
         },
     });
 
-    $("#check-answer").on("click", () => {
+        $("#check-answer").on("click", () => {
+$('#show-answer').addClass('d-block')
+$('#show-answer').removeClass('d-none')
+$('#check-answer').addClass('d-none')
 let score = 0
         let droppables = $(".dropbox");
 
@@ -155,9 +167,16 @@ let score = 0
         $(".drag").draggable({
             disabled: true,
         });
+        let title = ""
+        let text = "You got "+score + "/" + droppables.length + " points."
+        if (score == droppables.length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
         Swal.fire({
-            title: "Your score",
-            text: score + "",
+            title: title,
+            text: text,
             timer: 5000,
         }).then(() => {
             $(item).css({
@@ -195,5 +214,23 @@ let score = 0
 
         ele.addClass(bgColor)
     }
+$('#show-answer').on('click', function() {
+        $('check-answer').addClass('d-none')
+        $('.dropbox').each((idx, item) => {
+
+            if($(item).children().length == 1) {
+                if($(item).children().hasClass('color-danger')) {
+                    if($(item).children().text(answers[idx])) {
+                        $(item).children().removeClass('color-danger')
+                    }
+                }
+            } else {
+                $(item).append(`<div class="drag">${ answers[idx] }</div>`)
+            }
+
+            $('.drag-container .drag').remove();
+        })
+        $("#show-answer").hide();
+    });
 </script>
 @stop

@@ -125,13 +125,13 @@ $A = ["a1" => "acknowledge",
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
+<button id="show-answer" class="d-none btn btn-info">Show Answers</button>
 @endsection
 
 @section('js')
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-<script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
-<script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
+
 <script>
     $("#show-answer").prop("disabled", true);
 
@@ -203,7 +203,10 @@ $A = ["a1" => "acknowledge",
         },
     });
 
-    $("#check-answer").on("click", () => {
+        $("#check-answer").on("click", () => {
+$('#show-answer').addClass('d-block')
+$('#show-answer').removeClass('d-none')
+$('#check-answer').addClass('d-none')
         let score = 0
         let droppables = $(".dropbox");
 
@@ -220,9 +223,16 @@ $A = ["a1" => "acknowledge",
             disabled: true,
         });
 
+        let title = ""
+        let text = "You got "+score + "/" + droppables.length + " points."
+        if (score == droppables.length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
         Swal.fire({
-            title: "Your score",
-            text: score + "",
+            title: title,
+            text: text,
             timer: 5000,
         }).then(() => {
             $(item).css({
@@ -259,5 +269,23 @@ $A = ["a1" => "acknowledge",
 
         ele.addClass(bgColor)
     }
+$('#show-answer').on('click', function() {
+        $('check-answer').addClass('d-none')
+        $('.dropbox').each((idx, item) => {
+
+            if($(item).children().length == 1) {
+                if($(item).children().hasClass('color-danger')) {
+                    if($(item).children().text(answers[idx])) {
+                        $(item).children().removeClass('color-danger')
+                    }
+                }
+            } else {
+                $(item).append(`<div class="drag">${ answers[idx] }</div>`)
+            }
+
+            $('.drag-container .drag').remove();
+        })
+        $("#show-answer").hide();
+    });
 </script>
 @stop

@@ -1,4 +1,4 @@
-@extends('layouts.sac_s')
+@extends('layouts.main')
 
 @section('content')
 <div class="row justify-content-center">
@@ -65,29 +65,29 @@
 </audio>
 @endsection
 
-@section('javascript')
+@section('js')
 <script>
-$(document).ready(function() {
-    $('#sound3').on('ended', function() {
-        this.currentTime = 0;
+    $(document).ready(function() {
+        $('#sound3').on('ended', function() {
+            this.currentTime = 0;
 
-        $('input[type="submit"]').attr('disabled', false);
+            $('input[type="submit"]').attr('disabled', false);
+        })
+
+        $('#modal').modal({
+                backdrop: 'static',
+                keyboard: false
+            })
+        $('#modal').modal('show');
     })
 
-    $('#modal').modal({
-            backdrop: 'static',
-            keyboard: false
-        })
-    $('#modal').modal('show');
-})
+    document.getElementById('play').addEventListener('click', () => {
+        let audio = document.getElementById('sound3');
+        audio.play();
+        $('#modal').modal('hide');
+    });
+        
 
-document.getElementById('play').addEventListener('click', () => {
-    let audio = document.getElementById('sound3');
-    audio.play();
-    $('#modal').modal('hide');
-});
-    
-
-localStorage.clear();
+    localStorage.clear();
 </script>
 @stop

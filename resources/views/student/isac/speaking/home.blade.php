@@ -1,4 +1,4 @@
-@extends('layouts.sac_s')
+@extends('layouts.main')
 
 @section('content')
 
@@ -75,6 +75,6 @@
 <!-- end row -->
 @endsection
 
-@section('javascript')
+@section('js')
 <script src="{{ asset('public/js/checkos.js') }}"></script>
 @stop

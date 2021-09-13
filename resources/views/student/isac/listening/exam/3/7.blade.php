@@ -519,7 +519,8 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
                             <td class="">{{$caller_1->n}}. {{$caller_1->q}}</td>
                             <td class="px-4">=</td>
                             <td class="py-1">
-                                <select class="form-select form-control q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}" aria-label="Default select example">
+                                <select class="form-select form-control q-text" show-aw="caller_1-{{$index}}"
+                                    aw="{{$caller_1->aw}}" aria-label="Default select example">
                                     <option value="...">...</option>
                                     @foreach($caller_1_choice as $choice)
                                     <option value="{{$choice}}">{{$choice}}</option>
@@ -563,7 +564,9 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
                                 <tr>
                                     @foreach($caller_2->col as $index2 => $col)
                                     @if($col->q == "...")
-                                    <td class="q-caller_2 q-caller_2-{{$index}}-{{$index2}}" replece="q-caller_2-{{$index}}-{{$index2}}" show-aw="caller_2-{{$index}}-{{$index2}}" aw="{{$col->aw}}">{{$col->q}}</td>
+                                    <td class="q-caller_2 q-caller_2-{{$index}}-{{$index2}}"
+                                        replece="q-caller_2-{{$index}}-{{$index2}}"
+                                        show-aw="caller_2-{{$index}}-{{$index2}}" aw="{{$col->aw}}">{{$col->q}}</td>
                                     @else
                                     <td>{{$col->q}}</td>
                                     @endif
@@ -596,17 +599,23 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
                             <td></td>
                             <td style="width: 1px;">
                                 <div class="form-check">
-                                    <input onclick="show_input('caller_3-input-{{$index}}','{{$choice}}');" class="form-check-input event-click position-static q-check caller_3-{{$index}}-{{$index2}}" text="caller_3-input-{{$index}}-{{$index2}}" type="radio" name="caller_3-{{$index}}" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}" value="{{$choice}}">
+                                    <input onclick="show_input('caller_3-input-{{$index}}','{{$choice}}');"
+                                        class="form-check-input event-click position-static q-check caller_3-{{$index}}-{{$index2}}"
+                                        text="caller_3-input-{{$index}}-{{$index2}}" type="radio"
+                                        name="caller_3-{{$index}}" show-aw="caller_3-{{$index}}" aw="{{$caller_3->aw}}"
+                                        value="{{$choice}}">
                                 </div>
                             </td>
                             <td style="width: 100px;">
-                                <span class="event-click" onclick="checkRadio('caller_3-{{$index}}-{{$index2}}','caller_3-input-{{$index}}','{{$choice}}')">
+                                <span class="event-click"
+                                    onclick="checkRadio('caller_3-{{$index}}-{{$index2}}','caller_3-input-{{$index}}','{{$choice}}')">
                                     {{$index2}}. {{$choice}}
                                 </span>
                             </td>
                             <td class="pb-2">
                                 @if($choice == "False")
-                                <input type="text" disabled placeholder="Why?" class="why form-control w-75 caller_3-input-{{$index}}">
+                                <input type="text" disabled placeholder="Why?"
+                                    class="why form-control w-75 caller_3-input-{{$index}}">
                                 @endif
                             </td>
                         </tr>
@@ -636,11 +645,15 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
                             <td></td>
                             <td style="width: 20px;">
                                 <div class="form-check">
-                                    <input class="form-check-input event-click position-static q-check caller_4-{{$index}}-{{$index2}}" type="radio" name="caller_4-{{$index}}" show-aw="caller_4-{{$index}}" aw="{{$caller_4_1->aw}}" value="{{$caller_4_2}}">
+                                    <input
+                                        class="form-check-input event-click position-static q-check caller_4-{{$index}}-{{$index2}}"
+                                        type="radio" name="caller_4-{{$index}}" show-aw="caller_4-{{$index}}"
+                                        aw="{{$caller_4_1->aw}}" value="{{$caller_4_2}}">
                                 </div>
                             </td>
                             <td>
-                                <span class="event-click" onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$caller_4_2}}</span>
+                                <span class="event-click"
+                                    onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$caller_4_2}}</span>
                             </td>
                         </tr>
                         @endforeach
@@ -660,13 +673,15 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Listening - 
- {{$pageTitle['sub_menu_name'] }}</h4>
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}</h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
+                    <source
+                        src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}"
+                        type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -676,7 +691,9 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
+<button id="show-answer" class="d-none btn btn-info">
+    Show Answers
+</button>
 @endsection
 
 @section('js')
@@ -687,18 +704,24 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
     $('.q-caller_2').each((idx, item) => {
         let input = '<div class="input-con w-100 py-1">' +
             '<div class="dropbox q w-100" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '"></div>' +
-            '</div><br>' +
-            '<span class="aw ' + $(item).attr('show-aw') + ' text-danger">' + $(item).attr('aw') + '</span>'
-        $(item).html(input)
+            '</div>'
+            $(item).html(input)
     })
 
     $('#check-answer').on('click', () => {
+        $("#show-answer").addClass("d-block");
+$("#show-answer").removeClass("d-none");
+$("#check-answer").addClass("d-none");
         $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
+                    {show_aw($(item).attr('show-aw'), item)
+                $(item).children().addClass('bg-success')
+            }else{
+                    if($(item).text().trim().toUpperCase()!="")
+                        $(item).children().addClass('bg-danger')
+                    show_error(item)
+                }
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
@@ -725,7 +748,24 @@ $caller_4->e8->choice->d = "d. He wasn't put into prison.";
         })
         $('.aw').removeClass('aw')
     })
-
+    $('#show-answer').on('click', function() {
+                    $('check-answer').addClass('d-none')
+                    $('.dropbox').each((idx, item) => {
+                
+                        if($(item).children().length == 1) {
+                            if($(item).children().hasClass('bg-danger')) {
+                                if($(item).children().text($(item).attr('aw'))) {
+                                    $(item).children().removeClass('bg-danger')
+                                }
+                            }
+                        } else {
+                            $(item).append(`<div class="drag">`+$(item).attr('aw')+`</div>`)
+                        }
+                
+                        $('.drag-container .drag').remove();
+                    })
+                    $("#show-answer").hide();
+                });
     function show_aw(aw, item) {
         $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')

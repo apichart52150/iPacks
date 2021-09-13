@@ -7,6 +7,12 @@
     .aw1,.aw2,.aw3,.aw4,.aw5,.aw6 {
         display: none;
     }
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active {
+        color: #ffffff;
+        background-color:#ec6391;
+        border-color: #dee2e6 #dee2e6 #fff;
+    }
 </style>
 @stop
 @php
@@ -544,6 +550,24 @@ $Q_6->e10->aw = "Not only will this donation help many poor people but it will a
         </div>
     </div>
 </div>
+<div id="sound-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-primary py-2">
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}</h4>
+            </div>
+            <div class="modal-body text-center">
+                <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
+                <audio data-sound="sound-intro">
+                    <source
+                        src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}"
+                        type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section('button-control')
 
@@ -626,11 +650,11 @@ $Q_6->e10->aw = "Not only will this donation help many poor people but it will a
     }
 
 
-    // $('#sound-modal').modal({
-    //     'show': true,
-    //     'backdrop': "static",
-    //     'keyboard': false
-    // })
+    $('#sound-modal').modal({
+        'show': true,
+        'backdrop': "static",
+        'keyboard': false
+    })
     $('#sound-intro').on('click', (e) => {
         $('#sound-modal').modal('hide')
         const audio = document.querySelector('audio[data-sound="sound-intro"]');
@@ -639,43 +663,6 @@ $Q_6->e10->aw = "Not only will this donation help many poor people but it will a
 
 
 
-    $(".drag").draggable({
-        revert: "invalid",
-        cursor: "move",
-        opacity: 0.7,
-        zIndex: 100,
-        containment: ".card-box",
-        stop: function(event, ui) {
-            if ($("#choices").children().length == 0) {
-                $("#check-answer").prop("disabled", false);
-            }
-        },
-    })
-
-    $(".dropbox").droppable({
-        accept: ".drag",
-        tolerance: "touch",
-        zIndex: 100,
-        over: function(event, ui) {
-            $(this).css("border-color", "#777");
-        },
-        out: function(event, ui) {
-            $(this).css("border-color", "#ccc");
-        },
-        drop: function(event, ui) {
-            if ($(this).children().length > 0) {
-                var move = $(this).children().detach();
-                $(ui.draggable).css({
-                    top: 0,
-                    left: 0
-                }).parent().append(move);
-            }
-            $(this).css("border-color", "#ccc");
-            $(this).append($(ui.draggable).css({
-                top: 0,
-                left: 0
-            }));
-        },
-    })
+    
 </script>
 @stop

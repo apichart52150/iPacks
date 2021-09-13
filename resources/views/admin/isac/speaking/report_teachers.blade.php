@@ -68,7 +68,7 @@
 @endphp
 
 @if($route == 'speaking/report/teachers')
-	@section('javascript')
+	@section('js')
 	<script>
 		$(function () {
 			$('#report').DataTable({

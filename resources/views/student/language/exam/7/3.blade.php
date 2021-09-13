@@ -8,22 +8,10 @@
         padding: 0 5px;
         margin: 10px 5px;
     }
-
-    ul.questions li {
-        margin: 20px 0;
-        line-height: 2rem;
-    }
-
+    
     .input-con {
         display: inline-block;
         position: relative;
-    }
-
-    .ans-con {
-        position: absolute;
-        top: 50%;
-        right: 5px;
-        transform: translateY(-50%);
     }
 </style>
 @php
@@ -58,14 +46,13 @@
                     </div>
                 </div>
             </div>
-             <div class="row">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
                         @for ($i = 1; $i <= count($question); $i++)
                             <div class="line-hight d-inline w-auto mb-2 ">
                                 {{ $question['q'.$i] }} <!-- question -->
                             </div>
-                            <span class="font-weight-bold">{{ $i }}.</span> <!-- number question-->
                             <div class="input-con">
                                 <input type="text" class="form-control">
                             </div>
@@ -100,15 +87,16 @@
     answers[11] = ['shortest','least','worst'];
     answers[12] = ['longer','more'];
     answers[13] = ['wealthy','rich','developed'];
-    answers[14] = ['however','though'];
+    answers[14] = ['hoWever','though'];
 
     let score = 0;
 
     $('#check-answer').click(checkAnswers) 
 
     function checkAnswers() {
-        let icon;
+        
         $(':text').each((idx, item) => {
+            answers[idx] = answers[idx].toString().trim().toLowerCase().split(",")
 
             $(item).removeClass('border-success');
             $(item).removeClass('border-danger');
@@ -124,7 +112,24 @@
 
         $('#check-answer').prop('disabled', true);
         
-        alert('Your score is ' + score);
+        
+        let title = ""
+        let text = "You got "+score + "/" + $(':text').length + " points."
+        if (score == $(':text').length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
+        Swal.fire({
+            title: title,
+            text: text,
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
+        });
 
     }
 </script>

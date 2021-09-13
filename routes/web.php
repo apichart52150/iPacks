@@ -48,7 +48,7 @@
 		// sac speaking
 		Route::prefix('')->namespace('student\isac\speakingController')->group(function () {
 
-			Route::get('/isac_speaking_home', 'HomeController@index')->name('isac_speaking_home');
+			Route::get('isac_speaking_home', 'HomeController@index')->name('isac_speaking_home');
 
 			// student status
 			Route::get('status_speaking', 'HomeController@status_speaking')->name('status_speaking');
@@ -60,7 +60,7 @@
 			Route::get('intro/{topic}', 'SpeakingController@intro');
 			Route::get('record/{topic}', 'SpeakingController@record');
 			Route::get('submit/{topic}', 'SpeakingController@submit');
-			Route::post('saveSound', 'SpeakingController@saveSound')->name("saveSound");
+			Route::post('saveSound', 'SpeakingController@saveSound');
 			Route::post('update_score_course', 'SpeakingController@update_score_course')->name('update_score_course');
 
 		});

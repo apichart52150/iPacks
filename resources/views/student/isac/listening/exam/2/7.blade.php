@@ -202,8 +202,6 @@ $caller_4_choice->e14 = "..a strong possibility..";
                                         <div class="input-con w-100">
                                             <div class="dropbox q" show-aw="caller_42-{{$index}}" aw="{{$caller_4->aw2}}"></div>
                                         </div>
-                                        <br>
-                                        <span class="aw caller_42-{{$index}} text-danger">{{$caller_4->aw2}}</span>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -236,7 +234,9 @@ $caller_4_choice->e14 = "..a strong possibility..";
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
-<!-- <button id="show-answer" class="btn btn-success">Show Answers</button> -->
+<button id="show-answer" class="d-none btn btn-info">
+    Show Answers
+  </button>
 @endsection
 
 @section('js')
@@ -246,12 +246,19 @@ $caller_4_choice->e14 = "..a strong possibility..";
 <script>
 
     $('#check-answer').on('click', () => {
+        $("#show-answer").addClass("d-block");
+$("#show-answer").removeClass("d-none");
+$("#check-answer").addClass("d-none");
         $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
-                show_aw($(item).attr('show-aw'), item)
-            else
-                show_error(item)
+                    {show_aw($(item).attr('show-aw'), item)
+                $(item).children().addClass('bg-success')
+            }else{
+                    if($(item).text().trim().toUpperCase()!="")
+                        $(item).children().addClass('bg-danger')
+                    show_error(item)
+                }
         })
         $('.q-text').each((idx, item) => {
             if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
@@ -261,7 +268,24 @@ $caller_4_choice->e14 = "..a strong possibility..";
         })
         $('.aw').removeClass('aw')
     })
-
+    $('#show-answer').on('click', function() {
+                    $('check-answer').addClass('d-none')
+                    $('.dropbox').each((idx, item) => {
+                
+                        if($(item).children().length == 1) {
+                            if($(item).children().hasClass('bg-danger')) {
+                                if($(item).children().text($(item).attr('aw'))) {
+                                    $(item).children().removeClass('bg-danger')
+                                }
+                            }
+                        } else {
+                            $(item).append(`<div class="drag">`+$(item).attr('aw')+`</div>`)
+                        }
+                
+                        $('.drag-container .drag').remove();
+                    })
+                    $("#show-answer").hide();
+                });
     function show_aw(aw, item) {
         $(item).addClass('border border-success')
         $('.' + aw).addClass('text-success')

@@ -1,7 +1,7 @@
-@extends('layouts.sac_s')
+@extends('layouts.main')
 
 @section('content')
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-3">
     <div class="col-md-6">
         <div class="card">
             <div class="card-header bg-success text-center py-2">
@@ -40,7 +40,7 @@
 </audio>
 @endsection
 
-@section('javascript')
+@section('js')
 <script src="{{ asset('public/js/timer.js') }}"></script>
 <script>
 	$(document).ready(function() {

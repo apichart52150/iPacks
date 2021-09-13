@@ -68,26 +68,11 @@ $A=[
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The table shows annual budget allocation for defence and education in a number of different countries.</h5>
-                        <div class="w-100">
-                            <img src="{{asset('public/img_lang/AWL1/AWL1_131.png') }}" class="w-100" alt="">
-                        </div>
                         <div class="drag-container">
                             <div class="d-grid grid-5" id="choices">
-                                <div class="drag">{{ $a1 }}</div>
-                                <div class="drag">{{ $a2 }}</div>
-                                <div class="drag">{{ $a3 }}</div>
-                                <div class="drag">{{ $a4 }}</div>
-                                <div class="drag">{{ $a5 }}</div>
-                                <div class="drag">{{ $a6 }}</div>
-                                <div class="drag">{{ $a7 }}</div>
-                                <div class="drag">{{ $a8 }}</div>
-                                <div class="drag">{{ $a9 }}</div>
-                                <div class="drag">{{ $a10 }}</div>
-                                <div class="drag">{{ $a11 }}</div>
-                                <div class="drag">{{ $a12 }}</div>
-                                <div class="drag">{{ $a13 }}</div>
-                                <div class="drag">{{ $a14 }}</div>
-                                <div class="drag">{{ $a15 }}</div>
+                                @foreach ($A as $choices)
+                                <div class="drag">{{ $choices }}</div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -97,82 +82,13 @@ $A=[
             <div class="row justify-content-center mb-2">
                 <div class="col-md-12">
                     <div class="border border-dark p-2" style="line-height: 35px;">
-                        {{$q1}}
-                        <span class="font-weight-bold">1.</span>
-                        <div class="input-con">
+                        <div class="answers-container">
+                            @foreach($Q as $q)
+                            {{ $q }}
                             <div class="dropbox"></div>
+                            @endforeach
+                            {{ $end }}
                         </div>
-                        {{$q2}}
-                        <span class="font-weight-bold">2.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$q3}}
-                        <span class="font-weight-bold">3.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$q4}}
-                        <span class="font-weight-bold">4.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$q5}}
-                        <span class="font-weight-bold">5.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$q6}}
-                        <span class="font-weight-bold">6.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$q7}}
-                        <span class="font-weight-bold">7.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$q8}}
-                        <span class="font-weight-bold">8.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$q9}}
-                        <span class="font-weight-bold">9.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$q10}}
-                        <span class="font-weight-bold">10.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$q11}}
-                        <span class="font-weight-bold">11.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$q12}}
-                        <span class="font-weight-bold">12.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$q13}}
-                        <span class="font-weight-bold">13.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$q14}}
-                        <span class="font-weight-bold">14.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$q15}}
-                        <span class="font-weight-bold">15.</span>
-                        <div class="input-con">
-                            <div class="dropbox"></div>
-                        </div>
-                        {{$end}}
                     </div>
                 </div>
             </div>
@@ -183,30 +99,33 @@ $A=[
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
+<button id="show-answer" class="d-none btn btn-info">Show Answers</button>
 @endsection
 
 @section('js')
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
+
 <script>
     $("#show-answer").prop("disabled", true);
 
     const answers = [
-        $q1 = "<?php echo $a6 ?>",
-        $q2 = "<?php echo $a2 ?>",
-        $q3 = "<?php echo $a6 ?>",
-        $q4 = "<?php echo $a15 ?>",
-        $q5 = "<?php echo $a6 ?>",
-        $q6 = "<?php echo $a6 ?>",
-        $q7 = "<?php echo $a2 ?>",
-        $q8 = "<?php echo $a14 ?>",
-        $q9 = "<?php echo $a6 ?>",
-        $q10 = "<?php echo $a1 ?>",
-        $q11 = "<?php echo $a6 ?>",
-        $q12 = "<?php echo $a6 ?>",
-        $q13 = "<?php echo $a6 ?>",
-        $q14 = "<?php echo $a5 ?>",
-        $q15 = "<?php echo $a4 ?>",
+        $q1 = "<?php echo $A['a6'] ?>",
+        $q2 = "<?php echo $A['a2'] ?>",
+        $q3 = "<?php echo $A['a6'] ?>",
+        $q4 = "<?php echo $A['a15'] ?>",
+        $q5 = "<?php echo $A['a6'] ?>",
+        $q6 = "<?php echo $A['a6'] ?>",
+        $q7 = "<?php echo $A['a2'] ?>",
+        $q8 = "<?php echo $A['a14'] ?>",
+        $q9 = "<?php echo $A['a6'] ?>",
+        $q10 = "<?php echo $A['a1'] ?>",
+        $q11 = "<?php echo $A['a6'] ?>",
+        $q12 = "<?php echo $A['a6'] ?>",
+        $q13 = "<?php echo $A['a6'] ?>",
+        $q14 = "<?php echo $A['a5'] ?>",
+        $q15 = "<?php echo $A['a4'] ?>",
     ];
 
     console.log(answers);
@@ -250,13 +169,17 @@ $A=[
         },
     });
 
-    $("#check-answer").on("click", () => {
+        $("#check-answer").on("click", () => {
+$('#show-answer').addClass('d-block')
+$('#show-answer').removeClass('d-none')
+$('#check-answer').addClass('d-none')
 
         let droppables = $(".dropbox");
-
+let score = 0
         droppables.each((idx, item) => {
             if ($(item).children().text().trim() == answers[idx]) {
                 checkAnswer($(item).children(), 'correct');
+                score++
             } else {
                 checkAnswer($(item).children(), 'incorrect');
             }
@@ -266,6 +189,23 @@ $A=[
             disabled: true,
         });
 
+        let title = ""
+        let text = "You got "+score + "/" + droppables.length + " points."
+        if (score == droppables.length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
+        Swal.fire({
+            title: title,
+            text: text,
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
+        });
         $("#check-answer").prop("disabled", true);
         $("#show-answer").prop("disabled", false);
     });
@@ -295,5 +235,23 @@ $A=[
 
         ele.addClass(bgColor)
     }
+$('#show-answer').on('click', function() {
+        $('check-answer').addClass('d-none')
+        $('.dropbox').each((idx, item) => {
+
+            if($(item).children().length == 1) {
+                if($(item).children().hasClass('color-danger')) {
+                    if($(item).children().text(answers[idx])) {
+                        $(item).children().removeClass('color-danger')
+                    }
+                }
+            } else {
+                $(item).append(`<div class="drag">${ answers[idx] }</div>`)
+            }
+
+            $('.drag-container .drag').remove();
+        })
+        $("#show-answer").hide();
+    });
 </script>
 @stop

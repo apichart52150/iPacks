@@ -29,7 +29,7 @@ function startRecording() {
 		input = audioContext.createMediaStreamSource(stream);
         
 		recorder = new WebAudioRecorder(input, {
-			workerDir: "/isac_speaking/public/js/",
+			workerDir: "/ipack/public/js/",
 			encoding: fileType,
 			numChannels: 2,
 			onEncoderLoading: function(recorder, encoding) {
@@ -100,12 +100,12 @@ function createDownloadLink(blob,encoding) {
     queryString = queryString.split('/');
 
     let fd = new FormData();
-    fd.append('audio_data', blob, queryString[3]);
+    fd.append('audio_data', blob, queryString[3], '');
 
     loadBtn.addEventListener('click', () => {
         $.ajax({
             type: "POST",
-            url: "/isac_speaking/saveSound",
+            url: "/ipack/saveSound",
             data: fd,
             processData: false,
             contentType: false,
@@ -138,11 +138,13 @@ function createDownloadLink(blob,encoding) {
                 }, false);
                 return xhr;
             },
+            
             beforeSend: function(evt) {
                 $('#beforesend').removeClass('d-none');
                 message.classList.remove('d-none');
                 loadBtn.disabled = true;
             },
+
             complete: function(data){
                 let msg = JSON.parse(data.responseText);
                 console.log(msg);
@@ -158,8 +160,8 @@ function createDownloadLink(blob,encoding) {
 }
 
 // Count Time
-const time = 2;
-let totalTime = time * 60;
+const time = 1;
+let totalTime = time * 3;
 let timer;
 
 function setTime() {

@@ -147,11 +147,11 @@ $Q1_10->e10->aw = "If his handwriting hadn't been untidy, I could've read the ad
     }
 
 
-    // $('#sound-modal').modal({
-    //     'show': true,
-    //     'backdrop': "static",
-    //     'keyboard': false
-    // })
+    $('#sound-modal').modal({
+        'show': true,
+        'backdrop': "static",
+        'keyboard': false
+    })
     $('#sound-intro').on('click', (e) => {
         $('#sound-modal').modal('hide')
         const audio = document.querySelector('audio[data-sound="sound-intro"]');
@@ -160,43 +160,6 @@ $Q1_10->e10->aw = "If his handwriting hadn't been untidy, I could've read the ad
 
 
 
-    $(".drag").draggable({
-        revert: "invalid",
-        cursor: "move",
-        opacity: 0.7,
-        zIndex: 100,
-        containment: ".card-box",
-        stop: function(event, ui) {
-            if ($("#choices").children().length == 0) {
-                $("#check-answer").prop("disabled", false);
-            }
-        },
-    })
-
-    $(".dropbox").droppable({
-        accept: ".drag",
-        tolerance: "touch",
-        zIndex: 100,
-        over: function(event, ui) {
-            $(this).css("border-color", "#777");
-        },
-        out: function(event, ui) {
-            $(this).css("border-color", "#ccc");
-        },
-        drop: function(event, ui) {
-            if ($(this).children().length > 0) {
-                var move = $(this).children().detach();
-                $(ui.draggable).css({
-                    top: 0,
-                    left: 0
-                }).parent().append(move);
-            }
-            $(this).css("border-color", "#ccc");
-            $(this).append($(ui.draggable).css({
-                top: 0,
-                left: 0
-            }));
-        },
-    })
+    
 </script>
 @stop

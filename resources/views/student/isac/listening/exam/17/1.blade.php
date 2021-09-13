@@ -78,7 +78,8 @@
         width: 500px;
         padding-left: 10px;
     }
-    .event-click{
+
+    .event-click {
         cursor: pointer;
     }
 </style>
@@ -180,11 +181,15 @@ $E2_1_5->e5->aw = "no, never";
                                 <td></td>
                                 <td style="width: 20px;">
                                     <div class="form-check">
-                                        <input class="form-check-input event-click position-static q-check E1_1_5-{{$index}}-{{$index2}}" type="radio" name="E1_1_5-{{$index}}" show-aw="E1_1_5-{{$index}}" aw="{{$E1_1_5->aw}}" value="{{$choice}}">
+                                        <input
+                                            class="form-check-input event-click position-static q-check E1_1_5-{{$index}}-{{$index2}}"
+                                            type="radio" name="E1_1_5-{{$index}}" show-aw="E1_1_5-{{$index}}"
+                                            aw="{{$E1_1_5->aw}}" value="{{$choice}}">
                                     </div>
                                 </td>
                                 <td>
-                                    <span class="event-click" onclick="checkRadio('E1_1_5-{{$index}}-{{$index2}}')">{{$choice}}</span>
+                                    <span class="event-click"
+                                        onclick="checkRadio('E1_1_5-{{$index}}-{{$index2}}')">{{$choice}}</span>
                                 </td>
                             </tr>
                             @endforeach
@@ -210,7 +215,8 @@ $E2_1_5->e5->aw = "no, never";
                                 <td class="pt-2">
                                     <b>Answer: </b>
                                     <div class="input-con w-75">
-                                        <input type="text" class="q-val form-control w-100" show-aw="E2_1_5-{{$index}}" aw="{{$E2_1_5->aw}}">
+                                        <input type="text" class="q-val form-control w-100" show-aw="E2_1_5-{{$index}}"
+                                            aw="{{$E2_1_5->aw}}">
                                     </div>
                                 </td>
                             </tr>
@@ -231,13 +237,15 @@ $E2_1_5->e5->aw = "no, never";
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Listening - 
- {{$pageTitle['sub_menu_name'] }}</h4>
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}</h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
+                    <source
+                        src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}"
+                        type="audio/mp3">
                 </audio>
             </div>
         </div>

@@ -42,7 +42,7 @@ $Q=[
 "q11" => "much of the waste which is sent to at land fills. Companies can also",
 "q12" => "by developing new raw material which is recyclable and will",
 "q13" => "lead to less garbage. One good example of this is that tyre companies develop new tyres for cars which are not made of rubber but of new biodegradable material. As discussed above,",
-"q14" => ", business and the government can share the responsibility to reduce the amount of waste material and to save the earth. I hope that in the future our offspring will be better off with the well-preserved (14)",
+"q14" => ", business and the government can share the responsibility to reduce the amount of waste material and to save the earth. I hope that in the future our offspring will be better off with the well-preserved",
 
 ];
 $end = ".";
@@ -101,13 +101,13 @@ $A=[
 
 @section('button-control')
 <button id="check-answer" class="btn btn-info">Check Answers</button>
+<button id="show-answer" class="d-none btn btn-info">Show Answers</button>
 @endsection
 
 @section('js')
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-<script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
-<script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
+
 <script>
     $("#show-answer").prop("disabled", true);
 
@@ -169,7 +169,10 @@ $A=[
         },
     });
 
-    $("#check-answer").on("click", () => {
+        $("#check-answer").on("click", () => {
+$('#show-answer').addClass('d-block')
+$('#show-answer').removeClass('d-none')
+$('#check-answer').addClass('d-none')
         let score = 0
         let droppables = $(".dropbox");
 
@@ -185,9 +188,16 @@ $A=[
         $(".drag").draggable({
             disabled: true,
         });
+        let title = ""
+        let text = "You got "+score + "/" + droppables.length + " points."
+        if (score == droppables.length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
         Swal.fire({
-            title: "Your score",
-            text: score + "",
+            title: title,
+            text: text,
             timer: 5000,
         }).then(() => {
             $(item).css({
@@ -225,5 +235,23 @@ $A=[
 
         ele.addClass(bgColor)
     }
+$('#show-answer').on('click', function() {
+        $('check-answer').addClass('d-none')
+        $('.dropbox').each((idx, item) => {
+
+            if($(item).children().length == 1) {
+                if($(item).children().hasClass('color-danger')) {
+                    if($(item).children().text(answers[idx])) {
+                        $(item).children().removeClass('color-danger')
+                    }
+                }
+            } else {
+                $(item).append(`<div class="drag">${ answers[idx] }</div>`)
+            }
+
+            $('.drag-container .drag').remove();
+        })
+        $("#show-answer").hide();
+    });
 </script>
 @stop

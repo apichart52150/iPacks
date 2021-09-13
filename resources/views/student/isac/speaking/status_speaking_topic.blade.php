@@ -1,4 +1,4 @@
-@extends('layouts.sac_s')
+@extends('layouts.main')
 
 @section('title', 'status')
 
@@ -166,7 +166,7 @@
 <!-- end card -->
 @endsection
 
-@section('javascript')
+@section('js')
 <script>
 	$('#download').on('click', loadToExternal);
 

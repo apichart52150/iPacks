@@ -1,4 +1,4 @@
-@extends('layouts.sac_w')
+@extends('layouts.main')
 
 
 @section('page-title')

@@ -69,7 +69,7 @@
 	</div>
 @endsection
 
-@section('javascript')
+@section('js')
 	<script>
 		$('#toast').on('click', () => {
 			$.toast({
