@@ -121,7 +121,7 @@ function encodeMP3(channels, sampleRate, samples) {
     loadBtn.addEventListener('click', () => {
         $.ajax({
             type: "POST",
-            url: "/isac_speaking/saveSound",
+            url: "/ipack/saveSound",
             data: fd,
             processData: false,
             contentType: false,
