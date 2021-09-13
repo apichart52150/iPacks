@@ -11,10 +11,6 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class HomeController extends Controller
 {
-    public function __construct() {
-        $this->middleware('student');
-    }
-
     public function index() {
 
         $images = collect(File::files('public/assets/images/ks-ix'))
@@ -146,7 +142,7 @@ class HomeController extends Controller
 
     public function status_writing() {
 
-        $std_id = auth('student')->user()->std_id;
+        $std_id = auth('web')->user()->id;
 
         $writing = Writing::queryWriting($std_id);
 

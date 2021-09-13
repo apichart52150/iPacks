@@ -47,8 +47,10 @@
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The bar-chart shows oil production and consumption in a number of regions in 2011. Figures are given in millions of barrels.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
-                    </div>
+                        <a href="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap1/gap1_8.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                            </a>
+                        </div>
                 </div>
             </div>
             <div class="row">

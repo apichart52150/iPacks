@@ -30,6 +30,7 @@
     </style>
 
    
+@if (Auth::user()->level == 'premium')
 
     <div class="row">
         <div class="col-lg-6">
@@ -172,6 +173,102 @@
             </div>
         </div> <!-- end col -->
     </div>
+@else
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card-box border-top border-info border border-1">
+                <h4 class="header-title">iPACK Writing Task 1</h4>
+                <p class="sub-header mb-4">Each essay will deduct one point from your account</p>
+
+                <ul class="nav nav-tabs nav-bordered">
+                    @foreach($task1['tab'] as $key => $value)
+                        <li class="nav-item">
+                            <a href="#task1_{{ $key }}" data-toggle="tab" aria-expanded="false"  class="nav-link {{ $key == 1 ? 'active' : '' }}">
+                                {{ $value }}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+
+                <div class="tab-content" align="center">
+                    @foreach(collect($task1['task1'])->chunk(20) as $tabKey => $tabValue)
+                        <div class="tab-pane fade {{ ($tabKey+1) == 1 ? 'show active' : '' }}" id="task1_{{ ($tabKey+1) }}">
+                            @foreach($tabValue as $key => $value)
+                                @php 
+                                    $imgNo = "1_".$key;
+                                    $header = "Writing 1-".$key;
+                                    $type = $value['type'];
+                                    $task = '1';
+                                    
+                                    $data = ['task' => $task, 'imgNo' => $imgNo, 'header' => $header, 'type' => $type];
+                                @endphp
+                                <button type="button" class="btn btn-info waves-effect waves-light mt-2 task">Writing {{ $value['number'] }} {!! $value['icon'] !!}</button>
+                                <!-- <button class="btn btn-info waves-effect waves-light mt-2 task" data-info="{{ json_encode($data) }}">iSAC Writing {{ $value['number'] }} {!! $value['icon'] !!}</button> -->
+                                <!-- modal -->
+                            @endforeach
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div> <!-- end col -->
+
+        <div class="col-lg-6">
+            <div class="card-box border-top border-info border border-1">
+                <h4 class="header-title">iPACK Writing Task 2</h4>
+                <p class="sub-header mb-4">Each essay will deduct one point from your account</p>
+
+                <ul class="nav nav-tabs nav-bordered">
+                    @foreach($task2['tab'] as $key => $value)
+                        <li class="nav-item">
+                            <a href="#task2_{{ $key }}" data-toggle="tab" aria-expanded="false"  class="nav-link {{ $key == 1 ? 'active' : '' }}">
+                                {{ $value }}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+
+                <div class="tab-content" align="center">
+                    @foreach(collect($task2['task2'])->chunk(20) as $tabKey => $tabValue)
+                        <div class="tab-pane fade {{ ($tabKey+1) == 1 ? 'show active' : '' }}" id="task2_{{ ($tabKey+1) }}">
+                            @foreach($tabValue as $key => $value)
+                                @php 
+                                    $imgNo = "2_".$key;
+                                    $header = "Writing 2-".$key;
+                                    $type = $value['type'];
+                                    $task = '2';
+
+                                    $data = ['task' => $task, 'imgNo' => $imgNo, 'header' => $header, 'type' => $type];
+                                @endphp
+
+                                <!-- button -->
+                                <button type="button"class="btn btn-info btn-rounded width-md waves-effect waves-light mt-2 task">Writing {{ $value['number'] }} {!! $value['icon'] !!}</button>
+                                
+                            @endforeach
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div> <!-- end col -->
+    </div>
+
+    <!-- Sweet Alerts js -->
+    <script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
+    <!-- Sweet alert init js-->
+    <script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
+    <script>
+        $('button').on('click', function() {
+            Swal.fire({
+            title: 'Access denied',
+            text: 'Please upgrade to Premium for access it',
+            type: 'error',
+            timer: 5000,
+            })
+        });
+    </script>
+
+@endif
+   
     <!-- end row -->
 
     <div class="row">
@@ -236,9 +333,5 @@
             </div>
         </div> <!-- end col -->
     </div>
-
-
-    
-
 @endsection
 

@@ -87,11 +87,11 @@
 
 $aw = new stdClass();
 
-$aw->e21 = "7.00 pm";
+$aw->e21 = "7.00 pm/7 pm";
 $aw->e22 = "healthy eating";
 $aw->e23 = "questionnaire";
 $aw->e24 = "case studies";
-$aw->e25 = "20";
+$aw->e25 = "twenty/20";
 
 $Q26_30 = new stdClass();
 $Q26_30->e1 = new stdClass();
@@ -269,7 +269,8 @@ $Q26_30->e5->aw = "A Peter";
     $('#check-answer').on('click', () => {
         $('#check-answer').prop('disabled',true)
         $('.q-val').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+            let aw = $(item).attr('aw').toString().trim().toUpperCase().split("/")
+            if(jQuery.inArray($(item).val().trim().toUpperCase(),  aw) != -1) 
                 show_aw($(item).attr('show-aw'), item)
             else
                 show_error(item)

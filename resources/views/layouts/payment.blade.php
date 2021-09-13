@@ -57,7 +57,7 @@
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <img src="{{asset('public/assets/images/user.png') }}" alt="user-image" class="rounded-circle">
                                 <span class="pro-user-name ml-1">
-                                {{Auth::user()->std_username}}<i class="mdi mdi-chevron-down"></i> 
+                                {{Auth::user()->username}}<i class="mdi mdi-chevron-down"></i> 
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -181,7 +181,7 @@
 
         <script>           
             var session_id = "{!! (session('ss_id'))?session('ss_id'):'' !!}";
-            var user_id = "{!! (Auth::user())?Auth::user()->session_id:'' !!}";
+            var user_id = "{!! (Auth::user())?Auth::user()->remember_token:'' !!}";
 
             if(user_id !== session_id) {
                 alert('Your account login from another device!!', 'Warning Alert');

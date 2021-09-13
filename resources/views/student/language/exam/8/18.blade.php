@@ -52,8 +52,12 @@ $end = "to people anywhere in the world, at the touch of a button, with a built-
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>'The pictures show the development of two telephones: the original phone a short time after its invention in the nineteenth century, and a modern-day state-of-the-art 'smart' phone Write a report to describe this development, making comparisons where necessary. '</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_18.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
-                        <img src="{{ asset('public/img_lang/gap2/gap2_18_2.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_18.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_18.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
+                        <a href="{{ asset('public/img_lang/gap2/gap2_18_2.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_18_2.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>

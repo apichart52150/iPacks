@@ -54,7 +54,9 @@ $end = "10%).";
                     <div class="border border-dark px-2 text-center">
                         <h5>The bar-chart below shows the number of crimes committed in 3 different countries between 2005 and 2015. The pie-chart gives a breakdown (in percentages) of the different sorts of crimes committed in 2 of these countries in 2015.</h5>
                         <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_3.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_3.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_3.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>

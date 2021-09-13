@@ -8,14 +8,9 @@ use DB;
 
 class HomeController extends Controller
 {
-
-    public function __construct() {
-        $this->middleware('auth:student');
-    }
-
     public function index()
     {
-        if(Auth::guard('student')->check()) {
+        if(Auth::guard('web')->check()) {
             
             $main_menu = DB::table('menu_lis')
             ->select('*')
@@ -35,7 +30,7 @@ class HomeController extends Controller
 
             return view('student.isac.listening.home', compact('menu'));
         }else {
-            return redirect('user_login');
+            return redirect('login');
         }
     }
 

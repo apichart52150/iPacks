@@ -8,13 +8,10 @@ use DB;
 
 class HomeController extends Controller
 {
-    public function __construct() {
-        $this->middleware('auth:student');
-    }
 
     public function index()
     {
-        if(Auth::guard('student')->check()) {
+        if(Auth::guard('web')->check()) {
             
             $main_menu = DB::table('menu_language')
             ->select('menu_language.*')
@@ -34,7 +31,7 @@ class HomeController extends Controller
 
             return view('student.language.home', compact('menu'));
         }else {
-            return redirect('user_login');
+            return redirect('login');
         }
     }
 }

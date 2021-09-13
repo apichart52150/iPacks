@@ -54,8 +54,11 @@ $end = "the Airbus has four, two under each wing.";
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5></h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_6.jpg') }}" class="img-fluid mb-2"
-                            alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap1/gap1_6.jpg') }}" class="image-popup"
+                            title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap1/gap1_6.jpg') }}" class="img-fluid"
+                                alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>

@@ -49,8 +49,10 @@ $end = "pleasant than the large town in 2005.";
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The diagrams show the development of a small town over a ten-year period.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_15.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
-                    </div>
+                        <a href="{{ asset('public/img_lang/gap1/gap1_15.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap1/gap1_15.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                            </a>
+                        </div>
                 </div>
             </div>
             <div class="row">

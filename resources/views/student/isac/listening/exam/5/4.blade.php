@@ -177,7 +177,7 @@ $Q36_40->e1->aw = "proposals";
 $Q36_40->e2->aw = "support";
 $Q36_40->e3->aw = "reconsider its decision";
 $Q36_40->e4->aw = "painful";
-$Q36_40->e5->aw = "5 dollar";
+$Q36_40->e5->aw = "five-dollar/5 dollar/$5";
 
 @endphp
 <div class="row">
@@ -284,7 +284,8 @@ $Q36_40->e5->aw = "5 dollar";
                 show_error(item)
         })
         $('.q-val').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+            let aw = $(item).attr('aw').toString().trim().toUpperCase().split("/")
+            if(jQuery.inArray($(item).val().trim().toUpperCase(),  aw) != -1) 
                 show_aw($(item).attr('show-aw'), item)
             else
                 show_error(item)

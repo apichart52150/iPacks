@@ -86,9 +86,9 @@ $aw = new stdClass();
 $aw->e1 = "04368955401";
 $aw->e2 = "house";
 $aw->e3 = "washing machine";
-$aw->e4 = "250 pounds";
+$aw->e4 = "250 pounds/£250";
 $aw->e5 = "Friday";
-$aw->e6 = "225 pounds";
+$aw->e6 = "225 pounds/£225";
 
 
 $Q7_10 = new stdClass();
@@ -351,7 +351,9 @@ $("#check-answer").addClass("d-none");
                 }
         })
         $('.q-val').each((idx, item) => {
-            if ($(item).val().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())
+            
+            let aw = $(item).attr('aw').toString().trim().toUpperCase().split("/")
+            if(jQuery.inArray($(item).val().trim().toUpperCase(),  aw) != -1) 
                 show_aw($(item).attr('show-aw'), item)
             else
                 show_error(item)

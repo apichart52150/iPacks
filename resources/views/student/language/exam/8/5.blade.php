@@ -51,7 +51,9 @@
                     <div class="border border-dark px-2 text-center">
                         <h5>The bar-chart below shows the number of road accidents which occurred in three countries between 2000 and 2010.The pie-chart shows the kinds of vehicles which were involved in road accidents in Thailand in 2010.</h5>
                         <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_5.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_5.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_5.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>
