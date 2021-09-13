@@ -27,10 +27,10 @@
 					<form action="{{ route('fn_login') }}" method="POST" novalidate>
 						{{ csrf_field() }}
 						<div class="form-group mb-3">
-							<label for="username">Username</label>
-							<input class="form-control {{ $errors->has('username') ? 'is-invalid' : '' }}" type="text" id="username" name="username" required="" placeholder="Enter your username" value="{{ old('username') }}">
+							<label for="email">Email</label>
+							<input class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" type="email" id="email" name="email" required="" placeholder="Enter your email" value="{{ old('email') }}">
 							<span class="invalid-feedback">
-								{{ $errors->first('username') }}
+								{{ $errors->first('email') }}
 							</span>
 						</div>
 

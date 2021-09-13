@@ -17,7 +17,7 @@ class CompleteController extends Controller
 
     public function completeAjax(Request $request){
 
-        $std_id = auth('student')->user()->std_id;
+        $std_id = auth('web')->user()->std_id;
 
         $columns = array(
             0 => 'id',

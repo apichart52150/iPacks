@@ -1,136 +1,156 @@
-@extends('layouts.main')
-
-@section('css')
-<style>
-    .breathing-color {
-        background-color: red;
-        animation: 1s infinite breathing;
-    }
-
-    @keyframes breathing {
-        0% { background-color: #e74856; }
-        50% { background-color: red; }
-        100% { background-color: #e74856; }
-    }
-</style>
-@stop
+@extends('layouts.app')
 
 @section('content')
-<div class="row justify-content-center mt-3" id="app">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header bg-success text-center">
-                <h3 class="text-white p-0 m-0">{{ $topics['title'] }}</h3>
-            </div>
-            <div class="card-body">
-                <a href="{{ asset('public/topics/'.$topics['img']) }}.jpg" class="image-popup" title="{{ $topics['title'] }}">
-                    <img src="{{ asset('public/topics/'.$topics['img']) }}.jpg" class="img-fluid" alt="work-thumbnail">
-                </a>  
-            </div>
-        </div>
-        <h4 id="message" class="text-center d-none">Please wait after submitting...</h4>
-        <div id="beforesend" class="mb-2 d-none">
-            <div class="progress-bar" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="d-flex justify-content-between">
-                    <p class="bg-success text-white px-2 py-1 rounded" id="showCount"><span id="minutes">02</span>:<span id="seconds">00</span></p>
-                    
-                    <div>
-                        <button id="recordBtn" class="btn btn-success" disabled>Record</button>
-                        <div id="icon" class="d-none">
-                            <button class="btn btn-danger" type="button" disabled="">
-                                <span class="spinner-border spinner-border-sm mr-1" role="status" aria-hidden="true"></span>
-                                    Recording ...
-                            </button>
-                        </div>
-                        <!-- <button id="stopBtn" class="btn btn-warning text-white" disabled>Stop</button> -->
-
-                        <button id="load" class="btn btn-success d-none">Submit</button>
-                        <button id="reset" class="btn btn-dark d-none" onclick="refresh()">Reset</button>
-                    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary py-2">
+                    <h3 class="text-center text-white m-0">Topic {{ $data['topic'] }}</h3>
                 </div>
-
-                <div class="row" id="row">
-                    <div class="col-md-12 d-none" id="recordingslist">
-                        <h2>Recording</h2>
-                        <div class="text-center" id="spinner-audio">
-                        	<span class="spinner-border spinner-border-sm mx-auto" role="status" aria-hidden="true"></span> 
-                        </div>   
-                    </div>
+                <div class="card-body">
+                    <a href="{{ asset($data['images']) }}" class="image-popup" title="Topic {{ $data['topic'] }}">
+                        <img src="{{ asset($data['images']) }}" class="img-fluid" alt="work-thumbnail">
+                    </a>
                 </div>
             </div>
+        </div>
+        
+        <div class="col-md-6">
+
+            <h2 id="timer" class="mt-0 text-primary text-center display-4">02:00</h2>
+            <div class="progress progress-xl mb-2 d-none">
+                <div class="progress-bar bg-success" role="progressbar"></div>
+            </div>
+
+            <div class="mt-2 border-top border-primary bg-white p-2 d-none" style="border-width: 2px !important;">
+                <h3 class="mt-0 mb-3">Play</h3>
+                <div id="audio-container"></div>
+            </div>
+            
+            <div class="text-center">
+                <button class="btn btn-primary btn-sm width-lg d-none" type="button" disabled="" id="loading">
+                    <span class="spinner-border spinner-border-sm mr-1" role="status" aria-hidden="true"></span>
+                    Recording...
+                </button>
+                <button id="play" class="btn btn-primary btn-sm width-lg"><i class="fas fa-microphone"></i> Record</button>
+                <button id="finish" class="btn btn-success btn-sm d-none"><i class="fas fa-upload"></i> Finish</button>
+                <button id="reset" class="btn btn-warning btn-sm d-none"><i class="fas fa-undo"></i> Reset</button>
+            </div>
+
+            <div class="font-16 text-center d-none" id="encode-process">
+                <div class='spinner-grow text-dark mr-2 align-middle' role='status'></div>
+                <p>This process may take several seconds to a few minutes</p>
+            </div>
+
         </div>
     </div>
-</div>
-
-<div id="modal" class="modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content w-auto mx-auto">
-            <div class="modal-body font-15 text-dark">
-                <p class="mb-0">When recording, make sure to <i><b>speak clearly</b></i></p>
-                <p>into your microphone <img src="{{ asset('public/assets/images/speak_icon.jpg') }}" alt="" width="40"></p>
-                <div class="form-group text-center mb-0">
-                    <button class="btn btn-success btn-sm" id="play">Continue</button>
-                </div>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<div id="modalError" class="modal fade-scale" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog modal-dialog-centered modal-sm">
-        <div class="modal-content">
-            <div class="modal-header bg-danger">
-                <h4 class="modal-title text-white" id="mySmallModalLabel">Error</h4>
-            </div>
-            <div class="modal-body text-center">
-                <span class="text-danger m-auto" id="errPermission">Permission denied. Please allow your microphone</span>
-
-                <button class="btn btn-success btn-sm mt-3" data-dismiss="modal">OK</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<audio id="myAudio">
-    <source src="{{ asset('public/audio/audio_02.m4a') }}" type="audio/mpeg">
-    <source src="{{ asset('public/audio/audio_02.m4a') }}" type="audio/mp4">
-</audio>
 @endsection
+
+@component('components.audio')
+    @slot('title')
+        Record
+    @endslot
+
+    @slot('content')
+        <div class="font-16 text-dark">
+            <p class="mb-0">When recording, make sure to <span class="font-italic font-weight-bold">speak clearly</span></p>
+            <p>into your microphone <img src="{{ asset('public/assets/images/speak_icon.jpg') }}" alt="" width="40"></p>
+        </div>
+    @endslot
+
+    @slot('textBtn')
+        Continue
+    @endslot
+
+    @slot('path')
+         {{ $data['sound_record'] }}
+    @endslot
+@endcomponent
 
 @section('js')
 <script src="{{ asset('public/js/WebAudioRecorder.min.js') }}"></script>
-<script src="{{ asset('public/js/rec.js') }}"></script>
+<script src="{{ asset('public/js/recordP2.js') }}"></script>
 <script>
-$(document).ready(function() {
-    $('#myAudio').on('ended', () => {
-        this.currenTime = 0;
-        $('#recordBtn').removeAttr('disabled');
-    });
+    let timeCount = 120
+    totalTime = timeCount;
 
-    $('#modalError').modal('hide');
+    function createDownloadLink(blob) { 
+        
+        let url = URL.createObjectURL(blob);
+        
+        audioContainer.innerHTML = `
+        <audio src="${url}" controls controlsList="nodownload" class="w-100"></audio>
+        `; 
 
+        audioContainer.parentElement.classList.remove('d-none');
+        
+        loadingBtn.classList.add('d-none');
+        finishBtn.classList.remove('d-none');
+        resetBtn.classList.remove('d-none');
 
-	$('#modal').modal({
-        backdrop: 'static',
-        keyboard: false
-    });
+        finishBtn.addEventListener('click', function() {
+            let form_data = new FormData();
+            form_data.append('topic', "{{ $data['topic'] }}")
+            form_data.append('audio_data', blob, "{{ $data['topic'] }}")
 
-	$('#modal').modal('show');
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                xhr: function() {
+                    var xhr = new window.XMLHttpRequest();
+                    xhr.upload.addEventListener("progress", function(evt) {
+                        if (evt.lengthComputable) {
+                            var percentComplete = ((evt.loaded / evt.total) * 100);
+                            $('.progress').removeClass('d-none')
+                            $(".progress-bar").width(percentComplete + '%');
+                            $(".progress-bar").html(percentComplete+'%');
+                        }
+                    }, false);
+                    return xhr;
+                },
+                url: "{{ route('part2.upload') }}",
+                type: 'POST',
+                data: form_data,
+                processData: false,
+                contentType: false,
+                beforesend: function() {
+                    $(".progress-bar").width('0%');
+                },
+                success: function(data) {
+                    if(data.msg == 'Upload Success') {
+                        window.location = data.url
+                        localStorage.removeItem('listen');
+                    }
+                }
 
-})
+            });
+        })
+    }
 
-document.getElementById('play').addEventListener('click', () => {
-    let audio = document.getElementById('myAudio');
-    audio.play();
-    $('#modal').modal('hide');
-});
+    if(!localStorage.getItem('listen')) {
 
-function refresh() {
-    location.reload();
-}
+        $('#play').attr('disabled', true);
+
+        $('#soundModal').modal({
+            show: true,
+            keyboard: false,
+            backdrop: 'static'
+        })
+
+        $('#audio').on('ended', () => {
+            $('#play').attr('disabled', false);
+        })
+
+    } 
+
+    $('#btnPlaySound').on('click', () => {
+        $('#audio')[0].play();
+        $('#soundModal').modal('hide')
+        localStorage.setItem('listen', true);
+    })
+
 </script>
-@stop
+@endsection

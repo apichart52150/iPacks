@@ -1,193 +1,105 @@
-URL = window.URL || window.webkitURL;
+URL = window.URL || window.webkitURL
 
-let gumStream, recorder, input, encodingType;
-let encodeAfterRecord = true;
+let gumStream, recorder, input, encodingType
+let encodeAfterRecord = true
 
-let AudioContext = window.AudioContext || window.webkitAudioContext;
-let audioContext;
+const AudioContext = window.AudioContext || window.webkitAudioContext
+let audioContext
 
-let fileType = "mp3";
-const recordBtn = document.getElementById('recordBtn');
-const loadBtn = document.getElementById('load');
-const resetBtn = document.getElementById('reset');
-const message = document.getElementById('message');
-const spinnerAudio = document.getElementById('spinner-audio');
+const fileType = 'mp3'
 
-recordBtn.addEventListener("click", startRecording);
+const recordBtn = document.getElementById('play')
+const finishBtn = document.getElementById('finish')
+const resetBtn = document.getElementById('reset')
+const loadingBtn = document.getElementById('loading')
+const audioContainer = document.getElementById('audio-container')
+const encodeProcessEl = document.getElementById('encode-process')
+
+let fileName
+
+let totalTime, timer
+
+recordBtn.addEventListener('click', startRecording)
+resetBtn.addEventListener('click', () => location.reload())
+recordBtn.addEventListener('click', startRecording)
 
 function startRecording() {
-	console.log("startRecording() called");
+  let constraints = { audio: true, video: false }
 
-	let constraints = { audio: true, video: false };
+  navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+    audioContext = new AudioContext()
 
-	navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+    gumStream = stream
 
-		audioContext = new AudioContext();
+    input = audioContext.createMediaStreamSource(stream)
 
-		gumStream = stream;
+    recorder = new WebAudioRecorder(input, {
+      workerDir: '/ipack/public/js/',
+      encoding: fileType,
+      numChannels: 2,
+      onEncoderLoading: function (recorder, encode) {
+        recordBtn.classList.add('d-none')
+        loadingBtn.classList.remove('d-none')
+      },
+      onEncodingProgress: function (recorder, progress) {
+        if (progress === 1) {
+          encodeProcessEl.remove()
+        }
+      },
+      onTimeout: function (recorder) {
+        recorder.finishRecording()
+        stopTime()
+        loadingBtn.classList.add('d-none')
+        encodeProcessEl.classList.remove('d-none')
+      },
+    })
 
-		input = audioContext.createMediaStreamSource(stream);
-        
-		recorder = new WebAudioRecorder(input, {
-			workerDir: "/ipack/public/js/",
-			encoding: fileType,
-			numChannels: 2,
-			onEncoderLoading: function(recorder, encoding) {
-				recordBtn.classList.add('d-none');
-				$('#icon').removeClass('d-none');
-			},
-		});
+    recorder.setOptions({
+      timeLimit: totalTime,
+      encodeAfterRecord: encodeAfterRecord,
+      mp3: {
+        mimeType: 'audio/mpeg',
+        bitRate: 160,
+      },
+    })
 
-		recorder.onComplete = function(recorder, blob) { 
-			createDownloadLink(blob,recorder.encoding);
-		}
+    recorder.onComplete = function (recorder, blob) {
+      createDownloadLink(blob, recorder.encoding)
+    }
 
-		recorder.setOptions({
-		  timeLimit: 120,
-		  encodeAfterRecord:encodeAfterRecord,
-	      ogg: {quality: 0.5},
-	      mp3: {bitRate: 160}
-	    });
+    recorder.onError = function (recorder, msg) {
+      console.log(msg)
+    }
 
-		recorder.startRecording();
-		startTime();
+    recorder.startRecording()
 
-	}).catch(err => {
-		$('#modalError').modal('show');
-        recordBtn.disabled = false;
-	});
-}
-
-function stopRecording() {
-	console.log('stopRecording() called');
-
-	gumStream.getAudioTracks()[0].stop();
-
-    stopTime();
-
-    $('#icon').addClass('d-none');
-    $("#counter").css("animation-play-state", "paused");
-    $("#counter").html('00:00');
-
-    recordingslist.classList.remove('d-none');
-
-	recorder.finishRecording();
-}
-
-function createDownloadLink(blob,encoding) {
-	
-	let url = URL.createObjectURL(blob);
-	let au = document.createElement('audio');
-	let div = document.createElement('div');
-
-	au.src = url;
-    au.controlsList = "nodownload";
-    au.controls = "controls";
-
-	au.classList.add('m-auto', 'w-100');
-
-    div.classList.add('card', 'card-body', 'p-0', 'p-1');
-
-    div.appendChild(au);
-
-    recordingslist.appendChild(div);
-
-    spinnerAudio.classList.add('d-none');
-    loadBtn.classList.remove('d-none');
-    resetBtn.classList.remove('d-none');
-
-	let queryString = location.pathname;
-    queryString = queryString.split('/');
-
-    let fd = new FormData();
-    fd.append('audio_data', blob, queryString[3]);
-
-
-    loadBtn.addEventListener('click', () => {
-        $.ajax({
-            type: "POST",
-            url: "/ipack/saveSound",
-            data: fd,
-            processData: false,
-            contentType: false,
-            xhr: function () {
-                var xhr = new window.XMLHttpRequest();
-                //Download progress
-
-                xhr.upload.addEventListener("progress", function (evt) {
-                    if (evt.lengthComputable) {
-                        var percentComplete = Math.floor(evt.loaded/evt.total * 100);
-                        $('.progress-bar').css({
-                            width: percentComplete + '%'
-                        });
-        
-                        $('.progress-bar').attr('aria-valuenow', percentComplete)
-                        $('.progress-bar').html(percentComplete + '%');
-                    }
-                }, false);
-
-                xhr.addEventListener("progress", function (evt) {
-                    if (evt.lengthComputable) {
-                        var percentComplete = Math.floor(evt.loaded/evt.total * 100);
-                        $('.progress-bar').css({
-                            width: percentComplete + '%'
-                        });
-        
-                        $('.progress-bar').attr('aria-valuenow', percentComplete)
-                        $('.progress-bar').html(percentComplete + '%');
-                    }
-                }, false);
-                return xhr;
-            },
-            beforeSend: function(evt) {
-                $('#beforesend').removeClass('d-none');
-                message.classList.remove('d-none');
-                loadBtn.disabled = true;
-            },
-            complete: function(data){
-                let msg = JSON.parse(data.responseText);
-                console.log(msg);
-                if(msg.success == "Upload success") {
-                    setTimeout(() => {
-                        let url = `${location.origin}/${queryString[1]}/submit/${queryString[3]}`;
-                        location.href = url;
-                    }, 500)
-                }
-            }
-        })
-    });
+    if (recorder.isRecording()) {
+      startTime()
+    }
+  })
 }
 
 // Count Time
-const time = 1;
-let totalTime = time * 60;
-let timer;
-
 function setTime() {
-    totalTime--;
+  totalTime--
 
-    let minutes = Math.floor(totalTime / 60);
-    let seconds = totalTime % 60;
+  let minutes = Math.floor(totalTime / 60)
+  let seconds = totalTime % 60
 
-    $('#minutes').html('0' + minutes);
-    $('#seconds').html(seconds < 10 ? '0' + seconds : seconds);
+  let min = minutes < 10 ? '0' + minutes : minutes
+  let sec = seconds < 10 ? '0' + seconds : seconds
 
-    if (totalTime <= 10) {
-        $('#showCount').removeClass('bg-info');
-        $('#showCount').addClass('breathing-color');
-    }
+  if(totalTime <= 10) {
+    $('#timer').addClass('text-danger').removeClass('text-primary');
+  }
 
-    if (totalTime == 0) {
-        stopRecording();
-        stopTime();
-        $("#showCount").css("animation-play-state", "paused");
-    } 
+  $('#timer').text(min + ':' + sec)
 }
 
 function startTime() {
-    timer = setInterval(setTime, 1000);
+  timer = setInterval(setTime, 1000)
 }
 
 function stopTime() {
-    clearInterval(timer);
+  clearInterval(timer)
 }

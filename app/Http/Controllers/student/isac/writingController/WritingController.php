@@ -50,7 +50,7 @@ class WritingController extends Controller
                     ->insert(
                         [
                             'code_test' => $request->input('code_test'),
-                            'std_id' => auth('student')->user()->std_id,
+                            'std_id' => auth('web')->user()->std_id,
                             'test_type' => $request->input('test_type'),
                             'header_test' => $request->input('header_test'),
                             'text' => $request->input('text_result'),
@@ -71,7 +71,7 @@ class WritingController extends Controller
 
                     DB::table('log')
                         ->insert([
-                            'std_id' => auth('student')->user()->std_id,
+                            'std_id' => auth('web')->user()->std_id,
                             'content' => 'Send '.$request->input('test_type').' '.$request->input('header_test'),
                             'tab'=>'SAC Online',
                             'score'=>'-1 Point',
@@ -99,7 +99,7 @@ class WritingController extends Controller
                 ->insert(
                     [
                         'code_test' => $request->input('code_test'),
-                        'std_id' => auth('student')->user()->std_id,
+                        'std_id' => auth('web')->user()->std_id,
                         'test_type' => $request->input('test_type'),
                         'header_test' => $request->input('header_test'),
                         'text' => $request->input('text_result'),

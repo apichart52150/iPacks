@@ -22,18 +22,14 @@
         <div class="col-12">
             <div class="card-box">
                 <h4 class="header-title">Payment Form</h4>
-                @php
-                    
-                @endphp
-
                 <div class="row">
                     <div class="col-12">
                         <div class="p-2">
                             <form action="{{ route('confirm_payment') }}" id="basic-form" method="POST" class="mt-3" onsubmit="return confirm('Are you sure you want to finish?')">
                                 {{ csrf_field() }}
-                                <input type="hidden" name="std_id" value="{{ auth('student')->user()->std_id }}">
-                                <input type="hidden" name="std_level" value="{{ $status }}">
-                                <input type="hidden" name="std_status" value="paid">
+                                <input type="hidden" name="id" value="{{ auth('web')->user()->id }}">
+                                <input type="hidden" name="level" value="{{ $status }}">
+                                <input type="hidden" name="status" value="paid">
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label" for="simpleinput">Your Package</label>
                                     <div class="col-sm-10">
@@ -41,29 +37,29 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label" for="std_first_name">First Name</label>
+                                    <label class="col-sm-2 col-form-label" for="first_name">First Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" id="std_first_name" name="std_first_name" class="form-control" placeholder="First Name" required>
+                                        <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label" for="std_last_name">Last Name</label>
+                                    <label class="col-sm-2 col-form-label" for="last_name">Last Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="std_last_name" name="std_last_name" placeholder="Last Name" required>
+                                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Mobile</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="tel" name="std_mobile"  placeholder="Mobile" required>
+                                        <input class="form-control" type="tel" name="mobile"  placeholder="Mobile" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="email" name="std_email"  placeholder="Email" required>
+                                        <input class="form-control" type="email" name="email"  placeholder="Email" value="{{ auth()->user()->email }}">
                                     </div>
                                 </div>
 

@@ -43,9 +43,7 @@ class SpeakingController extends Controller
 
     public function saveSound(Request $request) {
 
-        dd($request->all());
-
-        $std_id = auth('student')->user()->std_id;
+        $std_id = auth('web')->user()->id;
 
         $sound = $request->file('audio_data');
 
@@ -67,6 +65,7 @@ class SpeakingController extends Controller
 
         // Insert Into table speaking
         DB::beginTransaction();
+        
         try {
 
             $insertSpeaking = DB::table('speaking')

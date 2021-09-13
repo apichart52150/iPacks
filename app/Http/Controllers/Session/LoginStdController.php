@@ -17,7 +17,7 @@ class LoginStdController extends Controller
 
     use AuthenticatesUsers;
 
-    protected $redirectTo = 'user_home';
+    protected $redirectTo = 'home';
 
     public function __construct()
     {
@@ -34,7 +34,7 @@ class LoginStdController extends Controller
         
 
         $validator = Validator::make($request->all(), [
-            'username' => 'required',
+            'email' => 'required',
             'password' => 'required'
         ]);
 
@@ -45,7 +45,7 @@ class LoginStdController extends Controller
             ->withInput();
         }
 
-        $student = Login::where('std_username', $request->username)
+        $student = Login::where('std_email', $request->email)
         ->where('std_password', md5($request->password))
         ->first();
 
@@ -72,12 +72,12 @@ class LoginStdController extends Controller
 
             }else{
 
-                return redirect('user_home');
+                return redirect('home');
 
             }
 
         } else {
-            return back()->with('status', 'Username or Password do not match');
+            return back()->with('status', 'Email or Password do not match');
         }
 
     }
@@ -92,19 +92,19 @@ class LoginStdController extends Controller
 
         $student = DB::table('student')
         ->select('std_username')
-        ->where('std_username', '=', $request->username)
+        ->where('std_email', '=', $request->email)
         ->get();
 
         if(count($student) == 0){
 
             DB::table('student')->insert([
-                'std_username' => $request->username, 
+                'std_email' => $request->email, 
                 'std_password' => md5($request->password), 
             ]);
 
             $validator = Validator::make($request->all(), [
-                'username' => 'required',
-                'password' => 'required'
+                'email' => 'required|string|email|max:255',
+                'password' => 'required|string|min:6|confirmed',
             ]);
     
             if($validator->fails()) {
@@ -113,7 +113,7 @@ class LoginStdController extends Controller
                 ->withInput();
             }
     
-            $student = Login::where('std_username', $request->username)
+            $student = Login::where('std_email', $request->email)
             ->where('std_password', md5($request->password))
             ->first();
     
@@ -123,7 +123,7 @@ class LoginStdController extends Controller
 
         }else{
 
-            return back()->with('status', 'Username* is already have');
+            return back()->with('status', 'Email* is already taken');
 
         }
     }

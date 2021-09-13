@@ -81,7 +81,7 @@
 @section('js')
 <script>
     const answers = []
-    answers[0] = ['Friday'];
+    answers[0] = ['friday'];
     answers[1] = ['$2,700'];
     answers[2] = ['same'];
     answers[3] = ['least'];
@@ -97,7 +97,7 @@
     $('#check-answer').click(checkAnswers) 
 
     function checkAnswers() {
-        let icon;
+        
         $(':text').each((idx, item) => {
             answers[idx] = answers[idx].toString().trim().toLowerCase().split(",")
 
@@ -105,6 +105,7 @@
             $(item).removeClass('border-danger');
             
             if(jQuery.inArray($(item).val().toLowerCase().trim(),  answers[idx]) != -1) {
+                $(`<span class="text-success"><u>${answers[idx]}</u></span>`).insertAfter($(item));
                 $(item).addClass('border border-success');
                 score++
             } else {

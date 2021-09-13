@@ -89,7 +89,7 @@
     $('#check-answer').click(checkAnswers) 
 
     function checkAnswers() {
-        let icon;
+        
         $(':text').each((idx, item) => {
             answers[idx] = answers[idx].toString().trim().toLowerCase().split(",")
 

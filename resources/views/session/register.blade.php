@@ -25,13 +25,15 @@
 					<form action="{{ route('fn_register') }}" method="POST" novalidate>
 						{{ csrf_field() }}
 						<div class="form-group mb-3">
-							<label for="username">Username</label>
-							<input class="form-control {{ $errors->has('username') ? 'is-invalid' : '' }}" type="text" id="username" name="username" placeholder="Enter your username" required>
-							<span class="invalid-feedback">
-								{{ $errors->first('username') }}
-							</span>
+							<label for="email">Email</label>
+							<input class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" type="email" id="email" name="email" placeholder="Enter your email" required>
+							@if ($errors->has('email'))
+								<span class="help-block">
+									<strong>{{ $errors->first('email') }}</strong>
+								</span>
+							@endif
 						</div>
-
+						
 						<div class="form-group mb-3">
 							<label for="password">Password</label>
 							<input class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}" type="password" name="password" id="password" placeholder="Enter your password" required>

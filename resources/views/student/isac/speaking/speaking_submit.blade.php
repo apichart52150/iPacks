@@ -11,7 +11,7 @@
             <div class="card-body text-center p-2">
                 <form action="{{ route('update_score_course') }}" method="POST">
                     {{ csrf_field() }}
-                    <input type="hidden" name="lastRow" value="{{ auth('student')->user()->std_id }}">
+                    <input type="hidden" name="lastRow" value="{{ auth('web')->user()->std_id }}">
                     <div class="form-group row justify-content-center">
                         <label class="col-form-label">Expected Score</label>
                         <div class="col-auto">
