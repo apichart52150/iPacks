@@ -39,7 +39,9 @@
                 <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
                         <h5>The graph below shows the percentage of teenagers who owned a number of electronic items between 1980 and 2010.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_2.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap1/gap1_2.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap1/gap1_2.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a> 
                     </div>
                 </div>
             </div>

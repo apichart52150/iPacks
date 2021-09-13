@@ -31,15 +31,15 @@
 
                                 <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                                     {{ csrf_field() }}
-                                    <div class="form-group">
-                                        <label for="username">{{ __('Username') }}</label>
-                                        <input type="text" id="username" name="username" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" required autofocus>
-
-                                        @if ($errors->has('username'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('username') }}</strong>
-                                        </span>
-                                    @endif
+                                    <div class="form-group mb-3">
+                                        <label for="email">Email</label>
+                                        <input class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" type="email" id="email" name="email" placeholder="Enter your email" required>
+                                        @if ($errors->has('email'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('email') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="password">{{ __('Password') }}</label>
