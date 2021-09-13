@@ -10,10 +10,6 @@ use Session;
 
 class HomeController extends Controller
 {
-    public function __construct() {
-        $this->middleware('auth:student');
-    }
-    
     public function index()
     {
         return view('student.isac.speaking.home');
@@ -21,7 +17,7 @@ class HomeController extends Controller
 
     public function status_speaking() {
 
-        $speakings = Speaking::querySpeaking(auth('student')->user()->std_id);
+        $speakings = Speaking::querySpeaking(auth('web')->user()->id);
 
         return view('student.isac.speaking.status_speaking', compact('speakings'));
     }

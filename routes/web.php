@@ -2,22 +2,20 @@
 
 
 // ==================== Routes User ====================== //
+	Auth::routes();
 	Route::get('/', function() {
-		if(Auth::guard('student')->check()) {
+		if(Auth::guard('web')->check()) {
 			return redirect('user_home');
+		}else {
+			return redirect('login');
 		}
-		return redirect('user_login');
 	});
 
-	Route::get('user_login', 'Session\LoginStdController@login')->name('user_login');
-	Route::post('fn_login', 'Session\LoginStdController@fn_login')->name('fn_login');
+	Route::get('logout','Auth\LoginController@logout')->name('logout');
 
-	Route::get('user_register', 'Session\LoginStdController@register')->name('user_register');
-	Route::post('fn_register', 'Session\LoginStdController@fn_register')->name('fn_register');
-	
-	Route::get('user_logout', 'Session\LoginStdController@user_logout')->name('user_logout');
+	Route::middleware(['auth:web'])->group(function () {
 
-	Route::group(['middleware' => 'auth:student'], function() {
+		Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
 		Route::get('browser-settings', function() {
 			return view('student.isac.speaking.browser_settings');
@@ -38,8 +36,6 @@
 
 		Route::get('payment/{status}', 'payment\paymentController@form_payment')->name('payment');
 		Route::post('confirm_payment', 'payment\paymentController@payment')->name('confirm_payment');
-
-		Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
 		Route::get('isac_reading', 'student\HomeController@isac_reading')->name('isac_reading');
 		Route::get('strategies_pack', 'student\HomeController@strategies_pack')->name('strategies_pack');
@@ -128,7 +124,6 @@
 
 
 // ==================== Routes Admin ==================== //
-	Auth::routes();
 	Route::get('admin', function() {
 		if(Auth::guard('web')->check()) {
 			return redirect('admin_home');

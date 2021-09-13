@@ -5,9 +5,6 @@
         <title>iPACK - All</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{asset('public/assets/images/icon-nc-big.png') }}">
@@ -74,7 +71,7 @@
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <img src="{{asset('public/assets/images/user.png') }}" alt="user-image" class="rounded-circle">
                                 <span class="pro-user-name ml-1">
-                                {{Auth::user()->std_username}}<i class="mdi mdi-chevron-down"></i> 
+                                {{Auth::user()->username}}<i class="mdi mdi-chevron-down"></i> 
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -95,7 +92,7 @@
                                     <span>Status Writing</span>
                                 </a>
 
-                                <a href="{{ route('status_writing') }}" class="dropdown-item notify-item text-success">
+                                <a href="{{ route('status_speaking') }}" class="dropdown-item notify-item text-success">
                                     <i class="fas fa-comment-dots"></i>
                                     <span>Status Speaking</span>
                                 </a>
@@ -103,12 +100,16 @@
                                 <div class="dropdown-divider"></div>
 
 
-                                <!-- item-->
-                                <a href="{{ route('user_logout') }}" class="dropdown-item notify-item">
+                                <a href="{{ route('logout') }}" class="dropdown-item notify-item" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
                                     <i class="mdi mdi-logout"></i>
                                     <span>Logout</span>
                                 </a>
 
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                                
                             </div>
                         </li>            
                     </ul>
@@ -131,7 +132,7 @@
             </div>
             <!-- end Topbar -->
 
-            @if(Auth::user()->std_level == 'premium')
+            @if(Auth::user()->level == "premium")
                 <div class="topbar-menu">
                     <div class="container-fluid">
                         <div id="navigation">
@@ -186,7 +187,7 @@
                     <!-- end container -->
                 </div>
                 <!-- end navbar-custom -->
-            @elseif(Auth::user()->std_level == 'standard')
+            @elseif(Auth::user()->level == "standard")
                 <div class="topbar-menu">
                     <div class="container-fluid">
                         <div id="navigation">
@@ -300,6 +301,10 @@
         <!-- End Footer -->    
 
         @include('student.profile')
+
+        <!-- App js -->
+        <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
+
        
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
@@ -317,10 +322,7 @@
 
         <!-- Gallery Init-->
         <script src="{{ asset('public/assets/js/pages/gallery.init.js') }}"></script>
-
-        <!-- App js -->
-        <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
-
+      
         <!-- Plugins Js -->
         <script src="{{ asset('public/assets/libs/switchery/switchery.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/multiselect/jquery.multi-select.js') }}"></script>
@@ -328,7 +330,7 @@
         <script src="{{ asset('public/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js') }}"></script>
         <script src="{{ asset('public/assets/libs/jquery-mask-plugin/jquery.mask.min.js') }}"></script>
 
-         <!-- init js -->
+        <!-- init js -->
         <script src="{{ asset('public/assets/js/pages/form-advanced.init.js') }}"></script>
 
         <!-- sweet-alerts -->
@@ -383,14 +385,13 @@
             })
 
             $('#reset').on('click', () => location.reload())
-
-           
+            
             var session_id = "{!! (session('ss_id'))?session('ss_id'):'' !!}";
-            var user_id = "{!! (Auth::user())?Auth::user()->session_id:'' !!}";
+            var user_id = "{!! (Auth::user())?Auth::user()->remember_token:'' !!}";
 
             if(user_id !== session_id) {
                 alert('Your account login from another device!!', 'Warning Alert');
-                window.location.href = "{{ route('user_logout')}}";
+                window.location.href = "{{ route('logout')}}";
             } 
 
             document.oncontextmenu = function() { return false; }

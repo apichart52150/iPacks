@@ -62,7 +62,7 @@
     </div>
 
     <div class="col-xl-3 col-md-6">
-        <a href="https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/{{auth('student')->user()->std_id}}" target="_blank">
+        <a href="https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/{{auth('web')->user()->std_id}}" target="_blank">
             <div class="card-box widget-icon bg-pink">
                 <div class="avatar-lg float-left">
                     <div class="hover-scale">
@@ -122,7 +122,7 @@
 
 <div class="row">
     <div class="col-xl-6 col-md-6  col-sm-12" >
-        <a href="https://newcambridgethailand.com/strategies-pack/access/RG4gERG9AlIDiwiaWF0IjoxNTE2MjM5MDI/{{auth('student')->user()->std_id}}" target="_blank">
+        <a href="https://newcambridgethailand.com/strategies-pack/access/RG4gERG9AlIDiwiaWF0IjoxNTE2MjM5MDI/{{auth('web')->user()->std_id}}" target="_blank">
             <div class="card-box widget-icon bg-primary">
                 <div class="avatar-lg float-left">
                     <div class="hover-scale">
@@ -139,7 +139,7 @@
     </div><!-- end col -->
 
     <div class="col-xl-6 col-md-6 col-sm-12">
-    <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('student')->user()->std_id }}"  target="_blank">
+    <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('web')->user()->std_id }}"  target="_blank">
             <div class="card-box widget-icon bg-primary">
                 <div class="avatar-lg float-left">
                     <div class="hover-scale">

@@ -38,7 +38,7 @@
 
     </style>    
 
-    @if(Auth::user()->std_level == 'premium')
+    @if(Auth::user()->level == 'premium')
         <div class="row d-flex justify-content-center">
             <div class="col-xl-3 col-md-6">
                 <a href="{{ url('isac/listening') }}" class="wave-light">
@@ -199,7 +199,7 @@
                 </div>
             </div>
         </div>
-    @elseif (Auth::user()->std_level == 'standard')
+    @elseif (Auth::user()->level == 'standard')
     <div class="row d-flex justify-content-center">
         <div class="col-xl-3 col-md-6">
             <a href="{{ url('isac/listening') }}" class="wave-light">

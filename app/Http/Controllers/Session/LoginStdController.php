@@ -17,7 +17,7 @@ class LoginStdController extends Controller
 
     use AuthenticatesUsers;
 
-    protected $redirectTo = 'user_home';
+    protected $redirectTo = 'home';
 
     public function __construct()
     {
@@ -72,7 +72,7 @@ class LoginStdController extends Controller
 
             }else{
 
-                return redirect('user_home');
+                return redirect('home');
 
             }
 

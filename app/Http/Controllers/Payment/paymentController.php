@@ -32,6 +32,6 @@ class paymentController extends Controller
             'std_email' => $request->std_email,
         ]);
 
-        return redirect('user_home');
+        return redirect('home');
     }
 }

@@ -72,7 +72,7 @@
 
         if(user_id != session_id) {
             alert('Your account login from another device!!', 'Warning Alert');
-            window.location.href = "{{ route('user_logout')}}";
+            window.location.href = "{{ route('logout')}}";
         } 
     </script>
 </body>

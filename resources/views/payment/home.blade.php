@@ -31,7 +31,7 @@
                         <div class="p-2">
                             <form action="{{ route('confirm_payment') }}" id="basic-form" method="POST" class="mt-3" onsubmit="return confirm('Are you sure you want to finish?')">
                                 {{ csrf_field() }}
-                                <input type="hidden" name="std_id" value="{{ auth('student')->user()->std_id }}">
+                                <input type="hidden" name="std_id" value="{{ auth('web')->user()->std_id }}">
                                 <input type="hidden" name="std_level" value="{{ $status }}">
                                 <input type="hidden" name="std_status" value="paid">
                                 <div class="form-group row">
