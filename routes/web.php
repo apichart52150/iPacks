@@ -34,6 +34,11 @@ Route::group(['middleware' => 'auth:web'], function () {
     Route::get('check_data_payment', 'payment\paymentController@check_data_payment')->name('check_data_payment');
     Route::post('send_email_payment', 'payment\paymentController@send_email_payment')->name('send_email_payment');
 
+    Route::get('404', function(){
+        return view('payment.404');
+    })->name('404');
+   
+
     Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
     Route::get('isac_reading', 'student\HomeController@isac_reading')->name('isac_reading');
