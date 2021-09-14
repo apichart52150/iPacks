@@ -16,15 +16,15 @@
 @stop
 
 @section('content')
-<div class="row justify-content-center" id="app">
+<div class="row justify-content-center mt-3" id="app">
     <div class="col-md-6">
         <div class="card">
             <div class="card-header bg-primary text-center">
-                <h3 class="text-white p-0 m-0">{{ $topics['title'] }}</h3>
+                <h3 class="text-white p-0 m-0">{{ $data['topic'] }}</h3>
             </div>
             <div class="card-body">
-                <a href="{{ asset('public/topics/'.$topics['img']) }}.jpg" class="image-popup" title="{{ $topics['title'] }}">
-                    <img src="{{ asset('public/topics/'.$topics['img']) }}.jpg" class="img-fluid" alt="work-thumbnail">
+                <a href="{{ asset('public/topics/'.$data['images']) }}.jpg" class="image-popup" title="{{ $data['topic'] }}">
+                    <img src="{{ asset('public/topics/'.$data['images']) }}.jpg" class="img-fluid" alt="work-thumbnail">
                 </a>  
             </div>
         </div>
@@ -101,36 +101,36 @@
 </audio>
 @endsection
 
-@section('javascript')
+@section('js')
 <script src="{{ asset('public/js/WebAudioRecorder.min.js') }}"></script>
 <script src="{{ asset('public/js/rec.js') }}"></script>
 <script>
-$(document).ready(function() {
-    $('#myAudio').on('ended', () => {
-        this.currenTime = 0;
-        $('#recordBtn').removeAttr('disabled');
+    $(document).ready(function() {
+        $('#myAudio').on('ended', () => {
+            this.currenTime = 0;
+            $('#recordBtn').removeAttr('disabled');
+        });
+
+        $('#modalError').modal('hide');
+
+
+        $('#modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+
+        $('#modal').modal('show');
+
+    })
+
+    document.getElementById('play').addEventListener('click', () => {
+        let audio = document.getElementById('myAudio');
+        audio.play();
+        $('#modal').modal('hide');
     });
 
-    $('#modalError').modal('hide');
-
-
-	$('#modal').modal({
-        backdrop: 'static',
-        keyboard: false
-    });
-
-	$('#modal').modal('show');
-
-})
-
-document.getElementById('play').addEventListener('click', () => {
-    let audio = document.getElementById('myAudio');
-    audio.play();
-    $('#modal').modal('hide');
-});
-
-function refresh() {
-    location.reload();
-}
+    function refresh() {
+        location.reload();
+    }
 </script>
 @stop

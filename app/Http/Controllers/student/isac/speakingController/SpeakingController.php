@@ -42,9 +42,7 @@ class SpeakingController extends Controller
     }
 
 
-    public function store(Request $request) {
-
-        dd($request->all());
+    public function saveSound(Request $request) {
 
         $std_id = auth('web')->user()->id;
 
@@ -87,8 +85,10 @@ class SpeakingController extends Controller
             return response()->json(['success' => 'Upload success']);
 
         } catch(Exception $e) {
+
             DB::rollback();
             return response()->json(['fail' => 'Upload failed : '.$e->getMessage()]);
+            
         }
 
     }
@@ -97,7 +97,7 @@ class SpeakingController extends Controller
     public function update_score_course(Request $request) {
 
         $update = DB::table('speaking')
-        ->where('id', $request->lastRow)
+        ->where('std_id', $request->lastRow)
         ->update([
             'expected_score' => $request->expected_score,
             'current_course' => $request->current_course

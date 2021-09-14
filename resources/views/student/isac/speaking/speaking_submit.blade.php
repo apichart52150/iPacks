@@ -1,17 +1,17 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-3">
     <div class="col-md-10 col-xl-6">
         
         <div class="card">
-            <div class="card-header bg-primary text-center p-2">
+            <div class="card-header bg-success text-center p-2">
                 <h3 class="text-white m-0">{{ $topics['title'] }}</h3>
             </div>
             <div class="card-body text-center p-2">
                 <form action="{{ route('update_score_course') }}" method="POST">
                     {{ csrf_field() }}
-                    <input type="hidden" name="lastRow" value="{{ auth('web')->user()->std_id }}">
+                    <input type="hidden" name="lastRow" value="{{ auth('web')->user()->id }}">
                     <div class="form-group row justify-content-center">
                         <label class="col-form-label">Expected Score</label>
                         <div class="col-auto">
@@ -33,7 +33,7 @@
                             </select>
                         </div>
                     </div>
-                    <input type="submit" value="Submit" class="btn btn-primary" disabled>
+                    <input type="submit" value="Submit" class="btn btn-success" disabled>
                 </form>
 
                 <div class="text-left text-dark mt-3">
