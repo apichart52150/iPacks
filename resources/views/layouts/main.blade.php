@@ -128,7 +128,7 @@
             </div>
             <!-- end Topbar -->
 
-            @if(Auth::user()->level == "premium")
+            @if(Auth::user()->level == "platinum")
                 <div class="topbar-menu">
                     <div class="container-fluid">
                         <div id="navigation">

@@ -1,13 +1,13 @@
 <?php
 
 // ==================== Routes User ====================== //
-Auth::routes();
-Route::get('/', function () {
-    if (Auth::guard('student')->check()) {
-        return redirect('user_home');
-    }
-    return redirect('login');
-});
+    Auth::routes();
+    Route::get('/', function () {
+        if (Auth::guard('web')->check()) {
+            return redirect('user_home');
+        }
+        return redirect('login');
+    });
 
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
@@ -186,7 +186,7 @@ Route::group(['middleware' => 'auth:web'], function () {
         Route::prefix('speaking/report')->namespace('Admin\isac\speaking')->group(function () {
 
             Route::any('teachers', 'ReportController@teachers')->name('report_teachers');
-            Route::get('students', 'ReportController@students')->name('report_students');
+            Route::get('users', 'ReportController@users')->name('report_users');
 
             Route::post('reportAll', 'ReportController@reportAllAjax')->name('reportAll');
             Route::get('view/{id}', 'ReportController@view_history')->name('view');
