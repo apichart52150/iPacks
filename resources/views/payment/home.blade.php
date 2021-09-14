@@ -37,6 +37,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label" for="first_name">Username</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" id="first_name" name="username" class="form-control" placeholder="Username" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label class="col-sm-2 col-form-label" for="first_name">First Name</label>
                                     <div class="col-sm-10">
                                         <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name" required>

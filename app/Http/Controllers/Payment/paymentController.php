@@ -26,6 +26,7 @@ class paymentController extends Controller
             ->update([
                 'level' => $request->level,
                 'status' => $request->status,
+                'username' => $request->username,
                 'first_name' => $request->first_name,
                 'last_name' => $request->last_name,
                 'mobile' => $request->mobile,
