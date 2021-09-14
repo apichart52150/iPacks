@@ -80,6 +80,14 @@ class SpeakingController extends Controller
                 ]
             );
 
+            DB::table('log')
+            ->insert([
+                'std_id' => auth('web')->user()->id,
+                'content' => "iSAC Speaking : ".$topic,
+                'tab' => 'iSAC Speaking',
+                'score' => "-1 Point"
+            ]);
+
             DB::commit();
 
             return response()->json(['success' => 'Upload success']);

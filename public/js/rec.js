@@ -163,8 +163,8 @@ function createDownloadLink(blob,encoding) {
 }
 
 // Count Time
-const time = 1;
-let totalTime = time * 5;
+const time = 2;
+let totalTime = time * 60;
 let timer;
 
 function setTime() {

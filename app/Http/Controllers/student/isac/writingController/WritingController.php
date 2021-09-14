@@ -50,7 +50,7 @@ class WritingController extends Controller
                     ->insert(
                         [
                             'code_test' => $request->input('code_test'),
-                            'std_id' => auth('web')->user()->std_id,
+                            'std_id' => auth('web')->user()->id,
                             'test_type' => $request->input('test_type'),
                             'header_test' => $request->input('header_test'),
                             'text' => $request->input('text_result'),
@@ -67,7 +67,7 @@ class WritingController extends Controller
                 
                 if($result) {
 
-                    Writing::decreasePoint();
+                    // Writing::decreasePoint();
 
                     DB::table('log')
                         ->insert([
@@ -99,7 +99,7 @@ class WritingController extends Controller
                 ->insert(
                     [
                         'code_test' => $request->input('code_test'),
-                        'std_id' => auth('web')->user()->std_id,
+                        'std_id' => auth('web')->user()->id,
                         'test_type' => $request->input('test_type'),
                         'header_test' => $request->input('header_test'),
                         'text' => $request->input('text_result'),

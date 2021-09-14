@@ -110,12 +110,16 @@
                     <div class="logo-box">
                         <div class="logo text-center">
                             <span class="logo-lg">
-                                <img src="{{asset('public/assets/images/logo-nc-light.png') }}" alt="" height="45">
-                                <!-- <span class="logo-lg-text-light">Xeria</span> -->
+                                <a href="{{ route('user_home') }}">
+                                    <img src="{{asset('public/assets/images/logo-nc-light.png') }}" alt="" height="45">
+                                    <!-- <span class="logo-lg-text-light">Xeria</span> -->
+                                </a>
                             </span>
                             <span class="logo-sm">
-                                <!-- <span class="logo-sm-text-dark">X</span> -->
-                                <img src="{{asset('public/assets/images/icob-nc-light.png') }}"alt="" height="45">
+                                <a href="{{ route('user_home') }}">
+                                    <!-- <span class="logo-sm-text-dark">X</span> -->
+                                    <img src="{{asset('public/assets/images/icob-nc-light.png') }}"alt="" height="45">
+                                </a>
                             </span>
                         </div>
                     </div>

@@ -39,7 +39,7 @@
 
 @section('js')
 <script>
-    let totalTime = 10; //80
+    let totalTime = 80; //80
     function setTime() {
         totalTime--
 
