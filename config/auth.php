@@ -41,9 +41,9 @@ return [
             'provider' => 'users',
         ],
 
-        'student' => [
+        'staff' => [
             'driver' => 'session',
-            'provider' => 'student',
+            'provider' => 'staff',
         ],
 
         'api' => [
@@ -75,7 +75,7 @@ return [
             'model' => App\User::class,
         ],
 
-        'student' => [
+        'staff' => [
             'driver' => 'eloquent',
             'model' => App\Model\Login::class,
         ],

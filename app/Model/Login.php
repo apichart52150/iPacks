@@ -11,9 +11,9 @@ class Login extends Authenticatable
 {
     use Notifiable;
 
-    protected $guard = 'student';
-    protected $table = 'student';
-    protected $primaryKey = "std_id";
+    protected $guard = 'staff';
+    protected $table = 'staff';
+    protected $primaryKey = "staff_id";
     protected $rememberTokenName = false;
 
 }

@@ -8,14 +8,14 @@
                 <ul class="navigation-menu  d-lg-flex justify-content-center">
 
 					<li class="has-submenu">
-                        <a href="{{ url('admin') }}" class="text-light">
+                        <a href="{{ route('admin_home') }}" class="text-light">
                             <i class="fas fa-home"></i>Home
                         </a>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{ url('student') }}" class="text-light">
-                            <i class="fas fa-address-card"></i>Student
+                        <a href="{{ route('staff') }}" class="text-light">
+                            <i class="fas fa-address-card"></i>staff
                         </a>
                     </li>
 
@@ -36,7 +36,7 @@
 			<div class="page-title-box">
 				<div class="page-title-right">
 					<ol class="breadcrumb m-0">
-						<li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('admin') }}">Home</a></li>
+						<li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('admin_home') }}">Home</a></li>
 						<!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
 						<li class="breadcrumb-item active">User</li>
 					</ol>
@@ -75,29 +75,32 @@
                     </div>
                 </div>
 
-                <table id="basic-datatable" class="table dt-responsive nowrap ">
+                <table id="basic-datatable" class="table dt-responsive nowrap">
                     <thead>
                     <tr>
                         <th class="min-width">Id</th>
                         <th data-sort-initial="true" data-toggle="true">Username</th>
-                        <th>Mobile</th>
+                        <th>Level</th>
+                        <th>Status</th>
                         <th>Manage : </th>
                     </tr>
                     </thead>
                     <tbody>
 
-                    @foreach($student as $key => $row)
+                    @foreach($staff as $key => $row)
                         <tr>
-                            <td>{{$row->std_id}}</td>
-                            <td><a href="#">{{$row->std_username}}</a></td>
-                            <td>{{ $row->std_mobile }}</td>
+                            <td>{{$row->staff_id}}</td>
+                            <td>{{$row->staff_username}}</td>
+                            <td>{{$row->staff_level}}</td>
+                            <td><span class="badge badge-success p-2">{{$row->staff_status}}</span></td>
 
                             <td>
                                 <div class="d-flex flex-row">
-                                    <a href="{{url('edit/'.$row->std_id)}}" class="btn btn-info btn-xs mr-1">Edit</a>
+                                    <a href="{{url('edit/'.$row->staff_id)}}" class="btn btn-info btn-xs mr-1">Edit</a>
 
-                                    <form method="POST" action="studentdelete/{{ $row->std_id }}" method="POST" >
-                                            <button onclick="return confirm('ต้องการลบข้อมูลนักเรียน ?!')" type="submit" class="btn btn-danger btn-xs mr-1">Delete</button>
+                                    <form method="POST" action="staffdelete/{{ $row->staff_id }}" method="POST" >
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <button onclick="return confirm('Confirm delete staff ?!')" type="submit" class="btn btn-danger btn-xs mr-1">Delete</button>
                                     </form>
 
                                 </div>
@@ -114,56 +117,44 @@
         <div class="modal-dialog modal-xl">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title">Add new User</h4>
+					<h4 class="modal-title">Add new Staff</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 				</div>
 				<div class="modal-body p-4">
 
-                <form class="form-horizontal" role="form" action="addstudent" method="POST">
+                <form class="form-horizontal" role="form" action="addstaff" method="POST">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="hidden" name="staff_status" value="active">
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label" for="std_username">Username</label>
+                        <label class="col-sm-2 col-form-label" for="staff_username">Username</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="std_username" name="std_username">
+                            <input type="text" class="form-control" id="staff_username" name="staff_username" required>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label" for="std_mobile">Mobile</label>
+                        <label class="col-sm-2 col-form-label" for="staff_password">Password</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" id="std_mobile" name="std_mobile">
+                            <input type="text" class="form-control" id="staff_password" name="staff_password" required>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Full Name</label>
+                        <label class="col-sm-2 col-form-label" for="staff_username">Level</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="std_name">
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Nickname</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="std_nickname">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">iSAC Writing</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="std_pointsac">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">iSAC Speaking</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="std_pointspeaking">
+                            <select class="form-control" id="staff_level" name="staff_level" required>
+                                <option value="admin">Admin</option>
+                                <option value="cs">CS</option>
+                                <option value="teacher">Teacher</option>
+                                <option value="sale">Sale</option>
+                                <option value="customer">Customer</option>
+                            </select>
                         </div>
                     </div>
 
                     <div class="form-group text-center">
-                        <a href="{{url('clubs/student')}}" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
                         <button type="submit" class="btn btn-info waves-effect waves-light">Add</button>
+                        <a href="#" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
                     </div>
                 </form>
 				</div>
