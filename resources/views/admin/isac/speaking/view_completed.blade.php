@@ -32,8 +32,8 @@
                         <span class="float-right font-weight-bold">{{ date('d-m-Y H:i', strtotime($check['th_sent_date'])) }}</span>
                         <h6 class="m-0 font-15 text-primary">{{ $check['username'] }}</h6>
                         <div class="text-dark">
-                        	<span class="mr-2"><b><u>Expected Score</u> :</b> {{ $check['expected_score'] }}</span>
-                        	<span><b><u>Current Course</u> :</b> {{ $check['current_course'] }}</span>
+                        	<p class="mr-2"><b><u>Expected Score</u> :</b> {{ $check['expected_score'] }}</p>
+                        	<p><b><u>Current Course</u> :</b> {{ $check['current_course'] }}</p>
                         </div>
                     </div>
                 </div>

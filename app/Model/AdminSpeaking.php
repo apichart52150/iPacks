@@ -57,10 +57,13 @@ class AdminSpeaking extends Model
 	public static function check($id){
 
 		$speaking = DB::table('speaking')
-		->select('speaking.*','users.username')
-		->leftjoin('users','users.id','=','speaking.std_id')
+		->select('speaking.*', 'users.username', 'staff.staff_username')
+		->leftjoin('users','users.id', '=', 'speaking.std_id')
+		->leftjoin('staff','staff.id', '=', 'speaking.th_id')
 		->where('speaking.id','=', $id)
 		->get();
+
+		dd($speaking);
 
 
 		if(strlen($speaking[0]->topic) == 7) {
@@ -84,8 +87,10 @@ class AdminSpeaking extends Model
 			'expected_score' => $speaking[0]->expected_score,
 			'current_course' => $speaking[0]->current_course,
 			'created_at' => $speaking[0]->created_at,
+			'th_name' => $speaking[0]->staff_username,
 			'th_sent_date' => $speaking[0]->th_sent_date
 		];
+		
 
 				
 		return ($check);
@@ -101,7 +106,7 @@ class AdminSpeaking extends Model
 			'lexical_resource' => $request->input('lexical'),
 			'grammar_range_and_acc' => $request->input('grammatical'),
 			'pronunciation' => $request->input('pronunciation'),
-			'th_id' => $request->input('id'),
+			'th_id' => auth()->user()->staff_id,
 			'th_sent_date' => date('Y-m-d H:i:s')]);
 
 		return ($check_submit);
