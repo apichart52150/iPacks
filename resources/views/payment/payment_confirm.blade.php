@@ -46,7 +46,7 @@
                         <div class="mt-3 float-right">
                             <p class="m-b-10"><strong>Order Date : </strong> <span class="float-right"> &nbsp;&nbsp;&nbsp;&nbsp; {{ $data['currentDate']}}</span></p>
                             <p class="m-b-10"><strong>Order Status : </strong> <span class="float-right"><span class="badge badge-danger">Unpaid</span></span></p>
-                            <p class="m-b-10"><strong>Order No. : </strong> <span class="float-right">{{ $data['idOrder']}} </span></p>
+                            <p class="m-b-10"><strong>Order No. : </strong> <span class="float-right">{{ $data['orderRef']}} </span></p>
                         </div>
                     </div><!-- end col -->
                 </div>
@@ -85,7 +85,7 @@
                                         <b>iPACK Package</b> <br/>
                                         {{ $data['package'] }}
                                     </td>
-                                    <td class="text-right">{{ $data['orderRef']}}</td>
+                                    <td class="text-right">{{ $data['amount']}}</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -110,9 +110,9 @@
                     </div> <!-- end col -->
                     <div class="col-sm-6">
                         <div class="float-right">
-                            <p><b>Sub-total:</b> <span class="float-right">{{ $data['orderRef'] }} BAHT</span></p>
+                            <p><b>Sub-total:</b> <span class="float-right">{{ $data['amount'] }} BAHT</span></p>
                             <p><b>Discount (10%):</b> <span class="float-right"> &nbsp;&nbsp;&nbsp; 0.00 BAHT</span></p>
-                            <h3>{{ $data['orderRef']}} BAHT</h3>
+                            <h3>{{ $data['amount']}} BAHT</h3>
                         </div>
                         <div class="clearfix"></div>
                     </div> <!-- end col -->
@@ -124,19 +124,19 @@
                         <!-- <a href="javascript:window.print()" class="btn btn-primary waves-effect waves-light"><i class="mdi mdi-printer mr-1"></i> Print</a> -->
                         <form name="payFormCcard" method="post" action="https://testpaygate.ktc.co.th/ktc/eng/merchandize/payment/payForm.jsp">
                             <input type="hidden" name="merchantId" value="991303017"> 
-                            <input type="hidden" name="orderRef" value="0000011">
+                            <input type="hidden" name="orderRef" value="{{ $data['orderRef'] }}">
                             <input type="hidden" name="payMethod" value="ALIPAY">
-                            <input type="hidden" name="amount" value="6600.00">
+                            <input type="hidden" name="amount" value="{{ $data['amount'] }}">
                             <input type="hidden" name="currCode" value="764" >
-                            <input type="hidden" name="successUrl" value="https://www.newcambridge.com/KTC/success.php">
-                            <input type="hidden" name="failUrl" value="https://www.newcambridge.com/KTC/fail_new.php">
+                            <input type="hidden" name="successUrl" value="http://localhost/ipack/payment/success">
+                            <input type="hidden" name="failUrl" value="http://localhost/ipack/payment/fail">
                             <input type="hidden" name="cancelUrl" value="http://localhost/ipack/success">
                             <input type="hidden" name="payType" value="N">
                             <input type="hidden" name="lang" value="E">
                             <input type="hidden" name="TxType" value="Retail" > 
                             <input type="submit" class="btn btn-success waves-effect waves-light" name="submit" value="Confirm">     
                             <a href="http://localhost/ipack/success">
-                                <input type="button" class="btn btn-success waves-effect waves-light" name="submit" value="Cancel">
+                                <input type="button" class="btn btn-danger waves-effect waves-light" name="submit" value="Cancel">
                             </a>
                         </form>
                     </div>
