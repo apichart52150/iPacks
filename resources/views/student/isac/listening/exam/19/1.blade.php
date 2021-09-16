@@ -37,11 +37,11 @@ $Q_1->e3->q = "No European had visited China before Marco Polo did.";
 $Q_1->e4->q = "No country had given the vote to women before New Zealand did.";
 $Q_1->e5->q = "No-one had produced cheap motor cars before Henry Ford did.";
 
-$Q_1->e1->aw = "Amundsen was the first person to reach the North Pole";
-$Q_1->e2->aw = "Mr Dunlop was the first person to use rubber tyres";
-$Q_1->e3->aw = "Marco Polo was the first European to visit China";
-$Q_1->e4->aw = "New Zealand was the first country to give the vote to women";
-$Q_1->e5->aw = "Henry Ford was the first person to produce cheap motor cars";
+$Q_1->e1->aw = "Amundsen was the first person to reach the North Pole.";
+$Q_1->e2->aw = "Mr Dunlop was the first person to use rubber tyres.";
+$Q_1->e3->aw = "Marco Polo was the first European to visit China.";
+$Q_1->e4->aw = "New Zealand was the first country to give the vote to women.";
+$Q_1->e5->aw = "Henry Ford was the first person to produce cheap motor cars.";
 
 $Q_2 = new stdClass();
 $Q_2->e1 = new stdClass();
@@ -65,12 +65,12 @@ $Q_2->e4->q = "No-one ate all their dinner except Simon.";
 $Q_2->e5->q = "No-one broke any world records except Kieren Perkins.";
 $Q_2->e6->q = "No-one arrived late for the meeting except Kevin.";
 
-$Q_2->e1->aw = "Sandra was the only one to speak to the president";
-$Q_2->e2->aw = "Pete was the only one to apply for the job";
-$Q_2->e3->aw = "Anna was the only one to pass the driving test";
-$Q_2->e4->aw = "Simon was the only one to eat all their dinner";
-$Q_2->e5->aw = "Kieren Perkins was the only one to break any world records";
-$Q_2->e6->aw = "Kevin was the only one to arrive late for the meeting";
+$Q_2->e1->aw = "Sandra was the only one to speak to the president.";
+$Q_2->e2->aw = "Pete was the only one to apply for the job.";
+$Q_2->e3->aw = "Anna was the only one to pass the driving test.";
+$Q_2->e4->aw = "Simon was the only one to eat all their dinner.";
+$Q_2->e5->aw = "Kieren Perkins was the only one to break any world records.";
+$Q_2->e6->aw = "Kevin was the only one to arrive late for the meeting.";
 
 $Q_3 = new stdClass();
 $Q_3->e1 = new stdClass();
@@ -91,11 +91,11 @@ $Q_3->e3->q = "No-one has won six Olympic gold medals since Mark Spitz.";
 $Q_3->e4->q = "No-one has seen him alive since you did.";
 $Q_3->e5->q = "No-one has used the phone since the secretary did.";
 
-$Q_3->e1->aw = "Marie Curie was the last person to win two Nobel Prizes";
-$Q_3->e2->aw = "I was the last person to borrow this book";
-$Q_3->e3->aw = "Mark Spitz was the last person to win six Olympic gold medals";
-$Q_3->e4->aw = "You were the last person to see him alive";
-$Q_3->e5->aw = "The secretary was the last person to use the phone";
+$Q_3->e1->aw = "Marie Curie was the last person to win two Nobel Prizes.";
+$Q_3->e2->aw = "I was the last person to borrow this book.";
+$Q_3->e3->aw = "Mark Spitz was the last person to win six Olympic gold medals.";
+$Q_3->e4->aw = "You were the last person to see him alive.";
+$Q_3->e5->aw = "The secretary was the last person to use the phone.";
 
 @endphp
 

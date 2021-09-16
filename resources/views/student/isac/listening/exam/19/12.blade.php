@@ -52,16 +52,16 @@ $Q_1->e8->q = "'You've created a monster,’ the man said to Frankenstein.";
 $Q_1->e9->q = "'You broke the window,' the woman said to the boys.";
 $Q_1->e10->q = "'You were driving too fast,' the police officer said to the motorist.";
 
-$Q_1->e1->aw = "Mum accused Jack of being lazy";
-$Q_1->e2->aw = "Mary accused her sister of eating all the cake";
-$Q_1->e3->aw = "Jeff accused his younger brother of losing his pencil";
-$Q_1->e4->aw = "The judge accused the defendant of being a liar";
-$Q_1->e5->aw = "The police officer accused the woman of robbing the bank";
-$Q_1->e6->aw = "The examiner accused the candidate of cheating in the exam";
-$Q_1->e7->aw = "Bob accused his son of wasting all his money";
-$Q_1->e8->aw = "The man accused Frankenstein of creating a monster";
-$Q_1->e9->aw = "The woman accused the boys of breaking the window";
-$Q_1->e10->aw = "The police officer accused the motorist of driving too fast";
+$Q_1->e1->aw = "Mum accused Jack of being lazy.";
+$Q_1->e2->aw = "Mary accused her sister of eating all the cake.";
+$Q_1->e3->aw = "Jeff accused his younger brother of losing his pencil.";
+$Q_1->e4->aw = "The judge accused the defendant of being a liar.";
+$Q_1->e5->aw = "The police officer accused the woman of robbing the bank.";
+$Q_1->e6->aw = "The examiner accused the candidate of cheating in the exam.";
+$Q_1->e7->aw = "Bob accused his son of wasting all his money.";
+$Q_1->e8->aw = "The man accused Frankenstein of creating a monster.";
+$Q_1->e9->aw = "The woman accused the boys of breaking the window.";
+$Q_1->e10->aw = "The police officer accused the motorist of driving too fast.";
 
 $Q_2 = new stdClass();
 $Q_2->e1 = new stdClass();
@@ -91,14 +91,14 @@ $Q_2->e6->q = "'I'm thirsty,’ said Richard.";
 $Q_2->e7->q = "'I can't come to your party,' said Sue.";
 $Q_2->e8->q = "'I'll finish the job tomorrow,’ said the workman.";
 
-$Q_2->e1->aw = "The little boy said he couldn't read my writing";
-$Q_2->e2->aw = "Carole said she didn't like her nose";
-$Q_2->e3->aw = "Joseph said he wouldn't be late";
-$Q_2->e4->aw = "Aunty Hilda said she hadn't been to the shops";
-$Q_2->e5->aw = "Rita said she had already seen that film";
-$Q_2->e6->aw = "Richard said he was thirsty";
-$Q_2->e7->aw = "Sue said she couldn't come to my party";
-$Q_2->e8->aw = "The workman said he would finish the job the next day";
+$Q_2->e1->aw = "The little boy said he couldn't read my writing.";
+$Q_2->e2->aw = "Carole said she didn't like her nose.";
+$Q_2->e3->aw = "Joseph said he wouldn't be late.";
+$Q_2->e4->aw = "Aunty Hilda said she hadn't been to the shops.";
+$Q_2->e5->aw = "Rita said she had already seen that film.";
+$Q_2->e6->aw = "Richard said he was thirsty.";
+$Q_2->e7->aw = "Sue said she couldn't come to my party.";
+$Q_2->e8->aw = "The workman said he would finish the job the next day.";
 
 $Q_3 = new stdClass();
 $Q_3->e1 = new stdClass();
@@ -134,16 +134,16 @@ $Q_3->e8->q = "'What's in that bag?'";
 $Q_3->e9->q = "'When did the prisoner escape?'";
 $Q_3->e10->q = "'Why is the door locked?'";
 
-$Q_3->e1->aw = "I don't know who broke that window";
-$Q_3->e2->aw = "I don't know how much it costs";
-$Q_3->e3->aw = "I don't know where you can buy some chillies";
-$Q_3->e4->aw = "I don't know when the show began";
-$Q_3->e5->aw = "I don't know why she ran away";
-$Q_3->e6->aw = "I don't know which suit I'm going to wear";
-$Q_3->e7->aw = "I don't know who I spoke to";
-$Q_3->e8->aw = "I don't know what is in that bag";
-$Q_3->e9->aw = "I don't know when the prisoner escaped";
-$Q_3->e10->aw = "I don't know why the door is locked";
+$Q_3->e1->aw = "I don't know who broke that window.";
+$Q_3->e2->aw = "I don't know how much it costs.";
+$Q_3->e3->aw = "I don't know where you can buy some chillies.";
+$Q_3->e4->aw = "I don't know when the show began.";
+$Q_3->e5->aw = "I don't know why she ran away.";
+$Q_3->e6->aw = "I don't know which suit I'm going to wear.";
+$Q_3->e7->aw = "I don't know who I spoke to.";
+$Q_3->e8->aw = "I don't know what is in that bag.";
+$Q_3->e9->aw = "I don't know when the prisoner escaped.";
+$Q_3->e10->aw = "I don't know why the door is locked.";
 
 $Q_4 = new stdClass();
 $Q_4->e1 = new stdClass();
@@ -179,16 +179,16 @@ $Q_4->e8->q = "'Does the dog bite?'";
 $Q_4->e9->q = "'Were you at the club last night?'";
 $Q_4->e10->q = "'Have you seen my pencil?'";
 
-$Q_4->e1->aw = "He wanted to know if it was raining";
-$Q_4->e2->aw = "She wanted to know if it would shrink in the wash";
-$Q_4->e3->aw = "He wanted to know if I liked him";
-$Q_4->e4->aw = "She wanted to know if I had ever been to New Zealand";
-$Q_4->e5->aw = "He wanted to know if I had watched TV";
-$Q_4->e6->aw = "She wanted to know if I was playing badminton that evening";
-$Q_4->e7->aw = "He wanted to know if I could speak Japanese";
-$Q_4->e8->aw = "She wanted to know if the dog bit";
-$Q_4->e9->aw = "He wanted to know if I had been at the club the night before";
-$Q_4->e10->aw = "She wanted to know if I had seen her pencil";
+$Q_4->e1->aw = "He wanted to know if it was raining.";
+$Q_4->e2->aw = "She wanted to know if it would shrink in the wash.";
+$Q_4->e3->aw = "He wanted to know if I liked him.";
+$Q_4->e4->aw = "She wanted to know if I had ever been to New Zealand.";
+$Q_4->e5->aw = "He wanted to know if I had watched TV.";
+$Q_4->e6->aw = "She wanted to know if I was playing badminton that evening.";
+$Q_4->e7->aw = "He wanted to know if I could speak Japanese.";
+$Q_4->e8->aw = "She wanted to know if the dog bit.";
+$Q_4->e9->aw = "He wanted to know if I had been at the club the night before.";
+$Q_4->e10->aw = "She wanted to know if I had seen her pencil.";
 
 @endphp
 

@@ -63,9 +63,9 @@ $caller_2->e1->q = "Why do many homes in Perth face west?";
 $caller_2->e2->q = "Why must people living in the hills be careful when planning landscaping for their blocks?";
 $caller_2->e3->q = "What range of summer temperature reductions is possible by using effective landscaping?";
 
-$caller_2->e1->aw = "To take full advantage of views";
-$caller_2->e2->aw = "To avoid the risk of fire";
-$caller_2->e3->aw = "Between 10 and 15 degrees Celsius";
+$caller_2->e1->aw = "To take full advantage of views.";
+$caller_2->e2->aw = "To avoid the risk of fire.";
+$caller_2->e3->aw = "Between 10 and 15 degrees Celsius.";
 
 @endphp
 <div class="row">

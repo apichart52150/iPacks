@@ -152,7 +152,7 @@ $E2_1_5->e5->q = "Give TWO examples of how women take better care of themselves 
 
 $E2_1_5->e1->aw = "85 years";
 $E2_1_5->e2->aw = "79 years";
-$E2_1_5->e3->aw = "No, but doctors believe it has something to do with life-style";
+$E2_1_5->e3->aw = "No, but doctors believe it has something to do with life-style.";
 $E2_1_5->e4->aw = "beer and whisky";
 $E2_1_5->e5->aw = "They visit the doctor more often / they do more exercise / they drink less alcohol; / they smoke fewer cigarettes / they don’t drive so fast";
 

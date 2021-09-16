@@ -156,7 +156,7 @@ $E2_1_5->e1->aw = "fear, anger, sadness and jealousy or envy";
 $E2_1_5->e2->aw = "red";
 $E2_1_5->e3->aw = "blue";
 $E2_1_5->e4->aw = "black";
-$E2_1_5->e5->aw = "We don’t know from the passage";
+$E2_1_5->e5->aw = "We don’t know from the passage.";
 
 @endphp
 <div class="row">

@@ -93,11 +93,11 @@ $Q_2->e3->q2 = "Paul";
 $Q_2->e4->q2 = "Teresa and Dave";
 $Q_2->e5->q2 = "Debbie";
 
-$Q_2->e1->aw = "She rode her bicycle";
-$Q_2->e2->aw = "She wrote a letter";
-$Q_2->e3->aw = "He watched television";
-$Q_2->e4->aw = "They danced";
-$Q_2->e5->aw = "She read a book";
+$Q_2->e1->aw = "She rode her bicycle.";
+$Q_2->e2->aw = "She wrote a letter.";
+$Q_2->e3->aw = "He watched television.";
+$Q_2->e4->aw = "They danced.";
+$Q_2->e5->aw = "She read a book.";
 
 @endphp
 

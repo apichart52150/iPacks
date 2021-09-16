@@ -153,7 +153,7 @@ $E2_1_5->e4->q = "When did the captain write in the log for the last time?";
 $E2_1_5->e5->q = "What date did another ship discover the Mary Celeste?";
 
 $E2_1_5->e1->aw = "1860";
-$E2_1_5->e2->aw = "It caught fire";
+$E2_1_5->e2->aw = "It caught fire.";
 $E2_1_5->e3->aw = "J.H Winchester and Company";
 $E2_1_5->e4->aw = "25 November 1872";
 $E2_1_5->e5->aw = "5 December: ten days after the last log was written";

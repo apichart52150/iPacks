@@ -51,16 +51,16 @@ $Q1_10->e8->q = "The use of electro-shock treatment is increasing. Doctors know 
 $Q1_10->e9->q = "The man is the project engineer. You should write to this man.";
 $Q1_10->e10->q = "The aorta is the principal artery. Blood flows to the brain through this artery.";
 
-$Q1_10->e1->aw = "This is a photo of our friends, with whom we went on holiday";
-$Q1_10->e2->aw = "I've just bought some books on astronomy, in which I'm very interested";
-$Q1_10->e3->aw = "The girl in the photo, with whom I used to go out, works for the government";
-$Q1_10->e4->aw = "The play in which I starred was criticised badly";
-$Q1_10->e5->aw = "Justin Small, with whom I went to school, became a famous artist";
-$Q1_10->e6->aw = "John Smith, for whom I voted, didn't win the election";
-$Q1_10->e7->aw = "Sarah Jones, with whom I had dinner last night, is the new president of the club";
-$Q1_10->e8->aw = "The use of electro-shock treatment, about which doctors know very little, is increasing";
-$Q1_10->e9->aw = "The man to whom you should write is the project engineer";
-$Q1_10->e10->aw = "The aorta is the principal artery through which blood flows to the brain";
+$Q1_10->e1->aw = "This is a photo of our friends, with whom we went on holiday.";
+$Q1_10->e2->aw = "I've just bought some books on astronomy, in which I'm very interested.";
+$Q1_10->e3->aw = "The girl in the photo, with whom I used to go out, works for the government.";
+$Q1_10->e4->aw = "The play in which I starred was criticised badly.";
+$Q1_10->e5->aw = "Justin Small, with whom I went to school, became a famous artist.";
+$Q1_10->e6->aw = "John Smith, for whom I voted, didn't win the election.";
+$Q1_10->e7->aw = "Sarah Jones, with whom I had dinner last night, is the new president of the club.";
+$Q1_10->e8->aw = "The use of electro-shock treatment, about which doctors know very little, is increasing.";
+$Q1_10->e9->aw = "The man to whom you should write is the project engineer.";
+$Q1_10->e10->aw = "The aorta is the principal artery through which blood flows to the brain.";
 
 $Q11_20 = new stdClass();
 $Q11_20->e1 = new stdClass();
@@ -96,16 +96,16 @@ $Q11_20->e8->q = "Julie Andrews is promoting a new restaurant. Her name is famou
 $Q11_20->e9->q = "The Indian python is a species of snake. The existence of this snake is under threat.";
 $Q11_20->e10->q = "The scientist received the Nobel Prize. His research led to a cure for cancer.";
 
-$Q11_20->e1->aw = "The actress, whose name I can't remember right now, has played in countless films";
-$Q11_20->e2->aw = "Perth, whose air should be very clean, has a pollution problem";
-$Q11_20->e3->aw = "Jeremy Baker, whose book has sold a million copies, is a very modest person";
-$Q11_20->e4->aw = "Dr Jones, whose contribution to the college is minimal, has just been promoted";
-$Q11_20->e5->aw = "Millions of dollars are being spent on the program, whose popularity is increasing rapidly";
-$Q11_20->e6->aw = "The people whose homes were swept away were evacuated";
-$Q11_20->e7->aw = "Senator Jones, whose daughter has just got married, has been posted to Cambodia";
-$Q11_20->e8->aw = "Julie Andrews, whose name is famous for indigestion relief, is promoting a new restaurant";
-$Q11_20->e9->aw = "The Indian python is a species of snake whose existence is under threat";
-$Q11_20->e10->aw = "The scientist, whose research led to a cure for cancer, received the Nobel Prize";
+$Q11_20->e1->aw = "The actress, whose name I can't remember right now, has played in countless films.";
+$Q11_20->e2->aw = "Perth, whose air should be very clean, has a pollution problem.";
+$Q11_20->e3->aw = "Jeremy Baker, whose book has sold a million copies, is a very modest person.";
+$Q11_20->e4->aw = "Dr Jones, whose contribution to the college is minimal, has just been promoted.";
+$Q11_20->e5->aw = "Millions of dollars are being spent on the program, whose popularity is increasing rapidly.";
+$Q11_20->e6->aw = "The people whose homes were swept away were evacuated.";
+$Q11_20->e7->aw = "Senator Jones, whose daughter has just got married, has been posted to Cambodia.";
+$Q11_20->e8->aw = "Julie Andrews, whose name is famous for indigestion relief, is promoting a new restaurant.";
+$Q11_20->e9->aw = "The Indian python is a species of snake whose existence is under threat.";
+$Q11_20->e10->aw = "The scientist, whose research led to a cure for cancer, received the Nobel Prize.";
 
 $Q21_30 = new stdClass();
 $Q21_30->e1 = new stdClass();
@@ -141,16 +141,16 @@ $Q21_30->e8->q = "I have sent him two letters. Neither of them has arrived.";
 $Q21_30->e9->q = "I tried a lot of new dishes at the party. I hadn't tasted most of them before.";
 $Q21_30->e10->q = "Dozens of people entered the race. Almost all of them failed to finish.";
 
-$Q21_30->e1->aw = "The tenants, most of whom had been subjected to harassment, wrote a letter of complaint";
-$Q21_30->e2->aw = "The books on the shelf, some of which are antique, belong to me";
-$Q21_30->e3->aw = "They gave us a lot of information, most of which was useless";
-$Q21_30->e4->aw = "Norman won a million dollars on Lotto, half of which he gave to his parents";
-$Q21_30->e5->aw = "There were a lot of people at the party, only a few of whom I had met before";
-$Q21_30->e6->aw = "Ten people, none of whom was suitable, applied for the job";
-$Q21_30->e7->aw = "Tom made a number of suggestions, most of which were very helpful";
-$Q21_30->e8->aw = "I have sent him two letters, neither of which has arrived";
-$Q21_30->e9->aw = "I tried a lot of new dishes at the party, most of which I hadn't tasted before";
-$Q21_30->e10->aw = "Dozens of people, almost all of whom failed to finish, entered the race";
+$Q21_30->e1->aw = "The tenants, most of whom had been subjected to harassment, wrote a letter of complaint.";
+$Q21_30->e2->aw = "The books on the shelf, some of which are antique, belong to me.";
+$Q21_30->e3->aw = "They gave us a lot of information, most of which was useless.";
+$Q21_30->e4->aw = "Norman won a million dollars on Lotto, half of which he gave to his parents.";
+$Q21_30->e5->aw = "There were a lot of people at the party, only a few of whom I had met before.";
+$Q21_30->e6->aw = "Ten people, none of whom was suitable, applied for the job.";
+$Q21_30->e7->aw = "Tom made a number of suggestions, most of which were very helpful.";
+$Q21_30->e8->aw = "I have sent him two letters, neither of which has arrived.";
+$Q21_30->e9->aw = "I tried a lot of new dishes at the party, most of which I hadn't tasted before.";
+$Q21_30->e10->aw = "Dozens of people, almost all of whom failed to finish, entered the race.";
 
 @endphp
 

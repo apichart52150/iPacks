@@ -152,7 +152,7 @@ $E2_1_5->e3->q = "When did people start to add other things to the vegetables?";
 $E2_1_5->e4->q = "When did people add chillies?";
 $E2_1_5->e5->q = "When did cabbage become the main part of kimchi?";
 
-$E2_1_5->e1->aw = "The ground was so hard";
+$E2_1_5->e1->aw = "The ground was so hard.";
 $E2_1_5->e2->aw = "in the 7 century, almost 1400 years ago";
 $E2_1_5->e3->aw = "in the twelfth century";
 $E2_1_5->e4->aw = "only in the eighteenth century";

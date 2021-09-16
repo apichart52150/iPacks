@@ -57,16 +57,16 @@ $Q_1->e8->q = "She had previously lived in Italy so she was quite fluent in Ital
 $Q_1->e9->q = "The road was barricaded so we took a diversion.";
 $Q_1->e10->q = "We'd had enough so we called it a day.";
 
-$Q_1->e1->aw = "Being a peace-loving person, I turned the other cheek";
-$Q_1->e2->aw = "The car having broken down, we had to walk to the nearest village";
-$Q_1->e3->aw = "The weather being unsettled, we had to cancel the barbecue";
-$Q_1->e4->aw = "Not feeling very well, she stayed in bed all day";
-$Q_1->e5->aw = "Being overweight, he went on a diet";
-$Q_1->e6->aw = "Having been caught in the rush-hour traffic, he arrived late";
-$Q_1->e7->aw = "Not having had any formal education, she couldn't read or write";
-$Q_1->e8->aw = "Having previously lived in Italy, she was quite fluent in Italian";
-$Q_1->e9->aw = "The road being barricaded, we took a diversion";
-$Q_1->e10->aw = "Having had enough, we called it a day";
+$Q_1->e1->aw = "Being a peace-loving person, I turned the other cheek.";
+$Q_1->e2->aw = "The car having broken down, we had to walk to the nearest village.";
+$Q_1->e3->aw = "The weather being unsettled, we had to cancel the barbecue.";
+$Q_1->e4->aw = "Not feeling very well, she stayed in bed all day.";
+$Q_1->e5->aw = "Being overweight, he went on a diet.";
+$Q_1->e6->aw = "Having been caught in the rush-hour traffic, he arrived late.";
+$Q_1->e7->aw = "Not having had any formal education, she couldn't read or write.";
+$Q_1->e8->aw = "Having previously lived in Italy, she was quite fluent in Italian.";
+$Q_1->e9->aw = "The road being barricaded, we took a diversion.";
+$Q_1->e10->aw = "Having had enough, we called it a day.";
 
 $Q_2 = new stdClass();
 $Q_2->e1 = new stdClass();
@@ -102,16 +102,16 @@ $Q_2->e8->q = "After she had told everyone she was getting married, she then cal
 $Q_2->e9->q = "After he had served the last customer, he closed the shop.";
 $Q_2->e10->q = "After they had redecorated the house, they put it on the market.";
 
-$Q_2->e1->aw = "Having finished the speech, I answered a few questions";
-$Q_2->e2->aw = "Having completed the form, he handed it in at the desk";
-$Q_2->e3->aw = "Having paid the bill, we called for a taxi";
-$Q_2->e4->aw = "Having checked the figures, they all agreed there was a mistake";
-$Q_2->e5->aw = "Having travelled to Darwin by car, they flew back to Perth";
-$Q_2->e6->aw = "Having eaten as much as we could, we settled down to watch TV";
-$Q_2->e7->aw = "Having repaid my debts, I felt great relief";
-$Q_2->e8->aw = "Having told everyone she was getting married, she called it off";
-$Q_2->e9->aw = "Having served the last customer, he closed the shop";
-$Q_2->e10->aw = "Having redecorated the house, they put it on the market";
+$Q_2->e1->aw = "Having finished the speech, I answered a few questions.";
+$Q_2->e2->aw = "Having completed the form, he handed it in at the desk.";
+$Q_2->e3->aw = "Having paid the bill, we called for a taxi.";
+$Q_2->e4->aw = "Having checked the figures, they all agreed there was a mistake.";
+$Q_2->e5->aw = "Having travelled to Darwin by car, they flew back to Perth.";
+$Q_2->e6->aw = "Having eaten as much as we could, we settled down to watch TV.";
+$Q_2->e7->aw = "Having repaid my debts, I felt great relief.";
+$Q_2->e8->aw = "Having told everyone she was getting married, she called it off.";
+$Q_2->e9->aw = "Having served the last customer, he closed the shop.";
+$Q_2->e10->aw = "Having redecorated the house, they put it on the market.";
 
 @endphp
 

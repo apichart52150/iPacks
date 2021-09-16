@@ -3,6 +3,7 @@
     table tr td {
         vertical-align: top;
     }
+
     #caller-3 tr td {
         vertical-align: middle;
         border: 1px solid black;
@@ -204,10 +205,13 @@ $caller_2->e1->q = "In language, slang has a lower ... than academic language.";
 $caller_2->e2->q = "The speaker began his speech with a short ...";
 $caller_2->e3->q = "The man was a real bully and was always trying to ... his wife's achievements";
 $caller_2->e4->q = "I hate both jogging and sprinting; the ... is too slow, and the ... is too fast.";
-$caller_2->e5->q = "There are a number of ... words and phrases in the English language; many of them have their origins in other languages.";
+$caller_2->e5->q = "There are a number of ... words and phrases in the English language; many of them have their origins
+in other languages.";
 $caller_2->e6->q = "John couldn't balance the books; there was a ... in the figures.";
-$caller_2->e7->q = "Sally was very disappointed she wasn't selected to play for her netball team; her ... from the team was a great shock for the rest of the players.";
-$caller_2->e8->q = "Initially I was given a six-month visa to remain in Australia but the visa was ... by three months so that I could spend some time up north.";
+$caller_2->e7->q = "Sally was very disappointed she wasn't selected to play for her netball team; her ... from the team
+was a great shock for the rest of the players.";
+$caller_2->e8->q = "Initially I was given a six-month visa to remain in Australia but the visa was ... by three months
+so that I could spend some time up north.";
 $caller_2->e9->q = "The World Health Organization has been trying to ... malaria for a long time.";
 $caller_2->e10->q = "Wayne's motorcycle ... on the muddy road and he ended up in a ditch.";
 
@@ -349,9 +353,9 @@ $caller_5->c->e1->q = "The lecturer can effectively assess his students' learnin
 $caller_5->c->e2->q = "Many students have wives and children to support.";
 $caller_5->c->e3->q = "The tenant is responsible for the security of his own apartment.";
 
-$caller_5->c->e1->aw = "Lecturers can effectively assess their students' learning";
-$caller_5->c->e2->aw = "Many students have families to support";
-$caller_5->c->e3->aw = "The tenant is responsible for the security of the apartment";
+$caller_5->c->e1->aw = "Lecturers can effectively assess their students' learning.";
+$caller_5->c->e2->aw = "Many students have families to support.";
+$caller_5->c->e3->aw = "The tenant is responsible for the security of the apartment.";
 
 @endphp
 <div class="row">
@@ -363,7 +367,8 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                 <div class="col-lg-12">
                     <span>
                         In the lecture you will hear the words in List A.
-                        <b>Before you listen to the lecture</b>, match the words in List A with their meanings in List B.
+                        <b>Before you listen to the lecture</b>, match the words in List A with their meanings in List
+                        B.
                         Then do Exercise 2.
                     </span>
                     <div class="w-100 d-flex justify-content-center">
@@ -378,7 +383,8 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                 <td class="pl-4" style="width: 200px;">{{$caller_1->q}}</td>
                                 <td class="px-3">=</td>
                                 <td class="pb-2">
-                                    <select class="form-select form-control q-text" show-aw="caller_1-{{$index}}" aw="{{$caller_1->aw}}" aria-label="Default select example">
+                                    <select class="form-select form-control q-text" show-aw="caller_1-{{$index}}"
+                                        aw="{{$caller_1->aw}}" aria-label="Default select example">
                                         <option value="...">...</option>
                                         @foreach($caller_1_choice as $choice)
                                         <option value="{{$choice}}">{{$choice}}</option>
@@ -401,15 +407,17 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                     <table class="w-100">
                         <tr>
                             <td colspan="2">
-                                <h5>Complete the following sentences using some of the words from List A. You may need to change the
+                                <h5>Complete the following sentences using some of the words from List A. You may need
+                                    to change the
                                     form of some of the words</h5>
                             </td>
                         </tr>
                         @foreach($caller_2 as $index => $caller_2)
                         <tr>
-                            <td>{{$caller_2->n}}.</td>
+                            <td style="vertical-align: middle">{{$caller_2->n}}.</td>
                             <td>
-                                <span class="pr-2 q-caller-2 q-caller-2-{{$index}}" q="caller-2-{{$index}}" aw="{{$caller_2->aw}}">{{$caller_2->q}}</span>
+                                <span class="pr-2 q-caller-2 q-caller-2-{{$index}}" show-aw="caller-2-{{$index}}"
+                                    aw="{{$caller_2->aw}}">{{$caller_2->q}}</span>
                             </td>
                         </tr>
                         @endforeach
@@ -438,7 +446,8 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         </tr>
                         <tr>
                             <td>1.</td>
-                            <td class="col-3-500">It assumes that a particular role or job is exclusively male or female.</td>
+                            <td class="col-3-500">It assumes that a particular role or job is exclusively male or
+                                female.</td>
                             <td class="col-3-500">
                                 a. postman, fireman, chairman
                                 <br>
@@ -452,14 +461,16 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         </tr>
                         <tr>
                             <td>2.</td>
-                            <td class="col-3-500">Phrases which are male by nature but which include both males and females.</td>
+                            <td class="col-3-500">Phrases which are male by nature but which include both males and
+                                females.</td>
                             <td class="col-3-500">
                                 <div class="input-con w-100 py-1">
                                     <div class="dropbox q" show-aw="caller_3-2-2-1" aw="a. 'Man'"></div>
                                 </div>
                                 <br>
                                 <div class="input-con w-100 py-1">
-                                    <div class="dropbox q" show-aw="caller_3-2-2-2" aw="b. Everyone should be aware of his rights."></div>
+                                    <div class="dropbox q" show-aw="caller_3-2-2-2"
+                                        aw="b. Everyone should be aware of his rights."></div>
                                 </div>
                             </td>
                             <td class="col-3-500">
@@ -467,8 +478,9 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                     <div class="dropbox q" show-aw="caller_3-2-3-1" aw="a. Humans"></div>
                                 </div>
                                 <br>
-                               <div class="input-con w-100 py-1">
-                                    <div class="dropbox q" show-aw="caller_3-2-3-2" aw="b. People should be aware of their rights."></div>
+                                <div class="input-con w-100 py-1">
+                                    <div class="dropbox q" show-aw="caller_3-2-3-2"
+                                        aw="b. People should be aware of their rights."></div>
                                 </div>
                             </td>
                         </tr>
@@ -476,7 +488,8 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             <td>3.</td>
                             <td class="col-3-500">
                                 <div class="input-con w-100 py-1">
-                                    <div class="dropbox q" show-aw="caller_3-1-3" aw="Female forms to denote sexual difference"></div>
+                                    <div class="dropbox q" show-aw="caller_3-1-3"
+                                        aw="Female forms to denote sexual difference"></div>
                                 </div>
                             </td>
                             <td class="col-3-500">
@@ -498,7 +511,8 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             <td>4.</td>
                             <td class="col-3-500">
                                 <div class="input-con w-100 py-1">
-                                    <div class="dropbox q" show-aw="caller_3-1-4" aw="Females are referred to in terms relating to males"></div>
+                                    <div class="dropbox q" show-aw="caller_3-1-4"
+                                        aw="Females are referred to in terms relating to males"></div>
                                 </div>
                             </td>
                             <td class="col-3-500">
@@ -518,7 +532,8 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             <td>5.</td>
                             <td class="col-3-500">
                                 <div class="input-con w-100 py-1">
-                                    <div class="dropbox q" show-aw="caller_3-1-5" aw="Female forms for insults and abuse"></div>
+                                    <div class="dropbox q" show-aw="caller_3-1-5"
+                                        aw="Female forms for insults and abuse"></div>
                                 </div>
                             </td>
                             <td class="col-3-500">bitch, vixen</td>
@@ -530,7 +545,8 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                     <table class="w-100">
                         <tr>
                             <td colspan="3">
-                                <h5>Listen to the lecture again. Choose the correct answer from the choices given for each question.</h5>
+                                <h5>Listen to the lecture again. Choose the correct answer from the choices given for
+                                    each question.</h5>
                             </td>
                         </tr>
                         @foreach($caller_4 as $index => $caller_4_1)
@@ -543,11 +559,16 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                             <td></td>
                             <td style="width: 20px;">
                                 <div class="form-check">
-                                    <input class="form-check-input event-click position-static q-check caller_4-{{$index}}-{{$index2}}" type="radio" name="caller_4-{{$index}}" show-aw="caller_4-{{$index}}" aw="{{$caller_4_1->aw}}" value="{{$index2}}. {{$caller_4_2}}">
+                                    <input
+                                        class="form-check-input event-click position-static q-check caller_4-{{$index}}-{{$index2}}"
+                                        type="radio" name="caller_4-{{$index}}" show-aw="caller_4-{{$index}}"
+                                        aw="{{$caller_4_1->aw}}" value="{{$index2}}. {{$caller_4_2}}">
                                 </div>
                             </td>
                             <td>
-                                <span class="event-click" onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$index2}}. {{$caller_4_2}}</span>
+                                <span class="event-click"
+                                    onclick="checkRadio('caller_4-{{$index}}-{{$index2}}')">{{$index2}}.
+                                    {{$caller_4_2}}</span>
                             </td>
                         </tr>
                         @endforeach
@@ -625,7 +646,8 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                         @endforeach
                         <tr>
                             <td style="width: 20px;" class="pt-3"><b>c.</b></td>
-                            <td colspan="3" class="pt-3"><b>Rewrite the following sentences to get rid of any sexist language:</b></td>
+                            <td colspan="3" class="pt-3"><b>Rewrite the following sentences to get rid of any sexist
+                                    language:</b></td>
                         </tr>
                         <tr>
                             <td colspan="4">
@@ -641,7 +663,8 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
                                         <td colspan="2"></td>
                                         <td class="py-1">
                                             <b>Answer: </b>
-                                            <input type="text" class="input-text q-text w-75" show-aw="caller_5_c-{{$index}}" aw="{{$c->aw}}">
+                                            <input type="text" class="input-text q-text w-75"
+                                                show-aw="caller_5_c-{{$index}}" aw="{{$c->aw}}">
                                         </td>
                                     </tr>
                                     <tr>
@@ -665,13 +688,15 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header bg-primary py-2">
-                <h4 class="modal-title text-white mx-auto">Listening - 
- {{$pageTitle['sub_menu_name'] }}</h4>
+                <h4 class="modal-title text-white mx-auto">Listening -
+                    {{$pageTitle['sub_menu_name'] }}</h4>
             </div>
             <div class="modal-body text-center">
                 <button id="sound-intro" class="btn btn-bordered-primary">Play Sound</button>
                 <audio data-sound="sound-intro">
-                    <source src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}" type="audio/mp3">
+                    <source
+                        src="{{ asset('public/isac_listening/'.$pageTitle['sub_menu_type'] .'/' .$pageTitle['name_audio']) }}"
+                        type="audio/mp3">
                 </audio>
             </div>
         </div>
@@ -683,7 +708,7 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
 <button id="check-answer" class="btn btn-info">Check Answers</button>
 <button id="show-answer" class="d-none btn btn-info">
     Show Answers
-  </button>
+</button>
 @endsection
 
 @section('js')
@@ -691,11 +716,25 @@ $caller_5->c->e3->aw = "The tenant is responsible for the security of the apartm
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script>
-
+    $('.q-caller-2').each((idx,item)=>{
+        let input = ''
+        let text = $(item).html()
+        let aw = $(item).attr('aw').split('***')
+        console.log('---->',aw)
+        for(let i=0;i<aw.length;i++){
+            let input = '<div class="input-con py-1">' +
+                        '<input type="text" class="q-text form-control w-100" show-aw="'+$(item).attr('show-aw')+'-'+i+'" aw="'+aw[i]+'">'+
+                        '</div>'+
+                        '<span class="aw text-danger px-1 '+$(item).attr('show-aw')+'-'+i+'">'+aw[i]+'</span>'
+            text = text.replace("...",input)
+        }
+        $(item).html(text)
+        console.log('---->',text)
+    })
     $('#check-answer').on('click', () => {
         $("#show-answer").addClass("d-block");
-$("#show-answer").removeClass("d-none");
-$("#check-answer").addClass("d-none");
+        $("#show-answer").removeClass("d-none");
+        $("#check-answer").addClass("d-none");
         $('#check-answer').prop('disabled',true)
         $('.q').each((idx, item) => {
             if ($(item).text().trim().toUpperCase() == $(item).attr('aw').trim().toUpperCase())

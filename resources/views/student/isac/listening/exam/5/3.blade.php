@@ -117,7 +117,7 @@ $aw->e30 = "by ship/sea/by sea";
                                 <td style="border: 1px solid black;">
                                     <div class="p-3">
                                         <div class="w-100 d-flex justify-content-center">
-                                            <table class="w-100">
+                                            <table class="w-auto">
                                                 <tr>
                                                     <td colspan="2" class="text-center pb-2">
                                                         <h3>Application for the Position of Teacher’s Assistant</h3>

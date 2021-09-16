@@ -104,7 +104,7 @@ $aw->e10 = "PIN/Personal Identification Number";
                     <br>
                     Write <b>NO MORE THAN THREE WORDS OR A DATE OR NUMBER</b>
                     <div class="w-100 d-flex justify-content-center">
-                        <table class="w-75">
+                        <table class="w-100">
                             <tr>
                                 <td style="border: 1px solid black;">
                                     <div class="p-3">
@@ -114,7 +114,7 @@ $aw->e10 = "PIN/Personal Identification Number";
                                             <b>STUDENT ACCOUNT APPLICATION FORM</b>
                                         </div>
                                         <div class="w-100 d-flex justify-content-center">
-                                            <table class="w-100">
+                                            <table class="w-auto">
                                                 <tr>
                                                     <td style="vertical-align: middle;" class="pr-2">Account holder:
                                                     </td>
@@ -124,11 +124,12 @@ $aw->e10 = "PIN/Personal Identification Number";
                                                             <input type="text" class="q-val form-control" show-aw="q-1"
                                                                 aw="{{$aw->e1}}">
                                                         </div>
+                                                                <span class="aw text-danger q-1 px-1">{{$aw->e1}}</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td class="pb-2"><span class="aw text-danger q-1">{{$aw->e1}}</span>
+                                                    <td class="pb-2">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -147,11 +148,12 @@ $aw->e10 = "PIN/Personal Identification Number";
                                                             <input type="text" class="q-val form-control" show-aw="q-2"
                                                                 aw="{{$aw->e2}}">
                                                         </div>
+                                                        <span class="aw text-danger px-1 q-2">{{$aw->e2}}</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td class="pb-2"><span class="aw text-danger q-2">{{$aw->e2}}</span>
+                                                    <td class="pb-2">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -170,11 +172,12 @@ $aw->e10 = "PIN/Personal Identification Number";
                                                             <input type="text" class="q-val form-control" show-aw="q-3"
                                                                 aw="{{$aw->e3}}">
                                                         </div>
+                                                        <span class="aw text-danger px-1 q-3">{{$aw->e3}}</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td class="pb-2"><span class="aw text-danger q-3">{{$aw->e3}}</span>
+                                                    <td class="pb-2">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -193,11 +196,12 @@ $aw->e10 = "PIN/Personal Identification Number";
                                                             <input type="text" class="q-val form-control" show-aw="q-4"
                                                                 aw="{{$aw->e4}}">
                                                         </div>
+                                                        <span class="aw text-danger px-1 q-4">{{$aw->e4}}</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td class="pb-2"><span class="aw text-danger q-4">{{$aw->e4}}</span>
+                                                    <td class="pb-2">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -209,11 +213,12 @@ $aw->e10 = "PIN/Personal Identification Number";
                                                             <input type="text" class="q-val form-control" show-aw="q-5"
                                                                 aw="{{$aw->e5}}">
                                                         </div>
+                                                        <span class="aw px-1 text-danger q-5">{{$aw->e5}}</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td class="pb-2"><span class="aw text-danger q-5">{{$aw->e5}}</span>
+                                                    <td class="pb-2">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -240,11 +245,12 @@ $aw->e10 = "PIN/Personal Identification Number";
                                                             <input type="text" class="q-val form-control" show-aw="q-6"
                                                                 aw="{{$aw->e6}}">
                                                         </div>
+                                                        <span class="aw text-danger px-1 q-6">{{$aw->e6}}</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td class="pb-2"><span class="aw text-danger q-6">{{$aw->e6}}</span>
+                                                    <td class="pb-2">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -268,11 +274,12 @@ $aw->e10 = "PIN/Personal Identification Number";
                                                             <input type="text" class="q-val form-control" show-aw="q-7"
                                                                 aw="{{$aw->e7}}">
                                                         </div>
+                                                        <span class="aw px-1 text-danger q-7">{{$aw->e7}}</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td class="pb-2"><span class="aw text-danger q-7">{{$aw->e7}}</span>
+                                                    <td class="pb-2">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -284,11 +291,12 @@ $aw->e10 = "PIN/Personal Identification Number";
                                                             <input type="text" class="q-val form-control" show-aw="q-8"
                                                                 aw="{{$aw->e8}}">
                                                         </div>
+                                                        <span class="aw px-1 text-danger q-8">{{$aw->e8}}</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="pr-2"></td>
-                                                    <td class="pb-2"><span class="aw text-danger q-8">{{$aw->e8}}</span>
+                                                    <td class="pb-2">
                                                     </td>
                                                 </tr>
                                             </table>

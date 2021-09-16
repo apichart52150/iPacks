@@ -52,16 +52,16 @@ $Q_1->e8->q = "The waiter served the soup first.";
 $Q_1->e9->q = "The garbos clear away the rubbish every Friday.";
 $Q_1->e10->q = "The painter painted the fence last week.";
 
-$Q_1->e1->aw = "The parcel was delivered this morning";
-$Q_1->e2->aw = "This house was built last year";
-$Q_1->e3->aw = "A filter was used for this picture";
-$Q_1->e4->aw = "The bread is baked early in the morning";
-$Q_1->e5->aw = "This fish was caught in the lake";
-$Q_1->e6->aw = "The thief has been sentenced to three years in prison";
-$Q_1->e7->aw = "Two of my books have been published";
-$Q_1->e8->aw = "The soup was served first";
-$Q_1->e9->aw = "The rubbish is cleared away every Friday";
-$Q_1->e10->aw = "The fence was painted last week";
+$Q_1->e1->aw = "The parcel was delivered this morning.";
+$Q_1->e2->aw = "This house was built last year.";
+$Q_1->e3->aw = "A filter was used for this picture.";
+$Q_1->e4->aw = "The bread is baked early in the morning.";
+$Q_1->e5->aw = "This fish was caught in the lake.";
+$Q_1->e6->aw = "The thief has been sentenced to three years in prison.";
+$Q_1->e7->aw = "Two of my books have been published.";
+$Q_1->e8->aw = "The soup was served first.";
+$Q_1->e9->aw = "The rubbish is cleared away every Friday.";
+$Q_1->e10->aw = "The fence was painted last week.";
 
 $Q_2 = new stdClass();
 $Q_2->e1 = new stdClass();
@@ -97,16 +97,16 @@ $Q_2->e8->q = "The Government provides money for tertiary education.";
 $Q_2->e9->q = "Senator Jones signed the peace treaty.";
 $Q_2->e10->q = "The Wildcats won the match.";
 
-$Q_2->e1->aw = "The groceries are usually bought by Martin";
-$Q_2->e2->aw = "The dog was bitten by a snake";
-$Q_2->e3->aw = "The sailors were rescued by a fishing boat";
-$Q_2->e4->aw = "The fence is being painted by the boys";
-$Q_2->e5->aw = "My homework is being done by my brother";
-$Q_2->e6->aw = "The robber was identified by an eye-witness";
-$Q_2->e7->aw = "Maths is taught by Mr Roberts";
-$Q_2->e8->aw = "Money for tertiary education is provided by the government";
-$Q_2->e9->aw = "The peace treaty was signed by Senator Jones";
-$Q_2->e10->aw = "The match was won by the Wildcats";
+$Q_2->e1->aw = "The groceries are usually bought by Martin.";
+$Q_2->e2->aw = "The dog was bitten by a snake.";
+$Q_2->e3->aw = "The sailors were rescued by a fishing boat.";
+$Q_2->e4->aw = "The fence is being painted by the boys.";
+$Q_2->e5->aw = "My homework is being done by my brother.";
+$Q_2->e6->aw = "The robber was identified by an eye-witness.";
+$Q_2->e7->aw = "Maths is taught by Mr Roberts.";
+$Q_2->e8->aw = "Money for tertiary education is provided by the government.";
+$Q_2->e9->aw = "The peace treaty was signed by Senator Jones.";
+$Q_2->e10->aw = "The match was won by the Wildcats.";
 
 $Q_3 = new stdClass();
 $Q_3->e1 = new stdClass();
@@ -142,16 +142,16 @@ $Q_3->e8->q = "People will not tolerate that sort of behaviour.";
 $Q_3->e9->q = "You can't eat this meat; it's rotten.";
 $Q_3->e10->q = "Sandra won't win this race.";
 
-$Q_3->e1->aw = "Your bandage ought to be kept dry";
-$Q_3->e2->aw = "This meat should be defrosted";
-$Q_3->e3->aw = "Lunch will be eaten at noon";
-$Q_3->e4->aw = "Your car will be driven by Paul";
-$Q_3->e5->aw = "The lecturer couldn't be heard by the students at the back";
-$Q_3->e6->aw = "Petrol shouldn't be used to light a fire";
-$Q_3->e7->aw = "Bags mustn't be taken into the library";
-$Q_3->e8->aw = "That sort of behaviour will not be tolerated";
-$Q_3->e9->aw = "This meat can't be eaten; it's rotten";
-$Q_3->e10->aw = "This race won't be won by Sandra";
+$Q_3->e1->aw = "Your bandage ought to be kept dry.";
+$Q_3->e2->aw = "This meat should be defrosted.";
+$Q_3->e3->aw = "Lunch will be eaten at noon.";
+$Q_3->e4->aw = "Your car will be driven by Paul.";
+$Q_3->e5->aw = "The lecturer couldn't be heard by the students at the back.";
+$Q_3->e6->aw = "Petrol shouldn't be used to light a fire.";
+$Q_3->e7->aw = "Bags mustn't be taken into the library.";
+$Q_3->e8->aw = "That sort of behaviour will not be tolerated.";
+$Q_3->e9->aw = "This meat can't be eaten; it's rotten.";
+$Q_3->e10->aw = "This race won't be won by Sandra.";
 
 @endphp
 

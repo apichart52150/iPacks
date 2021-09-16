@@ -152,11 +152,11 @@ $E2_1_5->e3->q = "Why can the patient go home earlier after keyhole surgery?";
 $E2_1_5->e4->q = "Why is a keyhole operation cheaper? (Give two reasons.)";
 $E2_1_5->e5->q = "Are keyhole operations completely safe?";
 
-$E2_1_5->e1->aw = "There’s a camera at the end of the wire (which shows a picture on a screen)";
-$E2_1_5->e2->aw = "She moves the camera around";
-$E2_1_5->e3->aw = "The wound takes less time to close up";
-$E2_1_5->e4->aw = "First, the patient spends less time in hospital; second, the patient spends less time with the doctor";
-$E2_1_5->e5->aw = "No, some accidents have happened";
+$E2_1_5->e1->aw = "There’s a camera at the end of the wire (which shows a picture on a screen).";
+$E2_1_5->e2->aw = "She moves the camera around.";
+$E2_1_5->e3->aw = "The wound takes less time to close up.";
+$E2_1_5->e4->aw = "First, the patient spends less time in hospital; second, the patient spends less time with the doctor.";
+$E2_1_5->e5->aw = "No, some accidents have happened.";
 
 @endphp
 <div class="row">

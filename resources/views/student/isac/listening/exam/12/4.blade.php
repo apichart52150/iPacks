@@ -155,8 +155,8 @@ $E2_1_5->e5->q = "Why is there no need for people to worry about the pitcher pla
 $E2_1_5->e1->aw = "something for carrying water";
 $E2_1_5->e2->aw = "insects";
 $E2_1_5->e3->aw = "almost one litre";
-$E2_1_5->e4->aw = "It’s difficult to see them";
-$E2_1_5->e5->aw = "It’s too small for a person to fall inside";
+$E2_1_5->e4->aw = "It’s difficult to see them.";
+$E2_1_5->e5->aw = "It’s too small for a person to fall inside.";
 
 @endphp
 <div class="row">

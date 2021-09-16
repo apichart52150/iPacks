@@ -157,15 +157,15 @@ $caller_2->e12->n = "12";
 $caller_2->e1->aw = "This is thought to be the result of brighter prospects for the Korean economy as a whole";
 $caller_2->e2->aw = "Share market confidence is believed to have been fuelled by Wall Street's massive gains";
 $caller_2->e3->aw = "The Bank of England is believed to be considering dropping its prime lending rate";
-$caller_2->e4->aw = "and the U.S. is expected to announce a one-percent cut in rates later this week";
+$caller_2->e4->aw = "and the U.S. is expected to announce a one-percent cut in rates later this week.";
 $caller_2->e5->aw = "The region's share markets are also expected to follow suit";
 $caller_2->e6->aw = "The global resurgence of gold is expected to continue";
 $caller_2->e7->aw = "This trend is expected to continue with the creation of jobs";
-$caller_2->e8->aw = "Work on the submarines is expected to get under way later this month";
-$caller_2->e9->aw = "However, criminal charges are not expected to be made against the trader";
-$caller_2->e10->aw = "the new version is expected to cost around $16,000";
-$caller_2->e11->aw = "And the cold spell....is expected to continue for the next few days";
-$caller_2->e12->aw = "and two people are believed to have been drowned by the worst weather in over a decade";
+$caller_2->e8->aw = "Work on the submarines is expected to get under way later this month.";
+$caller_2->e9->aw = "However, criminal charges are not expected to be made against the trader.";
+$caller_2->e10->aw = "the new version is expected to cost around $16,000.";
+$caller_2->e11->aw = "And the cold spell....is expected to continue for the next few days.";
+$caller_2->e12->aw = "and two people are believed to have been drowned by the worst weather in over a decade.";
 
 @endphp
 <div class="row">

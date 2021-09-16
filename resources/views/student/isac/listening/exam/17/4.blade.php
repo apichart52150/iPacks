@@ -154,7 +154,7 @@ $E2_1_5->e5->q = "In which other parts of the world had something similar happen
 
 $E2_1_5->e1->aw = "On the seventh floor of an apartment block";
 $E2_1_5->e2->aw = "Two workmen working on the same floor";
-$E2_1_5->e3->aw = "It wasn’t damaged at all";
+$E2_1_5->e3->aw = "It wasn’t damaged at all.";
 $E2_1_5->e4->aw = "1,500 degrees Celsius";
 $E2_1_5->e5->aw = "France, India and England";
 

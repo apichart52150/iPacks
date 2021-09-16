@@ -356,9 +356,9 @@ $caller_5->c->e1->q = "The lecturer can effectively assess his students' learnin
 $caller_5->c->e2->q = "Many students have wives and children to support.";
 $caller_5->c->e3->q = "The tenant is responsible for the security of his own apartment.";
 
-$caller_5->c->e1->aw = "Lecturers can effectively assess their students' learning";
-$caller_5->c->e2->aw = "Many students have families to support";
-$caller_5->c->e3->aw = "The tenant is responsible for the security of the apartment";
+$caller_5->c->e1->aw = "Lecturers can effectively assess their students' learning.";
+$caller_5->c->e2->aw = "Many students have families to support.";
+$caller_5->c->e3->aw = "The tenant is responsible for the security of the apartment.";
 
 @endphp
 <div class="row">

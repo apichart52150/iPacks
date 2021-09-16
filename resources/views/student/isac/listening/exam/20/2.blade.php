@@ -45,16 +45,16 @@ $Q1_10->e8->q = "Please think before answering next time.";
 $Q1_10->e9->q = "Please write in ink.";
 $Q1_10->e10->q = "Please go to bed now.";
 
-$Q1_10->e1->aw = "I'd rather you didn't play the music so loud";
-$Q1_10->e2->aw = "I'd rather you changed your clothes";
-$Q1_10->e3->aw = "I'd rather you paid at the door";
-$Q1_10->e4->aw = "I'd rather you were more courteous";
-$Q1_10->e5->aw = "I'd rather you didn't sit there";
-$Q1_10->e6->aw = "I'd rather you delivered the furniture on Friday instead of today";
-$Q1_10->e7->aw = "I'd rather you weren't so rude";
-$Q1_10->e8->aw = "I'd rather you thought before answering next time";
-$Q1_10->e9->aw = "I'd rather you wrote in ink";
-$Q1_10->e10->aw = "I'd rather you went to bed now";
+$Q1_10->e1->aw = "I'd rather you didn't play the music so loud.";
+$Q1_10->e2->aw = "I'd rather you changed your clothes.";
+$Q1_10->e3->aw = "I'd rather you paid at the door.";
+$Q1_10->e4->aw = "I'd rather you were more courteous.";
+$Q1_10->e5->aw = "I'd rather you didn't sit there.";
+$Q1_10->e6->aw = "I'd rather you delivered the furniture on Friday instead of today.";
+$Q1_10->e7->aw = "I'd rather you weren't so rude.";
+$Q1_10->e8->aw = "I'd rather you thought before answering next time.";
+$Q1_10->e9->aw = "I'd rather you wrote in ink.";
+$Q1_10->e10->aw = "I'd rather you went to bed now.";
 
 @endphp
 

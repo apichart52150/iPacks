@@ -152,11 +152,11 @@ $E2_1_5->e3->q = "Paragraph 2 gives examples of problems with garbage. How many 
 $E2_1_5->e4->q = "Give examples of things which we can recycle?";
 $E2_1_5->e5->q = "Why is plastic such a problem?";
 
-$E2_1_5->e1->aw = "Getting rid of trash is big business";
+$E2_1_5->e1->aw = "Getting rid of trash is big business.";
 $E2_1_5->e2->aw = "about twenty metres";
 $E2_1_5->e3->aw = "five";
 $E2_1_5->e4->aw = "Glass, paper and tin cans";
-$E2_1_5->e5->aw = "It lasts for a long time; it doesn’t go away";
+$E2_1_5->e5->aw = "It lasts for a long time; it doesn’t go away.";
 
 @endphp
 <div class="row">

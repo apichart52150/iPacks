@@ -57,18 +57,18 @@ $Q_1->e10->q = "The heroin was so pure that a lot of addicts became ill.";
 $Q_1->e11->q = "The day was so hot that we went to the beach.";
 $Q_1->e12->q = "The water was so polluted that no-one was allowed to swim in it.";
 
-$Q_1->e1->aw = "It was such a low bridge the bus wouldn't go under";
-$Q_1->e2->aw = "It was such hot food we couldn't eat it";
-$Q_1->e3->aw = "It was such an old typewriter we got rid of it";
-$Q_1->e4->aw = "It was such an interesting book I couldn't put it down";
-$Q_1->e5->aw = "It was such a boring film I left in the middle";
-$Q_1->e6->aw = "They were such nice people I wanted to meet them again";
-$Q_1->e7->aw = "It was such a dry summer all the plants died";
-$Q_1->e8->aw = "He was such a generous man he gave all his money to charity";
-$Q_1->e9->aw = "She was such a beautiful girl I fell in love with her";
-$Q_1->e10->aw = "It was such pure heroin a lot of addicts became ill";
-$Q_1->e11->aw = "It was such a hot day we went to the beach";
-$Q_1->e12->aw = "It was such polluted water no-one was allowed to swim in it";
+$Q_1->e1->aw = "It was such a low bridge the bus wouldn't go under.";
+$Q_1->e2->aw = "It was such hot food we couldn't eat it.";
+$Q_1->e3->aw = "It was such an old typewriter we got rid of it.";
+$Q_1->e4->aw = "It was such an interesting book I couldn't put it down.";
+$Q_1->e5->aw = "It was such a boring film I left in the middle.";
+$Q_1->e6->aw = "They were such nice people I wanted to meet them again.";
+$Q_1->e7->aw = "It was such a dry summer all the plants died.";
+$Q_1->e8->aw = "He was such a generous man he gave all his money to charity.";
+$Q_1->e9->aw = "She was such a beautiful girl I fell in love with her.";
+$Q_1->e10->aw = "It was such pure heroin a lot of addicts became ill.";
+$Q_1->e11->aw = "It was such a hot day we went to the beach.";
+$Q_1->e12->aw = "It was such polluted water no-one was allowed to swim in it.";
 
 @endphp
 

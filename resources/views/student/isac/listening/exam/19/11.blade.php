@@ -57,16 +57,16 @@ $Q_1->e8->q = "You ought to get your finger out.";
 $Q_1->e9->q = "She ought to fight her own battles.";
 $Q_1->e10->q = "We ought to have some food.";
 
-$Q_1->e1->aw = "It's time you went to bed";
-$Q_1->e2->aw = "It's time you learnt some manners";
-$Q_1->e3->aw = "It's time she got a haircut";
-$Q_1->e4->aw = "It's time we had a holiday";
-$Q_1->e5->aw = "It's time I got down to some hard work";
-$Q_1->e6->aw = "It's time they moved into their own flat";
-$Q_1->e7->aw = "It's time he got a move on";
-$Q_1->e8->aw = "It's time you got your finger out";
-$Q_1->e9->aw = "It's time she fought her own battles";
-$Q_1->e10->aw = "It's time we had some food";
+$Q_1->e1->aw = "It's time you went to bed.";
+$Q_1->e2->aw = "It's time you learnt some manners.";
+$Q_1->e3->aw = "It's time she got a haircut.";
+$Q_1->e4->aw = "It's time we had a holiday.";
+$Q_1->e5->aw = "It's time I got down to some hard work.";
+$Q_1->e6->aw = "It's time they moved into their own flat.";
+$Q_1->e7->aw = "It's time he got a move on.";
+$Q_1->e8->aw = "It's time you got your finger out.";
+$Q_1->e9->aw = "It's time she fought her own battles.";
+$Q_1->e10->aw = "It's time we had some food.";
 
 $Q_2 = new stdClass();
 $Q_2->e1 = new stdClass();
@@ -102,16 +102,16 @@ $Q_2->e8->q = "I got lost. I didn't take a compass with me.";
 $Q_2->e9->q = "I can't remember what you told me to do. I didn't pay attention.";
 $Q_2->e10->q = "Someone has stolen my bike. I didn't lock it up.";
 
-$Q_2->e1->aw = "You shouldn't have drunk too much last night";
-$Q_2->e2->aw = "You shouldn't have spent all your money on the horses";
-$Q_2->e3->aw = "You should've brought an umbrella";
-$Q_2->e4->aw = "You should've looked where you were going";
-$Q_2->e5->aw = "You should've paid attention";
-$Q_2->e6->aw = "You shouldn't have eaten too much for lunch";
-$Q_2->e7->aw = "You shouldn't have left home too late";
-$Q_2->e8->aw = "You should've taken a compass with you";
-$Q_2->e9->aw = "You should've paid attention";
-$Q_2->e10->aw = "You should've locked it up";
+$Q_2->e1->aw = "You shouldn't have drunk too much last night.";
+$Q_2->e2->aw = "You shouldn't have spent all your money on the horses.";
+$Q_2->e3->aw = "You should've brought an umbrella.";
+$Q_2->e4->aw = "You should've looked where you were going.";
+$Q_2->e5->aw = "You should've paid attention.";
+$Q_2->e6->aw = "You shouldn't have eaten too much for lunch.";
+$Q_2->e7->aw = "You shouldn't have left home too late.";
+$Q_2->e8->aw = "You should've taken a compass with you.";
+$Q_2->e9->aw = "You should've paid attention.";
+$Q_2->e10->aw = "You should've locked it up.";
 
 $Q_3 = new stdClass();
 $Q_3->e1 = new stdClass();
@@ -147,16 +147,16 @@ $Q_3->e8->q = "That knife needs sharpening.";
 $Q_3->e9->q = "The car battery needs recharging.";
 $Q_3->e10->q = "This suit needs dry-cleaning.";
 
-$Q_3->e1->aw = "You ought to get them tested";
-$Q_3->e2->aw = "You ought to get them shortened";
-$Q_3->e3->aw = "You ought to get it taken out";
-$Q_3->e4->aw = "You ought to get it changed";
-$Q_3->e5->aw = "You ought to get it replaced";
-$Q_3->e6->aw = "You ought to get them swept";
-$Q_3->e7->aw = "You ought to get it fixed";
-$Q_3->e8->aw = "You ought to get it sharpened";
-$Q_3->e9->aw = "You ought to get it recharged";
-$Q_3->e10->aw = "You ought to get it dry-cleaned";
+$Q_3->e1->aw = "You ought to get them tested.";
+$Q_3->e2->aw = "You ought to get them shortened.";
+$Q_3->e3->aw = "You ought to get it taken out.";
+$Q_3->e4->aw = "You ought to get it changed.";
+$Q_3->e5->aw = "You ought to get it replaced.";
+$Q_3->e6->aw = "You ought to get them swept.";
+$Q_3->e7->aw = "You ought to get it fixed.";
+$Q_3->e8->aw = "You ought to get it sharpened.";
+$Q_3->e9->aw = "You ought to get it recharged.";
+$Q_3->e10->aw = "You ought to get it dry-cleaned.";
 
 $Q_4 = new stdClass();
 $Q_4->e1 = new stdClass();
@@ -203,16 +203,16 @@ $Q_4->e8->q2 = "(throw it away)";
 $Q_4->e9->q2 = "(quit smoking)";
 $Q_4->e10->q2 = "(eat more slowly)";
 
-$Q_4->e1->aw = "If I were you, I'd report it";
-$Q_4->e2->aw = "If I were you, I'd leave him";
-$Q_4->e3->aw = "If I were you, I'd go to bed early";
-$Q_4->e4->aw = "If I were you, I'd re-train";
-$Q_4->e5->aw = "If I were you, I'd eat less fat";
-$Q_4->e6->aw = "If I were you, I'd stay out of the sun";
-$Q_4->e7->aw = "If I were you, I'd take it back";
-$Q_4->e8->aw = "If I were you, I'd throw it away";
-$Q_4->e9->aw = "If I were you, I'd quit smoking";
-$Q_4->e10->aw = "If I were you, I'd eat more slowly";
+$Q_4->e1->aw = "If I were you, I'd report it.";
+$Q_4->e2->aw = "If I were you, I'd leave him.";
+$Q_4->e3->aw = "If I were you, I'd go to bed early.";
+$Q_4->e4->aw = "If I were you, I'd re-train.";
+$Q_4->e5->aw = "If I were you, I'd eat less fat.";
+$Q_4->e6->aw = "If I were you, I'd stay out of the sun.";
+$Q_4->e7->aw = "If I were you, I'd take it back.";
+$Q_4->e8->aw = "If I were you, I'd throw it away.";
+$Q_4->e9->aw = "If I were you, I'd quit smoking.";
+$Q_4->e10->aw = "If I were you, I'd eat more slowly.";
 
 @endphp
 

@@ -51,16 +51,16 @@ $Q_1->e8->q = "There was a power cut. They were watching an exciting film.";
 $Q_1->e9->q = "The plane developed engine trouble. It was flying from Perth to Adelaide.";
 $Q_1->e10->q = "The man was walking across the street. He slipped on a banana skin.";
 
-$Q_1->e1->aw = "While I was having a bath, I slipped and hurt myself";
-$Q_1->e2->aw = "While she was walking to work, it started to rain";
-$Q_1->e3->aw = "The car broke down while he was driving to work";
-$Q_1->e4->aw = "The thunderstorm began while the boys were playing football";
-$Q_1->e5->aw = "While the politician was giving a speech, someone threw a tomato at him";
-$Q_1->e6->aw = "While the traffic lights were not working, a number of accidents occurred";
-$Q_1->e7->aw = "While the salvage workers were trying to save the ship, it caught fire";
-$Q_1->e8->aw = "There was a power cut while they were watching an exciting film";
-$Q_1->e9->aw = "The plane developed engine trouble while it was flying from Perth to Adelaide";
-$Q_1->e10->aw = "While the man was walking across the street, he slipped on a banana skin";
+$Q_1->e1->aw = "While I was having a bath, I slipped and hurt myself.";
+$Q_1->e2->aw = "While she was walking to work, it started to rain.";
+$Q_1->e3->aw = "The car broke down while he was driving to work.";
+$Q_1->e4->aw = "The thunderstorm began while the boys were playing football.";
+$Q_1->e5->aw = "While the politician was giving a speech, someone threw a tomato at him.";
+$Q_1->e6->aw = "While the traffic lights were not working, a number of accidents occurred.";
+$Q_1->e7->aw = "While the salvage workers were trying to save the ship, it caught fire.";
+$Q_1->e8->aw = "There was a power cut while they were watching an exciting film.";
+$Q_1->e9->aw = "The plane developed engine trouble while it was flying from Perth to Adelaide.";
+$Q_1->e10->aw = "While the man was walking across the street, he slipped on a banana skin.";
 
 @endphp
 

@@ -156,7 +156,7 @@ $E2_1_5->e1->aw = "off the coast of Africa";
 $E2_1_5->e2->aw = "fruit";
 $E2_1_5->e3->aw = "it makes sound";
 $E2_1_5->e4->aw = "thirty to sixty";
-$E2_1_5->e5->aw = "It is interesting; it is easy to take care of; it seems to enjoy living with people";
+$E2_1_5->e5->aw = "It is interesting; it is easy to take care of; it seems to enjoy living with people.";
 
 @endphp
 <div class="row">

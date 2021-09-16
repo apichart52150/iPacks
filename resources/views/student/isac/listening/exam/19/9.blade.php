@@ -68,16 +68,16 @@ $Q_1->e8->q2 = "(keep it)";
 $Q_1->e9->q2 = "(accept it)";
 $Q_1->e10->q2 = "(report it)";
 
-$Q_1->e1->aw = "If I found a Redback in my bag, I'd kill it";
-$Q_1->e2->aw = "If I saw a swimmer in difficulty, I'd tell the surfguard";
-$Q_1->e3->aw = "If I had a headache, I'd take a pill";
-$Q_1->e4->aw = "If I felt ill one morning, I'd stay in bed";
-$Q_1->e5->aw = "If my computer broke down, I'd get it fixed";
-$Q_1->e6->aw = "If my house caught fire, I'd call for help";
-$Q_1->e7->aw = "If the weather turned hot, I'd go for a swim";
-$Q_1->e8->aw = "If I found a diamond ring, I'd keep it";
-$Q_1->e9->aw = "If I were offered the job, I'd accept it";
-$Q_1->e10->aw = "If someone stole my car, I'd report it";
+$Q_1->e1->aw = "If I found a Redback in my bag, I'd kill it.";
+$Q_1->e2->aw = "If I saw a swimmer in difficulty, I'd tell the surfguard.";
+$Q_1->e3->aw = "If I had a headache, I'd take a pill.";
+$Q_1->e4->aw = "If I felt ill one morning, I'd stay in bed.";
+$Q_1->e5->aw = "If my computer broke down, I'd get it fixed.";
+$Q_1->e6->aw = "If my house caught fire, I'd call for help.";
+$Q_1->e7->aw = "If the weather turned hot, I'd go for a swim.";
+$Q_1->e8->aw = "If I found a diamond ring, I'd keep it.";
+$Q_1->e9->aw = "If I were offered the job, I'd accept it.";
+$Q_1->e10->aw = "If someone stole my car, I'd report it.";
 
 $Q_2 = new stdClass();
 $Q_2->e1 = new stdClass();
@@ -113,16 +113,16 @@ $Q_2->e8->q = "Paula never gets up on time because she doesn't have an alarm clo
 $Q_2->e9->q = "I don't drive a Porsche because I'm not rich enough.";
 $Q_2->e10->q = "Richard never passes his exams because he plays around in class all the time.";
 
-$Q_2->e1->aw = "But if I had a car, I would come to visit you";
-$Q_2->e2->aw = "But if she weren't very shy, she would go to parties";
-$Q_2->e3->aw = "But if he spoke clearly, people would understand him";
-$Q_2->e4->aw = "But if they had a computer, they would use the internet";
-$Q_2->e5->aw = "But if he could swim very well, he would go to the pool";
-$Q_2->e6->aw = "But if I weren't too busy, I would go to the cinema";
-$Q_2->e7->aw = "But if he could read very well, he would buy a lot of books";
-$Q_2->e8->aw = "But if she had an alarm clock, she would get up on time";
-$Q_2->e9->aw = "But if I were rich enough, I would drive a Porsche";
-$Q_2->e10->aw = "But if he didn't play around in class all the time, he would pass his exams";
+$Q_2->e1->aw = "But if I had a car, I would come to visit you.";
+$Q_2->e2->aw = "But if she weren't very shy, she would go to parties.";
+$Q_2->e3->aw = "But if he spoke clearly, people would understand him.";
+$Q_2->e4->aw = "But if they had a computer, they would use the internet.";
+$Q_2->e5->aw = "But if he could swim very well, he would go to the pool.";
+$Q_2->e6->aw = "But if I weren't too busy, I would go to the cinema.";
+$Q_2->e7->aw = "But if he could read very well, he would buy a lot of books.";
+$Q_2->e8->aw = "But if she had an alarm clock, she would get up on time.";
+$Q_2->e9->aw = "But if I were rich enough, I would drive a Porsche.";
+$Q_2->e10->aw = "But if he didn't play around in class all the time, he would pass his exams.";
 
 @endphp
 

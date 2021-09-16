@@ -51,16 +51,16 @@ $Q_1->e8->q = "The burglar couldn't break into the house because of the window l
 $Q_1->e9->q = "The crops couldn't grow because of the lack of rain.";
 $Q_1->e10->q = "He couldn't set up business because of a lack of funds.";
 
-$Q_1->e1->aw = "The rough sea prevented the ship from sailing";
-$Q_1->e2->aw = "The ice on the runway prevented the plane from landing";
-$Q_1->e3->aw = "Quarantine restrictions prevented us from importing the food";
-$Q_1->e4->aw = "The traffic noise prevented me from hearing the speaker";
-$Q_1->e5->aw = "The power cut prevented him from finishing the essay";
-$Q_1->e6->aw = "The rain prevented us from having the barbecue";
-$Q_1->e7->aw = "The war prevented him from finishing his studies";
-$Q_1->e8->aw = "The window locks prevented the burglar from breaking into the house";
-$Q_1->e9->aw = "The lack of rain prevented the crops from growing";
-$Q_1->e10->aw = "A lack of funds prevented him from setting up business";
+$Q_1->e1->aw = "The rough sea prevented the ship from sailing.";
+$Q_1->e2->aw = "The ice on the runway prevented the plane from landing.";
+$Q_1->e3->aw = "Quarantine restrictions prevented us from importing the food.";
+$Q_1->e4->aw = "The traffic noise prevented me from hearing the speaker.";
+$Q_1->e5->aw = "The power cut prevented him from finishing the essay.";
+$Q_1->e6->aw = "The rain prevented us from having the barbecue.";
+$Q_1->e7->aw = "The war prevented him from finishing his studies.";
+$Q_1->e8->aw = "The window locks prevented the burglar from breaking into the house.";
+$Q_1->e9->aw = "The lack of rain prevented the crops from growing.";
+$Q_1->e10->aw = "A lack of funds prevented him from setting up business.";
 
 @endphp
 

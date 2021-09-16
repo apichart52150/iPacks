@@ -52,16 +52,16 @@
     $Q_1->e9->q = "I'm sorry. I didn't mean to interrupt your work.";
     $Q_1->e10->q = "I'm sorry. I didn't mean to make too much noise.";
 
-    $Q_1->e1->aw = "I apologize for offending you";
-    $Q_1->e2->aw = "I apologize for being rude";
-    $Q_1->e3->aw = "I apologize for spoiling the surprise";
-    $Q_1->e4->aw = "I apologize for hurting your feelings";
-    $Q_1->e5->aw = "I apologize for letting the side down";
-    $Q_1->e6->aw = "I apologize for causing any problems";
-    $Q_1->e7->aw = "I apologize for disturbing you";
-    $Q_1->e8->aw = "I apologize for waking the children";
-    $Q_1->e9->aw = "I apologize for interrupting your work";
-    $Q_1->e10->aw = "I apologize for making too much noise";
+    $Q_1->e1->aw = "I apologize for offending you.";
+    $Q_1->e2->aw = "I apologize for being rude.";
+    $Q_1->e3->aw = "I apologize for spoiling the surprise.";
+    $Q_1->e4->aw = "I apologize for hurting your feelings.";
+    $Q_1->e5->aw = "I apologize for letting the side down.";
+    $Q_1->e6->aw = "I apologize for causing any problems.";
+    $Q_1->e7->aw = "I apologize for disturbing you.";
+    $Q_1->e8->aw = "I apologize for waking the children.";
+    $Q_1->e9->aw = "I apologize for interrupting your work.";
+    $Q_1->e10->aw = "I apologize for making too much noise.";
 
     $Q_2 = new stdClass();
     $Q_2->e1 = new stdClass();
@@ -97,16 +97,16 @@
     $Q_2->e9->q = "The police officer dived into the icy water. He didn't think about the danger.";
     $Q_2->e10->q = "Paul left the house. He didn't eat any breakfast.";
 
-    $Q_2->e1->aw = "She walked by me without saying 'hello'";
-    $Q_2->e2->aw = "John completed the race without feeling tired";
-    $Q_2->e3->aw = "They got down to work without wasting any time";
-    $Q_2->e4->aw = "The team finished the season without losing a game";
-    $Q_2->e5->aw = "The woman rescued the baby without thinking about the danger";
-    $Q_2->e6->aw = "The driver went through the red light without stopping";
-    $Q_2->e7->aw = "The prisoner survived ten weeks without eating";
-    $Q_2->e8->aw = "The girl got on the bus without queuing";
-    $Q_2->e9->aw = "The police officer dived into the icy water without thinking about the danger";
-    $Q_2->e10->aw = "Paul left the house without eating any breakfast";
+    $Q_2->e1->aw = "She walked by me without saying 'hello'.";
+    $Q_2->e2->aw = "John completed the race without feeling tired.";
+    $Q_2->e3->aw = "They got down to work without wasting any time.";
+    $Q_2->e4->aw = "The team finished the season without losing a game.";
+    $Q_2->e5->aw = "The woman rescued the baby without thinking about the danger.";
+    $Q_2->e6->aw = "The driver went through the red light without stopping.";
+    $Q_2->e7->aw = "The prisoner survived ten weeks without eating.";
+    $Q_2->e8->aw = "The girl got on the bus without queuing.";
+    $Q_2->e9->aw = "The police officer dived into the icy water without thinking about the danger.";
+    $Q_2->e10->aw = "Paul left the house without eating any breakfast.";
 
     $Q_3 = new stdClass();
     $Q_3->e1 = new stdClass();
@@ -142,16 +142,16 @@
     $Q_3->e9->q = "Tanya likes watching videos but she enjoys going to the cinema more.";
     $Q_3->e10->q = "I like baking cakes but I enjoy eating them more. ";
 
-    $Q_3->e1->aw = "I prefer going to parties to going to discos";
-    $Q_3->e2->aw = "Joe prefers high-jumping to long-jumping";
-    $Q_3->e3->aw = "Jenny prefers eating out to cooking";
-    $Q_3->e4->aw = "Anna prefers sculpting to painting";
-    $Q_3->e5->aw = "I prefer winning to taking part";
-    $Q_3->e6->aw = "Linda prefers cycling to horse-riding";
-    $Q_3->e7->aw = "I prefer swimming in the sea to swimming in the pool";
-    $Q_3->e8->aw = "Fred prefers scuba-diving to snorkelling";
-    $Q_3->e9->aw = "Tanya prefers going to the cinema to watching videos";
-    $Q_3->e10->aw = "I prefer eating cakes to baking them";
+    $Q_3->e1->aw = "I prefer going to parties to going to discos.";
+    $Q_3->e2->aw = "Joe prefers high-jumping to long-jumping.";
+    $Q_3->e3->aw = "Jenny prefers eating out to cooking.";
+    $Q_3->e4->aw = "Anna prefers sculpting to painting.";
+    $Q_3->e5->aw = "I prefer winning to taking part.";
+    $Q_3->e6->aw = "Linda prefers cycling to horse-riding.";
+    $Q_3->e7->aw = "I prefer swimming in the sea to swimming in the pool.";
+    $Q_3->e8->aw = "Fred prefers scuba-diving to snorkelling.";
+    $Q_3->e9->aw = "Tanya prefers going to the cinema to watching videos.";
+    $Q_3->e10->aw = "I prefer eating cakes to baking them.";
 
     $Q_4 = new stdClass();
     $Q_4->e1 = new stdClass();
@@ -187,16 +187,16 @@
     $Q_4->e9->q = "I said 'goodbye' to the last guest. Then I locked the door.";
     $Q_4->e10->q = "He turned on the ignition. Then he put the car into gear.";
 
-    $Q_4->e1->aw = "After doing the washing-up, he watched football on TV";
-    $Q_4->e2->aw = "After writing 2 letters, she went out";
-    $Q_4->e3->aw = "After taking off, the plane climbed to 30,000 feet";
-    $Q_4->e4->aw = "After finishing the book, I went to bed";
-    $Q_4->e5->aw = "After phoning for a taxi, she waited in the hallway";
-    $Q_4->e6->aw = "After buying a blank video tape, he recorded the film";
-    $Q_4->e7->aw = "After discovering the body, she called the police";
-    $Q_4->e8->aw = "After dictating a letter, the boss attended a meeting";
-    $Q_4->e9->aw = "After saying 'goodbye' to the last guest, I locked the door";
-    $Q_4->e10->aw = "After turning on the ignition, he put the car into gear";
+    $Q_4->e1->aw = "After doing the washing-up, he watched football on TV.";
+    $Q_4->e2->aw = "After writing 2 letters, she went out.";
+    $Q_4->e3->aw = "After taking off, the plane climbed to 30,000 feet.";
+    $Q_4->e4->aw = "After finishing the book, I went to bed.";
+    $Q_4->e5->aw = "After phoning for a taxi, she waited in the hallway.";
+    $Q_4->e6->aw = "After buying a blank video tape, he recorded the film.";
+    $Q_4->e7->aw = "After discovering the body, she called the police.";
+    $Q_4->e8->aw = "After dictating a letter, the boss attended a meeting.";
+    $Q_4->e9->aw = "After saying 'goodbye' to the last guest, I locked the door.";
+    $Q_4->e10->aw = "After turning on the ignition, he put the car into gear.";
 
     $Q_5 = new stdClass();
     $Q_5->e1 = new stdClass();
@@ -232,16 +232,16 @@
     $Q_5->e9->q = "We were tired but we decided to go dancing.";
     $Q_5->e10->q = "She could read and write French but she couldn't speak it.";
 
-    $Q_5->e1->aw = "Despite feeling ill, she came to school";
-    $Q_5->e2->aw = "Despite being poor, they gave some money to charity";
-    $Q_5->e3->aw = "Despite not being able to swim, he enjoys playing in the sea";
-    $Q_5->e4->aw = "Despite not working very hard, she passed the exam";
-    $Q_5->e5->aw = "Despite having to walk to work every day, he was never late";
-    $Q_5->e6->aw = "Despite losing the game, they still won the championship";
-    $Q_5->e7->aw = "Despite not being able to speak Japanese, I spend all my holidays in Tokyo";
-    $Q_5->e8->aw = "Despite not liking windy weather, I enjoy living in Perth";
-    $Q_5->e9->aw = "Despite being tired, we decided to go dancing";
-    $Q_5->e10->aw = "Despite being able to read and write French, she couldn't speak it";
+    $Q_5->e1->aw = "Despite feeling ill, she came to school.";
+    $Q_5->e2->aw = "Despite being poor, they gave some money to charity.";
+    $Q_5->e3->aw = "Despite not being able to swim, he enjoys playing in the sea.";
+    $Q_5->e4->aw = "Despite not working very hard, she passed the exam.";
+    $Q_5->e5->aw = "Despite having to walk to work every day, he was never late.";
+    $Q_5->e6->aw = "Despite losing the game, they still won the championship.";
+    $Q_5->e7->aw = "Despite not being able to speak Japanese, I spend all my holidays in Tokyo.";
+    $Q_5->e8->aw = "Despite not liking windy weather, I enjoy living in Perth.";
+    $Q_5->e9->aw = "Despite being tired, we decided to go dancing.";
+    $Q_5->e10->aw = "Despite being able to read and write French, she couldn't speak it.";
 
     $Q_6 = new stdClass();
     $Q_6->e1 = new stdClass();
@@ -277,16 +277,16 @@
     $Q_6->e9->q = "The athlete broke his leg and had to retire from athletics";
     $Q_6->e10->q = "The secretary typed the letter and then the boss signed it";
 
-    $Q_6->e1->aw = "After putting the cat out, he went to bed";
-    $Q_6->e2->aw = "After turning the television off, she had a shower";
-    $Q_6->e3->aw = "After the program had finished, she turned the TV off";
-    $Q_6->e4->aw = "After doing his homework, Tommy went out to play";
-    $Q_6->e5->aw = "After completing the exercise, they still didn't understand it";
-    $Q_6->e6->aw = "After he had had his car serviced, it still didn't run smoothly";
-    $Q_6->e7->aw = "After checking her baggage in, Mary went through immigration control";
-    $Q_6->e8->aw = "After the refereee had blown his whistle, the game started";
-    $Q_6->e9->aw = "After breaking his leg, the athlete had to retire from athletics";
-    $Q_6->e10->aw = "After the secretary had typed the letter, the boss signed it";
+    $Q_6->e1->aw = "After putting the cat out, he went to bed.";
+    $Q_6->e2->aw = "After turning the television off, she had a shower.";
+    $Q_6->e3->aw = "After the program had finished, she turned the TV off.";
+    $Q_6->e4->aw = "After doing his homework, Tommy went out to play.";
+    $Q_6->e5->aw = "After completing the exercise, they still didn't understand it.";
+    $Q_6->e6->aw = "After he had had his car serviced, it still didn't run smoothly.";
+    $Q_6->e7->aw = "After checking her baggage in, Mary went through immigration control.";
+    $Q_6->e8->aw = "After the refereee had blown his whistle, the game started.";
+    $Q_6->e9->aw = "After breaking his leg, the athlete had to retire from athletics.";
+    $Q_6->e10->aw = "After the secretary had typed the letter, the boss signed it.";
 
 @endphp
 
