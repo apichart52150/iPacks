@@ -122,7 +122,7 @@
                 <div class="mt-4 mb-1">
                     <div class="text-right d-print-none">
                         <!-- <a href="javascript:window.print()" class="btn btn-primary waves-effect waves-light"><i class="mdi mdi-printer mr-1"></i> Print</a> -->
-                        <form name="payFormCcard" method="post" action="https://testpaygate.ktc.co.th/ktc/eng/merchandize/payment/payForm.jsp">
+                        <form name="payFormCcard" method="post" action="https://testpaygate.ktc.co.th/scs/eng/merchandize/payment/payForm.jsp">
                             <input type="hidden" name="merchantId" value="991303017"> 
                             <input type="hidden" name="orderRef" value="{{ $data['orderRef'] }}">
                             <input type="hidden" name="payMethod" value="ALIPAY">
