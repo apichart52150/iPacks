@@ -17,8 +17,8 @@ class AdminSpeaking extends Model
 	public static function total_speaking() {
 
 		$total_speaking = DB::table('speaking')
-		->select('speaking.*','student.std_name')
-		->leftjoin('student','student.std_id','=','speaking.std_id')
+		->select('speaking.*','users.username')
+		->leftjoin('users','users.id','=','speaking.std_id')
 		->where('speaking.status','=','sent')
 		->orderBy('speaking.created_at','asc')
 		->get();
@@ -31,11 +31,11 @@ class AdminSpeaking extends Model
 	public static function receive_speaking() {
 
 		$receive_speaking = DB::table('speaking')
-		->select('speaking.*','student.std_name')
-		->leftjoin('student','student.std_id','=','speaking.std_id')
+		->select('speaking.*','users.username')
+		->leftjoin('users','users.id','=','speaking.std_id')
 		->where([
 			['speaking.status','=','pending'],
-			['speaking.th_id','=', Auth::user()->id]
+			['speaking.th_id','=', Auth::user('staff')->id]
 		])
 		->orderBy('speaking.created_at','desc')
 		->get();
@@ -49,7 +49,7 @@ class AdminSpeaking extends Model
 		$receive = DB::table('speaking')
 		->where('id','=',$id)
 		->update(['status' => 'pending',
-		'th_id' => Auth::user()->id]);
+		'th_id' => Auth::user('staff')->id]);
 
 		return ($receive);
 	}
@@ -57,14 +57,14 @@ class AdminSpeaking extends Model
 	public static function check($id){
 
 		$speaking = DB::table('speaking')
-		->select('speaking.*','student.std_name', 'course.coursename', 'users.name as teacher', 'class.th_name as th_inClass')
-		->leftjoin('student','student.std_id','=','speaking.std_id')
-		->join('class_student', 'speaking.std_id', '=', 'class_student.std_id')
-        ->join('class', 'class_student.nccode', '=', 'class.nccode')
-        ->join('course','class.courseid','=','course.courseid')
-        ->join('users', 'users.id', '=', 'speaking.th_id')
+		->select('speaking.*', 'users.username', 'staff.staff_username')
+		->leftjoin('users','users.id', '=', 'speaking.std_id')
+		->leftjoin('staff','staff.id', '=', 'speaking.th_id')
 		->where('speaking.id','=', $id)
 		->get();
+
+		dd($speaking);
+
 
 		if(strlen($speaking[0]->topic) == 7) {
 			$path_img = str_replace(' ', '0', $speaking[0]->topic);
@@ -72,24 +72,26 @@ class AdminSpeaking extends Model
 			$path_img = str_replace(' ', '', $speaking[0]->topic);
 		}
 
-        $check = ['id' => $speaking[0]->id,
-				'topic' => $speaking[0]->topic,
-				'img' => $path_img,
-                'path' => $speaking[0]->path,
-                'std_name' => $speaking[0]->std_name,
-                'std_id' => $speaking[0]->std_id,
-                'score' => $speaking[0]->score,
-                'fluency' => $speaking[0]->fluency_and_coherence,
-                'lexical' => $speaking[0]->lexical_resource,
-                'grammatical' => $speaking[0]->grammar_range_and_acc,
-                'pronunciation' => $speaking[0]->pronunciation,
-                'coursename' => $speaking[0]->coursename,
-                'expected_score' => $speaking[0]->expected_score,
-                'current_course' => $speaking[0]->current_course,
-                'th_name' => $speaking[0]->teacher,
-                'th_inClass' => $speaking[0]->th_inClass,
-                'created_at' => $speaking[0]->created_at,
-				'th_sent_date' => $speaking[0]->th_sent_date];
+        $check = [
+			'id' => $speaking[0]->id,
+			'topic' => $speaking[0]->topic,
+			'img' => $path_img,
+			'path' => $speaking[0]->path,
+			'username' => $speaking[0]->username,
+			'id' => $speaking[0]->id,
+			'score' => $speaking[0]->score,
+			'fluency' => $speaking[0]->fluency_and_coherence,
+			'lexical' => $speaking[0]->lexical_resource,
+			'grammatical' => $speaking[0]->grammar_range_and_acc,
+			'pronunciation' => $speaking[0]->pronunciation,
+			'expected_score' => $speaking[0]->expected_score,
+			'current_course' => $speaking[0]->current_course,
+			'created_at' => $speaking[0]->created_at,
+			'th_name' => $speaking[0]->staff_username,
+			'th_sent_date' => $speaking[0]->th_sent_date
+		];
+		
+
 				
 		return ($check);
 	}
@@ -104,6 +106,7 @@ class AdminSpeaking extends Model
 			'lexical_resource' => $request->input('lexical'),
 			'grammar_range_and_acc' => $request->input('grammatical'),
 			'pronunciation' => $request->input('pronunciation'),
+			'th_id' => auth()->user()->staff_id,
 			'th_sent_date' => date('Y-m-d H:i:s')]);
 
 		return ($check_submit);

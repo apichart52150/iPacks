@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','iPACKS | LOGIN')
+@section('title','ADMIN | LOGIN')
 
 @section('content')
 <div class="container">
@@ -24,13 +24,13 @@
 						{{ session()->get('status') }}
 					</div>
 					@endif
-					<form action="{{ route('fn_login') }}" method="POST" novalidate>
+					<form action="{{ route('_login') }}" method="POST" novalidate>
 						{{ csrf_field() }}
 						<div class="form-group mb-3">
-							<label for="email">Email</label>
-							<input class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" type="email" id="email" name="email" required="" placeholder="Enter your email" value="{{ old('email') }}">
+							<label for="username">Username</label>
+							<input class="form-control {{ $errors->has('username') ? 'is-invalid' : '' }}" type="username" id="username" name="username" required="" placeholder="Enter your username" value="{{ old('username') }}">
 							<span class="invalid-feedback">
-								{{ $errors->first('email') }}
+								{{ $errors->first('username') }}
 							</span>
 						</div>
 
@@ -47,21 +47,7 @@
 						</div>
 
 					</form>
-
-					<br>
-
-					<p class="font-weight-bold text-success">
-						<i class=" mdi mdi-monitor-screenshot"></i> Computers, laptops, or iPads are highly recommended.
-					</p>
-					<p class="font-weight-bold text-danger">
-						<i class=" mdi mdi-cellphone-erase"></i>Smartphones should be avoided.
-					</p>
 				</div>
-			</div>
-			<div class="row mt-3">
-				<div class="col-12 text-center">
-					<p class="text-muted">Don't have an account? <a href="{{ route('user_register') }}" class="text-white font-weight-medium ml-1">Register</a></p>
-				</div> <!-- end col -->
 			</div>
 		</div>
 	</div>

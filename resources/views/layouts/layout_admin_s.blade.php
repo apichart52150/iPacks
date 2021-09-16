@@ -266,7 +266,7 @@
         <!-- toastr init js-->
         <script src="{{ asset('public/assets/js/pages/toastr.init.js') }}"></script>
 
-        @yield('javascript')
+        @yield('js')
         <!-- App js -->
         <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
         

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\student\isac\speakingController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
+use Session;
 use App\Model\Speaking;
 
 class SpeakingController extends Controller
@@ -11,22 +12,24 @@ class SpeakingController extends Controller
 
     public function intro($topic) {
 
-        $topics = [
-            'title' => substr($topic, 0, 5) .' '. substr($topic, 5, 7),
-            'img' => $topic
+        $data = [
+            'topic' => substr($topic, 0, 5) .' '. substr($topic, 5, 7),
+            'images' => $topic
         ];
         
-        return view('student.isac.speaking.speaking_intro', compact('topics'));
+        return view('student.isac.speaking.speaking_intro', compact('data'));
     }
 
     public function record($topic) {
 
-        $topics = [
-            'title' => substr($topic, 0, 5) .' '. substr($topic, 5, 7),
-            'img' => $topic
+        $data = [
+            'topic' => substr($topic, 0, 5) .' '. substr($topic, 5, 7),
+            'images' => $topic
         ];
+
+        // dd(Session::get('ss_id'));
         
-        return view('student.isac.speaking.speaking_record', compact('topics'));
+        return view('student.isac.speaking.speaking_record', compact('data'));
     }
 
     public function submit($topic) {
@@ -35,9 +38,7 @@ class SpeakingController extends Controller
             'title' => substr($topic, 0, 5) .' '. substr($topic, 5, 7)
         ];
 
-        $courses = Speaking::getCourse();
-
-        return view('student.isac.speaking.speaking_submit', compact('courses','topics'));
+        return view('student.isac.speaking.speaking_submit', compact('topics'));
     }
 
 
@@ -79,13 +80,23 @@ class SpeakingController extends Controller
                 ]
             );
 
+            DB::table('log')
+            ->insert([
+                'std_id' => auth('web')->user()->id,
+                'content' => "iSAC Speaking : ".$topic,
+                'tab' => 'iSAC Speaking',
+                'score' => "-1 Point"
+            ]);
+
             DB::commit();
 
             return response()->json(['success' => 'Upload success']);
 
         } catch(Exception $e) {
+
             DB::rollback();
             return response()->json(['fail' => 'Upload failed : '.$e->getMessage()]);
+            
         }
 
     }
@@ -94,7 +105,7 @@ class SpeakingController extends Controller
     public function update_score_course(Request $request) {
 
         $update = DB::table('speaking')
-        ->where('id', $request->lastRow)
+        ->where('std_id', $request->lastRow)
         ->update([
             'expected_score' => $request->expected_score,
             'current_course' => $request->current_course

@@ -38,7 +38,7 @@
 
     </style>    
 
-    @if(Auth::user()->level == 'premium')
+    @if(Auth::user()->level == 'platinum')
         <div class="row d-flex justify-content-center">
             <div class="col-xl-3 col-md-6">
                 <a href="{{ url('isac/listening') }}" class="wave-light">
@@ -81,7 +81,7 @@
             <div class="col-xl-3 col-md-6">
                 <a href="{{url('/isac_writing_home')}}">
                     <div class="card-box widget-icon ribbon-box bg-info">
-                        <div class="ribbon-two ribbon-two-secondary"><span>Premium</span></div>
+                        <div class="ribbon-two ribbon-two-secondary"><span>platinum</span></div>
                         <div class="avatar-lg float-left">
                             <div class="hover-scale">
                                 <div class="widget-simple">
@@ -100,7 +100,7 @@
             <div class="col-xl-3 col-md-6">
                 <a href="{{url('/browser-settings')}}">
                 <div class="card-box widget-icon ribbon-box bg-success">
-                        <div class="ribbon-two ribbon-two-secondary"><span>Premium</span></div>
+                        <div class="ribbon-two ribbon-two-secondary"><span>platinum</span></div>
                         <div class="avatar-lg float-left">
                             <div class="hover-scale">
                                 <div class="widget-simple">
@@ -242,7 +242,7 @@
         <div class="col-xl-3 col-md-6">
             <a href="#" id="alert1">
                 <div class="card-box widget-icon ribbon-box bg-info">
-                    <div class="ribbon-two ribbon-two-secondary"><span>Premium</span></div>
+                    <div class="ribbon-two ribbon-two-secondary"><span>platinum</span></div>
                     <div class="avatar-lg float-left">
                         <div class="hover-scale">
                             <div class="widget-simple">
@@ -261,7 +261,7 @@
         <div class="col-xl-3 col-md-6">
             <a href="#" id="alert2">
             <div class="card-box widget-icon ribbon-box bg-success">
-                    <div class="ribbon-two ribbon-two-secondary"><span>Premium</span></div>
+                    <div class="ribbon-two ribbon-two-secondary"><span>platinum</span></div>
                     <div class="avatar-lg float-left">
                         <div class="hover-scale">
                             <div class="widget-simple">
@@ -410,7 +410,7 @@
     $('#alert1').on('click', function() {
         Swal.fire({
           title: 'Access denied',
-          text: 'Please upgrade to Premium for access it',
+          text: 'Please upgrade to platinum for access it',
           type: 'error',
           timer: 5000,
         })
@@ -418,7 +418,7 @@
     $('#alert2').on('click', function() {
         Swal.fire({
           title: 'Access denied',
-          text: 'Please upgrade to Premium for access it',
+          text: 'Please upgrade to platinum for access it',
           type: 'error',
           timer: 5000,
         })

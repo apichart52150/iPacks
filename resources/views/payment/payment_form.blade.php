@@ -21,19 +21,27 @@
     <div class="row">
         <div class="col-12">
             <div class="card-box">
-                <h4 class="header-title">Payment Form</h4>
+                <h4 class="header-title">Payment Form</h4> 
                 <div class="row">
                     <div class="col-12">
                         <div class="p-2">
-                            <form action="{{ route('confirm_payment') }}" id="basic-form" method="POST" class="mt-3" onsubmit="return confirm('Are you sure you want to finish?')">
+                            <form action="{{ route('paymentConfirm') }}" id="basic-form" method="POST" class="mt-3" onsubmit="return confirm('Are you sure you want to finish?')">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="id" value="{{ auth('web')->user()->id }}">
-                                <input type="hidden" name="level" value="{{ $status }}">
-                                <input type="hidden" name="status" value="paid">
+                                <input type="hidden" name="package" value="{{ $status }}">
+                                @if($status == 'gold')
+                                    <input type="hidden" name="orderRef" value="4500.00">
+                                @else
+                                    <input type="hidden" name="orderRef" value="6900.00">
+                                @endif
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label" for="simpleinput">Your Package</label>
                                     <div class="col-sm-10">
-                                        <input type="text" id="simpleinput" class="form-control" value="{{ $status }} 20,xxx ฿" disabled>
+                                        @if($status == 'gold')
+                                        <input type="text" id="simpleinput" class="form-control" name="price" value="{{ $status }} 4,500.-" disabled>
+                                        @else
+                                        <input type="text" id="simpleinput" class="form-control" name="price" value="{{ $status }} 6,900.-" disabled>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -50,12 +58,12 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Mobile</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="tel" name="mobile"  placeholder="Mobile" required>
+                                    <label class="col-sm-2 col-form-label" for="example-textare">Address</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" id="example-textarea" name="address" rows="5" spellcheck="false" placeholder="Address..." required></textarea>
                                     </div>
                                 </div>
-
+                               
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-md-10">
@@ -63,7 +71,20 @@
                                     </div>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary mt-2">Purchase</button>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Payment Type</label>
+                                    <div class="col-md-10">
+                                        <div class="custom-control custom-radio" required>
+                                            <input type="radio" id="cc" name="payMethod" value="CC" class="custom-control-input">
+                                            <label class="custom-control-label" for="cc">Cedit card</label>
+                                        </div>
+                                        <div class="custom-control custom-radio" required>
+                                            <input type="radio" id="ali" name="payMethod" value="ALI" class="custom-control-input">
+                                            <label class="custom-control-label" for="ali">Alipay</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-2">Next</button>
 
                             </form>
                         </div>

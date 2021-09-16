@@ -16,7 +16,7 @@
 						<thead>
 							<tr>
 								<th>#</th>
-								<th>STUDENT NAME</th>
+								<th>USER NAME</th>
 								<th>TOPIC</th>
 								<th>SUBMITTED</th>
 								<th>DUE DATE</th>
@@ -29,7 +29,7 @@
 								@foreach($speakings as $speaking)
 								<tr>
 									<td>{{ $i++ }}</td>
-									<td>{{ $speaking->std_name }}</td>
+									<td>{{ $speaking->username }}</td>
 									<td>{{ $speaking->topic }}</td>
 
 									<td><span class="badge badge-success p-1">{{ date('d-m-Y H:i:s', strtotime($speaking->created_at))}}</td>
