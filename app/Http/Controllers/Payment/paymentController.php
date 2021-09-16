@@ -9,25 +9,39 @@ use DB;
 class paymentController extends Controller
 {
 
-    public function form_payment(Request $request){
+    public function payment_form(Request $request){
         $status = $request->status;
-        return view('payment.home', compact('status'));
+        return view('payment.payment_form', compact('status'));
     }
 
 
-    public function payment(Request $request){
+    public function payment_confirm(Request $request){
 
-        DB::table('users')
-        ->where('id', $request->id)
-        ->update([
-            'level' => $request->level,
-            'status' => $request->status,
-            'first_name' => $request->first_name,
-            'last_name' => $request->last_name,
-            'mobile' => $request->mobile,
-            'email' => $request->email,
-        ]);
+        $input = $request->all();
 
-        return redirect('user_home');
+        $rs_u = DB::table('ktc_order')
+        ->select('*')
+        ->where('id','=', $input['id'])
+        ->orderBy('id', 'desc')
+        ->limit(1)
+        ->get();
+
+        $currentDate = date('M d, Y');
+
+        $id = $rs_u[0]->id; 
+        $id_order = sprintf("%09d",$id+1);
+
+        $data = [
+           'id' =>  $input['id'],
+           'idOrder' => $id_order,
+           'orderRef' => $input['orderRef'],
+           'currentDate' => $currentDate,
+           'package' => $input['package'],
+           'address' => $input['address'],
+
+        ];
+
+        return view('payment.payment_confirm', compact('data'));
     }
+
 }

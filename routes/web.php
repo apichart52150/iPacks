@@ -9,128 +9,127 @@
         return redirect('login');
     });
 
-Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+    Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::group(['middleware' => 'auth:web'], function () {
+    Route::group(['middleware' => 'auth:web'], function () {
 
-    Route::get('browser-settings', function () {
-        return view('student.isac.speaking.browser_settings');
-    })->name('browser-settings');
+        Route::get('browser-settings', function () {
+            return view('student.isac.speaking.browser_settings');
+        })->name('browser-settings');
 
-    Route::get('wait', function () {
-        return view('student.wait');
-    })->name('wait');
+        Route::get('wait', function () {
+            return view('student.wait');
+        })->name('wait');
 
-    Route::get('success', function () {
-        return view('student.success');
-    })->name('success');
+        Route::get('success', function () {
+            return view('student.success');
+        })->name('success');
 
-    Route::get('expire', function () {
-        return view('student.expire');
-    })->name('expire');
+        Route::get('expire', function () {
+            return view('student.expire');
+        })->name('expire');
 
-    Route::get('payment/{status}', 'payment\paymentController@form_payment')->name('payment');
-    Route::post('confirm_payment', 'payment\paymentController@payment')->name('confirm_payment');
+        Route::get('payment/{status}', 'payment\paymentController@payment_form')->name('paymentForm');
+        Route::post('payment/confirm', 'payment\paymentController@payment_confirm')->name('paymentConfirm');
 
-    Route::get('user_home', 'student\HomeController@index')->name('user_home');
+        Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
-    Route::get('isac_reading', 'student\HomeController@isac_reading')->name('isac_reading');
-    Route::get('strategies_pack', 'student\HomeController@strategies_pack')->name('strategies_pack');
-    Route::get('topic_pack', 'student\HomeController@topic_pack')->name('topic_pack');
+        Route::get('isac_reading', 'student\HomeController@isac_reading')->name('isac_reading');
+        Route::get('strategies_pack', 'student\HomeController@strategies_pack')->name('strategies_pack');
+        Route::get('topic_pack', 'student\HomeController@topic_pack')->name('topic_pack');
 
-    // sac speaking
-    Route::prefix('')->namespace('student\isac\speakingController')->group(function () {
+        // sac speaking
+        Route::prefix('')->namespace('student\isac\speakingController')->group(function () {
 
-        Route::get('isac_speaking_home', 'HomeController@index')->name('isac_speaking_home');
+            Route::get('isac_speaking_home', 'HomeController@index')->name('isac_speaking_home');
 
-        // student status
-        Route::get('status_speaking', 'HomeController@status_speaking')->name('status_speaking');
-        Route::get('status_speaking/{id?}', 'HomeController@status_speaking_topic')->name('status_speaking');
+            // student status
+            Route::get('status_speaking', 'HomeController@status_speaking')->name('status_speaking');
+            Route::get('status_speaking/{id?}', 'HomeController@status_speaking_topic')->name('status_speaking');
 
-        Route::post('insertlog', 'HomeController@insertlog');
+            Route::post('insertlog', 'HomeController@insertlog');
 
-        // Route Speaking test
-        Route::get('intro/{topic}', 'SpeakingController@intro');
-        Route::get('record/{topic}', 'SpeakingController@record');
-        Route::get('submit/{topic}', 'SpeakingController@submit');
-        Route::post('saveSound', 'SpeakingController@saveSound')->name("saveSound");
-        Route::post('update_score_course', 'SpeakingController@update_score_course')->name('update_score_course');
+            // Route Speaking test
+            Route::get('intro/{topic}', 'SpeakingController@intro');
+            Route::get('record/{topic}', 'SpeakingController@record');
+            Route::get('submit/{topic}', 'SpeakingController@submit');
+            Route::post('saveSound', 'SpeakingController@saveSound')->name("saveSound");
+            Route::post('update_score_course', 'SpeakingController@update_score_course')->name('update_score_course');
 
-    });
-
-    // sac writing
-    Route::prefix('')->namespace('student\isac\writingController')->group(function () {
-
-        Route::get('isac_writing_home', 'HomeController@index')->name('isac_writing_home');
-
-        Route::post('writing_test', 'WritingController@index')->name('writing_test');
-        Route::post('store_sac', 'WritingController@store_sac')->name('store.sac');
-
-        Route::get('status_writing', 'HomeController@status_writing')->name('status_writing');
-        Route::get('status_writing/{id?}', 'HomeController@status_topic')->name('status_writing');
-
-        Route::prefix('view')->group(function () {
-            Route::get('commented/{sacid}', 'ViewController@view_commented')->name('commented');
-            Route::get('saved/{sacid}', 'ViewController@view_saved')->name('saved');
         });
-        Route::post('store_sac_save', 'ViewController@store_sac_save')->name('store.sac-save');
-    });
 
-    Route::prefix('isac')->namespace('student\isac\listeningController')->group(function () {
-        Route::get('listening', 'HomeController@index')->name('listening');
-        Route::post('submenu', 'HomeController@submenu')->name('sub_menu');
-        Route::get('listening/{exam_type}/{exam_id}', 'HomeController@exam')->name('listening/{exam_type}/{exam_id}');
-    });
+        // sac writing
+        Route::prefix('')->namespace('student\isac\writingController')->group(function () {
 
-    Route::prefix('language')->namespace('student\isac\languageController')->group(function () {
-        Route::get('home', 'HomeController@index')->name('language_home');
-        Route::get('{topic}', 'TopicController@index');
+            Route::get('isac_writing_home', 'HomeController@index')->name('isac_writing_home');
 
-        Route::prefix('Intermediate')->group(function () {
-            Route::prefix('{sub_topic}')->group(function () {
-                Route::get('/', 'ActivityController@index');
-                Route::get('/{sub_menu_id}', 'ActivityController@exam');
+            Route::post('writing_test', 'WritingController@index')->name('writing_test');
+            Route::post('store_sac', 'WritingController@store_sac')->name('store.sac');
+
+            Route::get('status_writing', 'HomeController@status_writing')->name('status_writing');
+            Route::get('status_writing/{id?}', 'HomeController@status_topic')->name('status_writing');
+
+            Route::prefix('view')->group(function () {
+                Route::get('commented/{sacid}', 'ViewController@view_commented')->name('commented');
+                Route::get('saved/{sacid}', 'ViewController@view_saved')->name('saved');
+            });
+            Route::post('store_sac_save', 'ViewController@store_sac_save')->name('store.sac-save');
+        });
+
+        Route::prefix('isac')->namespace('student\isac\listeningController')->group(function () {
+            Route::get('listening', 'HomeController@index')->name('listening');
+            Route::post('submenu', 'HomeController@submenu')->name('sub_menu');
+            Route::get('listening/{exam_type}/{exam_id}', 'HomeController@exam')->name('listening/{exam_type}/{exam_id}');
+        });
+
+        Route::prefix('language')->namespace('student\isac\languageController')->group(function () {
+            Route::get('home', 'HomeController@index')->name('language_home');
+            Route::get('{topic}', 'TopicController@index');
+
+            Route::prefix('Intermediate')->group(function () {
+                Route::prefix('{sub_topic}')->group(function () {
+                    Route::get('/', 'ActivityController@index');
+                    Route::get('/{sub_menu_id}', 'ActivityController@exam');
+                });
+            });
+
+            Route::prefix('Advanced')->group(function () {
+                Route::prefix('{sub_topic}')->group(function () {
+                    Route::get('/', 'ActivityController@index');
+                    Route::get('/{sub_menu_id}', 'ActivityController@exam');
+                });
+            });
+
+            Route::prefix('Report')->group(function () {
+                Route::prefix('{sub_topic}')->group(function () {
+                    Route::get('/', 'ActivityController@index');
+                    Route::get('/{sub_menu_id}', 'ActivityController@exam');
+                });
+            });
+
+            Route::prefix('Essays')->group(function () {
+                Route::prefix('{sub_topic}')->group(function () {
+                    Route::get('/', 'ActivityController@index');
+                    Route::get('/{sub_menu_id}', 'ActivityController@exam');
+                });
             });
         });
-
-        Route::prefix('Advanced')->group(function () {
-            Route::prefix('{sub_topic}')->group(function () {
-                Route::get('/', 'ActivityController@index');
-                Route::get('/{sub_menu_id}', 'ActivityController@exam');
-            });
-        });
-
-        Route::prefix('Report')->group(function () {
-            Route::prefix('{sub_topic}')->group(function () {
-                Route::get('/', 'ActivityController@index');
-                Route::get('/{sub_menu_id}', 'ActivityController@exam');
-            });
-        });
-
-        Route::prefix('Essays')->group(function () {
-            Route::prefix('{sub_topic}')->group(function () {
-                Route::get('/', 'ActivityController@index');
-                Route::get('/{sub_menu_id}', 'ActivityController@exam');
-            });
-        });
-    });
-});
-
-
-// ==================== Routes Detail ==================== //
-
-    Route::get('detail/standard', function () {
-        return view('detail.standard');
     });
 
-    Route::get('detail/premium', function () {
-        return view('detail.premium');
-    });
+    // ==================== Routes Detail ==================== //
 
-// ==================== End Routes Detail ====================== //
+        Route::get('detail/standard', function () {
+            return view('detail.standard');
+        });
+
+        Route::get('detail/premium', function () {
+            return view('detail.premium');
+        });
+
+    // ==================== End Routes Detail ====================== //
 
 
-// ==================== End Rou tes User ====================== //
+// ==================== End Routes User ====================== //
 
 
 
@@ -230,5 +229,4 @@ Route::group(['middleware' => 'auth:web'], function () {
             Route::get('delete_writing/{id}', 'ReportController@delete_topic')->name('delete_writing.pending');
         });
     });
-
 // ==================== End Routes Admin ====================== //
