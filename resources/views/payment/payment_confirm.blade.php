@@ -149,14 +149,14 @@
                 			    <input type="hidden" name="orderRef" value="{{ $data['orderRef'] }}">
                 			    <input type="hidden" name="currCode" value="764" >
                                 <input type="hidden" name="amount" value="{{ $data['amount'] }}">
-                                <input type="hidden" name="successUrl" value="http://localhost/ipack/payment/success">
-                                <input type="hidden" name="failUrl" value="http://localhost/ipack/payment/fail">
+                                <input type="hidden" name="successUrl" value="{{ route('success')}}">
+                                <input type="hidden" name="failUrl" value="{{ route('fail')}}">
                                 <input type="hidden" name="cancelUrl" value="http://localhost/ipack/success">
                                 <input type="hidden" name="payType" value="N">
                                 <input type="hidden" name="lang" value="E">
                                 <input type="hidden" name="TxType" value="Retail" > 
                                 <input type="submit" class="btn btn-success waves-effect waves-light" name="submit" value="Confirm">     
-                                <a href="http://localhost/ipack/success">
+                                <a href="{{ route('success')}}">
                                     <input type="button" class="btn btn-danger waves-effect waves-light" name="submit" value="Cancel">
                                 </a>
                             </form>
