@@ -177,7 +177,7 @@ $Q1_10->e16->aw = "1 hour/one hour";
                                                 <tr>
                                                     <td></td>
                                                     <td>
-                                                        <span class="aw text-danger show_aw_Q1_10-{{$index}}">{{$Q1_10->aw}}</span>
+                                                        
                                                     </td>
                                                 </tr>
                                                 @endforeach
@@ -226,7 +226,8 @@ $Q1_10->e16->aw = "1 hour/one hour";
         let text = $(item).html()
         let input = '<div class="input-con py-1">' +
             '<input class="q-val form-control" show-aw="' + $(item).attr('show-aw') + '" aw="' + $(item).attr('aw') + '">' +
-            '</div>'
+            '</div>'+
+            '<span class="aw text-danger px-1 ' + $(item).attr('show-aw') + '">' + $(item).attr('aw') + '</span>'
         text = text.replace("___", input)
         $(item).html(text)
     })

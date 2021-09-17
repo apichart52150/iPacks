@@ -45,14 +45,14 @@ $Q_1->e6->q = "The meat is too tough to eat.";
 $Q_1->e7->q = "The case is too big to fit in the boot.";
 $Q_1->e8->q = "The sea is too rough to go swimming.";
 
-$Q_1->e1->aw = "The blanket isn't big enough to cover the bed";
-$Q_1->e2->aw = "Your car isn't fast enough to win the race";
-$Q_1->e3->aw = "The problem isn't easy enough to work out without a calculator";
-$Q_1->e4->aw = "He isn't thin enough to get through the gate";
-$Q_1->e5->aw = "The book isn't interesting enough for me to finish";
-$Q_1->e6->aw = "The meat isn't tender enough to eat";
-$Q_1->e7->aw = "The case isn't small enough to fit in the boot";
-$Q_1->e8->aw = "The sea isn't calm enough to go swimming";
+$Q_1->e1->aw = "The blanket isn't big enough to cover the bed.";
+$Q_1->e2->aw = "Your car isn't fast enough to win the race.";
+$Q_1->e3->aw = "The problem isn't easy enough to work out without a calculator.";
+$Q_1->e4->aw = "He isn't thin enough to get through the gate.";
+$Q_1->e5->aw = "The book isn't interesting enough for me to finish.";
+$Q_1->e6->aw = "The meat isn't tender enough to eat.";
+$Q_1->e7->aw = "The case isn't small enough to fit in the boot.";
+$Q_1->e8->aw = "The sea isn't calm enough to go swimming.";
 
 $Q_1->e1->aw2  = "(big)";
 $Q_1->e2->aw2  = "(fast)";

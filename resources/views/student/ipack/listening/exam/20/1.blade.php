@@ -47,16 +47,16 @@ $Q1_10->e8->q = "The road was slippery so the car skidded.";
 $Q1_10->e9->q = "I didn't know the answers so I didn't pass the test.";
 $Q1_10->e10->q = "His handwriting was untidy so I couldn't read the address.";
 
-$Q1_10->e1->aw = "If Peter hadn't driven carelessly, he wouldn't have had an accident";
-$Q1_10->e2->aw = "If Carol had taken an umbrella with her, she wouldn't have got wet";
-$Q1_10->e3->aw = "If you had taken a compass, you wouldn't have got lost";
-$Q1_10->e4->aw = "If we had had enough money, we could've bought the book";
-$Q1_10->e5->aw = "If Richard hadn't got up late, he could've eaten breakfast";
-$Q1_10->e6->aw = "If the dog hadn't barked loudly, the burglar wouldn't have run away";
-$Q1_10->e7->aw = "If the door hadn't been open, the bird wouldn't have escaped";
-$Q1_10->e8->aw = "If the road hadn't been slippery, the car wouldn't have skidded";
-$Q1_10->e9->aw = "If I had known the answers, I would've passed the test";
-$Q1_10->e10->aw = "If his handwriting hadn't been untidy, I could've read the address";
+$Q1_10->e1->aw = "If Peter hadn't driven carelessly, he wouldn't have had an accident.";
+$Q1_10->e2->aw = "If Carol had taken an umbrella with her, she wouldn't have got wet.";
+$Q1_10->e3->aw = "If you had taken a compass, you wouldn't have got lost.";
+$Q1_10->e4->aw = "If we had had enough money, we could've bought the book.";
+$Q1_10->e5->aw = "If Richard hadn't got up late, he could've eaten breakfast.";
+$Q1_10->e6->aw = "If the dog hadn't barked loudly, the burglar wouldn't have run away.";
+$Q1_10->e7->aw = "If the door hadn't been open, the bird wouldn't have escaped.";
+$Q1_10->e8->aw = "If the road hadn't been slippery, the car wouldn't have skidded.";
+$Q1_10->e9->aw = "If I had known the answers, I would've passed the test.";
+$Q1_10->e10->aw = "If his handwriting hadn't been untidy, I could've read the address.";
 
 @endphp
 

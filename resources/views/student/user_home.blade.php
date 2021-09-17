@@ -18,6 +18,7 @@
 @endsection
 
 @section('content')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .hover-scale i.fas {
             transform: scale(1);
@@ -399,6 +400,32 @@
             </div><!-- end col -->
         </div>
     @endif
+    <div class="row my-3 text-white">
+        <div id="guide-book" class="col-md-2">
+            <button class="btn btn-primary w-100">
+                <i class="fas fa-book"></i>
+                Guide Book
+            </button>
+        </div>
+        <div class="col-md-2">
+            <button id="inbox-mail" class="btn btn-primary w-100">
+                <i class="far fa-envelope"></i>
+                 Email
+            </button>
+        </div>
+        <div class="col-md-2">
+            <button id="inbox-facebook" class="btn btn-primary w-100">
+                <i class="fab fa-facebook-square"></i>
+                 Facebook
+            </button>
+        </div>
+        <div class="col-md-2">
+            <button id="inbox-line" class="btn btn-primary w-100">
+                <i class="fab fa-line"></i>
+                 Line
+            </button>
+        </div>
+    </div>
 @endsection
 
 @section('js')

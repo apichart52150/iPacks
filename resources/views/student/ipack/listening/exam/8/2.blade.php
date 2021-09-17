@@ -153,11 +153,11 @@ $E2_1_5->e3->q = "Why are senior police officers happy with the private guards?"
 $E2_1_5->e4->q = "What are senior police officers worried about? (two things)";
 $E2_1_5->e5->q = "Do private guards carry guns?";
 
-$E2_1_5->e1->aw = "They drive or walk, usually in pairs and sometimes with a dog";
+$E2_1_5->e1->aw = "They drive or walk, usually in pairs and sometimes with a dog.";
 $E2_1_5->e2->aw = "Up to 90% decrease in crime";
-$E2_1_5->e3->aw = "They welcome a decrease in the amount of crime";
-$E2_1_5->e4->aw = "First, something may go seriously wrong; second, people could start to think the private guards are doing a better job than the city police";
-$E2_1_5->e5->aw = "Yes, some of them do";
+$E2_1_5->e3->aw = "They welcome a decrease in the amount of crime.";
+$E2_1_5->e4->aw = "First, something may go seriously wrong; second, people could start to think the private guards are doing a better job than the city police.";
+$E2_1_5->e5->aw = "Yes, some of them do.";
 
 @endphp
 <div class="row">

@@ -65,10 +65,10 @@ $caller_1->e2->q = "Although this holistic approach to designing a house and blo
 $caller_1->e3->q = "When the land-use map has been drawn, the next step is to show the directions of the prevailing winds for both summer";
 $caller_1->e4->q = "It is the east and west sides of a house which need shading the most, especially when the angle of the sun is low in the early morning";
 
-$caller_1->e1->aw = "BUT ALSO IN THE WINTER MONTHS, WHEN THE WINDS CAN BE VERY COLD";
-$caller_1->e2->aw = "IT IS ALSO EFFECTIVE IN PLANNING ESTABLISHED HOMES";
-$caller_1->e3->aw = "AND WINTER";
-$caller_1->e4->aw = "AND IN THE LATE AFTERNOON";
+$caller_1->e1->aw = "BUT ALSO IN THE WINTER MONTHS, WHEN THE WINDS CAN BE VERY COLD.";
+$caller_1->e2->aw = "IT IS ALSO EFFECTIVE IN PLANNING ESTABLISHED HOMES.";
+$caller_1->e3->aw = "AND WINTER.";
+$caller_1->e4->aw = "AND IN THE LATE AFTERNOON.";
 
 @endphp
 <div class="row">

@@ -52,16 +52,16 @@ $Q_1->e8->q = "We haven't visited our relatives in Melbourne for months.";
 $Q_1->e9->q = "You haven't smoked a cigarette for six months.";
 $Q_1->e10->q = "She hasn't seen her children for nearly a year.";
 
-$Q_1->e1->aw = "It's ages since she last watered the plants";
-$Q_1->e2->aw = "It's weeks since you last washed the car";
-$Q_1->e3->aw = "It's months since we last ate curry";
-$Q_1->e4->aw = "It's ages since Bob last came to see us";
-$Q_1->e5->aw = "It's almost two years since we last went to the cinema";
-$Q_1->e6->aw = "It's ages since Carol last played netball";
-$Q_1->e7->aw = "It's years since David last paid income tax";
-$Q_1->e8->aw = "It's months since we last visited our relatives in Melbourne";
-$Q_1->e9->aw = "It's six months since you last smoked a cigarette";
-$Q_1->e10->aw = "It's nearly a year since she last saw her children";
+$Q_1->e1->aw = "It's ages since she last watered the plants.";
+$Q_1->e2->aw = "It's weeks since you last washed the car.";
+$Q_1->e3->aw = "It's months since we last ate curry.";
+$Q_1->e4->aw = "It's ages since Bob last came to see us.";
+$Q_1->e5->aw = "It's almost two years since we last went to the cinema.";
+$Q_1->e6->aw = "It's ages since Carol last played netball.";
+$Q_1->e7->aw = "It's years since David last paid income tax.";
+$Q_1->e8->aw = "It's months since we last visited our relatives in Melbourne.";
+$Q_1->e9->aw = "It's six months since you last smoked a cigarette.";
+$Q_1->e10->aw = "It's nearly a year since she last saw her children.";
 
 $Q_2 = new stdClass();
 $Q_2->e1 = new stdClass();
@@ -97,16 +97,16 @@ $Q_2->e8->q = "It's ages since we had our last meal out.";
 $Q_2->e9->q = "It's almost a year since he had his last drink.";
 $Q_2->e10->q = "It's a long time since they had their last holiday.";
 
-$Q_2->e1->aw = "She hasn't had a cigarette for months";
-$Q_2->e2->aw = "He hasn't had an eye-test for years";
-$Q_2->e3->aw = "You haven't had a tetanus injection for ages";
-$Q_2->e4->aw = "I haven't had a nightmare for a long time";
-$Q_2->e5->aw = "She hasn't had an interview for weeks";
-$Q_2->e6->aw = "He hasn't had a check-up for years";
-$Q_2->e7->aw = "My car hasn't had a service for months";
-$Q_2->e8->aw = "We haven't had a meal out for ages";
-$Q_2->e9->aw = "He hasn't had a drink for almost a year";
-$Q_2->e10->aw = "They haven't had a holiday for a long time";
+$Q_2->e1->aw = "She hasn't had a cigarette for months.";
+$Q_2->e2->aw = "He hasn't had an eye-test for years.";
+$Q_2->e3->aw = "You haven't had a tetanus injection for ages.";
+$Q_2->e4->aw = "I haven't had a nightmare for a long time.";
+$Q_2->e5->aw = "She hasn't had an interview for weeks.";
+$Q_2->e6->aw = "He hasn't had a check-up for years.";
+$Q_2->e7->aw = "My car hasn't had a service for months.";
+$Q_2->e8->aw = "We haven't had a meal out for ages.";
+$Q_2->e9->aw = "He hasn't had a drink for almost a year.";
+$Q_2->e10->aw = "They haven't had a holiday for a long time.";
 
 @endphp
 

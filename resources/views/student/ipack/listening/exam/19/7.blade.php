@@ -52,16 +52,16 @@ $Q_1->e8->q = "The woman cheated during the examination. The examiner saw her.";
 $Q_1->e9->q = "The truck slid down the hill. The anxious driver watched it.";
 $Q_1->e10->q = "The snake bit the dog. The farmer saw it.";
 
-$Q_1->e1->aw = "The policeman saw the boy break the window";
-$Q_1->e2->aw = "The neighbour saw the thief enter the house through the window";
-$Q_1->e3->aw = "The whole town heard the people cheer when their team scored";
-$Q_1->e4->aw = "Nobody saw the convict escape from the prison";
-$Q_1->e5->aw = "The spectators watched the swimmer break the world record";
-$Q_1->e6->aw = "The students heard the bell ring";
-$Q_1->e7->aw = "The supporters watched Gary Ablett kick ten goals";
-$Q_1->e8->aw = "The examiner saw the woman cheat during the examination";
-$Q_1->e9->aw = "The anxious driver watched the truck slide down the hill";
-$Q_1->e10->aw = "The farmer saw the snake bite the dog";
+$Q_1->e1->aw = "The policeman saw the boy break the window.";
+$Q_1->e2->aw = "The neighbour saw the thief enter the house through the window.";
+$Q_1->e3->aw = "The whole town heard the people cheer when their team scored.";
+$Q_1->e4->aw = "Nobody saw the convict escape from the prison.";
+$Q_1->e5->aw = "The spectators watched the swimmer break the world record.";
+$Q_1->e6->aw = "The students heard the bell ring.";
+$Q_1->e7->aw = "The supporters watched Gary Ablett kick ten goals.";
+$Q_1->e8->aw = "The examiner saw the woman cheat during the examination.";
+$Q_1->e9->aw = "The anxious driver watched the truck slide down the hill.";
+$Q_1->e10->aw = "The farmer saw the snake bite the dog.";
 
 $Q_2 = new stdClass();
 $Q_2->e1 = new stdClass();
@@ -97,16 +97,16 @@ $Q_2->e8->q = "The flood water was rising. The nervous residents watched it.";
 $Q_2->e9->q = "The suspect was carrying a sack. The police observed this.";
 $Q_2->e10->q = "I was trying to put out the fire. My friends saw me.";
 
-$Q_2->e1->aw = "You could smell the soup burning";
-$Q_2->e2->aw = "The police officer heard the girl screaming for help";
-$Q_2->e3->aw = "Nobody noticed the rain leaking through a hole in the roof";
-$Q_2->e4->aw = "We saw the plane falling towards the ground";
-$Q_2->e5->aw = "The weather bureau watched the cyclone approaching the coast";
-$Q_2->e6->aw = "The rescuers noticed smoke pouring out of the house";
-$Q_2->e7->aw = "Nobody heard the phone ringing";
-$Q_2->e8->aw = "The nervous residents watched the flood water rising";
-$Q_2->e9->aw = "The police observed the suspect carrying a sack";
-$Q_2->e10->aw = "My friends saw me trying to put out the fire";
+$Q_2->e1->aw = "You could smell the soup burning.";
+$Q_2->e2->aw = "The police officer heard the girl screaming for help.";
+$Q_2->e3->aw = "Nobody noticed the rain leaking through a hole in the roof.";
+$Q_2->e4->aw = "We saw the plane falling towards the ground.";
+$Q_2->e5->aw = "The weather bureau watched the cyclone approaching the coast.";
+$Q_2->e6->aw = "The rescuers noticed smoke pouring out of the house.";
+$Q_2->e7->aw = "Nobody heard the phone ringing.";
+$Q_2->e8->aw = "The nervous residents watched the flood water rising.";
+$Q_2->e9->aw = "The police observed the suspect carrying a sack.";
+$Q_2->e10->aw = "My friends saw me trying to put out the fire.";
 
 @endphp
 

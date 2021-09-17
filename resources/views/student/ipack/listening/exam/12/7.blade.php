@@ -156,7 +156,7 @@ $E2_1_5->e1->aw = "Asia, New Guinea, Australia, America and Africa";
 $E2_1_5->e2->aw = "snake, lizard, crocodile";
 $E2_1_5->e3->aw = "as long as five hours";
 $E2_1_5->e4->aw = "between forty and sixty";
-$E2_1_5->e5->aw = "People hunt them for their skins";
+$E2_1_5->e5->aw = "People hunt them for their skins.";
 
 @endphp
 <div class="row">

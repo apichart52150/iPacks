@@ -98,16 +98,16 @@ $question = [
 @section('js')
 <script>
     const selectAnswer = [
-            "Give me another cake like this one, please", 
-            "Give me another bag", 
-            "Give me another 2 kilos of rice", 
-            "Give me another ten minutes, please", 
-            "Give me another shirt", 
-            "Give me another 30 dollars a week or I'll find another job", 
-            "Give me another biscuit, please", 
-            "Don't give me another pie like this one", 
-            "Give me another plug", 
-            "Give me another chance, please",
+            "Give me another cake like this one, please.", 
+            "Give me another bag.", 
+            "Give me another 2 kilos of rice.", 
+            "Give me another ten minutes, please.", 
+            "Give me another shirt.", 
+            "Give me another 30 dollars a week or I'll find another job.", 
+            "Give me another biscuit, please.", 
+            "Don't give me another pie like this one.", 
+            "Give me another plug.", 
+            "Give me another chance, please.",
         ];
 
         $('#check-answer').on('click', () => {

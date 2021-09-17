@@ -154,7 +154,7 @@ $E2_1_5->e5->q = "Why did people buy rafflesias at the market?";
 
 $E2_1_5->e1->aw = "up to one metre across";
 $E2_1_5->e2->aw = "only in Indonesia, the Philippines and Malaysia";
-$E2_1_5->e3->aw = "They take everything they need from other plants";
+$E2_1_5->e3->aw = "They take everything they need from other plants.";
 $E2_1_5->e4->aw = "one week";
 $E2_1_5->e5->aw = "to make a special medicine";
 

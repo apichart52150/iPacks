@@ -152,7 +152,7 @@ $E2_1_5->e3->q = "When does it hunt for food?";
 $E2_1_5->e4->q = "How far can it jump at one time?";
 $E2_1_5->e5->q = "Where does it live?";
 
-$E2_1_5->e1->aw = "It can be more than thirty centimeters long";
+$E2_1_5->e1->aw = "It can be more than thirty centimeters long.";
 $E2_1_5->e2->aw = "only around one hundred and twenty grams";
 $E2_1_5->e3->aw = "at night";
 $E2_1_5->e4->aw = "almost three metres";

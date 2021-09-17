@@ -262,14 +262,14 @@
         ];
 
         const selectAnswer2 = [
-            "No, there aren't many people at the party at all", 
-            "No, there aren't many eggs in the basket at all", 
-            "No, there isn't much coffee in the jar at all", 
-            "No, there aren't many books to read at all", 
-            "No, there isn't much wood on the fire at all", 
-            "No, there isn't much paper in the printer at all", 
-            "No, there aren't many animals in the zoo at all", 
-            "No, there isn't much petrol in the tank at all", 
+            "No, there aren't many people at the party at all.", 
+            "No, there aren't many eggs in the basket at all.", 
+            "No, there isn't much coffee in the jar at all.", 
+            "No, there aren't many books to read at all.", 
+            "No, there isn't much wood on the fire at all.", 
+            "No, there isn't much paper in the printer at all.", 
+            "No, there aren't many animals in the zoo at all.", 
+            "No, there isn't much petrol in the tank at all.", 
         ];
 
         const selectAnswer3 = [

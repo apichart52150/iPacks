@@ -154,9 +154,9 @@ $E2_1_5->e5->q = "What do big cats do to show friendship?";
 
 $E2_1_5->e1->aw = "their senses";
 $E2_1_5->e2->aw = "whales";
-$E2_1_5->e3->aw = "They show their teeth";
-$E2_1_5->e4->aw = "It raises its eyes";
-$E2_1_5->e5->aw = "They hold their face close to each other";
+$E2_1_5->e3->aw = "They show their teeth.";
+$E2_1_5->e4->aw = "It raises its eyes.";
+$E2_1_5->e5->aw = "They hold their face close to each other.";
 
 @endphp
 <div class="row">

@@ -52,16 +52,16 @@ $Q_1->e8->q = "She reads more books than I do.";
 $Q_1->e9->q = "You drive more carefully than I do.";
 $Q_1->e10->q = "She can swim further than I can.";
 
-$Q_1->e1->aw = "Your car isn't as fast as mine";
-$Q_1->e2->aw = "Simon isn't as tall as John";
-$Q_1->e3->aw = "That suitcase isn't as heavy as this one";
-$Q_1->e4->aw = "Silver isn't as valuable as gold";
-$Q_1->e5->aw = "The Amazon isn't as long as the Nile";
-$Q_1->e6->aw = "I am not as good at tennis as you are";
-$Q_1->e7->aw = "I don't know as much about cars as he does";
-$Q_1->e8->aw = "I don't read as many books as she does";
-$Q_1->e9->aw = "I don't drive as carefully as you do";
-$Q_1->e10->aw = "I can't swim as far as she can";
+$Q_1->e1->aw = "Your car isn't as fast as mine.";
+$Q_1->e2->aw = "Simon isn't as tall as John.";
+$Q_1->e3->aw = "That suitcase isn't as heavy as this one.";
+$Q_1->e4->aw = "Silver isn't as valuable as gold.";
+$Q_1->e5->aw = "The Amazon isn't as long as the Nile.";
+$Q_1->e6->aw = "I am not as good at tennis as you are.";
+$Q_1->e7->aw = "I don't know as much about cars as he does.";
+$Q_1->e8->aw = "I don't read as many books as she does.";
+$Q_1->e9->aw = "I don't drive as carefully as you do.";
+$Q_1->e10->aw = "I can't swim as far as she can.";
 
 $Q_2 = new stdClass();
 $Q_2->e1 = new stdClass();

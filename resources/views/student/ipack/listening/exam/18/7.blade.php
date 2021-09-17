@@ -187,29 +187,29 @@
     <script>
 
         const selectAnswer1 = [
-            "If you light the fuse, the bomb will explode", 
-            "If the car breaks down again, I'll sell it", 
-            "If the government wins the election, it will raise taxes", 
-            "If I lose my job, I'll move to Sydney", 
-            "If the ship hits the rocks, it will sink to the bottom", 
-            "If the ship sinks, I'll swim to the shore", 
-            "If the Eagles win the Flag, I'll celebrate", 
-            "If the mortgage rate goes up, I'll sell the house", 
-            "If there is a power cut, the lights will go out", 
-            "If the lights go out, I'll find a candle",
+            "If you light the fuse, the bomb will explode.", 
+            "If the car breaks down again, I'll sell it.", 
+            "If the government wins the election, it will raise taxes.", 
+            "If I lose my job, I'll move to Sydney.", 
+            "If the ship hits the rocks, it will sink to the bottom.", 
+            "If the ship sinks, I'll swim to the shore.", 
+            "If the Eagles win the Flag, I'll celebrate.", 
+            "If the mortgage rate goes up, I'll sell the house.", 
+            "If there is a power cut, the lights will go out.", 
+            "If the lights go out, I'll find a candle.",
         ];
 
         const selectAnswer2 = [
-            "We'll call off the barbie unless the weather improves", 
-            "Unless we hear from you, we'll assume the party is cancelled", 
-            "Unless you turn the music down, you'll never hear the phone", 
-            "They'll miss the bus unless they get a move on", 
-            "He won't get the job unless he gets a haircut", 
-            "I'll finish the work tonight unless there's a power cut", 
-            "Unless the car breaks down, we'll arrive in Perth by midnight", 
-            "Unless we get some rain soon, the plants will all die", 
-            "Unless we set off soon, we'll never arrive on time", 
-            "I'll never be rich unless I win Lotto",
+            "We'll call off the barbie unless the weather improves.", 
+            "Unless we hear from you, we'll assume the party is cancelled.", 
+            "Unless you turn the music down, you'll never hear the phone.", 
+            "They'll miss the bus unless they get a move on.", 
+            "He won't get the job unless he gets a haircut.", 
+            "I'll finish the work tonight unless there's a power cut.", 
+            "Unless the car breaks down, we'll arrive in Perth by midnight.", 
+            "Unless we get some rain soon, the plants will all die.", 
+            "Unless we set off soon, we'll never arrive on time.", 
+            "I'll never be rich unless I win Lotto.",
         ];
 
         $('#check-answer1').on('click', () => {

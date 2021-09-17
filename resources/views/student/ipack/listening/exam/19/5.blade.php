@@ -57,16 +57,16 @@ $Q_1->e8->q = "They've never owned their own home before.";
 $Q_1->e9->q = "I've never tried fish-heads before.";
 $Q_1->e10->q = "He's never been fishing at night before.";
 
-$Q_1->e1->aw = "This is the first time I've ever travelled by air";
-$Q_1->e2->aw = "This is the first time she's ever tasted squid";
-$Q_1->e3->aw = "This is the first time he's ever been to China";
-$Q_1->e4->aw = "This is the first time they've ever drunk red wine";
-$Q_1->e5->aw = "This is the first time I've ever driven a Rolls-Royce";
-$Q_1->e6->aw = "This is the first time she's ever considered leaving home";
-$Q_1->e7->aw = "This is the first time I've ever heard that one";
-$Q_1->e8->aw = "This is the first time they've ever owned their own home";
-$Q_1->e9->aw = "This is the first time I've ever tried fish-heads";
-$Q_1->e10->aw = "This is the first time he's ever been fishing at night";
+$Q_1->e1->aw = "This is the first time I've ever travelled by air.";
+$Q_1->e2->aw = "This is the first time she's ever tasted squid.";
+$Q_1->e3->aw = "This is the first time he's ever been to China.";
+$Q_1->e4->aw = "This is the first time they've ever drunk red wine.";
+$Q_1->e5->aw = "This is the first time I've ever driven a Rolls-Royce.";
+$Q_1->e6->aw = "This is the first time she's ever considered leaving home.";
+$Q_1->e7->aw = "This is the first time I've ever heard that one.";
+$Q_1->e8->aw = "This is the first time they've ever owned their own home.";
+$Q_1->e9->aw = "This is the first time I've ever tried fish-heads.";
+$Q_1->e10->aw = "This is the first time he's ever been fishing at night.";
 
 $Q_2 = new stdClass();
 $Q_2->e1 = new stdClass();
@@ -113,16 +113,16 @@ $Q_2->e8->q2 = "(3 days ago)";
 $Q_2->e9->q2 = "(last year)";
 $Q_2->e10->q2 = "(5 years ago)";
 
-$Q_2->e1->aw = "Yes, I have. I ate sushi last week";
-$Q_2->e2->aw = "Yes, I have. I met Paul Keating at the meeting";
-$Q_2->e3->aw = "Yes, I have. I went wind-surfing last weekend";
-$Q_2->e4->aw = "Yes, I have. I travelled by hovercraft in 1980";
-$Q_2->e5->aw = "Yes, I have. I climbed Mt Everest in 1992";
-$Q_2->e6->aw = "Yes, I have. I played squash last month";
-$Q_2->e7->aw = "Yes, I have. I swam with a whale last summer";
-$Q_2->e8->aw = "Yes, I have. I caught a shark 3 days ago";
-$Q_2->e9->aw = "Yes, I have. I camped on the beach last year";
-$Q_2->e10->aw = "Yes, I have. I read 'War and Peace' 5 years ago";
+$Q_2->e1->aw = "Yes, I have. I ate sushi last week.";
+$Q_2->e2->aw = "Yes, I have. I met Paul Keating at the meeting.";
+$Q_2->e3->aw = "Yes, I have. I went wind-surfing last weekend.";
+$Q_2->e4->aw = "Yes, I have. I travelled by hovercraft in 1980.";
+$Q_2->e5->aw = "Yes, I have. I climbed Mt Everest in 1992.";
+$Q_2->e6->aw = "Yes, I have. I played squash last month.";
+$Q_2->e7->aw = "Yes, I have. I swam with a whale last summer.";
+$Q_2->e8->aw = "Yes, I have. I caught a shark 3 days ago.";
+$Q_2->e9->aw = "Yes, I have. I camped on the beach last year.";
+$Q_2->e10->aw = "Yes, I have. I read 'War and Peace' 5 years ago.";
 
 $Q_3 = new stdClass();
 $Q_3->e1 = new stdClass();
@@ -158,16 +158,16 @@ $Q_3->e8->q = "Have you checked the mailbox yet? (√) ";
 $Q_3->e9->q = "Has the teacher marked the essays yet? (X)";
 $Q_3->e10->q = "Have you heard the news yet? (√) ";
 
-$Q_3->e1->aw = "Yes, he's already read the newspaper";
-$Q_3->e2->aw = "Yes, I've already finished the book";
-$Q_3->e3->aw = "No, she hasn't arrived yet";
-$Q_3->e4->aw = "Yes, they've already left";
-$Q_3->e5->aw = "No, it hasn't woken up yet";
-$Q_3->e6->aw = "No, I haven't decided yet";
-$Q_3->e7->aw = "No, they haven't tidied their room yet";
-$Q_3->e8->aw = "Yes, I've already checked the mailbox";
-$Q_3->e9->aw = "No, she hasn't marked the essays yet";
-$Q_3->e10->aw = "Yes, I've already heard the news";
+$Q_3->e1->aw = "Yes, he's already read the newspaper.";
+$Q_3->e2->aw = "Yes, I've already finished the book.";
+$Q_3->e3->aw = "No, she hasn't arrived yet.";
+$Q_3->e4->aw = "Yes, they've already left.";
+$Q_3->e5->aw = "No, it hasn't woken up yet.";
+$Q_3->e6->aw = "No, I haven't decided yet.";
+$Q_3->e7->aw = "No, they haven't tidied their room yet.";
+$Q_3->e8->aw = "Yes, I've already checked the mailbox.";
+$Q_3->e9->aw = "No, she hasn't marked the essays yet.";
+$Q_3->e10->aw = "Yes, I've already heard the news.";
 
 @endphp
 

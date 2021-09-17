@@ -50,16 +50,16 @@ $Q1_10->e8->q = "She's always losing her key.";
 $Q1_10->e9->q = "You're always leaving the door open.";
 $Q1_10->e10->q = "They're always watching video.";
 
-$Q1_10->e1->aw = "I wish she wouldn't nag her children so often";
-$Q1_10->e2->aw = "I wish you wouldn't change your mind so often";
-$Q1_10->e3->aw = "I wish he wouldn't complain about the food so often";
-$Q1_10->e4->aw = "I wish they wouldn't play loud music so often";
-$Q1_10->e5->aw = "I wish the kids wouldn't phone their friends so often";
-$Q1_10->e6->aw = "I wish you wouldn't use my toothbrush so often";
-$Q1_10->e7->aw = "I wish he wouldn't borrow other people's things so often";
-$Q1_10->e8->aw = "I wish she wouldn't lose her key so often";
-$Q1_10->e9->aw = "I wish you wouldn't leave the door open so often";
-$Q1_10->e10->aw = "I wish they wouldn't watch video so often";
+$Q1_10->e1->aw = "I wish she wouldn't nag her children so often.";
+$Q1_10->e2->aw = "I wish you wouldn't change your mind so often.";
+$Q1_10->e3->aw = "I wish he wouldn't complain about the food so often.";
+$Q1_10->e4->aw = "I wish they wouldn't play loud music so often.";
+$Q1_10->e5->aw = "I wish the kids wouldn't phone their friends so often.";
+$Q1_10->e6->aw = "I wish you wouldn't use my toothbrush so often.";
+$Q1_10->e7->aw = "I wish he wouldn't borrow other people's things so often.";
+$Q1_10->e8->aw = "I wish she wouldn't lose her key so often.";
+$Q1_10->e9->aw = "I wish you wouldn't leave the door open so often.";
+$Q1_10->e10->aw = "I wish they wouldn't watch video so often.";
 
 $Q11_20 = new stdClass();
 $Q11_20->e1 = new stdClass();
@@ -95,16 +95,16 @@ $Q11_20->e8->q = "They never arrive on time.";
 $Q11_20->e9->q = "My husband never tells me how beautiful I am.";
 $Q11_20->e10->q = "You never buy me flowers.";
 
-$Q11_20->e1->aw = "I wish you would wash your hands before eating";
-$Q11_20->e2->aw = "I wish he would tidy up his own room";
-$Q11_20->e3->aw = "I wish she would remember to bring a towel with her";
-$Q11_20->e4->aw = "I wish they would hand in their work on time";
-$Q11_20->e5->aw = "I wish you would lock up before going to bed";
-$Q11_20->e6->aw = "I wish he would answer my letters";
-$Q11_20->e7->aw = "I wish she would indicate before turning right";
-$Q11_20->e8->aw = "I wish they would arrive on time";
-$Q11_20->e9->aw = "I wish my husband would tell me how beautiful I am";
-$Q11_20->e10->aw = "I wish you would buy me flowers";
+$Q11_20->e1->aw = "I wish you would wash your hands before eating.";
+$Q11_20->e2->aw = "I wish he would tidy up his own room.";
+$Q11_20->e3->aw = "I wish she would remember to bring a towel with her.";
+$Q11_20->e4->aw = "I wish they would hand in their work on time.";
+$Q11_20->e5->aw = "I wish you would lock up before going to bed.";
+$Q11_20->e6->aw = "I wish he would answer my letters.";
+$Q11_20->e7->aw = "I wish she would indicate before turning right.";
+$Q11_20->e8->aw = "I wish they would arrive on time.";
+$Q11_20->e9->aw = "I wish my husband would tell me how beautiful I am.";
+$Q11_20->e10->aw = "I wish you would buy me flowers.";
 
 
 $Q21_30 = new stdClass();
@@ -141,16 +141,16 @@ $Q21_30->e8->q = "Brenda drives an old, worn-out car.";
 $Q21_30->e9->q = "I'm not as confident as you are but I'd like to be.";
 $Q21_30->e10->q = "You have to leave soon but I don't want you to.";
 
-$Q21_30->e1->aw = "Sophie wishes she had a lot of money";
-$Q21_30->e2->aw = "I wish I could swim";
-$Q21_30->e3->aw = "Fred wishes he spoke Japanese";
-$Q21_30->e4->aw = "Damien wishes he didn't have a lot of spots on his face";
-$Q21_30->e5->aw = "Paul wishes he were rich";
-$Q21_30->e6->aw = "The girls wish they could go swimming";
-$Q21_30->e7->aw = "I wish I knew the answer";
-$Q21_30->e8->aw = "Brenda wishes she didn't drive an old, worn-out car";
-$Q21_30->e9->aw = "I wish I were as confident as you are";
-$Q21_30->e10->aw = "I wish you didn't have to leave soon";
+$Q21_30->e1->aw = "Sophie wishes she had a lot of money.";
+$Q21_30->e2->aw = "I wish I could swim.";
+$Q21_30->e3->aw = "Fred wishes he spoke Japanese.";
+$Q21_30->e4->aw = "Damien wishes he didn't have a lot of spots on his face.";
+$Q21_30->e5->aw = "Paul wishes he were rich.";
+$Q21_30->e6->aw = "The girls wish they could go swimming.";
+$Q21_30->e7->aw = "I wish I knew the answer.";
+$Q21_30->e8->aw = "Brenda wishes she didn't drive an old, worn-out car.";
+$Q21_30->e9->aw = "I wish I were as confident as you are.";
+$Q21_30->e10->aw = "I wish you didn't have to leave soon.";
 
 $Q31_40 = new stdClass();
 $Q31_40->e1 = new stdClass();
@@ -186,16 +186,16 @@ $Q31_40->e8->q = "Anna didn't have breakfast and regrets it now.";
 $Q31_40->e9->q = "John majored in politics and regrets it now.";
 $Q31_40->e10->q = "Paul didn't take his parents' advice and regrets it now.";
 
-$Q31_40->e1->aw = "Karen wishes she had applied for the job";
-$Q31_40->e2->aw = "I wish I had taken the man's phone number";
-$Q31_40->e3->aw = "She wishes she hadn't chosen heads";
-$Q31_40->e4->aw = "He wishes he hadn't joined the army";
-$Q31_40->e5->aw = "She wishes she hadn't married John";
-$Q31_40->e6->aw = "They wish they had gone to Singapore for a holiday";
-$Q31_40->e7->aw = "Simon wishes he hadn't finished off the bottle";
-$Q31_40->e8->aw = "Anna wishes she had had breakfast";
-$Q31_40->e9->aw = "John wishes he hadn't majored in politics";
-$Q31_40->e10->aw = "Paul wishes he had taken his parents' advice";
+$Q31_40->e1->aw = "Karen wishes she had applied for the job.";
+$Q31_40->e2->aw = "I wish I had taken the man's phone number.";
+$Q31_40->e3->aw = "She wishes she hadn't chosen heads.";
+$Q31_40->e4->aw = "He wishes he hadn't joined the army.";
+$Q31_40->e5->aw = "She wishes she hadn't married John.";
+$Q31_40->e6->aw = "They wish they had gone to Singapore for a holiday.";
+$Q31_40->e7->aw = "Simon wishes he hadn't finished off the bottle.";
+$Q31_40->e8->aw = "Anna wishes she had had breakfast.";
+$Q31_40->e9->aw = "John wishes he hadn't majored in politics.";
+$Q31_40->e10->aw = "Paul wishes he had taken his parents' advice.";
 
 @endphp
 

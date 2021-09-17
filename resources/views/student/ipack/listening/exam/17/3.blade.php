@@ -153,10 +153,10 @@ $E2_1_5->e4->q = "Which country was Bovis from?";
 $E2_1_5->e5->q = "Why was Drbal’s discovery about razor blades important?";
 
 $E2_1_5->e1->aw = "1799";
-$E2_1_5->e2->aw = "No, he went into the King’s Chamber alone";
+$E2_1_5->e2->aw = "No, he went into the King’s Chamber alone.";
 $E2_1_5->e3->aw = "in the 1950’s";
 $E2_1_5->e4->aw = "France";
-$E2_1_5->e5->aw = "There was a lack of razor blades at that time";
+$E2_1_5->e5->aw = "There was a lack of razor blades at that time.";
 
 @endphp
 <div class="row">

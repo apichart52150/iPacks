@@ -94,24 +94,24 @@ $Q_2->e7->q = "Are you painting?";
 $Q_2->e8->q = "Are you swimming?";
 $Q_2->e9->q = "Are you singing?";
 
-$Q_2->e1->aw = "No, I'm not";
-$Q_2->e2->aw = "Yes, I am";
-$Q_2->e3->aw = "Yes, I am";
-$Q_2->e4->aw = "No, I'm not";
-$Q_2->e5->aw = "Yes, I am";
-$Q_2->e6->aw = "No, I'm not";
-$Q_2->e7->aw = "Yes, I am";
-$Q_2->e8->aw = "No, I'm not";
-$Q_2->e9->aw = "Yes, I am";
+$Q_2->e1->aw = "No, I'm not.";
+$Q_2->e2->aw = "Yes, I am.";
+$Q_2->e3->aw = "Yes, I am.";
+$Q_2->e4->aw = "No, I'm not.";
+$Q_2->e5->aw = "Yes, I am.";
+$Q_2->e6->aw = "No, I'm not.";
+$Q_2->e7->aw = "Yes, I am.";
+$Q_2->e8->aw = "No, I'm not.";
+$Q_2->e9->aw = "Yes, I am.";
 
-$Q_2->e1->aw2 = "I'm riding a bicycle";
+$Q_2->e1->aw2 = "I'm riding a bicycle.";
 $Q_2->e2->aw2 = "";
 $Q_2->e3->aw2 = "";
-$Q_2->e4->aw2 = "I'm watching TV";
+$Q_2->e4->aw2 = "I'm watching TV.";
 $Q_2->e5->aw2 = "";
-$Q_2->e6->aw2 = "I'm running";
+$Q_2->e6->aw2 = "I'm running.";
 $Q_2->e7->aw2 = "";
-$Q_2->e8->aw2 = "I'm playing table tennis";
+$Q_2->e8->aw2 = "I'm playing table tennis.";
 $Q_2->e9->aw2 = "";
 
 @endphp

@@ -155,8 +155,8 @@ $E2_1_5->e5->q = "What happened to the cancer patients in hospital when animals 
 $E2_1_5->e1->aw = "six million";
 $E2_1_5->e2->aw = "four million";
 $E2_1_5->e3->aw = "cats and dogs";
-$E2_1_5->e4->aw = "They feel better";
-$E2_1_5->e5->aw = "Many of them showed signs of getting better; a few recovered completely";
+$E2_1_5->e4->aw = "They feel better.";
+$E2_1_5->e5->aw = "Many of them showed signs of getting better; a few recovered completely.";
 
 @endphp
 <div class="row">

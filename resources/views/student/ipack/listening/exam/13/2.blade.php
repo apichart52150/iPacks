@@ -155,7 +155,7 @@ $E2_1_5->e5->q = "Which part of the chilies do birds drop far away?";
 $E2_1_5->e1->aw = "nine thousand years";
 $E2_1_5->e2->aw = "around five hundred years ago";
 $E2_1_5->e3->aw = "hot and burning";
-$E2_1_5->e4->aw = "They don’t like the hot and burning feeling";
+$E2_1_5->e4->aw = "They don’t like the hot and burning feeling.";
 $E2_1_5->e5->aw = "the seeds";
 
 @endphp

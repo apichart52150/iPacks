@@ -128,15 +128,15 @@ $caller_3->e8->n = "8";
 $caller_3->e9->n = "9";
 $caller_3->e10->n = "10";
 
-$caller_3->e1->aw = "More than a dozen people are known to have been killed";
-$caller_3->e2->aw = "the final figure is expected to rise considerably";
-$caller_3->e3->aw = "At least one hundred and thirty people are said to be seriously injured";
+$caller_3->e1->aw = "More than a dozen people are known to have been killed.";
+$caller_3->e2->aw = "the final figure is expected to rise considerably.";
+$caller_3->e3->aw = "At least one hundred and thirty people are said to be seriously injured.";
 $caller_3->e4->aw = "a breakdown in telecommunications systems..., thought to have been caused by vandals";
 $caller_3->e5->aw = "Damage is expected to amount to millions of dollars";
 $caller_3->e6->aw = "The fire is believed to have started in the kitchen";
 $caller_3->e7->aw = "The parents of the two children are said to have been visiting relatives";
-$caller_3->e8->aw = "The property is not believed to have been insured";
-$caller_3->e9->aw = "He's expected to be fit for the Third Test starting two weeks on Thursday";
+$caller_3->e8->aw = "The property is not believed to have been insured.";
+$caller_3->e9->aw = "He's expected to be fit for the Third Test starting two weeks on Thursday.";
 $caller_3->e10->aw = "The fine weather is expected to continue for the next few days";
 
 @endphp

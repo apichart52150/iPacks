@@ -53,16 +53,16 @@
     $Q_1->e9->q = "We started redecorating the house three months ago.";
     $Q_1->e10->q = "You started writing your life history ten years ago.";
 
-    $Q_1->e1->aw = "Peter's been smoking a pipe for ten years";
-    $Q_1->e2->aw = "Sandra's been dancing professionally since she was sixteen";
-    $Q_1->e3->aw = "I've been collecting coins for almost a year";
-    $Q_1->e4->aw = "We've been growing our own vegetables for three years";
-    $Q_1->e5->aw = "June's been learning Japanese for four weeks";
-    $Q_1->e6->aw = "Paul's been teaching at the university since he graduated";
-    $Q_1->e7->aw = "Bill's been surfing since he learnt how to swim";
-    $Q_1->e8->aw = "I've been driving a Rolls-Royce since I won Lotto";
-    $Q_1->e9->aw = "We've been redecorating the house for three months";
-    $Q_1->e10->aw = "You've been writing your life history for ten years";
+    $Q_1->e1->aw = "Peter's been smoking a pipe for ten years.";
+    $Q_1->e2->aw = "Sandra's been dancing professionally since she was sixteen.";
+    $Q_1->e3->aw = "I've been collecting coins for almost a year.";
+    $Q_1->e4->aw = "We've been growing our own vegetables for three years.";
+    $Q_1->e5->aw = "June's been learning Japanese for four weeks.";
+    $Q_1->e6->aw = "Paul's been teaching at the university since he graduated.";
+    $Q_1->e7->aw = "Bill's been surfing since he learnt how to swim.";
+    $Q_1->e8->aw = "I've been driving a Rolls-Royce since I won Lotto.";
+    $Q_1->e9->aw = "We've been redecorating the house for three months.";
+    $Q_1->e10->aw = "You've been writing your life history for ten years.";
 
     $Q_2 = new stdClass();
     $Q_2->e1 = new stdClass();
@@ -98,16 +98,16 @@
     $Q_2->e9->q = "Julie began preparing dinner three hours ago.";
     $Q_2->e10->q = "When he left school, Bruce began acting.";
 
-    $Q_2->e1->aw = "He's been playing football since he was twelve";
-    $Q_2->e2->aw = "She's been taking driving lessons since she got this new job";
-    $Q_2->e3->aw = "They've been watching films for six years";
-    $Q_2->e4->aw = "I've been typing this letter since four o'clock";
-    $Q_2->e5->aw = "Dorothy's been going out with boys since she was fifteen";
-    $Q_2->e6->aw = "Michael's been sniffing glue since last year";
+    $Q_2->e1->aw = "He's been playing football since he was twelve.";
+    $Q_2->e2->aw = "She's been taking driving lessons since she got this new job.";
+    $Q_2->e3->aw = "They've been watching films for six years.";
+    $Q_2->e4->aw = "I've been typing this letter since four o'clock.";
+    $Q_2->e5->aw = "Dorothy's been going out with boys since she was fifteen.";
+    $Q_2->e6->aw = "Michael's been sniffing glue since last year.";
     $Q_2->e7->aw = "We've been travelling since dusk";
-    $Q_2->e8->aw = "The teacher's been marking the essays since he arrived home from school";
-    $Q_2->e9->aw = "Julie's been preparing dinner for three hours";
-    $Q_2->e10->aw = "Bruce's been acting since he left school";
+    $Q_2->e8->aw = "The teacher's been marking the essays since he arrived home from school.";
+    $Q_2->e9->aw = "Julie's been preparing dinner for three hours.";
+    $Q_2->e10->aw = "Bruce's been acting since he left school.";
 
     $Q_3 = new stdClass();
     $Q_3->e1 = new stdClass();

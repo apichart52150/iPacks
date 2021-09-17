@@ -152,7 +152,7 @@ $E2_1_5->e3->q = "When did coffee first appear in Europe?";
 $E2_1_5->e4->q = "Which sentence shows that coffee was popular in Europe?";
 $E2_1_5->e5->q = "How tall does the plant grow in the wild?";
 
-$E2_1_5->e1->aw = "The goats didn’t sleep at all";
+$E2_1_5->e1->aw = "The goats didn’t sleep at all.";
 $E2_1_5->e2->aw = "No: ‘if we believe the story’";
 $E2_1_5->e3->aw = "at the end of the sixteenth century";
 $E2_1_5->e4->aw = "famous people of the day used to spend much of their time at coffee houses";
