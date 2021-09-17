@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Session;
+use App\Model\CheckStatus;
 
 
 class HomeController extends Controller 
@@ -14,36 +15,18 @@ class HomeController extends Controller
     
     public function index(){
 
-        // dd(Auth::user());
+        $status = CheckStatus::checkStatus();
 
-        $currentDate = date('Y-m-d H:i:s');
-        $lastDate = "2021-08-20 23:59:59";
-
-        $status = Auth::guard('web')->user()->status;
-
-        if(auth('web')->user()->level == 'user'){
-
-            if(strtotime($lastDate) >= strtotime($currentDate)){
+        switch($status){
+            case 1: 
                 return view('student.user_home');
-            }else{
-                return view('student.expire');
-            }
-
-        }else{
-
-            if($status == 'wait'){
-
+            break;
+            case 2: 
                 return redirect('success')->with('status', 'Welcome!');
-    
-            }elseif($status == 'expire'){
-    
+            break;
+            case 0: 
                 return view('student.expire');
-    
-            }else{
-    
-                return view('student.user_home');
-    
-            }
+            break;
         }
         
     }

@@ -8,19 +8,19 @@
                 <ul class="navigation-menu  d-lg-flex justify-content-center">
 
                     <li class="has-submenu">
-                        <a href="{{ url('writing/dashboard') }}" class="text-light">
+                        <a href="{{ route('writing_dashboard') }}" class="text-light">
                             <i class="fas fa-highlighter"></i>iSAC Writing
                         </a>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{ url('speaking/dashboard') }}" class="text-light">
+                        <a href="{{ route('speaking_dashboard') }}" class="text-light">
                             <i class="fas fa-comments"></i>iSAC Speaking
                         </a>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{ url('student') }}" class="text-light">
+                        <a href="{{ route('staff') }}" class="text-light">
                             <i class="fas fa-address-card"></i>User 
                         </a>
                     </li>
@@ -56,7 +56,7 @@
     <div class="row">
         
         <div class="col-xl-6 col-md-6">
-            <a href="{{ url('writing/dashboard')}}">
+            <a href="{{ route('writing_dashboard')}}">
                 <div class="widget-bg-color-icon card-box">
                     <div class="avatar-lg rounded-circle bg-icon-warning float-left">
                         <i class="fas fa-highlighter font-24 avatar-title text-white"></i>
@@ -71,7 +71,7 @@
         </div>
 
         <div class="col-xl-6 col-md-6">
-            <a href="{{url('speaking/dashboard')}}">
+            <a href="{{route('speaking_dashboard')}}">
                 <div class="widget-bg-color-icon card-box">
                     <div class="avatar-lg rounded-circle bg-icon-success float-left">
                         <i class="fas fa-comments font-24 avatar-title text-white"></i>
@@ -91,7 +91,7 @@
     <div class="row">     
 
         <div class="col-xl-12 col-md-12 col-sm-12">
-            <a href="{{url('student')}}">
+            <a href="{{route('staff')}}">
                 <div class="widget-bg-color-icon card-box">
                     <div class="avatar-lg rounded-circle bg-icon-primary float-left">
                         <i class="fas fa-address-card font-24 avatar-title text-white"></i>

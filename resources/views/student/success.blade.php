@@ -55,10 +55,10 @@
 
                                     <div class="row mt-3">
                                         <div class="col-6">
-                                            <a href="{{ url('payment/'.'standard') }}" type="button" class="btn btn-block btn--md btn-secondary waves-effect waves-light">The Standard IPACK package</a>
+                                            <a href="{{ url('payment/'.'gold') }}" type="button" class="btn btn-block btn--md btn-secondary waves-effect waves-light">The Standard IPACK package</a>
                                         </div>
                                         <div class="col-6">
-                                            <a href="{{ url('payment/'.'premium') }}" type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">The Premium IPACK package</a>
+                                            <a href="{{ url('payment/'.'platinum') }}" type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">The Premium IPACK package</a>
                                         </div>
                                     </div>
                                 </div>

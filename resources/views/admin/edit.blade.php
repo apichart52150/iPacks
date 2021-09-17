@@ -8,14 +8,14 @@
                 <ul class="navigation-menu  d-lg-flex justify-content-center">
 
 					<li class="has-submenu">
-                        <a href="{{ url('admin') }}" class="text-light">
+                        <a href="{{ route('admin_home') }}" class="text-light">
                             <i class="fas fa-home"></i>Home
                         </a>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{{ url('student') }}" class="text-light">
-                            <i class="fas fa-address-card"></i>Student
+                        <a href="{{ route('staff') }}" class="text-light">
+                            <i class="fas fa-address-card"></i>Staff
                         </a>
                     </li>
 
@@ -36,7 +36,7 @@
 			<div class="page-title-box">
 				<div class="page-title-right">
 					<ol class="breadcrumb m-0">
-						<li class="breadcrumb-item"><i class="fas fa-address-card"></i> <a href="{{ url('student') }}">Back</a></li>
+						<li class="breadcrumb-item"><i class="fas fa-address-card"></i> <a href="{{ route('staff') }}">Back</a></li>
 						<!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
 						<li class="breadcrumb-item active">Edit</li>
 					</ol>
@@ -67,59 +67,56 @@
             <div class="row">
                 <div class="col-12">
                     <div class="p-2">
-                    @foreach ($student as $student)
+                    @foreach ($staff as $staff)
 
-                        <form class="form-horizontal" role="form" action="studentupdate/{{ $student->std_id }}" method="POST">
+                        <form class="form-horizontal" role="form" action="staffupdate/{{ $staff->staff_id }}" method="POST">
                             {{ csrf_field() }}
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="std_id">ID</label>
+                                <label class="col-sm-2 col-form-label" for="staff_id">ID</label>
                                 <div class="col-sm-10">
-                                    <input type="text" id="std_id" name="std_id" class="form-control" value="{{$student->std_id}}">
+                                    <input type="text" id="staff_id" name="staff_id" class="form-control border border-primary" value="{{$staff->staff_id}}" disabled>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="std_username">Username</label>
+                                <label class="col-sm-2 col-form-label" for="staff_username">Username</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="std_username" name="std_username" value="{{$student->std_username}}">
+                                    <input type="text" class="form-control" id="staff_username" name="staff_username" value="{{$staff->staff_username}}">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="std_mobile">Mobile</label>
+                                <label class="col-sm-2 col-form-label" for="staff_password">Password</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="std_password" name="std_password" value="{{$student->std_mobile}}">
+                                    <input type="text" class="form-control" id="staff_password" name="staff_password" placeholder="Change new password">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Full Name</label>
+                                <label class="col-sm-2 col-form-label">Level</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="std_name" value="{{$student->std_name}}">
+                                    <select class="form-control" id="staff_level" name="staff_level" required>
+                                        <option value="admin">Admin</option>
+                                        <option value="cs">CS</option>
+                                        <option value="teacher">Teacher</option>
+                                        <option value="sale">Sale</option>
+                                        <option value="customer">Customer</option>
+                                    </select>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Nickname</label>
+                                <label class="col-sm-2 col-form-label">Status</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="std_nickname" value="{{$student->std_nickname}}">
+                                    <select class="form-control" id="staff_status" name="staff_status" required>
+                                        <option value="active">Active</option>
+                                        <option value="disabled">Disabled</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">iSAC Writing</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="std_pointsac" value="{{$student->std_pointsac}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">iSAC Speaking</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="std_pointspeaking" value="{{$student->std_pointspeaking}}">
-                                </div>
-                            </div>
-
+            
                             <div class="form-group text-center">
-                                <a href="{{url('student')}}" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
-							    <button type="submit" class="btn btn-info waves-effect waves-light">Add</button>
+							    <button type="submit" class="btn btn-info waves-effect waves-light">Edit</button>
+                                <a href="{{ route('staff') }}" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
                             </div>
                         </form>
                         @endforeach

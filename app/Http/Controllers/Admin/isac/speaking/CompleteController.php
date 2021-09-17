@@ -17,11 +17,11 @@ class CompleteController extends Controller
 
     public function completeAjax(Request $request){
 
-        $std_id = auth('web')->user()->std_id;
+        $staff_id = auth('staff')->user()->staff_id;
 
         $columns = array(
             0 => 'id',
-            1 => 'std_name',
+            1 => 'username',
             2 => 'topic',
             3 => 'created_at',
             4 => 'th_sent_date',
@@ -29,11 +29,11 @@ class CompleteController extends Controller
         );
 
         $totalData = DB::table('speaking')
-        ->select('speaking.*','student.std_name')
-        ->leftjoin('student','student.std_id','=','speaking.std_id')
+        ->select('speaking.*','users.username')
+        ->leftjoin('users','users.id','=','speaking.std_id')
         ->where([
             ['speaking.status','=','success'],
-            ['speaking.th_id','=', $std_id]
+            ['speaking.th_id','=', $staff_id]
         ])
         ->count();
 
@@ -47,11 +47,11 @@ class CompleteController extends Controller
         if(empty($request->input('search.value'))){
 
             $completes = DB::table('speaking')
-            ->select('speaking.*','student.std_name')
-            ->leftjoin('student','student.std_id','=','speaking.std_id')
+            ->select('speaking.*','users.username')
+            ->leftjoin('users','users.id','=','speaking.std_id')
             ->where([
                 ['speaking.status','=','success'],
-                ['speaking.th_id','=', $std_id]
+                ['speaking.th_id','=', $staff_id]
             ])
             ->offset($start)
             ->limit($limit)
@@ -62,13 +62,13 @@ class CompleteController extends Controller
             $search = $request->input('search.value');
 
             $completes = DB::table('speaking')
-            ->select('speaking.*','student.std_name')
-            ->leftjoin('student','student.std_id','=','speaking.std_id')
+            ->select('speaking.*','users.username')
+            ->leftjoin('staff','users.id','=','speaking.std_id')
             ->where([
                 ['speaking.status','=','success'],
-                ['speaking.th_id','=', $std_id]
+                ['speaking.th_id','=', $staff_id]
             ])
-            ->orwhere('student.std_name','LIKE',"%{search}%")
+            ->orwhere('users.username','LIKE',"%{search}%")
             ->orwhere('speaking.topic','LIKE',"%{search}%")
             ->offset($start)
             ->limit($limit)
@@ -76,13 +76,13 @@ class CompleteController extends Controller
             ->get();
 
             $totalFiltered = DB::table('speaking')
-            ->select('speaking.*','student.std_name')
-            ->leftjoin('student','student.std_id','=','speaking.std_id')
+            ->select('speaking.*','users.username')
+            ->leftjoin('users','users.id','=','speaking.std_id')
             ->where([
                 ['speaking.status','=','success'],
-                ['speaking.th_id','=', $std_id]
+                ['speaking.th_id','=', $staff_id]
             ])
-            ->orwhere('student.std_name','LIKE',"%{search}%")
+            ->orwhere('users.users_username','LIKE',"%{search}%")
             ->orwhere('speaking.topic','LIKE',"%{search}%")
             ->offset($start)
             ->limit($limit)
@@ -99,7 +99,7 @@ class CompleteController extends Controller
                 $show = route('completed',$complete->id);
 
                 $nestedData['id'] = $i;
-                $nestedData['std_name'] = $complete->std_name;
+                $nestedData['username'] = $complete->username;
                 $nestedData['topic'] = $complete->topic;
                 $created_at = date('d-m-Y H:i:s', strtotime($complete->created_at));
                 $nestedData['created_at'] = "<span class='badge badge-success p-1'>{$created_at}</span>";

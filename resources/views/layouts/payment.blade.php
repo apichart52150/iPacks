@@ -87,12 +87,12 @@
                     <div class="logo-box">
                         <div class="logo text-center">
                             <span class="logo-lg">
-                                <img src="{{asset('public/assets/images/logo-nc.png') }}" alt="" height="45">
+                                <img src="{{asset('public/assets/images/logo_ielte_practice.svg') }}" alt="" height="60">
                                 <!-- <span class="logo-lg-text-light">Xeria</span> -->
                             </span>
                             <span class="logo-sm">
                                 <!-- <span class="logo-sm-text-dark">X</span> -->
-                                <img src="{{asset('public/assets/images/logo-nc-mini.png') }}"alt="" height="45">
+                                <img src="{{asset('public/assets/images/logo_ielte_practice.svg') }}"alt="" height="60">
                             </span>
                         </div>
                     </div>

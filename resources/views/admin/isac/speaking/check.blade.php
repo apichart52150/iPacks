@@ -8,7 +8,7 @@
 				
 			<div class="card">
 				<div class="card-header bg-primary text-white text-center">{{ $check['topic'] }}</div>
-				<input type="hidden" name="std_id" value="{{ $check['std_id'] }}">
+				<input type="hidden" name="id" value="{{ $check['id'] }}">
 				<div class="card-body">
 					<img src="{{ asset('public/topics') }}/{{ $check['img'] }}.jpg" alt="{{ $check['img'] }}" width="100%">
 				</div>
@@ -21,8 +21,7 @@
                     <img class="d-flex mr-2 rounded-circle avatar-sm" src="{{ asset('public/assets/images/user.png') }}" alt="Generic placeholder image">
                     <div class="media-body">
                         <span class="float-right font-weight-bold">{{ date('d-m-Y H:i', strtotime($check['created_at'])) }}</span>
-                        <h6 class="m-0 font-15 text-primary">{{ $check['std_name'] }}</h6>
-                        <small class="text-dark font-14"><b><u>Course</u></b> : {{ $check['coursename'] }} <b class="ml-1"><u>Teacher</u></b> : {{ $check['th_inClass'] }}</small>
+                        <h6 class="m-0 font-15 text-primary">{{ $check['username'] }}</h6>
 
                         <p class="text-dark">
                         	<span class="mr-2"><b><u>Expected Score</u></b> : {{ $check['expected_score'] }}</span>
@@ -88,7 +87,7 @@
 
 		var file = $('audio source').attr('src');
 		var a = $(this);
-		var filename = $('.card-header').text() + '_' + $('input[name="std_id"]').val();
+		var filename = $('.card-header').text() + '_' + $('input[name="id"]').val();
 
 		a.attr('href', file);
 		a.attr('download', filename + '.mp3');

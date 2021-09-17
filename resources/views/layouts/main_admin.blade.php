@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>iSAC | Teacher</title>
+        <title>iPACK | Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="disable-extension-feature" content="read-dom" />
@@ -53,9 +53,9 @@
 
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="{{ asset('public/assets/images/users/useradmin.png') }}" alt="user-image" class="rounded-circle">
+                                <img src="{{ asset('public/assets/images/avatar-1.jpg') }}" alt="user-image" class="rounded-circle">
                                 <span class="pro-user-name ml-1">
-                                    {{ Auth::user()->name }} <i class="mdi mdi-chevron-down"></i> 
+                                    {{ Auth::user('staff')->staff_username }} <i class="mdi mdi-chevron-down"></i> 
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown">
@@ -68,16 +68,10 @@
 
                                 <div class="dropdown-divider"></div>
 
-                                 <!-- item-->
-                                <a href="{{ route('logout') }}" class="dropdown-item notify-item" onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
+                                <a href="{{ route('admin_logout') }}"  class="dropdown-item notify-item">
                                     <i class="mdi mdi-logout"></i>
                                     <span>Logout</span>
                                 </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
 
                             </div>
                         </li>            
