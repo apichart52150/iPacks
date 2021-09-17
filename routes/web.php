@@ -31,12 +31,9 @@
 
         Route::get('payment/{status}', 'Payment\paymentController@payment_form')->name('paymentForm');
         Route::post('payment/confirm', 'Payment\paymentController@payment_confirm')->name('paymentConfirm');
+        Route::get('payment_success', 'Payment\paymentController@payment_success')->name('payment_success');
 
-        Route::get('pay_success', function () {
-            return view('payment.success');
-        })->name('pay_success');
-
-        Route::get('pay_fail', function () {
+        Route::get('payment_fail', function () {
             return view('payment.fail');
         })->name('pay_fail');
 
