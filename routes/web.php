@@ -121,6 +121,9 @@ Route::group(['middleware' => 'auth:web'], function () {
             });
         });
     });
+
+    Route::get('clubs','student\ClubsController')->name('clubs');
+    Route::get('tutorial','student\TutorialController')->name('tutorial');
 });
 
 
