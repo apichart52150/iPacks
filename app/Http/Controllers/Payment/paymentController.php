@@ -19,17 +19,27 @@ class paymentController extends Controller
 
         $input = $request->all();
 
-        $rs_u = DB::table('ktc_order')
-        ->select('*')
-        ->where('id','=', $input['id'])
-        ->orderBy('id', 'desc')
-        ->limit(1)
-        ->get();
+        // dd($input);
+
+        if($request->package == 'gold'){
+            $discount = 1500.00;
+        }else{
+            $discount = 3100.00;
+        }
+
+
+        DB::table('users')
+        ->where('id', $request->id)
+        ->update([
+            'level' => $request->package,
+            'status' => 'wait',
+            'username' => $request->username,
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+        ]);
 
         $currentDate = date('M d, Y');
-
-        $id = $rs_u[0]->id; 
-        $id_order = sprintf("%09d",$id+1);
 
         $randomId = rand(10,100000);
 
@@ -40,10 +50,42 @@ class paymentController extends Controller
            'currentDate' => $currentDate,
            'package' => $input['package'],
            'address' => $input['address'],
-
+           'discount' => $discount,
+           'payMethod' => $input['payMethod'],
         ];
 
         return view('payment.payment_confirm', compact('data'));
+    }
+
+    public function check_data_payment()
+    {
+
+        $user = Auth::user();
+        $created_at = str_split(strval($user->created_at),10);
+
+        // // dd(date("Y-m-d", strtotime("+1 month", $created_at)));
+
+        $time = strtotime($created_at[0]);
+        $date = date("Y-m-d", strtotime("+1 month", $time));
+        $expire_date = $date .$created_at[1];
+
+        return view('payment.send_email', compact('user','expire_date'));
+    }
+
+    public function send_email_payment(Request $request)
+    {
+        $data = array(
+            'subject'=>"User Detail",
+            'email'=>$request->get('email'),
+            'password'=>$request->get('password'),
+            'username'=>$request->get('username'),
+            'expire_date'=>$request->get('expire_date'),
+            'package'=>$request->get('level'),
+            'created_at'=>$request->get('created_at'),
+        );
+        Mail::to($request->get('email'))->send(new SendMail($data));
+        DB::update('update users set expire_date = ? where id = ?', [$request->get('expire_date'),$request->get('id')]);
+        return redirect('user_home');
     }
 
 }
