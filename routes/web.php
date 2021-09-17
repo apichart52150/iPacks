@@ -29,8 +29,8 @@
             return view('student.expire');
         })->name('expire');
 
-        Route::get('payment/{status}', 'payment\paymentController@payment_form')->name('paymentForm');
-        Route::post('payment/confirm', 'payment\paymentController@payment_confirm')->name('paymentConfirm');
+        Route::get('payment/{status}', 'Payment\paymentController@payment_form')->name('paymentForm');
+        Route::post('payment/confirm', 'Payment\paymentController@payment_confirm')->name('paymentConfirm');
 
         Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
