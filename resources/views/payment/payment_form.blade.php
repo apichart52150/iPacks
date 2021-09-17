@@ -45,9 +45,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label" for="first_name">Username</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" id="first_name" name="username" class="form-control" placeholder="Username" required>
+                                    <label class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="email" name="email"  placeholder="Email" value="{{ auth()->user()->email }}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -70,19 +70,14 @@
                                     </div>
                                 </div>
                                
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Email</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="email" name="email"  placeholder="Email" value="{{ auth()->user()->email }}">
-                                    </div>
-                                </div>
+                              
 
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Payment Type</label>
                                     <div class="col-md-10">
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="cc" name="payMethod" value="CC" class="custom-control-input" required>
-                                            <label class="custom-control-label" for="cc">Cedit card</label>
+                                            <label class="custom-control-label" for="cc">Credit card</label>
                                         </div>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="ali" name="payMethod" value="ALIPAY" class="custom-control-input" required>

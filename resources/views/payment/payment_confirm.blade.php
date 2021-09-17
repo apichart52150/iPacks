@@ -35,7 +35,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mt-3">
-                            <p><b>Hello, {{ auth('web')->user()->firstname}} {{ auth('web')->user()->lastname}}</b></p>
+                            <p><b>Hello, {{ auth('web')->user()->first_name}} {{ auth('web')->user()->last_name}}</b></p>
                             <p class="text-muted">Thanks a lot because you keep purchasing our products. Our company
                                 promises to provide high quality products for you as well as outstanding
                                 customer service for every transaction. </p>

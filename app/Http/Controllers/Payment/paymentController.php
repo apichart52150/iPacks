@@ -14,12 +14,18 @@ class paymentController extends Controller
         return view('payment.payment_form', compact('status'));
     }
 
-
     public function payment_confirm(Request $request){
 
         $input = $request->all();
+        $currentDate = date('M d, Y');
 
         // dd($input);
+
+        $order_id = DB::table('ktc_order')
+        ->latest()
+        ->first();
+
+        $run_order = sprintf("%09d",$order_id->order_id+1);
 
         if($request->package == 'gold'){
             $discount = 1500.00;
@@ -27,6 +33,13 @@ class paymentController extends Controller
             $discount = 3100.00;
         }
 
+        DB::table('ktc_order')
+        ->insert([
+            'id' => $request->id,
+            'order_id' => $run_order,
+            'order_ref' => $run_order,
+            'created_at' => date('Y-m-d H:i:s'),
+        ]);
 
         DB::table('users')
         ->where('id', $request->id)
@@ -39,13 +52,10 @@ class paymentController extends Controller
             'email' => $request->email,
         ]);
 
-        $currentDate = date('M d, Y');
-
-        $randomId = rand(10,100000);
-
+        
         $data = [
            'id' =>  $input['id'],
-           'orderRef' => $randomId,
+           'orderRef' => $run_order,
            'amount' => $input['orderRef'],
            'currentDate' => $currentDate,
            'package' => $input['package'],
