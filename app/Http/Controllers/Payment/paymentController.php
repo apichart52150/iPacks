@@ -19,10 +19,19 @@ class paymentController extends Controller
 
         $input = $request->all();
 
+        // dd($input);
+
+        if($request->package == 'gold'){
+            $discount = 1500.00;
+        }else{
+            $discount = 3100.00;
+        }
+
+
         DB::table('users')
         ->where('id', $request->id)
         ->update([
-            'level' => 'gold',
+            'level' => $request->package,
             'status' => 'wait',
             'username' => $request->username,
             'first_name' => $request->first_name,
@@ -41,6 +50,8 @@ class paymentController extends Controller
            'currentDate' => $currentDate,
            'package' => $input['package'],
            'address' => $input['address'],
+           'discount' => $discount,
+           'payMethod' => $input['payMethod'],
         ];
 
         return view('payment.payment_confirm', compact('data'));

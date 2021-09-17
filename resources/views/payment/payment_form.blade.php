@@ -30,17 +30,17 @@
                                 <input type="hidden" name="id" value="{{ auth('web')->user()->id }}">
                                 <input type="hidden" name="package" value="{{ $status }}">
                                 @if($status == 'gold')
-                                    <input type="hidden" name="orderRef" value="4500.00">
+                                    <input type="hidden" name="orderRef" value="6000.00">
                                 @else
-                                    <input type="hidden" name="orderRef" value="6900.00">
+                                    <input type="hidden" name="orderRef" value="10000.00">
                                 @endif
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label" for="simpleinput">Your Package</label>
                                     <div class="col-sm-10">
                                         @if($status == 'gold')
-                                        <input type="text" id="simpleinput" class="form-control" name="price" value="{{ $status }} 4,500.-" disabled>
+                                        <input type="text" id="simpleinput" class="form-control text-uppercase" name="price" value="{{ $status }}" disabled>
                                         @else
-                                        <input type="text" id="simpleinput" class="form-control" name="price" value="{{ $status }} 6,900.-" disabled>
+                                        <input type="text" id="simpleinput" class="form-control text-uppercase" name="price" value="{{ $status }}" disabled>
                                         @endif
                                     </div>
                                 </div>
@@ -74,12 +74,12 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Payment Type</label>
                                     <div class="col-md-10">
-                                        <div class="custom-control custom-radio" required>
-                                            <input type="radio" id="cc" name="payMethod" value="CC" class="custom-control-input">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="cc" name="payMethod" value="CC" class="custom-control-input" required>
                                             <label class="custom-control-label" for="cc">Cedit card</label>
                                         </div>
-                                        <div class="custom-control custom-radio" required>
-                                            <input type="radio" id="ali" name="payMethod" value="ALI" class="custom-control-input">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="ali" name="payMethod" value="ALIPAY" class="custom-control-input" required>
                                             <label class="custom-control-label" for="ali">Alipay</label>
                                         </div>
                                     </div>
