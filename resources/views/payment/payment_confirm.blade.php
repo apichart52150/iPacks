@@ -132,9 +132,9 @@
                                 <input type="hidden" name="payMethod" value="ALIPAY">
                                 <input type="hidden" name="amount" value="{{ $data['amount'] }}">
                                 <input type="hidden" name="currCode" value="764" >
-                                <input type="hidden" name="successUrl" value="http://localhost/ipack/payment/success">
-                                <input type="hidden" name="failUrl" value="http://localhost/ipack/payment/fail">
-                                <input type="hidden" name="cancelUrl" value="http://localhost/ipack/success">
+                                <input type="hidden" name="successUrl" value="{{ route('pay_success')}}">
+                                <input type="hidden" name="failUrl" value="{{ route('pay_fail')}}">
+                                <input type="hidden" name="cancelUrl" value="{{ route('success')}}">
                                 <input type="hidden" name="payType" value="N">
                                 <input type="hidden" name="lang" value="E">
                                 <input type="hidden" name="TxType" value="Retail" > 
@@ -149,9 +149,9 @@
                 			    <input type="hidden" name="orderRef" value="{{ $data['orderRef'] }}">
                 			    <input type="hidden" name="currCode" value="764" >
                                 <input type="hidden" name="amount" value="{{ $data['amount'] }}">
-                                <input type="hidden" name="successUrl" value="{{ route('success')}}">
-                                <input type="hidden" name="failUrl" value="{{ route('fail')}}">
-                                <input type="hidden" name="cancelUrl" value="http://localhost/ipack/success">
+                                <input type="hidden" name="successUrl" value="{{ route('pay_success')}}">
+                                <input type="hidden" name="failUrl" value="{{ route('pay_fail')}}">
+                                <input type="hidden" name="cancelUrl" value="{{ route('success')}}">
                                 <input type="hidden" name="payType" value="N">
                                 <input type="hidden" name="lang" value="E">
                                 <input type="hidden" name="TxType" value="Retail" > 

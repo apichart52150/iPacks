@@ -32,6 +32,14 @@
         Route::get('payment/{status}', 'Payment\paymentController@payment_form')->name('paymentForm');
         Route::post('payment/confirm', 'Payment\paymentController@payment_confirm')->name('paymentConfirm');
 
+        Route::get('pay_success', function () {
+            return view('payment.success');
+        })->name('pay_success');
+
+        Route::get('pay_fail', function () {
+            return view('payment.fail');
+        })->name('pay_fail');
+
         Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
         Route::get('ipack_reading', 'student\HomeController@ipack_reading')->name('ipack_reading');
