@@ -31,10 +31,12 @@ class paymentController extends Controller
         $id = $rs_u[0]->id; 
         $id_order = sprintf("%09d",$id+1);
 
+        $randomId = rand(10,100000);
+
         $data = [
            'id' =>  $input['id'],
-           'idOrder' => $id_order,
-           'orderRef' => $input['orderRef'],
+           'orderRef' => $randomId,
+           'amount' => $input['orderRef'],
            'currentDate' => $currentDate,
            'package' => $input['package'],
            'address' => $input['address'],
