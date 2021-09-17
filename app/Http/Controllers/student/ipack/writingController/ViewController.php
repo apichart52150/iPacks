@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\student\isac\writingController;
+namespace App\Http\Controllers\student\ipack\writingController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Writing;
@@ -25,7 +25,7 @@ class ViewController extends Controller
             $img_path = "public/assets/images/gt/{$data->code_test}.jpg";
         }
 
-        return view('student.isac.writing.comment', compact('data', 'img_path'));
+        return view('student.ipack.writing.comment', compact('data', 'img_path'));
     }
 
     public function view_saved($sacId) {
@@ -43,7 +43,7 @@ class ViewController extends Controller
             $img_path = "public/assets/images/gt/{$data->code_test}.jpg";
         }
 		   
-        return view('student.isac.writing.save', compact('data', 'img_path'));
+        return view('student.ipack.writing.save', compact('data', 'img_path'));
     }
 
     public function store_sac_save(Request $request) {

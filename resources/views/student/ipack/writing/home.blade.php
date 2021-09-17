@@ -30,7 +30,7 @@
     </style>
 
    
-@if (Auth::user()->level == 'premium')
+@if (Auth::user()->level == 'platinum')
 
     <div class="row">
         <div class="col-lg-6">
@@ -60,8 +60,9 @@
                                     
                                     $data = ['task' => $task, 'imgNo' => $imgNo, 'header' => $header, 'type' => $type];
                                 @endphp
+
                                 <button type="button" class="btn btn-info waves-effect waves-light mt-2 task" data-toggle="modal" data-target="#task1{{$key}}">Writing {{ $value['number'] }} {!! $value['icon'] !!}</button>
-                                <!-- <button class="btn btn-info waves-effect waves-light mt-2 task" data-info="{{ json_encode($data) }}">iSAC Writing {{ $value['number'] }} {!! $value['icon'] !!}</button> -->
+
                                 <!-- modal -->
                                 <div id="task1{{$key}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
@@ -204,8 +205,6 @@
                                     $data = ['task' => $task, 'imgNo' => $imgNo, 'header' => $header, 'type' => $type];
                                 @endphp
                                 <button type="button" class="btn btn-info waves-effect waves-light mt-2 task">Writing {{ $value['number'] }} {!! $value['icon'] !!}</button>
-                                <!-- <button class="btn btn-info waves-effect waves-light mt-2 task" data-info="{{ json_encode($data) }}">iSAC Writing {{ $value['number'] }} {!! $value['icon'] !!}</button> -->
-                                <!-- modal -->
                             @endforeach
                         </div>
                     @endforeach

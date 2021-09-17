@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\student\isac\listeningController;
+namespace App\Http\Controllers\student\ipack\listeningController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
@@ -28,7 +28,7 @@ class HomeController extends Controller
             }
             // dd($menu);
 
-            return view('student.isac.listening.home', compact('menu'));
+            return view('student.ipack.listening.home', compact('menu'));
         }else {
             return redirect('login');
         }
@@ -66,7 +66,7 @@ class HomeController extends Controller
                 'sub_menu' => "Challenges Practice"
             );
         }
-        return view('student.isac.listening.subhome', compact('sub_menu','data','main'));
+        return view('student.ipack.listening.subhome', compact('sub_menu','data','main'));
     }
 
     public function exam($exam_type, $exam_id){
@@ -100,17 +100,17 @@ class HomeController extends Controller
         // dd($exam_id);
 
         $pagination = [
-            'prev' => "isac/listening/".($exam_type)."/".($exam_id-1),
+            'prev' => "ipack/listening/".($exam_type)."/".($exam_id-1),
             'current' => $exam_id,
-            'next' => "isac/listening/".($exam_type)."/".($exam_id+1),
+            'next' => "ipack/listening/".($exam_type)."/".($exam_id+1),
             'textBtn' => $exam_id == count($navigation_count) ? 'Finish' : 'Next'
         ];
 
         if ($pagination['textBtn'] == 'Finish') {
             $pagination = [
-                'prev' => "isac/listening/".($exam_type)."/".($exam_id-1),
+                'prev' => "ipack/listening/".($exam_type)."/".($exam_id-1),
                 'current' => $exam_id,
-                'next' => "isac/listening/",
+                'next' => "ipack/listening/",
                 'textBtn' => $exam_id == count($navigation_count) ? 'Finish' : 'Next'
             ];
         }
@@ -118,8 +118,8 @@ class HomeController extends Controller
         // dd($pageTitle);
 
         
-        $view = "student.isac.listening.exam.$exam_type.$exam_id";
+        $view = "student.ipack.listening.exam.$exam_type.$exam_id";
        
-        return view('student.isac.listening.exam', ['view' => $view , 'pageTitle' => $pageTitle, 'pagination' => $pagination]);
+        return view('student.ipack.listening.exam', ['view' => $view , 'pageTitle' => $pageTitle, 'pagination' => $pagination]);
     }
 }

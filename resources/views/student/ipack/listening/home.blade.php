@@ -28,7 +28,7 @@
                         <li class="breadcrumb-item active"> Listening </li>
                     </ol>
                 </div>
-                <h4 class="page-title">iSAC Listening</h4>
+                <h4 class="page-title">iPACK Listening</h4>
             </div>
         </div>
     </div>     
@@ -92,7 +92,7 @@
                 </div> <!-- gallery info -->
             </div> <!-- end gal-box -->
         </div> <!-- end col -->
-        @include('student.isac.listening.modal_listening')
+        @include('student.ipack.listening.modal_listening')
     @endforeach
 </div>
 <!-- end row -->

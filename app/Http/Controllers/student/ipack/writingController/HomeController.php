@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\student\isac\writingController;
+namespace App\Http\Controllers\student\ipack\writingController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Writing;
@@ -136,7 +136,7 @@ class HomeController extends Controller
             
         }
 
-        return view('student.isac.writing.home', compact('task1', 'task2'));
+        return view('student.ipack.writing.home', compact('task1', 'task2'));
 
     }
 
@@ -147,7 +147,7 @@ class HomeController extends Controller
         $writing = Writing::queryWriting($std_id);
 
         // dd($writing);
-        return view('student.isac.writing.status_writing',  compact('writing'));
+        return view('student.ipack.writing.status_writing',  compact('writing'));
         
     }
 }

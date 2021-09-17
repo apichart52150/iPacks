@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\student\isac\writingController;
+namespace App\Http\Controllers\student\ipack\writingController;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
@@ -25,7 +25,7 @@ class WritingController extends Controller
         );
 
         // dd($data);
-        return view('student.isac.writing.writing_test', compact('data'));
+        return view('student.ipack.writing.writing_test', compact('data'));
     }
 
     public function store_sac(Request $request) {

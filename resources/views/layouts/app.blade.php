@@ -7,13 +7,6 @@
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('public/assets/images/icon-nc-big.png') }}">
-    
-    <meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="iSAC Speaking" />
-	<meta property="og:description" content="คอร์สเรียน IELTS รับรองผล 7.5 สอนสดทุกคลาส โดยเจ้าของภาษา ได้ผลจริง จากสถาบันภาษาคุณภาพ ระดับยอดเยี่ยม 4 ปีซ้อน  เน้นเทคนิคทำข้อสอบ หลักสูตรคุณภาพมาตรฐานสากล" />
-	<meta property="og:url" content="https://newcambridgethailand.com/isac_speaking/" />
-    <meta property="og:site_name" content="newcambridgethailand.com"/>
 	<meta property="og:image:secure" content="{{ asset('public/assets/images/logo_nc.png') }}" />
 
 

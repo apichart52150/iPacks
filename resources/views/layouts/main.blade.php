@@ -141,22 +141,22 @@
                                     </a>
                                     <ul class="submenu">
                                         <li>
-                                            <a href="{{ route('isac_writing_home') }}"><i class="fas fa-pencil-alt"></i>  Writing</a> 
+                                            <a href="{{ route('ipack_writing') }}"><i class="fas fa-pencil-alt"></i>  Writing</a> 
                                         <li>
                                             <a href="{{ route('browser-settings') }}"><i class="fas fa-comment-dots"></i>  Speaking</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('isac_reading') }}" target="_blank"><i class="fas fa-eye"></i>  Reading</a>
+                                            <a href="{{ route('ipack_reading') }}" target="_blank"><i class="fas fa-eye"></i>  Reading</a>
                                         </li>
                                         <li>
-                                                <a href="{{url('isac/listening')}}"><i class=" fas fa-volume-up"></i>  Listening</a>
+                                                <a href="{{ route('ipack_listening') }}"><i class=" fas fa-volume-up"></i>  Listening</a>
                                         </li>
                                     </ul>
                                 </li>
 
 
                                 <li class="has-submenu">
-                                    <a href="{{url('language/home')}}">
+                                    <a href="{{ route('ipack_language')}}">
                                         <i class="fas fa-language"></i>Language Use<div class="arrow-down"></div>
                                     </a>
                                 </li>
@@ -196,17 +196,17 @@
                                     </a>
                                     <ul class="submenu">
                                         <li>
-                                            <a href="{{ route('isac_reading') }}" target="_blank"><i class="fas fa-eye"></i>  Reading</a>
+                                            <a href="{{ route('ipack_reading') }}" target="_blank"><i class="fas fa-eye"></i>  Reading</a>
                                         </li>
                                         <li>
-                                            <a href="{{url('isac/listening')}}"><i class=" fas fa-volume-up"></i>  Listening</a>
+                                            <a href="{{ route('ipack_listening')}}"><i class=" fas fa-volume-up"></i>  Listening</a>
                                         </li>
                                     </ul>
                                 </li>
 
 
                                 <li class="has-submenu">
-                                    <a href="{{ url('language/home') }}">
+                                    <a href="{{ route('ipack_language') }}">
                                         <i class="fas fa-language"></i>Language Use<div class="arrow-down"></div>
                                     </a>
                                 </li>

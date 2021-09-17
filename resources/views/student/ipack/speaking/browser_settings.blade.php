@@ -36,7 +36,7 @@
 				<ol class="breadcrumb m-0">
 					<li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('/') }}">Home</a></li>
 					<!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
-					<li class="breadcrumb-item active">iSAC Speaking Manual</li>
+					<li class="breadcrumb-item active">iPACK Speaking Manual</li>
 				</ol>
 			</div>
 			<h4 class="page-title">Speaking Manual</h4>
@@ -49,7 +49,7 @@
 	<div class="col-xl-12">
 		<div class="card-box border border-success scroll">
 			<h3 class="text-center">Browser settings</h3>
-			<p class="lead text-center">The New Cambridge iSAC speaking system works best with the Safari and Chrome browsers. To set up your system, please follow the steps below to ensure your recording is successful.</p>
+			<p class="lead text-center">The New Cambridge iPACK speaking system works best with the Safari and Chrome browsers. To set up your system, please follow the steps below to ensure your recording is successful.</p>
 			
 			<h4><i class="fab fa-safari"></i> Safari browser</h4>
 			<div class="row text-dark text-center font-17">
@@ -106,7 +106,7 @@
 
 			<div class="row mt-4">
 				<div class="col-md-12 text-center">
-					<a href="{{ route('isac_speaking_home') }}" class="btn btn-outline-success waves-effect waves-light width-lg">Next</a>
+					<a href="{{ route('ipack_speaking') }}" class="btn btn-outline-success waves-effect waves-light width-lg">Next</a>
 				</div>
 			</div>	
 		</div>

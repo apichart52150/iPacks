@@ -6,12 +6,12 @@
             <div class="page-title-box">
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('/isac/listening') }}">Home</a></li>
+                        <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('ipack_listening') }}">Home</a></li>
                         <!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
                         <li class="breadcrumb-item active">{{$name}}</li>
                     </ol>
                 </div>
-                <h4 class="page-title">iSAC Listening</h4>
+                <h4 class="page-title">iPACK Listening</h4>
             </div>
         </div>
     </div>

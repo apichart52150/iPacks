@@ -14,7 +14,7 @@
     Route::group(['middleware' => 'auth:web'], function () {
 
         Route::get('browser-settings', function () {
-            return view('student.isac.speaking.browser_settings');
+            return view('student.ipack.speaking.browser_settings');
         })->name('browser-settings');
 
         Route::get('wait', function () {
@@ -34,14 +34,14 @@
 
         Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
-        Route::get('isac_reading', 'student\HomeController@isac_reading')->name('isac_reading');
+        Route::get('ipack_reading', 'student\HomeController@ipack_reading')->name('ipack_reading');
         Route::get('strategies_pack', 'student\HomeController@strategies_pack')->name('strategies_pack');
         Route::get('topic_pack', 'student\HomeController@topic_pack')->name('topic_pack');
 
         // sac speaking
-        Route::prefix('')->namespace('student\isac\speakingController')->group(function () {
+        Route::prefix('')->namespace('student\ipack\speakingController')->group(function () {
 
-            Route::get('isac_speaking_home', 'HomeController@index')->name('isac_speaking_home');
+            Route::get('speaking', 'HomeController@index')->name('ipack_speaking');
 
             // student status
             Route::get('status_speaking', 'HomeController@status_speaking')->name('status_speaking');
@@ -59,9 +59,9 @@
         });
 
         // sac writing
-        Route::prefix('')->namespace('student\isac\writingController')->group(function () {
+        Route::prefix('')->namespace('student\ipack\writingController')->group(function () {
 
-            Route::get('isac_writing_home', 'HomeController@index')->name('isac_writing_home');
+            Route::get('ipack_writing', 'HomeController@index')->name('ipack_writing');
 
             Route::post('writing_test', 'WritingController@index')->name('writing_test');
             Route::post('store_sac', 'WritingController@store_sac')->name('store.sac');
@@ -76,14 +76,16 @@
             Route::post('store_sac_save', 'ViewController@store_sac_save')->name('store.sac-save');
         });
 
-        Route::prefix('isac')->namespace('student\isac\listeningController')->group(function () {
-            Route::get('listening', 'HomeController@index')->name('listening');
+        Route::prefix('ipack')->namespace('student\ipack\listeningController')->group(function () {
+
+            Route::get('listening', 'HomeController@index')->name('ipack_listening');
             Route::post('submenu', 'HomeController@submenu')->name('sub_menu');
             Route::get('listening/{exam_type}/{exam_id}', 'HomeController@exam')->name('listening/{exam_type}/{exam_id}');
         });
 
-        Route::prefix('language')->namespace('student\isac\languageController')->group(function () {
-            Route::get('home', 'HomeController@index')->name('language_home');
+        Route::prefix('language')->namespace('student\ipack\languageController')->group(function () {
+
+            Route::get('language', 'HomeController@index')->name('ipack_language');
             Route::get('{topic}', 'TopicController@index');
 
             Route::prefix('Intermediate')->group(function () {
@@ -163,7 +165,7 @@
         });
 
         //Speaking
-        Route::prefix('speaking')->namespace('Admin\isac\speaking')->group(function () {
+        Route::prefix('speaking')->namespace('Admin\ipack\speaking')->group(function () {
 
             Route::get('dashboard', 'DashboardController@index')->name('speaking_dashboard');
             Route::get('receive/{id}', 'DashboardController@receive')->name('receive');

@@ -6,8 +6,8 @@
         <div class="page-title-box">
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('isac/listening') }}">Language Use</a></li>
-                    <li class="breadcrumb-item"><a href="{{ url('isac/listening/') }}">{{ $pageTitle['menu_name'] }}</a></li>
+                    <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('ipack_listening') }}">Language Use</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('ipack_listening') }}">{{ $pageTitle['menu_name'] }}</a></li>
                     <li class="breadcrumb-item active">{{ $pageTitle['sub_menu_name'] }}</li>
                 </ol>
             </div>

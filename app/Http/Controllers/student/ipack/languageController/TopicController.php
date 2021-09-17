@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\student\isac\languageController;
+namespace App\Http\Controllers\student\ipack\languageController;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;

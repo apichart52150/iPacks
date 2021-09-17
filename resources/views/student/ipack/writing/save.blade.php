@@ -7,7 +7,7 @@
             <div class="page-title-box">
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><i class="mdi mdi-keyboard-return"></i> <a href="{{ url('status_writing') }}">Back</a></li>
+                        <li class="breadcrumb-item"><i class="mdi mdi-keyboard-return"></i> <a href="{{ route('status_writing') }}">Back</a></li>
                         <!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
                         <li class="breadcrumb-item active">{{$data->header_test}} saved</li>
                     </ol>
@@ -97,7 +97,7 @@
                                 @endif
 
                                 <button id="submit" class="btn btn-success">SUBMIT</button>
-                                <a href="{{ url('/status_writing') }}" class="btn btn-danger">CANCEL</a>
+                                <a href="{{ route('status_writing') }}" class="btn btn-danger">CANCEL</a>
                             </div>
                         </div>
                     </div>

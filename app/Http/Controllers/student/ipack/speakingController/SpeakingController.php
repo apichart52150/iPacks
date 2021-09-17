@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\student\isac\speakingController;
+namespace App\Http\Controllers\student\ipack\speakingController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
@@ -17,7 +17,7 @@ class SpeakingController extends Controller
             'images' => $topic
         ];
         
-        return view('student.isac.speaking.speaking_intro', compact('data'));
+        return view('student.ipack.speaking.speaking_intro', compact('data'));
     }
 
     public function record($topic) {
@@ -29,7 +29,7 @@ class SpeakingController extends Controller
 
         // dd(Session::get('ss_id'));
         
-        return view('student.isac.speaking.speaking_record', compact('data'));
+        return view('student.ipack.speaking.speaking_record', compact('data'));
     }
 
     public function submit($topic) {
@@ -38,7 +38,7 @@ class SpeakingController extends Controller
             'title' => substr($topic, 0, 5) .' '. substr($topic, 5, 7)
         ];
 
-        return view('student.isac.speaking.speaking_submit', compact('topics'));
+        return view('student.ipack.speaking.speaking_submit', compact('topics'));
     }
 
 
@@ -83,8 +83,8 @@ class SpeakingController extends Controller
             DB::table('log')
             ->insert([
                 'std_id' => auth('web')->user()->id,
-                'content' => "iSAC Speaking : ".$topic,
-                'tab' => 'iSAC Speaking',
+                'content' => "iPACK Speaking : ".$topic,
+                'tab' => 'iPACK Speaking',
                 'score' => "-1 Point"
             ]);
 
