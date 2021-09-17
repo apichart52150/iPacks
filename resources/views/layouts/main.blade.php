@@ -7,7 +7,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}" />
         
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('public/assets/images/icon-nc-big.png') }}">
+        <link rel="shortcut icon" href="{{asset('public/assets/images/logo_ielte_practice.svg') }}">
 
         <!-- Custom box css -->
         <link href="{{ asset('public/assets/libs/custombox/custombox.min.css') }}" rel="stylesheet">
@@ -111,14 +111,14 @@
                         <div class="logo text-center">
                             <span class="logo-lg">
                                 <a href="{{ route('user_home') }}">
-                                    <img src="{{asset('public/assets/images/logo-nc-light.png') }}" alt="" height="45">
+                                    <img src="{{asset('public/assets/images/logo_ielte_practice.svg') }}" alt="" height="60">
                                     <!-- <span class="logo-lg-text-light">Xeria</span> -->
                                 </a>
                             </span>
                             <span class="logo-sm">
                                 <a href="{{ route('user_home') }}">
                                     <!-- <span class="logo-sm-text-dark">X</span> -->
-                                    <img src="{{asset('public/assets/images/icob-nc-light.png') }}"alt="" height="45">
+                                    <img src="{{asset('public/assets/images/logo_ielte_practice.svg') }}"alt="" height="60">
                                 </a>
                             </span>
                         </div>

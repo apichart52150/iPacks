@@ -6,15 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('public/assets/images/icon-nc-big.png') }}">
-	<meta property="og:image:secure" content="{{ asset('public/assets/images/logo_nc.png') }}" />
-
+    <link rel="shortcut icon" href="{{ asset('public/assets/images/logo_ielte_practice.svg') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
-
 
     <!-- App css -->
     <link href="{{ asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
