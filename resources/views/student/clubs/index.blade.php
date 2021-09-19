@@ -18,9 +18,7 @@
 @endsection
 
 @section('content')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css"
-    integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
     .card-box,
@@ -71,7 +69,8 @@
         <thead>
             <tr>
                 <th scope="col">Club date</th>
-                <th scope="col">status</th>
+                <th scope="col">Status</th>
+                <th scope="col">Note</th>
             </tr>
         </thead>
         <tbody>
@@ -83,11 +82,12 @@
                     @if($club->status == 0)
                     <span class="text-primary">Pending</span>
                     @elseif ($club->status == 1)
-                    <span class="text-success">Approval by {{ $club->updated_at }}</span>
+                    <span class="text-success">Approval</span>
                     @else
-                    <span class="text-danger">Disapproval by {{ $club->updated_at }}</span>
+                    <span class="text-danger">Disapproval</span>
                     @endif
                 </td>
+                <td>{{ $club->note }}</td>
             </tr>
             @endforeach
             @else
@@ -112,24 +112,24 @@
 <script>
     swal("Avalable points.", "{{ $points->club_point }}")
 
-$('#form-club').on('submit',function(){
-    $.ajax({
-        type: 'POST',
-        url: $(this).attr('route'),
-        data: new FormData(this),
-        cache: false,
-        contentType: false,
-        processData: false,
-        success: function(response) {
-            if(response == "success"){
-            swal("Book", "Success", "success")
-            let tr = '<tr class="'+$('#date').val()+'"><td>'+$('#date').val()+'</td><td><span class="text-primary">Pending</span></td></tr>'
-            $('.'+$('#history tbody tr:first').attr('class')).before(tr)
-        }
-        }
+    $('#form-club').on('submit', function() {
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('route'),
+            data: new FormData(this),
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                if (response == "success") {
+                    swal("Book", "Success", "success")
+                    let tr = '<tr class="' + $('#date').val() + '"><td>' + $('#date').val() + '</td><td><span class="text-primary">Pending</span></td></tr>'
+                    $('.' + $('#history tbody tr:first').attr('class')).before(tr)
+                }
+            }
+        })
+        return false
     })
-    return false
-})
 </script>
 
 @endsection

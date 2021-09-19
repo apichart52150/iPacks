@@ -240,6 +240,7 @@
         Route::prefix('clubs')->namespace('Admin\club')->group(function () {
 
             Route::get('list','HomeController@index')->name('clubs-list');
+            Route::get('history/{date}/{status}','HomeController@history');
             Route::post('confirm','HomeController@confirm')->name('clubs-confirm');
             
         });
