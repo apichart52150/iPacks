@@ -89,6 +89,9 @@
             <div class="input-con">
                 <button url="{{url('clubs/history')}}" class="search-data btn btn-primary">Search</button>
             </div>
+            <div class="input-con">
+                <button class="reset-data btn btn-danger">Reset</button>
+            </div>
             <hr>
             <table class="table table-bordered">
                 <thead>
@@ -135,7 +138,7 @@
     </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{ asset('public/assets/js/ajax.jquery.js') }}"></script>
 <script>
     let get_url = $(location).attr('href').split("history/")[1].split("?")[0]
     console.log(get_url)
@@ -145,8 +148,8 @@
         url_date = "Show all"
     if (url_status == "all")
         url_status = "Show all"
-    $('.search_date').html(url_date)
-    $('.search_status').html(url_status)
+    $('.date').val(url_date)
+    $('.status').val(url_status)
     $('.search-data').on('click', () => {
         let date = $('.date').val()
         if (date == "")
@@ -154,6 +157,11 @@
         let status = $('.status').val()
         let url = $('.search-data').attr('url') + '/' + date + '/' + status
         window.location.href = url
+    })
+
+    $('.reset-data').on('click', () => {
+        $('.date').val(null)
+        $('.status').val("all")
     })
 </script>
 

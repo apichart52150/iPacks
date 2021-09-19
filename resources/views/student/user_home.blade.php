@@ -201,12 +201,12 @@
                 <div class="avatar-lg float-left">
                     <div class="hover-scale">
                         <div class="widget-simple">
-                            <i class="fas fa-calendar-alt avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                            <i class="fas fa-users avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                         </div>
                     </div>
                 </div>
                 <div class="text-center">
-                    <h2 class="mb-3 text-light">Clubs to Upskill</h2>
+                    <h2 class="mb-3 text-light">Clubs</h2>
                 </div>
             </div>
         </a>
@@ -219,12 +219,12 @@
                 <div class="avatar-lg float-left">
                     <div class="hover-scale">
                         <div class="widget-simple">
-                            <i class="fas fa-calendar-alt avatar-title display-6 m-0 " style="font-size: 5em;"></i>
+                            <i class="fab fa-leanpub avatar-title display-6 m-0 " style="font-size: 5em;"></i>
                         </div>
                     </div>
                 </div>
                 <div class="text-center">
-                    <h2 class="mb-3 text-light">1 on 1 Tutorail</h2>
+                    <h2 class="mb-3 text-light">Tutorail</h2>
                 </div>
             </div>
         </a>

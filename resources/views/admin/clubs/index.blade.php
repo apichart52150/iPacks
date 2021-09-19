@@ -36,6 +36,16 @@
 @endsection
 
 @section('page-title')
+
+<!-- <link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.css') }}"> -->
+<!-- <link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.midnight-blue.css') }}"> -->
+<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.midnight-blue.min.css') }}">
+<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.min.css') }}">
+<!-- <link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.orange-coral.css') }}"> -->
+<!-- <link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.orange-coral.min.css') }}"> -->
+<!-- <link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.royal-navy.css') }}"> -->
+<!-- <link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.royal-navy.min.css') }}"> -->
+
 <div class="row">
     <div class="col-12 m-0">
         <div class="page-title-box">
@@ -61,7 +71,7 @@
 </style>
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 mb-2">
         <div class="card-box text-right">
             <a href="{{url('clubs/history',['all','all'])}}">
                 <span>History</span>
@@ -76,7 +86,7 @@
             <p class="user_name">{{ $club->first_name }} {{ $club->last_name }}</p>
             <div class="row">
                 <div class="col-6">
-                    <button class="approval btn btn-success w-100" onclick="approval('{{ $club->id }}','{{ $club->user_create }}');">Approval</button>
+                    <button class="approval btn btn-success w-100" onclick="approval('{{ $club->id }}','{{ $club->user_create }}','{{ $club->club_date }}','{{ $club->first_name }} {{ $club->last_name }}');">Approval</button>
                 </div>
                 <div class="col-6">
                     <button class="disapproval btn btn-danger w-100" onclick="disapproval('{{ $club->id }}')">Disapproval</button>
@@ -90,11 +100,37 @@
         <span>Don't have data</span>
     </div>
     @endif
+    <div class="col-md-12 mt-4 mb-5 pb-5">
+        <div id="calendar"></div>
+    </div>
     <div id="route" route="{{route('clubs-confirm')}}"></div>
 </div>
 
+<script src="{{ asset('public/assets/js/ajax.jquery.js') }}"></script>
+<script src="{{ asset('public/evo-calendar/js/evo-calendar.min.js') }}"></script>
+
+
 <script>
-    function approval(id, student) {
+    let event = []
+
+    "@foreach ($approval as $club)"
+    event.push({
+        id: "{{ $club->id }}",
+        name: "{{ $club->first_name }} {{ $club->last_name }}",
+        description: "{{ $club->email }}",
+        date: "{{ $club->club_date }}",
+        type: "birthday",
+        everyYear: !0
+    })
+    "@endforeach"
+
+    $("#calendar").evoCalendar({
+        theme: 'Royal Navy',
+        eventHeaderFormat: 'dd MM yyyy',
+        calendarEvents: event,
+    })
+
+    function approval(id, student_id, date, student_name) {
         Swal.fire({
             title: 'Are you sure?',
             text: "",
@@ -105,7 +141,7 @@
             confirmButtonText: 'OK',
         }).then((result) => {
             if (result.value) {
-                update_data(id, student, 1, "", "Successfully")
+                update_data(id, date, student_id, student_name, 1, "", "Successfully")
             }
         })
     }
@@ -121,17 +157,16 @@
             confirmButtonText: 'OK',
         }).then((result) => {
             if (result.value) {
-                update_data(id, 0, 2, result.value, "Successfully")
+                update_data(id, "", 0, "", 2, result.value, "Successfully")
             }
         })
     }
 
-    function update_data(id, student, value, note, text) {
-        console.log(student)
+    function update_data(id, date, student_id, student_name, value, note, text) {
         let data = new FormData()
         data.append('_token', "{{ csrf_token() }}")
         data.append('id', id)
-        data.append('student', student)
+        data.append('student', student_id)
         data.append('value', value)
         data.append('note', note)
         $.ajax({
@@ -142,12 +177,23 @@
             contentType: false,
             processData: false,
             success: function(response) {
-                console.log(response)
                 if (response == "success") {
                     Swal.fire(text, '', 'success')
                     $('.id-' + id).remove()
-                } else
+                    if (value == 1)
+                        event.push({
+                            id: id,
+                            name: student_name,
+                            description: "",
+                            date: date,
+                            type: "birthday",
+                            everyYear: !0
+                        })
+                } else if (response == "failed") {
                     Swal.fire('Failed', '', 'error')
+                } else {
+                    Swal.fire('Failed', 'User has point ' + response, 'error')
+                }
             }
         })
     }

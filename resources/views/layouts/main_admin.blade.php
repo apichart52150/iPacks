@@ -84,7 +84,7 @@
 
                 <!-- LOGO -->
                 <div class="logo-box">
-                    <a href="#" class="logo text-center">
+                    <a href="{{route('admin_home')}}" class="logo text-center">
                         <span class="logo-lg">
                             <span class="logo-lg-text-light">IPACKS ADMIN</span>
                         </span>

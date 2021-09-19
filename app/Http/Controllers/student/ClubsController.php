@@ -27,7 +27,7 @@ class ClubsController extends Controller
         $date = $data['date'];
         $user_id = Auth::user()->id;
         DB::insert('INSERT INTO clubs (club_date,status,user_create,user_edit,created_at,updated_at) VALUES (?,?,?,?,?,?)',
-            [$date,0, $user_id, $user_id, new Datetime(), new Datetime()]);
+            [new Datetime($date),0, $user_id, $user_id, new Datetime(), new Datetime()]);
         return "success";
     }
 }
