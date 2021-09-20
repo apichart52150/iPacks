@@ -121,6 +121,11 @@
                 });
             });
         });
+
+        Route::get('clubs','student\ClubsController@index')->name('clubs');
+        Route::post('clubs/book','student\ClubsController@book')->name('clubs-book');
+
+        Route::get('tutorail','student\TutorialController@index')->name('tutorail');
     });
 
     // ==================== Routes Detail ==================== //
@@ -234,6 +239,21 @@
 
             Route::get('restatus_writing/{id}', 'ReportController@reStatus')->name('restatus_writing');
             Route::get('delete_writing/{id}', 'ReportController@delete_topic')->name('delete_writing.pending');
+        });
+
+        //Clubs
+        Route::prefix('clubs')->namespace('Admin\club')->group(function () {
+
+            Route::get('list','HomeController@index')->name('clubs-list');
+            Route::get('history/{date}/{status}','HomeController@history');
+            Route::post('confirm','HomeController@confirm')->name('clubs-confirm');
+            
+        });
+
+        //Tutorial
+        Route::prefix('tutorial')->namespace('Admin\ipack\tutorial')->group(function () {
+
+            
         });
     });
 // ==================== End Routes Admin ====================== //

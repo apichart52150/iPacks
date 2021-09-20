@@ -107,6 +107,40 @@
 
     </div>
     <!-- end row -->
+
+    <div class="row">
+        
+        <div class="col-xl-6 col-md-6">
+            <a href="{{ route('clubs-list')}}">
+                <div class="widget-bg-color-icon card-box">
+                    <div class="avatar-lg rounded-circle bg-icon-info float-left">
+                        <i class="fas fa-users font-24 avatar-title text-white"></i>
+                    </div>
+                    <div class="text-right">
+                        <h3 class="text-dark mt-1"><span class="counter">iSAC</span></h3>
+                        <h3 class="text-info mb-0"><span class="counter">Clubs</span></h3>
+                    </div>
+                    <div class="clearfix"></div>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-xl-6 col-md-6">
+            <a href="{{route('speaking_dashboard')}}">
+                <div class="widget-bg-color-icon card-box">
+                    <div class="avatar-lg rounded-circle bg-icon-info float-left">
+                        <i class="fab fa-leanpub font-24 avatar-title text-white"></i>
+                    </div>
+                    <div class="text-right">
+                        <h3 class="text-dark mt-1"><span class="counter">iSAC</span></h3>
+                        <h3 class="text-info mb-0"><span class="counter">Tutorial</span></h3>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+
+    </div>
     
 @endsection
 
