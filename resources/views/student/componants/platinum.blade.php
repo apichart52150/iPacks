@@ -150,10 +150,9 @@
     </div>
 
     <div class="col-xl-6 col-md-6 col-sm-12">
-        <a href="#" id="alert1">
+        <a href="{{ route('clubs') }}">
             <div class="card-box widget-icon bg-primary ribbon-box">
                 <!-- <div class="ribbon-two ribbon-two-diamond avatar-title display-6 m-0 "><span>Diamond</span></div> -->
-                <div class="ribbon-two ribbon-two-secondary"><span>Platinum</span></div>
                 <div class="avatar-lg float-left">
                     <div class="hover-scale">
                         <div class="widget-simple">
@@ -169,10 +168,9 @@
     </div>
 
     <div class="col-xl-6 col-md-6 col-sm-12">
-        <a href="#" id="alert2">
+        <a href="{{ route('tutorail') }}">
             <div class="card-box widget-icon bg-primary ribbon-box">
                 <!-- <div class="ribbon-two ribbon-two-diamond avatar-title display-6 m-0 "><span>Diamond</span></div> -->
-                <div class="ribbon-two ribbon-two-secondary"><span>Platinum</span></div>
                 <div class="avatar-lg float-left">
                     <div class="hover-scale">
                         <div class="widget-simple">
@@ -194,28 +192,3 @@
         </div>
     </div>
 </div>
-
-@section('js')
-<!-- Sweet Alerts js -->
-<script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
-<!-- Sweet alert init js-->
-<script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
-<script>
-    $('#alert1').on('click', function() {
-        Swal.fire({
-          title: 'Access denied',
-          text: 'Please upgrade to platinum for access it',
-          type: 'error',
-          timer: 5000,
-        })
-    });
-    $('#alert2').on('click', function() {
-        Swal.fire({
-          title: 'Access denied',
-          text: 'Please upgrade to platinum for access it',
-          type: 'error',
-          timer: 5000,
-        })
-    });
-</script>
-@stop

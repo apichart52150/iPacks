@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Writing;
 use DB;
+use App\Model\Points;
 use File;
 use Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -136,7 +137,9 @@ class HomeController extends Controller
             
         }
 
-        return view('student.ipack.writing.home', compact('task1', 'task2'));
+        $pointWriting = Points::getPoint(Auth::user()->id);
+
+        return view('student.ipack.writing.home', compact('task1', 'task2', 'pointWriting'));
 
     }
 

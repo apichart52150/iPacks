@@ -35,7 +35,6 @@
 
     <body class="center-menu">
         <!-- Navigation Bar-->
-        
         <header id="topnav">
             <!-- Topbar Start -->
             <div class="navbar-custom">
@@ -387,8 +386,6 @@
             document.onselectstart = function() { return false; }
 
         </script>
-
-        
         
     </body>
 </html>

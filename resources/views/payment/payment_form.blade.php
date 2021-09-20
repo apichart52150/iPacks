@@ -77,11 +77,11 @@
                                     <div class="col-md-10">
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="cc" name="payMethod" value="CC" class="custom-control-input" required>
-                                            <label class="custom-control-label" for="cc">Credit card</label>
+                                            <label class="custom-control-label h3" for="cc"><i class="far fa-credit-card"></i> Credit card</label>
                                         </div>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="ali" name="payMethod" value="ALIPAY" class="custom-control-input" required>
-                                            <label class="custom-control-label" for="ali">Alipay</label>
+                                            <label class="custom-control-label h3" for="ali"><i class="fab fa-alipay"></i> Alipay</label>
                                         </div>
                                     </div>
                                 </div>
