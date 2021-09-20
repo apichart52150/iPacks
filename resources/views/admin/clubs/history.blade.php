@@ -79,7 +79,12 @@
         <div class="card-box">
             <label for="">Date: </label>
             <div class="input-con pr-1">
-                <input type="date" class="date input form-control">
+                <div class="input-group">
+                    <input type="text" class="date form-control" data-provide="datepicker" data-date-autoclose="true" id="date" required placeholder="mm/dd/yyyy">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="ti-calendar"></i></span>
+                    </div>
+                </div>
             </div>
             <label for="">Status: </label>
             <div class="input-con pr-1">
@@ -140,6 +145,8 @@
         </div>
     </div>
 </div>
+<!-- form-pickers js-->
+<script src="{{ asset('public/assets/js/bootstrap-datepicker.min.js') }}"></script>
 
 <script src="{{ asset('public/assets/js/ajax.jquery.js') }}"></script>
 <script>

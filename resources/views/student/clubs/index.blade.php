@@ -43,7 +43,12 @@
                 <label for="">Club date</label>
             </div>
             <div class="col-md-10 mt-2">
-                <input type="date" name="date" id="date" class="form-control" required id="" placeholder="">
+                <div class="input-group">
+                    <input type="text" class="form-control" data-provide="datepicker" data-date-autoclose="true" id="date" required placeholder="mm/dd/yyyy">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="ti-calendar"></i></span>
+                    </div>
+                </div>
             </div>
             <div class="col-md-2 mt-2">
                 <label for="">Time</label>
@@ -110,6 +115,8 @@
 <script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
 <!-- Sweet alert init js-->
 <script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
+<!-- form-pickers js-->
+<script src="{{ asset('public/assets/js/bootstrap-datepicker.min.js') }}"></script>
 
 <script>
     $('#form-club').on('submit', function() {
