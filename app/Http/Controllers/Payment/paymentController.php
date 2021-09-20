@@ -51,7 +51,6 @@ class paymentController extends Controller
         ->where('id', $input['id'])
         ->update([
             'status' => 'wait',
-            'username' => $input['username'],
             'first_name' => $input['first_name'],
             'last_name' => $input['last_name'],
             'email' => $input['email'],

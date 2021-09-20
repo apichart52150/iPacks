@@ -133,13 +133,13 @@
                                 <input type="hidden" name="amount" value="{{ $price }}.00">
                                 <input type="hidden" name="currCode" value="764" >
                                 <input type="hidden" name="successUrl" value="{{ route('pay_success') }}">
-                                <input type="hidden" name="failUrl" value="{{ route('success') }}">
+                                <input type="hidden" name="failUrl" value="{{ route('fail') }}">
                                 <input type="hidden" name="cancelUrl" value="{{ route('success') }}">
                                 <input type="hidden" name="payType" value="N">
                                 <input type="hidden" name="lang" value="E">
                                 <input type="hidden" name="TxType" value="Retail" > 
                                 <input type="submit" class="btn btn-success waves-effect waves-light" name="submit" value="Confirm">     
-                                <a href="http://localhost/ipack/success">
+                                <a href="{{ route('logout')}}">
                                     <input type="button" class="btn btn-danger waves-effect waves-light" name="submit" value="Cancel">
                                 </a>
                             </form>
@@ -150,13 +150,13 @@
                 			    <input type="hidden" name="currCode" value="764" >
                                 <input type="hidden" name="amount" value="{{ $price }}.00">
                                 <input type="hidden" name="successUrl" value="{{ route('payment_success') }}">
-                                <input type="hidden" name="failUrl" value="{{ route('success') }}">
+                                <input type="hidden" name="failUrl" value="{{ route('fail') }}">
                                 <input type="hidden" name="cancelUrl" value="{{ route('success') }}">
                                 <input type="hidden" name="payType" value="N">
                                 <input type="hidden" name="lang" value="E">
                                 <input type="hidden" name="TxType" value="Retail" > 
                                 <input type="submit" class="btn btn-success waves-effect waves-light" name="submit" value="Confirm">     
-                                <a href="{{ route('success')}}">
+                                <a href="{{ route('logout')}}">
                                     <input type="button" class="btn btn-danger waves-effect waves-light" name="submit" value="Cancel">
                                 </a>
                             </form>

@@ -53,20 +53,20 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label" for="first_name">First Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name" required>
+                                        <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name" value="{{ auth()->user()->first_name }}" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label" for="last_name">Last Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required>
+                                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" value="{{ auth()->user()->last_name }}" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label" for="example-textare">Address</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" id="example-textarea" name="address" rows="5" spellcheck="false" placeholder="Address..." required></textarea>
+                                        <textarea class="form-control" id="example-textarea" name="address" rows="5" spellcheck="false" placeholder="Address..." required>{{ auth()->user()->address }}</textarea>
                                     </div>
                                 </div>
                                

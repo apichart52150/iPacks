@@ -202,20 +202,23 @@
 <script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
 <script>
     $('#alert1').on('click', function() {
-        Swal.fire({
-          title: 'Access denied',
-          text: 'Please upgrade to platinum for access it',
-          type: 'error',
-          timer: 5000,
-        })
+        swal({
+            title: 'Access denied',
+            text: 'Please upgrade to platinum for access it',
+            type: 'warning',
+            showConfirmButton: false,
+            footer:'<a href="{{ url("payment/platinum") }}">Upgrade to Platinum</a>'
+        });
     });
+    
     $('#alert2').on('click', function() {
-        Swal.fire({
-          title: 'Access denied',
-          text: 'Please upgrade to platinum for access it',
-          type: 'error',
-          timer: 5000,
-        })
+        swal({
+            title: 'Access denied',
+            text: 'Please upgrade to platinum for access it',
+            type: 'warning',
+            showConfirmButton: false,
+            footer:'<a href="{{ url("payment/platinum") }}">Upgrade to Platinum</a>'
+        });
     });
 </script>
 @stop
