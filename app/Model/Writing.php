@@ -8,12 +8,12 @@ use Auth;
 
 class Writing extends Model {
 
-	public static function queryWriting($std_id) {
+	public static function queryWriting($id) {
 
         $writing = DB::table('text_result')
-        ->select('text_result.*','users.username as th_name')
-        ->where('std_id','=', $std_id)
-        ->leftjoin('users','users.id','=','text_result.th_id')
+        ->select('text_result.*','staff.staff_username as th_name')
+        ->where('std_id','=', $id)
+        ->leftjoin('staff','staff.staff_id','=','text_result.th_id')
         ->orderBy('sent_date', 'desc')
         ->get();
 

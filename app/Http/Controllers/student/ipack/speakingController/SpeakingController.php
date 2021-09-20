@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Session;
 use App\Model\Speaking;
+use App\Model\Points;
 
 class SpeakingController extends Controller
 {
@@ -89,6 +90,10 @@ class SpeakingController extends Controller
             ]);
 
             DB::commit();
+
+            $type = "speaking_point";
+
+            Points::decrementPoint($type);
 
             return response()->json(['success' => 'Upload success']);
 

@@ -133,4 +133,23 @@
         location.reload();
     }
 </script>
+@php 
+    use App\Model\Points;
+    $point = Points::getPoint(Auth::user('web')->id);
+@endphp
+
+<script>
+    var speaking = {{ $point->speaking_point }};
+    if(speaking == 0){
+        swal({
+            title: 'Access denied',
+            text: "You dont't have point",
+            type: 'warning',
+            showConfirmButton: false,
+            footer:'<a href="{{ url("payment/platinum") }}">Upgrade to Platinum</a>',
+        }).then(function() {
+            window.location.href ="{{ route('user_home')}}"
+        });
+    }
+</script>
 @stop

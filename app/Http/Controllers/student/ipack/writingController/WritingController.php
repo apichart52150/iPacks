@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use DB;
 use Auth;
 use App\Model\Writing;
+use App\Model\Points;
 
 
 class WritingController extends Controller
@@ -30,7 +31,7 @@ class WritingController extends Controller
 
     public function store_sac(Request $request) {
 
-         // N = Sent
+        // N = Sent
         // Y = Success
         // W | TH_S = Pending
         // ST_S = Work in progres
@@ -61,13 +62,8 @@ class WritingController extends Controller
                             'due_date' => $due_date,
                         ]
                     );
-
-                    // dd($result);
-
-                
+                    
                 if($result) {
-
-                    // Writing::decreasePoint();
 
                     DB::table('log')
                         ->insert([
@@ -78,6 +74,10 @@ class WritingController extends Controller
                         ]);
 
                     DB::commit();
+
+                    $type = "writing_point";
+
+                    Points::decrementPoint($type);
                     
                     return redirect('status_writing');
                 }

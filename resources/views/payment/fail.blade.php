@@ -38,7 +38,7 @@
                                     <h3 class="mt-3 mb-2">Internal Server Error</h3>
                                     <p class="text-muted mb-3">Why not try refreshing your page? or you can contact <a href="" class="text-dark"><b>Support</b></a></p>
 
-                                    <a href="index.html" class="btn btn-success waves-effect waves-light">Back to Home</a>
+                                    <a href="{{ route('logout') }}" class="btn btn-success waves-effect waves-light">Back</a>
                                 </div>
 
                             </div> <!-- end card-body -->        

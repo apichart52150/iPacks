@@ -16,9 +16,6 @@
         <div class="col-12">
             <div class="card-box">
                 <h4 class="header-title">Send Email</h4>
-                @php
-                    
-                @endphp
 
                 <div class="row">
                     <div class="col-12">
