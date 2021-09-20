@@ -36,7 +36,7 @@
 			<div class="page-title-box">
 				<div class="page-title-right">
 					<ol class="breadcrumb m-0">
-						<li class="breadcrumb-item"><i class="fas fa-address-card"></i> <a href="{{ route('staff') }}">Back</a></li>
+						<li class="breadcrumb-item"><i class="fas fa-address-card"></i> <a href="{{ route('staff') }}">Staff</a></li>
 						<!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
 						<li class="breadcrumb-item active">Edit</li>
 					</ol>

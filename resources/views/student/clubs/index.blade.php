@@ -43,7 +43,7 @@
                 <label for="">Club date</label>
             </div>
             <div class="col-md-10 mt-2">
-                <input type="date" name="date" id="date" class="form-control" id="" placeholder="">
+                <input type="date" name="date" id="date" class="form-control" required id="" placeholder="">
             </div>
             <div class="col-md-2 mt-2">
                 <label for="">Time</label>
@@ -52,7 +52,7 @@
                 <input type="text" name="time" class="form-control" value="60 mins." readonly>
             </div>
             <div class="col-md-12 mt-3 d-flex justify-content-center">
-                <button type="submit" class="btn btn-primary w-25">Book.</button>
+                <button type="submit" class="btn btn-primary w-25">Book</button>
             </div>
         </div>
     </form>
@@ -60,7 +60,7 @@
     <div class="alert alert-danger text-center" role="alert">
         <h2>Available points.</h2>
         <br>
-        <h4>0</h4>
+        <h3>0</h3>
     </div>
     @endif
 </div>
@@ -112,22 +112,32 @@
 <script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
 
 <script>
-    swal("Avalable points.", "{{ $points->club_point }}")
-
     $('#form-club').on('submit', function() {
-        $.ajax({
-            type: 'POST',
-            url: $(this).attr('route'),
-            data: new FormData(this),
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function(response) {
-                if (response == "success") {
-                    swal("Book", "Success", "success")
-                    let tr = '<tr class="' + $('#date').val() + '"><td>' + $('#date').val() + '</td><td><span class="text-primary">Pending</span></td><td></td></tr>'
-                    $('.' + $('#history tbody tr:first').attr('class')).before(tr)
-                }
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'OK',
+        }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    type: 'POST',
+                    url: $(this).attr('route'),
+                    data: new FormData(this),
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        if (response == "success") {
+                            let tr = '<tr class="' + $('#date').val() + '"><td>' + $('#date').val() + '</td><td><span class="text-primary">Pending</span></td><td></td></tr>'
+                            $('.' + $('#history tbody tr:first').attr('class')).before(tr)
+                            swal("Book", "Success", "success")
+                        }
+                    }
+                })
             }
         })
         return false

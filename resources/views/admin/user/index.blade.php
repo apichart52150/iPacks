@@ -1,0 +1,163 @@
+@extends('layouts.main_admin')
+
+@section('topbar-menu')
+<div class="topbar-menu">
+    <div class="container-fluid">
+        <div id="navigation" class="bg-dark">
+            <!-- Navigation Menu-->
+            <ul class="navigation-menu  d-lg-flex justify-content-center">
+
+                <li class="has-submenu">
+                    <a href="{{ route('admin_home') }}" class="text-light">
+                        <i class="fas fa-home"></i>Home
+                    </a>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="{{ route('staff') }}" class="text-light">
+                        <i class="fas fa-address-card"></i>Staff
+                    </a>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="{{ route('user') }}" class="text-light">
+                        <i class="fas fa-address-card"></i>User
+                    </a>
+                </li>
+
+            </ul>
+            <!-- End navigation menu -->
+
+            <div class="clearfix"></div>
+        </div>
+        <!-- end #navigation -->
+    </div>
+    <!-- end container -->
+</div>
+@endsection
+
+@section('page-title')
+<div class="row">
+    <div class="col-12 m-0">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('admin_home') }}">Home</a>
+                    </li>
+                    <!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
+                    <li class="breadcrumb-item active">Staff</li>
+                </ol>
+            </div>
+            <h4 class="page-title">Staff</h4>
+        </div>
+    </div>
+</div>
+@endsection
+
+@section('content')
+
+<style>
+    .click {
+        cursor: pointer;
+    }
+</style>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card-box">
+            @if(session()->has('success_ans'))
+            {!!session()->get('success_ans')!!}
+            @endif
+
+            @if(session()->has('error_ans'))
+            {!!session()->get('error_ans')!!}
+            @endif
+
+            {{-- <h4 class="header-title">User</h4> --}}
+            <p class="sub-header">
+                Manage Staff List
+            </p>
+
+            <table id="basic-datatable" class="table dt-responsive nowrap">
+                <thead>
+                    <tr>
+                        <th class="min-width">Id</th>
+                        <th data-sort-initial="true" data-toggle="true">Email</th>
+                        <th>password</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Expire date</th>
+                        <th>Status</th>
+                        <th>Manage : </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach($users as $key => $row)
+                    <tr class="row-{{$row->id}}">
+                        <td>{{$row->id}}</td>
+                        <td>{{$row->email}}</td>
+                        <td>********</td>
+                        <td>{{$row->first_name}} {{$row->last_name}}</td>
+                        <td>{{ $row->address }}</td>
+                        <td>{{ $row->expire_date }}</td>
+                        <td><span class="badge badge-success p-2">{{$row->status}}</span></td>
+                        <td>
+                            <div class="d-flex flex-row">
+                                <a href="{{ url('user/edit',[$row->id]) }}"
+                                    class="btn btn-info text-white click btn-xs mr-1">Edit</a>
+
+                                <form class="delete-user"
+                                    onsubmit="return delete_user('{{ csrf_token() }}','{{$row->id}}','{{ route('remove-user') }}')">
+                                    <button type="submit" class="btn btn-danger btn-xs mr-1">Delete</button>
+                                </form>
+
+                            </div>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div> <!-- end card-box -->
+    </div> <!-- end col -->
+</div>
+
+<script>
+    function delete_user(token ,id, url){ 
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'OK',
+        }).then((result) => {
+            if (result.value) {
+                let data = new FormData()
+                data.append('_token', "{{ csrf_token() }}")
+                data.append('id', id)
+                $.ajax({
+                    type: 'POST',
+                    url: url,
+                    data: data,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        if (response == "success") {
+                            swal("Update success", "", "success").then(()=>{
+                                $('.row-'+id).remove()
+                            })
+                            }
+                        else
+                            swal("Update failed", "", "error")
+                            }
+                })
+            }
+        })
+        return false
+    }
+</script>
+
+@endsection

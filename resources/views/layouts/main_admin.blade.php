@@ -11,8 +11,10 @@
     <link rel="shortcut icon" href="{{ asset('public/assets/images/favicon.ico') }}">
 
     <!-- third party css -->
-    <link href="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('public/assets/libs/datatables/responsive.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/libs/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{ asset('public/assets/libs/datatables/responsive.bootstrap4.css') }}" rel="stylesheet"
+        type="text/css" />
     <link href="{{ asset('public/assets/libs/datatables/buttons.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('public/assets/libs/datatables/select.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
     <!-- third party css end -->
@@ -56,8 +58,10 @@
                     </li>
 
                     <li class="dropdown notification-list">
-                        <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="{{ asset('public/assets/images/avatar-1.jpg') }}" alt="user-image" class="rounded-circle">
+                        <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light"
+                            data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="{{ asset('public/assets/images/avatar-1.jpg') }}" alt="user-image"
+                                class="rounded-circle">
                             <span class="pro-user-name ml-1">
                                 {{ Auth::user('staff')->staff_username }} <i class="mdi mdi-chevron-down"></i>
                             </span>
@@ -169,7 +173,8 @@
         <script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
         <script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
 
-        
+
+        <script src="{{ asset('public/assets/js/ajax.jquery.js') }}"></script>
 
 
 </body>

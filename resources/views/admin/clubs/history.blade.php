@@ -21,6 +21,12 @@
 
                 <li class="has-submenu">
                     <a href="{{ route('staff') }}" class="text-light">
+                        <i class="fas fa-address-card"></i>Staff
+                    </a>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="{{ route('user') }}" class="text-light">
                         <i class="fas fa-address-card"></i>User
                     </a>
                 </li>
@@ -71,9 +77,6 @@
 <div class="row">
     <div class="col-md-12">
         <div class="card-box">
-            Date: <span class="search_date pr-1"></span>
-            Status: <span class="search_status"></span>
-            <hr>
             <label for="">Date: </label>
             <div class="input-con pr-1">
                 <input type="date" class="date input form-control">
@@ -97,8 +100,8 @@
                 <thead>
                     <tr class="table-secondary">
                         <th class="">Club date</th>
-                        <th>User create</th>
-                        <th>User edit</th>
+                        <th>USER</th>
+                        <th>Approval by</th>
                         <th>Status</th>
                         <th>Note</th>
                     </tr>
@@ -107,7 +110,7 @@
                     @if(count($clubs)>0)
                     @foreach ($clubs as $club)
                     <tr>
-                        <td>{{ $club->club_date }}</td>
+                        <td>{{ date('d-m-Y', strtotime($club->club_date)) }}</td>
                         <td>{{ $club->first_name }} {{ $club->last_name }}</td>
                         <td>{{ $club->staff_username }}</td>
                         <td>

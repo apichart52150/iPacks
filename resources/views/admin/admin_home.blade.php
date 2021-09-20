@@ -21,6 +21,12 @@
 
                     <li class="has-submenu">
                         <a href="{{ route('staff') }}" class="text-light">
+                            <i class="fas fa-address-card"></i>Staff 
+                        </a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="{{ route('user') }}" class="text-light">
                             <i class="fas fa-address-card"></i>User 
                         </a>
                     </li>

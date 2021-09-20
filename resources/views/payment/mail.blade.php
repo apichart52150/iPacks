@@ -12,12 +12,19 @@
     table tr th {
         padding: 10px;
     }
-    table{
+
+    table {
         width: auto;
     }
 </style>
 
 <body>
+    @if($data['package']=="gold")
+    <div class="bg-gold">
+        
+    </div>
+    @elseif ($data['package']=="gold")
+    @endif
     <center>
         <table>
             <tr>

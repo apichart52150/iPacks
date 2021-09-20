@@ -15,7 +15,13 @@
 
                     <li class="has-submenu">
                         <a href="{{ route('staff') }}" class="text-light">
-                            <i class="fas fa-address-card"></i>staff
+                            <i class="fas fa-address-card"></i>Staff
+                        </a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="{{ route('user') }}" class="text-light">
+                            <i class="fas fa-address-card"></i>User 
                         </a>
                     </li>
 
@@ -38,10 +44,10 @@
 					<ol class="breadcrumb m-0">
 						<li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('admin_home') }}">Home</a></li>
 						<!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
-						<li class="breadcrumb-item active">User</li>
+						<li class="breadcrumb-item active">Staff</li>
 					</ol>
 				</div>
-				<h4 class="page-title">User</h4>
+				<h4 class="page-title">Staff</h4>
 			</div>
 		</div>
 	</div>     
@@ -60,9 +66,9 @@
 				{!!session()->get('error_ans')!!}
 				@endif 
 
-                <h4 class="header-title">User</h4>
+                {{-- <h4 class="header-title">User</h4> --}}
                 <p class="sub-header">
-                    Manage User List
+                    Manage Staff List
                 </p>
 
                 <div class="mb-2">
