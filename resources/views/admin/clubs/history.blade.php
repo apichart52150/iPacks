@@ -141,13 +141,12 @@
 <script src="{{ asset('public/assets/js/ajax.jquery.js') }}"></script>
 <script>
     let get_url = $(location).attr('href').split("history/")[1].split("?")[0]
-    console.log(get_url)
     let url_date = get_url.split("/")[0]
     let url_status = get_url.split("/")[1]
     if (url_date == "all")
-        url_date = "Show all"
+        url_date = null
     if (url_status == "all")
-        url_status = "Show all"
+        url_status = "all"
     $('.date').val(url_date)
     $('.status').val(url_status)
     $('.search-data').on('click', () => {

@@ -18,7 +18,9 @@
 @endsection
 
 @section('content')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css"
+    integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
     .card-box,
@@ -76,8 +78,8 @@
         <tbody>
             @if(count($clubs) > 0)
             @foreach ( $clubs as $club )
-            <tr class="{{ $club->club_date }}">
-                <th scope="row">{{ $club->club_date }}</th>
+            <tr class="{{ $club->id }}">
+                <th scope="row">{{ date('d-m-Y', strtotime($club->club_date)) }}</th>
                 <td>
                     @if($club->status == 0)
                     <span class="text-primary">Pending</span>
@@ -92,7 +94,7 @@
             @endforeach
             @else
             <tr>
-                <td colspan="2" class="text-center">
+                <td colspan="3" class="text-center">
                     <span>Don't have data</span>
                 </td>
             </tr>
@@ -123,7 +125,7 @@
             success: function(response) {
                 if (response == "success") {
                     swal("Book", "Success", "success")
-                    let tr = '<tr class="' + $('#date').val() + '"><td>' + $('#date').val() + '</td><td><span class="text-primary">Pending</span></td></tr>'
+                    let tr = '<tr class="' + $('#date').val() + '"><td>' + $('#date').val() + '</td><td><span class="text-primary">Pending</span></td><td></td></tr>'
                     $('.' + $('#history tbody tr:first').attr('class')).before(tr)
                 }
             }

@@ -82,7 +82,7 @@
     @foreach ($clubs as $club)
     <div class="col-md-4 id-{{$club->id}}">
         <div class="card-box text-center">
-            <h3>{{ $club->club_date }}</h3>
+            <h3>{{ date('d-m-Y', strtotime($club->club_date)) }}</h3>
             <p class="user_name">{{ $club->first_name }} {{ $club->last_name }}</p>
             <div class="row">
                 <div class="col-6">

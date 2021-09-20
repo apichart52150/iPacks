@@ -2,10 +2,10 @@
 
 namespace App\Model;
 
-use Illuminate\Database\Eloquent\Model;
-use DB;
 use Auth;
 use DateTime;
+use DB;
+use Illuminate\Database\Eloquent\Model;
 
 class Clubs extends Model
 {
@@ -13,7 +13,7 @@ class Clubs extends Model
     {
 
         $clubs = DB::table('clubs')
-            ->select('club_date', 'user_edit', 'status', 'note')
+            ->select('id', 'club_date', 'user_edit', 'status', 'note')
             ->where('user_create', '=', Auth::user()->id)
             ->orderBy('updated_at', 'desc')
             ->get();
@@ -23,11 +23,13 @@ class Clubs extends Model
     public static function list_by_staff_retrospect()
     {
 
+        $datetime = new Datetime();
+        $datetime->modify('-3 months');
         $clubs = DB::table('clubs')
             ->select('clubs.id', 'clubs.club_date', 'users.first_name', 'users.last_name', 'users.email')
             ->leftjoin('users', 'clubs.user_create', '=', 'users.id')
             ->where('clubs.status', '=', 1)
-            ->where('clubs.club_date', '>', '2021-08-10')
+            ->where('clubs.club_date', '>', $datetime->format('Y-m-d'))
             ->orderBy('clubs.updated_at', 'desc')
             ->get();
         return ($clubs);
