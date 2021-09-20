@@ -145,9 +145,9 @@ class HomeController extends Controller
 
     public function status_writing() {
 
-        $std_id = auth('web')->user()->id;
+        $id = auth('web')->user()->id;
 
-        $writing = Writing::queryWriting($std_id);
+        $writing = Writing::queryWriting($id);
 
         // dd($writing);
         return view('student.ipack.writing.status_writing',  compact('writing'));

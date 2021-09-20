@@ -18,4 +18,21 @@ class Points extends Model {
         return ($getPoint);
 
     } 
+
+    public static function decrementPoint($type) {
+
+        $getPoint = DB::table('point')
+        ->select($type)
+        ->where('user_id','=', auth('web')->user()->id)
+        ->first();
+
+        if($getPoint->$type != 0) {
+            DB::table('point')
+            ->where('user_id', '=', auth('web')->user()->id)
+            ->decrement($type);
+        } else {
+            return redirect('user_home');
+        }
+
+    } 
 }

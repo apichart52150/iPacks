@@ -11,9 +11,9 @@ class Speaking extends Model {
     public static function querySpeaking($std_id) {
 
         $speaking = DB::table('speaking')
-        ->select('speaking.*','users.username as th_name')
+        ->select('speaking.*','staff.staff_username as th_name')
         ->where('std_id','=', $std_id)
-        ->leftjoin('users','users.id','=','speaking.th_id')
+        ->leftjoin('staff','staff.staff_id','=','speaking.th_id')
         ->orderBy('created_at', 'desc')
         ->get();
 
