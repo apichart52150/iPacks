@@ -19,14 +19,11 @@ class paymentController extends Controller
         $input = $request->all();
         $currentDate = date('M d, Y');
 
-        // dd($input);
-
         $selectId = DB::table('ktc_order')
         ->select('*')
         ->where('id', '=', $input['id'])
         ->first();
 
-        // dd($selectId);
 
         if(empty($selectId)){
             $order_id = DB::table('ktc_order')
@@ -35,29 +32,30 @@ class paymentController extends Controller
             $run_order = sprintf("%09d",$order_id->order_id+1);
             DB::table('ktc_order')
             ->insert([
-                'id' => $request->id,
+                'id' => $input['id'],
                 'order_id' => $run_order,
+                'package' => $input['package'],
                 'created_at' => date('Y-m-d H:i:s'),
             ]);    
         }else{
             $run_order = sprintf("%09d",$selectId->order_id);
         }
         
-        if($request->package == 'gold'){
+        if($input['package'] == 'gold'){
             $discount = 1500.00;
         }else{
             $discount = 3100.00;
         }
 
         DB::table('users')
-        ->where('id', $request->id)
+        ->where('id', $input['id'])
         ->update([
-            'level' => $request->package,
             'status' => 'wait',
-            'username' => $request->username,
-            'first_name' => $request->first_name,
-            'last_name' => $request->last_name,
-            'email' => $request->email,
+            'username' => $input['username'],
+            'first_name' => $input['first_name'],
+            'last_name' => $input['last_name'],
+            'email' => $input['email'],
+            'address' => $input['address'],
         ]);
         
         $data = [
@@ -76,8 +74,6 @@ class paymentController extends Controller
 
     public function payment_success(Request $request){
 
-        $url = $request->fullUrl();
-
         DB::table('ktc_order')
         ->where('order_id', '=', $request->Ref)
         ->update([
@@ -85,35 +81,45 @@ class paymentController extends Controller
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
 
+        $ref_id = DB::table('ktc_order')
+        ->select('success_code')
+        ->where('success_code', '=', '1')
+        ->count();
+
         $order_ref = DB::table('ktc_order')
         ->select('*')
         ->where('order_id', '=', $request->Ref)
         ->where('success_code', '=', '1')
         ->first();
 
-        $ref = DB::table('ktc_order')
-        ->latest()
-        ->first();
+        if($order_ref->success_code == "1"){
+            DB::table('ktc_order')
+            ->where('order_id', '=', $request->Ref)
+            ->update([
+                'order_ref' => sprintf("%09d",$ref_id),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ]);
 
-        $run_ref = sprintf("%09d",$ref->order_ref+1);
+            if($order_ref->package == "gold"){
+                $expire_date = date("Y-m-d H:i:s", strtotime("+30 day"));
+            }else{
+                $expire_date = date("Y-m-d H:i:s", strtotime("+44 day"));
+            }
 
-        DB::table('ref_order')
-        ->insert([
-            'id' => $order_ref->id,
-            'order_ref' => $run_ref,
-            'success_code' => '1',
-            'created_at' => date('Y-m-d H:i:s'),
-        ]);
+            DB::table('users')
+            ->where('id', $order_ref->id)
+            ->update([
+                'status' => 'paid',
+                'level' => $order_ref->package,
+                'expire_date' => $expire_date,
+                'updated_at' => date("Y-m-d H:i:s"),
+            ]);
 
-        $expire_date = date("Y-m-d H:i:s", strtotime("+1 month"));
+            return redirect('user_home');
 
-        DB::table('users')
-        ->where('id', $order_ref->id)
-        ->update([
-            'status' => 'paid',
-            'expire_date' => $expire_date,
-            'updated_at' => date("Y-m-d H:i:s"),
-        ]);
+        }else{
+            return redirect('payment_fail');
+        }
 
         // DB::table('users')->where('id', Auth::id())->update(['remember_token' => $new_sessid]);
 
@@ -130,7 +136,6 @@ class paymentController extends Controller
         // Mail::to($request->get('email'))->send(new SendMail($data));
         // DB::update('update users set expire_date = ? where id = ?', [$request->get('expire_date'),$request->get('id')]);
        
-        return redirect('user_home');
     }
 
 }

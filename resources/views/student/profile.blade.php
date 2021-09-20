@@ -13,12 +13,6 @@
                     <div class="col-md-12">
                         <p class="font-15"><strong>Email: </strong> <span class="m-l-15">{{Auth::user()->email}}</span></p>
                     </div>
-                    <div class="col-md-12">
-                        <p class="font-15"><strong>Username: </strong> <span class="m-l-15">{{Auth::user()->username}}</span></p>
-                    </div>
-                    <div class="col-md-12">
-                        <p class="font-15"><strong>Mobile: </strong><span class="m-l-15">{{Auth::user()->mobile}}</span></p>
-                    </div>
                 </div>
 
                 <hr>
