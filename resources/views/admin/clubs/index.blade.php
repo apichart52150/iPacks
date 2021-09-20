@@ -201,7 +201,7 @@
                 } else if (response == "failed") {
                     Swal.fire('Failed', '', 'error')
                 } else {
-                    Swal.fire('Failed', 'User has point ' + response, 'error')
+                    Swal.fire("Failed", "User has " + response+" point.", 'error')
                 }
             }
         })

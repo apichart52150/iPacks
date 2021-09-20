@@ -172,6 +172,12 @@
             Route::post('edit/staffupdate/{id?}', 'StaffController@staffupdate');
 
             Route::post('staffdelete/{id?}', 'StaffController@staffdelete');
+
+            // + user
+        Route::get('user/list', 'UserController@index')->name('user');
+        Route::get('user/edit/{id}', 'UserController@edit');
+        Route::post('user/remove', 'UserController@remove_user')->name('remove-user');
+        Route::post('user/edit/confirm/success', 'UserController@update_user')->name('user-edit-confirm');
         });
 
         //Speaking
