@@ -29,13 +29,17 @@
             return view('student.expire');
         })->name('expire');
 
-        Route::get('payment/{status}', 'Payment\paymentController@payment_form')->name('paymentForm');
-        Route::post('payment/confirm', 'Payment\paymentController@payment_confirm')->name('paymentConfirm');
-        Route::get('payment_success', 'Payment\paymentController@payment_success')->name('payment_success');
+        Route::prefix('payment')->namespace('Payment')->group(function () {
+            
+            Route::get('payment/{status}', 'paymentController@payment_form')->name('paymentForm');
+            Route::post('payment/confirm', 'paymentController@payment_confirm')->name('paymentConfirm');
+            Route::get('payment_success', 'paymentController@payment_success')->name('payment_success');
+            Route::get('receipt', 'paymentController@receipt')->name('receipt');
 
-        Route::get('payment_fail', function () {
-            return view('payment.fail');
-        })->name('pay_fail');
+            Route::get('payment_fail', function () {
+                return view('payment.fail');
+            })->name('pay_fail');
+        });
 
         Route::get('user_home', 'student\HomeController@index')->name('user_home');
 

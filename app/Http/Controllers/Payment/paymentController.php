@@ -24,7 +24,6 @@ class paymentController extends Controller
         ->where('id', '=', $input['id'])
         ->first();
 
-
         if(empty($selectId)){
             $order_id = DB::table('ktc_order')
             ->latest()
@@ -101,8 +100,24 @@ class paymentController extends Controller
 
             if($order_ref->package == "gold"){
                 $expire_date = date("Y-m-d H:i:s", strtotime("+30 day"));
+                DB::table('point')
+                ->insert([
+                    'user_id' => $input['id'],
+                    'writing_point' => 3,
+                    'speaking_point' => 2,
+                    'clubs_point' => 0,
+                    'tutorial' => 0,
+                ]);
             }else{
                 $expire_date = date("Y-m-d H:i:s", strtotime("+44 day"));
+                DB::table('point')
+                ->insert([
+                    'user_id' => $input['id'],
+                    'writing_point' => 5,
+                    'speaking_point' => 3,
+                    'clubs_point' => 1,
+                    'tutorial' => 1,
+                ]);
             }
 
             DB::table('users')
@@ -122,7 +137,6 @@ class paymentController extends Controller
 
         // DB::table('users')->where('id', Auth::id())->update(['remember_token' => $new_sessid]);
 
-
         // $data = array(
         //     'subject'=>"User Detail",
         //     'email'=>$request->get('email'),
@@ -135,6 +149,23 @@ class paymentController extends Controller
         // Mail::to($request->get('email'))->send(new SendMail($data));
         // DB::update('update users set expire_date = ? where id = ?', [$request->get('expire_date'),$request->get('id')]);
        
+    }
+
+    public function receipt(){
+
+        $currentDate = date('M d, Y');
+
+        $data = [
+            'id' =>  014,
+            'orderRef' => '0000001',
+            'orderReceipt' => '0000002',
+            'amount' => '6500.00',
+            'currentDate' => $currentDate,
+            'package' => 'gold',
+            'address' => 'Stanley Jones 795 Folsom Ave, Suite 600 San Francisco, CA 94107 P: (123) 456-7890',
+        ];
+
+        return view('payment.receipt', compact('data'));
     }
 
 }
