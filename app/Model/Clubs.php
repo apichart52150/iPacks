@@ -49,7 +49,7 @@ class Clubs extends Model
 
     public static function list_by_staff_confirm($date, $status)
     {
-        $pag = 15;
+        $pag = 10;
         if ($date == 'all' && $status == 'all') {
             $clubs = DB::table('clubs')
                 ->select('clubs.status', 'clubs.created_at', 'clubs.id', 'clubs.club_date', 'clubs.note', 'users.first_name', 'users.last_name', 'staff.staff_username')
@@ -83,7 +83,6 @@ class Clubs extends Model
                 ->select('clubs.status', 'clubs.created_at', 'clubs.id', 'clubs.club_date', 'clubs.note', 'users.first_name', 'users.last_name', 'staff.staff_username')
                 ->leftjoin('users', 'clubs.user_create', '=', 'users.id')
                 ->leftjoin('staff', 'clubs.user_edit', '=', 'staff.staff_id')
-                ->where('clubs.status', '>', 0)
                 ->where('clubs.status', '=', $status)
                 ->where('clubs.club_date', '=', $date)
                 ->orderBy('clubs.updated_at', 'desc')

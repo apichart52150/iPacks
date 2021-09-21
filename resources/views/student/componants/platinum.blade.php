@@ -168,7 +168,7 @@
     </div>
 
     <div class="col-xl-6 col-md-6 col-sm-12">
-        <a href="{{ route('tutorail') }}">
+        <a href="{{ route('tutorial') }}">
             <div class="card-box widget-icon bg-primary ribbon-box">
                 <!-- <div class="ribbon-two ribbon-two-diamond avatar-title display-6 m-0 "><span>Diamond</span></div> -->
                 <div class="avatar-lg float-left">
@@ -179,7 +179,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <h2 class="mb-3 text-light">Tutorail</h2>
+                    <h2 class="mb-3 text-light">Tutorial</h2>
                 </div>
             </div>
         </a>

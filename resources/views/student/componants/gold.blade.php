@@ -181,7 +181,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <h2 class="mb-3 text-light">Tutorail</h2>
+                    <h2 class="mb-3 text-light">Tutorial</h2>
                 </div>
             </div>
         </a>

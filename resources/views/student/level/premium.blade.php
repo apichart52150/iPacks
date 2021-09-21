@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="wid-icon-info text-right">
-                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h2 class="mb-1 text-light">iPACK</h2>
                     <h4 class="text-light mb-1">Listening</h4>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h2 class="mb-1 text-light">iPACK</h2>
                     <h4 class="text-light mb-1">Reading</h4>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h2 class="mb-1 text-light">iPACK</h2>
                     <p class="text-light mb-1">Writing</p>
                 </div>
             </div>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h2 class="mb-1 text-light">iPACK</h2>
                     <p class="text-light mb-1">Speaking</p>
                 </div>
             </div>
@@ -214,7 +214,7 @@
                     </div>
                 </div>
                 <div class="wid-icon-info text-right">
-                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h2 class="mb-1 text-light">iPACK</h2>
                     <h4 class="text-light mb-1">Listening</h4>
                 </div>
             </div>
@@ -232,7 +232,7 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h2 class="mb-1 text-light">iPACK</h2>
                     <h4 class="text-light mb-1">Language Use</h4>
                 </div>
             </div>

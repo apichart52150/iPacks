@@ -9,13 +9,13 @@
 
                 <li class="has-submenu">
                     <a href="{{ route('writing_dashboard') }}" class="text-light">
-                        <i class="fas fa-highlighter"></i>iSAC Writing
+                        <i class="fas fa-highlighter"></i>iPACK Writing
                     </a>
                 </li>
 
                 <li class="has-submenu">
                     <a href="{{ route('speaking_dashboard') }}" class="text-light">
-                        <i class="fas fa-comments"></i>iSAC Speaking
+                        <i class="fas fa-comments"></i>iPACK Speaking
                     </a>
                 </li>
 
@@ -46,12 +46,12 @@
 <link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.midnight-blue.min.css') }}">
 <link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.min.css') }}">
 
-<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.css') }}"> 
-<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.midnight-blue.css') }}"> 
-<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.orange-coral.css') }}"> 
-<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.orange-coral.min.css') }}"> 
-<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.royal-navy.css') }}"> 
-<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.royal-navy.min.css') }}"> 
+<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.css') }}">
+<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.midnight-blue.css') }}">
+<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.orange-coral.css') }}">
+<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.orange-coral.min.css') }}">
+<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.royal-navy.css') }}">
+<link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.royal-navy.min.css') }}">
 
 <div class="row">
     <div class="col-12 m-0">
@@ -92,12 +92,13 @@
             <h3>{{ date('d-m-Y', strtotime($club->club_date)) }}</h3>
             <p class="user_name pb-0 mb-0">{{ $club->first_name }} {{ $club->last_name }}</p>
             <p class="user_name pt-0 mt-0">{{ $club->email }}</p>
+            <p>{{ $club->user_create }}</p>
             <div class="row">
                 <div class="col-6">
                     <button class="approval btn btn-success w-100" onclick="approval('{{ $club->id }}','{{ $club->user_create }}','{{ $club->club_date }}','{{ $club->first_name }} {{ $club->last_name }}');">Approval</button>
                 </div>
                 <div class="col-6">
-                    <button class="disapproval btn btn-danger w-100" onclick="disapproval('{{ $club->id }}')">Disapproval</button>
+                    <button class="disapproval btn btn-danger w-100" onclick="disapproval('{{ $club->id }}','{{ $club->user_create }}')">Disapproval</button>
                 </div>
             </div>
         </div>
@@ -116,7 +117,7 @@
 
 <script src="{{ asset('public/assets/js/ajax.jquery.js') }}"></script>
 <script src="{{ asset('public/evo-calendar/js/evo-calendar.min.js') }}"></script>
-
+<script src="{{ asset('public/assets/js/moment.min.js') }}"></script>
 
 <script>
     let event = []
@@ -138,40 +139,56 @@
         calendarEvents: event,
     })
 
+
     function approval(id, student_id, date, student_name) {
-            
         Swal.fire({
             title: 'Please write a note',
             text: "",
-            input: 'text',
+            html: '<input type="text" id="note" class="swal2-input" placeholder="Note">',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'OK',
-        }).then((result) => {
-            if (result.value) {
-                update_data(id, date, student_id, student_name, 1, result.value, "Successfully")
+            preConfirm: () => {
+                let note = Swal.getPopup().querySelector('#note').value
+                if (!note) {
+                    Swal.showValidationMessage(`Please enter note.`)
+                }
+                return {
+                    note: note,
+                }
             }
+        }).then((result) => {
+            update_data(id, date, student_id, student_name, 1, result.value.note, "Approval")
         })
     }
 
-    function disapproval(id) {
+    function disapproval(id, student_id) {
+
         Swal.fire({
             title: 'Please write a note',
             text: "",
-            input: 'text',
+            html: '<input type="text" id="note" class="swal2-input" placeholder="Note">',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'OK',
-        }).then((result) => {
-            if (result.value) {
-                update_data(id, "", 0, "", 2, result.value, "Successfully")
+            preConfirm: () => {
+                let note = Swal.getPopup().querySelector('#note').value
+                if (!note) {
+                    Swal.showValidationMessage(`Please enter note.`)
+                }
+                return {
+                    note: note,
+                }
             }
+        }).then((result) => {
+            update_data(id, "", student_id, "", 2, result.value.note, "Disapproval")
         })
     }
 
-    function update_data(id, date, student_id, student_name, value, note, text) {
+    function update_data(id, date, student_id, student_name, value, note, title) {
+        load_wait()
         let data = new FormData()
         data.append('_token', "{{ csrf_token() }}")
         data.append('id', id)
@@ -187,7 +204,7 @@
             processData: false,
             success: function(response) {
                 if (response == "success") {
-                    Swal.fire(text, '', 'success')
+                    Swal.fire(title, "Successfully", 'success')
                     $('.id-' + id).remove()
                     if (value == 1)
                         event.push({
@@ -199,11 +216,22 @@
                             everyYear: !0
                         })
                 } else if (response == "failed") {
-                    Swal.fire('Failed', '', 'error')
+                    Swal.fire(title, 'Failed', 'error')
                 } else {
-                    Swal.fire("Failed", "User has " + response+" point.", 'error')
+                    Swal.fire(title, response, 'error')
                 }
             }
+        })
+    }
+
+    function load_wait() {
+        Swal.fire({
+            title: 'Please Wait !',
+            html: 'data uploading',
+            allowOutsideClick: false,
+            onBeforeOpen: () => {
+                Swal.showLoading()
+            },
         })
     }
 </script>

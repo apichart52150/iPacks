@@ -125,7 +125,8 @@
         Route::get('clubs','student\ClubsController@index')->name('clubs');
         Route::post('clubs/book','student\ClubsController@book')->name('clubs-book');
 
-        Route::get('tutorail','student\TutorialController@index')->name('tutorail');
+        Route::get('tutorial','student\TutorialController@index')->name('tutorial');
+        Route::post('tutorial/book','student\TutorialController@book')->name('tutorial-book');
     });
 
     // ==================== Routes Detail ==================== //
@@ -257,8 +258,11 @@
         });
 
         //Tutorial
-        Route::prefix('tutorial')->namespace('Admin\ipack\tutorial')->group(function () {
+        Route::prefix('tutorial')->namespace('Admin\tutorial')->group(function () {
 
+            Route::get('list','HomeController@index')->name('tutorial-list');
+            Route::get('history/{date}/{status}','HomeController@history');
+            Route::post('confirm','HomeController@confirm')->name('tutorial-confirm');
             
         });
     });

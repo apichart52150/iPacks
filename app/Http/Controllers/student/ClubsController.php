@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\student;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Model\Clubs;
 use Auth;
 use Datetime;
 use DB;
-use Illuminate\Http\Request;
 
 class ClubsController extends Controller
 {
@@ -22,12 +22,24 @@ class ClubsController extends Controller
 
     public function book(Request $request)
     {
-        $data = $request->all();
-
-        $date = $data['date'];
-        $user_id = Auth::user()->id;
-        DB::insert('INSERT INTO clubs (club_date,status,user_create,user_edit,created_at,updated_at) VALUES (?,?,?,?,?,?)',
-            [new Datetime($date),0, $user_id, $user_id, new Datetime(), new Datetime()]);
-        return "success";
+        try {
+            $data = $request->all();
+            $date = $data['date'];
+            $user_id = Auth::user()->id;
+            $point = DB::table('point')->select('club_point')->where('user_id', $user_id)->first()->club_point;
+            if ($point > 0) {
+                DB::insert(
+                    'INSERT INTO clubs (club_date,status,user_create,created_at,updated_at) VALUES (?,?,?,?,?)',
+                    [new Datetime($date), 0, $user_id, new Datetime(), new Datetime()]
+                );
+                DB::table('point')->where('user_id', $user_id)->update(['club_point' => $point - 1]);
+                return "success";
+            } else {
+                return $point;
+            }
+        } catch (\Throwable $th) {
+            //throw $th;
+            return "failed";
+        }
     }
 }

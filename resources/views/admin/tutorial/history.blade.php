@@ -49,7 +49,7 @@
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('admin_home') }}">Home</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('clubs-list')}}">Clubs</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('tutorial-list')}}">Tutorial</a></li>
                     <li class="breadcrumb-item active">User</li>
                 </ol>
             </div>
@@ -79,9 +79,9 @@
         <div class="card-box">
             <label for="">Date: </label>
             <div class="input-con pr-1">
-                <input type="date" class="form-control date"  name="date">
+                <input type="date" class="form-control date" name="date">
                 <!-- <div class="input-group">
-                    <input type="date" class="date form-control" id="date">
+                    <input type="text" class="form-control" data-provide="datepicker" data-date-autoclose="true" id="date" name="date" readonly placeholder="mm/dd/yyyy">
                     <div class="input-group-append">
                         <span class="input-group-text"><i class="ti-calendar"></i></span>
                     </div>
@@ -96,7 +96,7 @@
                 </select>
             </div>
             <div class="input-con">
-                <button url="{{url('clubs/history')}}" class="search-data btn btn-primary">Search</button>
+                <button url="{{url('tutorial/history')}}" class="search-data btn btn-primary">Search</button>
             </div>
             <div class="input-con">
                 <button class="reset-data btn btn-danger">Reset</button>
@@ -105,7 +105,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr class="table-secondary">
-                        <th class="">Club date</th>
+                        <th class="">Tutorial date</th>
                         <th>USER</th>
                         <th>Approval by</th>
                         <th>Status</th>
@@ -113,20 +113,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @if(count($clubs)>0)
-                    @foreach ($clubs as $club)
+                    @if(count($tutorials)>0)
+                    @foreach ($tutorials as $tutorial)
                     <tr>
-                        <td>{{ date('d-m-Y', strtotime($club->club_date)) }}</td>
-                        <td>{{ $club->first_name }} {{ $club->last_name }}</td>
-                        <td>{{ $club->staff_username }}</td>
+                        <td>{{ date('d-m-Y', strtotime($tutorial->tutorial_date)) }}</td>
+                        <td>{{ $tutorial->first_name }} {{ $tutorial->last_name }}</td>
+                        <td>{{ $tutorial->staff_username }}</td>
                         <td>
-                            @if($club->status==1)
+                            @if($tutorial->status==1)
                             <span class="text-success">Approval</span>
                             @else
                             <span class="text-danger">Disapproval</span>
                             @endif
                         </td>
-                        <td>{{ $club->note }}</td>
+                        <td>{{ $tutorial->note }}</td>
                     </tr>
                     @endforeach
                     @else
@@ -142,7 +142,7 @@
     </div>
     <div class="col-md-12">
         <div class="d-flex justify-content-center">
-            {!! $clubs->links('pagination::bootstrap-4') !!}
+            {!! $tutorials->links('pagination::bootstrap-4') !!}
         </div>
     </div>
 </div>
