@@ -8,51 +8,21 @@
     <title></title>
 </head>
 <style>
-    table tr td,
-    table tr th {
-        padding: 10px;
+    body {
+        padding: 10%;
     }
 
-    table {
-        width: auto;
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
     }
 </style>
 
 <body>
-    @if($data['package']=="gold")
-    <div class="bg-gold">
-        
+    <div class="container">
+        <img src="../" alt="Snow" style="width:100%;">
     </div>
-    @elseif ($data['package']=="gold")
-    @endif
-    <center>
-        <table>
-            <tr>
-                <th>Email: </th>
-                <td>{{ $data['email'] }}</td>
-            </tr>
-            <tr>
-                <th>Password: </th>
-                <td>{{ $data['password'] }}</td>
-            </tr>
-            <tr>
-                <th>Username: </th>
-                <td>{{ $data['username'] }}</td>
-            </tr>
-            <tr>
-                <th>Expire Date: </th>
-                <td>{{ $data['expire_date'] }}</td>
-            </tr>
-            <tr>
-                <th>Package: </th>
-                <td>{{ $data['package'] }}</td>
-            </tr>
-            <tr>
-                <th>Create At: </th>
-                <td>{{ $data['created_at'] }}</td>
-            </tr>
-        </table>
-    </center>
 </body>
 
 </html>
