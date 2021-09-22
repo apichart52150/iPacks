@@ -18,7 +18,9 @@
 @endsection
 
 @section('content')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css"
+    integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
     .card-box,
@@ -47,7 +49,8 @@
             </div>
             <div class="col-md-10 mt-2">
                 <div class="input-group">
-                    <input type="text" class="form-control" data-provide="datepicker" data-date-autoclose="true" id="date" name="date" readonly placeholder="mm/dd/yyyy">
+                    <input type="text" class="form-control" data-provide="datepicker" data-date-autoclose="true"
+                        id="date" name="date" readonly placeholder="mm/dd/yyyy">
                     <div class="input-group-append">
                         <span class="input-group-text"><i class="ti-calendar"></i></span>
                     </div>
@@ -83,7 +86,8 @@
             </div>
             <div class="col-md-10 mt-2">
                 <div class="input-group">
-                    <input type="text" class="form-control" data-provide="datepicker" data-date-autoclose="true" id="date" name="date" readonly placeholder="mm/dd/yyyy">
+                    <input type="text" class="form-control" data-provide="datepicker" data-date-autoclose="true"
+                        id="date" name="date" readonly placeholder="mm/dd/yyyy">
                     <div class="input-group-append">
                         <span class="input-group-text"><i class="ti-calendar"></i></span>
                     </div>
@@ -103,7 +107,7 @@
     <div class="alert alert-danger text-center" role="alert">
         <h2>Available points.</h2>
         <br>
-        <h3>0</h3>
+        <h2>0</h2>
     </div>
     @endif
 </div>
@@ -122,8 +126,8 @@
             @if(count($clubs) > 0)
             @foreach ( $clubs as $club )
             <tr class="{{ date('d-m-Y', strtotime($club->club_date)) }}">
-                <th scope="row">{{ date('d-m-Y', strtotime($club->club_date)) }}</th>
-                <td>
+                <th class="align-middle" scope="row">{{ date('d-m-Y', strtotime($club->club_date)) }}</th>
+                <td class="align-middle">
                     @if($club->status == 0)
                     <span class="text-primary">Pending</span>
                     @elseif ($club->status == 1)
@@ -132,7 +136,21 @@
                     <span class="text-danger">Disapproval</span>
                     @endif
                 </td>
-                <td>{{ $club->note }}</td>
+                <td class="align-middle">{{ $club->note }}</td>
+                @if($club->status == 2)
+                <td>
+                    <button class="btn btn-danger"
+                        onclick="delete_clubs('{{ route('delete-club',[$club->id]) }}','{{ date('d-m-Y', strtotime($club->club_date)) }}');">
+                        Delete
+                    </button>
+                </td>
+                @else
+                <td>
+                    <button class="btn btn-danger" disabled>
+                        Delete
+                    </button>
+                </td>
+                @endif
             </tr>
             @endforeach
             @else
@@ -146,6 +164,7 @@
     </table>
 </div>
 
+
 @endsection
 
 @section('js')
@@ -156,6 +175,7 @@
 <!-- form-pickers js-->
 <script src="{{ asset('public/assets/js/bootstrap-datepicker.min.js') }}"></script>
 <script src="{{ asset('public/assets/js/moment.min.js') }}"></script>
+
 
 <script>
     $('#user-point-all').html("You have {{$points->club_point}} point.")
@@ -193,7 +213,7 @@
                             success: function(response) {
                                 console.log(response)
                                 if (response == "success") {
-                                    let tr = '<tr class="' + date + '"><td>' + date + '</td><td><span class="text-primary">Pending</span></td><td></td></tr>'
+                                    let tr = '<tr class="' + date + '"><td class="align-middle">' + date + '</td><td class="align-middle"><span class="text-primary">Pending</span></td><td></td><td><button class="btn btn-danger" disabled>Delete</button></td></tr>'
                                     if (count_clubs == 0) {
                                         $('.dont-have-data').after(tr)
                                         $('.dont-have-data').remove()
@@ -208,14 +228,14 @@
                                     Swal.fire("Book", "Failed", "error")
                                 } else {
                                     point_0(response)
-                                    Swal.fire("Point", response, "error")
+                                    Swal.fire("Available points.", "0", "error")
                                 }
                             }
                         })
                     }
                 })
             } else {
-                Swal.fire("Point", "response", "error")
+                Swal.fire("Please try again.", "The date has already been reserved or token.", "error")
             }
         }
         return false
@@ -227,6 +247,45 @@
             $('.dont-have-point').removeClass('d-none')
         }
         $('#user-point-all').html("You have " + point + " point.")
+    }
+
+    function delete_clubs(url,row){
+        Swal.fire({
+                    title: 'Are you sure?',
+                    text: "",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'OK',
+                }).then((result) => {
+                    if (result.value) {
+                        load_wait()
+                        $.get(url,function(response){
+                            if(response=="success"){
+                                $('.'+row).remove()
+                                Swal.fire("Delete", "Successfully", "success")
+                            }else{
+                                Swal.fire("Delete", "Failed", "error")
+                            }
+                        })
+                    }
+                })
+        // let data = new FormData()
+        // data.append('_token',$('input[name="_token"]').val())
+        // data.append('id',id)
+        // console.log(data)
+        // $.ajax({
+        //     type: 'POST',
+        //     url: $('#delete').attr('route'),
+        //     data: data,
+        //     cache: false,
+        //     contentType: false,
+        //     processData: false,
+        //     success: function(response) {
+        //         console.log(response)
+        //     }
+        // })
     }
 
 

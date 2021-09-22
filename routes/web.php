@@ -123,9 +123,11 @@
         });
 
         Route::get('clubs','student\ClubsController@index')->name('clubs');
+        Route::get('delete/{id}','student\ClubsController@delete_club')->name('delete-club');
         Route::post('clubs/book','student\ClubsController@book')->name('clubs-book');
 
         Route::get('tutorial','student\TutorialController@index')->name('tutorial');
+        Route::get('delete/{id}','student\TutorialController@delete_tutorial')->name('delete-tutorial');
         Route::post('tutorial/book','student\TutorialController@book')->name('tutorial-book');
     });
 

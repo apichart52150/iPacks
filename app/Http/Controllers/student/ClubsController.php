@@ -42,4 +42,14 @@ class ClubsController extends Controller
             return "failed";
         }
     }
+
+    public function delete_club($id){
+        try {
+            DB::table('clubs')->where('id','=',$id)->delete();
+            return "success";
+        } catch (\Throwable $th) {
+            //throw $th;
+            return "failed";
+        }
+    }
 }
