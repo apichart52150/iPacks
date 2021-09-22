@@ -11,6 +11,13 @@
 
     Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
+    Route::prefix('trial')->group(function () {
+        Route::get('home', 'TrialController@index')->name('trial_home');
+        Route::get('listening', 'TrialController@listening')->name('trial_listening');
+        Route::get('reading', 'TrialController@reading')->name('trial_reading');
+        Route::get('language', 'TrialController@language')->name('trial_language');
+    });
+
     Route::group(['middleware' => 'auth:web'], function () {
 
         Route::get('browser-settings', function () {
@@ -29,13 +36,17 @@
             return view('student.expire');
         })->name('expire');
 
-        Route::get('payment/{status}', 'Payment\paymentController@payment_form')->name('paymentForm');
-        Route::post('payment/confirm', 'Payment\paymentController@payment_confirm')->name('paymentConfirm');
-        Route::get('payment_success', 'Payment\paymentController@payment_success')->name('payment_success');
+        Route::prefix('payment')->namespace('Payment')->group(function () {
+            
+            Route::get('payment/{status}', 'paymentController@payment_form')->name('paymentForm');
+            Route::post('payment/confirm', 'paymentController@payment_confirm')->name('paymentConfirm');
+            Route::get('payment_success', 'paymentController@payment_success')->name('payment_success');
+            Route::get('receipt', 'paymentController@receipt')->name('receipt');
 
-        Route::get('payment_fail', function () {
-            return view('payment.fail');
-        })->name('pay_fail');
+            Route::get('payment_fail', function () {
+                return view('payment.fail');
+            })->name('pay_fail');
+        });
 
         Route::get('user_home', 'student\HomeController@index')->name('user_home');
 
