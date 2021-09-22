@@ -51,7 +51,7 @@
                                     
                                     <p class="text-muted mt-2"> Now your's our mamber.</p>
 
-                                    <h3>You can choose the package at your level of English skills from two options</h3>
+                                    <h3>You can choose the package at your level of English skills from two options.</h3>
 
                                     <div class="row mt-3">
                                         <div class="col-6">
@@ -59,6 +59,11 @@
                                         </div>
                                         <div class="col-6">
                                             <a href="{{ url('payment/'.'platinum') }}" type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">The Premium IPACK package</a>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <a href="{{ url('payment/'.'extra') }}" type="button" class="btn btn-block btn--md btn-primary waves-effect waves-light">1 on 1 Tutorial + Writing & Speaking marked</a>
                                         </div>
                                     </div>
                                 </div>

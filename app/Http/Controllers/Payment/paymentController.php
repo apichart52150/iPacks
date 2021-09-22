@@ -42,8 +42,10 @@ class paymentController extends Controller
         
         if($input['package'] == 'gold'){
             $discount = 1500.00;
-        }else{
+        }elseif($input['package'] == 'platinum'){
             $discount = 3100.00;
+        }else{
+            $discount = 150.00;
         }
 
         DB::table('users')
