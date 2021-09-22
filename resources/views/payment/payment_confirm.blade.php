@@ -82,7 +82,7 @@
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <b>iPACK Package</b> <br/>
+                                        <b>IELTS Practice Package</b> <br/>
                                         {{ $data['package'] }}
                                     </td>
                                     <td class="text-right">{{ $data['amount']}}</td>

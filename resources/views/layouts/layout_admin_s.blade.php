@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>iPACK Speaking | Teacher</title>
+        <title>IELTS Practice Speaking | Teacher</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="disable-extension-feature" content="read-dom" />
@@ -109,7 +109,7 @@
                     <div class="logo-box">
                         <a href="{{url('/admin_home')}}" class="logo text-center">
                             <span class="logo-lg">
-                                <span class="logo-lg-text-light">iPACK Speaking</span>
+                                <span class="logo-lg-text-light">IELTS Practice Speaking</span>
                             </span>
                             <span class="logo-sm">
                                 <!-- <span class="logo-sm-text-dark">X</span> -->
