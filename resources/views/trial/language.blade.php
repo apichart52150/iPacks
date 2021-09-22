@@ -160,10 +160,10 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item active"><i class="fas fa-home"></i> Back</li>
+                                    <li class="breadcrumb-item active"><i class="fas fa-home"></i> Home</li>
                                 </ol>
                             </div>
-                            <h4 class="page-title">Listening</h4>
+                            <h4 class="page-title">Language</h4>
                         </div>
                     </div>
                 </div>
