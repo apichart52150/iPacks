@@ -142,7 +142,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    2021 iPACKS © New Cambridge
+                    2021 © Online IELTS Tip & Practice By New Cambridge
                 </div>
             </div>
         </div>

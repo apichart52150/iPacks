@@ -48,7 +48,7 @@
     </div>
 
     <footer class="footer footer-alt">
-        2021 © i.PACK by <a href="https://newcambridge.com" class="text-white">New Cambridge</a>
+        2021 © Online IELTS Tip & Practice By New Cambridge
     </footer>
 
     <!-- Vendor js -->
