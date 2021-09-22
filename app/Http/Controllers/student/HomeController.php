@@ -31,7 +31,7 @@ class HomeController extends Controller
         
     }
 
-    public function isac_reading(){
+    public function ipack_reading(){
         if (auth('web')->user()->remember_token == session()->get('ss_id')) {
             return redirect()->to("https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/".auth('web')->user()->id);
         }else {
