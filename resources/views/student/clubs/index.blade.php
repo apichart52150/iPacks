@@ -32,6 +32,13 @@
     form label {
         font-size: 20px;
     }
+    .day{
+        cursor: pointer;
+        text-align: center;
+    }
+    .date{
+        cursor: pointer;
+    }
 </style>
 
 <div class="card-box">
@@ -49,7 +56,7 @@
             </div>
             <div class="col-md-10 mt-2">
                 <div class="input-group">
-                    <input type="text" class="form-control" data-provide="datepicker" data-date-autoclose="true"
+                    <input type="text" class="form-control date" data-provide="datepicker" data-date-autoclose="true"
                         id="date" name="date" readonly placeholder="mm/dd/yyyy">
                     <div class="input-group-append">
                         <span class="input-group-text"><i class="ti-calendar"></i></span>

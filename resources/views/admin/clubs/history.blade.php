@@ -71,6 +71,13 @@
         display: inline-block;
         position: relative;
     }
+    .day{
+        cursor: pointer;
+        text-align: center;
+    }
+    .date{
+        cursor: pointer;
+    }
 </style>
 
 
