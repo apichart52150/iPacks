@@ -1,12 +1,12 @@
 @font-face {
     font-family: font_forte;
-    src: url("font/FORTE.TTF");
+    src: url("../fonts/FORTE.TTF");
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
     font-family: font_sukhumvit;
-    src: url("font/SukhumvitSet-Thin.ttf");
+    src: url("../fonts/SukhumvitSet-Thin.ttf");
     font-weight: normal;
     font-style: normal;
   }
