@@ -47,8 +47,6 @@
                 return view('payment.fail');
             })->name('pay_fail');
 
-            // TEST
-            Route::post('send-mail','paymentController@send_mail')->name('send-mail');
         });
 
         Route::get('user_home', 'student\HomeController@index')->name('user_home');
