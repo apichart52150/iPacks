@@ -29,6 +29,10 @@ class SendMail extends Mailable
     {
         $data = $this->data;
         $this->subject($data['subject']);
-        return $this->view('payment.mail', compact('data'));
+        $first_name = $data['first_name'];
+        $last_name = $data['last_name'];
+        $level = $data['level'];
+        $expire_date = $data['expire_date'];
+        return $this->view('payment.mail', compact('first_name', 'last_name', 'level', 'expire_date'));
     }
 }

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\payment;
 
 use App\Http\Controllers\Controller;
+use App\Mail\SendMail;
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Mail;
 
 class paymentController extends Controller
 {
@@ -166,6 +168,22 @@ class paymentController extends Controller
         ];
 
         return view('payment.receipt', compact('data'));
+    }
+
+    public function send_mail(Request $request){
+        $data = $request->all();
+        
+        $data = array(
+            'subject'=>"User Detail",
+            'first_name'=>$request->get('first_name'),
+            'last_name'=>$request->get('last_name'),
+            'expire_date'=>$request->get('expire_date'),
+            'level'=>$request->get('level'),
+        );
+
+        Mail::to($request->get('email'))->send(new SendMail($data));
+        dd($data);
+        return "success";
     }
 
 }

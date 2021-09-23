@@ -46,6 +46,9 @@
             Route::get('payment_fail', function () {
                 return view('payment.fail');
             })->name('pay_fail');
+
+            // TEST
+            Route::post('send-mail','paymentController@send_mail')->name('send-mail');
         });
 
         Route::get('user_home', 'student\HomeController@index')->name('user_home');
@@ -134,11 +137,11 @@
         });
 
         Route::get('clubs','student\ClubsController@index')->name('clubs');
-        Route::get('delete/{id}','student\ClubsController@delete_club')->name('delete-club');
+        Route::get('clubs/delete/{id}','student\ClubsController@delete_club')->name('delete-club');
         Route::post('clubs/book','student\ClubsController@book')->name('clubs-book');
 
         Route::get('tutorial','student\TutorialController@index')->name('tutorial');
-        Route::get('delete/{id}','student\TutorialController@delete_tutorial')->name('delete-tutorial');
+        Route::get('tutorial/delete/{id}','student\TutorialController@delete_tutorial')->name('delete-tutorial');
         Route::post('tutorial/book','student\TutorialController@book')->name('tutorial-book');
     });
 
