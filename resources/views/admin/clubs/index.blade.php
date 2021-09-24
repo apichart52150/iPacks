@@ -58,7 +58,8 @@
         <div class="page-title-box">
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('admin_home') }}">Home</a></li>
+                    <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('admin_home') }}">Home</a>
+                    </li>
                     <li class="breadcrumb-item active">Clubs</li>
                 </ol>
             </div>
@@ -94,10 +95,12 @@
             <p class="user_name pt-0 mt-0">{{ $club->email }}</p>
             <div class="row">
                 <div class="col-6">
-                    <button class="approval btn btn-success w-100" onclick="approval('{{ $club->id }}','{{ $club->user_create }}','{{ $club->club_date }}','{{ $club->first_name }} {{ $club->last_name }}');">Approval</button>
+                    <button class="approval btn btn-success w-100"
+                        onclick="approval('{{ $club->id }}','{{ $club->user_create }}','{{ $club->club_date }}','{{ $club->first_name }} {{ $club->last_name }}');">Approval</button>
                 </div>
                 <div class="col-6">
-                    <button class="disapproval btn btn-danger w-100" onclick="disapproval('{{ $club->id }}','{{ $club->user_create }}')">Disapproval</button>
+                    <button class="disapproval btn btn-danger w-100"
+                        onclick="disapproval('{{ $club->id }}','{{ $club->user_create }}')">Disapproval</button>
                 </div>
             </div>
         </div>
@@ -217,7 +220,7 @@
                 } else if (response == "failed") {
                     Swal.fire(title, 'Failed', 'error')
                 } else {
-                    Swal.fire(title, response, 'error')
+                    Swal.fire(title, 'The item has been done. Please "refresh" to make the pending items visible.', 'error')
                 }
             }
         })
