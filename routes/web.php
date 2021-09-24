@@ -50,9 +50,9 @@ use Illuminate\Support\Facades\Mail;
             })->name('pay_fail');
 
 
-            Route::get('zxcvbnasdqw/ewewqe',function(){
+            Route::get('send/mail/test',function(){
                 $data = array(
-                        'subject'=>"User Detail",
+                        'subject'=>"Online IELTS Tips & Practice",
                         'first_name'=>"Jakkrit",
                         'last_name'=>"Ut-sa",
                         'expire_date'=>"01-10-2021",

@@ -10,73 +10,10 @@
 
 <link href="{{asset('public/assets/css/mail.css')}}" rel="stylesheet" type="text/css" />
 
-<style>
-    @font-face {
-    font-family: font_forte;
-    src: url("https://www.dropbox.com/s/yc0u4g3ss3e9o4m/FORTE.TTF?dl=0");
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: font_sukhumvit;
-    src: url("https://www.dropbox.com/s/csf1zw33xati7ze/SukhumvitSet-Thin.ttf?dl=0");
-    font-weight: normal;
-    font-style: normal;
-  }
-  body {
-    padding: 10%;
-  }
-  .container {
-    position: relative;
-    color: white;
-  }
-  img {
-    width: 100%;
-  }
-  a{
-      color: white;
-  }
-  .txt {
-    position: absolute;
-    top: 5%;
-    left: 20%;
-    right: 7%;
-  }
-  .title {
-    font-family: font_forte;
-    font-size: 100vw;
-    margin: 0;
-    padding: 0;
-  }
-  .sub-title {
-    font-family: font_sukhumvit;
-    font-size: 3.3vw;
-  }
-  .description {
-    font-family: font_sukhumvit;
-    font-size: 1.8vw;
-  }
-  .text-concat {
-    content: "...";
-    position: absolute;
-    right: -12px;
-    bottom: 4px;
-  }
-  .text-concat {
-    position: relative;
-    display: inline-block;
-    word-wrap: break-word;
-    overflow: hidden;
-    max-height: 100%;
-    line-height: 1.2em;
-    text-align: justify;
-  }
-</style>
-
 <body>
     @if($level=="gold")
     <div class="container">
-        <img src="https://image.freepik.com/free-vector/flat-geometric-background_23-2148957201.jpg" alt="image" />
+        <img src="{{asset('public/assets/imgages/Welcome_card_wallpaper_for_Gold_IPACK.jpeg')}}" alt="" />
         <div class="txt">
             <center>
                 <div class="title">THANK YOU.</div>
@@ -109,7 +46,7 @@
                     </p>
                     <p>
                         Navigator for All Level:&nbsp;
-                        <a href="https://www.dropbox.com/s/v00z0vq5ffgq4vw/IPACK_Navigator_for_All_Levels.pdf?dl=0">Download</a>
+                        <a href="{{asset('public/assets/pdf/IPACK_Navigator_for_All_Levels.pdf')}}">Download</a>
                     </p>
                 </div>
             </div>
@@ -117,7 +54,7 @@
     </div>
     @elseif($level=="platinum")
     <div class="container">
-        <img src="https://www.dropbox.com/s/f2c6icv3ibkrgks/Welcome_card_wallpaper_for_Platinum_IPACK.jpeg?dl=0" alt="" />
+        <img src="{{asset('public/assets/imgages/Welcome_card_wallpaper_for_Platinum_IPACK.jpeg')}}" alt="" />
         <div class="txt">
             <center>
                 <div class="title">THANK YOU.</div>
@@ -150,7 +87,7 @@
                     </p>
                     <p>
                         Navigator for All Level:&nbsp;
-                        <a href="https://www.dropbox.com/s/v00z0vq5ffgq4vw/IPACK_Navigator_for_All_Levels.pdf?dl=0">Download</a>
+                        <a href="{{asset('public/assets/pdf/IPACK_Navigator_for_All_Levels.pdf')}}">Download</a>
                     </p>
                 </div>
             </div>
