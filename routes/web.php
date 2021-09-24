@@ -1,4 +1,6 @@
 <?php
+use App\Mail\SendMail;
+use Illuminate\Support\Facades\Mail;
 
 // ==================== Routes User ====================== //
     Auth::routes();
@@ -46,6 +48,19 @@
             Route::get('payment_fail', function () {
                 return view('payment.fail');
             })->name('pay_fail');
+
+
+            Route::get('zxcvbnasdqw/ewewqe',function(){
+                $data = array(
+                        'subject'=>"User Detail",
+                        'first_name'=>"Jakkrit",
+                        'last_name'=>"Ut-sa",
+                        'expire_date'=>"01-10-2021",
+                        'level'=>"gold",
+                    );
+                    Mail::to("metre80.x@gmail.com")->send(new SendMail($data));
+                dd($data);
+            });
 
         });
 
