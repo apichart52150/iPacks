@@ -15,7 +15,7 @@
 			<div class="page-title-right">
 				<ol class="breadcrumb m-0">
 					<li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('/') }}">Home</a></li>
-					<li class="breadcrumb-item active">iPACK Speaking</li>
+					<li class="breadcrumb-item active">IELTS Practice Speaking</li>
 				</ol>
 			</div>
 			<h4 class="page-title">Speaking</h4>

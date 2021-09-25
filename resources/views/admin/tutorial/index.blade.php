@@ -9,13 +9,13 @@
 
                 <li class="has-submenu">
                     <a href="{{ route('writing_dashboard') }}" class="text-light">
-                        <i class="fas fa-highlighter"></i>iPACK Writing
+                        <i class="fas fa-highlighter"></i>IELTS Practice Writing
                     </a>
                 </li>
 
                 <li class="has-submenu">
                     <a href="{{ route('speaking_dashboard') }}" class="text-light">
-                        <i class="fas fa-comments"></i>iPACK Speaking
+                        <i class="fas fa-comments"></i>IELTS Practice Speaking
                     </a>
                 </li>
 

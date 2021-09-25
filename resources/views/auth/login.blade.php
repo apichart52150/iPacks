@@ -4,12 +4,13 @@
 @section('content')
 <div class="container">
 	<div class="row justify-content-center">
-		<div class="col-md-8 col-lg-6 col-xl-5">
+		<div class="col-md-12 col-lg-6 col-xl-5">
 			<div class="card">
 				<div class="card-body p-4">
 					<div class="text-center">
 						<div class="text-center mb-3">
-	                        <h3 class="font-weight-bold text-primary"><i class="fas fa-info"></i> PACKS <span class="d-none d-sm-inline">|</span> <span class="text-dark">LOGIN</span> </h3>
+						<h3 class="font-weight-bold text-primary"> Online IELTS Tips & Practice </h3>
+ 						<span class="text-dark h3">LOGIN</span> </h3>
 	                    </div>
 						<p class="text-muted mb-4 mt-3 font-weight-bold">Please access the services via <img alt="" src="https://www.newcambridgethailand.com/mocktest/public/assets/images/1024px-Google_Chrome_icon.png" height="30px"> or <img alt="" src="https://www.newcambridgethailand.com/mocktest/public/assets/images/Firefox_Logo.png" height="30px"></p>
 					</div>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>iPACK - All</title>
+    <title>Online IELTS Practice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
@@ -145,7 +145,7 @@
 
                         <li class="has-submenu">
                             <a href="#">
-                                <i class=" mdi mdi-view-dashboard"></i>iPACK<div class="arrow-down"></div>
+                                <i class=" mdi mdi-view-dashboard"></i>IELTS Practice<div class="arrow-down"></div>
                             </a>
                             <ul class="submenu">
                                 <li>
@@ -200,7 +200,7 @@
 
                         <li class="has-submenu">
                             <a href="#">
-                                <i class=" mdi mdi-view-dashboard"></i>iPACK<div class="arrow-down"></div>
+                                <i class=" mdi mdi-view-dashboard"></i>IELTS Practice<div class="arrow-down"></div>
                             </a>
                             <ul class="submenu">
                                 <li>
@@ -297,7 +297,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    2021 iPACKS © New Cambridge
+                    2021 © Online IELTS Tip & Practice By New Cambridge
                 </div>
             </div>
         </div>

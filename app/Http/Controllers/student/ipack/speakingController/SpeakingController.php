@@ -84,8 +84,8 @@ class SpeakingController extends Controller
             DB::table('log')
             ->insert([
                 'std_id' => auth('web')->user()->id,
-                'content' => "iPACK Speaking : ".$topic,
-                'tab' => 'iPACK Speaking',
+                'content' => "IELTS Practice Speaking : ".$topic,
+                'tab' => 'IELTS Practice Speaking',
                 'score' => "-1 Point"
             ]);
 

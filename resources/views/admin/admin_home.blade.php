@@ -9,13 +9,13 @@
 
                     <li class="has-submenu">
                         <a href="{{ route('writing_dashboard') }}" class="text-light">
-                            <i class="fas fa-highlighter"></i>iPACK Writing
+                            <i class="fas fa-highlighter"></i>IELTS Practice Writing
                         </a>
                     </li>
 
                     <li class="has-submenu">
                         <a href="{{ route('speaking_dashboard') }}" class="text-light">
-                            <i class="fas fa-comments"></i>iPACK Speaking
+                            <i class="fas fa-comments"></i>IELTS Practice Speaking
                         </a>
                     </li>
 
@@ -68,7 +68,7 @@
                         <i class="fas fa-highlighter font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
-                        <h3 class="text-dark mt-1"><span class="counter">iPACK</span></h3>
+                        <h3 class="text-dark mt-1"><span class="counter">IELTS Practice</span></h3>
                         <h3 class="text-warning mb-0"><span class="counter">Writing</span></h3>
                     </div>
                     <div class="clearfix"></div>
@@ -83,7 +83,7 @@
                         <i class="fas fa-comments font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
-                        <h3 class="text-dark mt-1"><span class="counter">iPACK</span></h3>
+                        <h3 class="text-dark mt-1"><span class="counter">IELTS Practice</span></h3>
                         <h3 class="text-success mb-0"><span class="counter">Speaking</span></h3>
                     </div>
                     <div class="clearfix"></div>
@@ -123,7 +123,7 @@
                         <i class="fas fa-users font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
-                        <h3 class="text-dark mt-1"><span class="counter">iPACK</span></h3>
+                        <h3 class="text-dark mt-1"><span class="counter">IELTS Practice</span></h3>
                         <h3 class="text-info mb-0"><span class="counter">Clubs</span></h3>
                     </div>
                     <div class="clearfix"></div>
@@ -138,7 +138,7 @@
                         <i class="fab fa-leanpub font-24 avatar-title text-white"></i>
                     </div>
                     <div class="text-right">
-                        <h3 class="text-dark mt-1"><span class="counter">iPACK</span></h3>
+                        <h3 class="text-dark mt-1"><span class="counter">IELTS Practice</span></h3>
                         <h3 class="text-info mb-0"><span class="counter">Tutorial</span></h3>
                     </div>
                     <div class="clearfix"></div>

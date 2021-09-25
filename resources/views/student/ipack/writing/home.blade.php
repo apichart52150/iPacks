@@ -8,10 +8,10 @@
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('/') }}">Home</a></li>
                         <!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
-                        <li class="breadcrumb-item active">iPACK Writing</li>
+                        <li class="breadcrumb-item active">IELTS Practice Writing</li>
                     </ol>
                 </div>
-                <h4 class="page-title">iPACK Writing</h4>
+                <h4 class="page-title">IELTS Practice Writing</h4>
             </div>
         </div>
     </div>     
@@ -32,7 +32,7 @@
 <div class="row">
     <div class="col-lg-6">
         <div class="card-box border-top border-info border border-1">
-            <h4 class="header-title">iPACK Writing Task 1</h4>
+            <h4 class="header-title">IELTS Practice Writing Task 1</h4>
             <p class="sub-header mb-4">Each essay will deduct one point from your account</p>
 
             <ul class="nav nav-tabs nav-bordered">
@@ -102,7 +102,7 @@
 
     <div class="col-lg-6">
         <div class="card-box border-top border-info border border-1">
-            <h4 class="header-title">iPACK Writing Task 2</h4>
+            <h4 class="header-title">IELTS Practice Writing Task 2</h4>
             <p class="sub-header mb-4">Each essay will deduct one point from your account</p>
 
             <ul class="nav nav-tabs nav-bordered">

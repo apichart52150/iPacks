@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>iPACK - All</title>
+        <title>IELTS Practice - All</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf-token" content="{{ csrf_token() }}" />
         
@@ -160,10 +160,11 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item active"><i class="fas fa-home"></i> Home</li>
+                                <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('trial_home') }}"> Home</a></li>
+                                <li class="breadcrumb-item active">Trial Language Part</li>
                                 </ol>
                             </div>
-                            <h4 class="page-title">Language</h4>
+                            <h4 class="page-title">Trial Language Part</h4>
                         </div>
                     </div>
                 </div>
@@ -234,11 +235,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <center>
+                            <div class="text-center mt-4">
                                 <button id="check-answer" class="btn btn-info">Check Answers</button>
                                 <button id="show-answer" class="btn btn-success">Show Answers</button>
                                 <button id="back-home" class="btn btn-primary">Back Home</button>
-                            </center>
+                            </div>
                         </div>
                     </div>
                 </div>

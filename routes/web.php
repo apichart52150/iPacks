@@ -13,12 +13,7 @@ use Illuminate\Support\Facades\Mail;
 
     Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
-    Route::prefix('trial')->group(function () {
-        Route::get('home', 'TrialController@index')->name('trial_home');
-        Route::get('listening', 'TrialController@listening')->name('trial_listening');
-        Route::get('reading', 'TrialController@reading')->name('trial_reading');
-        Route::get('language', 'TrialController@language')->name('trial_language');
-    });
+   
 
     Route::group(['middleware' => 'auth:web'], function () {
 
@@ -38,9 +33,15 @@ use Illuminate\Support\Facades\Mail;
             return view('student.expire');
         })->name('expire');
 
+        Route::prefix('trial')->group(function () {
+            Route::get('home', 'TrialController@index')->name('trial_home');
+            Route::get('listening', 'TrialController@listening')->name('trial_listening');
+            Route::get('reading', 'TrialController@reading')->name('trial_reading');
+            Route::get('language', 'TrialController@language')->name('trial_language');
+        });
+
         Route::prefix('payment')->namespace('Payment')->group(function () {
-            
-            Route::get('payment/{status}', 'paymentController@payment_form')->name('paymentForm');
+            Route::get('{status}', 'paymentController@payment_form')->name('paymentForm');
             Route::post('payment/confirm', 'paymentController@payment_confirm')->name('paymentConfirm');
             Route::get('payment_success', 'paymentController@payment_success')->name('payment_success');
             Route::get('receipt', 'paymentController@receipt')->name('receipt');

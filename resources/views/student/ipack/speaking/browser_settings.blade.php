@@ -36,7 +36,7 @@
 				<ol class="breadcrumb m-0">
 					<li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('/') }}">Home</a></li>
 					<!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
-					<li class="breadcrumb-item active">iPACK Speaking Manual</li>
+					<li class="breadcrumb-item active">IELTS Practice Speaking Manual</li>
 				</ol>
 			</div>
 			<h4 class="page-title">Speaking Manual</h4>
@@ -49,7 +49,7 @@
 	<div class="col-xl-12">
 		<div class="card-box border border-success scroll">
 			<h3 class="text-center">Browser settings</h3>
-			<p class="lead text-center">The New Cambridge iPACK speaking system works best with the Safari and Chrome browsers. To set up your system, please follow the steps below to ensure your recording is successful.</p>
+			<p class="lead text-center">The New Cambridge IELTS Practice speaking system works best with the Safari and Chrome browsers. To set up your system, please follow the steps below to ensure your recording is successful.</p>
 			
 			<h4><i class="fab fa-safari"></i> Safari browser</h4>
 			<div class="row text-dark text-center font-17">
