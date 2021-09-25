@@ -10,6 +10,66 @@
 
 <link href="{{asset('public/assets/css/mail.css')}}" rel="stylesheet" type="text/css" />
 
+<style>
+    body {
+        padding: 10%;
+    }
+
+    .container {
+        position: relative;
+        color: white;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    a {
+        color: white;
+    }
+
+    .txt {
+        position: absolute;
+        top: 5%;
+        left: 20%;
+        right: 7%;
+    }
+
+    .title {
+        font-family: font_forte;
+        font-size: 6vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sub-title {
+        font-family: font_sukhumvit;
+        font-size: 3.3vw;
+    }
+
+    .description {
+        font-family: font_sukhumvit;
+        font-size: 1.8vw;
+    }
+
+    .text-concat {
+        content: "...";
+        position: absolute;
+        right: -12px;
+        bottom: 4px;
+    }
+
+    .text-concat {
+        position: relative;
+        display: inline-block;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-height: 100%;
+        line-height: 1.2em;
+        text-align: justify;
+    }
+</style>
+
 <body>
     @if($level=="gold")
     <div class="container">
@@ -36,7 +96,8 @@
                         provided Online
                     </p>
                     <p>
-                        Please be iinformed thit your subscription is valid until {{ $expire_date }} You can now access our IELTS-focused online
+                        Please be iinformed thit your subscription is valid until {{ $expire_date }} You can now access
+                        our IELTS-focused online
                         practice via the link below.
                     </p>
                     <p>
@@ -77,7 +138,8 @@
                         provided Online
                     </p>
                     <p>
-                        Please be iinformed thit your subscription is valid until {{ $expire_date }} You can now access our IELTS-focused online
+                        Please be iinformed thit your subscription is valid until {{ $expire_date }} You can now access
+                        our IELTS-focused online
                         practice via the link below.
                     </p>
                     <p>

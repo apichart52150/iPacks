@@ -42,4 +42,14 @@ class TutorialController extends Controller
             return "failed";
         }
     }
+
+    public function delete_tutorial($id){
+        try {
+            DB::table('tutorial')->where('id','=',$id)->delete();
+            return "success";
+        } catch (\Throwable $th) {
+            //throw $th;
+            return "failed";
+        }
+    }
 }

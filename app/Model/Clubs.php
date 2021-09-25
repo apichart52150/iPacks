@@ -74,7 +74,7 @@ class Clubs extends Model
                 ->leftjoin('users', 'clubs.user_create', '=', 'users.id')
                 ->leftjoin('staff', 'clubs.user_edit', '=', 'staff.staff_id')
                 ->where('clubs.status', '>', 0)
-                ->where('clubs.club_date', '=', $date)
+                ->where('clubs.club_date', '=', new DateTime($date ." 00:00:00"))
                 ->orderBy('clubs.updated_at', 'desc')
                 ->paginate($pag);
             return ($clubs);
@@ -84,7 +84,7 @@ class Clubs extends Model
                 ->leftjoin('users', 'clubs.user_create', '=', 'users.id')
                 ->leftjoin('staff', 'clubs.user_edit', '=', 'staff.staff_id')
                 ->where('clubs.status', '=', $status)
-                ->where('clubs.club_date', '=', $date)
+                ->where('clubs.club_date', '=', new DateTime($date ." 00:00:00"))
                 ->orderBy('clubs.updated_at', 'desc')
                 ->paginate($pag);
             return ($clubs);

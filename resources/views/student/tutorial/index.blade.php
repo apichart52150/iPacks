@@ -30,6 +30,13 @@
     form label {
         font-size: 20px;
     }
+    .day{
+        cursor: pointer;
+        text-align: center;
+    }
+    .date{
+        cursor: pointer;
+    }
 </style>
 
 <div class="card-box">
@@ -47,7 +54,7 @@
             </div>
             <div class="col-md-10 mt-2">
                 <div class="input-group">
-                    <input type="text" class="form-control" data-provide="datepicker" data-date-autoclose="true" id="date" name="date" readonly placeholder="mm/dd/yyyy">
+                    <input type="text" class="form-control date" data-provide="datepicker" data-date-autoclose="true" id="date" name="date" readonly placeholder="mm/dd/yyyy">
                     <div class="input-group-append">
                         <span class="input-group-text"><i class="ti-calendar"></i></span>
                     </div>
@@ -103,7 +110,7 @@
     <div class="dont-have-point alert alert-danger text-center" role="alert">
         <h2>Available points.</h2>
         <br>
-        <h3>0</h3>
+        <h2>0</h2>
     </div>
     @endif
 </div>
@@ -122,8 +129,8 @@
             @if(count($tutorials) > 0)
             @foreach ( $tutorials as $tutorial )
             <tr class="{{ date('d-m-Y', strtotime($tutorial->tutorial_date)) }}">
-                <th scope="row">{{ date('d-m-Y', strtotime($tutorial->tutorial_date)) }}</th>
-                <td>
+                <th class="align-middle" scope="row">{{ date('d-m-Y', strtotime($tutorial->tutorial_date)) }}</th>
+                <td class="align-middle">
                     @if($tutorial->status == 0)
                     <span class="text-primary">Pending</span>
                     @elseif ($tutorial->status == 1)
@@ -132,7 +139,21 @@
                     <span class="text-danger">Disapproval</span>
                     @endif
                 </td>
-                <td>{{ $tutorial->note }}</td>
+                <td class="align-middle">{{ $tutorial->note }}</td>
+                @if($tutorial->status == 2)
+                <td>
+                    <button class="btn btn-danger"
+                        onclick="delete_tutorial('{{ route('delete-tutorial',[$tutorial->id]) }}','{{ date('d-m-Y', strtotime($tutorial->tutorial_date)) }}');">
+                        Delete
+                    </button>
+                </td>
+                @else
+                <td>
+                    <button class="btn btn-danger" disabled>
+                        Delete
+                    </button>
+                </td>
+                @endif
             </tr>
             @endforeach
             @else
@@ -190,7 +211,7 @@
                             processData: false,
                             success: function(response) {
                                 if (response == "success") {
-                                    let tr = '<tr class="' + date + '"><td>' + date + '</td><td><span class="text-primary">Pending</span></td><td></td></tr>'
+                                    let tr = '<tr class="' + date + '"><td class="align-middle">' + date + '</td><td class="align-middle"><span class="text-primary">Pending</span></td><td></td><td><button class="btn btn-danger" disabled>Delete</button></td></tr>'
                                     if (count_tutorial == 0) {
                                         $('.dont-have-data').after(tr)
                                         $('.dont-have-data').remove()
@@ -205,14 +226,14 @@
                                     Swal.fire("Book", "Failed", "error")
                                 } else {
                                     point_0(response)
-                                    Swal.fire("Point", response, "error")
+                                    Swal.fire("Available points.", "0", "error")
                                 }
                             }
                         })
                     }
                 })
             } else {
-                Swal.fire("Point", "response", "error")
+                Swal.fire("Please try again.", "The date has already been reserved or token.", "error")
             }
         }
         return false
@@ -224,6 +245,30 @@
             $('.dont-have-point').removeClass('d-none')
         }
         $('#user-point-all').html("You have " + point + " point.")
+    }
+
+    function delete_tutorial(url,row){
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'OK',
+        }).then((result) => {
+            if (result.value) {
+                load_wait()
+                $.get(url,function(response){
+                    if(response=="success"){
+                        $('.'+row).remove()
+                        Swal.fire("Delete", "Successfully", "success")
+                    }else{
+                        Swal.fire("Delete", "Failed", "error")
+                    }
+                })
+            }
+        })
     }
 
 

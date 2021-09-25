@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\payment;
 
 use App\Http\Controllers\Controller;
+use App\Mail\SendMail;
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Mail;
 
 class paymentController extends Controller
 {
@@ -140,7 +142,7 @@ class paymentController extends Controller
         // DB::table('users')->where('id', Auth::id())->update(['remember_token' => $new_sessid]);
 
         // $data = array(
-        //     'subject'=>"User Detail",
+        //     'subject'=>"Online IELTS Tips & Practice",
         //     'email'=>$request->get('email'),
         //     'password'=>$request->get('password'),
         //     'username'=>$request->get('username'),

@@ -9,7 +9,7 @@
                 <h4 class="page-title">Send Email</h4>
             </div>
         </div>
-    </div>     
+    </div>
     <!-- end page title -->
 
     <div class="row">
@@ -24,39 +24,33 @@
                                 {{ csrf_field() }}
                                 <input type="hidden" name="id" value="{{ $user->id }}">
                                 <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">First name</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" name="first_name" placeholder="First name" value="{{ $user->first_name }}" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Lass name</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control" type="text" name="last_name" placeholder="Last name" value="{{ $user->last_name }}" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="email" name="email"  placeholder="Email" value="{{ $user->email }}" readonly>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Password</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" name="password"  placeholder="Password" value="{{ $user->password }}" readonly>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Username</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" name="username"  placeholder="Username" value="{{ $user->username }}" readonly>
+                                        <input class="form-control" type="email" name="email" placeholder="Email" value="{{ $user->email }}" readonly>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Expire</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" name="expire_date"  placeholder="Expire" value="{{ $expire_date }}" readonly>
+                                        <input class="form-control" type="text" name="expire_date" placeholder="Expire" value="{{ $expire_date }}" readonly>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Package</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" name="level"  placeholder="Package" value="{{ $user->level }}" readonly>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Created At</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="text" name="created_at"  placeholder="Created At" value="{{ $user->created_at }}" readonly>
+                                        <input class="form-control" type="text" name="level" placeholder="Package" value="{{ $user->level }}" readonly>
                                     </div>
                                 </div>
                                 

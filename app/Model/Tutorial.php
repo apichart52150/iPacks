@@ -74,7 +74,7 @@ class Tutorial extends Model
                 ->leftjoin('users', 'tutorial.user_create', '=', 'users.id')
                 ->leftjoin('staff', 'tutorial.user_edit', '=', 'staff.staff_id')
                 ->where('tutorial.status', '>', 0)
-                ->where('tutorial.tutorial_date', '=', $date)
+                ->where('tutorial.tutorial_date', '=', new DateTime($date ." 00:00:00"))
                 ->orderBy('tutorial.updated_at', 'desc')
                 ->paginate($pag);
             return ($tutorial);
@@ -84,7 +84,7 @@ class Tutorial extends Model
                 ->leftjoin('users', 'tutorial.user_create', '=', 'users.id')
                 ->leftjoin('staff', 'tutorial.user_edit', '=', 'staff.staff_id')
                 ->where('tutorial.status', '=', $status)
-                ->where('tutorial.tutorial_date', '=', $date)
+                ->where('tutorial.tutorial_date', '=', new DateTime($date ." 00:00:00"))
                 ->orderBy('tutorial.updated_at', 'desc')
                 ->paginate($pag);
             return ($tutorial);

@@ -1,4 +1,6 @@
 <?php
+use App\Mail\SendMail;
+use Illuminate\Support\Facades\Mail;
 
 // ==================== Routes User ====================== //
     Auth::routes();
@@ -11,12 +13,7 @@
 
     Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
-    Route::prefix('trial')->group(function () {
-        Route::get('home', 'TrialController@index')->name('trial_home');
-        Route::get('listening', 'TrialController@listening')->name('trial_listening');
-        Route::get('reading', 'TrialController@reading')->name('trial_reading');
-        Route::get('language', 'TrialController@language')->name('trial_language');
-    });
+   
 
     Route::group(['middleware' => 'auth:web'], function () {
 
@@ -36,6 +33,13 @@
             return view('student.expire');
         })->name('expire');
 
+        Route::prefix('trial')->group(function () {
+            Route::get('home', 'TrialController@index')->name('trial_home');
+            Route::get('listening', 'TrialController@listening')->name('trial_listening');
+            Route::get('reading', 'TrialController@reading')->name('trial_reading');
+            Route::get('language', 'TrialController@language')->name('trial_language');
+        });
+
         Route::prefix('payment')->namespace('Payment')->group(function () {
             Route::get('{status}', 'paymentController@payment_form')->name('paymentForm');
             Route::post('payment/confirm', 'paymentController@payment_confirm')->name('paymentConfirm');
@@ -45,6 +49,20 @@
             Route::get('payment_fail', function () {
                 return view('payment.fail');
             })->name('pay_fail');
+
+
+            Route::get('send/mail/test',function(){
+                $data = array(
+                        'subject'=>"Online IELTS Tips & Practice",
+                        'first_name'=>"Jakkrit",
+                        'last_name'=>"Ut-sa",
+                        'expire_date'=>"01-10-2021",
+                        'level'=>"gold",
+                    );
+                    Mail::to("metre80.x@gmail.com")->send(new SendMail($data));
+                dd($data);
+            });
+
         });
 
         Route::get('user_home', 'student\HomeController@index')->name('user_home');
@@ -133,9 +151,11 @@
         });
 
         Route::get('clubs','student\ClubsController@index')->name('clubs');
+        Route::get('clubs/delete/{id}','student\ClubsController@delete_club')->name('delete-club');
         Route::post('clubs/book','student\ClubsController@book')->name('clubs-book');
 
         Route::get('tutorial','student\TutorialController@index')->name('tutorial');
+        Route::get('tutorial/delete/{id}','student\TutorialController@delete_tutorial')->name('delete-tutorial');
         Route::post('tutorial/book','student\TutorialController@book')->name('tutorial-book');
     });
 

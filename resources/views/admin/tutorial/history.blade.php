@@ -71,6 +71,13 @@
         display: inline-block;
         position: relative;
     }
+    .day{
+        cursor: pointer;
+        text-align: center;
+    }
+    .date{
+        cursor: pointer;
+    }
 </style>
 
 
@@ -79,13 +86,12 @@
         <div class="card-box">
             <label for="">Date: </label>
             <div class="input-con pr-1">
-                <input type="date" class="form-control date" name="date">
-                <!-- <div class="input-group">
-                    <input type="text" class="form-control" data-provide="datepicker" data-date-autoclose="true" id="date" name="date" readonly placeholder="mm/dd/yyyy">
+                <div class="input-group">
+                    <input type="text" class="form-control date" data-provide="datepicker" data-date-autoclose="true" readonly placeholder="mm/dd/yyyy">
                     <div class="input-group-append">
                         <span class="input-group-text"><i class="ti-calendar"></i></span>
                     </div>
-                </div> -->
+                </div>
             </div>
             <label for="">Status: </label>
             <div class="input-con pr-1">
@@ -147,16 +153,24 @@
     </div>
 </div>
 
-<!-- form-pickers js-->
+<!-- Vendor js -->
+<script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
+
+<!-- Plugins js-->
 <script src="{{ asset('public/assets/js/bootstrap-datepicker.min.js') }}"></script>
 
 <script src="{{ asset('public/assets/js/ajax.jquery.js') }}"></script>
+
+<script src="{{ asset('public/assets/js/moment.min.js') }}"></script>
+
 <script>
     let get_url = $(location).attr('href').split("history/")[1].split("?")[0]
     let url_date = get_url.split("/")[0]
     let url_status = get_url.split("/")[1]
     if (url_date == "all")
-        url_date = null
+        url_date = ""
+    else
+        url_date = moment(url_date.replaceAll("-", "/")).format('MM-DD-YYYY')
     if (url_status == "all")
         url_status = "all"
     $('.date').val(url_date)
@@ -165,6 +179,8 @@
         let date = $('.date').val()
         if (date == "")
             date = "all"
+        else
+            date = moment($('.date').val().replaceAll("/", "-")).format('YYYY-MM-DD')
         let status = $('.status').val()
         let url = $('.search-data').attr('url') + '/' + date + '/' + status
         window.location.href = url
