@@ -88,7 +88,7 @@
     </div>
     @if(count($clubs)>0)
     @foreach ($clubs as $club)
-    <div class="col-md-4 id-{{$club->id}}">
+    <div class="col-md-4 id-{{$club->clubs_id}}">
         <div class="card-box text-center">
             <h3>{{ date('d-m-Y', strtotime($club->club_date)) }}</h3>
             <p class="user_name pb-0 mb-0">{{ $club->first_name }} {{ $club->last_name }}</p>
@@ -96,11 +96,11 @@
             <div class="row">
                 <div class="col-6">
                     <button class="approval btn btn-success w-100"
-                        onclick="approval('{{ $club->id }}','{{ $club->user_create }}','{{ $club->club_date }}','{{ $club->first_name }} {{ $club->last_name }}');">Approval</button>
+                        onclick="approval('{{ $club->clubs_id }}','{{ $club->user_create }}','{{ $club->club_date }}','{{ $club->first_name }} {{ $club->last_name }}');">Approval</button>
                 </div>
                 <div class="col-6">
                     <button class="disapproval btn btn-danger w-100"
-                        onclick="disapproval('{{ $club->id }}','{{ $club->user_create }}')">Disapproval</button>
+                        onclick="disapproval('{{ $club->clubs_id }}','{{ $club->user_create }}')">Disapproval</button>
                 </div>
             </div>
         </div>
@@ -122,11 +122,14 @@
 <script src="{{ asset('public/assets/js/moment.min.js') }}"></script>
 
 <script>
+    
+    $('.menubar-dark').css('font-family','"Roboto", sans-serif')
+    
     let event = []
 
     "@foreach ($approval as $club)"
     event.push({
-        id: "{{ $club->id }}",
+        id: "{{ $club->clubs_id }}",
         name: "{{ $club->first_name }} {{ $club->last_name }}",
         description: "{{ $club->email }}",
         date: "{{ $club->club_date }}",
@@ -206,21 +209,25 @@
             processData: false,
             success: function(response) {
                 if (response == "success") {
-                    Swal.fire(title, "Successfully", 'success')
-                    $('.id-' + id).remove()
-                    if (value == 1)
-                        event.push({
-                            id: id,
-                            name: student_name,
-                            description: "",
-                            date: date,
-                            type: "birthday",
-                            everyYear: !0
-                        })
+                    Swal.fire(title, "Successfully", 'success').then(()=>{
+                        location.reload()
+                    })
+                    // $('.id-' + id).remove()
+                    // if (value == 1)
+                    //     event.push({
+                    //         id: id,
+                    //         name: student_name,
+                    //         description: "",
+                    //         date: date,
+                    //         type: "birthday",
+                    //         everyYear: !0
+                    //     })
                 } else if (response == "failed") {
                     Swal.fire(title, 'Failed', 'error')
                 } else {
-                    Swal.fire(title, 'The item has been done. Please "refresh" to make the pending items visible.', 'error')
+                    Swal.fire(title, 'The item has been done. Please click "refresh" to make the pending items visible.', 'error').then(()=>{
+                        location.reload()
+                    })
                 }
             }
         })

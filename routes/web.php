@@ -283,6 +283,7 @@ use Illuminate\Support\Facades\Mail;
             Route::get('list','HomeController@index')->name('clubs-list');
             Route::get('history/{date}/{status}','HomeController@history');
             Route::post('confirm','HomeController@confirm')->name('clubs-confirm');
+            Route::post('edit','HomeController@edit_data')->name('clubs-edit');
             
         });
 
@@ -292,6 +293,7 @@ use Illuminate\Support\Facades\Mail;
             Route::get('list','HomeController@index')->name('tutorial-list');
             Route::get('history/{date}/{status}','HomeController@history');
             Route::post('confirm','HomeController@confirm')->name('tutorial-confirm');
+            Route::post('edit','HomeController@edit_data')->name('tutorial-edit');
             
         });
     });

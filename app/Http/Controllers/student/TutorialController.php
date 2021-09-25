@@ -45,7 +45,7 @@ class TutorialController extends Controller
 
     public function delete_tutorial($id){
         try {
-            DB::table('tutorial')->where('id','=',$id)->delete();
+            DB::table('tutorial')->where('tutorial_id','=',$id)->delete();
             return "success";
         } catch (\Throwable $th) {
             //throw $th;

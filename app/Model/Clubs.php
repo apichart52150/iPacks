@@ -13,7 +13,7 @@ class Clubs extends Model
     {
 
         $clubs = DB::table('clubs')
-            ->select('id', 'club_date', 'user_edit', 'status', 'note')
+            ->select('clubs_id', 'club_date', 'user_edit', 'status', 'note')
             ->where('user_create', '=', Auth::user()->id)
             ->orderBy('updated_at', 'desc')
             ->get();
@@ -26,7 +26,7 @@ class Clubs extends Model
         $datetime = new Datetime();
         $datetime->modify('-3 months');
         $clubs = DB::table('clubs')
-            ->select('clubs.id', 'clubs.club_date', 'users.first_name', 'users.last_name', 'users.email')
+            ->select('clubs.clubs_id', 'clubs.club_date', 'users.first_name', 'users.last_name', 'users.email')
             ->leftjoin('users', 'clubs.user_create', '=', 'users.id')
             ->where('clubs.status', '=', 1)
             ->where('clubs.club_date', '>', $datetime->format('Y-m-d'))
@@ -39,7 +39,7 @@ class Clubs extends Model
     {
 
         $clubs = DB::table('clubs')
-            ->select('clubs.created_at', 'clubs.user_create', 'clubs.status', 'clubs.id', 'clubs.club_date', 'clubs.note', 'users.first_name', 'users.last_name', 'users.email')
+            ->select('clubs.created_at', 'clubs.user_create', 'clubs.status', 'clubs.clubs_id', 'clubs.club_date', 'clubs.note', 'users.first_name', 'users.last_name', 'users.email')
             ->leftjoin('users', 'clubs.user_create', '=', 'users.id')
             ->where('clubs.status', '=', 0)
             ->orderBy('clubs.updated_at', 'desc')
@@ -52,7 +52,7 @@ class Clubs extends Model
         $pag = 10;
         if ($date == 'all' && $status == 'all') {
             $clubs = DB::table('clubs')
-                ->select('clubs.status', 'clubs.created_at', 'clubs.id', 'clubs.club_date', 'clubs.note', 'users.first_name', 'users.last_name', 'staff.staff_username')
+                ->select('clubs.status', 'clubs.created_at', 'clubs.clubs_id', 'clubs.club_date', 'clubs.note', 'users.id', 'users.first_name', 'users.last_name', 'staff.staff_username')
                 ->leftjoin('users', 'clubs.user_create', '=', 'users.id')
                 ->leftjoin('staff', 'clubs.user_edit', '=', 'staff.staff_id')
                 ->where('clubs.status', '>', 0)
@@ -61,7 +61,7 @@ class Clubs extends Model
             return ($clubs);
         } else if ($date == 'all' && $status != 'all') {
             $clubs = DB::table('clubs')
-                ->select('clubs.status', 'clubs.created_at', 'clubs.id', 'clubs.club_date', 'clubs.note', 'users.first_name', 'users.last_name', 'staff.staff_username')
+                ->select('clubs.status', 'clubs.created_at', 'clubs.clubs_id', 'clubs.club_date', 'clubs.note', 'users.id', 'users.first_name', 'users.last_name', 'staff.staff_username')
                 ->leftjoin('users', 'clubs.user_create', '=', 'users.id')
                 ->leftjoin('staff', 'clubs.user_edit', '=', 'staff.staff_id')
                 ->where('clubs.status', '=', $status)
@@ -70,7 +70,7 @@ class Clubs extends Model
             return ($clubs);
         } else if ($date != 'all' && $status == 'all') {
             $clubs = DB::table('clubs')
-                ->select('clubs.status', 'clubs.created_at', 'clubs.id', 'clubs.club_date', 'clubs.note', 'users.first_name', 'users.last_name', 'staff.staff_username')
+                ->select('clubs.status', 'clubs.created_at', 'clubs.clubs_id', 'clubs.club_date', 'clubs.note', 'users.id', 'users.first_name', 'users.last_name', 'staff.staff_username')
                 ->leftjoin('users', 'clubs.user_create', '=', 'users.id')
                 ->leftjoin('staff', 'clubs.user_edit', '=', 'staff.staff_id')
                 ->where('clubs.status', '>', 0)
@@ -80,7 +80,7 @@ class Clubs extends Model
             return ($clubs);
         } else if ($date != 'all' && $status != 'all') {
             $clubs = DB::table('clubs')
-                ->select('clubs.status', 'clubs.created_at', 'clubs.id', 'clubs.club_date', 'clubs.note', 'users.first_name', 'users.last_name', 'staff.staff_username')
+                ->select('clubs.status', 'clubs.created_at', 'clubs.clubs_id', 'clubs.club_date', 'clubs.note', 'users.id', 'users.first_name', 'users.last_name', 'staff.staff_username')
                 ->leftjoin('users', 'clubs.user_create', '=', 'users.id')
                 ->leftjoin('staff', 'clubs.user_edit', '=', 'staff.staff_id')
                 ->where('clubs.status', '=', $status)

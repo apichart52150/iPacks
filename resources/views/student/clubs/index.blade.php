@@ -7,7 +7,8 @@
         <div class="page-title-box">
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item active"><i class="fas fa-home"></i> Home</li>
+                    <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('user_home') }}">Home</a></li>
+                    <li class="breadcrumb-item active">Clubs</li>
                 </ol>
             </div>
             <h4 class="page-title">Home</h4>
@@ -18,9 +19,7 @@
 @endsection
 
 @section('content')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css"
-    integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
     .card-box,
@@ -32,11 +31,13 @@
     form label {
         font-size: 20px;
     }
-    .day{
+
+    .day {
         cursor: pointer;
         text-align: center;
     }
-    .date{
+
+    .date {
         cursor: pointer;
     }
 </style>
@@ -47,7 +48,7 @@
         {{ csrf_field() }}
         <div class="row">
             <div class="col-md-12">
-                <div class="alert d-none alert-danger" role="alert">
+                <div class="alert alert-date d-none alert-danger" role="alert">
                     Please select club date.
                 </div>
             </div>
@@ -56,8 +57,7 @@
             </div>
             <div class="col-md-10 mt-2">
                 <div class="input-group">
-                    <input type="text" class="form-control date" data-provide="datepicker" data-date-autoclose="true"
-                        id="date" name="date" readonly placeholder="mm/dd/yyyy">
+                    <input type="text" class="form-control date" data-provide="datepicker" data-date-autoclose="true" id="date" name="date" readonly placeholder="mm/dd/yyyy">
                     <div class="input-group-append">
                         <span class="input-group-text"><i class="ti-calendar"></i></span>
                     </div>
@@ -93,8 +93,7 @@
             </div>
             <div class="col-md-10 mt-2">
                 <div class="input-group">
-                    <input type="text" class="form-control" data-provide="datepicker" data-date-autoclose="true"
-                        id="date" name="date" readonly placeholder="mm/dd/yyyy">
+                    <input type="text" class="form-control" data-provide="datepicker" data-date-autoclose="true" id="date" name="date" readonly placeholder="mm/dd/yyyy">
                     <div class="input-group-append">
                         <span class="input-group-text"><i class="ti-calendar"></i></span>
                     </div>
@@ -146,8 +145,7 @@
                 <td class="align-middle">{{ $club->note }}</td>
                 @if($club->status == 2)
                 <td>
-                    <button class="btn btn-danger"
-                        onclick="delete_clubs('{{ route('delete-club',[$club->id]) }}','{{ date('d-m-Y', strtotime($club->club_date)) }}');">
+                    <button class="btn btn-danger" onclick="delete_clubs('{{ route('delete-club',[$club->clubs_id]) }}','{{ date('d-m-Y', strtotime($club->club_date)) }}');">
                         Delete
                     </button>
                 </td>
@@ -186,14 +184,15 @@
 
 <script>
     $('#user-point-all').html("You have {{$points->club_point}} point.")
+    $('#user-point-all').addClass('badge-success')
     let count_clubs = "{{count($clubs)}}"
     let points_clubs = "{{$points->club_point}}"
 
     $('#form-club').on('submit', function() {
         if ($('#date').val() == "") {
-            $('.alert').removeClass('d-none')
+            $('.alert-date').removeClass('d-none')
         } else {
-            $('.alert').addClass('d-none')
+            $('.alert-date').addClass('d-none')
             let date = moment($('#date').val()).format('DD-MM-YYYY')
             var get_data = $('.' + date).html()
             if (get_data == null) {
@@ -256,28 +255,28 @@
         $('#user-point-all').html("You have " + point + " point.")
     }
 
-    function delete_clubs(url,row){
+    function delete_clubs(url, row) {
         Swal.fire({
-                    title: 'Are you sure?',
-                    text: "",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'OK',
-                }).then((result) => {
-                    if (result.value) {
-                        load_wait()
-                        $.get(url,function(response){
-                            if(response=="success"){
-                                $('.'+row).remove()
-                                Swal.fire("Delete", "Successfully", "success")
-                            }else{
-                                Swal.fire("Delete", "Failed", "error")
-                            }
-                        })
+            title: 'Are you sure?',
+            text: "",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'OK',
+        }).then((result) => {
+            if (result.value) {
+                load_wait()
+                $.get(url, function(response) {
+                    if (response == "success") {
+                        $('.' + row).remove()
+                        Swal.fire("Delete", "Successfully", "success")
+                    } else {
+                        Swal.fire("Delete", "Failed", "error")
                     }
                 })
+            }
+        })
         // let data = new FormData()
         // data.append('_token',$('input[name="_token"]').val())
         // data.append('id',id)

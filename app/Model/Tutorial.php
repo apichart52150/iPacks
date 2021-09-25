@@ -13,7 +13,7 @@ class Tutorial extends Model
     {
 
         $tutorial = DB::table('tutorial')
-            ->select('id', 'tutorial_date', 'user_edit', 'status', 'note')
+            ->select('tutorial_id', 'tutorial_date', 'user_edit', 'status', 'note')
             ->where('user_create', '=', Auth::user()->id)
             ->orderBy('updated_at', 'desc')
             ->get();
@@ -26,7 +26,7 @@ class Tutorial extends Model
         $datetime = new Datetime();
         $datetime->modify('-3 months');
         $tutorial = DB::table('tutorial')
-            ->select('tutorial.id', 'tutorial.tutorial_date', 'users.first_name', 'users.last_name', 'users.email')
+            ->select('tutorial.tutorial_id', 'tutorial.tutorial_date', 'users.first_name', 'users.last_name', 'users.email')
             ->leftjoin('users', 'tutorial.user_create', '=', 'users.id')
             ->where('tutorial.status', '=', 1)
             ->where('tutorial.tutorial_date', '>', $datetime->format('Y-m-d'))
@@ -39,7 +39,7 @@ class Tutorial extends Model
     {
 
         $tutorial = DB::table('tutorial')
-            ->select('tutorial.created_at', 'tutorial.user_create', 'tutorial.status', 'tutorial.id', 'tutorial.tutorial_date', 'tutorial.note', 'users.first_name', 'users.last_name', 'users.email')
+            ->select('tutorial.created_at', 'tutorial.user_create', 'tutorial.status', 'tutorial.tutorial_id', 'tutorial.tutorial_date', 'tutorial.note', 'users.first_name', 'users.last_name', 'users.email')
             ->leftjoin('users', 'tutorial.user_create', '=', 'users.id')
             ->where('tutorial.status', '=', 0)
             ->orderBy('tutorial.updated_at', 'desc')
@@ -52,7 +52,7 @@ class Tutorial extends Model
         $pag = 10;
         if ($date == 'all' && $status == 'all') {
             $tutorial = DB::table('tutorial')
-                ->select('tutorial.status', 'tutorial.created_at', 'tutorial.id', 'tutorial.tutorial_date', 'tutorial.note', 'users.first_name', 'users.last_name', 'staff.staff_username')
+                ->select('tutorial.status', 'tutorial.created_at', 'tutorial.tutorial_id', 'tutorial.tutorial_date', 'tutorial.note', 'users.id', 'users.first_name', 'users.last_name', 'staff.staff_username')
                 ->leftjoin('users', 'tutorial.user_create', '=', 'users.id')
                 ->leftjoin('staff', 'tutorial.user_edit', '=', 'staff.staff_id')
                 ->where('tutorial.status', '>', 0)
@@ -61,7 +61,7 @@ class Tutorial extends Model
             return ($tutorial);
         } else if ($date == 'all' && $status != 'all') {
             $tutorial = DB::table('tutorial')
-                ->select('tutorial.status', 'tutorial.created_at', 'tutorial.id', 'tutorial.tutorial_date', 'tutorial.note', 'users.first_name', 'users.last_name', 'staff.staff_username')
+                ->select('tutorial.status', 'tutorial.created_at', 'tutorial.tutorial_id', 'tutorial.tutorial_date', 'tutorial.note', 'users.id', 'users.first_name', 'users.last_name', 'staff.staff_username')
                 ->leftjoin('users', 'tutorial.user_create', '=', 'users.id')
                 ->leftjoin('staff', 'tutorial.user_edit', '=', 'staff.staff_id')
                 ->where('tutorial.status', '=', $status)
@@ -70,7 +70,7 @@ class Tutorial extends Model
             return ($tutorial);
         } else if ($date != 'all' && $status == 'all') {
             $tutorial = DB::table('tutorial')
-                ->select('tutorial.status', 'tutorial.created_at', 'tutorial.id', 'tutorial.tutorial_date', 'tutorial.note', 'users.first_name', 'users.last_name', 'staff.staff_username')
+                ->select('tutorial.status', 'tutorial.created_at', 'tutorial.tutorial_id', 'tutorial.tutorial_date', 'tutorial.note', 'users.id', 'users.first_name', 'users.last_name', 'staff.staff_username')
                 ->leftjoin('users', 'tutorial.user_create', '=', 'users.id')
                 ->leftjoin('staff', 'tutorial.user_edit', '=', 'staff.staff_id')
                 ->where('tutorial.status', '>', 0)
@@ -80,7 +80,7 @@ class Tutorial extends Model
             return ($tutorial);
         } else if ($date != 'all' && $status != 'all') {
             $tutorial = DB::table('tutorial')
-                ->select('tutorial.status', 'tutorial.created_at', 'tutorial.id', 'tutorial.tutorial_date', 'tutorial.note', 'users.first_name', 'users.last_name', 'staff.staff_username')
+                ->select('tutorial.status', 'tutorial.created_at', 'tutorial.tutorial_id', 'tutorial.tutorial_date', 'tutorial.note', 'users.id', 'users.first_name', 'users.last_name', 'staff.staff_username')
                 ->leftjoin('users', 'tutorial.user_create', '=', 'users.id')
                 ->leftjoin('staff', 'tutorial.user_edit', '=', 'staff.staff_id')
                 ->where('tutorial.status', '=', $status)
