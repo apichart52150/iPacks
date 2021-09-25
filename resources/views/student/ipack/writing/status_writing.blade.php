@@ -6,7 +6,7 @@
 			<div class="page-title-box">
 				<div class="page-title-right">
 					<ol class="breadcrumb m-0">
-						<li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('ipack_writing') }}">iPACK Writing</a></li>
+						<li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('ipack_writing') }}">IELTS Practice Writing</a></li>
 						<!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
 						<li class="breadcrumb-item active">Status Writing</li>
 					</ol>

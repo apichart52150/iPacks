@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>iPACK - All</title>
+        <title>IELTS Practice - All</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -140,7 +140,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        2021 iPACKS © New Cambridge
+                        2021 © Online IELTS Tip & Practice By New Cambridge
                     </div>
                 </div>
             </div>

@@ -41,8 +41,7 @@ use Illuminate\Support\Facades\Mail;
         });
 
         Route::prefix('payment')->namespace('Payment')->group(function () {
-            
-            Route::get('payment/{status}', 'paymentController@payment_form')->name('paymentForm');
+            Route::get('{status}', 'paymentController@payment_form')->name('paymentForm');
             Route::post('payment/confirm', 'paymentController@payment_confirm')->name('paymentConfirm');
             Route::get('payment_success', 'paymentController@payment_success')->name('payment_success');
             Route::get('receipt', 'paymentController@receipt')->name('receipt');

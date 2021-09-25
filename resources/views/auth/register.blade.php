@@ -9,7 +9,8 @@
 				<div class="card-body p-4">
 					<div class="text-center">
 						<div class="text-center mb-3">
-	                        <h3 class="font-weight-bold text-primary"><i class="fas fa-info"></i> PACKS <span class="d-none d-sm-inline">|</span> <span class="text-dark">REGISTER</span> </h3>
+							<h3 class="font-weight-bold text-primary"> Online IELTS Tips & Practice </h3> 
+							<span class="text-dark h3">REGISTER</span> 
 	                    </div>
 						<p class="text-muted mb-4 mt-3">Don't have an account? Create your own account, it takes less than a minute</p>
 					</div>

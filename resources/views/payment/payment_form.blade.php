@@ -31,16 +31,20 @@
                                 <input type="hidden" name="package" value="{{ $status }}">
                                 @if($status == 'gold')
                                     <input type="hidden" name="orderRef" value="6000.00">
-                                @else
+                                @elseif($status == 'platinum')
                                     <input type="hidden" name="orderRef" value="10000.00">
+                                @else
+                                    <input type="hidden" name="orderRef" value="1500.00">
                                 @endif
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label" for="simpleinput">Your Package</label>
                                     <div class="col-sm-10">
                                         @if($status == 'gold')
                                         <input type="text" id="simpleinput" class="form-control text-uppercase" name="price" value="{{ $status }}" disabled>
-                                        @else
+                                        @elseif($status == 'platinum')
                                         <input type="text" id="simpleinput" class="form-control text-uppercase" name="price" value="{{ $status }}" disabled>
+                                        @else
+                                        <input type="text" id="simpleinput" class="form-control text-uppercase" name="price" value="{{ $status }} 1 on 1 Tutorial + Writing & Speaking marked" disabled>
                                         @endif
                                     </div>
                                 </div>

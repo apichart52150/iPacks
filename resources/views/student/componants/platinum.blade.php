@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div class="wid-icon-info text-right">
-                    <h4 class="mb-1 text-light">Online IELTS Tips & Practice</h4>
+                    <h2 class="mb-1 text-light">IELTS Practice</h2>
                     <h4 class="text-light mb-1">Listening</h4>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <h4 class="mb-1 text-light">Online IELTS Tips & Practice</h4>
+                    <h2 class="mb-1 text-light">IELTS Practice</h2>
                     <h4 class="text-light mb-1">Reading</h4>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <h4 class="mb-1 text-light">Online IELTS Tips & Practice</h4>
+                    <h2 class="mb-1 text-light">IELTS Practice</h2>
                     <p class="text-light mb-1">Writing</p>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <h4 class="mb-1 text-light">Online IELTS Tips & Practice</h4>
+                    <h2 class="mb-1 text-light">IELTS Practice</h2>
                     <p class="text-light mb-1">Speaking</p>
                 </div>
             </div>
