@@ -143,7 +143,7 @@
                     @endif
                 </td>
                 <td class="align-middle">{{ $club->note }}</td>
-                @if($club->status == 2)
+                {{-- @if($club->status == 2)
                 <td>
                     <button class="btn btn-danger" onclick="delete_clubs('{{ route('delete-club',[$club->clubs_id]) }}','{{ date('d-m-Y', strtotime($club->club_date)) }}');">
                         Delete
@@ -155,7 +155,7 @@
                         Delete
                     </button>
                 </td>
-                @endif
+                @endif --}}
             </tr>
             @endforeach
             @else
