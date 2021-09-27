@@ -146,12 +146,12 @@
                     processData: false,
                     success: function(response) {
                         if (response == "success") {
-                            swal("Update success", "", "success").then(()=>{
+                            swal("Delete", "", "success").then(()=>{
                                 $('.row-'+id).remove()
                             })
                             }
                         else
-                            swal("Update failed", "", "error")
+                            swal("Delete", "", "error")
                             }
                 })
             }
