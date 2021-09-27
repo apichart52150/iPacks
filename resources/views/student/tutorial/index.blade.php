@@ -7,7 +7,8 @@
         <div class="page-title-box">
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item active"><i class="fas fa-home"></i> Home</li>
+                    <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('user_home') }}">Home</a></li>
+                    <li class="breadcrumb-item active">Tutorial</li>
                 </ol>
             </div>
             <h4 class="page-title">Tutorial</h4>
@@ -45,7 +46,7 @@
         {{ csrf_field() }}
         <div class="row">
             <div class="col-md-12">
-                <div class="alert d-none alert-danger" role="alert">
+                <div class="alert alert-date d-none alert-danger" role="alert">
                     Please select tutorial date.
                 </div>
             </div>
@@ -72,7 +73,7 @@
         </div>
     </form>
     <div class="dont-have-point d-none alert alert-danger text-center" role="alert">
-        <h2>Available points.</h2>
+        <h2>Available points</h2>
         <br>
         <h3>0</h3>
     </div>
@@ -108,7 +109,7 @@
         </div>
     </form>
     <div class="dont-have-point alert alert-danger text-center" role="alert">
-        <h2>Available points.</h2>
+        <h2>Available points</h2>
         <br>
         <h2>0</h2>
     </div>
@@ -143,7 +144,7 @@
                 @if($tutorial->status == 2)
                 <td>
                     <button class="btn btn-danger"
-                        onclick="delete_tutorial('{{ route('delete-tutorial',[$tutorial->id]) }}','{{ date('d-m-Y', strtotime($tutorial->tutorial_date)) }}');">
+                        onclick="delete_tutorial('{{ route('delete-tutorial',[$tutorial->tutorial_id]) }}','{{ date('d-m-Y', strtotime($tutorial->tutorial_date)) }}');">
                         Delete
                     </button>
                 </td>
@@ -180,14 +181,15 @@
 
 <script>
     $('#user-point-all').html("You have {{$points->tutorial_point}} point.")
+    $('#user-point-all').addClass('badge-success')
     let count_tutorial = "{{count($tutorials)}}"
     let points_tutorial = "{{$points->tutorial_point}}"
 
     $('#form-tutorial').on('submit', function() {
         if ($('#date').val() == "") {
-            $('.alert').removeClass('d-none')
+            $('.alert-date').removeClass('d-none')
         } else {
-            $('.alert').addClass('d-none')
+            $('.alert-date').addClass('d-none')
             let date = moment($('#date').val()).format('DD-MM-YYYY')
             var get_data = $('.' + date).html()
             if (get_data == null) {
@@ -221,12 +223,12 @@
                                     }
                                     points_tutorial--
                                     point_0(points_tutorial)
-                                    Swal.fire("Book", "Successfully", "success")
+                                    Swal.fire("Book", "", "success")
                                 } else if (response == "failed") {
-                                    Swal.fire("Book", "Failed", "error")
+                                    Swal.fire("Something went wrong!", "", "error")
                                 } else {
                                     point_0(response)
-                                    Swal.fire("Available points.", "0", "error")
+                                    Swal.fire("Available points", "0", "error")
                                 }
                             }
                         })
@@ -262,9 +264,9 @@
                 $.get(url,function(response){
                     if(response=="success"){
                         $('.'+row).remove()
-                        Swal.fire("Delete", "Successfully", "success")
+                        Swal.fire("Delete", "", "success")
                     }else{
-                        Swal.fire("Delete", "Failed", "error")
+                        Swal.fire("Something went wrong!", "", "error")
                     }
                 })
             }
@@ -274,8 +276,8 @@
 
     function load_wait() {
         Swal.fire({
-            title: 'Please Wait !',
-            html: 'data uploading',
+            title: 'Please Wait',
+            html: 'Data uploading in progress',
             allowOutsideClick: false,
             onBeforeOpen: () => {
                 Swal.showLoading()

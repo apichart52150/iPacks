@@ -45,7 +45,7 @@ class ClubsController extends Controller
 
     public function delete_club($id){
         try {
-            DB::table('clubs')->where('id','=',$id)->delete();
+            DB::table('clubs')->where('clubs_id','=',$id)->delete();
             return "success";
         } catch (\Throwable $th) {
             //throw $th;

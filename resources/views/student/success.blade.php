@@ -65,6 +65,9 @@
                                         <div class="col-12">
                                             <a href="{{ url('payment/'.'extra') }}" type="button" class="btn btn-block btn--md btn-primary waves-effect waves-light">1 on 1 Tutorial + Writing & Speaking marked</a>
                                         </div>
+                                        <div class="col-12 mt-2">
+                                            <a href="{{ route('trial_home') }}" type="button" class="btn btn-block btn--md btn-info waves-effect waves-light">Trial Online IELTS Tip & Practice</a>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -90,7 +93,7 @@
 
 
         <footer class="footer footer-alt">
-            2016 - 2019 &copy; Minton theme by <a href="" class="text-muted">Coderthemes</a> 
+            2021 © Online IELTS Tip & Practice By New Cambridge
         </footer>
 
 

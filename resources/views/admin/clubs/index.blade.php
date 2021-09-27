@@ -88,7 +88,7 @@
     </div>
     @if(count($clubs)>0)
     @foreach ($clubs as $club)
-    <div class="col-md-4 id-{{$club->id}}">
+    <div class="col-md-4 id-{{$club->clubs_id}}">
         <div class="card-box text-center">
             <h3>{{ date('d-m-Y', strtotime($club->club_date)) }}</h3>
             <p class="user_name pb-0 mb-0">{{ $club->first_name }} {{ $club->last_name }}</p>
@@ -96,11 +96,11 @@
             <div class="row">
                 <div class="col-6">
                     <button class="approval btn btn-success w-100"
-                        onclick="approval('{{ $club->id }}','{{ $club->user_create }}','{{ $club->club_date }}','{{ $club->first_name }} {{ $club->last_name }}');">Approval</button>
+                        onclick="approval('{{ $club->clubs_id }}','{{ $club->user_create }}','{{ $club->club_date }}','{{ $club->first_name }} {{ $club->last_name }}');">Approval</button>
                 </div>
                 <div class="col-6">
                     <button class="disapproval btn btn-danger w-100"
-                        onclick="disapproval('{{ $club->id }}','{{ $club->user_create }}')">Disapproval</button>
+                        onclick="disapproval('{{ $club->clubs_id }}','{{ $club->user_create }}')">Disapproval</button>
                 </div>
             </div>
         </div>
@@ -122,11 +122,14 @@
 <script src="{{ asset('public/assets/js/moment.min.js') }}"></script>
 
 <script>
+    
+    $('.menubar-dark').css('font-family','"Roboto", sans-serif')
+    
     let event = []
 
     "@foreach ($approval as $club)"
     event.push({
-        id: "{{ $club->id }}",
+        id: "{{ $club->clubs_id }}",
         name: "{{ $club->first_name }} {{ $club->last_name }}",
         description: "{{ $club->email }}",
         date: "{{ $club->club_date }}",
@@ -144,7 +147,7 @@
 
     function approval(id, student_id, date, student_name) {
         Swal.fire({
-            title: 'Please write a note',
+            title: 'Please tell us your reasons.',
             text: "",
             html: '<input type="text" id="note" class="swal2-input" placeholder="Note">',
             showCancelButton: true,
@@ -154,7 +157,7 @@
             preConfirm: () => {
                 let note = Swal.getPopup().querySelector('#note').value
                 if (!note) {
-                    Swal.showValidationMessage(`Please enter note.`)
+                    Swal.showValidationMessage(`Please tell us your reasons.`)
                 }
                 return {
                     note: note,
@@ -168,9 +171,9 @@
     function disapproval(id, student_id) {
 
         Swal.fire({
-            title: 'Please write a note',
+            title: 'Please tell us your reasons.',
             text: "",
-            html: '<input type="text" id="note" class="swal2-input" placeholder="Note">',
+            html: '<input type="text" id="note" class="swal2-input" placeholder="Notes">',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
@@ -178,7 +181,7 @@
             preConfirm: () => {
                 let note = Swal.getPopup().querySelector('#note').value
                 if (!note) {
-                    Swal.showValidationMessage(`Please enter note.`)
+                    Swal.showValidationMessage(`Please tell us your reasons.`)
                 }
                 return {
                     note: note,
@@ -206,21 +209,25 @@
             processData: false,
             success: function(response) {
                 if (response == "success") {
-                    Swal.fire(title, "Successfully", 'success')
-                    $('.id-' + id).remove()
-                    if (value == 1)
-                        event.push({
-                            id: id,
-                            name: student_name,
-                            description: "",
-                            date: date,
-                            type: "birthday",
-                            everyYear: !0
-                        })
+                    Swal.fire(title, "", 'success').then(()=>{
+                        location.reload()
+                    })
+                    // $('.id-' + id).remove()
+                    // if (value == 1)
+                    //     event.push({
+                    //         id: id,
+                    //         name: student_name,
+                    //         description: "",
+                    //         date: date,
+                    //         type: "birthday",
+                    //         everyYear: !0
+                    //     })
                 } else if (response == "failed") {
-                    Swal.fire(title, 'Failed', 'error')
+                    Swal.fire(title, '', 'error')
                 } else {
-                    Swal.fire(title, 'The item has been done. Please "refresh" to make the pending items visible.', 'error')
+                    Swal.fire(title, 'The item has been done already. Please click "refresh" to make the pending items visible.', 'error').then(()=>{
+                        location.reload()
+                    })
                 }
             }
         })
@@ -228,8 +235,8 @@
 
     function load_wait() {
         Swal.fire({
-            title: 'Please Wait !',
-            html: 'data uploading',
+            title: 'Please Wait',
+            html: 'Data uploading in progress',
             allowOutsideClick: false,
             onBeforeOpen: () => {
                 Swal.showLoading()

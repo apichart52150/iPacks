@@ -71,11 +71,13 @@
         display: inline-block;
         position: relative;
     }
-    .day{
+
+    .day {
         cursor: pointer;
         text-align: center;
     }
-    .date{
+
+    .date {
         cursor: pointer;
     }
 </style>
@@ -113,9 +115,10 @@
                     <tr class="table-secondary">
                         <th class="">Club date</th>
                         <th>USER</th>
-                        <th>Approval by</th>
+                        <th>Approved by</th>
                         <th>Status</th>
-                        <th>Note</th>
+                        <th>Notes</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -133,11 +136,14 @@
                             @endif
                         </td>
                         <td>{{ $club->note }}</td>
+                        <td>
+                            <button class="btn btn-primary" onclick="edit_status('{{$club->clubs_id}}','{{$club->status}}','{{$club->note}}','{{$club->id}}');">Edit</button>
+                        </td>
                     </tr>
                     @endforeach
                     @else
                     <tr>
-                        <td colspan="5" class="text-center">
+                        <td colspan="6" class="text-center">
                             <span>Don't have data</span>
                         </td>
                     </tr>
@@ -151,6 +157,7 @@
             {!! $clubs->links('pagination::bootstrap-4') !!}
         </div>
     </div>
+    <div id="route" route="{{route('clubs-edit')}}"></div>
 </div>
 
 <!-- Vendor js -->
@@ -192,6 +199,87 @@
         $('.date').val(null)
         $('.status').val("all")
     })
+
+    function edit_status(id, status, note, student_id) {
+        let select = document.createElement("select")
+        let input = '<br><label class="w-100 text-left pt-2">Status</label>'
+        input += '<select id="status-edit" class="swal2-input mt-0">'
+        if (status == 1) {
+            input += '<option value="1" selected>Approval</option>'
+            input += '<option value="2">Disapproval</option>'
+        } else if (status == 2) {
+            input += '<option value="1">Approval</option>'
+            input += '<option value="2" selected>Disapproval</option>'
+        }
+        input += '</select>'
+        input += '<br><label class="w-100 text-left pt-2">Reasons</label>'
+        input += '<input type="text" id="note-edit" class="swal2-input mt-0" value="' + note + '" placeholder="Notes">'
+
+        Swal.fire({
+            title: 'Edit',
+            text: "",
+            html: input,
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'OK',
+            preConfirm: () => {
+                let status = Swal.getPopup().querySelector('#status-edit').value
+                let note = Swal.getPopup().querySelector('#note-edit').value
+                if (!note) {
+                    Swal.showValidationMessage(`Please enter note.`)
+                }
+                return {
+                    status: status,
+                    note: note,
+                }
+            }
+        }).then((result) => {
+            update_data(id, status, result.value.status, result.value.note, student_id)
+        })
+    }
+
+    function update_data(id, status1, status2, note, student_id) {
+        load_wait()
+        let title = "Edit"
+        let data = new FormData()
+        data.append('_token', "{{ csrf_token() }}")
+        data.append('id', id)
+        data.append('status1', status1)
+        data.append('status2', status2)
+        data.append('note', note)
+        data.append('student_id', student_id)
+        $.ajax({
+            type: 'POST',
+            url: $('#route').attr('route'),
+            data: data,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                if (response == "success") {
+                    Swal.fire(title, "", 'success').then(()=>{
+                        location.reload()
+                    })
+                } else if (response == "failed") {
+                    Swal.fire(title, '', 'error')
+                } else {
+                    Swal.fire(title, 'User has 0 point.', 'warning')
+                }
+            }
+        })
+    }
+
+    function load_wait() {
+        Swal.fire({
+            title: 'Please Wait',
+            html: 'Data uploading in progress',
+            allowOutsideClick: false,
+            onBeforeOpen: () => {
+                Swal.showLoading()
+            },
+        })
+    }
 </script>
 
 @endsection
