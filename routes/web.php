@@ -56,7 +56,7 @@ use Illuminate\Support\Facades\Mail;
                         'subject'=>"Online IELTS Tips & Practice",
                         'first_name'=>"Jakkrit",
                         'last_name'=>"Ut-sa",
-                        'expire_date'=>"01-10-2021",
+                        'expire_date'=>date('M d Y',strtotime("01-10-2021")),
                         'level'=>"gold",
                     );
                     Mail::to("metre80.x@gmail.com")->send(new SendMail($data));
