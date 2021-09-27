@@ -51,7 +51,7 @@ use Illuminate\Support\Facades\Mail;
             })->name('pay_fail');
 
 
-            Route::get('send/mail/test',function(){
+            Route::get('send/mail/test/5a4f65486qweg4e5s4d2g4vc4bv8wdst4s5d4gs42vxcv',function(){
                 $data = array(
                         'subject'=>"Online IELTS Tips & Practice",
                         'first_name'=>"Jakkrit",

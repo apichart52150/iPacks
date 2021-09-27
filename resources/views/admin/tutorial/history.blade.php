@@ -115,9 +115,10 @@
                     <tr class="table-secondary">
                         <th class="">Tutorial date</th>
                         <th>USER</th>
-                        <th>Approval by</th>
+                        <th>Approved by</th>
                         <th>Status</th>
-                        <th>Note</th>
+                        <th>Notes</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -209,8 +210,8 @@
             input += '<option value="2" selected>Disapproval</option>'
         }
         input += '</select>'
-        input += '<br><label class="w-100 text-left pt-2">Note</label>'
-        input += '<input type="text" id="note-edit" class="swal2-input mt-0" value="' + note + '" placeholder="Note">'
+        input += '<br><label class="w-100 text-left pt-2">Reasons</label>'
+        input += '<input type="text" id="note-edit" class="swal2-input mt-0" value="' + note + '" placeholder="Notes">'
 
         Swal.fire({
             title: 'Edit',
@@ -255,13 +256,13 @@
             processData: false,
             success: function(response) {
                 if (response == "success") {
-                    Swal.fire(title, "Successfully", 'success').then(()=>{
+                    Swal.fire(title, "", 'success').then(()=>{
                         location.reload()
                     })
                 } else if (response == "failed") {
-                    Swal.fire(title, 'Failed', 'error')
+                    Swal.fire(title, '', 'error')
                 } else {
-                    Swal.fire(title, 'User has 0 point.', 'error')
+                    Swal.fire(title, 'User has 0 point.', 'warning')
                 }
             }
         })
@@ -269,8 +270,8 @@
 
     function load_wait() {
         Swal.fire({
-            title: 'Please Wait !',
-            html: 'data uploading',
+            title: 'Please Wait',
+            html: 'Data uploading in progress',
             allowOutsideClick: false,
             onBeforeOpen: () => {
                 Swal.showLoading()

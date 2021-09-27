@@ -75,7 +75,7 @@
         </div>
     </form>
     <div class="dont-have-point d-none alert alert-danger text-center" role="alert">
-        <h2>Available points.</h2>
+        <h2>Available points</h2>
         <br>
         <h3>0</h3>
     </div>
@@ -111,7 +111,7 @@
         </div>
     </form>
     <div class="alert alert-danger text-center" role="alert">
-        <h2>Available points.</h2>
+        <h2>Available points</h2>
         <br>
         <h2>0</h2>
     </div>
@@ -229,12 +229,12 @@
                                     }
                                     points_clubs--
                                     point_0(points_clubs)
-                                    Swal.fire("Book", "Successfully", "success")
+                                    Swal.fire("Book", "", "success")
                                 } else if (response == "failed") {
-                                    Swal.fire("Book", "Failed", "error")
+                                    Swal.fire("Something went wrong!", "", "error")
                                 } else {
                                     point_0(response)
-                                    Swal.fire("Available points.", "0", "error")
+                                    Swal.fire("Available points", "0", "error")
                                 }
                             }
                         })
@@ -270,9 +270,9 @@
                 $.get(url, function(response) {
                     if (response == "success") {
                         $('.' + row).remove()
-                        Swal.fire("Delete", "Successfully", "success")
+                        Swal.fire("Delete", "", "success")
                     } else {
-                        Swal.fire("Delete", "Failed", "error")
+                        Swal.fire("Something went wrong!", "", "error")
                     }
                 })
             }
@@ -297,8 +297,8 @@
 
     function load_wait() {
         Swal.fire({
-            title: 'Please Wait !',
-            html: 'data uploading',
+            title: 'Please Wait',
+            html: 'Data uploading in progress',
             allowOutsideClick: false,
             onBeforeOpen: () => {
                 Swal.showLoading()

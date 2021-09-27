@@ -147,7 +147,7 @@
 
     function approval(id, student_id, date, student_name) {
         Swal.fire({
-            title: 'Please write a note',
+            title: 'Please tell us your reasons.',
             text: "",
             html: '<input type="text" id="note" class="swal2-input" placeholder="Note">',
             showCancelButton: true,
@@ -157,7 +157,7 @@
             preConfirm: () => {
                 let note = Swal.getPopup().querySelector('#note').value
                 if (!note) {
-                    Swal.showValidationMessage(`Please enter note.`)
+                    Swal.showValidationMessage(`Please tell us your reasons.`)
                 }
                 return {
                     note: note,
@@ -171,9 +171,9 @@
     function disapproval(id, student_id) {
 
         Swal.fire({
-            title: 'Please write a note',
+            title: 'Please tell us your reasons.',
             text: "",
-            html: '<input type="text" id="note" class="swal2-input" placeholder="Note">',
+            html: '<input type="text" id="note" class="swal2-input" placeholder="Notes">',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
@@ -181,7 +181,7 @@
             preConfirm: () => {
                 let note = Swal.getPopup().querySelector('#note').value
                 if (!note) {
-                    Swal.showValidationMessage(`Please enter note.`)
+                    Swal.showValidationMessage(`Please tell us your reasons.`)
                 }
                 return {
                     note: note,
@@ -209,7 +209,7 @@
             processData: false,
             success: function(response) {
                 if (response == "success") {
-                    Swal.fire(title, "Successfully", 'success').then(()=>{
+                    Swal.fire(title, "", 'success').then(()=>{
                         location.reload()
                     })
                     // $('.id-' + id).remove()
@@ -223,9 +223,9 @@
                     //         everyYear: !0
                     //     })
                 } else if (response == "failed") {
-                    Swal.fire(title, 'Failed', 'error')
+                    Swal.fire(title, '', 'error')
                 } else {
-                    Swal.fire(title, 'The item has been done. Please click "refresh" to make the pending items visible.', 'error').then(()=>{
+                    Swal.fire(title, 'The item has been done already. Please click "refresh" to make the pending items visible.', 'error').then(()=>{
                         location.reload()
                     })
                 }
@@ -235,8 +235,8 @@
 
     function load_wait() {
         Swal.fire({
-            title: 'Please Wait !',
-            html: 'data uploading',
+            title: 'Please Wait',
+            html: 'Data uploading in progress',
             allowOutsideClick: false,
             onBeforeOpen: () => {
                 Swal.showLoading()
