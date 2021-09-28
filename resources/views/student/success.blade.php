@@ -55,10 +55,10 @@
 
                                     <div class="row mt-3">
                                         <div class="col-6">
-                                            <a href="{{ url('payment/'.'gold') }}" type="button" class="btn btn-block btn--md btn-secondary waves-effect waves-light">Gold package</a>
+                                            <a href="{{ url('payment/'.'gold') }}" type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">Gold package</a>
                                         </div>
                                         <div class="col-6">
-                                            <a href="{{ url('payment/'.'platinum') }}" type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">Platinum package</a>
+                                            <a href="{{ url('payment/'.'platinum') }}" type="button" class="btn btn-block btn--md btn-light waves-effect waves-light">Platinum package</a>
                                         </div>
                                     </div>
                                     <div class="row mt-2">
@@ -67,10 +67,9 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <span class="text-center h3 mt-3 text-danger">Free trial!</span>
                                     <div class="row">
                                         <div class="col-12 mt-2">
-                                            <a href="{{ route('trial_home') }}" type="button" class="btn btn-block btn--md btn-info waves-effect waves-light">Trial Online IELTS Tip & Practice</a>
+                                            <a href="{{ route('trial_home') }}" type="button" class="btn btn-block btn--md btn-danger waves-effect waves-light">Free trial!</a>
                                         </div>
                                     </div>
                                 </div>
