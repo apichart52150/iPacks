@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>iPACK - All</title>
+        <title>IELTS Practice - All</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -57,7 +57,7 @@
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <img src="{{asset('public/assets/images/user.png') }}" alt="user-image" class="rounded-circle">
                                 <span class="pro-user-name ml-1">
-                                {{Auth::user()->std_username}}<i class="mdi mdi-chevron-down"></i> 
+                                {{Auth::user()->username}}<i class="mdi mdi-chevron-down"></i> 
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -74,7 +74,7 @@
                                 <div class="dropdown-divider"></div>
 
                                 <!-- item-->
-                                <a href="{{ route('user_logout') }}" class="dropdown-item notify-item">
+                                <a href="{{ route('logout') }}" class="dropdown-item notify-item">
                                     <i class="mdi mdi-logout"></i>
                                     <span>Logout</span>
                                 </a>
@@ -87,12 +87,12 @@
                     <div class="logo-box">
                         <div class="logo text-center">
                             <span class="logo-lg">
-                                <img src="{{asset('public/assets/images/logo-nc.png') }}" alt="" height="45">
+                                <img src="{{asset('public/assets/images/logo_ielte_practice.svg') }}" alt="" height="60">
                                 <!-- <span class="logo-lg-text-light">Xeria</span> -->
                             </span>
                             <span class="logo-sm">
                                 <!-- <span class="logo-sm-text-dark">X</span> -->
-                                <img src="{{asset('public/assets/images/logo-nc-mini.png') }}"alt="" height="45">
+                                <img src="{{asset('public/assets/images/logo_ielte_practice.svg') }}"alt="" height="60">
                             </span>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        2021 iPACKS © New Cambridge
+                        2021 © Online IELTS Tip & Practice By New Cambridge
                     </div>
                 </div>
             </div>
@@ -148,9 +148,7 @@
         <!-- End Footer -->    
 
         @include('student.profile')
-
-        
-       
+ 
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
 
@@ -181,11 +179,11 @@
 
         <script>           
             var session_id = "{!! (session('ss_id'))?session('ss_id'):'' !!}";
-            var user_id = "{!! (Auth::user())?Auth::user()->session_id:'' !!}";
+            var user_id = "{!! (Auth::user())?Auth::user()->remember_token:'' !!}";
 
             if(user_id !== session_id) {
                 alert('Your account login from another device!!', 'Warning Alert');
-                window.location.href = "{{ route('user_logout')}}";
+                window.location.href = "{{ route('logout')}}";
             } 
 
         </script>

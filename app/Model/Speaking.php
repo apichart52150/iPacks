@@ -11,9 +11,9 @@ class Speaking extends Model {
     public static function querySpeaking($std_id) {
 
         $speaking = DB::table('speaking')
-        ->select('speaking.*','users.username as th_name')
+        ->select('speaking.*','staff.staff_username as th_name')
         ->where('std_id','=', $std_id)
-        ->leftjoin('users','users.id','=','speaking.th_id')
+        ->leftjoin('staff','staff.staff_id','=','speaking.th_id')
         ->orderBy('created_at', 'desc')
         ->get();
 
@@ -44,13 +44,13 @@ class Speaking extends Model {
 
         $decrease_point = DB::table('student')
         ->select('std_pointsac', 'std_pointspeaking',DB::raw('CASE WHEN std_pointsac != 0 THEN "std_pointsac" WHEN std_pointspeaking != 0 THEN "std_pointspeaking" ELSE "nopoint" END AS current_point'))
-        ->where('std_id', auth('student')->user()->std_id)
+        ->where('std_id', auth('web')->user()->std_id)
         ->get();
       
         if($decrease_point[0]->current_point == 'nopoint') {
             return 0;
         }else {
-            DB::table('student')->where('std_id', auth('student')->user()->std_id)->decrement($decrease_point[0]->current_point);
+            DB::table('student')->where('std_id', auth('web')->user()->std_id)->decrement($decrease_point[0]->current_point);
         }
     }
 

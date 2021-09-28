@@ -28,18 +28,19 @@
 </style>
 @php
     //$question -> input
-    $q1 = "The first chart gives details of how many cars were";
-    $q2 = "in one country from 1995 to 2010 with";
-    $q3 = "for 2020, while the second chart illustrates levels of air pollution in the";
-    $q4 = "country during that period of time, again with estimates for the year 2020. Overall, it can be seen that there is a direct";
-    $q5 = "between the number of new vehicles purchased and the incidence of air pollution. To begin with the number of new cars bought each";
-    $q6 = ", we can see that at the beginning of the period around three million new vehicles appeared on the roads. There was a";
-    $q7 = "increase over the next fifteen years, with figures of four million, five million and eight million respectively. It is expected that this";
-    $q8 = ".trend will continue to the year 2020, when ten million new vehicles are expected to be";
-    $q9 = "Turning to the figures for air pollution, the reading stood at around seventyfive micrograms per cubic metre in 1995. This figure was within ‘acceptable’ limits. In 2000 the figure had risen to just under 100 micrograms, which was still classified as ‘acceptable’. Following this,";
-    $q10 = "the air pollution continued its upward trend. By the year 2005, the figure of just over 100 micrograms had ";
-    $q11 = "safety limits and was classified as ‘unhealthy’. The quality of air continued to";
-    $q12 = "in 2010 with a reading of almost 150 micrograms, an increase of around 50 per cent. The situation is not expected to";
+    $Q=["q1" => "The first chart gives details of how many cars were",
+    "q2" => "in one country from 1995 to 2010 with",
+    "q3" => "for 2020, while the second chart illustrates levels of air pollution in the",
+    "q4" => "country during that period of time, again with estimates for the year 2020. Overall, it can be seen that there is a direct",
+    "q5" => "between the number of new vehicles purchased and the incidence of air pollution. To begin with the number of new cars bought each",
+    "q6" => ", we can see that at the beginning of the period around three million new vehicles appeared on the roads. There was a",
+    "q7" => "increase over the next fifteen years, with figures of four million, five million and eight million respectively. It is expected that this",
+    "q8" => ".trend will continue to the year 2020, when ten million new vehicles are expected to be",
+    "q9" => "Turning to the figures for air pollution, the reading stood at around seventyfive micrograms per cubic metre in 1995. This figure was within ‘acceptable’ limits. In 2000 the figure had risen to just under 100 micrograms, which was still classified as ‘acceptable’. Following this,",
+    "q10" => "the air pollution continued its upward trend. By the year 2005, the figure of just over 100 micrograms had ",
+    "q11" => "safety limits and was classified as ‘unhealthy’. The quality of air continued to",
+    "q12" => "in 2010 with a reading of almost 150 micrograms, an increase of around 50 per cent. The situation is not expected to",
+];
     $end = " over the next decade with a high of around 170 micrograms predicted for 2020, making breathing conditions ‘hazardous’. All in all, it would seem necessary for tighter controls of new vehicle purchase to be put into place if the government wants to improve the quality of air.";
 @endphp
 <div class="row">
@@ -50,88 +51,31 @@
                     <div class="border border-dark px-2 text-center">
                         <h5>The line-graph below shows the number of cars purchased annually in one particular country between 1995 and 2010, with predicted figures for the year 2020. Figures are given in millions. The bar-chart shows levels of air pollution in the same place during the same time-frame. Figures are given in micrograms per cubic metre.</h5>
                         <h5>Summarize the information by selecting and reporting on the main features, and make comparisons where relevant.</h5>
-                        <img src="{{ asset('public/img_lang/gap2/gap2_12.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <a href="{{ asset('public/img_lang/gap2/gap2_12.jpg') }}" class="image-popup" title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap2/gap2_12.jpg') }}" class="img-fluid" alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12">
-        <div class="card-box text-dark font-15">
-            <div class="row justify-content-center mb-2">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="border border-dark p-2">
-                            {{$q1}}
-                            <span class="font-weight-bold">1.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q2}}
-                            <span class="font-weight-bold">2.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q3}}
-                            <span class="font-weight-bold">3.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q4}}
-                            <span class="font-weight-bold">4.</span> 
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q5}}
-                            <span class="font-weight-bold">5.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q6}}
-                            <span class="font-weight-bold">6.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q7}}
-                            <span class="font-weight-bold">7.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q8}}
-                            <span class="font-weight-bold">8.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q9}}
-                            <span class="font-weight-bold">9. </span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q10}}
-                            <span class="font-weight-bold">10.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q11}}
-                            <span class="font-weight-bold">11.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$q12}}
-                            <span class="font-weight-bold">12.</span>
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                            {{$end}}
+                        @foreach ($Q as $Q)
+                        <div class="line-hight d-inline w-auto mb-2 ">
+                            {{ $Q }}
+                            <!-- question -->
+                        </div>
+                        <div class="input-con">
+                            <input type="text" class="form-control">
+                        </div>
+                        @endforeach
+                        {{$end}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 @section('button-control')
     <button id="check-answer" class="btn btn-info">Check Answers</button>
@@ -140,18 +84,20 @@
 @section('js')
 <script>
     // no space answer
-    const answer1 = ['purchased', 'bought'];
-    const answer2 = ['projections', 'predictions', 'forecasts', 'estimates'];
-    const answer3 = ['same'];
-    const answer4 = ['link', 'correlation'];
-    const answer5 = ['year'];
-    const answer6 = ['gradual', 'slight', 'steady'];
-    const answer7 = ['upward', 'rising', 'growing', 'Increasing'];
-    const answer8 = ['purchased', 'bought'];
-    const answer9 = ['however', 'though'];
-    const answer10 = ['exceeded', 'passed'];
-    const answer11 = ['deteriorate'];
-    const answer12 = ['improve'];
+    
+    const answers = []
+    answers[0]= ['purchased', 'bought'];
+    answers[1] = ['projections', 'predictions', 'forecasts', 'estimates'];
+    answers[2] = ['same'];
+    answers[3] = ['link', 'correlation'];
+    answers[4] = ['year'];
+    answers[5] = ['gradual', 'slight', 'steady'];
+    answers[6] = ['upward', 'rising', 'growing', 'Increasing'];
+    answers[7] = ['purchased', 'bought'];
+    answers[8] = ['however', 'though'];
+    answers[9] = ['exceeded', 'passed'];
+    answers[10] = ['deteriorate'];
+    answers[11] = ['improve'];
 
     let score = 0;
 
@@ -160,118 +106,39 @@
     function checkAnswers() {
         let icon;
         $(':text').each((idx, item) => {
-            switch(idx) {
-                case 0:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer1) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 1:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer2) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 2:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer3) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 3:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer4) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 4:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer5) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 5:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer6) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 6:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer7) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 7:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer8) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 8:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer9) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 9:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer10) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 10:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer11) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
-                case 11:
-                    if(jQuery.inArray($(item).val().toLowerCase().replace(/ /g,''),  answer12) != -1) {
-                        icon = '<i class="fas fa-check text-success"></i>';
-                         score++;
-                    } else {
-                        icon = '<i class="fas fa-times text-danger"></i>';
-                    }
-                    break;
+            answers[idx] = answers[idx].toString().trim().toLowerCase().split(",")
+            $(item).removeClass('border-success');
+            $(item).removeClass('border-danger');
+            
+            if(jQuery.inArray($(item).val().toLowerCase(),  answers[idx]) != -1) {
+                $(item).addClass('border border-success');
+                score++
+            } else {
+                $(`<span class="text-success"><u>${answers[idx]}</u></span>`).insertAfter($(item));
+                $(item).addClass('border border-danger');
             }
-
-            $(item).parent().find('.ans-con').remove();
-            $(item).parent().append(`
-                <div class="ans-con pr-2">
-                    ${icon}
-                </div>
-            `)
         })
 
-        if(score == 12){
-            alert("you're awesome");
-        }else{
-            alert('Your score is ' + score);
-        }
+        $('#check-answer').prop('disabled', true);
+        
+        let title = ""
+        let text = "You got "+score + "/" + $(':text').length + " points."
+        if (score == $(':text').length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
+        Swal.fire({
+            title: title,
+            text: text,
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
+        });
+
     }
 </script>
 @stop

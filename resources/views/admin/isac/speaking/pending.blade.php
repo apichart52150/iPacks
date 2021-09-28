@@ -15,7 +15,7 @@
 					<thead>
 						<tr>
 							<th>#</th>
-							<th>STUDENT NAME</th>
+							<th>USER NAME</th>
 							<th>TOPIC</th>
 							<th>SUBMITTED</th>
 							<th>DUE DATE</th>
@@ -28,7 +28,7 @@
 							@foreach($pendings as $pending)
 							<tr>
 								<td>{{ $i++ }}</td>
-								<td>{{ $pending->std_name }}</td>
+								<td>{{ $pending->username }}</td>
 								<td>{{ $pending->topic }}</td>
 								<td><span class="badge badge-success p-1">{{ date('d-m-Y H:i:s', strtotime($pending->created_at)) }}</span></td>
 								<td>

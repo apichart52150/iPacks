@@ -21,9 +21,9 @@ function begintimer(){
         cursec = parselimit%60
         
         if (curmin != 0)
-            curtime = "<font color=red> "+curmin+" </font>minutes <font color=red>"+cursec+" </font>seconds remaining"
+            curtime = "<font color=red> "+curmin+" </font><font color=white> minutes </font><font color=red>"+cursec+" </font><font color=white> seconds remaining</font>"
         else {
-            curtime="<font color=red>"+cursec+" </font>seconds remaining"
+            curtime="<font color=red>"+cursec+" </font><font color=white> seconds remaining</font>"
         }
 
         document.getElementById('displayTime').innerHTML = curtime;

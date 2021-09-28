@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="wid-icon-info text-right">
-                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h2 class="mb-1 text-light">IELTS Practice</h2>
                     <h4 class="text-light mb-1">Listening</h4>
                 </div>
             </div>
@@ -62,7 +62,7 @@
     </div>
 
     <div class="col-xl-3 col-md-6">
-        <a href="https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/{{auth('student')->user()->std_id}}" target="_blank">
+        <a href="https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/{{auth('web')->user()->std_id}}" target="_blank">
             <div class="card-box widget-icon bg-pink">
                 <div class="avatar-lg float-left">
                     <div class="hover-scale">
@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h2 class="mb-1 text-light">IELTS Practice</h2>
                     <h4 class="text-light mb-1">Reading</h4>
                 </div>
             </div>
@@ -80,7 +80,7 @@
     </div><!-- end col -->
 
     <div class="col-xl-3 col-md-6">
-        <a href="{{url('/isac_writing_home')}}">
+        <a href="{{ route('/isac_writing_home')}}">
             <div class="card-box widget-icon ribbon-box bg-info">
                 <div class="ribbon-two ribbon-two-secondary"><span>Premium</span></div>
                 <div class="avatar-lg float-left">
@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h2 class="mb-1 text-light">IELTS Practice</h2>
                     <p class="text-light mb-1">Writing</p>
                 </div>
             </div>
@@ -99,7 +99,7 @@
     </div><!-- end col -->
 
     <div class="col-xl-3 col-md-6">
-        <a href="{{url('/browser-settings')}}">
+        <a href="{{ route('/browser-settings')}}">
         <div class="card-box widget-icon ribbon-box bg-success">
                 <div class="ribbon-two ribbon-two-secondary"><span>Premium</span></div>
                 <div class="avatar-lg float-left">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h2 class="mb-1 text-light">IELTS Practice</h2>
                     <p class="text-light mb-1">Speaking</p>
                 </div>
             </div>
@@ -122,7 +122,7 @@
 
 <div class="row">
     <div class="col-xl-6 col-md-6  col-sm-12" >
-        <a href="https://newcambridgethailand.com/strategies-pack/access/RG4gERG9AlIDiwiaWF0IjoxNTE2MjM5MDI/{{auth('student')->user()->std_id}}" target="_blank">
+        <a href="https://newcambridgethailand.com/strategies-pack/access/RG4gERG9AlIDiwiaWF0IjoxNTE2MjM5MDI/{{auth('web')->user()->std_id}}" target="_blank">
             <div class="card-box widget-icon bg-primary">
                 <div class="avatar-lg float-left">
                     <div class="hover-scale">
@@ -139,7 +139,7 @@
     </div><!-- end col -->
 
     <div class="col-xl-6 col-md-6 col-sm-12">
-    <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('student')->user()->std_id }}"  target="_blank">
+    <a href="https://newcambridgethailand.com/topic-packs/access/wRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c/{{auth('web')->user()->std_id }}"  target="_blank">
             <div class="card-box widget-icon bg-primary">
                 <div class="avatar-lg float-left">
                     <div class="hover-scale">
@@ -214,7 +214,7 @@
                     </div>
                 </div>
                 <div class="wid-icon-info text-right">
-                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h2 class="mb-1 text-light">IELTS Practice</h2>
                     <h4 class="text-light mb-1">Listening</h4>
                 </div>
             </div>
@@ -232,7 +232,7 @@
                     </div>
                 </div>
                 <div class="text-right">
-                    <h2 class="mb-1 text-light">iSac</h2>
+                    <h2 class="mb-1 text-light">IELTS Practice</h2>
                     <h4 class="text-light mb-1">Language Use</h4>
                 </div>
             </div>

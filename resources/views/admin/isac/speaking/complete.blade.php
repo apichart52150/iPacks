@@ -12,7 +12,7 @@
 					<thead>
 						<tr>
 							<th>#</th>
-							<th>STUDENT NAME</th>
+							<th>USER NAME</th>
 							<th>TOPIC</th>
 							<th>SUBMITTED</th>
 							<th>CHECKED</th>
@@ -29,7 +29,7 @@
 </div>
 @endsection
 
-@section('javascript')
+@section('js')
 <script>
 	$(document).ready(function(){
 		$('#custom-datatable').DataTable({
@@ -43,7 +43,7 @@
 			},
 			"columns": [
 				{"data": "id"},
-				{"data": "std_name"},
+				{"data": "username"},
 				{"data": "topic"},
 				{"data": "created_at"},
 				{"data": "th_sent_date"},

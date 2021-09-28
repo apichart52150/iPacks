@@ -13,74 +13,71 @@
         display: inline-block;
         position: relative;
     }
-
-    .ans-con {
-        position: absolute;
-        top: 50%;
-        right: 5px;
-        transform: translateY(-50%);
-    }
-
-    .line-hight{
-        line-height: 3;
-    }
 </style>
 @php
-    $startQuestion = "The line-graphs give details of the percentage of adolescents who owned cd players, laptop computers and mobile phones during the period 1980 to 2010. Overall, it can be seen that the popularity of cd players";
-    $question = [
-        'q1' => "significantly, while ownership of mobile phones",
-        'q2' => "dramatically over the period.",
-        'q3' => "At the",
-        'q4' => "of the period cd players were the",
-        'q5' => "popular of all the three gadgets, with more than 80% ownership. Roughly one half of all teenagers had a laptop computer while only fewer",
-        'q6' => "20% had a mobile phone. Over the next decade, mobile phones and laptops had a steady",
-        'q7' => ", while the popularity of cd players experienced a",
-        'q8' => "This trend continued over the next ten years. By the year 2000, only around 40% of young people owned a cd player, while laptop computers reached a peak to stand",
-        'q9' => "80%. Mobile phones also saw a dramatic",
-        'q10' => "to around 70%. By the end of the period, cd players had reached their",
-        'q11' => "popularity, around 30%. Laptop computers also experienced a",
-        'q12' => "during this decade to finish at around 60%. Mobile phones,",
-    ];
-    $endQuestion = ", continued to rise, with almost 100% ownership by 2010.";
+$startQuestion = "The line-graphs give details of the percentage of adolescents who owned cd players, laptop computers
+and mobile phones during the period 1980 to 2010. Overall, it can be seen that the popularity of cd players";
+$question = [
+'q1' => "significantly, while ownership of mobile phones",
+'q2' => "dramatically over the period.",
+'q3' => "At the",
+'q4' => "of the period cd players were the",
+'q5' => "popular of all the three gadgets, with more than 80% ownership. Roughly one half of all teenagers had a laptop
+computer while only fewer",
+'q6' => "20% had a mobile phone. Over the next decade, mobile phones and laptops had a steady",
+'q7' => ", while the popularity of cd players experienced a",
+'q8' => "This trend continued over the next ten years. By the year 2000, only around 40% of young people owned a cd
+player, while laptop computers reached a peak to stand",
+'q9' => "80%. Mobile phones also saw a dramatic",
+'q10' => "to around 70%. By the end of the period, cd players had reached their",
+'q11' => "popularity, around 30%. Laptop computers also experienced a",
+'q12' => "during this decade to finish at around 60%. Mobile phones,",
+];
+$endQuestion = ", continued to rise, with almost 100% ownership by 2010.";
 @endphp
 <div class="row">
     <div class="col-md-12">
         <div class="card-box text-dark font-15">
             <div class="row justify-content-center mb-2">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="border border-dark px-2 text-center">
-                        <h5>The graph below shows the percentage of teenagers who owned a number of electronic items between 1980 and 2010.</h5>
-                        <img src="{{ asset('public/img_lang/gap1/gap1_2.jpg') }}" class="img-fluid mb-2" alt="Responsive image">
+                        <h5>The graph below shows the percentage of teenagers who owned a number of electronic items
+                            between 1980 and 2010.</h5>
+                        <a href="{{ asset('public/img_lang/gap1/gap1_2.jpg') }}" class="image-popup"
+                            title="{{$pageTitle['topic']}}">
+                            <img src="{{ asset('public/img_lang/gap1/gap1_2.jpg') }}" class="img-fluid"
+                                alt="work-thumbnail">
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-6">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
                     <div class="border border-dark p-2">
                         {{$startQuestion}}
-                        @for ($i = 1; $i <= count($question); $i++)
-                            <div class="line-hight d-inline w-auto mb-2 ">
-                                {{ $question['q'.$i] }} <!-- question -->
-                            </div>
-                            <span class="font-weight-bold">{{ $i }}</span> <!-- number question-->
-                            <div class="input-con">
-                                <input type="text" class="form-control">
-                            </div>
-                        @endfor
-                        {{$endQuestion}}
+                        @for ($i = 1; $i <= count($question); $i++) <div class="line-hight d-inline w-auto mb-2 ">
+                            {{ $question['q'.$i] }}
+                            <!-- question -->
                     </div>
+                    <div class="input-con">
+                        <input type="text" class="form-control">
+                    </div>
+                    @endfor
+                    {{$endQuestion}}
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
 
 
 @section('button-control')
-    <button id="check-answer" class="btn btn-info">Check Answers</button>
+<button id="check-answer" class="btn btn-info">Check Answers</button>
 @endsection
 
 @section('js')
 <script>
-
     const answers = []
     answers[0] = ['decreased', 'fell', 'dropped', 'reduced'];
     answers[1] = ['increased', 'rose', 'grew'];
@@ -102,23 +99,40 @@
     function checkAnswers() {
         let icon;
         $(':text').each((idx, item) => {
+            answers[idx] = answers[idx].toString().trim().toLowerCase().split(",")
 
-            if(jQuery.inArray($(item).val().toLowerCase(),  answers[idx]) != -1) {
-                icon = '<i class="fas fa-check text-success"></i>';
-                score++;
+            $(item).removeClass('border-success');
+            $(item).removeClass('border-danger');
+            
+            if(jQuery.inArray($(item).val().toLowerCase().trim(),  answers[idx]) != -1) {
+                $(item).addClass('border border-success');
+                score++
             } else {
-                icon = '<i class="fas fa-times text-danger"></i>';
+                $(`<span class="text-success"><u>${answers[idx]}</u></span>`).insertAfter($(item));
+                $(item).addClass('border border-danger');
             }
-
-            $(item).parent().find('.ans-con').remove();
-            $(item).parent().append(`
-                <div class="ans-con pr-2">
-                    ${icon}
-                </div>
-            `)
         })
 
-        alert('Your score is ' + score);
+        $('#check-answer').prop('disabled', true);
+        
+        
+        let title = ""
+        let text = "You got "+score + "/" + $(':text').length + " points."
+        if (score == $(':text').length)
+            title = "Congratulations!"
+        else
+            text = text + " Try again."
+
+        Swal.fire({
+            title: title,
+            text: text,
+            timer: 5000,
+        }).then(() => {
+            $(item).css({
+                "font-weight": "bold",
+                'color': '#2bc3a5'
+            });
+        });
 
     }
 </script>

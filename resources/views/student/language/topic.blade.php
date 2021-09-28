@@ -6,7 +6,7 @@
         <div class="page-title-box">
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ url('/language/home') }}"> Home</a></li>
+                    <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('ipack_language') }}"> Home</a></li>
                     <li class="breadcrumb-item active">{{ $topic['title'] }}</li>
                 </ol>
             </div>
@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-12">
             <div class="text-center filter-menu">
-                <a href="{{url('/language/home')}}" class="filter-menu-item"><i class="fas fa-home"></i></a>
+                <a href="{{ route('ipack_language') }}" class="filter-menu-item"><i class="fas fa-home"></i></a>
                 @foreach ($topicInfo as $id => $name)
                 @if ($id == $topic['topicName'])
                     <a href="{{url('language/'.$id)}}" class="filter-menu-item active" data-rel="{{$id}}">{{$id}}</a>

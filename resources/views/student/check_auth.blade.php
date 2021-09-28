@@ -54,7 +54,7 @@
             alert('Your account login from another device!!', 'Warning Alert');
             window.location.href = "{{ route('user_logout')}}";
         }else{
-            window.open("https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/{{auth('student')->user()->std_id}}", '_blank');
+            window.open("https://newcambridgethailand.com/isac_reading/access/G4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ/{{auth('web')->user()->std_id}}", '_blank');
         }
     });
 

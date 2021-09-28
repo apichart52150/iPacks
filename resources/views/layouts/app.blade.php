@@ -6,22 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('public/assets/images/icon-nc-big.png') }}">
-    
-    <meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="iSAC Speaking" />
-	<meta property="og:description" content="คอร์สเรียน IELTS รับรองผล 7.5 สอนสดทุกคลาส โดยเจ้าของภาษา ได้ผลจริง จากสถาบันภาษาคุณภาพ ระดับยอดเยี่ยม 4 ปีซ้อน  เน้นเทคนิคทำข้อสอบ หลักสูตรคุณภาพมาตรฐานสากล" />
-	<meta property="og:url" content="https://newcambridgethailand.com/isac_speaking/" />
-    <meta property="og:site_name" content="newcambridgethailand.com"/>
-	<meta property="og:image:secure" content="{{ asset('public/assets/images/logo_nc.png') }}" />
-
+    <link rel="shortcut icon" href="{{ asset('public/assets/images/logo_ielte_practice.svg') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
-
 
     <!-- App css -->
     <link href="{{ asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
@@ -58,7 +48,7 @@
     </div>
 
     <footer class="footer footer-alt">
-        2021 © i.PACK by <a href="https://newcambridge.com" class="text-white">New Cambridge</a>
+        2021 © Online IELTS Tip & Practice By New Cambridge
     </footer>
 
     <!-- Vendor js -->
@@ -72,7 +62,7 @@
 
         if(user_id != session_id) {
             alert('Your account login from another device!!', 'Warning Alert');
-            window.location.href = "{{ route('user_logout')}}";
+            window.location.href = "{{ route('logout')}}";
         } 
     </script>
 </body>

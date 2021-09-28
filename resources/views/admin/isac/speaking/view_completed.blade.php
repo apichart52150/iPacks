@@ -8,7 +8,7 @@
 				
 			<div class="card">
 				<div class="card-header bg-primary text-white text-center">{{ $check['topic'] }}</div>
-				<input type="hidden" name="std_id" value="{{ $check['std_id']}}">
+				<input type="hidden" name="id" value="{{ $check['id']}}">
 				<div class="card-body">
 					<img src="{{ asset('public/topics') }}/{{ $check['img'] }}.jpg" alt="{{ $check['img'] }}" width="100%">
 				</div>
@@ -30,11 +30,10 @@
                     <img class="d-flex mr-2 rounded-circle avatar-sm" src="{{ asset('public/assets/images/user.png') }}" alt="Generic placeholder image">
                     <div class="media-body">
                         <span class="float-right font-weight-bold">{{ date('d-m-Y H:i', strtotime($check['th_sent_date'])) }}</span>
-                        <h6 class="m-0 font-15 text-primary">{{ $check['std_name'] }}</h6>
-                        <small class="text-dark font-14"><b><u>Course</u> :</b> {{ $check['coursename'] }}</small>
+                        <h6 class="m-0 font-15 text-primary">{{ $check['username'] }}</h6>
                         <div class="text-dark">
-                        	<span class="mr-2"><b><u>Expected Score</u> :</b> {{ $check['expected_score'] }}</span>
-                        	<span><b><u>Current Course</u> :</b> {{ $check['current_course'] }}</span>
+                        	<p class="mr-2"><b><u>Expected Score</u> :</b> {{ $check['expected_score'] }}</p>
+                        	<p><b><u>Current Course</u> :</b> {{ $check['current_course'] }}</p>
                         </div>
                     </div>
                 </div>
@@ -68,7 +67,7 @@
 </div>
 @endsection
 
-@section('javascript')
+@section('js')
 <script>
 	$('#download').on('click', loadToExternal);
 
@@ -76,7 +75,7 @@
 
 		var file = $('audio source').attr('src');
 		var a = $(this);
-		var filename = "{{ $check['img'] }}"+ '_' + "{{ $check['std_id'] }}";
+		var filename = "{{ $check['img'] }}"+ '_' + "{{ $check['id'] }}";
 
 		a.attr('href', file);
 		a.attr('download', filename + '.mp3');
