@@ -99,7 +99,7 @@
     </div><!-- end col -->
 
     <div class="col-xl-3 col-md-6">
-        <a href="{{url('/browser-settings')}}">
+        <a href="{{ route('/browser-settings')}}">
         <div class="card-box widget-icon ribbon-box bg-success">
                 <div class="ribbon-two ribbon-two-secondary"><span>Premium</span></div>
                 <div class="avatar-lg float-left">

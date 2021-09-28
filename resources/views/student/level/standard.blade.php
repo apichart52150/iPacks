@@ -80,7 +80,7 @@
     </div><!-- end col -->
 
     <div class="col-xl-3 col-md-6">
-        <a href="{{url('/isac_writing_home')}}">
+        <a href="{{ route('/isac_writing_home')}}">
             <div class="card-box widget-icon ribbon-box bg-info">
                 <div class="ribbon-two ribbon-two-secondary"><span>Premium</span></div>
                 <div class="avatar-lg float-left">
@@ -99,7 +99,7 @@
     </div><!-- end col -->
 
     <div class="col-xl-3 col-md-6">
-        <a href="{{url('/browser-settings')}}">
+        <a href="{{ route('/browser-settings')}}">
         <div class="card-box widget-icon ribbon-box bg-success">
                 <div class="ribbon-two ribbon-two-secondary"><span>Premium</span></div>
                 <div class="avatar-lg float-left">
