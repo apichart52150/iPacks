@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','iPACKS | REGISTER')
+@section('title','Online IELTS Tips & Practice | REGISTER')
 
 @section('content')
 <div class="container">

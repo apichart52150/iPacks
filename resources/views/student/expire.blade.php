@@ -27,8 +27,8 @@
 
                             <div class="card-body p-4">
                                 <div class="text-center mt-4">
-                                    <h3 class="text-primary">Membership expire</h3>
-                                    <p class="mt-3 mb-2">Internal Server Error</p>
+                                    <h3 class="text-primary">Membership expired</h3>
+                                    <p class="mt-3 mb-2">If you have any difficulty with any of the services or wish to contact us, please email: <span class="text-primary font-weight-bold">info@newcambridge.com.</span></p>
 
                                     <a href="{{ route('success') }}" class="btn btn-success waves-effect waves-light">
                                         <span>Membership renewal</span>
