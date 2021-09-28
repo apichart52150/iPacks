@@ -141,7 +141,7 @@
                     @endif
                 </td>
                 <td class="align-middle">{{ $tutorial->note }}</td>
-                @if($tutorial->status == 2)
+                {{-- @if($tutorial->status == 2)
                 <td>
                     <button class="btn btn-danger"
                         onclick="delete_tutorial('{{ route('delete-tutorial',[$tutorial->tutorial_id]) }}','{{ date('d-m-Y', strtotime($tutorial->tutorial_date)) }}');">
@@ -154,7 +154,7 @@
                         Delete
                     </button>
                 </td>
-                @endif
+                @endif --}}
             </tr>
             @endforeach
             @else
