@@ -30,7 +30,9 @@ class paymentController extends Controller
             $order_id = DB::table('ktc_order')
             ->latest()
             ->first();
+            
             $run_order = sprintf("%09d",$order_id->order_id+1);
+            
             DB::table('ktc_order')
             ->insert([
                 'id' => $input['id'],
@@ -50,14 +52,16 @@ class paymentController extends Controller
             $discount = 150.00;
         }
 
+        $expire_date = date("Y-m-d H:i:s", strtotime("+7 day"));
+
         DB::table('users')
         ->where('id', $input['id'])
         ->update([
             'status' => 'wait',
             'first_name' => $input['first_name'],
             'last_name' => $input['last_name'],
-            'email' => $input['email'],
             'address' => $input['address'],
+            'expiredate' => $expire_date,
         ]);
         
         $data = [
