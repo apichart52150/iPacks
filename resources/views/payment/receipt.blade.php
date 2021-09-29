@@ -1,4 +1,4 @@
-@extends('layouts.payment')
+@extends('layouts.main')
 @section('content')
 <div class="container-fluid">
 
@@ -8,7 +8,7 @@
             <div class="page-title-box">
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="{{ route('success') }}">back</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('user_home') }}">Home</a></li>
                         <li class="breadcrumb-item active">Payment - Receipt</li>
                     </ol>
                 </div>
@@ -23,11 +23,8 @@
             <div class="card-box">
                 <!-- Logo & title -->
                 <div class="clearfix">
-                    <div class="float-left">
-                        <img src="assets/images/logo-dark.png" alt="" height="20">
-                    </div>
                     <div class="float-right">
-                        <h4 class="m-0 d-print-none">Receipt #:  {{ $data['orderReceipt']}} </h4>
+                        <img src="{{ asset('public/assets/images/logo_ielte_practice.svg') }}" alt="" height="60">
                     </div>
                 </div>
 
@@ -43,26 +40,19 @@
                     </div><!-- end col -->
                     <div class="col-md-4 offset-md-2">
                         <div class="mt-3 float-right">
-                            <p class="m-b-10"><strong>Order Date : </strong> <span class="float-right"> &nbsp;&nbsp;&nbsp;&nbsp; {{ $data['currentDate']}}</span></p>
-                            <p class="m-b-10"><strong>Order Status : </strong> <span class="float-right"><span class="badge badge-success p-1">PAID</span></span></p>
-                            <p class="m-b-10"><strong>Order id #: </strong> <span class="float-right">{{ $data['orderRef']}} </span></p>
+                            <p class="m-b-10"><strong>Receipt Date : </strong> <span class="float-right"> &nbsp;&nbsp;&nbsp;&nbsp; {{ $data['currentDate']}}</span></p>
+                            <p class="m-b-10"><strong>Receipt Status : </strong> <span class="float-right"><span class="badge badge-success p-1">PAID</span></span></p>
+                            <p class="m-b-10"><strong>Receipt id #: </strong> <span class="float-right">{{ $data['orderRef']}} </span></p>
                         </div>
                     </div><!-- end col -->
                 </div>
                 <!-- end row -->
 
                 <div class="row mt-3">
-                    <div class="col-sm-6">
+                    <div class="col-sm-12">
                         <h5>Billing Address</h5>
                         <address>
                           {{ $data['address']}}
-                        </address>
-                    </div> <!-- end col -->
-
-                    <div class="col-sm-6">
-                        <h5>Shipping Address</h5>
-                        <address>
-                            {{ $data['address']}}
                         </address>
                     </div> <!-- end col -->
                 </div> 
@@ -75,7 +65,7 @@
                                 <thead>
                                 <tr><th>#</th>
                                     <th>Item</th>
-                                    <th style="width: 10%" class="text-right">Total</th>
+                                    <th style="width: 15%" class="text-right">Total</th>
                                 </tr></thead>
                                 <tbody>
                                 <tr>
@@ -84,7 +74,7 @@
                                         <b>IELTS Practice Package</b> <br/>
                                         {{ $data['package'] }}
                                     </td>
-                                    <td class="text-right">{{ $data['amount']}}</td>
+                                    <td class="text-right">{{ $data['amount']}} BAHT</td>
                                 </tr>
                                 </tbody>
                             </table>

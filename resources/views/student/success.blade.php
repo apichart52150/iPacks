@@ -55,15 +55,15 @@
 
                                     <div class="row mt-3">
                                         <div class="col-6">
-                                            <a href="{{ url('payment/'.'gold') }}" type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">Gold package</a>
+                                            <a href="{{ url('payment/purchase/'.'gold') }}" type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">Gold package</a>
                                         </div>
                                         <div class="col-6">
-                                            <a href="{{ url('payment/'.'platinum') }}" type="button" class="btn btn-block btn--md btn-light waves-effect waves-light">Platinum package</a>
+                                            <a href="{{ url('payment/purchase/'.'platinum') }}" type="button" class="btn btn-block btn--md btn-light waves-effect waves-light">Platinum package</a>
                                         </div>
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-12">
-                                            <a href="{{ url('payment/'.'extra') }}" type="button" class="btn btn-block btn--md btn-primary waves-effect waves-light">1 on 1 Tutorial + Writing & Speaking marked</a>
+                                            <a href="{{ url('payment/purchase/'.'extra') }}" type="button" class="btn btn-block btn--md btn-primary waves-effect waves-light">1 on 1 Tutorial + Writing & Speaking marked</a>
                                         </div>
                                     </div>
                                     <hr>

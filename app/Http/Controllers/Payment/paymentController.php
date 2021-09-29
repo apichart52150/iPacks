@@ -137,7 +137,7 @@ class paymentController extends Controller
                 'updated_at' => date("Y-m-d H:i:s"),
             ]);
 
-            return redirect('user_home');
+            return redirect('recpayment_receiptript');
 
         }else{
 
@@ -162,8 +162,11 @@ class paymentController extends Controller
     }
 
     public function receipt(){
+        
 
         $currentDate = date('M d, Y');
+
+        // dd($currentDate);
 
         $data = [
             'id' =>  014,
