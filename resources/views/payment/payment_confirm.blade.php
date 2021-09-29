@@ -53,17 +53,10 @@
                 <!-- end row -->
 
                 <div class="row mt-3">
-                    <div class="col-sm-6">
+                    <div class="col-sm-12">
                         <h5>Billing Address</h5>
                         <address>
                           {{ $data['address']}}
-                        </address>
-                    </div> <!-- end col -->
-
-                    <div class="col-sm-6">
-                        <h5>Shipping Address</h5>
-                        <address>
-                            {{ $data['address']}}
                         </address>
                     </div> <!-- end col -->
                 </div> 

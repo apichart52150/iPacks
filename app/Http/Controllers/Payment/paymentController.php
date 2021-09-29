@@ -61,7 +61,7 @@ class paymentController extends Controller
             'first_name' => $input['first_name'],
             'last_name' => $input['last_name'],
             'address' => $input['address'],
-            'expiredate' => $expire_date,
+            'expire_date' => $expire_date,
         ]);
         
         $data = [
