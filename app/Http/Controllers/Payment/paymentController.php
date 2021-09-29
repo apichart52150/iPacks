@@ -140,7 +140,9 @@ class paymentController extends Controller
             return redirect('user_home');
 
         }else{
+
             return redirect('payment_fail');
+            
         }
 
         // DB::table('users')->where('id', Auth::id())->update(['remember_token' => $new_sessid]);
