@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="p-2">
-                            <form action="{{ route('paymentConfirm') }}" id="basic-form" method="POST" class="mt-3" onsubmit="return confirm('Are you sure you want to finish?')">
+                            <form action="{{ route('paymentConfirm') }}" id="basic-form" method="POST" class="mt-3" onsubmit="return confirm('Are you sure?')">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="id" value="{{ auth('web')->user()->id }}">
                                 <input type="hidden" name="package" value="{{ $status }}">
