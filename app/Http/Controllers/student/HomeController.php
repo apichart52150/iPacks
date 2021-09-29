@@ -10,6 +10,7 @@ use Session;
 use App\Model\CheckStatus;
 
 
+
 class HomeController extends Controller 
 {
     

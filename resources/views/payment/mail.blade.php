@@ -16,7 +16,9 @@
         <img src="{{asset('public/assets/imgages/Welcome_card_wallpaper_for_Gold_IPACK.jpeg')}}" alt="" />
         <div class="txt">
             <center>
-                <div class="title">THANK YOU.</div>
+                <strong>
+                    <div class="title">THANK YOU.</div>
+                </strong>
             </center>
 
             <center>
@@ -57,7 +59,9 @@
         <img src="{{asset('public/assets/imgages/Welcome_card_wallpaper_for_Platinum_IPACK.jpeg')}}" alt="" />
         <div class="txt">
             <center>
-                <div class="title">THANK YOU.</div>
+                <strong>
+                    <div class="title">THANK YOU.</div>
+                </strong>
             </center>
 
             <center>
