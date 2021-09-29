@@ -177,6 +177,7 @@ class paymentController extends Controller
             'level' => $user->level,
         );
         Mail::to($user->email)->send(new SendMail($data));
+        dd($data);
 
         $currentDate = date('M d, Y');
 
