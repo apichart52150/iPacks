@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Ipack - Newcambridge</title>
+        <title>Online IELTS Tips & Practice</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -34,7 +34,7 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <div class="mt-4">
+                                    <div>
                                         <div class="logout-checkmark">
                                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 161.2 161.2" enable-background="new 0 0 161.2 161.2" xml:space="preserve">
                                                 <path class="logout-path" fill="none" stroke="#d1dee4" stroke-miterlimit="10" d="M425.9,52.1L425.9,52.1c-2.2-2.6-6-2.6-8.3-0.1l-42.7,46.2l-14.3-16.4
@@ -49,22 +49,26 @@
                                         </div>
                                     </div>
                                     
-                                    <p class="text-muted mt-2"> Now your's our mamber.</p>
+                                    <p class="text-muted mt-2"> Now your're our member.</p>
 
-                                    <h3>You can choose the package at your level of English skills from two options.</h3>
+                                    <h4>You can choose the package at your level of English skills from two options.</h4>
 
                                     <div class="row mt-3">
                                         <div class="col-6">
-                                            <a href="{{ url('payment/'.'gold') }}" type="button" class="btn btn-block btn--md btn-secondary waves-effect waves-light">The Standard IPACK package</a>
+                                            <a href="{{ url('payment/'.'gold') }}" type="button" class="btn btn-block btn--md btn-secondary waves-effect waves-light">Gold package</a>
                                         </div>
                                         <div class="col-6">
-                                            <a href="{{ url('payment/'.'platinum') }}" type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">The Premium IPACK package</a>
+                                            <a href="{{ url('payment/'.'platinum') }}" type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">Platinum package</a>
                                         </div>
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-12">
                                             <a href="{{ url('payment/'.'extra') }}" type="button" class="btn btn-block btn--md btn-primary waves-effect waves-light">1 on 1 Tutorial + Writing & Speaking marked</a>
                                         </div>
+                                    </div>
+                                    <hr>
+                                    <span class="text-center h3 mt-3 text-danger">Free trial!</span>
+                                    <div class="row">
                                         <div class="col-12 mt-2">
                                             <a href="{{ route('trial_home') }}" type="button" class="btn btn-block btn--md btn-info waves-effect waves-light">Trial Online IELTS Tip & Practice</a>
                                         </div>
@@ -77,7 +81,7 @@
 
                         <div class="row mt-3">
                             <div class="col-12 text-center">
-                                <p class="text-muted">Back to <a href="{{ route('logout') }}" class="text-white font-weight-medium ml-1">Login</a></p>
+                                <p class="text-muted">Back to <a href="{{ route('logout') }}" class="text-white font-weight-medium ml-1">Log in</a></p>
                             </div> <!-- end col -->
                         </div>
                         <!-- end row -->

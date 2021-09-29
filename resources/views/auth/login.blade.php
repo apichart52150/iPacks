@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','iPACKS | LOGIN')
+@section('title','Online IELTS Tips & Practice | LOG IN')
 
 @section('content')
 <div class="container">
@@ -10,7 +10,7 @@
 					<div class="text-center">
 						<div class="text-center mb-3">
 						<h3 class="font-weight-bold text-primary"> Online IELTS Tips & Practice </h3>
- 						<span class="text-dark h3">LOGIN</span> </h3>
+ 						<span class="text-dark h3">LOG IN</span> </h3>
 	                    </div>
 						<p class="text-muted mb-4 mt-3 font-weight-bold">Please access the services via <img alt="" src="https://www.newcambridgethailand.com/mocktest/public/assets/images/1024px-Google_Chrome_icon.png" height="30px"> or <img alt="" src="https://www.newcambridgethailand.com/mocktest/public/assets/images/Firefox_Logo.png" height="30px"></p>
 					</div>
@@ -48,7 +48,7 @@
 						</div>
 
 						<div class="form-group mb-0 text-center">
-							<button class="btn btn-primary btn-block" type="submit"> Log In </button>
+							<button class="btn btn-primary btn-block" type="submit"> Log in </button>
 						</div>
 
 					</form>
