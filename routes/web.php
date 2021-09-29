@@ -1,6 +1,4 @@
 <?php
-use App\Mail\SendMail;
-use Illuminate\Support\Facades\Mail;
 
 // ==================== Routes User ====================== //
     Auth::routes();
@@ -51,17 +49,7 @@ use Illuminate\Support\Facades\Mail;
             })->name('pay_fail');
 
 
-            Route::get('send/mail/test/5a4f65486qweg4e5s4d2g4vc4bv8wdst4s5d4gs42vxcv',function(){
-                $data = array(
-                        'subject'=>"Online IELTS Tips & Practice",
-                        'first_name'=>"Jakkrit",
-                        'last_name'=>"Ut-sa",
-                        'expire_date'=>date('M d Y',strtotime("01-10-2021")),
-                        'level'=>"gold",
-                    );
-                    Mail::to("metre80.x@gmail.com")->send(new SendMail($data));
-                dd($data);
-            });
+            Route::get('send/mail/test/{mail}', 'paymentController@test_send_mail');
 
         });
 
