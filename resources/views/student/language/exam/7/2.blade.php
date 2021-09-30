@@ -15,25 +15,27 @@
     }
 </style>
 @php
-$startQuestion = "The line-graphs give details of the percentage of adolescents who owned cd players, laptop computers
-and mobile phones during the period 1980 to 2010. Overall, it can be seen that the popularity of cd players";
-$question = [
-'q1' => "significantly, while ownership of mobile phones",
-'q2' => "dramatically over the period.",
-'q3' => "At the",
-'q4' => "of the period cd players were the",
-'q5' => "popular of all the three gadgets, with more than 80% ownership. Roughly one half of all teenagers had a laptop
-computer while only fewer",
-'q6' => "20% had a mobile phone. Over the next decade, mobile phones and laptops had a steady",
-'q7' => ", while the popularity of cd players experienced a",
-'q8' => "This trend continued over the next ten years. By the year 2000, only around 40% of young people owned a cd
-player, while laptop computers reached a peak to stand",
-'q9' => "80%. Mobile phones also saw a dramatic",
-'q10' => "to around 70%. By the end of the period, cd players had reached their",
-'q11' => "popularity, around 30%. Laptop computers also experienced a",
-'q12' => "during this decade to finish at around 60%. Mobile phones,",
-];
-$endQuestion = ", continued to rise, with almost 100% ownership by 2010.";
+    $startQuestion = "The line-graphs give details of the percentage of adolescents who owned cd players, laptop computersand mobile phones during the period 1980 to 2010. Overall, it can be seen that the popularity of cd players";
+
+
+    $question = [
+        'q1' => "significantly, while ownership of mobile phones",
+        'q2' => "dramatically over the period.",
+        'q3' => "At the",
+        'q4' => "of the period cd players were the",
+        'q5' => "popular of all the three gadgets, with more than 80% ownership. Roughly one half of all teenagers had a laptop computer while only fewer",
+        'q6' => "20% had a mobile phone. Over the next decade, mobile phones and laptops had a steady",
+        'q7' => ", while the popularity of cd players experienced a",
+        'q8' => "This trend continued over the next ten years. By the year 2000, only around 40% of young people owned a cd player, while laptop computers reached a peak to stand",
+        'q9' => "80%. Mobile phones also saw a dramatic",
+        'q10' => "to around 70%. By the end of the period, cd players had reached their",
+        'q11' => "popularity, around 30%. Laptop computers also experienced a",
+        'q12' => "during this decade to finish at around 60%. Mobile phones,",
+    ];
+
+
+
+    $endQuestion = ", continued to rise, with almost 100% ownership by 2010.";
 @endphp
 <div class="row">
     <div class="col-md-12">
