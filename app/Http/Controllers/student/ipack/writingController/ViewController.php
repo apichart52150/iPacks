@@ -12,10 +12,10 @@ class ViewController extends Controller
     public function view_commented($sacId) {
 
         $data = DB::table('text_result')
-            ->select('text_result.id','text_result.score','text_result.comment','text_result.test_type','text_result.code_test','text_result.header_test','text_result.level', 'text_result.status','text_result.th_id','text_result.sent_date', 'text_result.text','text_result.th_text','text_result.mode', 'users.name as th_name')
-            ->leftjoin('users','users.id', '=', 'text_result.th_id')
-            ->where('text_result.id', '=', $sacId)
-            ->get()[0];
+        ->select('text_result.id','text_result.score','text_result.comment','text_result.test_type','text_result.code_test','text_result.header_test','text_result.level', 'text_result.status','text_result.th_id','text_result.sent_date', 'text_result.text','text_result.th_text','text_result.mode', 'users.first_name as th_name')
+        ->leftjoin('users','users.id', '=', 'text_result.th_id')
+        ->where('text_result.id', '=', $sacId)
+        ->get()[0];
 
         if($data->level == 0) {
             $img_path = "public/assets/images/fi-fx/{$data->code_test}.jpg";
