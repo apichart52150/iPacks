@@ -24,12 +24,14 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
-    .hover-scale i.fas {
+    .hover-scale i.fas,
+    .hover-scale i.fab {
         transform: scale(1);
         transition: transform .15s ease;
     }
 
-    .hover-scale:hover i.fas {
+    .hover-scale:hover i.fas,
+    .hover-scale:hover i.fab {
         transform: scale(1.1);
     }
 
