@@ -18,11 +18,11 @@ class AdminWriting extends Model
 	public static function total_writing() {
 
 		$total_writing = DB::table('text_result')
-		->select('text_result.id', 'text_result.test_type', 'text_result.header_test', 'text_result.status', 'text_result.th_id', 'text_result.sent_date', 'text_result.due_date', 'student.std_name')
-		->leftJoin('student', 'student.std_id', '=', 'text_result.std_id')
-		->where('status', '=', 'N')
-		->whereNull('th_id')
-		->orderBy('sent_date', 'ASC')
+		->select('text_result.id', 'text_result.test_type', 'text_result.header_test', 'text_result.status', 'text_result.th_id', 'text_result.sent_date', 'text_result.due_date', 'users.first_name', 'users.last_name')
+		->leftJoin('users', 'users.id', '=', 'text_result.std_id')
+		->where('text_result.status', '=', 'N')
+		->whereNull('text_result.th_id')
+		->orderBy('text_result.sent_date', 'ASC')
 		->get();
 
 		return ($total_writing);
@@ -32,8 +32,8 @@ class AdminWriting extends Model
 	public static function receive_writing() {
 
 		$receive_writing = DB::table('text_result')
-		->select('text_result.*','student.std_name')
-		->leftjoin('student','student.std_id','=','text_result.std_id')
+		->select('text_result.*','users.first_name', 'users.last_name')
+		->leftjoin('users','users.id','=','text_result.std_id')
 		->where('th_id', '=', Auth::user()->id)
 		->whereIn('text_result.status', ['W', 'TH_S'])
 		->orderBy('text_result.sent_date','desc')
@@ -62,16 +62,11 @@ class AdminWriting extends Model
 	public static function check($id){
 
 		$writing = DB::table('text_result')
-			->select('text_result.*','student.std_name', 'course.coursename', 'users.name as teacher', 'class.th_name as th_inClass')
-			->leftjoin('student','student.std_id','=','text_result.std_id')
-			->join('class_student', 'text_result.std_id', '=', 'class_student.std_id')
-			->join('class', 'class_student.nccode', '=', 'class.nccode')
-        	->join('course','class.courseid','=','course.courseid')
-        	->join('users', 'users.id', '=', 'text_result.th_id')
+			->select('text_result.*','users.first_name', 'users.last_name', 'staff.staff_username as teacher')
+			->leftjoin('usrs','users.id','=','text_result.std_id')
+        	->join('staff', 'staff.staff_id', '=', 'text_result.th_id')
 			->where('text_result.id','=', $id)
 			->get();
-
-            
 
 		 	// dd($writing);
 
@@ -97,12 +92,12 @@ class AdminWriting extends Model
 			'status' => $writing[0]->status,
 			'th_id' => $writing[0]->th_id,
 			'sent_date' => $writing[0]->sent_date,
-			'std_id' => $writing[0]->std_id,
+			'std_id' => $writing[0]->id,
 			'text' => $writing[0]->text,
 			'th_text' => $writing[0]->th_text,
 			'mode' => $writing[0]->mode,
-			'coursename' => $writing[0]->coursename,
-			'std_name' => $writing[0]->std_name,
+			'first_name' => $writing[0]->first_name,
+			'last_name' => $writing[0]->last_name,
 			'th_name'=> $writing[0]->teacher
 		];
 
@@ -114,7 +109,7 @@ class AdminWriting extends Model
 	public static function check_submit(Request $request){
 
 		if (empty($request->id)) {
-            return 'Not found SAC id In table!';
+            return 'Not found writing id In table!';
         }
 
 		if ($request->type == 'SAVE') {

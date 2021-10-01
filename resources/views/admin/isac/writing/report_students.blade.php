@@ -25,10 +25,10 @@
 				<table class="table table-bordered table-striped w-100 dt-responsive" id="reportWriting">
 					<thead>
 						<tr>
-							<th>STUDENT NAME</th>
+							<th>USER NAME</th>
 							<th>SAC TYPE</th>
 							<th>TEACHER NAME</th>
-							<th>STUDENT SENT</th>
+							<th>USER SENT</th>
 							<th>TEACHER SENT</th>
 							<th>Action</th>
 						</tr>

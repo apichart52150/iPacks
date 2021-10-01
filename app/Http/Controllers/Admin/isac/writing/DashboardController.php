@@ -15,11 +15,11 @@ class DashboardController extends Controller
     // Dashboard
     public function index()
     {
-        $writings = AdminWriting::total_writing()->toArray();
+        $writings = AdminWriting::total_writing();
 
         $pending = DB::table('text_result')
         ->select('*')
-        ->where('th_id', Auth::user()->id)
+        ->where('th_id', auth('staff')->user()->id)
         ->where('status', ['W','TH_S'])
         ->latest()
         ->count();

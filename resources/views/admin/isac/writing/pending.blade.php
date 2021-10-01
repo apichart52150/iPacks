@@ -14,9 +14,9 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>STUDENT NAME</th>
-                                <th>SAC TEST</th>
-                                <th>SAC TYPE</th>
+                                <th>USER NAME</th>
+                                <th>TEST TOPIC</th>
+                                <th>TEST TYPE</th>
                                 <th>SUBMITTED</th>
                                 <th>DUE DATE</th>
                                 <th>CHECK</th>
@@ -28,7 +28,7 @@
                                 @foreach($pendings as $pending)
                                     <tr>
                                         <td>{{ $i++ }}</td>
-                                        <td>{{ $pending->std_name }}</td>
+                                        <td>{{ $pending->first_name }} {{ $pending->last_name }}</td>
                                         <td>{{ $pending->header_test }}</td>
                                         <td>{{ $pending->test_type }}</td>
                                         <td><span class="badge badge-success p-1">{{ date('d-m-Y H:i:s', strtotime($pending->sent_date)) }}</span></td>

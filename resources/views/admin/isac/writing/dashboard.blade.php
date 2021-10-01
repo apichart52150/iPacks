@@ -16,9 +16,9 @@
 						<thead>
 							<tr>
                             <th>#</th>
-                            <th>STUDENT NAME</th>
-                            <th>SAC TEST</th>
-                            <th>SAC TYPE</th>
+                            <th>USER NAME</th>
+                            <th>TEST TOPIC</th>
+                            <th>TEST TYPE</th>
                             <th>SUBMITTED</th>
                             <th>DUE DATE</th>
                             <th>CHECK</th>
@@ -30,7 +30,7 @@
 							@foreach($writings as $writing)
 							<tr>
                                 <td>{{ $i++ }}</td>
-								<td>{{ $writing->std_name }}</td>
+								<td>{{ $writing->first_name }} {{ $writing->last_name }}</td>
 								<td>{{ $writing->header_test }}</td>
                                 <td>{{ $writing->test_type }}</td>
 
