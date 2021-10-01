@@ -219,7 +219,7 @@
 
         });
 
-        Route::prefix('speaking/report')->namespace('Admin\isac\speaking')->group(function () {
+        Route::prefix('speaking/report')->namespace('Admin\ipack\speaking')->group(function () {
 
             Route::any('teachers', 'ReportController@teachers')->name('report_teachers');
             Route::get('users', 'ReportController@users')->name('report_users');
@@ -234,7 +234,7 @@
         });
 
         //Writing
-        Route::prefix('writing')->namespace('Admin\isac\writing')->group(function () {
+        Route::prefix('writing')->namespace('Admin\ipack\writing')->group(function () {
 
             Route::get('dashboard', 'DashboardController@index')->name('writing_dashboard');
             Route::get('receive/{id}', 'DashboardController@receive')->name('receive_writing');
@@ -252,7 +252,7 @@
             Route::post('delete', 'ManageController@delete')->name('delete_writing');
         });
 
-        Route::prefix('writing/report')->namespace('Admin\isac\writing')->group(function () {
+        Route::prefix('writing/report')->namespace('Admin\ipack\writing')->group(function () {
 
             Route::any('teachers', 'ReportController@teachers')->name('report_writing_teachers');
             Route::get('students', 'ReportController@students')->name('report_writing_students');

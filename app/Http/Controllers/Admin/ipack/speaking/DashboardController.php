@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\isac\speaking;
+namespace App\Http\Controllers\Admin\ipack\speaking;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -19,7 +19,7 @@ class DashboardController extends Controller
 
         $pending = DB::table('speaking')
         ->select('*')
-        ->where('th_id', Auth::user()->id)
+        ->where('th_id', Auth::user()->staff_id)
         ->where('status', 'pending')
         ->latest()
         ->count();

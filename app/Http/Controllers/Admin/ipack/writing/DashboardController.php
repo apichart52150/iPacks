@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\isac\writing;
+namespace App\Http\Controllers\Admin\ipack\writing;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

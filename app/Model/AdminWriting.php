@@ -62,11 +62,10 @@ class AdminWriting extends Model
 	public static function check($id){
 
 		$writing = DB::table('text_result')
-			->select('text_result.*','users.first_name', 'users.last_name', 'staff.staff_username as teacher')
-			->leftjoin('usrs','users.id','=','text_result.std_id')
-        	->join('staff', 'staff.staff_id', '=', 'text_result.th_id')
-			->where('text_result.id','=', $id)
-			->get();
+		->select('text_result.*','users.first_name', 'users.last_name')
+		->leftjoin('users','users.id','=','text_result.std_id')
+		->where('text_result.id','=', $id)
+		->get();
 
 		 	// dd($writing);
 
@@ -98,7 +97,6 @@ class AdminWriting extends Model
 			'mode' => $writing[0]->mode,
 			'first_name' => $writing[0]->first_name,
 			'last_name' => $writing[0]->last_name,
-			'th_name'=> $writing[0]->teacher
 		];
 
 		// dd($check);
@@ -124,7 +122,8 @@ class AdminWriting extends Model
 						'th_sent_date' =>  date('Y-m-d H:i:s'),
                         'th_text' => $request->input('th_text'),
                         'score' => $request->input('score'),
-                        'comment' => $request->input('comment')
+                        'comment' => $request->input('comment'),
+                        'th_id' => Auth::user()->staff_id
                     ]);
                 DB::commit();
 
@@ -150,7 +149,8 @@ class AdminWriting extends Model
 						'th_sent_date' =>  date('Y-m-d H:i:s'),
                         'th_text' => $request->input('th_text'),
                         'score' => $request->input('score'),
-                        'comment' => $request->input('comment')
+                        'comment' => $request->input('comment'),
+						'th_id' => Auth::user()->staff_id
                     ]);
                 DB::commit();
 

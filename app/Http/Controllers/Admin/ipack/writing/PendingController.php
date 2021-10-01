@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\isac\writing;
+namespace App\Http\Controllers\Admin\ipack\writing;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -25,8 +25,6 @@ class PendingController extends Controller
     public function check($id) {
 
         $check = AdminWriting::check($id);
-
-        // dd($check);
 
         return view('admin.isac.writing.check',compact('check'));
     }

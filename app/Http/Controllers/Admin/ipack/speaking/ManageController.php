@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\isac\speaking;
+namespace App\Http\Controllers\Admin\ipack\speaking;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

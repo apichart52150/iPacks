@@ -26,7 +26,7 @@
 					<thead>
 						<tr>
 							<th>USER NAME</th>
-							<th>SAC TYPE</th>
+							<th>TEST TYPE</th>
 							<th>TEACHER NAME</th>
 							<th>USER SENT</th>
 							<th>TEACHER SENT</th>
@@ -81,7 +81,8 @@
 							'data': { _token: "{{ csrf_token() }}", startdate: startdate, enddate: enddate}
 						},
 						'columns': [
-							{'data': 'std_name'},
+							{'data': 'first_name'},
+							{'data': 'last_name'},
 							{'data': 'test_type'},
 							{'data': 'th_name'},
 							{'data': 'std_sent_date'},

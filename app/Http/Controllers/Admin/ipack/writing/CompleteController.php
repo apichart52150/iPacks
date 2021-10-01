@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\isac\writing;
+namespace App\Http\Controllers\Admin\ipack\writing;
 
 
 use App\Http\Controllers\Controller;
@@ -22,20 +22,21 @@ class CompleteController extends Controller
 
         $columns = array(
             0 => 'id',
-            1 => 'std_name',
-            2 => 'header_test',
-            3 => 'test_type',
-            4 => 'sent_date',
-            5 => 'th_sent_date',
-            6 => 'action',
+            1 => 'first_name',
+            2 => 'last_name',
+            3 => 'header_test',
+            4 => 'test_type',
+            5 => 'sent_date',
+            6 => 'th_sent_date',
+            7 => 'action',
         );
 
         $totalData = DB::table('text_result')
-        ->select('text_result.*','student.std_name')
-        ->leftjoin('student','student.std_id','=','text_result.std_id')
+        ->select('text_result.*','users.first_name', 'users.last_name')
+        ->leftjoin('users','users.id','=','text_result.std_id')
         ->where([
             ['text_result.status','=','Y'],
-            ['text_result.th_id','=', Auth::user()->id]
+            ['text_result.th_id','=', Auth::user()->staff_id]
         ])
         ->count();
 
@@ -49,11 +50,11 @@ class CompleteController extends Controller
         if(empty($request->input('search.value'))){
 
             $completes = DB::table('text_result')
-            ->select('text_result.*','student.std_name')
-            ->leftjoin('student','student.std_id','=','text_result.std_id')
+            ->select('text_result.*','users.first_name', 'users.last_name')
+            ->leftjoin('users','users.id','=','text_result.std_id')
             ->where([
                 ['text_result.status','=','Y'],
-                ['text_result.th_id','=', Auth::user()->id]
+                ['text_result.th_id','=', Auth::user()->staff_id]
             ])
             ->offset($start)
             ->limit($limit)
@@ -65,35 +66,36 @@ class CompleteController extends Controller
             $search = $request->input('search.value');
 
             $completes = DB::table('text_result')
-            ->select('text_result.*','student.std_name')
-            ->leftjoin('student','student.std_id','=','text_result.std_id')
+            ->select('text_result.*','users.first_name', 'users.last_name')
+            ->leftjoin('users','users.id','=','text_result.std_id')
             ->where([
                 ['text_result.status','=','Y'],
-                ['text_result.th_id','=', Auth::user()->id]
+                ['text_result.th_id','=', Auth::user()->staff_id]
             ])
             ->orwhere('text_result.header_test','LIKE',"%{search}%")
             ->orwhere('text_result.test_type','LIKE',"%{search}%")
-            ->orwhere('student.std_name','LIKE',"%{search}%")
+            ->orwhere('users.first_name','LIKE',"%{search}%")
+            ->orwhere('users.last_name','LIKE',"%{search}%")
             ->offset($start)
             ->limit($limit)
             ->orderBy($order, $dir)
             ->get();
 
             $totalFiltered = DB::table('text_result')
-            ->select('text_result.*','student.std_name')
-            ->leftjoin('student','student.std_id','=','text_result.std_id')
+            ->select('text_result.*','users.first_name', 'users.last_name')
+            ->leftjoin('users','users.id','=','text_result.std_id')
             ->where([
                 ['text_result.status','=','Y'],
-                ['text_result.th_id','=', Auth::user()->id]
+                ['text_result.th_id','=', Auth::user()->staff_id]
             ])
             ->orwhere('text_result.header_test','LIKE',"%{search}%")
             ->orwhere('text_result.test_type','LIKE',"%{search}%")
-            ->orwhere('student.std_name','LIKE',"%{search}%")
+            ->orwhere('users.first_name','LIKE',"%{search}%")
+            ->orwhere('users.last_name','LIKE',"%{search}%")
             ->offset($start)
             ->limit($limit)
             ->orderBy($order, $dir)
             ->count();
-
         }
 
         $data = array();
@@ -103,9 +105,9 @@ class CompleteController extends Controller
             foreach ($completes as $complete) {
 
                 $show = route('completed_writing',$complete->id);
-                
+                $user_name = $complete->first_name." ".$complete->last_name;
                 $nestedData['id'] = $i;
-                $nestedData['std_name'] = $complete->std_name;
+                $nestedData['user_name'] = $user_name;
                 $nestedData['header_test'] = $complete->header_test;
                 $nestedData['test_type'] = $complete->test_type;
                 $sent_date = date('d-m-Y H:i:s', strtotime($complete->sent_date));

@@ -17,7 +17,7 @@ class AdminSpeaking extends Model
 	public static function total_speaking() {
 
 		$total_speaking = DB::table('speaking')
-		->select('speaking.*','users.username')
+		->select('speaking.*','users.first_name', 'users.last_name')
 		->leftjoin('users','users.id','=','speaking.std_id')
 		->where('speaking.status','=','sent')
 		->orderBy('speaking.created_at','asc')
@@ -31,11 +31,11 @@ class AdminSpeaking extends Model
 	public static function receive_speaking() {
 
 		$receive_speaking = DB::table('speaking')
-		->select('speaking.*','users.username')
+		->select('speaking.*','users.first_name', 'users.last_name')
 		->leftjoin('users','users.id','=','speaking.std_id')
 		->where([
 			['speaking.status','=','pending'],
-			['speaking.th_id','=', Auth::user('staff')->id]
+			['speaking.th_id','=', Auth::user('staff')->staff_id]
 		])
 		->orderBy('speaking.created_at','desc')
 		->get();
@@ -49,7 +49,7 @@ class AdminSpeaking extends Model
 		$receive = DB::table('speaking')
 		->where('id','=',$id)
 		->update(['status' => 'pending',
-		'th_id' => Auth::user('staff')->id]);
+		'th_id' => Auth::user('staff')->staff_id]);
 
 		return ($receive);
 	}
@@ -57,14 +57,11 @@ class AdminSpeaking extends Model
 	public static function check($id){
 
 		$speaking = DB::table('speaking')
-		->select('speaking.*', 'users.username', 'staff.staff_username')
+		->select('speaking.*', 'users.first_name', 'users.last_name', 'staff.staff_username')
 		->leftjoin('users','users.id', '=', 'speaking.std_id')
-		->leftjoin('staff','staff.id', '=', 'speaking.th_id')
+		->leftjoin('staff','staff.staff_id', '=', 'speaking.th_id')
 		->where('speaking.id','=', $id)
 		->get();
-
-		dd($speaking);
-
 
 		if(strlen($speaking[0]->topic) == 7) {
 			$path_img = str_replace(' ', '0', $speaking[0]->topic);
@@ -72,12 +69,14 @@ class AdminSpeaking extends Model
 			$path_img = str_replace(' ', '', $speaking[0]->topic);
 		}
 
+		$username = $speaking[0]->first_name." ".$speaking[0]->last_name;
+
         $check = [
 			'id' => $speaking[0]->id,
 			'topic' => $speaking[0]->topic,
 			'img' => $path_img,
 			'path' => $speaking[0]->path,
-			'username' => $speaking[0]->username,
+			'username' => $username,
 			'id' => $speaking[0]->id,
 			'score' => $speaking[0]->score,
 			'fluency' => $speaking[0]->fluency_and_coherence,
@@ -90,9 +89,6 @@ class AdminSpeaking extends Model
 			'th_name' => $speaking[0]->staff_username,
 			'th_sent_date' => $speaking[0]->th_sent_date
 		];
-		
-
-				
 		return ($check);
 	}
 
@@ -115,11 +111,11 @@ class AdminSpeaking extends Model
 	public static function completed_speaking() {
 
 		$completed_speaking = DB::table('speaking')
-		->select('speaking.*','student.std_name')
-		->leftjoin('student','student.std_id','=','speaking.std_id')
+		->select('speaking.*','usets.first_name', 'users-last_name')
+		->leftjoin('users','users.id','=','speaking.std_id')
 		->where([
 			['speaking.status','=','success'],
-			['speaking.th_id','=', Auth::user()->id]
+			['speaking.th_id','=', Auth::user()->staff_id]
 		])
 		->get();
 
@@ -128,13 +124,14 @@ class AdminSpeaking extends Model
 
 	public static function getTeacherName($id) {
 
-		$teacher = DB::table('users')
-				->select('name')
+		$teacher = DB::table('staff')
+				->select('staff_username')
 				->where('id', $id)
+				->where('staff_level', '=', 'teacher')
 				->first();
 
 		if(!empty($teacher)) {
-			return $teacher->name;
+			return $teacher->staff_username;
 		} else {
 			return '';
 		}
