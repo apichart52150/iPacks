@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\isac\speaking;
+namespace App\Http\Controllers\Admin\ipack\speaking;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -21,15 +21,16 @@ class CompleteController extends Controller
 
         $columns = array(
             0 => 'id',
-            1 => 'username',
-            2 => 'topic',
-            3 => 'created_at',
-            4 => 'th_sent_date',
-            5 => 'action'
+            1 => 'first_name',
+            2 => 'last_name',
+            3 => 'topic',
+            4 => 'created_at',
+            5 => 'th_sent_date',
+            6 => 'action'
         );
 
         $totalData = DB::table('speaking')
-        ->select('speaking.*','users.username')
+        ->select('speaking.*','users.first_name', 'users.last_name')
         ->leftjoin('users','users.id','=','speaking.std_id')
         ->where([
             ['speaking.status','=','success'],
@@ -47,7 +48,7 @@ class CompleteController extends Controller
         if(empty($request->input('search.value'))){
 
             $completes = DB::table('speaking')
-            ->select('speaking.*','users.username')
+            ->select('speaking.*','users.first_name', 'users.last_name')
             ->leftjoin('users','users.id','=','speaking.std_id')
             ->where([
                 ['speaking.status','=','success'],
@@ -62,13 +63,14 @@ class CompleteController extends Controller
             $search = $request->input('search.value');
 
             $completes = DB::table('speaking')
-            ->select('speaking.*','users.username')
-            ->leftjoin('staff','users.id','=','speaking.std_id')
+            ->select('speaking.*','users.first_name', 'users.last_name')
+            ->leftjoin('users','users.id','=','speaking.std_id')
             ->where([
                 ['speaking.status','=','success'],
                 ['speaking.th_id','=', $staff_id]
             ])
-            ->orwhere('users.username','LIKE',"%{search}%")
+            ->orwhere('users.first_name','LIKE',"%{search}%")
+            ->orwhere('users.last_name','LIKE',"%{search}%")
             ->orwhere('speaking.topic','LIKE',"%{search}%")
             ->offset($start)
             ->limit($limit)
@@ -76,13 +78,14 @@ class CompleteController extends Controller
             ->get();
 
             $totalFiltered = DB::table('speaking')
-            ->select('speaking.*','users.username')
+            ->select('speaking.*','users.first_name', 'users.last_name')
             ->leftjoin('users','users.id','=','speaking.std_id')
             ->where([
                 ['speaking.status','=','success'],
                 ['speaking.th_id','=', $staff_id]
             ])
-            ->orwhere('users.users_username','LIKE',"%{search}%")
+            ->orwhere('users.first_name','LIKE',"%{search}%")
+            ->orwhere('users.last_name','LIKE',"%{search}%")
             ->orwhere('speaking.topic','LIKE',"%{search}%")
             ->offset($start)
             ->limit($limit)
@@ -99,7 +102,7 @@ class CompleteController extends Controller
                 $show = route('completed',$complete->id);
 
                 $nestedData['id'] = $i;
-                $nestedData['username'] = $complete->username;
+                $nestedData['username'] = $complete->first_name." ".$complete->last_name;
                 $nestedData['topic'] = $complete->topic;
                 $created_at = date('d-m-Y H:i:s', strtotime($complete->created_at));
                 $nestedData['created_at'] = "<span class='badge badge-success p-1'>{$created_at}</span>";

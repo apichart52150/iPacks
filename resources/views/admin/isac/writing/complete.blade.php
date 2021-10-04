@@ -12,7 +12,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>STUDENT NAME</th>
+                                <th>USER NAME</th>
                                 <th>SAC TEST</th>
                                 <th>SAC TYPE</th>
                                 <th>SUBMITTED</th>
@@ -45,7 +45,7 @@
 			},
 			"columns": [
 				{"data": "id"},
-				{"data": "std_name"},
+				{"data": "user_name"},
 				{"data": "header_test"},
 				{"data": "test_type"},
 				{"data": "sent_date"},

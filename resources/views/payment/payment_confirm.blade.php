@@ -115,7 +115,7 @@
                     <div class="text-right d-print-none">
                         <!-- <a href="javascript:window.print()" class="btn btn-primary waves-effect waves-light"><i class="mdi mdi-printer mr-1"></i> Print</a> -->
                         @if ($data['payMethod'] == "ALIPAY")
-                            <form action="https://testpaygate.ktc.co.th/scs/eng/merchandize/payment/payForm.jsp" name="payFormCcard" method="POST">
+                            <form action="https://paygate.ktc.co.th/scs/eng/merchandize/payment/payForm.jsp" name="payFormCcard" method="POST">
                                 <input type="hidden" name="merchantId" value="991303017"> 
                                 <input type="hidden" name="orderRef" value="{{ $data['orderRef'] }}">
                                 <input type="hidden" name="payMethod" value="ALIPAY">
@@ -133,7 +133,7 @@
                                 </a>
                             </form>
                         @else
-                            <form action="https://testpaygate.ktc.co.th/ktc/eng/merchandize/payment/payForm.jsp" name="payFormCcard" method="POST">
+                            <form action="https://paygate.ktc.co.th/ktc/eng/merchandize/payment/payForm.jsp" name="payFormCcard" method="POST">
                                 <input type="hidden" name="merchantId" value="092300019">
                 			    <input type="hidden" name="orderRef" value="{{ $data['orderRef'] }}">
                 			    <input type="hidden" name="currCode" value="764" >

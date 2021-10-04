@@ -28,7 +28,7 @@
 							@foreach($pendings as $pending)
 							<tr>
 								<td>{{ $i++ }}</td>
-								<td>{{ $pending->username }}</td>
+								<td>{{ $pending->first_name }} {{ $pending->last_name }}</td>
 								<td>{{ $pending->topic }}</td>
 								<td><span class="badge badge-success p-1">{{ date('d-m-Y H:i:s', strtotime($pending->created_at)) }}</span></td>
 								<td>

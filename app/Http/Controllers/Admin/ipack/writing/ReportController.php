@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\isac\writing;
+namespace App\Http\Controllers\Admin\ipack\writing;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -45,15 +45,15 @@ class ReportController extends Controller
 		return view('admin.isac.writing.report_teachers', compact('reports', 'old_date'));
     }
 
-    public function teacher_pending($user_id) {
+    public function teacher_pending($staff_id) {
 
-		$teacher = DB::table('users')->where('id', $user_id)->first();
+		$teacher = DB::table('staff')->where('staff_id', $staff_id)->first();
 
 		$pendings = DB::table('text_result')
-        ->select('text_result.*',  'student.std_name')
-        ->leftjoin('student', 'student.std_id', '=', 'text_result.std_id')
+        ->select('text_result.*',  'users.first_name', 'users.last_name')
+        ->leftjoin('users', 'users.id', '=', 'text_result.std_id')
         ->where([
-            ['text_result.th_id', '=', $user_id],
+            ['text_result.th_id', '=', $staff_id],
             ['text_result.status', '=', ['W','TH_S']]
         ])
         ->get();

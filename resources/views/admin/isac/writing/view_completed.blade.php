@@ -29,10 +29,9 @@
                     <div class="media-body">
 
                     <span class="float-right font-weight-bold">{{ date('d-m-Y H:i', strtotime($check['sent_date'])) }}</span>
-                    <h6 class="m-0 font-15 text-primary">{{ $check['std_name'] }}</h6>
+                    <h6 class="m-0 font-15 text-primary">{{ $check['first_name'] }} {{ $check['last_name'] }}</h6>
                     <small class="text-dark font-14">
-                        <b>Course:</b> {{ $check['coursename'] }} 
-                        <br><b>Teacher:</b> {{ $check['th_name'] }} <b>Mode:</b> {{ $check['mode'] }} <b>Target band</b> : {{ $check['targetbrand'] }}
+                       <b>Mode:</b> {{ $check['mode'] }} <b>Target band</b> : {{ $check['targetbrand'] }}
                     </small>
                 </div>
             </div>

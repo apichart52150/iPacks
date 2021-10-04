@@ -24,36 +24,13 @@ class Speaking extends Model {
     public static function status_speaking_topic($id) {
 
         $topic = DB::table('speaking')
-        ->select('speaking.*','users.username as th_name')
-        ->leftjoin('users','users.id','=','speaking.th_id')
+        ->select('speaking.*','staff.staff_username as th_name')
+        ->leftjoin('staff','staff.staff_id','=','speaking.th_id')
         ->where('speaking.id',$id)
         ->get();
 
         return ($topic);
 
     }
-
-    public static function getCourse() {
-        $courses = DB::table('course')
-        ->select('*')
-        ->get();
-        return $courses;
-    }
-
-    public static function decreasePoint() {
-
-        $decrease_point = DB::table('student')
-        ->select('std_pointsac', 'std_pointspeaking',DB::raw('CASE WHEN std_pointsac != 0 THEN "std_pointsac" WHEN std_pointspeaking != 0 THEN "std_pointspeaking" ELSE "nopoint" END AS current_point'))
-        ->where('std_id', auth('web')->user()->std_id)
-        ->get();
-      
-        if($decrease_point[0]->current_point == 'nopoint') {
-            return 0;
-        }else {
-            DB::table('student')->where('std_id', auth('web')->user()->std_id)->decrement($decrease_point[0]->current_point);
-        }
-    }
-
-   
 
 }
