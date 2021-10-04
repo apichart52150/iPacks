@@ -32,6 +32,12 @@
 
     @yield('css')
 
+    <style>
+        #user-point-all{
+            font-size: 13px;
+        }
+    </style>
+
 </head>
 
 <body class="center-menu">
