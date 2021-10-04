@@ -181,7 +181,7 @@
 
 <script>
     $('#user-point-all').html("You have {{$points->tutorial_point}} point.")
-    $('#user-point-all').addClass('badge-success')
+    $('#user-point-all').addClass('badge badge-success px-2 py-1')
     let count_tutorial = "{{count($tutorials)}}"
     let points_tutorial = "{{$points->tutorial_point}}"
 
