@@ -184,7 +184,7 @@
 
 <script>
     $('#user-point-all').html("You have {{$points->club_point}} point.")
-    $('#user-point-all').addClass('badge-success')
+    $('#user-point-all').addClass('badge badge-success px-2 py-1')
     let count_clubs = "{{count($clubs)}}"
     let points_clubs = "{{$points->club_point}}"
 
