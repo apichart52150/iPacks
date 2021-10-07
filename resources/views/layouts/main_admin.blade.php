@@ -102,7 +102,52 @@
         </div>
         <!-- end Topbar -->
 
-        @yield('topbar-menu')
+        {{-- @yield('topbar-menu') --}}
+
+        <div class="topbar-menu">
+            <div class="container-fluid">
+                <div id="navigation" class="bg-dark">
+                    <!-- Navigation Menu-->
+                    <ul class="navigation-menu  d-lg-flex justify-content-center">
+
+                        <li class="has-submenu">
+                            <a href="{{ route('writing_dashboard') }}" class="text-light">
+                                <i class="fas fa-highlighter"></i>IELTS Practice Writing
+                            </a>
+                        </li>
+
+                        <li class="has-submenu">
+                            <a href="{{ route('speaking_dashboard') }}" class="text-light">
+                                <i class="fas fa-comments"></i>IELTS Practice Speaking
+                            </a>
+                        </li>
+
+                        <li class="has-submenu">
+                            <a href="{{ route('staff') }}" class="text-light">
+                                <i class="fas fa-address-card"></i>Staff
+                            </a>
+                        </li>
+
+                        <li class="has-submenu">
+                            <a href="{{ route('user') }}" class="text-light">
+                                <i class="fas fa-address-card"></i>User
+                            </a>
+                        </li>
+
+                        <li class="has-submenu">
+                            <a href="{{ route('admin-payment') }}" class="text-light">
+                                <i class="far fa-money-bill-alt"></i>Payment
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End navigation menu -->
+
+                    <div class="clearfix"></div>
+                </div>
+                <!-- end #navigation -->
+            </div>
+            <!-- end container -->
+        </div>
 
     </header>
     <!-- Navigation Bar-->

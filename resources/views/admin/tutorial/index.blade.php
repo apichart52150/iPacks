@@ -1,46 +1,5 @@
 @extends('layouts.main_admin')
 
-@section('topbar-menu')
-<div class="topbar-menu">
-    <div class="container-fluid">
-        <div id="navigation" class="bg-dark">
-            <!-- Navigation Menu-->
-            <ul class="navigation-menu  d-lg-flex justify-content-center">
-
-                <li class="has-submenu">
-                    <a href="{{ route('writing_dashboard') }}" class="text-light">
-                        <i class="fas fa-highlighter"></i>IELTS Practice Writing
-                    </a>
-                </li>
-
-                <li class="has-submenu">
-                    <a href="{{ route('speaking_dashboard') }}" class="text-light">
-                        <i class="fas fa-comments"></i>IELTS Practice Speaking
-                    </a>
-                </li>
-
-                <li class="has-submenu">
-                    <a href="{{ route('staff') }}" class="text-light">
-                        <i class="fas fa-address-card"></i>Staff
-                    </a>
-                </li>
-
-                <li class="has-submenu">
-                    <a href="{{ route('user') }}" class="text-light">
-                        <i class="fas fa-address-card"></i>User
-                    </a>
-                </li>
-            </ul>
-            <!-- End navigation menu -->
-
-            <div class="clearfix"></div>
-        </div>
-        <!-- end #navigation -->
-    </div>
-    <!-- end container -->
-</div>
-@endsection
-
 @section('page-title')
 
 <link rel="stylesheet" href="{{ asset('public/evo-calendar/css/evo-calendar.midnight-blue.min.css') }}">
