@@ -29,6 +29,7 @@
                                 {{ csrf_field() }}
                                 <input type="hidden" name="id" value="{{ auth('web')->user()->id }}">
                                 <input type="hidden" name="package" value="{{ $status }}">
+                                <input type="hidden" name="remark" value="NC">
                                 @if($status == 'gold')
                                     <input type="hidden" name="orderRef" value="6000.00">
                                 @elseif($status == 'platinum')

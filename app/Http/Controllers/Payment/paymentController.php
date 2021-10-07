@@ -8,7 +8,6 @@ use Auth;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Model\KTC;
 
 class paymentController extends Controller
 {
@@ -43,17 +42,22 @@ class paymentController extends Controller
                     'order_id' => $run_order,
                     'package' => $input['package'],
                     'created_at' => date('Y-m-d H:i:s'),
+                    'remark' => "NC"
                 ]);
         } else {
             $run_order = sprintf("%09d", $selectId->order_id);
         }
 
-        if ($input['package'] == 'gold') {
-            $discount = 1500.00;
-        } elseif ($input['package'] == 'platinum') {
-            $discount = 3100.00;
-        } else {
-            $discount = 150.00;
+        switch($input['package']){
+            case "gold": 
+                $discount = 1500.00;
+            break;
+            case "platinum": 
+                $discount = 1500.00;
+            break;
+            case "extra": 
+                $discount = 1050.00;
+            break;
         }
 
         $expire_date = date("Y-m-d H:i:s", strtotime("+7 day"));
@@ -114,23 +118,31 @@ class paymentController extends Controller
             if ($order_ref->package == "gold") {
                 $expire_date = date("Y-m-d H:i:s", strtotime("+30 day"));
                 DB::table('point')
-                    ->insert([
-                        'user_id' => $input['id'],
+                    ->where('user_id', $order_ref->id)
+                    ->update([
                         'writing_point' => 3,
                         'speaking_point' => 2,
-                        'clubs_point' => 0,
-                        'tutorial' => 0,
+                        'club_point' => 0,
+                        'tutorial_point' => 0,
                     ]);
-            } else {
+            } elseif ($order_ref->package == "platinum") {
                 $expire_date = date("Y-m-d H:i:s", strtotime("+44 day"));
                 DB::table('point')
-                    ->insert([
-                        'user_id' => $input['id'],
+                    ->where('user_id', $order_ref->id)
+                    ->update([
                         'writing_point' => 5,
                         'speaking_point' => 3,
-                        'clubs_point' => 1,
-                        'tutorial' => 1,
+                        'club_point' => 1,
+                        'tutorial_point' => 1,
                     ]);
+            }else{
+                $expire_date = date("Y-m-d H:i:s", strtotime("+14 day"));
+                DB::table('point')
+                ->where('user_id', $order_ref->id)
+                ->update([
+                    'club_point' => 1,
+                    'tutorial_point' => 1,
+                ]);
             }
 
             DB::table('users')
@@ -142,33 +154,17 @@ class paymentController extends Controller
                     'updated_at' => date("Y-m-d H:i:s"),
                 ]);
 
-            return redirect('recpayment_receiptript');
+            return redirect('payment_receipt');
 
         } else {
 
             return redirect('payment_fail');
 
         }
-
-        // DB::table('users')->where('id', Auth::id())->update(['remember_token' => $new_sessid]);
-
-        // $data = array(
-        //     'subject'=>"Online IELTS Tips & Practice",
-        //     'email'=>$request->get('email'),
-        //     'password'=>$request->get('password'),
-        //     'username'=>$request->get('username'),
-        //     'expire_date'=>$request->get('expire_date'),
-        //     'package'=>$request->get('level'),
-        //     'created_at'=>$request->get('created_at'),
-        // );
-        // Mail::to($request->get('email'))->send(new SendMail($data));
-        // DB::update('update users set expire_date = ? where id = ?', [$request->get('expire_date'),$request->get('id')]);
-
     }
 
     public function receipt()
     {
-
         $user = Auth::user();
         $data = array(
             'subject' => "Online IELTS Tips & Practice",
@@ -177,24 +173,21 @@ class paymentController extends Controller
             'expire_date' => date('M d Y', strtotime($user->expire_date)),
             'level' => $user->level,
         );
-        // Mail::to($user->email)->send(new SendMail($data));
+        Mail::to($user->email)->send(new SendMail($data));
 
         $currentDate = date('M d, Y');
 
         // dd($currentDate);
 
-        $ktc = KTC::get_data_ktc($user->id);
-        // dd($ktc);
         $data = [
-            'id' => $user->id,
-            'orderRef' => $ktc->order_id,
-            'orderReceipt' => $ktc->order_ref,
+            'id' => 014,
+            'orderRef' => '0000001',
+            'orderReceipt' => '0000002',
             'amount' => '6500.00',
             'currentDate' => $currentDate,
-            'package' => $user->level,
-            'address' => $user->address,
+            'package' => 'gold',
+            'address' => 'Stanley Jones 795 Folsom Ave, Suite 600 San Francisco, CA 94107 P: (123) 456-7890',
         ];
-        
 
         return view('payment.receipt', compact('data'));
     }
