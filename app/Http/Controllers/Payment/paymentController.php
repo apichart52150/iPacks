@@ -9,6 +9,7 @@ use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Model\KTC;
+use App\Model\Price;
 
 class paymentController extends Controller
 {
@@ -181,11 +182,12 @@ class paymentController extends Controller
         // dd($currentDate);
 
         $ktc = KTC::get_data_ktc($user->id);
+        $price = Price::get_price($user->level);
         $data = [
             'id' => $user->id,
             'orderRef' => $ktc->order_id,
             'orderReceipt' => $ktc->order_ref,
-            'amount' => '6500.00',
+            'amount' => number_format($price->price,2),
             'currentDate' => $currentDate,
             'package' => $user->level,
             'address' => $user->address,
@@ -194,7 +196,7 @@ class paymentController extends Controller
         return view('payment.receipt', compact('data'));
     }
 
-    public function test_send_mail()
+    public function send_mail()
     {
         $user = Auth::user();
         $data = array(
@@ -205,6 +207,7 @@ class paymentController extends Controller
             'level' => $user->level,
         );
         Mail::to($user->email)->send(new SendMail($data));
+        return redirect('user_home');
     }
 
 }

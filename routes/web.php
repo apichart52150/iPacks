@@ -47,7 +47,7 @@
             })->name('pay_fail');
 
 
-            Route::get('send/mail/test', 'paymentController@test_send_mail');
+            Route::get('send/mail', 'paymentController@send_mail')->name('send_mail');
 
         });
 
