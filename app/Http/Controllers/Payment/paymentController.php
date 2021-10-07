@@ -47,12 +47,16 @@ class paymentController extends Controller
             $run_order = sprintf("%09d", $selectId->order_id);
         }
 
-        if ($input['package'] == 'gold') {
-            $discount = 1500.00;
-        } elseif ($input['package'] == 'platinum') {
-            $discount = 3100.00;
-        } else {
-            $discount = 150.00;
+        switch($input['package']){
+            case "gold": 
+                $discount = 1500.00;
+            break;
+            case "platinum": 
+                $discount = 1500.00;
+            break;
+            case "extra": 
+                $discount = 1050.00;
+            break;
         }
 
         $expire_date = date("Y-m-d H:i:s", strtotime("+7 day"));
@@ -120,7 +124,7 @@ class paymentController extends Controller
                         'clubs_point' => 0,
                         'tutorial' => 0,
                     ]);
-            } else {
+            } elseif ($order_ref->package == "platinum") {
                 $expire_date = date("Y-m-d H:i:s", strtotime("+44 day"));
                 DB::table('point')
                     ->insert([
@@ -130,6 +134,14 @@ class paymentController extends Controller
                         'clubs_point' => 1,
                         'tutorial' => 1,
                     ]);
+            }else{
+                $expire_date = date("Y-m-d H:i:s", strtotime("+14 day"));
+                DB::table('point')
+                ->where('id', $input['id'])
+                ->update([
+                    'clubs_point' => 1,
+                    'tutorial' => 1,
+                ]);
             }
 
             DB::table('users')
