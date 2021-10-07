@@ -42,6 +42,7 @@ class paymentController extends Controller
                     'order_id' => $run_order,
                     'package' => $input['package'],
                     'created_at' => date('Y-m-d H:i:s'),
+                    'remark' => "NC"
                 ]);
         } else {
             $run_order = sprintf("%09d", $selectId->order_id);
@@ -117,30 +118,30 @@ class paymentController extends Controller
             if ($order_ref->package == "gold") {
                 $expire_date = date("Y-m-d H:i:s", strtotime("+30 day"));
                 DB::table('point')
-                    ->insert([
-                        'user_id' => $input['id'],
+                    ->where('user_id', $order_ref->id)
+                    ->update([
                         'writing_point' => 3,
                         'speaking_point' => 2,
-                        'clubs_point' => 0,
-                        'tutorial' => 0,
+                        'club_point' => 0,
+                        'tutorial_point' => 0,
                     ]);
             } elseif ($order_ref->package == "platinum") {
                 $expire_date = date("Y-m-d H:i:s", strtotime("+44 day"));
                 DB::table('point')
-                    ->insert([
-                        'user_id' => $input['id'],
+                    ->where('user_id', $order_ref->id)
+                    ->update([
                         'writing_point' => 5,
                         'speaking_point' => 3,
-                        'clubs_point' => 1,
-                        'tutorial' => 1,
+                        'club_point' => 1,
+                        'tutorial_point' => 1,
                     ]);
             }else{
                 $expire_date = date("Y-m-d H:i:s", strtotime("+14 day"));
                 DB::table('point')
-                ->where('id', $input['id'])
+                ->where('user_id', $order_ref->id)
                 ->update([
-                    'clubs_point' => 1,
-                    'tutorial' => 1,
+                    'club_point' => 1,
+                    'tutorial_point' => 1,
                 ]);
             }
 
@@ -153,33 +154,17 @@ class paymentController extends Controller
                     'updated_at' => date("Y-m-d H:i:s"),
                 ]);
 
-            return redirect('recpayment_receiptript');
+            return redirect('payment_receipt');
 
         } else {
 
             return redirect('payment_fail');
 
         }
-
-        // DB::table('users')->where('id', Auth::id())->update(['remember_token' => $new_sessid]);
-
-        // $data = array(
-        //     'subject'=>"Online IELTS Tips & Practice",
-        //     'email'=>$request->get('email'),
-        //     'password'=>$request->get('password'),
-        //     'username'=>$request->get('username'),
-        //     'expire_date'=>$request->get('expire_date'),
-        //     'package'=>$request->get('level'),
-        //     'created_at'=>$request->get('created_at'),
-        // );
-        // Mail::to($request->get('email'))->send(new SendMail($data));
-        // DB::update('update users set expire_date = ? where id = ?', [$request->get('expire_date'),$request->get('id')]);
-
     }
 
     public function receipt()
     {
-
         $user = Auth::user();
         $data = array(
             'subject' => "Online IELTS Tips & Practice",
@@ -189,7 +174,6 @@ class paymentController extends Controller
             'level' => $user->level,
         );
         Mail::to($user->email)->send(new SendMail($data));
-        dd($data);
 
         $currentDate = date('M d, Y');
 
