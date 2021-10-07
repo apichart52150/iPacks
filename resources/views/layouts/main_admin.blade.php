@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>IELTS Practice | Admin</title>
+    <title>Online IELTS Tip & Practice By New Cambridge | Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="disable-extension-feature" content="read-dom" />
@@ -90,7 +90,7 @@
                 <div class="logo-box">
                     <a href="{{route('admin_home')}}" class="logo text-center">
                         <span class="logo-lg">
-                            <span class="logo-lg-text-light">IPACKS ADMIN</span>
+                            <span class="logo-lg-text-light">ADMIN BACK OFFICE</span>
                         </span>
                         <span class="logo-sm">
                             <!-- <span class="logo-sm-text-dark">X</span> -->
@@ -172,7 +172,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        2021 iPACKS © New Cambridge
+                        2021 © Online IELTS Tip & Practice By New Cambridge
                     </div>
                 </div>
             </div>
