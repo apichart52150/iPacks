@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-12">
-                                            <a href="{{ url('payment/purchase/'.'extra') }}" type="button" class="btn btn-block btn--md btn-primary waves-effect waves-light">1 on 1 Tutorial + Writing & Speaking marked</a>
+                                            <a href="{{ url('payment/purchase/'.'extra') }}" type="button" class="btn btn-block btn--md btn-primary waves-effect waves-light">1 on 1 Tutorial (focus on Speaking) + Writing & Speaking marked</a>
                                         </div>
                                     </div>
                                     <hr>
