@@ -42,7 +42,7 @@ class paymentController extends Controller
                     'order_id' => $run_order,
                     'package' => $input['package'],
                     'created_at' => date('Y-m-d H:i:s'),
-                    'remark' => "NC"
+                    'pay_type' => $input['payMethod']
                 ]);
         } else {
             $run_order = sprintf("%09d", $selectId->order_id);
@@ -53,7 +53,7 @@ class paymentController extends Controller
                 $discount = 1500.00;
             break;
             case "platinum": 
-                $discount = 1500.00;
+                $discount = 3100.00;
             break;
             case "extra": 
                 $discount = 1050.00;
