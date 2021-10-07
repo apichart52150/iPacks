@@ -18,18 +18,15 @@
     </head>
 
     <body class="authentication-bg">
-
         <div class="account-pages mt-5 mb-5">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6 col-xl-5">
                         <div class="card bg-pattern">
-
                             <div class="card-body p-4">
                                 <div class="text-center mt-4">
                                     <h3 class="text-primary">Membership expired</h3>
-                                    <p class="mt-3 mb-2">If you have any difficulty with any of the services or wish to contact us, please email: <span class="text-primary font-weight-bold">info@newcambridge.com.</span></p>
-
+                                    <p class="mt-3 mb-2">If you have any difficulty with any of the services or wish to contact us, please email: <span class="text-primary font-weight-bold">otp@newcambridge.net</span></p>
                                     <a href="{{ route('success') }}" class="btn btn-success waves-effect waves-light">
                                         <span>Membership renewal</span>
                                     </a>
@@ -46,7 +43,6 @@
             <!-- end container -->
         </div>
         <!-- end page -->
-
 
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
