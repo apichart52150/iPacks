@@ -146,8 +146,6 @@
             </div>
         </footer>
         <!-- End Footer -->    
-
-        @include('student.profile')
  
         <!-- Vendor js -->
         <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
