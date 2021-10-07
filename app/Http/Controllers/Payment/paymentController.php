@@ -8,6 +8,8 @@ use Auth;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Model\KTC;
+use App\Model\Price;
 
 class paymentController extends Controller
 {
@@ -166,33 +168,35 @@ class paymentController extends Controller
     public function receipt()
     {
         $user = Auth::user();
-        $data = array(
-            'subject' => "Online IELTS Tips & Practice",
-            'first_name' => $user->first_name,
-            'last_name' => $user->last_name,
-            'expire_date' => date('M d Y', strtotime($user->expire_date)),
-            'level' => $user->level,
-        );
-        Mail::to($user->email)->send(new SendMail($data));
+        // $data = array(
+        //     'subject' => "Online IELTS Tips & Practice",
+        //     'first_name' => $user->first_name,
+        //     'last_name' => $user->last_name,
+        //     'expire_date' => date('M d Y', strtotime($user->expire_date)),
+        //     'level' => $user->level,
+        // );
+        // Mail::to($user->email)->send(new SendMail($data));
 
         $currentDate = date('M d, Y');
 
         // dd($currentDate);
 
+        $ktc = KTC::get_data_ktc($user->id);
+        $price = Price::get_price($user->level);
         $data = [
-            'id' => 014,
-            'orderRef' => '0000001',
-            'orderReceipt' => '0000002',
-            'amount' => '6500.00',
+            'id' => $user->id,
+            'orderRef' => $ktc->order_id,
+            'orderReceipt' => $ktc->order_ref,
+            'amount' => number_format($price->price,2),
             'currentDate' => $currentDate,
-            'package' => 'gold',
-            'address' => 'Stanley Jones 795 Folsom Ave, Suite 600 San Francisco, CA 94107 P: (123) 456-7890',
+            'package' => $user->level,
+            'address' => $user->address,
         ];
 
         return view('payment.receipt', compact('data'));
     }
 
-    public function test_send_mail()
+    public function send_mail()
     {
         $user = Auth::user();
         $data = array(
@@ -203,6 +207,7 @@ class paymentController extends Controller
             'level' => $user->level,
         );
         Mail::to($user->email)->send(new SendMail($data));
+        return redirect('user_home');
     }
 
 }

@@ -11,8 +11,6 @@
 
     Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
-   
-
     Route::group(['middleware' => 'auth:web'], function () {
 
         Route::get('browser-settings', function () {
@@ -49,7 +47,7 @@
             })->name('pay_fail');
 
 
-            Route::get('send/mail/test', 'paymentController@test_send_mail');
+            Route::get('send/mail', 'paymentController@send_mail')->name('send_mail');
 
         });
 
@@ -283,6 +281,15 @@
             Route::get('history/{date}/{status}','HomeController@history');
             Route::post('confirm','HomeController@confirm')->name('tutorial-confirm');
             Route::post('edit','HomeController@edit_data')->name('tutorial-edit');
+            
+        });
+
+        //Payment
+        Route::prefix('payment')->namespace('Admin\payment')->group(function () {
+
+            Route::get('list','HomeController@index')->name('admin-payment');
+            Route::post('edit','HomeController@edit_data')->name('admin-payment-edit');
+            Route::get('delete/{id}','HomeController@delete')->name('admin-payment-delete');
             
         });
     });

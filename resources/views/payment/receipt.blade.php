@@ -111,7 +111,7 @@
                 <div class="mt-4 mb-1">
                     <div class="text-right d-print-none">
                         <a href="javascript:window.print()" class="btn btn-primary waves-effect waves-light"><i class="mdi mdi-printer mr-1"></i> Print</a>
-                        <a href="{{ route('user_home' )}}" class="btn btn-success waves-effect waves-light">Finish</a>
+                        <a href="{{ route('send_mail' )}}" class="btn btn-success waves-effect waves-light">Finish</a>
                     </div>
                 </div>
             </div> <!-- end card-box -->
