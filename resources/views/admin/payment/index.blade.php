@@ -39,6 +39,8 @@
                         <th>Receipt ID</th>
                         <th>User data</th>
                         <th>Status</th>
+                        <th>Remark</th>
+                        <th>Pay type</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -59,6 +61,10 @@
 <script>
     let window_location = window.location.search.split("=")
     let window_location_length = window_location[window_location.length-1]
+    console.log(window_location_length)
+    if(window_location_length==""){
+        window_location_length = 1
+    }
     let table_tbody = ""
     let index_row_tbody = 1
     "@foreach ($ktc as $ktc)"
@@ -77,6 +83,8 @@
     }else{
         table_tbody += '<td><span class="badge badge-secondary p-2">wait</span></span></td>'
     }
+    table_tbody += '<td>{{ $ktc->remark }}</td>'
+    table_tbody += '<td>{{ $ktc->pay_type }}</td>'
     table_tbody += '<td>'
     table_tbody += '<button onclick="edit('+"'{{ $ktc->id }}'"+','+"'{{ $ktc->order_id }}'"+','+"'{{ $ktc->order_ref }}'"+','+"'{{ $ktc->success_code }}'"+');" type="button" class="btn btn-info btn-xs mx-1">Edit</button>'
     table_tbody += '<button onclick="edit('+"'{{ $ktc->id }}'"+');" type="button" class="btn btn-danger btn-xs mx-1">Delete</button>'
