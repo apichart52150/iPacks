@@ -12,7 +12,7 @@ class CheckStatus extends Model {
         $currentDate = date('Y-m-d H:i:s');
         $expireDate = Auth::guard('web')->user()->expire_date;
 
-        if(Auth::guard('web')->user()->status == 'wait'){
+        if(Auth::guard('web')->user()->status == 'wait' ||  empty(Auth::guard('web')->user()->status)){
 
             return 2;
 
