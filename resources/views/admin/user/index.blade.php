@@ -44,6 +44,10 @@
                 Manage User List
             </p>
 
+            <div class="mb-2">
+                <a href="{{ route('admin-add-user') }}" class="btn btn-primary"><i class="mdi mdi-plus-circle mr-2"></i>Add new User</a>
+            </div>
+
             <table id="basic-datatable" class="table dt-responsive nowrap">
                 <thead>
                     <tr>
@@ -64,7 +68,11 @@
                         <td>{{$row->email}}</td>
                         <td>{{$row->first_name}} {{$row->last_name}}</td>
                         <td>{{ $row->address }}</td>
+                        @if($row->expire_date != null)
                         <td>{{ date('d-M-Y',strtotime($row->expire_date)) }}</td>
+                        @else
+                        <td></td>
+                        @endif
                         <td>
 
                             @if ($row->status == 'paid')
