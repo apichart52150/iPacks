@@ -118,7 +118,7 @@ class paymentController extends Controller
                 ]);
 
             if ($order_ref->package == "gold") {
-                $expire_date = date("Y-m-d H:i:s", strtotime("+30 day"));
+                $expire_date = date("Y-m-d H:i:s", strtotime("+31 day"));
                 DB::table('point')
                     ->where('user_id', $order_ref->id)
                     ->update([
@@ -142,7 +142,8 @@ class paymentController extends Controller
                 DB::table('point')
                 ->where('user_id', $order_ref->id)
                 ->update([
-                    'club_point' => 1,
+                    'writing_point' => 1,
+                    'speaking_point' => 1,
                     'tutorial_point' => 1,
                 ]);
             }
