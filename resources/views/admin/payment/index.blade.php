@@ -88,8 +88,11 @@
 
 
     function edit(id, order_id, order_ref, status) {
-        let input = '<input type="text" id="order_id-edit" class="swal2-input" value="'+order_id+'" placeholder="Order ID">'
-        input += '<input type="text" id="receipt_id-edit" class="swal2-input" value="'+order_ref+'" placeholder="Receipt ID">'
+        let input = '<div class="w-100 text-left"><label class="pt-3">Order ID</label></div>'
+        input += '<input type="text" id="order_id-edit" class="swal2-input mt-0" value="'+order_id+'" placeholder="Order ID">'
+        input += '<div class="w-100 text-left"><label class="pt-3">Receipt ID</label></div>'
+        input += '<input type="text" id="receipt_id-edit" class="swal2-input mt-0" value="'+order_ref+'" placeholder="Receipt ID">'
+        input += '<div class="w-100 text-left"><label class="pt-3">Receipt ID</label></div>'
         input += '<select id="status-edit" class="swal2-input mt-0">'
         if (status == 1) {
             input += '<option value="1" selected>Approval</option>'
