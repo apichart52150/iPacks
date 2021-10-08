@@ -41,7 +41,7 @@
 
             {{-- <h4 class="header-title">User</h4> --}}
             <p class="sub-header">
-                Manage Staff List
+                Manage User List
             </p>
 
             <table id="basic-datatable" class="table dt-responsive nowrap">
@@ -49,7 +49,6 @@
                     <tr>
                         <th class="min-width">Id</th>
                         <th data-sort-initial="true" data-toggle="true">Email</th>
-                        <th>password</th>
                         <th>Name</th>
                         <th>Address</th>
                         <th>Expire date</th>
@@ -63,11 +62,17 @@
                     <tr class="row-{{$row->id}}">
                         <td>{{$row->id}}</td>
                         <td>{{$row->email}}</td>
-                        <td>********</td>
                         <td>{{$row->first_name}} {{$row->last_name}}</td>
                         <td>{{ $row->address }}</td>
-                        <td>{{ $row->expire_date }}</td>
-                        <td><span class="badge badge-success p-2">{{$row->status}}</span></td>
+                        <td>{{ date('d-M-Y',strtotime($row->expire_date)) }}</td>
+                        <td>
+
+                            @if ($row->status == 'paid')
+                            <span class="badge badge-success p-2">{{$row->status}}</span>
+                            @else
+                            <span class="badge badge-secondary p-2">wait</span>
+                            @endif
+                        </td>
                         <td>
                             <div class="d-flex flex-row">
                                 <a href="{{ url('user/edit',[$row->id]) }}"
