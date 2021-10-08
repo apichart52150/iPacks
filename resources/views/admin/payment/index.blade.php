@@ -95,11 +95,11 @@
         input += '<div class="w-100 text-left"><label class="pt-3">Receipt ID</label></div>'
         input += '<select id="status-edit" class="swal2-input mt-0">'
         if (status == 1) {
-            input += '<option value="1" selected>Approval</option>'
-            input += '<option value="2">Disapproval</option>'
-        } else if (status == 2) {
-            input += '<option value="1">Approval</option>'
-            input += '<option value="2" selected>Disapproval</option>'
+            input += '<option value="1" selected>Pay</option>'
+            input += '<option value="2">'+"Don't pay"+'</option>'
+        } else if (status == 0) {
+            input += '<option value="1">Pay</option>'
+            input += '<option value="2" selected>'+"Don't pay"+'</option>'
         }
         input += '</select>'
         Swal.fire({
@@ -111,17 +111,31 @@
             cancelButtonColor: '#d33',
             confirmButtonText: 'OK',
             preConfirm: () => {
-                let note = Swal.getPopup().querySelector('#note').value
-                if (!note) {
-                    Swal.showValidationMessage(`Please tell us your reasons.`)
-                }
+                let order_id = Swal.getPopup().querySelector('#order_id-edit').value
+                let receipt_id = Swal.getPopup().querySelector('#receipt_id-edit').value
+                let status = Swal.getPopup().querySelector('#status-edit').value
                 return {
-                    note: note,
+                    order_id: order_id,
+                    receipt_id: receipt_id,
+                    status: status,
                 }
             }
         }).then((result) => {
-            let data = ""
-            // update_data(data)
+            
+            Swal.fire({
+  title: 'Are you sure?',
+  text: "",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes'
+}).then((result) => {
+  if (result) {
+    let data = []
+    update_data(data)
+  }
+})
         })
     }
 
