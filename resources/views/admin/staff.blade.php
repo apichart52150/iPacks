@@ -39,7 +39,7 @@
                     <div class="row">
                         <div class="col-12 text-sm-center form-inline">
                             <div class="form-group mr-2">
-								<button data-toggle="modal" data-target=".bs-example-modal-xl" class="btn btn-primary"><i class="mdi mdi-plus-circle mr-2"></i> Add User</button>
+								<button data-toggle="modal" data-target=".bs-example-modal-xl" class="btn btn-primary"><i class="mdi mdi-plus-circle mr-2"></i>Add new Staff</button>
                             </div>
                         </div>
                     </div>

@@ -11,10 +11,10 @@
                     <li class="breadcrumb-item"><i class="fas fa-home"></i> <a href="{{ route('admin_home') }}">Home</a>
                     </li>
                     <!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
-                    <li class="breadcrumb-item active">Staff</li>
+                    <li class="breadcrumb-item active">User</li>
                 </ol>
             </div>
-            <h4 class="page-title">Staff</h4>
+            <h4 class="page-title">User</h4>
         </div>
     </div>
 </div>

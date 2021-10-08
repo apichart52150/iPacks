@@ -62,7 +62,7 @@
         </button>
     </div>
     <div class="col-md-2">
-        <a href="mailto:metre80.x@gmail.com" target="_blank">
+        <a href="mailto:otp@newcambridge.net" target="_blank">
             <button id="inbox-mail" class="btn btn-primary w-100">
                 <i class="far fa-envelope"></i>
                 Email

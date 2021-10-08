@@ -8,6 +8,10 @@
         }
         return redirect('login');
     });
+    
+
+    Route::get('create-user-only','Auth\CreateUserOnlyController@index')->name('create-user-only-index');
+    Route::post('create-user-only/upload-data','Auth\CreateUserOnlyController@create')->name('create-user-only-upload-data');
 
     Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
