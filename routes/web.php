@@ -44,7 +44,7 @@
             Route::get('purchase/{status?}', 'paymentController@payment_form')->name('paymentForm');
             Route::post('confirm', 'paymentController@payment_confirm')->name('paymentConfirm');
             Route::get('payment_success', 'paymentController@payment_success')->name('payment_success');
-            Route::get('receipt', 'paymentController@receipt')->name('payment_receipt');
+            Route::get('receipt', 'paymentController@receipt')->name('receipt');
 
             Route::get('payment_fail', function () {
                 return view('payment.fail');

@@ -156,7 +156,7 @@ class paymentController extends Controller
                     'updated_at' => date("Y-m-d H:i:s"),
                 ]);
 
-            return redirect('payment_receipt');
+            return redirect()->route('receipt');
 
         } else {
 
