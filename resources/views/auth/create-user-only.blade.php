@@ -12,7 +12,7 @@
 					<div class="text-center">
 						<div class="text-center mb-3">
 							<h3 class="font-weight-bold text-primary"> Online IELTS Tips & Practice </h3>
-							<span class="text-dark h3">create-user-only</span>
+							<span class="text-dark h3">Create user only</span>
 						</div>
 						<p class="text-muted mb-4 mt-3">Don't have an account? Create your own account, it takes less
 							than a minute</p>
