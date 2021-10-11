@@ -52,44 +52,34 @@
                 <div class="col-12">
                     <div class="p-2">
 
-                        <form route="{{ route('user-edit-confirm') }}" id="form-update-users">
+                        <form id="form-add-users">
                             {{ csrf_field() }}
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="">ID</label>
-                                <div class="col-sm-10">
-                                    <input type="text" id="" name="id" class="form-control border border-primary"
-                                        value="{{$users->id}}" readonly>
-                                </div>
-                            </div>
+                        
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">Email</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="" name="email"
-                                        value="{{$users->email}}" required>
+                                    <input type="email" class="form-control" id="" name="email"value="" placeholder="Email" required>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">Password</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="" name="password"
-                                        placeholder="Change new password">
+                                    <input type="text" class="form-control" id="" name="password"placeholder="Password" required>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">First name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="" name="first_name"
-                                        value="{{$users->first_name}}" required>
+                                    <input type="text" class="form-control" id="" name="first_name" placeholder="First name" required>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">Last name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="" name="last_name"
-                                        value="{{$users->last_name}}" required>
+                                    <input type="text" class="form-control" id="" name="last_name" placeholder="Last name" required>
                                 </div>
                             </div>
 
@@ -97,13 +87,8 @@
                                 <label class="col-sm-2 col-form-label" for="">Level</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" id="" name="level">
-                                        @if($users->level=='gold')
-                                        <option value="gold" selected>gold</option>
-                                        <option value="platinum">platinum</option>
-                                        @else
                                         <option value="gold">gold</option>
-                                        <option value="platinum" selected>platinum</option>
-                                        @endif
+                                        <option value="platinum">platinum</option>
                                     </select>
                                 </div>
                             </div>
@@ -112,13 +97,8 @@
                                 <label class="col-sm-2 col-form-label" for="">Status</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" id="" name="status">
-                                        @if($users->status=='paid')
                                         <option value="wait">wait</option>
-                                        <option value="paid" selected>paid</option>
-                                        @else
-                                        <option value="wait" selected>wait</option>
                                         <option value="paid">paid</option>
-                                        @endif
                                     </select>
                                 </div>
                             </div>
@@ -127,11 +107,7 @@
                                 <label class="col-sm-2 col-form-label" for="">Expire date</label>
                                 <div class="col-sm-10">
                                     <div class="input-group">
-                                        @if($users->expire_date != null)
-                                        <input type="text" name="expire_date" value="{{ date('m/d/Y',strtotime($users->expire_date)) }}" class="form-control date" data-provide="datepicker" data-date-autoclose="true" readonly placeholder="mm/dd/yyyy">
-                                        @else
                                         <input type="text" name="expire_date" value="" class="form-control date" data-provide="datepicker" data-date-autoclose="true" readonly placeholder="mm/dd/yyyy">
-                                        @endif
                                         <div class="input-group-append">
                                             <span class="input-group-text"><i class="ti-calendar"></i></span>
                                         </div>
@@ -142,8 +118,8 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">Address</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control" id="" name="address" cols="30"
-                                        rows="10">{{$users->address}}</textarea>
+                                    <textarea class="form-control" placeholder="Address" id="" name="address" cols="30"
+                                        rows="10"></textarea>
                                 </div>
                             </div>
 
@@ -168,11 +144,11 @@
 
 <script src="{{ asset('public/assets/js/ajax.jquery.js') }}"></script>
 <script>
-    $('#form-update-users').on('submit',function(){
+    $('#form-add-users').on('submit',function(){
         let data = new FormData(this)
         $.ajax({
             type: 'POST',
-            url: $(this).attr('route'),
+            url: "{{ route('user-add-confirm') }}",
             data: data,
             cache: false,
             contentType: false,
@@ -180,8 +156,8 @@
             success: function(response) {
                 console.log(response)
                 if (response == "success") {
-                    swal("Update success", "", "success").then(()=>{
-                    window.location.href = $('#return-page').attr('href')
+                    swal("Insert success", "", "success").then(()=>{
+                    window.location.href = "{{ route('user') }}"
                     })
                     }
                 else
