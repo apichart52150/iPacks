@@ -29,13 +29,7 @@
                                 {{ csrf_field() }}
                                 <input type="hidden" name="id" value="{{ auth('web')->user()->id }}">
                                 <input type="hidden" name="package" value="{{ $status }}">
-                                @if($status == 'gold')
-                                    <input type="hidden" name="orderRef" value="6000.00">
-                                @elseif($status == 'platinum')
-                                    <input type="hidden" name="orderRef" value="10000.00">
-                                @else
-                                    <input type="hidden" name="orderRef" value="1500.00">
-                                @endif
+
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label" for="simpleinput">Your Package</label>
                                     <div class="col-sm-10">

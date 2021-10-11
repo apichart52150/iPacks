@@ -74,7 +74,7 @@
                                         <b>IELTS Practice Package</b> <br/>
                                         {{ $data['package'] }}
                                     </td>
-                                    <td class="text-right">{{ $data['amount']}} ฿</td>
+                                    <td class="text-right">{{ $data['amount']}} BAHT</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -99,8 +99,8 @@
                     </div> <!-- end col -->
                     <div class="col-sm-6">
                         <div class="float-right">
-                            <p><b>Sub-total: </b> <span class="float-right">{{ $data['amount'] }} ฿</span></p>
-                            <p><b>Discount: </b> <span class="float-right"> &nbsp;&nbsp;&nbsp; {{ $data['discount'] }}.00 ฿</span></p>
+                            <p><b>Sub-total: </b> <span class="float-right">{{ $data['amount'] }}.00</span></p>
+                            <p><b>Discount: </b> <span class="float-right"> &nbsp;&nbsp;&nbsp; {{ $data['discount'] }}.00</span></p>
                             @php
                                 $price = $data['amount'] - $data['discount']
                             @endphp

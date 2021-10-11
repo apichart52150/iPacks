@@ -27,39 +27,44 @@ class paymentController extends Controller
         $currentDate = date('M d, Y');
 
         $selectId = DB::table('ktc_order')
-            ->select('*')
-            ->where('id', '=', $input['id'])
-            ->first();
+        ->select('*')
+        ->where('id', '=', $input['id'])
+        ->first();
 
         if (empty($selectId)) {
+
             $order_id = DB::table('ktc_order')
-                ->latest()
-                ->first();
+            ->latest()
+            ->first();
 
             $run_order = sprintf("%09d", $order_id->order_id + 1);
 
             DB::table('ktc_order')
-                ->insert([
-                    'id' => $input['id'],
-                    'order_id' => $run_order,
-                    'package' => $input['package'],
-                    'created_at' => date('Y-m-d H:i:s'),
-                    'pay_type' => $input['payMethod']
-                ]);
+            ->insert([
+                'id' => $input['id'],
+                'order_id' => $run_order,
+                'package' => $input['package'],
+                'created_at' => date('Y-m-d H:i:s'),
+                'pay_type' => $input['payMethod']
+            ]);
+
         } else {
+
             $run_order = sprintf("%09d", $selectId->order_id);
         }
 
-        switch($input['package']){
-            case "gold": 
-                $discount = 1500.00;
-            break;
-            case "platinum": 
-                $discount = 3100.00;
-            break;
-            case "extra": 
-                $discount = 1050.00;
-            break;
+        if($selectId->remark == 'student'){
+            $price = DB::table('price')
+            ->select('*')
+            ->where('name', '=', $input['package'])
+            ->where('remark', '=', $selectId->remark)
+            ->first();
+        }else{
+            $price = DB::table('price')
+            ->select('*')
+            ->where('name', '=', $input['package'])
+            ->where('remark', '=', $selectId->remark)
+            ->first();
         }
 
         $expire_date = date("Y-m-d H:i:s", strtotime("+7 day"));
@@ -77,14 +82,13 @@ class paymentController extends Controller
         $data = [
             'id' => $input['id'],
             'orderRef' => $run_order,
-            'amount' => $input['orderRef'],
+            'amount' => $price->price,
             'currentDate' => $currentDate,
             'package' => $input['package'],
             'address' => $input['address'],
-            'discount' => $discount,
+            'discount' => $price->discount,
             'payMethod' => $input['payMethod'],
         ];
-
         return view('payment.payment_confirm', compact('data'));
     }
 
