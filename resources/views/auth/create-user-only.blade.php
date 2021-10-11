@@ -4,11 +4,46 @@
 @section('content')
 <link href="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
 
+<style>
+	.video-container {
+		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+		overflow: hidden;
+		max-width: 100%;
+	}
+
+	.video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	/* 
+	.text-body {
+		padding: 15px;
+		width: 50%;
+		height: 100px;
+		overflow: scroll;
+	} */
+</style>
+
 <div class="container">
 	<div class="row justify-content-center">
-		<div class="col-md-8 col-lg-6 col-xl-5">
+		<div class="col-8 mb-3" style="vertical-align: middle">
+			<div class="video-container">
+				<iframe class="" src="https://www.youtube.com/embed/asukoInl0ek" title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<div class="col-md-4 mb-3">
 			<div class="card">
-				<div class="card-body p-4">
+				<div class="card-body p-3">
 					<div class="text-center">
 						<div class="text-center mb-3">
 							<h3 class="font-weight-bold text-primary"> Online IELTS Tips & Practice </h3>
@@ -30,7 +65,7 @@
 						{{ csrf_field() }}
 
 						<div class="form-group mb-3">
-							<label for="email" class="col-md-4 control-label">E-Mail Address</label>
+							<label for="email" class="mr-1 w-100 control-label">E-Mail Address</label>
 							<input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}"
 								required>
 
@@ -42,7 +77,7 @@
 						</div>
 
 						<div class="form-group mb-3">
-							<label for="password" class="col-md-4 control-label">Password</label>
+							<label for="password" class="w-100 control-label">Password</label>
 							<input id="password" type="password" class="form-control" name="password" required>
 
 							@if ($errors->has('password'))
@@ -75,6 +110,19 @@
 							class="text-white font-weight-medium ml-1">Log In</a></p>
 				</div> <!-- end col -->
 			</div>
+		</div>
+
+		<div class="col-md-12 mb-3">
+			<div class="card">
+				<div class="card-body">
+					<img class="w-50" src="{{ asset('public/assets/images/register/159614.jpg') }}" alt="">
+					<br><br><br>
+					<img class="w-100" src="{{ asset('public/assets/images/register/Online-Tips-03-1536x1086.jpg') }}" alt="">
+					<br><br><br>
+				</div>
+			</div>
+			<hr>
+			<img src="" alt="">
 		</div>
 	</div>
 </div>
@@ -205,6 +253,7 @@
 <script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
 
 <script>
+	// $('.account-pages').removeClass('mt-5')
 	$('.form-horizontal').on('submit',function(){
 		load_wait()
 		$.ajax({
