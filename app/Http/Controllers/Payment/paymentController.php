@@ -38,14 +38,15 @@ class paymentController extends Controller
             ->first();
 
             $run_order = sprintf("%09d", $order_id->order_id + 1);
-
+            
             DB::table('ktc_order')
             ->insert([
                 'id' => $input['id'],
                 'order_id' => $run_order,
                 'package' => $input['package'],
                 'created_at' => date('Y-m-d H:i:s'),
-                'pay_type' => $input['payMethod']
+                'pay_type' => $input['payMethod'],
+                'remark' => "other",
             ]);
 
         } else {
