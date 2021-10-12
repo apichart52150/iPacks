@@ -4,11 +4,47 @@
 @section('content')
 <link href="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
 
+<style>
+	.video-container {
+		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+		overflow: hidden;
+		max-width: 100%;
+	}
+
+	.video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.text-h3{
+		font-size: 23px;
+	}
+	.text-{
+		font-size: 17px;
+	}
+
+	
+</style>
+
 <div class="container">
 	<div class="row justify-content-center">
-		<div class="col-md-8 col-lg-6 col-xl-5">
+		<div class="col-8 mb-3" style="vertical-align: middle">
+			<div class="video-container">
+				<iframe class="" src="https://www.youtube.com/embed/asukoInl0ek" title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<div class="col-md-4 mb-3">
 			<div class="card">
-				<div class="card-body p-4">
+				<div class="card-body p-3">
 					<div class="text-center">
 						<div class="text-center mb-3">
 							<h3 class="font-weight-bold text-primary"> Online IELTS Tips & Practice </h3>
@@ -30,7 +66,7 @@
 						{{ csrf_field() }}
 
 						<div class="form-group mb-3">
-							<label for="email" class="col-md-4 control-label">E-Mail Address</label>
+							<label for="email" class="mr-1 w-100 control-label">E-Mail Address</label>
 							<input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}"
 								required>
 
@@ -42,7 +78,7 @@
 						</div>
 
 						<div class="form-group mb-3">
-							<label for="password" class="col-md-4 control-label">Password</label>
+							<label for="password" class="w-100 control-label">Password</label>
 							<input id="password" type="password" class="form-control" name="password" required>
 
 							@if ($errors->has('password'))
@@ -76,6 +112,121 @@
 				</div> <!-- end col -->
 			</div>
 		</div>
+
+		<div class="col-md-12 mb-3">
+			<div class="card">
+				<div class="card-body">
+					<div class="text-center">
+						<img class="w-50 pb-3" src="{{ asset('public/assets/images/register/159614.jpg') }}" alt="">
+						<img class="w-100 pb-3"
+							src="{{ asset('public/assets/images/register/Online-Tips-03-1536x1086.jpg') }}" alt="">
+					</div>
+
+					<h3 class="text-h3">
+						<i class="fas fa-thumbs-up text-primary pr-1"></i>
+						Online IELTS Tips & Practice กับ New Cambridge ดียังไง?
+					</h3>
+					<div class="text-center pb-3 text-">
+						Online IELTS Tips & Practice is an online self-access service exclusively suitable for those who
+						are mastering their
+						English language skills, both academically and professionally, and are preparing for the IELTS
+						examinations
+					</div>
+
+					<h3 class="text-h3">
+						<i class="far fa-comment-alt text-primary pr-1"></i>
+						คำอธิบาย Online IELTS Tips & Practice
+					</h3>
+					<div class="text-left pb-3 text-">
+						The Online IELTS Tips & Practice services consist of a wide selection of practices on essential
+						skills for effective
+						communications: listening, speaking, reading and writing. Moreover, the services provide
+						users with Language Use, Topic Packs, Strategy Packs.
+					</div>
+
+					<div class="text-center pb-3">
+						<img class="w-100" src="{{ asset('public/assets/images/register/1-1536x107.png') }}" alt="">
+					</div>
+
+
+					<h3 class="text-h3">
+						<i class="far fa-comment-alt text-primary pr-1"></i>
+						How to improve your English with the Online IELTS Tips & Practice services
+					</h3>
+					<div class="text-left pb-3 text-">
+						You can choose the package to match your goal. (Platinum is recommended because LIVE 1 on 1
+						Tutorial is very useful.)
+					</div>
+
+					<div class="card pb-3">
+						<div class="card-body text-dark">
+							<div class="text-center text-h3 pb-1">
+								<strong>The Online IELTS Tips & Practice package</strong>
+							</div>
+							<table class="table table-bordered text-">
+								<thead>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col" class="text-center" style="width: 100px;">Gold</th>
+										<th scope="col" class="text-center" style="width: 100px;">Platinum</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="text-align: left;">Strategies on 4 Skills Listening, Reading,
+											Writing, Speaking</td>
+										<td style="text-align: center;">/</td>
+										<td style="text-align: center;">/</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">4-Skill Practices</td>
+										<td style="text-align: center;">/</td>
+										<td style="text-align: center;">/</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Over 1,400 questions on focused grammar &amp;
+											vocabulary</td>
+										<td style="text-align: center;">/</td>
+										<td style="text-align: center;">/</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Writing Tasks marked with comments</td>
+										<td style="text-align: center;">3 Times</td>
+										<td style="text-align: center;">5 Times</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Speaking (15 mins.) marked with comments</td>
+										<td style="text-align: center;">2 Times</td>
+										<td style="text-align: center;">3 Times</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Reading passages with practice and test modes</td>
+										<td style="text-align: center;">/</td>
+										<td style="text-align: center;">/</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Clubs to Upskill (60 mins.) with Native IELTS
+											Specialist</td>
+										<td style="text-align: center;">x</td>
+										<td style="text-align: center;">/</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">1 on 1 Tutorial (30 mins.) with Native IELTS
+											Specialist</td>
+										<td style="text-align: center;">x</td>
+										<td style="text-align: center;">/</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="text-center pb-3">
+						<img class="w-100" src="{{ asset('public/assets/images/register/2-1536x486.png') }}" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -84,6 +235,7 @@
 <script src="{{ asset('public/assets/js/pages/sweet-alerts.init.js') }}"></script>
 
 <script>
+	// $('.account-pages').removeClass('mt-5')
 	$('.form-horizontal').on('submit',function(){
 		load_wait()
 		$.ajax({

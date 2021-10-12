@@ -13,7 +13,7 @@
                     <li class="breadcrumb-item active">Edit</li>
                 </ol>
             </div>
-            <h4 class="page-title">Edit</h4>
+            <h4 class="page-title">Add user</h4>
         </div>
     </div>
 </div>
@@ -47,48 +47,53 @@
 <div class="row">
     <div class="col-12">
         <div class="card-box">
-            <h4 class="header-title">Edit</h4>
+            <h4 class="header-title">Add user</h4>
             <div class="row">
                 <div class="col-12">
                     <div class="p-2">
 
                         <form id="form-add-users">
                             {{ csrf_field() }}
-                        
+
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">Email</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="" name="email"value="" placeholder="Email" required>
+                                    <input type="email" class="form-control" id="" name="email" value=""
+                                        placeholder="Email" required>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">Password</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="" name="password"placeholder="Password" required>
+                                    <input type="text" class="form-control" id="" name="password" placeholder="Password"
+                                        required>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">First name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="" name="first_name" placeholder="First name" required>
+                                    <input type="text" class="form-control" id="" name="first_name"
+                                        placeholder="First name" required>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">Last name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="" name="last_name" placeholder="Last name" required>
+                                    <input type="text" class="form-control" id="" name="last_name"
+                                        placeholder="Last name" required>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="">Level</label>
+                                <label class="col-sm-2 col-form-label" for="">Remark</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control" id="" name="level">
-                                        <option value="gold">gold</option>
-                                        <option value="platinum">platinum</option>
+                                    <select class="form-control" id="" name="remark">
+                                        <option value="idp">IDP</option>
+                                        <option value="student">Student</option>
+                                        <option value="other">Other</option>
                                     </select>
                                 </div>
                             </div>
@@ -96,22 +101,30 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">Status</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control" id="" name="status">
+                                    <select class="form-control" id="status-u" name="status">
                                         <option value="wait">wait</option>
                                         <option value="paid">paid</option>
                                     </select>
                                 </div>
                             </div>
 
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="">Expire date</label>
+                            <div class="form-group row level">
+                                <label class="col-sm-2 col-form-label" for="">Package</label>
                                 <div class="col-sm-10">
-                                    <div class="input-group">
-                                        <input type="text" name="expire_date" value="" class="form-control date" data-provide="datepicker" data-date-autoclose="true" readonly placeholder="mm/dd/yyyy">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text"><i class="ti-calendar"></i></span>
-                                        </div>
-                                    </div>
+                                    <select class="form-control" id="level" name="level">
+                                        <option value="gold">gold</option>
+                                        <option value="platinum">platinum</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row pay_type">
+                                <label class="col-sm-2 col-form-label" for="">Pay type</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" id="pay_type" name="pay_type">
+                                        <option value="CC">CC</option>
+                                        <option value="Airplay">Airplay</option>
+                                    </select>
                                 </div>
                             </div>
 
@@ -124,7 +137,7 @@
                             </div>
 
                             <div class="form-group text-center">
-                                <button type="submit" id="" class="btn btn-info waves-effect waves-light">Edit</button>
+                                <button type="submit" id="" class="btn btn-info waves-effect waves-light">Add</button>
                                 <a href="{{ route('user') }}" class="btn btn-secondary waves-effect"
                                     data-dismiss="modal">Cancle</a>
                             </div>
@@ -144,6 +157,18 @@
 
 <script src="{{ asset('public/assets/js/ajax.jquery.js') }}"></script>
 <script>
+    $('.level').hide()
+    $('.pay_type').hide()
+
+    $('#status-u').on('change',function(){
+        if($('#status-u').val()!="wait"){
+            $('.level').show()
+            $('.pay_type').show()
+        }else{
+            $('.level').hide()
+            $('.pay_type').hide()
+        }
+    })
     $('#form-add-users').on('submit',function(){
         let data = new FormData(this)
         $.ajax({

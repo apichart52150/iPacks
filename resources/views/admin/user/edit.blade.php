@@ -13,7 +13,7 @@
                     <li class="breadcrumb-item active">Edit</li>
                 </ol>
             </div>
-            <h4 class="page-title">Edit</h4>
+            <h4 class="page-title">Edit user</h4>
         </div>
     </div>
 </div>
@@ -47,7 +47,7 @@
 <div class="row">
     <div class="col-12">
         <div class="card-box">
-            <h4 class="header-title">Edit</h4>
+            <h4 class="header-title">Edit user</h4>
             <div class="row">
                 <div class="col-12">
                     <div class="p-2">
@@ -94,15 +94,21 @@
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label" for="">Level</label>
+                                <label class="col-sm-2 col-form-label" for="">Remark</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control" id="" name="level">
-                                        @if($users->level=='gold')
-                                        <option value="gold" selected>gold</option>
-                                        <option value="platinum">platinum</option>
-                                        @else
-                                        <option value="gold">gold</option>
-                                        <option value="platinum" selected>platinum</option>
+                                    <select class="form-control" id="" name="remark">
+                                        @if($users->remark=='idp')
+                                        <option value="idp" selected>IDP</option>
+                                        <option value="student">Student</option>
+                                        <option value="other">Other</option>
+                                        @elseif($users->remark=='student')
+                                        <option value="idp">IDP</option>
+                                        <option value="student" selected>Student</option>
+                                        <option value="other">Other</option>
+                                        @elseif($users->remark=='other')
+                                        <option value="idp">IDP</option>
+                                        <option value="student">Student</option>
+                                        <option value="other" selected>Other</option>
                                         @endif
                                     </select>
                                 </div>
@@ -118,6 +124,36 @@
                                         @else
                                         <option value="wait" selected>wait</option>
                                         <option value="paid">paid</option>
+                                        @endif
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row level">
+                                <label class="col-sm-2 col-form-label" for="">Package</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" id="" name="level">
+                                        @if($users->level=='gold')
+                                        <option value="gold" selected>gold</option>
+                                        <option value="platinum">platinum</option>
+                                        @else
+                                        <option value="gold">gold</option>
+                                        <option value="platinum" selected>platinum</option>
+                                        @endif
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row pay_type">
+                                <label class="col-sm-2 col-form-label" for="">Pay type</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" id="pay_type" name="pay_type">
+                                        @if($users->status=='CC')
+                                        <option value="CC" selected>CC</option>
+                                        <option value="Airplay">Airplay</option>
+                                        @else
+                                        <option value="CC">CC</option>
+                                        <option value="Airplay" selected>Airplay</option>
                                         @endif
                                     </select>
                                 </div>
