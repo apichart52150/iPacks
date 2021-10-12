@@ -16,7 +16,9 @@ class HomeController extends Controller
     }
 
     public function edit_data(Request $request)
-    {}
+    {
+        return $request->all();
+    }
 
     public function delete($id)
     {}

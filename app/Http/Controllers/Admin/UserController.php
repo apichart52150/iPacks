@@ -80,6 +80,7 @@ class UserController extends Controller
                 $data_ktc['pay_type'] = $input_pay_type;
                 $data_ktc['success_code'] = '1';
 
+
                 if ($user->level != $input_level && $input_level != '') {
                     if ($input_level == 'gold') {
                         $data_user['expire_date'] = date("Y-m-d H:i:s", strtotime("+30 day"));
@@ -108,6 +109,7 @@ class UserController extends Controller
                 $data_user['level'] = '';
                 $data_ktc['package'] = '';
                 $data_ktc['pay_type'] = '';
+                $data_ktc['order_ref'] = '';
                 $data_ktc['success_code'] = '0';
                 DB::table('point')
                     ->where('user_id', '=', $data['id'])
@@ -120,6 +122,12 @@ class UserController extends Controller
             }
 
             DB::table('users')->where('id', $data['id'])->update($data_user);
+
+            // $ktc_order_count = DB::table('ktc_order')
+            //     ->select('success_code')
+            //     ->where('success_code', '=', '1')
+            //     ->count();
+            // $data_ktc['order_ref'] = sprintf("%09d", $ktc_order_count);
             DB::table('ktc_order')->where('id', $data['id'])->update($data_ktc);
             return 'success';
         } catch (\Throwable $th) {

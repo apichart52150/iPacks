@@ -86,8 +86,8 @@
     table_tbody += '<td>{{ $ktc->remark }}</td>'
     table_tbody += '<td>{{ $ktc->pay_type }}</td>'
     table_tbody += '<td>'
-    table_tbody += '<button onclick="edit('+"'{{ $ktc->id }}'"+','+"'{{ $ktc->order_id }}'"+','+"'{{ $ktc->order_ref }}'"+','+"'{{ $ktc->success_code }}'"+');" type="button" class="btn btn-info btn-xs mx-1">Edit</button>'
-    table_tbody += '<button onclick="edit('+"'{{ $ktc->id }}'"+');" type="button" class="btn btn-danger btn-xs mx-1">Delete</button>'
+    table_tbody += '<button onclick="edit('+"'{{ $ktc->id }}'"+','+"'{{ $ktc->order_id }}'"+','+"'{{ $ktc->order_ref }}'"+','+"'{{ $ktc->success_code }}'"+','+"'{{ $ktc->remark }}'"+','+"'{{ $ktc->pay_type }}'"+');" type="button" class="btn btn-info btn-xs mx-1">Edit</button>'
+    // table_tbody += '<button onclick="delete('+"'{{ $ktc->id }}'"+');" type="button" class="btn btn-danger btn-xs mx-1">Delete</button>'
     table_tbody += '</td>'
     table_tbody += '</tr>'
     index_row_tbody++
@@ -95,19 +95,51 @@
     $('#list-data').html(table_tbody)
 
 
-    function edit(id, order_id, order_ref, status) {
+    function edit(id, order_id, order_ref, status,remark,pay_type) {
         let input = '<div class="w-100 text-left"><label class="pt-3">Order ID</label></div>'
         input += '<input type="text" id="order_id-edit" class="swal2-input mt-0" value="'+order_id+'" placeholder="Order ID">'
         input += '<div class="w-100 text-left"><label class="pt-3">Receipt ID</label></div>'
         input += '<input type="text" id="receipt_id-edit" class="swal2-input mt-0" value="'+order_ref+'" placeholder="Receipt ID">'
-        input += '<div class="w-100 text-left"><label class="pt-3">Receipt ID</label></div>'
+        input += '<div class="w-100 text-left"><label class="pt-3">Status</label></div>'
         input += '<select id="status-edit" class="swal2-input mt-0">'
         if (status == 1) {
-            input += '<option value="1" selected>Pay</option>'
-            input += '<option value="2">'+"Don't pay"+'</option>'
+            input += '<option value="1" selected>paid</option>'
+            input += '<option value="0">wait</option>'
         } else if (status == 0) {
-            input += '<option value="1">Pay</option>'
-            input += '<option value="2" selected>'+"Don't pay"+'</option>'
+            input += '<option value="1">paid</option>'
+            input += '<option value="0" selected>wait</option>'
+        }
+        input += '</select>'
+        input += '<div class="w-100 text-left remark-edit"><label class="pt-3">Remark</label></div>'
+        input += '<select id="remark-edit" class="swal2-input remark-edit mt-0">'
+        if (remark == 1) {
+            input += '<option value="idp">IDP</option>'
+            input += '<option value="student" selected>Student</option>'
+            input += '<option value="other">Other</option>'
+        } else if (remark == 0) {
+            input += '<option value="idp">IDP</option>'
+            input += '<option value="student" >Student</option>'
+            input += '<option value="other" selected>Other</option>'
+        }else{
+            input += '<option value="idp" selected>IDP</option>'
+            input += '<option value="student" >Student</option>'
+            input += '<option value="other">Other</option>'
+        }
+        input += '</select>'
+        input += '<div class="w-100 text-left pay_type-edit"><label class="pt-3">Pay type</label></div>'
+        input += '<select id="pay_type-edit" class="swal2-input mt-0 pay_type-edit">'
+        if (pay_type == "CC") {
+            input += '<option value="">...</option>'
+            input += '<option value="CC" selected>Credit</option>'
+            input += '<option value="Airpay">Airpay</option>'
+        } else if (pay_type == "Airpay") {
+            input += '<option value="">...</option>'
+            input += '<option value="CC">Credit</option>'
+            input += '<option value="Airpay" selected>Airpay</option>'
+        }else{
+            input += '<option value="" selected>...</option>'
+            input += '<option value="CC" >Credit</option>'
+            input += '<option value="Airpay">Airpay</option>'
         }
         input += '</select>'
         Swal.fire({
@@ -122,48 +154,60 @@
                 let order_id = Swal.getPopup().querySelector('#order_id-edit').value
                 let receipt_id = Swal.getPopup().querySelector('#receipt_id-edit').value
                 let status = Swal.getPopup().querySelector('#status-edit').value
+                let remark = Swal.getPopup().querySelector('#remark-edit').value
+                let pay_type = Swal.getPopup().querySelector('#pay_type-edit').value
                 return {
                     order_id: order_id,
                     receipt_id: receipt_id,
                     status: status,
+                    remark: remark,
+                    pay_type: pay_type,
                 }
             }
         }).then((result) => {
-            
-            Swal.fire({
-  title: 'Are you sure?',
-  text: "",
-  icon: 'warning',
-  showCancelButton: true,
-  confirmButtonColor: '#3085d6',
-  cancelButtonColor: '#d33',
-  confirmButtonText: 'Yes'
-}).then((result) => {
-  if (result) {
-    let data = []
-    update_data(data)
-  }
-})
+            let data = new FormData()
+            data.append('_token',"{{ csrf_token() }}")
+            data.append('order_id',result.value.order_id)
+            data.append('receipt_id',result.value.receipt_id)
+            data.append('status',result.value.status)
+            data.append('remark',result.value.remark)
+            data.append('pay_type',result.value.pay_type)
+            if (result.value){
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes'
+                }).then((result) => {
+                    if (result) {
+                        update_data(data)
+                    }
+                })
+            }
         })
     }
 
     function update_data(data) {
-        load_wait()
+        // load_wait()
         $.ajax({
             type: 'POST',
-            url: $('#route').attr('route'),
+            url: "{{ route('admin-payment-edit') }}",
             data: data,
             cache: false,
             contentType: false,
             processData: false,
             success: function(response) {
-                if (response == "success") {
-                    Swal.fire(title, "", 'success').then(()=>{
-                        location.reload()
-                    })
-                } else if (response == "failed") {
-                    Swal.fire(title, '', 'error')
-                } 
+                console.log(response)
+                // if (response == "success") {
+                //     Swal.fire(title, "", 'success').then(()=>{
+                //         location.reload()
+                //     })
+                // } else if (response == "failed") {
+                //     Swal.fire(title, '', 'error')
+                // } 
             }
         })
     }
