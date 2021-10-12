@@ -43,7 +43,7 @@ class CreateUserOnlyController extends Controller
                     'order_id' => $run_order,
                     'success_code' => 0,
                     'created_at' => new Datetime(),
-                    'remark' => 'IDP',
+                    'remark' => 'idp',
                 ]);
 
                 $new_sessid = csrf_token();
