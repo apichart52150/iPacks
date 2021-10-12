@@ -21,13 +21,14 @@
 		height: 100%;
 	}
 
-	/* 
-	.text-body {
-		padding: 15px;
-		width: 50%;
-		height: 100px;
-		overflow: scroll;
-	} */
+	.text-h3{
+		font-size: 23px;
+	}
+	.text-{
+		font-size: 17px;
+	}
+
+	
 </style>
 
 <div class="container">
@@ -115,14 +116,116 @@
 		<div class="col-md-12 mb-3">
 			<div class="card">
 				<div class="card-body">
-					<img class="w-50" src="{{ asset('public/assets/images/register/159614.jpg') }}" alt="">
-					<br><br><br>
-					<img class="w-100" src="{{ asset('public/assets/images/register/Online-Tips-03-1536x1086.jpg') }}" alt="">
-					<br><br><br>
+					<div class="text-center">
+						<img class="w-50 pb-3" src="{{ asset('public/assets/images/register/159614.jpg') }}" alt="">
+						<img class="w-100 pb-3"
+							src="{{ asset('public/assets/images/register/Online-Tips-03-1536x1086.jpg') }}" alt="">
+					</div>
+
+					<h3 class="text-h3">
+						<i class="fas fa-thumbs-up text-primary pr-1"></i>
+						Online IELTS Tips & Practice กับ New Cambridge ดียังไง?
+					</h3>
+					<div class="text-center pb-3 text-">
+						Online IELTS Tips & Practice is an online self-access service exclusively suitable for those who
+						are mastering their
+						English language skills, both academically and professionally, and are preparing for the IELTS
+						examinations
+					</div>
+
+					<h3 class="text-h3">
+						<i class="far fa-comment-alt text-primary pr-1"></i>
+						คำอธิบาย Online IELTS Tips & Practice
+					</h3>
+					<div class="text-left pb-3 text-">
+						The Online IELTS Tips & Practice services consist of a wide selection of practices on essential
+						skills for effective
+						communications: listening, speaking, reading and writing. Moreover, the services provide
+						users with Language Use, Topic Packs, Strategy Packs.
+					</div>
+
+					<div class="text-center pb-3">
+						<img class="w-100" src="{{ asset('public/assets/images/register/1-1536x107.png') }}" alt="">
+					</div>
+
+
+					<h3 class="text-h3">
+						<i class="far fa-comment-alt text-primary pr-1"></i>
+						How to improve your English with the Online IELTS Tips & Practice services
+					</h3>
+					<div class="text-left pb-3 text-">
+						You can choose the package to match your goal. (Platinum is recommended because LIVE 1 on 1
+						Tutorial is very useful.)
+					</div>
+
+					<div class="card pb-3">
+						<div class="card-body text-dark">
+							<div class="text-center text-h3 pb-1">
+								<strong>The Online IELTS Tips & Practice package</strong>
+							</div>
+							<table class="table table-bordered text-">
+								<thead>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col" class="text-center" style="width: 100px;">Gold</th>
+										<th scope="col" class="text-center" style="width: 100px;">Platinum</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="text-align: left;">Strategies on 4 Skills Listening, Reading,
+											Writing, Speaking</td>
+										<td style="text-align: center;">/</td>
+										<td style="text-align: center;">/</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">4-Skill Practices</td>
+										<td style="text-align: center;">/</td>
+										<td style="text-align: center;">/</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Over 1,400 questions on focused grammar &amp;
+											vocabulary</td>
+										<td style="text-align: center;">/</td>
+										<td style="text-align: center;">/</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Writing Tasks marked with comments</td>
+										<td style="text-align: center;">3 Times</td>
+										<td style="text-align: center;">5 Times</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Speaking (15 mins.) marked with comments</td>
+										<td style="text-align: center;">2 Times</td>
+										<td style="text-align: center;">3 Times</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Reading passages with practice and test modes</td>
+										<td style="text-align: center;">/</td>
+										<td style="text-align: center;">/</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">Clubs to Upskill (60 mins.) with Native IELTS
+											Specialist</td>
+										<td style="text-align: center;">x</td>
+										<td style="text-align: center;">/</td>
+									</tr>
+									<tr>
+										<td style="text-align: left;">1 on 1 Tutorial (30 mins.) with Native IELTS
+											Specialist</td>
+										<td style="text-align: center;">x</td>
+										<td style="text-align: center;">/</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="text-center pb-3">
+						<img class="w-100" src="{{ asset('public/assets/images/register/2-1536x486.png') }}" alt="">
+					</div>
 				</div>
 			</div>
-			<hr>
-			<img src="" alt="">
 		</div>
 	</div>
 </div>
