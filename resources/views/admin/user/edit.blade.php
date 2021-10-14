@@ -150,10 +150,10 @@
                                     <select class="form-control" id="pay_type" name="pay_type">
                                         @if($users->status=='Airplay')
                                         <option value="CC">CC</option>
-                                        <option value="Airplay" selected>Airplay</option>
+                                        <option value="Alipay" selected>Alipay</option>
                                         @else
                                         <option value="CC" selected>Credit</option>
-                                        <option value="Airplay">Airplay</option>
+                                        <option value="Alipay">Alipay</option>
                                         @endif
                                     </select>
                                 </div>

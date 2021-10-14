@@ -80,8 +80,15 @@ class UserController extends Controller
                 $data_ktc['pay_type'] = $input_pay_type;
                 $data_ktc['success_code'] = '1';
 
+                if ($user->level != $input_level) {
 
-                if ($user->level != $input_level && $input_level != '') {
+                    $ktc_order = DB::table('ktc_order')->where('order_ref','!=','')->get();
+                    $ktc_order_user = DB::table('ktc_order')->where('id','=',$data['id'])->first();
+                    
+                    if($ktc_order_user->order_ref == ''){
+                        $data_ktc['order_ref'] = sprintf("%09d", $ktc_order->count() + 1);
+                    }
+
                     if ($input_level == 'gold') {
                         $data_user['expire_date'] = date("Y-m-d H:i:s", strtotime("+30 day"));
                         DB::table('point')
@@ -103,13 +110,12 @@ class UserController extends Controller
                                 'tutorial_point' => 1,
                             ]);
                     }
-                }
+                } 
 
             } else {
                 $data_user['level'] = '';
                 $data_ktc['package'] = '';
                 $data_ktc['pay_type'] = '';
-                $data_ktc['order_ref'] = '';
                 $data_ktc['success_code'] = '0';
                 DB::table('point')
                     ->where('user_id', '=', $data['id'])
@@ -204,8 +210,8 @@ class UserController extends Controller
                 ]);
 
                 $ktc_order_count = DB::table('ktc_order')
-                    ->select('success_code')
-                    ->where('success_code', '=', '1')
+                    ->select('order_ref')
+                    ->where('order_ref', '!=', '')
                     ->count();
                 $order_id = DB::table('ktc_order')->latest()->first();
                 $run_order_id = sprintf("%09d", $order_id->order_id + 1);

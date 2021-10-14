@@ -135,7 +135,7 @@
                         </li>
 
                         <li class="has-submenu">
-                            <a href="{{ route('admin-payment') }}" class="text-light">
+                            <a href="{{ route('admin-payment','all__all__all__all') }}" class="text-light">
                                 <i class="far fa-money-bill-alt"></i>Payment
                             </a>
                         </li>

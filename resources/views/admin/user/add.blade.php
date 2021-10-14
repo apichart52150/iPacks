@@ -123,7 +123,7 @@
                                 <div class="col-sm-10">
                                     <select class="form-control" id="pay_type" name="pay_type">
                                         <option value="CC">Credit</option>
-                                        <option value="Airplay">Airplay</option>
+                                        <option value="Alipay">Alipay</option>
                                     </select>
                                 </div>
                             </div>

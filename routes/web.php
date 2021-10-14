@@ -293,7 +293,7 @@
         //Payment
         Route::prefix('payment')->namespace('Admin\payment')->group(function () {
 
-            Route::get('list','HomeController@index')->name('admin-payment');
+            Route::get('list/{data_search}/','HomeController@index')->name('admin-payment');
             Route::post('edit','HomeController@edit_data')->name('admin-payment-edit');
             Route::get('delete/{id}','HomeController@delete')->name('admin-payment-delete');
             

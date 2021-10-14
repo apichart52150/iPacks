@@ -10,7 +10,7 @@ class KTC extends Model
     public static function data_list($pag)
     {
         $ktc_order = DB::table('ktc_order')
-            ->select('ktc_order.id', 'ktc_order.order_id', 'ktc_order.success_code', 'ktc_order.remark', 'ktc_order.pay_type', 'ktc_order.order_ref', 'ktc_order.created_at', 'users.first_name', 'users.last_name', 'users.status', 'users.email', 'users.address')
+            ->select('ktc_order.id', 'ktc_order.order_id', 'ktc_order.package', 'ktc_order.success_code', 'ktc_order.remark', 'ktc_order.pay_type', 'ktc_order.order_ref', 'ktc_order.created_at', 'users.first_name', 'users.last_name', 'users.status', 'users.email', 'users.address')
             ->leftjoin('users', 'ktc_order.id', '=', 'users.id')
             ->orderBy('ktc_order.created_at', 'desc')
             ->paginate($pag);
