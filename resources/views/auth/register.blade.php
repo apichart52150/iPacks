@@ -295,8 +295,10 @@
 						<input type="checkbox" class="custom-control-input" id="checkbox-signup-modal" required>
 						<label class="custom-control-label" for="checkbox-signup-modal">I accept <div class="text-primary d-inline">Terms and Conditions</div></label>
 					</div>
+				</div>
+				<div class="form-group text-center">
 					<button type="button" class="btn btn-secondary waves-effect" onclick="uncheck()" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary waves-effect waves-light" onclick="check()" data-dismiss="modal">Confirm</button>
+					<button type="submit" id="confirm" class="btn btn-primary waves-effect waves-light" onclick="check()" data-dismiss="modal" disabled>Confirm</button>
 				</div>
 			</form>
 		</div><!-- /.modal-content -->
