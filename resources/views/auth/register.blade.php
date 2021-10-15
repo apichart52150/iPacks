@@ -51,7 +51,7 @@
 						<div class="form-group">
 							<div class="custom-control custom-checkbox">
 								<input type="checkbox" class="custom-control-input" name="condition_checked" id="checkbox-signup" data-toggle="modal" data-target="#full-width-modal" required>
-								<label class="custom-control-label" for="checkbox-signup">I accept <a href="{{asset('public/assets/pdf/Terms-and-Conditions-Online-Practice.pdf')}}" target="_blank" class="text-dark">Terms and Conditions</a></label>
+								<label class="custom-control-label" for="checkbox-signup">I accept <div class="text-dark">Terms and Conditions</div></label>
 								<!-- <label class="custom-control-label" for="checkbox-signup">I accept <a href="#" class="text-dark"  data-toggle="modal" data-target="#con-close-modal">Terms and Conditions</a></label> -->
 							</div>
 						</div>
