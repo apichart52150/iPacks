@@ -306,6 +306,7 @@
 </div><!-- /.modal -->
 
 	<script>
+		
 		function check() {
 			document.getElementById("checkbox-signup-modal").checked = true;
 			document.getElementById("checkbox-signup").checked = true;
