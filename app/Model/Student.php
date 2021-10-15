@@ -21,7 +21,14 @@ class Student extends Model
         return ($std_profile_by_id);
     }
 
-
+    public static function checkCondition($email, $status){
+        DB::table('condition')
+        ->insert([
+            'email' => $email,
+            'condition' => $status,
+            'created_at' => date('Y-m-d H:i:s'),
+        ]);
+    }
 
     public static function std_profile_lis_part($std_id = '')
     {
