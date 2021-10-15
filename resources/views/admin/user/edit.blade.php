@@ -117,12 +117,12 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">Status</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control" id="" name="status">
+                                    <select class="form-control" id="status-u" name="status">
                                         @if($users->status=='paid')
-                                        <option value="wait">wait</option>
+                                        <option value="">wait</option>
                                         <option value="paid" selected>paid</option>
                                         @else
-                                        <option value="wait" selected>wait</option>
+                                        <option value="" selected>wait</option>
                                         <option value="paid">paid</option>
                                         @endif
                                     </select>
@@ -132,13 +132,13 @@
                             <div class="form-group row level">
                                 <label class="col-sm-2 col-form-label" for="">Package</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control" id="" name="level">
-                                        @if($users->level=='gold')
-                                        <option value="gold" selected>gold</option>
-                                        <option value="platinum">platinum</option>
-                                        @else
+                                    <select class="form-control" id="level" name="level">
+                                        @if($users->level=='platinum')
                                         <option value="gold">gold</option>
                                         <option value="platinum" selected>platinum</option>
+                                        @else
+                                        <option value="gold" selected>gold</option>
+                                        <option value="platinum">platinum</option>
                                         @endif
                                     </select>
                                 </div>
@@ -148,12 +148,12 @@
                                 <label class="col-sm-2 col-form-label" for="">Pay type</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" id="pay_type" name="pay_type">
-                                        @if($users->status=='CC')
-                                        <option value="CC" selected>CC</option>
-                                        <option value="Airplay">Airplay</option>
-                                        @else
+                                        @if($users->status=='Airplay')
                                         <option value="CC">CC</option>
-                                        <option value="Airplay" selected>Airplay</option>
+                                        <option value="Alipay" selected>Alipay</option>
+                                        @else
+                                        <option value="CC" selected>Credit</option>
+                                        <option value="Alipay">Alipay</option>
                                         @endif
                                     </select>
                                 </div>
@@ -164,9 +164,14 @@
                                 <div class="col-sm-10">
                                     <div class="input-group">
                                         @if($users->expire_date != null)
-                                        <input type="text" name="expire_date" value="{{ date('m/d/Y',strtotime($users->expire_date)) }}" class="form-control date" data-provide="datepicker" data-date-autoclose="true" readonly placeholder="mm/dd/yyyy">
+                                        <input type="text" name="expire_date"
+                                            value="{{ date('m/d/Y',strtotime($users->expire_date)) }}"
+                                            class="form-control date" data-provide="datepicker"
+                                            data-date-autoclose="true" readonly placeholder="mm/dd/yyyy">
                                         @else
-                                        <input type="text" name="expire_date" value="" class="form-control date" data-provide="datepicker" data-date-autoclose="true" readonly placeholder="mm/dd/yyyy">
+                                        <input type="text" name="expire_date" value="" class="form-control date"
+                                            data-provide="datepicker" data-date-autoclose="true" readonly
+                                            placeholder="mm/dd/yyyy">
                                         @endif
                                         <div class="input-group-append">
                                             <span class="input-group-text"><i class="ti-calendar"></i></span>
@@ -204,6 +209,35 @@
 
 <script src="{{ asset('public/assets/js/ajax.jquery.js') }}"></script>
 <script>
+    if("{{ $users->status }}" == "" || "{{ $users->status }}" == "wait"){
+    $('.level').hide()
+    $('.pay_type').hide()
+    }else{
+    $('.level').show()
+    $('.pay_type').show()
+    }
+    
+    $('#status-u').on('change',function(){
+        if($('#status-u').val()!="wait"){
+            $('.level').show()
+            $('.pay_type').show()
+        }else{
+            $('.level').hide()
+            $('.pay_type').hide()
+        }
+    })
+    
+    $('#status-u').on('change',function(){
+        if($('#status-u').val()!="wait"){
+            $('.level').show()
+            $('.pay_type').show()
+        }else{
+            $('.level').hide()
+            $('.pay_type').hide()
+        }
+    })
+
+
     $('#form-update-users').on('submit',function(){
         let data = new FormData(this)
         $.ajax({

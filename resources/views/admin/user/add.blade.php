@@ -102,7 +102,7 @@
                                 <label class="col-sm-2 col-form-label" for="">Status</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" id="status-u" name="status">
-                                        <option value="wait">wait</option>
+                                        <option value="">wait</option>
                                         <option value="paid">paid</option>
                                     </select>
                                 </div>
@@ -122,8 +122,8 @@
                                 <label class="col-sm-2 col-form-label" for="">Pay type</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" id="pay_type" name="pay_type">
-                                        <option value="CC">CC</option>
-                                        <option value="Airplay">Airplay</option>
+                                        <option value="CC">Credit</option>
+                                        <option value="Alipay">Alipay</option>
                                     </select>
                                 </div>
                             </div>

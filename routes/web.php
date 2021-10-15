@@ -198,12 +198,12 @@
             Route::post('staffdelete/{id?}', 'StaffController@staffdelete');
 
             // + user
-        Route::get('user/list', 'UserController@index')->name('user');
-        Route::get('user/edit/{id}', 'UserController@edit');
-        Route::get('user/add', 'UserController@add')->name('admin-add-user');
-        Route::post('user/remove', 'UserController@remove_user')->name('remove-user');
-        Route::post('user/add/confirm/success', 'UserController@insert_user')->name('user-add-confirm');
-        Route::post('user/edit/confirm/success', 'UserController@update_user')->name('user-edit-confirm');
+            Route::get('user/list/{data_search}', 'UserController@index')->name('user');
+            Route::get('user/edit/{id}', 'UserController@edit');
+            Route::get('user/add', 'UserController@add')->name('admin-add-user');
+            Route::post('user/remove', 'UserController@remove_user')->name('remove-user');
+            Route::post('user/add/confirm/success', 'UserController@insert_user')->name('user-add-confirm');
+            Route::post('user/edit/confirm/success', 'UserController@update_user')->name('user-edit-confirm');
         });
 
         //Speaking
@@ -296,7 +296,7 @@
         //Payment
         Route::prefix('payment')->namespace('Admin\payment')->group(function () {
 
-            Route::get('list','HomeController@index')->name('admin-payment');
+            Route::get('list/{data_search}/','HomeController@index')->name('admin-payment');
             Route::post('edit','HomeController@edit_data')->name('admin-payment-edit');
             Route::get('delete/{id}','HomeController@delete')->name('admin-payment-delete');
             

@@ -45,8 +45,34 @@
             </p>
 
             <div class="mb-2">
-                <a href="{{ route('admin-add-user') }}" class="btn btn-primary"><i class="mdi mdi-plus-circle mr-2"></i>Add new User</a>
+                <a href="{{ route('admin-add-user') }}" class="btn btn-primary"><i
+                        class="mdi mdi-plus-circle mr-2"></i>Add new User</a>
             </div>
+
+            <form id="user-search">
+                <div class="row">
+                    <div class="col-md-3 mb-1">
+                        <p class="p-0 m-0 text-left">Email</p>
+                        <input type="text" class="form-control" id="search-email" placeholder="Email">
+                    </div>
+                    <div class="col-md-3 mb-1">
+                        <p class="p-0 m-0 text-left">First name</p>
+                        <input type="text" class="form-control" id="search-first_name" placeholder="First name">
+                    </div>
+                    <div class="col-md-3 mb-1">
+                        <p class="p-0 m-0 text-left">Status</p>
+                        <select class="form-control" id="search-status">
+                            <option value="all">Show all</option>
+                            <option value="wait">wait</option>
+                            <option value="paid">paid</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <p class="p-0 m-0 text-left">&nbsp;</p>
+                        <button class="btn btn-primary btn-block">Search</button>
+                    </div>
+                </div>
+            </form>
 
             <table id="basic-datatable" class="table dt-responsive nowrap">
                 <thead>
@@ -99,9 +125,46 @@
             </table>
         </div> <!-- end card-box -->
     </div> <!-- end col -->
+
+    <div class="col-md-12">
+        <div class="d-flex justify-content-center">
+            {!! $users->links('pagination::bootstrap-4') !!}
+        </div>
+    </div>
 </div>
 
+<script src="{{ asset('public/assets/js/ajax.jquery.js') }}"></script>
 <script>
+    
+    let form_data_search = "{{ $data_search }}".split('__')
+    $('#search-email').val(form_data_search[0])
+    $('#search-first_name').val(form_data_search[1])
+    $('#search-status').val(form_data_search[2])
+    if(form_data_search[3] == "all"){
+        $('#search-user_data').val("")
+    }else{
+        $('#search-user_data').val(form_data_search[3])
+    }
+
+    $('#user-search').on('submit',function(){
+        let search_email = $('#search-email').val()
+        let search_first_name = $('#search-first_name').val()
+        let search_status = $('#search-status').val()
+        if(search_email == ""){
+            search_email = "all"
+        }
+        if(search_first_name == ""){
+            search_first_name = "all"
+        }
+        let data_search = search_email+'__'+search_first_name+'__'+search_status
+        let url = "{{ route('user',':data') }}"
+        url = url.replace(":data",data_search)
+        // console.log(data_search)
+        window.location.href = url
+        return false
+    })
+
+
     function delete_user(token ,id, url){ 
         Swal.fire({
             title: 'Are you sure?',
