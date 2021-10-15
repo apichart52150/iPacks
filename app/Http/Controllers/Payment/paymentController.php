@@ -99,8 +99,8 @@ class paymentController extends Controller
             ]);
 
         $ref_id = DB::table('ktc_order')
-            ->select('success_code')
-            ->where('success_code', '=', '1')
+            ->select('order_ref')
+            ->where('order_ref', '!=', '')
             ->count();
 
         $order_ref = DB::table('ktc_order')

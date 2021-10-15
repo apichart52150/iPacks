@@ -39,7 +39,7 @@
                         <select class="form-control" id="search-pay_type">
                             <option value="all">Show all</option>
                             <option value="CC">Credit Card</option>
-                            <option value="Aripay">Aripay</option>
+                            <option value="Alipay">Alipay</option>
                         </select>
                     </div>
                     <div class="col-md-3 mb-1">
@@ -55,13 +55,13 @@
                         <p class="p-0 m-0 text-left">Status</p>
                         <select class="form-control" id="search-status">
                             <option value="all">Show all</option>
-                            <option value="wait">wait</option>
-                            <option value="paid">paid</option>
+                            <option value="0">wait</option>
+                            <option value="1">paid</option>
                         </select>
                     </div>
                     <div class="col-md-3 mb-1">
                         <p class="p-0 m-0 text-left">User data</p>
-                        <input type="text" class="form-control" id="search-user_data" placeholder="User name">
+                        <input type="text" class="form-control" id="search-user_data" placeholder="First name">
                     </div>
                     <div class="col-md-3"></div>
                     <div class="col-md-6 mb-2">
@@ -99,7 +99,6 @@
     <script src="{{ asset('public/assets/js/moment.min.js') }}"></script>
 
     <script>
-
         let form_data_search = "{{ $data_search }}".split('__')
         $('#search-pay_type').val(form_data_search[0])
         $('#search-remark').val(form_data_search[1])
@@ -132,31 +131,36 @@
         }
         let table_tbody = ""
         let index_row_tbody = 1
-        "@foreach ($ktc as $ktc)"
-        table_tbody += '<tr>'
-        table_tbody += '<th>'+(((window_location_length-1)*"{{ $pag }}")+index_row_tbody)+'</th>'
-        table_tbody += '<td>{{ $ktc->order_id }}</td>'
-        table_tbody += '<td>{{ $ktc->order_ref }}</td>'
-        table_tbody += '<td class="text-left">'
-        table_tbody += '<strong>First name: </strong>' + "{{ $ktc->first_name }}" + '<br>'
-        table_tbody += '<strong>Last name: </strong>' + "{{ $ktc->last_name }}" + '<br>'
-        table_tbody += '<strong>Email: </strong>' + "{{ $ktc->email }}" + '<br>'
-        table_tbody += '<strong>Address: </strong>' + "{{ $ktc->address }}"
-        table_tbody += '</td>'
-        if("{{ $ktc->success_code }}" == 1){
-            table_tbody += '<td><span class="badge badge-success p-2">paid</span></span></td>'
+        // console.log("{{ count($ktc) }}")
+        if("{{ count($ktc) }}" > 0){
+            "@foreach ($ktc as $ktc)"
+            table_tbody += '<tr>'
+            table_tbody += '<th>'+(((window_location_length-1)*"{{ $pag }}")+index_row_tbody)+'</th>'
+            table_tbody += '<td>{{ $ktc->order_id }}</td>'
+            table_tbody += '<td>{{ $ktc->order_ref }}</td>'
+            table_tbody += '<td class="text-left">'
+            table_tbody += '<strong>First name: </strong>' + "{{ $ktc->first_name }}" + '<br>'
+            table_tbody += '<strong>Last name: </strong>' + "{{ $ktc->last_name }}" + '<br>'
+            table_tbody += '<strong>Email: </strong>' + "{{ $ktc->email }}" + '<br>'
+            table_tbody += '<strong>Address: </strong>' + "{{ $ktc->address }}"
+            table_tbody += '</td>'
+            if("{{ $ktc->success_code }}" == 1){
+                table_tbody += '<td><span class="badge badge-success p-2">paid</span></span></td>'
+            }else{
+                table_tbody += '<td><span class="badge badge-secondary p-2">wait</span></span></td>'
+            }
+            table_tbody += '<td>{{ $ktc->remark }}</td>'
+            table_tbody += '<td>{{ $ktc->pay_type }}</td>'
+            table_tbody += '<td>'
+            table_tbody += '<button onclick="edit('+"'{{ $ktc->id }}'"+','+"'{{ $ktc->order_id }}'"+','+"'{{ $ktc->order_ref }}'"+','+"'{{ $ktc->success_code }}'"+','+"'{{ $ktc->remark }}'"+','+"'{{ $ktc->pay_type }}'"+','+"'{{ $ktc->package }}'"+');" type="button" class="btn btn-info btn-xs mx-1">Edit</button>'
+            // table_tbody += '<button onclick="delete('+"'{{ $ktc->id }}'"+');" type="button" class="btn btn-danger btn-xs mx-1">Delete</button>'
+            table_tbody += '</td>'
+            table_tbody += '</tr>'
+            index_row_tbody++
+            "@endforeach"
         }else{
-            table_tbody += '<td><span class="badge badge-secondary p-2">wait</span></span></td>'
+            table_tbody += '<tr><td colspan="8">'+"Don't have data"+'</td></tr>'
         }
-        table_tbody += '<td>{{ $ktc->remark }}</td>'
-        table_tbody += '<td>{{ $ktc->pay_type }}</td>'
-        table_tbody += '<td>'
-        table_tbody += '<button onclick="edit('+"'{{ $ktc->id }}'"+','+"'{{ $ktc->order_id }}'"+','+"'{{ $ktc->order_ref }}'"+','+"'{{ $ktc->success_code }}'"+','+"'{{ $ktc->remark }}'"+','+"'{{ $ktc->pay_type }}'"+','+"'{{ $ktc->package }}'"+');" type="button" class="btn btn-info btn-xs mx-1">Edit</button>'
-        // table_tbody += '<button onclick="delete('+"'{{ $ktc->id }}'"+');" type="button" class="btn btn-danger btn-xs mx-1">Delete</button>'
-        table_tbody += '</td>'
-        table_tbody += '</tr>'
-        index_row_tbody++
-        "@endforeach"
         $('#list-data').html(table_tbody)
 
 

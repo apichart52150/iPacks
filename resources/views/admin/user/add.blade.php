@@ -102,7 +102,7 @@
                                 <label class="col-sm-2 col-form-label" for="">Status</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" id="status-u" name="status">
-                                        <option value="wait">wait</option>
+                                        <option value="">wait</option>
                                         <option value="paid">paid</option>
                                     </select>
                                 </div>

@@ -9,18 +9,15 @@ use Datetime;
 use DB;
 use Illuminate\Http\Request;
 use Session;
+use App\Model\Users;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index($data_search)
     {
-
-        $users = DB::table('users')
-            ->select('*')
-            ->orderby('created_at', 'desc')
-            ->get();
-
-        return view('admin.user.index', compact('users'));
+        $pag = 4;
+        $users = Users::data_list($pag, $data_search);
+        return view('admin.user.index', compact('users','pag','data_search'));
     }
 
     public function edit($id)

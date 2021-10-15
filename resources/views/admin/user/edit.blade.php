@@ -119,10 +119,10 @@
                                 <div class="col-sm-10">
                                     <select class="form-control" id="status-u" name="status">
                                         @if($users->status=='paid')
-                                        <option value="wait">wait</option>
+                                        <option value="">wait</option>
                                         <option value="paid" selected>paid</option>
                                         @else
-                                        <option value="wait" selected>wait</option>
+                                        <option value="" selected>wait</option>
                                         <option value="paid">paid</option>
                                         @endif
                                     </select>

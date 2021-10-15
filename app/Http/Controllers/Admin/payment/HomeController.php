@@ -14,8 +14,8 @@ class HomeController extends Controller
     public function index($data_search)
     {
         $pag = 3;
-        $ktc = KTC::data_list($pag);
-        // dd($data_form_search);
+        $ktc = KTC::data_list($pag,$data_search);
+        // dd($ktc);
         return view('admin.payment.index', compact('ktc', 'pag','data_search'));
     }
 
@@ -47,7 +47,11 @@ class HomeController extends Controller
                     $data_ktc['order_ref'] = sprintf("%09d", $ktc_order->count() + 1);
                 }
                 $data_user['level'] = $level;
-                $data_user['status'] = $status;
+                if($status == 1){
+                    $data_user['status'] = 'paid';
+                }else{
+                    $data_user['status'] = '';
+                }
                 $data_ktc['package'] = $level;
                 $data_ktc['success_code'] = 1;
                 $data_ktc['pay_type'] = $pay_type;
