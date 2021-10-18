@@ -193,10 +193,11 @@ class paymentController extends Controller
             'id' => $user->id,
             'orderRef' => $ktc->order_id,
             'orderReceipt' => $ktc->order_ref,
-            'amount' => number_format($price->price,2),
+            'amount' => number_format($price->price - $price->discount,2),
             'currentDate' => $currentDate,
             'package' => $user->level,
             'address' => $user->address,
+            'payType' => $ktc->pay_type,
         ];
 
         return view('payment.receipt', compact('data'));

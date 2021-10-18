@@ -44,7 +44,7 @@ class KTC extends Model
     public static function get_data_ktc($id)
     {
         $ktc_order = DB::table('ktc_order')
-            ->select('order_id', 'order_ref')
+            ->select('order_id', 'order_ref', 'pay_type')
         // ->leftjoin('users', 'ktc_order.id', '=', 'users.id')
             ->where('id', '=', $id)
             ->first();

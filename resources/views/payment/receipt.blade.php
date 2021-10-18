@@ -18,7 +18,7 @@
     </div>     
     <!-- end page title -->
 
-    <div class="row">
+    <div class="row mt-3">
         <div class="col-12">
             <div class="card-box">
                 <!-- Logo & title -->
@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mt-3">
-                            <p><b>Hello, {{ auth('web')->user()->first_name}} {{ auth('web')->user()->last_name}}</b></p>
+                            <p><b>Customer Name: {{ auth('web')->user()->first_name}} {{ auth('web')->user()->last_name}}</b></p>
                             <p class="text-muted">Thanks a lot because you keep purchasing our products. Our company
                                 promises to provide high quality products for you as well as outstanding
                                 customer service for every transaction. </p>
@@ -40,9 +40,9 @@
                     </div><!-- end col -->
                     <div class="col-md-4 offset-md-2">
                         <div class="mt-3 float-right">
-                            <p class="m-b-10"><strong>Receipt Date : </strong> <span class="float-right"> &nbsp;&nbsp;&nbsp;&nbsp; {{ $data['currentDate']}}</span></p>
-                            <p class="m-b-10"><strong>Receipt Status : </strong> <span class="float-right"><span class="badge badge-success p-1">PAID</span></span></p>
-                            <p class="m-b-10"><strong>Receipt id #: </strong> <span class="float-right">{{ $data['orderRef']}} </span></p>
+                            <p class="m-b-10"><strong>No. </strong> <span class="float-right">{{ $data['orderRef']}} </span></p>
+                            <p class="m-b-10"><strong>Date: </strong> <span class="float-right"> &nbsp;&nbsp;&nbsp;&nbsp; {{ $data['currentDate']}}</span></p>
+                            <p class="m-b-10"><span class="float-right"><span class="badge badge-success p-2 h-2">PAID</span></span></p>
                         </div>
                     </div><!-- end col -->
                 </div>
@@ -63,8 +63,8 @@
                         <div class="table-responsive">
                             <table class="table mt-4 table-centered">
                                 <thead>
-                                <tr><th>#</th>
-                                    <th>Item</th>
+                                <tr><th>No.</th>
+                                    <th>Package</th>
                                     <th style="width: 15%" class="text-right">Total</th>
                                 </tr></thead>
                                 <tbody>
@@ -86,21 +86,36 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="clearfix pt-5">
-                            <h6 class="text-muted">Notes:</h6>
-
-                            <small class="text-muted">
-                                All accounts are to be paid within 7 days from receipt of
-                                invoice. To be paid by cheque or credit card or direct payment
-                                online. If account is not paid within 7 days the credits details
-                                supplied as confirmation of work undertaken will be charged the
-                                agreed quoted fee noted above.
-                            </small>
+                            <h4 >Payment</h4>
+                            @if ($data['payType'] == "CC")
+                            <div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                                    <label class="custom-control-label" for="customCheck1">Credit Card</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck2" disabled>
+                                    <label class="custom-control-label" for="customCheck2">ALIPAY</label>
+                                </div>
+                            </div>
+                            @else
+                            <div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1" disabled>
+                                    <label class="custom-control-label" for="customCheck1">Credit Card</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck2" checked>
+                                    <label class="custom-control-label" for="customCheck2">ALIPAY</label>
+                                </div>
+                            </div>
+                            @endif
+                           
                         </div>
                     </div> <!-- end col -->
                     <div class="col-sm-6">
                         <div class="float-right">
                             <p><b>Sub-total: </b> <span class="float-right">{{ $data['amount'] }} BAHT</span></p>
-                            <p><b>Discount: </b> <span class="float-right"> &nbsp;&nbsp;&nbsp; {{ $data['amount'] }} BAHT</span></p>
                             <h3>{{ $data['amount'] }} BAHT</h3>
                         </div>
                         <div class="clearfix"></div>
