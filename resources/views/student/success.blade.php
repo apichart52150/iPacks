@@ -18,6 +18,14 @@
 
     </head>
 
+    <style>
+        .btn-gold {
+            color: #ffffff;
+            background-color: #EF961B;
+            border-color: #EF961B;
+        }
+    </style>
+
     <body class="authentication-bg">
 
         <div class="account-pages mt-5 mb-5">
@@ -59,8 +67,8 @@
 
                                     <div class="row">
                                         <div class="col-6 align-self-center">
-                                            <a href="{{ url('payment/purchase/'.'gold') }}" type="button" class="btn btn-block btn--md btn-warning ">Gold package</a>
-                                            <a href="{{ url('payment/purchase/'.'extra') }}" type="button" class="btn btn-block btn--md btn-primary ">1 on 1 Tutorial</a>
+                                            <a href="{{ url('payment/purchase/'.'gold') }}" type="button" class="btn btn-block btn--md btn-gold">Gold package</a>
+                                            <a href="{{ url('payment/purchase/'.'extra') }}" type="button" class="btn btn-block btn--md btn-primary">1 on 1 Tutorial</a>
                                         </div>
 
                                         <div class="col-6 align-self-stretch">
