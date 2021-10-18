@@ -164,7 +164,6 @@
         return false
     })
 
-
     function delete_user(token ,id, url){ 
         Swal.fire({
             title: 'Are you sure?',
