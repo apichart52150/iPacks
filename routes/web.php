@@ -18,6 +18,13 @@
 
     Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
+    Route::prefix('trial')->group(function () {
+        Route::get('home', 'TrialController@index')->name('trial_home');
+        Route::get('listening', 'TrialController@listening')->name('trial_listening');
+        Route::get('reading', 'TrialController@reading')->name('trial_reading');
+        Route::get('language', 'TrialController@language')->name('trial_language');
+    });
+
     Route::group(['middleware' => 'auth:web'], function () {
 
         Route::get('browser-settings', function () {
@@ -35,13 +42,6 @@
         Route::get('expire', function () {
             return view('student.expire');
         })->name('expire');
-
-        Route::prefix('trial')->group(function () {
-            Route::get('home', 'TrialController@index')->name('trial_home');
-            Route::get('listening', 'TrialController@listening')->name('trial_listening');
-            Route::get('reading', 'TrialController@reading')->name('trial_reading');
-            Route::get('language', 'TrialController@language')->name('trial_language');
-        });
 
         Route::prefix('payment')->namespace('Payment')->group(function () {
             Route::get('purchase/{status?}', 'paymentController@payment_form')->name('paymentForm');

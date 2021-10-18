@@ -12,7 +12,7 @@
 							<h3 class="font-weight-bold text-primary"> Online IELTS Tips & Practice </h3> 
 							<span class="text-dark h3">REGISTER</span> 
 	                    </div>
-						<p class="text-muted mb-4 mt-3">Don't have an account? Create your own account, it takes less than a minute</p>
+						<p class="text-muted mb-4 mt-3">Don’t have an account? Creat your own by just adding your email & creating your own password. it takes less than a minute.</p>
 					</div>
 					@if(session()->has('status'))
 					<div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show my-2"
@@ -83,9 +83,9 @@
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 			</div>
 			<div class="modal-body">
-			<h1 class="modal-title" id="full-width-modalLabel">Terms and Conditions</h1>
-			<h4 class="header-title">Please read terms and conditions for <strong class="h4">Online IELTS Tips & Practice (OTP)</strong> carefully. By clicking on the registration or payment, you have agreed.</h4>
-			<ol style="line-height: 2em;">
+			<p class="modal-title" id="full-width-modalLabel" style=" font-size: 23px;">Terms and Conditions</p>
+			<p class="header-title">Please read terms and conditions for <strong>Online IELTS Tips & Practice (OTP)</strong> carefully. By clicking on the registration or payment, you have agreed.</p>
+			<ol class="text-muted" style="line-height: 2em;">
 				<!-- 1 -->
 				<li>
 				Your registration will only be considered complete once all monies are paid. For international bank

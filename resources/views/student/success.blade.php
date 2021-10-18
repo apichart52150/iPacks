@@ -15,6 +15,7 @@
         <link href="{{ asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('public/assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
 
+
     </head>
 
     <body class="authentication-bg">
@@ -51,26 +52,28 @@
                                     
                                     <p class="text-muted mt-2"> Now your're our member.</p>
 
-                                    <h4>You can choose the package at your level of English skills from two options.</h4>
+                                    <h5>Please select a package you prefer. </h5>
+                                    <h5>(Platinum is highly recommended because it comes with 1 on 1 tutorial;focus on speaking)</h5>
 
-                                    <div class="row mt-3">
-                                        <div class="col-6">
-                                            <a href="{{ url('payment/purchase/'.'gold') }}" type="button" class="btn btn-block btn--md btn-warning waves-effect waves-light">Gold package</a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="{{ url('payment/purchase/'.'platinum') }}" type="button" class="btn btn-block btn--md btn-light waves-effect waves-light">Platinum package</a>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-12">
-                                            <a href="{{ url('payment/purchase/'.'extra') }}" type="button" class="btn btn-block btn--md btn-primary waves-effect waves-light">1 on 1 Tutorial (focus on Speaking) + Writing & Speaking marked</a>
-                                        </div>
-                                    </div>
                                     <hr>
+
                                     <div class="row">
-                                        <div class="col-12 mt-2">
-                                            <a href="{{ route('trial_home') }}" type="button" class="btn btn-block btn--md btn-danger waves-effect waves-light">Free trial!</a>
+                                        <div class="col-6 align-self-center">
+                                            <a href="{{ url('payment/purchase/'.'gold') }}" type="button" class="btn btn-block btn--md btn-warning ">Gold package</a>
+                                            <a href="{{ url('payment/purchase/'.'extra') }}" type="button" class="btn btn-block btn--md btn-primary ">1 on 1 Tutorial</a>
                                         </div>
+
+                                        <div class="col-6 align-self-stretch">
+                                            <a href="{{ url('payment/purchase/'.'platinum') }}" type="button" class="btn btn-secondary waves-effect waves-light btn-lg w-100 h-100">
+                                                <div class="align-self-center">Platinum package</div>
+                                            </a>
+                                            <!-- <a href="{{ url('payment/purchase/'.'platinum') }}">
+                                                <div class="card card-body text-white bg-secondary m-0 h-100">
+                                                    <p class="card-text">Platinum package</p> 
+                                                </div>
+                                            </a> -->
+                                        </div>
+                                       
                                     </div>
                                 </div>
 
