@@ -50,21 +50,25 @@ class paymentController extends Controller
             ]);
 
         } else {
-
             $run_order = sprintf("%09d", $selectId->order_id);
         }
 
-        if($selectId->remark == 'student'){
+        $selectIds = DB::table('ktc_order')
+        ->select('remark')
+        ->where('id', '=', $input['id'])
+        ->first();
+
+        if($selectIds->remark == 'student'){
             $price = DB::table('price')
             ->select('*')
             ->where('name', '=', $input['package'])
-            ->where('remark', '=', $selectId->remark)
+            ->where('remark', '=', $selectIds->remark)
             ->first();
         }else{
             $price = DB::table('price')
             ->select('*')
             ->where('name', '=', $input['package'])
-            ->where('remark', '=', $selectId->remark)
+            ->where('remark', '=', $selectIds->remark)
             ->first();
         }
 
@@ -90,6 +94,7 @@ class paymentController extends Controller
             'discount' => $price->discount,
             'payMethod' => $input['payMethod'],
         ];
+
         return view('payment.payment_confirm', compact('data'));
     }
 
