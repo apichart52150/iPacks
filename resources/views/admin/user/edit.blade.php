@@ -7,8 +7,10 @@
         <div class="page-title-box">
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><i class="fas fa-address-card"></i> <a id="return-page"
-                            href="{{ route('user') }}">Users</a></li>
+                    <li class="breadcrumb-item">
+                        <i class="fas fa-address-card"></i>
+                        <a id="return-page" href="{{ route('user-index','all__all__all') }}">Users</a>
+                    </li>
                     <!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
                     <li class="breadcrumb-item active">Edit</li>
                 </ol>
@@ -159,6 +161,51 @@
                                 </div>
                             </div>
 
+                            <div class="form-group row point">
+                                <label class="col-sm-2 col-form-label" for="">Write point</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" min="0" id="writing_point"
+                                        name="writing_point" value="{{$users->writing_point}}" required>
+                                    <span class="default-writing_point text-success"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row point">
+                                <label class="col-sm-2 col-form-label" for="">Speaking point</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" min="0" id="speaking_point"
+                                        name="speaking_point" value="{{$users->speaking_point}}" required>
+                                    <span class="default-speaking_point text-success"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row point">
+                                <label class="col-sm-2 col-form-label" for="">Club point</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" min="0" id="club_point" name="club_point"
+                                        value="{{$users->club_point}}" required>
+                                    <span class="default-club_point text-success"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row point">
+                                <label class="col-sm-2 col-form-label" for="">Tutorial point</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" min="0" id="tutorial_point"
+                                        name="tutorial_point" value="{{$users->tutorial_point}}" required>
+                                    <span class="default-tutorial_point text-success"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row trial_point">
+                                <label class="col-sm-2 col-form-label" for="">Trial point</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" min="0" id="trial_point"
+                                        name="trial_point" value="{{$users->trial_point}}" required>
+                                    <span class="default-trial_point text-success"></span>
+                                </div>
+                            </div>
+
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">Expire date</label>
                                 <div class="col-sm-10">
@@ -190,8 +237,8 @@
 
                             <div class="form-group text-center">
                                 <button type="submit" id="" class="btn btn-info waves-effect waves-light">Edit</button>
-                                <a href="{{ route('user') }}" class="btn btn-secondary waves-effect"
-                                    data-dismiss="modal">Cancle</a>
+                                <a href="{{ route('user-index','all__all__all') }}"
+                                    class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
                             </div>
                         </form>
                     </div>
@@ -212,52 +259,71 @@
     if("{{ $users->status }}" == "" || "{{ $users->status }}" == "wait"){
     $('.level').hide()
     $('.pay_type').hide()
+    $('.point').hide()
     }else{
     $('.level').show()
     $('.pay_type').show()
+    $('.point').show()
+    show_default_point("{{ $users->level }}")
     }
     
-    $('#status-u').on('change',function(){
-        if($('#status-u').val()!="wait"){
-            $('.level').show()
-            $('.pay_type').show()
-        }else{
-            $('.level').hide()
-            $('.pay_type').hide()
-        }
-    })
+    $('.default-trial_point').html('Default {{ $gold_point->trial_point }} point')
     
     $('#status-u').on('change',function(){
-        if($('#status-u').val()!="wait"){
-            $('.level').show()
-            $('.pay_type').show()
-        }else{
+        if($('#status-u').val()==""){
             $('.level').hide()
             $('.pay_type').hide()
+            $('.point').hide()
+        }else{
+            $('.level').show()
+            $('.pay_type').show()
+            $('.point').show()
+            show_default_point($('#level').val())
         }
     })
+    $('#level').on('change',function(){
+            show_default_point($('#level').val())
+    })
+
+    function show_default_point(level){
+        if(level == "gold"){
+            $('.default-writing_point').html('Default {{ $gold_point->writing_point }} point')
+            $('.default-speaking_point').html('Default {{ $gold_point->speaking_point }} point')
+            $('.default-club_point').html('Default {{ $gold_point->club_point }} point')
+            $('.default-tutorial_point').html('Default {{ $gold_point->tutorial_point }} point')
+        }else if(level == "platinum"){
+            $('.default-writing_point').html('Default {{ $platinum_point->writing_point }} point')
+            $('.default-speaking_point').html('Default {{ $platinum_point->speaking_point }} point')
+            $('.default-club_point').html('Default {{ $platinum_point->club_point }} point')
+            $('.default-tutorial_point').html('Default {{ $platinum_point->tutorial_point }} point')
+        }
+    }
 
 
     $('#form-update-users').on('submit',function(){
-        let data = new FormData(this)
-        $.ajax({
-            type: 'POST',
-            url: $(this).attr('route'),
-            data: data,
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function(response) {
-                console.log(response)
-                if (response == "success") {
-                    swal("Update success", "", "success").then(()=>{
-                    window.location.href = $('#return-page').attr('href')
-                    })
-                    }
-                else
-                    swal("Update failed", "", "error")
-            }
-        })
+        if($('#writing_point').val() >= 0 && $('#speaking_point').val() >= 0 && $('#club_point').val() >= 0 && $('#tutorial_point').val() >= 0 && $('#trial_point').val() >= 0){
+            let data = new FormData(this)
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('route'),
+                data: data,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(response) {
+                    console.log(response)
+                    if (response == "success") {
+                        swal("Update success", "", "success").then(()=>{
+                        window.location.href = $('#return-page').attr('href')
+                        })
+                        }
+                    else
+                        swal("Update failed", "", "error")
+                }
+            })
+        }else{
+            swal("Update failed", "", "error")
+        }
         return false
     })
 </script>

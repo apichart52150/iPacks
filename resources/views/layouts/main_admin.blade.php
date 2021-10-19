@@ -129,7 +129,7 @@
                         </li>
 
                         <li class="has-submenu">
-                            <a href="{{ route('user','all__all__all') }}" class="text-light">
+                            <a href="{{ route('user-index','all__all__all') }}" class="text-light">
                                 <i class="fas fa-address-card"></i>User
                             </a>
                         </li>

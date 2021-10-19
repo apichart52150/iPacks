@@ -8,7 +8,7 @@
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><i class="fas fa-address-card"></i> <a id="return-page"
-                            href="{{ route('user') }}">Users</a></li>
+                            href="{{ route('user-index','all__all__all') }}">Users</a></li>
                     <!-- <li class="breadcrumb-item"><a href="#">Topic </a></li> -->
                     <li class="breadcrumb-item active">Edit</li>
                 </ol>
@@ -90,7 +90,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">Remark</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control" id="" name="remark">
+                                    <select class="form-control" id="remark" name="remark">
                                         <option value="idp">IDP</option>
                                         <option value="student">Student</option>
                                         <option value="other">Other</option>
@@ -114,6 +114,7 @@
                                     <select class="form-control" id="level" name="level">
                                         <option value="gold">gold</option>
                                         <option value="platinum">platinum</option>
+                                        <option value="extra">extra</option>
                                     </select>
                                 </div>
                             </div>
@@ -129,6 +130,13 @@
                             </div>
 
                             <div class="form-group row">
+                                <label class="col-sm-2 col-form-label" for="">Price</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="price" name="" readonly>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label class="col-sm-2 col-form-label" for="">Address</label>
                                 <div class="col-sm-10">
                                     <textarea class="form-control" placeholder="Address" id="" name="address" cols="30"
@@ -138,8 +146,8 @@
 
                             <div class="form-group text-center">
                                 <button type="submit" id="" class="btn btn-info waves-effect waves-light">Add</button>
-                                <a href="{{ route('user') }}" class="btn btn-secondary waves-effect"
-                                    data-dismiss="modal">Cancle</a>
+                                <a href="{{ route('user-index','all__all__all') }}"
+                                    class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
                             </div>
                         </form>
                     </div>
@@ -161,7 +169,7 @@
     $('.pay_type').hide()
 
     $('#status-u').on('change',function(){
-        if($('#status-u').val()!="wait"){
+        if($('#status-u').val()=="paid"){
             $('.level').show()
             $('.pay_type').show()
         }else{
@@ -169,6 +177,31 @@
             $('.pay_type').hide()
         }
     })
+    $('#remark').on('change',function(){
+        
+    })
+    $('#level').on('change',function(){
+
+    })
+
+    function get_price(){
+        if($('#status-u').val()=="paid"){
+            let price = "{{ price }}"
+            if($('#remark').val()=="student" && $('#level').val()=="extra"){
+                price.filter(function( item ) {
+                    return $( "strong", this ).length === 1;
+                })
+            }else{
+                if($('#level').val()=="gold"){
+
+                }else if($('#level').val()=="platinum"){
+
+                }
+            }
+        }
+        $('#price').html()
+    }
+
     $('#form-add-users').on('submit',function(){
         let data = new FormData(this)
         $.ajax({
@@ -182,7 +215,7 @@
                 console.log(response)
                 if (response == "success") {
                     swal("Insert success", "", "success").then(()=>{
-                    window.location.href = "{{ route('user') }}"
+                    window.location.href = "{{ route('user-index','all__all__all') }}"
                     })
                     }
                 else

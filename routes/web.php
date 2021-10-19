@@ -195,8 +195,8 @@
             Route::post('staffdelete/{id?}', 'StaffController@staffdelete');
 
             // + user
-            Route::get('user/list/{data_search}', 'UserController@index')->name('user');
-            Route::get('user/edit/{id}', 'UserController@edit');
+            Route::get('user/list/{data_search}', 'UserController@index')->name('user-index');
+            Route::get('user/edit/{id}', 'UserController@edit')->name('user-edit');
             Route::get('user/add', 'UserController@add')->name('admin-add-user');
             Route::post('user/remove', 'UserController@remove_user')->name('remove-user');
             Route::post('user/add/confirm/success', 'UserController@insert_user')->name('user-add-confirm');
