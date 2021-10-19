@@ -123,7 +123,7 @@ class paymentController extends Controller
             DB::table('ktc_order')
                 ->where('order_id', '=', $request->Ref)
                 ->update([
-                    'order_ref' => sprintf("%09d", $ref_id),
+                    'order_ref' => sprintf("%04d", "OTP-".$ref_id),
                     'updated_at' => date('Y-m-d H:i:s'),
                 ]);
 

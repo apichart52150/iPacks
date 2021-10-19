@@ -46,7 +46,7 @@
                     </div><!-- end col -->
                     <div class="col-md-4 offset-md-2">
                         <div class="mt-3 float-right">
-                            <p class="m-b-10"><strong>No. </strong> <span class="float-right">{{ $data['orderRef']}} </span></p>
+                            <p class="m-b-10"><strong>No. </strong> <span class="float-right">{{ $data['orderReceipt']}} </span></p>
                             <p class="m-b-10"><strong>Date: </strong> <span class="float-right"> &nbsp;&nbsp;&nbsp;&nbsp; {{ $data['currentDate']}}</span></p>
                             <p class="m-b-10"><span class="float-right"><span class="badge badge-success p-2 h-2">PAID</span></span></p>
                         </div>
