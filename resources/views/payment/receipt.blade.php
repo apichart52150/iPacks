@@ -32,10 +32,16 @@
                     <div class="col-md-6">
                         <div class="mt-3">
                             <p><b>Customer Name: {{ auth('web')->user()->first_name}} {{ auth('web')->user()->last_name}}</b></p>
-                            <p class="text-muted">Thanks a lot because you keep purchasing our products. Our company
-                                promises to provide high quality products for you as well as outstanding
-                                customer service for every transaction. </p>
                         </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-12">
+                                <h5>Billing Address</h5>
+                                <address>
+                                {{ $data['address']}}
+                                </address>
+                            </div> <!-- end col -->
+                        </div> 
 
                     </div><!-- end col -->
                     <div class="col-md-4 offset-md-2">
@@ -48,14 +54,7 @@
                 </div>
                 <!-- end row -->
 
-                <div class="row mt-3">
-                    <div class="col-sm-12">
-                        <h5>Billing Address</h5>
-                        <address>
-                          {{ $data['address']}}
-                        </address>
-                    </div> <!-- end col -->
-                </div> 
+               
                 <!-- end row -->
 
                 <div class="row">
@@ -122,6 +121,8 @@
                     </div> <!-- end col -->
                 </div>
                 <!-- end row -->
+                <br>
+                <p class="textmiuted">This receipt will be completed when net amount of this receipt is in Company's bank account</p>
 
                 <div class="mt-4 mb-1">
                     <div class="text-right d-print-none">
