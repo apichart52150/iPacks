@@ -109,7 +109,7 @@
                         </td>
                         <td>
                             <div class="d-flex flex-row">
-                                <a href="{{ url('user/edit',[$row->id]) }}"
+                                <a href="{{ route('user-edit',[$row->id]) }}"
                                     class="btn btn-info text-white click btn-xs mr-1">Edit</a>
 
                                 <form class="delete-user"
@@ -157,7 +157,7 @@
             search_first_name = "all"
         }
         let data_search = search_email+'__'+search_first_name+'__'+search_status
-        let url = "{{ route('user',':data') }}"
+        let url = "{{ route('user-index',':data') }}"
         url = url.replace(":data",data_search)
         // console.log(data_search)
         window.location.href = url

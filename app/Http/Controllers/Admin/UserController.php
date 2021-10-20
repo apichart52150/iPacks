@@ -23,11 +23,14 @@ class UserController extends Controller
     public function edit($id)
     {
         $users = DB::table('users')
-            ->select('users.id', 'users.email', 'users.first_name', 'users.last_name', 'users.address', 'users.level', 'users.status', 'users.expire_date', 'ktc_order.remark', 'ktc_order.pay_type')
+            ->select('point.writing_point','point.speaking_point','point.club_point','point.tutorial_point','point.trial_point','users.id', 'users.email', 'users.first_name', 'users.last_name', 'users.address', 'users.level', 'users.status', 'users.expire_date', 'ktc_order.remark', 'ktc_order.pay_type')
             ->leftjoin('ktc_order', 'ktc_order.id', '=', 'users.id')
+            ->leftjoin('point', 'point.user_id', '=', 'users.id')
             ->where('users.id', '=', $id)
             ->first();
-        return view('admin.user.edit', compact('users'));
+        $gold_point = DB::table('point')->where('user_id','=','-1')->first();
+        $platinum_point = DB::table('point')->where('user_id','=','-2')->first();
+        return view('admin.user.edit', compact('users','gold_point','platinum_point'));
     }
 
     public function update_user(Request $request)
@@ -42,6 +45,7 @@ class UserController extends Controller
             $input_status = $data['status'];
             $input_remark = $data['remark'];
             $input_expire_date = $data['expire_date'];
+            $trial_point = $data['trial_point'];
             $input_level = '';
             $input_pay_type = '';
 
@@ -66,6 +70,12 @@ class UserController extends Controller
                 'updated_by' => Auth::id(),
             );
 
+            $data_point = array(
+                'trial_point' => $trial_point,
+                'updated_at' => new Datetime(),
+                'updated_by' => Auth::id(),
+            );
+
             if ($data['password'] != "") {
                 $data_user['password'] = bcrypt($data['password']);
             }
@@ -86,27 +96,25 @@ class UserController extends Controller
                         $data_ktc['order_ref'] = sprintf("%09d", $ktc_order->count() + 1);
                     }
 
-                    if ($input_level == 'gold') {
-                        $data_user['expire_date'] = date("Y-m-d H:i:s", strtotime("+30 day"));
-                        DB::table('point')
-                            ->where('user_id', '=', $data['id'])
-                            ->update([
-                                'writing_point' => 3,
-                                'speaking_point' => 2,
-                                'club_point' => 0,
-                                'tutorial_point' => 0,
-                            ]);
-                    } else if ($input_level == 'platinum') {
-                        $data_user['expire_date'] = date("Y-m-d H:i:s", strtotime("+44 day"));
-                        DB::table('point')
-                            ->where('user_id', '=', $data['id'])
-                            ->update([
-                                'writing_point' => 5,
-                                'speaking_point' => 3,
-                                'club_point' => 1,
-                                'tutorial_point' => 1,
-                            ]);
-                    }
+                    $writing_point = $data['writing_point'];
+                    $speaking_point = $data['speaking_point'];
+                    $club_point = $data['club_point'];
+                    $tutorial_point = $data['tutorial_point'];
+
+                    $data_point['writing_point'] = $writing_point;
+                    $data_point['speaking_point'] = $speaking_point;
+                    $data_point['club_point'] = $club_point;
+                    $data_point['tutorial_point'] = $tutorial_point;
+
+                    // if ($input_level == 'gold') {
+                    //     $data_user['expire_date'] = date("Y-m-d H:i:s", strtotime("+30 day"));
+                    //     DB::table('point')
+                    //         ->where('user_id', '=', $data['id'])
+                    //         ->update($data_point);
+                    // } else if ($input_level == 'platinum') {
+                    //     $data_user['expire_date'] = date("Y-m-d H:i:s", strtotime("+44 day"));
+                    //     DB::table('point')->where('user_id', '=', $data['id'])->update($data_point);
+                    // }
                 } 
 
             } else {
@@ -114,6 +122,10 @@ class UserController extends Controller
                 $data_ktc['package'] = '';
                 $data_ktc['pay_type'] = '';
                 $data_ktc['success_code'] = '0';
+                $data_point['writing_point'] = 0;
+                $data_point['speaking_point'] = 0;
+                $data_point['club_point'] = 0;
+                $data_point['tutorial_point'] = 0;
                 DB::table('point')
                     ->where('user_id', '=', $data['id'])
                     ->update([
@@ -125,13 +137,9 @@ class UserController extends Controller
             }
 
             DB::table('users')->where('id', $data['id'])->update($data_user);
-
-            // $ktc_order_count = DB::table('ktc_order')
-            //     ->select('success_code')
-            //     ->where('success_code', '=', '1')
-            //     ->count();
-            // $data_ktc['order_ref'] = sprintf("%09d", $ktc_order_count);
-            DB::table('ktc_order')->where('id', $data['id'])->update($data_ktc);
+            DB::table('ktc_order')->where('id', $data['id'])->update($data_ktc);    
+            DB::table('point')->where('user_id', '=', $data['id'])->update($data_point);
+                    
             return 'success';
         } catch (\Throwable $th) {
             return $th;
@@ -141,7 +149,8 @@ class UserController extends Controller
 
     public function add()
     {
-        return view('admin.user.add');
+        $price = DB::table('price')->get();
+        return view('admin.user.add', compact('price'));
     }
 
     public function insert_user(Request $request)
@@ -169,24 +178,26 @@ class UserController extends Controller
 
                 $expire_date = date("Y-m-d H:i:s");
                 if ($input_level == 'gold') {
+                    $gold = DB::table('point')->where('user_id','=','-1')->first();
                     $expire_date = date("Y-m-d H:i:s", strtotime("+30 day"));
                     DB::table('point')
                         ->insert([
                             'user_id' => $user_id,
-                            'writing_point' => 3,
-                            'speaking_point' => 2,
-                            'club_point' => 0,
-                            'tutorial_point' => 0,
+                            'writing_point' => $gold->writing_point,
+                            'speaking_point' => $gold->speaking_point,
+                            'club_point' => $gold->club_point,
+                            'tutorial_point' => $gold->tutorial_point,
                         ]);
                 } else if ($input_level == 'platinum') {
+                    $platinum = DB::table('point')->where('user_id','=','-2')->first();
                     $expire_date = date("Y-m-d H:i:s", strtotime("+44 day"));
                     DB::table('point')
                         ->insert([
                             'user_id' => $user_id,
-                            'writing_point' => 5,
-                            'speaking_point' => 3,
-                            'club_point' => 1,
-                            'tutorial_point' => 1,
+                            'writing_point' => $platinum->writing_point,
+                            'speaking_point' => $platinum->speaking_point,
+                            'club_point' => $platinum->club_point,
+                            'tutorial_point' => $platinum->tutorial_point,
                         ]);
                 }
 
