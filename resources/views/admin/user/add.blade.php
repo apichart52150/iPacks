@@ -147,7 +147,7 @@
                             <div class="form-group text-center">
                                 <button type="submit" id="" class="btn btn-info waves-effect waves-light">Add</button>
                                 <a href="{{ route('user-index','all__all__all') }}"
-                                    class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
+                                    class="btn btn-secondary waves-effect" data-dismiss="modal">Cancel</a>
                             </div>
                         </form>
                     </div>
@@ -170,6 +170,7 @@
 
     $('#status-u').on('change',function(){
         if($('#status-u').val()=="paid"){
+            get_price()
             $('.level').show()
             $('.pay_type').show()
         }else{
@@ -178,28 +179,34 @@
         }
     })
     $('#remark').on('change',function(){
-        
+        get_price()
     })
     $('#level').on('change',function(){
-
+        get_price()
     })
 
     function get_price(){
         if($('#status-u').val()=="paid"){
-            let price = "{{ price }}"
-            if($('#remark').val()=="student" && $('#level').val()=="extra"){
-                price.filter(function( item ) {
-                    return $( "strong", this ).length === 1;
-                })
+            if(($('#remark').val()=="student" || $('#remark').val()=="other") && $('#level').val()=="extra"){
+                if($('#remark').val()=="student"){
+                    $('#price').val("{{ $price_extra_student->price - $price_extra_student->discount }}")
+                   
+                }else if($('#remark').val()=="other"){
+                    $('#price').val("{{ $price_extra_other->price - $price_extra_other->discount }}")
+                    
+                }
             }else{
                 if($('#level').val()=="gold"){
-
+                    $('#price').val("{{ $price_gold->price - $price_gold->discount }}")
+                    
                 }else if($('#level').val()=="platinum"){
-
+                    $('#price').val("{{ $price_platinum->price - $price_platinum->discount }}")
+                   
+                }else if($('#level').val()=="extra"){
+                    $('#price').val("")
                 }
             }
         }
-        $('#price').html()
     }
 
     $('#form-add-users').on('submit',function(){

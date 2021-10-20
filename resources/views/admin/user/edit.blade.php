@@ -111,6 +111,10 @@
                                         <option value="idp">IDP</option>
                                         <option value="student">Student</option>
                                         <option value="other" selected>Other</option>
+                                        @else
+                                        <option value="idp">IDP</option>
+                                        <option value="student">Student</option>
+                                        <option value="other">Other</option>
                                         @endif
                                     </select>
                                 </div>
@@ -238,7 +242,7 @@
                             <div class="form-group text-center">
                                 <button type="submit" id="" class="btn btn-info waves-effect waves-light">Edit</button>
                                 <a href="{{ route('user-index','all__all__all') }}"
-                                    class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
+                                    class="btn btn-secondary waves-effect" data-dismiss="modal">Cancel</a>
                             </div>
                         </form>
                     </div>
@@ -284,6 +288,7 @@
     $('#level').on('change',function(){
             show_default_point($('#level').val())
     })
+    
 
     function show_default_point(level){
         if(level == "gold"){

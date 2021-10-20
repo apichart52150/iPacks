@@ -87,7 +87,7 @@
             
                             <div class="form-group text-center">
 							    <button type="submit" class="btn btn-info waves-effect waves-light">Edit</button>
-                                <a href="{{ route('staff') }}" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
+                                <a href="{{ route('staff') }}" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancel</a>
                             </div>
                         </form>
                         @endforeach

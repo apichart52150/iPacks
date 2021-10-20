@@ -3,34 +3,34 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Model\Users;
 use App\User;
 use Auth;
 use Datetime;
 use DB;
 use Illuminate\Http\Request;
 use Session;
-use App\Model\Users;
 
 class UserController extends Controller
 {
     public function index($data_search)
     {
-        $pag = 4;
+        $pag = 10;
         $users = Users::data_list($pag, $data_search);
-        return view('admin.user.index', compact('users','pag','data_search'));
+        return view('admin.user.index', compact('users', 'pag', 'data_search'));
     }
 
     public function edit($id)
     {
         $users = DB::table('users')
-            ->select('point.writing_point','point.speaking_point','point.club_point','point.tutorial_point','point.trial_point','users.id', 'users.email', 'users.first_name', 'users.last_name', 'users.address', 'users.level', 'users.status', 'users.expire_date', 'ktc_order.remark', 'ktc_order.pay_type')
+            ->select('point.writing_point', 'point.speaking_point', 'point.club_point', 'point.tutorial_point', 'point.trial_point', 'users.id', 'users.email', 'users.first_name', 'users.last_name', 'users.address', 'users.level', 'users.status', 'users.expire_date', 'ktc_order.remark', 'ktc_order.pay_type')
             ->leftjoin('ktc_order', 'ktc_order.id', '=', 'users.id')
             ->leftjoin('point', 'point.user_id', '=', 'users.id')
             ->where('users.id', '=', $id)
             ->first();
-        $gold_point = DB::table('point')->where('user_id','=','-1')->first();
-        $platinum_point = DB::table('point')->where('user_id','=','-2')->first();
-        return view('admin.user.edit', compact('users','gold_point','platinum_point'));
+        $gold_point = DB::table('point')->where('user_id', '=', '-1')->first();
+        $platinum_point = DB::table('point')->where('user_id', '=', '-2')->first();
+        return view('admin.user.edit', compact('users', 'gold_point', 'platinum_point'));
     }
 
     public function update_user(Request $request)
@@ -89,10 +89,10 @@ class UserController extends Controller
 
                 if ($user->level != $input_level) {
 
-                    $ktc_order = DB::table('ktc_order')->where('order_ref','!=','')->get();
-                    $ktc_order_user = DB::table('ktc_order')->where('id','=',$data['id'])->first();
-                    
-                    if($ktc_order_user->order_ref == ''){
+                    $ktc_order = DB::table('ktc_order')->where('order_ref', '!=', '')->get();
+                    $ktc_order_user = DB::table('ktc_order')->where('id', '=', $data['id'])->first();
+
+                    if ($ktc_order_user->order_ref == '') {
                         $data_ktc['order_ref'] = sprintf("%09d", $ktc_order->count() + 1);
                     }
 
@@ -115,7 +115,7 @@ class UserController extends Controller
                     //     $data_user['expire_date'] = date("Y-m-d H:i:s", strtotime("+44 day"));
                     //     DB::table('point')->where('user_id', '=', $data['id'])->update($data_point);
                     // }
-                } 
+                }
 
             } else {
                 $data_user['level'] = '';
@@ -137,20 +137,24 @@ class UserController extends Controller
             }
 
             DB::table('users')->where('id', $data['id'])->update($data_user);
-            DB::table('ktc_order')->where('id', $data['id'])->update($data_ktc);    
+            DB::table('ktc_order')->where('id', $data['id'])->update($data_ktc);
             DB::table('point')->where('user_id', '=', $data['id'])->update($data_point);
-                    
+
             return 'success';
         } catch (\Throwable $th) {
-            return $th;
+            // return $th;
             return 'failed';
         }
     }
 
     public function add()
     {
-        $price = DB::table('price')->get();
-        return view('admin.user.add', compact('price'));
+        $price_gold = DB::table('price')->select('*')->where('name', '=', 'gold')->first();
+        $price_platinum = DB::table('price')->select('*')->where('name', '=', 'platinum')->first();
+        $price_extra_student = DB::table('price')->select('*')->where('name', '=', 'extra')->where('remark', '=', 'student')->first();
+        $price_extra_other = DB::table('price')->select('*')->where('name', '=', 'extra')->where('remark', '=', 'other')->first();
+        // dd($price);
+        return view('admin.user.add', compact('price_gold', 'price_platinum', 'price_extra_student', 'price_extra_other'));
     }
 
     public function insert_user(Request $request)
@@ -178,7 +182,7 @@ class UserController extends Controller
 
                 $expire_date = date("Y-m-d H:i:s");
                 if ($input_level == 'gold') {
-                    $gold = DB::table('point')->where('user_id','=','-1')->first();
+                    $gold = DB::table('point')->where('user_id', '=', '-1')->first();
                     $expire_date = date("Y-m-d H:i:s", strtotime("+30 day"));
                     DB::table('point')
                         ->insert([
@@ -189,7 +193,7 @@ class UserController extends Controller
                             'tutorial_point' => $gold->tutorial_point,
                         ]);
                 } else if ($input_level == 'platinum') {
-                    $platinum = DB::table('point')->where('user_id','=','-2')->first();
+                    $platinum = DB::table('point')->where('user_id', '=', '-2')->first();
                     $expire_date = date("Y-m-d H:i:s", strtotime("+44 day"));
                     DB::table('point')
                         ->insert([
@@ -199,7 +203,36 @@ class UserController extends Controller
                             'club_point' => $platinum->club_point,
                             'tutorial_point' => $platinum->tutorial_point,
                         ]);
-                }
+                } else if ($input_level == 'extra') {
+                    if ($input_remark == 'student') {
+                        DB::table('point')
+                            ->insert([
+                                'user_id' => $user_id,
+                                'writing_point' => 1,
+                                'speaking_point' => 1,
+                                'club_point' => 0,
+                                'tutorial_point' => 1,
+                            ]);
+                    } else if ($input_remark == 'other') {
+                        DB::table('point')
+                            ->insert([
+                                'user_id' => $user_id,
+                                'writing_point' => 0,
+                                'speaking_point' => 0,
+                                'club_point' => 0,
+                                'tutorial_point' => 0,
+                            ]);
+                    }else {
+                        DB::table('point')
+                            ->insert([
+                                'user_id' => $user_id,
+                                'writing_point' => 0,
+                                'speaking_point' => 0,
+                                'club_point' => 0,
+                                'tutorial_point' => 0,
+                            ]);
+                        }
+                } 
 
                 $new_sessid = csrf_token();
                 session::put('ss_id', $new_sessid);
@@ -283,7 +316,7 @@ class UserController extends Controller
 
             return $data;
         } catch (\Throwable $th) {
-            return $th;
+            // return $th;
             return 'failed';
         }
     }
