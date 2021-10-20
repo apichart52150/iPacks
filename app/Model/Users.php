@@ -12,13 +12,16 @@ class Users extends Model
         $data_arr = explode("__", $data);
         $search_status = 'LIKE';
         for ($i = 0; $i < count($data_arr); $i++) {
-            if ($data_arr[$i] == 'wait') {
+            if (trim($data_arr[$i]) == 'wait') {
                 $data_arr[$i] = '';
                 $search_status = '=';
-            } else if ($data_arr[$i] == 'paid') {
+            } else if (trim($data_arr[$i]) == null) {
+                $data_arr[$i] = '';
+                $search_status = '=';
+            } else if (trim($data_arr[$i]) == 'paid') {
                 $data_arr[$i] = 'paid';
                 $search_status = '=';
-            } else if ($data_arr[$i] == 'all') {
+            } else if (trim($data_arr[$i]) == 'all') {
                 $data_arr[$i] = '%%';
             }else{
                 $data_arr[$i] = '%' . $data_arr[$i] . '%';

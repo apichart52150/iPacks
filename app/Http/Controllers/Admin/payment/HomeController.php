@@ -13,7 +13,7 @@ class HomeController extends Controller
 {
     public function index($data_search)
     {
-        $pag = 3;
+        $pag = 10;
         $ktc = KTC::data_list($pag,$data_search);
         // dd($ktc);
         return view('admin.payment.index', compact('ktc', 'pag','data_search'));
