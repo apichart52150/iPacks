@@ -12,7 +12,7 @@
 							<h3 class="font-weight-bold text-primary"> Online IELTS Tips & Practice </h3> 
 							<span class="text-dark h3">REGISTER</span> 
 	                    </div>
-						<p class="text-muted mb-4 mt-3">Don’t have an account? Creat your own by just adding your email & creating your own password. it takes less than a minute.</p>
+						<p class="text-muted mb-4 mt-3">Don’t have an account? Creat your own by just adding your email & creating your own password. It takes less than a minute.</p>
 					</div>
 					@if(session()->has('status'))
 					<div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show my-2"
