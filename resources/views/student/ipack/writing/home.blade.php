@@ -179,8 +179,9 @@
     </div> <!-- end col -->
 </div>    
 @endif
+@if ($Task == 1)
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="card-box border-top border-info border border-1">
                 <h4 class="m-t-0 m-b-10 header-title">Report Type</h4>
                 <div class="row icons-list-demo">
@@ -214,8 +215,10 @@
                 </div>
             </div>
         </div> <!-- end col -->
-
-        <div class="col-md-6">
+    </div>
+    @else
+    <div class="row">
+        <div class="col-md-12">
             <div class="card-box border-top border-info border border-1">
                 <h4 class="m-t-0 m-b-10 header-title">Essay Type</h4>
                 <div class="row icons-list-demo">
@@ -241,6 +244,7 @@
             </div>
         </div> <!-- end col -->
     </div>
+    @endif
 @endsection
 
 @section('js')
