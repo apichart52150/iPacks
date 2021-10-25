@@ -111,6 +111,10 @@
                                         <option value="idp">IDP</option>
                                         <option value="student">Student</option>
                                         <option value="other" selected>Other</option>
+                                        @else
+                                        <option value="idp">IDP</option>
+                                        <option value="student">Student</option>
+                                        <option value="other">Other</option>
                                         @endif
                                     </select>
                                 </div>
@@ -136,10 +140,16 @@
                                 <div class="col-sm-10">
                                     <select class="form-control" id="level" name="level">
                                         @if($users->level=='platinum')
+                                        <option value="">...</option>
                                         <option value="gold">gold</option>
                                         <option value="platinum" selected>platinum</option>
-                                        @else
+                                        @elseif($users->level=='gold')
+                                        <option value="">...</option>
                                         <option value="gold" selected>gold</option>
+                                        <option value="platinum">platinum</option>
+                                        @else
+                                        <option value="">...</option>
+                                        <option value="gold">gold</option>
                                         <option value="platinum">platinum</option>
                                         @endif
                                     </select>
@@ -151,10 +161,16 @@
                                 <div class="col-sm-10">
                                     <select class="form-control" id="pay_type" name="pay_type">
                                         @if($users->status=='Airplay')
+                                        <option value="">...</option>
                                         <option value="CC">CC</option>
                                         <option value="Alipay" selected>Alipay</option>
-                                        @else
+                                        @elseif($users->status=='CC')
+                                        <option value="">...</option>
                                         <option value="CC" selected>Credit</option>
+                                        <option value="Alipay">Alipay</option>
+                                        @else
+                                        <option value="">...</option>
+                                        <option value="CC">Credit</option>
                                         <option value="Alipay">Alipay</option>
                                         @endif
                                     </select>
@@ -238,7 +254,7 @@
                             <div class="form-group text-center">
                                 <button type="submit" id="" class="btn btn-info waves-effect waves-light">Edit</button>
                                 <a href="{{ route('user-index','all__all__all') }}"
-                                    class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
+                                    class="btn btn-secondary waves-effect" data-dismiss="modal">Cancel</a>
                             </div>
                         </form>
                     </div>
@@ -256,47 +272,48 @@
 
 <script src="{{ asset('public/assets/js/ajax.jquery.js') }}"></script>
 <script>
-    if("{{ $users->status }}" == "" || "{{ $users->status }}" == "wait"){
-    $('.level').hide()
-    $('.pay_type').hide()
-    $('.point').hide()
-    }else{
-    $('.level').show()
-    $('.pay_type').show()
-    $('.point').show()
-    show_default_point("{{ $users->level }}")
-    }
+    // if("{{ $users->status }}" == "" || "{{ $users->status }}" == "wait"){
+    // $('.level').hide()
+    // $('.pay_type').hide()
+    // $('.point').hide()
+    // }else{
+    // $('.level').show()
+    // $('.pay_type').show()
+    // $('.point').show()
+    // show_default_point("{{ $users->level }}")
+    // }
     
-    $('.default-trial_point').html('Default {{ $gold_point->trial_point }} point')
+    // $('.default-trial_point').html('Default {{ $gold_point->trial_point }} point')
     
-    $('#status-u').on('change',function(){
-        if($('#status-u').val()==""){
-            $('.level').hide()
-            $('.pay_type').hide()
-            $('.point').hide()
-        }else{
-            $('.level').show()
-            $('.pay_type').show()
-            $('.point').show()
-            show_default_point($('#level').val())
-        }
-    })
-    $('#level').on('change',function(){
-            show_default_point($('#level').val())
-    })
+    // $('#status-u').on('change',function(){
+    //     if($('#status-u').val()==""){
+    //         $('.level').hide()
+    //         $('.pay_type').hide()
+    //         $('.point').hide()
+    //     }else{
+    //         $('.level').show()
+    //         $('.pay_type').show()
+    //         $('.point').show()
+    //         show_default_point($('#level').val())
+    //     }
+    // })
+    // $('#level').on('change',function(){
+    //         show_default_point($('#level').val())
+    // })
+    
 
     function show_default_point(level){
-        if(level == "gold"){
-            $('.default-writing_point').html('Default {{ $gold_point->writing_point }} point')
-            $('.default-speaking_point').html('Default {{ $gold_point->speaking_point }} point')
-            $('.default-club_point').html('Default {{ $gold_point->club_point }} point')
-            $('.default-tutorial_point').html('Default {{ $gold_point->tutorial_point }} point')
-        }else if(level == "platinum"){
-            $('.default-writing_point').html('Default {{ $platinum_point->writing_point }} point')
-            $('.default-speaking_point').html('Default {{ $platinum_point->speaking_point }} point')
-            $('.default-club_point').html('Default {{ $platinum_point->club_point }} point')
-            $('.default-tutorial_point').html('Default {{ $platinum_point->tutorial_point }} point')
-        }
+        // if(level == "gold"){
+        //     $('.default-writing_point').html('Default {{ $gold_point->writing_point }} point')
+        //     $('.default-speaking_point').html('Default {{ $gold_point->speaking_point }} point')
+        //     $('.default-club_point').html('Default {{ $gold_point->club_point }} point')
+        //     $('.default-tutorial_point').html('Default {{ $gold_point->tutorial_point }} point')
+        // }else if(level == "platinum"){
+        //     $('.default-writing_point').html('Default {{ $platinum_point->writing_point }} point')
+        //     $('.default-speaking_point').html('Default {{ $platinum_point->speaking_point }} point')
+        //     $('.default-club_point').html('Default {{ $platinum_point->club_point }} point')
+        //     $('.default-tutorial_point').html('Default {{ $platinum_point->tutorial_point }} point')
+        // }
     }
 
 

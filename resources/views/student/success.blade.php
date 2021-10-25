@@ -24,6 +24,20 @@
             background-color: #EF961B;
             border-color: #EF961B;
         }
+
+        .align-self-center span {
+            display: block;
+            padding-top: 22px;
+            text-align: center;
+            line-height: 1.5em;
+            font-size: 16px;
+        }
+
+        .textcenter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 
     <body class="authentication-bg">
@@ -61,7 +75,7 @@
                                     <p class="text-muted mt-2"> Now your're our member.</p>
 
                                     <h5>Please select a package you prefer. </h5>
-                                    <h5>(Platinum is highly recommended because it comes with 1 on 1 tutorial;focus on speaking)</h5>
+                                    <h5>(Platinum is highly recommended because it comes with 1 on 1 tutorial; focus on speaking)</h5>
 
                                     <hr>
 
@@ -71,9 +85,9 @@
                                             <a href="{{ url('payment/purchase/'.'extra') }}" type="button" class="btn btn-block btn--md btn-primary">1 on 1 Tutorial</a>
                                         </div>
 
-                                        <div class="col-6 align-self-stretch">
-                                            <a href="{{ url('payment/purchase/'.'platinum') }}" type="button" class="btn btn-secondary waves-effect waves-light btn-lg w-100 h-100">
-                                                <div class="align-self-center">Platinum package</div>
+                                        <div class="col-xl-6 textcenter">
+                                            <a href="{{ url('payment/purchase/'.'platinum') }}" type="button" class="btn btn-secondary waves-effect waves-light w-100 h-100">
+                                                <div class="align-self-center"><span>Platinum package</span></div>
                                             </a>
                                             <!-- <a href="{{ url('payment/purchase/'.'platinum') }}">
                                                 <div class="card card-body text-white bg-secondary m-0 h-100">

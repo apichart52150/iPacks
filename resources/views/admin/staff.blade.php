@@ -124,7 +124,7 @@
 
                     <div class="form-group text-center">
                         <button type="submit" class="btn btn-info waves-effect waves-light">Add</button>
-                        <a href="#" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancle</a>
+                        <a href="#" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancel</a>
                     </div>
                 </form>
 				</div>
