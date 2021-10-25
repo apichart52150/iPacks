@@ -95,7 +95,13 @@ class paymentController extends Controller
             'payMethod' => $input['payMethod'],
         ];
 
-        return view('payment.payment_confirm', compact('data'));
+        $type = $input['payMethod'];
+			if($type == 'Transfer' ){
+            $url = 'payment.payment_transfer';
+			}else{
+            $url = 'payment.payment_confirm';
+			}
+        return view( $url, compact('data'));
     }
 
     public function payment_success(Request $request)

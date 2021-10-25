@@ -29,8 +29,9 @@
         }
     </style>
 
-<div class="row">
-    <div class="col-lg-6">
+@if ($Task == 1)
+<div class="row" id ="Writting1">
+    <div class="col-lg-12">
         <div class="card-box border-top border-info border border-1">
             <h4 class="header-title">IELTS Practice Writing Task 1</h4>
             <p class="sub-header mb-4">Each essay will deduct one point from your account</p>
@@ -100,7 +101,12 @@
         </div>
     </div> <!-- end col -->
 
-    <div class="col-lg-6">
+
+</div>
+@else
+<div class="row" id ="Writting2">
+    <!-- end row -->
+    <div class="col-lg-12">
         <div class="card-box border-top border-info border border-1">
             <h4 class="header-title">IELTS Practice Writing Task 2</h4>
             <p class="sub-header mb-4">Each essay will deduct one point from your account</p>
@@ -170,9 +176,8 @@
             </div>
         </div>
     </div> <!-- end col -->
-</div>
-    <!-- end row -->
-
+</div>    
+@endif
     <div class="row">
         <div class="col-md-6">
             <div class="card-box border-top border-info border border-1">
@@ -256,6 +261,10 @@
             window.location.href ="{{ route('user_home')}}"
         });
     }
+
+
+
+
 </script>
 
 @stop

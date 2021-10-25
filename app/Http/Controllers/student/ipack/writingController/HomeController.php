@@ -139,7 +139,19 @@ class HomeController extends Controller
 
         $pointWriting = Points::getPoint(Auth::user()->id);
 
-        return view('student.ipack.writing.home', compact('task1', 'task2', 'pointWriting'));
+        $check_data = DB::table('text_result')->where('std_id','=',Auth::user()->id)->count();
+        $check_data2 = $check_data%2;
+
+        $Task = '';
+        if ($check_data2 == 0){
+            $Task = 1;
+        }else{
+            $Task = 2;
+        }
+        // dd($Task);
+        // dd($check_data2,$Task);
+
+        return view('student.ipack.writing.home', compact('task1', 'task2', 'pointWriting','Task'));
 
     }
 

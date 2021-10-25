@@ -170,5 +170,6 @@
             window.location.href ="{{ route('user_home')}}"
         });
     }
+    
 </script>
 @stop

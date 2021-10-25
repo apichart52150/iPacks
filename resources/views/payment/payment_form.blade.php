@@ -81,6 +81,10 @@
                                             <input type="radio" id="ali" name="payMethod" value="ALIPAY" class="custom-control-input" required>
                                             <label class="custom-control-label h3" for="ali"><i class="fab fa-alipay"></i> Alipay</label>
                                         </div>
+										<div class="custom-control custom-radio">
+                                            <input type="radio" id="tra" name="payMethod" value="Transfer" class="custom-control-input" required>
+                                            <label class="custom-control-label h3" for="tra"><i class="fas fa-receipt"></i> Transfer</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary mt-2">Next</button>
