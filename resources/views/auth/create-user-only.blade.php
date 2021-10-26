@@ -90,10 +90,8 @@
 
 						<div class="form-group">
 							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="checkbox-signup" required>
-								<label class="custom-control-label" for="checkbox-signup">I accept <a
-										href="{{asset('public/assets/pdf/Terms-and-Conditions-Online-Practice.pdf')}}"
-										target="_blank" class="text-dark">Terms and Conditions</a></label>
+								<input type="checkbox" class="custom-control-input" name="condition_checked" id="checkbox-signup"required>
+								<label class="custom-control-label" for="checkbox-signup">I accept <a class="text-primary d-inline" data-toggle="modal" data-target="#full-width-modal">Terms and Conditions</a></label>
 								<!-- <label class="custom-control-label" for="checkbox-signup">I accept <a href="#" class="text-dark"  data-toggle="modal" data-target="#con-close-modal">Terms and Conditions</a></label> -->
 							</div>
 						</div>
@@ -229,6 +227,8 @@
 		</div>
 	</div>
 </div>
+
+
 
 <script src="{{ asset('public/assets/js/ajax.jquery.js') }}"></script>
 <script src="{{ asset('public/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
