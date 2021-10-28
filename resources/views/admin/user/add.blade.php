@@ -102,7 +102,7 @@
                                 <label class="col-sm-2 col-form-label" for="">Status</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" id="status-u" name="status">
-                                        {{-- <option value="">wait</option> --}}
+                                        <option value="">wait</option>
                                         <option value="paid">paid</option>
                                     </select>
                                 </div>
@@ -112,6 +112,7 @@
                                 <label class="col-sm-2 col-form-label" for="">Package</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" id="level" name="level">
+                                        <option value="">...</option>
                                         <option value="gold">gold</option>
                                         <option value="platinum">platinum</option>
                                         <option value="extra">extra</option>
@@ -123,6 +124,7 @@
                                 <label class="col-sm-2 col-form-label" for="">Pay type</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" id="pay_type" name="pay_type">
+                                        <option value="">...</option>
                                         <option value="CC">Credit</option>
                                         <option value="Alipay">Alipay</option>
                                     </select>
