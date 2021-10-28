@@ -106,28 +106,27 @@ class UserController extends Controller
                 }
 
             } else {
-            //     $data_user['level'] = '';
-            //     $data_ktc['package'] = '';
-            //     $data_ktc['pay_type'] = '';
                 $data_ktc['success_code'] = '0';
-            //     $data_point['writing_point'] = 0;
-            //     $data_point['speaking_point'] = 0;
-            //     $data_point['club_point'] = 0;
-            //     $data_point['tutorial_point'] = 0;
-            //     DB::table('point')
-            //         ->where('user_id', '=', $data['id'])
-            //         ->update([
-            //             'writing_point' => 0,
-            //             'speaking_point' => 0,
-            //             'club_point' => 0,
-            //             'tutorial_point' => 0,
-            //             'trial_point' => 0,
-            //         ]);
+            }
+
+            $data_db_ktc = DB::table('ktc_order')->where('id', $data['id'])->get();
+            $data_db_point = DB::table('point')->where('user_id', '=', $data['id'])->get();
+
+            if(count($data_db_ktc) == 0){
+                $data_ktc[] = $data['id'];
+                DB::table('ktc_order')->insert($data_ktc);
+            }else{
+                DB::table('ktc_order')->where('id', $data['id'])->update($data_ktc);
+            }
+
+            if(count($data_db_point) == 0){
+                $data_point[] = $data['id'];
+                DB::table('point')->insert($data_point);
+            }else{
+                DB::table('point')->where('user_id', '=', $data['id'])->update($data_point);
             }
 
             DB::table('users')->where('id', $data['id'])->update($data_user);
-            DB::table('ktc_order')->where('id', $data['id'])->update($data_ktc);
-            DB::table('point')->where('user_id', '=', $data['id'])->update($data_point);
 
             return 'success';
         } catch (\Throwable $th) {
