@@ -150,7 +150,11 @@
                 table_tbody += '<td><span class="badge badge-secondary p-2">wait</span></span></td>'
             }
             table_tbody += '<td>{{ $ktc->remark }}</td>'
-            table_tbody += '<td>{{ $ktc->pay_type }}</td>'
+            if("{{ $ktc->pay_type }}" == ""){
+                table_tbody += '<td>-</td>'
+            }else{
+                table_tbody += '<td>{{ $ktc->pay_type }}</td>'
+            }
             table_tbody += '<td>'
             table_tbody += '<button onclick="edit('+"'{{ $ktc->id }}'"+','+"'{{ $ktc->order_id }}'"+','+"'{{ $ktc->order_ref }}'"+','+"'{{ $ktc->success_code }}'"+','+"'{{ $ktc->remark }}'"+','+"'{{ $ktc->pay_type }}'"+','+"'{{ $ktc->package }}'"+');" type="button" class="btn btn-info btn-xs mx-1">Edit</button>'
             // table_tbody += '<button onclick="delete('+"'{{ $ktc->id }}'"+');" type="button" class="btn btn-danger btn-xs mx-1">Delete</button>'
@@ -195,12 +199,15 @@
             input += '<div class="w-100 text-left pay_type-edit"><label class="pt-3">Package</label></div>'
             input += '<select id="level-edit" class="swal2-input mt-0 pay_type-edit">'
             if (package == "gold") {
+                input += '<option value="">...</option>'
                 input += '<option value="gold" selected>gold</option>'
                 input += '<option value="platinum">platinum</option>'
             } else if (package == "platinum") {
+                input += '<option value=" ">...</option>'
                 input += '<option value="gold">gold</option>'
                 input += '<option value="platinum" selected>platinum</option>'
             }else{
+                input += '<option value=" ">...</option>'
                 input += '<option value="gold" >gold</option>'
                 input += '<option value="platinum">platinum</option>'
             }
@@ -208,12 +215,15 @@
             input += '<div class="w-100 text-left pay_type-edit"><label class="pt-3">Pay type</label></div>'
             input += '<select id="pay_type-edit" class="swal2-input mt-0 pay_type-edit">'
             if (pay_type == "CC") {
+                input += '<option value=" ">...</option>'
                 input += '<option value="CC" selected>Credit</option>'
                 input += '<option value="Alipay">Alipay</option>'
             } else if (pay_type == "Alipay") {
+                input += '<option value=" ">...</option>'
                 input += '<option value="CC">Credit</option>'
                 input += '<option value="Alipay" selected>Alipay</option>'
             }else{
+                input += '<option value=" ">...</option>'
                 input += '<option value="CC" >Credit</option>'
                 input += '<option value="Alipay">Alipay</option>'
             }

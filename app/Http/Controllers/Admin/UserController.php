@@ -131,7 +131,7 @@ class UserController extends Controller
 
             return 'success';
         } catch (\Throwable $th) {
-            // return $th;
+            return $th;
             return 'failed';
         }
     }
@@ -233,6 +233,7 @@ class UserController extends Controller
                     'first_name' => $input_first_name,
                     'last_name' => $input_last_name,
                     'address' => $input_address,
+                    'status' => '',
                     'expire_date' => date("Y-m-d H:i:s", strtotime("+7 day")),
                     'created_by' => Auth::id(),
                     'updated_by' => Auth::id(),

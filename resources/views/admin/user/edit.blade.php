@@ -322,7 +322,7 @@
             let data = new FormData(this)
             $.ajax({
                 type: 'POST',
-                url: $(this).attr('route'),
+                url: "{{ route('user-edit-confirm') }}",
                 data: data,
                 cache: false,
                 contentType: false,

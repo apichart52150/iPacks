@@ -29,6 +29,13 @@ class HomeController extends Controller
             $pay_type = $input['pay_type'];
             $level = $input['level'];
 
+            if($pay_type == ""){
+                $pay_type = '';
+            }
+            if($level == ""){
+                $level = '';
+            }
+
             $data_user = array(
                 'updated_at' => new Datetime(),
                 'updated_by' => Auth::id(),
